@@ -1,0 +1,204 @@
+[
+  {
+    "slot": "hero-aurora",
+    "src": "hf_20260407_105420_0b700aad-69a7-4adc-8aa7-8fc5abbbf4fc.png",
+    "width": 3168,
+    "height": 1344,
+    "sizes": [
+      2560,
+      1920,
+      1200
+    ]
+  },
+  {
+    "slot": "hero-dusk-lake",
+    "src": "hf_20260407_105530_6fda4896-707a-4c13-82e4-86c1568292a2.png",
+    "width": 3168,
+    "height": 1344,
+    "sizes": [
+      2560,
+      1920,
+      1200
+    ]
+  },
+  {
+    "slot": "trip-forest-walk",
+    "src": "hf_20260407_105638_1cbc1a6f-b768-4da7-b06f-1012df6193c0.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "trip-solo-trek",
+    "src": "hf_20260407_105650_0214adc2-1aa6-4afe-9ca4-37b8f83a36c6.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "trip-silence",
+    "src": "hf_20260407_105714_6885a58a-7f93-4dd3-95f9-e2f32a703c9c.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "trip-aurora-chase",
+    "src": "hf_20260407_105804_1234eb60-023a-4f8d-8c21-686db6c9d8ed.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "trip-night-forest",
+    "src": "hf_20260407_105835_5d70e24a-ce55-4552-ac0c-f1f85e11631b.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "trip-cabin-life",
+    "src": "hf_20260407_105858_cdf878b5-e62b-4be8-88c9-3bd44d445ee8.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "trip-food",
+    "src": "hf_20260407_105923_d1c50bdd-f2fa-4a0f-9f19-d7ba9038fb99.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "pillar-cold",
+    "src": "hf_20260407_105934_eda0b749-17cc-4421-b37e-a1b80c000d52.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "pillar-shelter",
+    "src": "hf_20260407_110013_854c84b2-b663-41e5-ac51-762d733425a6.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "category-aurora",
+    "src": "hf_20260407_110027_76518994-dc42-4a82-8cd5-d3636429c312.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "aside-vesa",
+    "src": "hf_20260407_110156_5cf1947f-353d-4c6c-a2af-0c7c5d8dd149.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "category-cabins",
+    "src": "hf_20260407_110234_07b0fc7b-95d9-46b7-8ccd-db6c223ff59d.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "category-food",
+    "src": "hf_20260407_110252_372fef87-4a4b-4c90-988d-a9c463967677.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "category-seasons",
+    "src": "hf_20260407_110313_89330a4d-befe-4c49-91af-d5eed357b699.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  },
+  {
+    "slot": "pillar-people",
+    "src": "hf_20260407_110341_1b518ee0-2a79-44d7-a753-643cc6005a3c.jpeg",
+    "width": 1536,
+    "height": 1024,
+    "sizes": [
+      1920,
+      1200,
+      800,
+      480
+    ]
+  }
+]

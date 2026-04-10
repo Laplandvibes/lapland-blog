@@ -1,0 +1,151 @@
+<!--
+  Lapland.blog · Confirm signup email template
+  ----------------------------------------------------------------
+  Paste this entire file into:
+    Supabase Dashboard → Authentication → Email Templates → Confirm signup
+
+  RECOMMENDED: Disable "Confirm email" entirely under
+    Authentication → Sign In / Up → Email
+  Then this template is never sent — magic link does both
+  account creation AND login in one click. Cleaner UX.
+
+  Subject line:
+    Confirm your Lapland.blog account
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="supported-color-schemes" content="dark light" />
+    <title>Confirm your Lapland.blog account</title>
+    <style>
+      body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+      table { border-collapse: collapse !important; }
+      body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+      .cta {
+        background-color: #EC4899;
+        color: #ffffff !important;
+        text-decoration: none;
+        display: inline-block;
+        padding: 16px 36px;
+        border-radius: 999px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+      }
+      .cta:hover { background-color: #BE185D; }
+
+      .aurora-strip {
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          #34D399 0%,
+          #38BDF8 30%,
+          #7C3AED 60%,
+          #EC4899 100%
+        );
+      }
+
+      @media screen and (max-width: 600px) {
+        .container { width: 100% !important; }
+        .px-mobile { padding-left: 24px !important; padding-right: 24px !important; }
+        .h1-mobile { font-size: 28px !important; line-height: 1.15 !important; }
+      }
+    </style>
+  </head>
+  <body style="margin:0;padding:0;background-color:#0F172A;">
+    <div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#0F172A;">
+      Welcome aboard. Confirm your email and start your Lapland trip blog.
+    </div>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#0F172A;">
+      <tr>
+        <td align="center" style="padding: 48px 16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="container" style="max-width:600px;">
+
+            <tr>
+              <td class="aurora-strip" style="height:4px;line-height:4px;font-size:4px;border-radius:18px 18px 0 0;">&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td class="px-mobile" style="background-color:#1E293B;border-left:1px solid rgba(124,58,237,0.35);border-right:1px solid rgba(124,58,237,0.35);border-bottom:1px solid rgba(124,58,237,0.35);border-radius:0 0 18px 18px;padding:48px;">
+
+                <p style="margin:0 0 32px 0;text-align:center;">
+                  <span style="color:#F8FAFC;font-size:30px;font-weight:300;letter-spacing:-0.02em;font-family:'Space Grotesk','Inter',sans-serif;">
+                    lapland<span style="color:#EC4899;">.</span>blog
+                  </span>
+                </p>
+
+                <p style="margin:0 0 14px 0;color:#EC4899;font-size:11px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;text-align:center;font-family:'Inter',sans-serif;">
+                  Welcome aboard
+                </p>
+
+                <h1 class="h1-mobile" style="margin:0 0 20px 0;color:#F8FAFC;font-size:34px;line-height:1.1;font-weight:300;letter-spacing:-0.025em;text-align:center;font-family:'Space Grotesk','Inter',sans-serif;">
+                  Almost there.<br/>
+                  <span style="color:#EC4899;font-style:italic;">Confirm to begin.</span>
+                </h1>
+
+                <p style="margin:0 0 36px 0;color:#94A3B8;font-size:15px;line-height:1.65;text-align:center;font-family:'Inter',sans-serif;">
+                  We just opened a Lapland.blog account for {{ .Email }}.<br/>
+                  Tap the button below to confirm your email and your trip blog is ready to start.
+                </p>
+
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td align="center" style="padding: 0 0 36px 0;">
+                      <a href="{{ .ConfirmationURL }}" class="cta" target="_blank" rel="noopener" style="background-color:#EC4899;color:#ffffff;text-decoration:none;display:inline-block;padding:16px 36px;border-radius:999px;font-weight:700;letter-spacing:0.02em;font-family:'Inter',sans-serif;font-size:15px;">
+                        Confirm and start blogging →
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin:0 0 8px 0;color:#94A3B8;font-size:11px;line-height:1.5;text-align:center;font-family:'Inter',sans-serif;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">
+                  Button not working?
+                </p>
+                <p style="margin:0 0 32px 0;color:#94A3B8;font-size:12px;line-height:1.5;text-align:center;font-family:'Inter',sans-serif;word-break:break-all;">
+                  Copy this link into your browser:<br/>
+                  <a href="{{ .ConfirmationURL }}" style="color:#38BDF8;text-decoration:underline;">{{ .ConfirmationURL }}</a>
+                </p>
+
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td style="border-top:1px solid rgba(124,58,237,0.25);height:1px;line-height:1px;">&nbsp;</td>
+                  </tr>
+                </table>
+
+                <p style="margin:24px 0 12px 0;color:#94A3B8;font-size:13px;line-height:1.6;text-align:center;font-family:'Inter',sans-serif;">
+                  After you confirm, you'll land on:<br/>
+                  <strong style="color:#38BDF8;">lapland.blog/yourname</strong> — your own field journal page.
+                </p>
+                <p style="margin:0;color:#64748B;font-size:11px;line-height:1.6;text-align:center;font-family:'Inter',sans-serif;">
+                  Didn't sign up? You can ignore this email — no account will be created.
+                </p>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding: 32px 24px;">
+                <p style="margin:0 0 6px 0;color:#64748B;font-size:11px;line-height:1.6;font-family:'Inter',sans-serif;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;">
+                  Written from Finland
+                </p>
+                <p style="margin:0;color:#475569;font-size:11px;line-height:1.6;font-family:'Inter',sans-serif;">
+                  © Lapland.blog — a free trip-journal platform by
+                  <a href="https://laplandvibes.com" style="color:#94A3B8;text-decoration:none;">Lapeso Oy</a>, Rovaniemi.
+                </p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

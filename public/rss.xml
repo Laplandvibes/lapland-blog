@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Lapland.blog — Field journal from Finnish Lapland</title>
+    <link>https://lapland.blog</link>
+    <atom:link href="https://lapland.blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>A first-person field journal from Finnish Lapland — honest, seasonal, written by someone who actually lives here. Aurora, cabins, seasons, food, people.</description>
+    <language>en</language>
+    <copyright>© 2026 Lapeso Oy</copyright>
+    <managingEditor>laplandvibe@gmail.com (Vesa Pesola)</managingEditor>
+    <webMaster>laplandvibe@gmail.com (Vesa Pesola)</webMaster>
+    <lastBuildDate>Fri, 10 Apr 2026 06:54:02 GMT</lastBuildDate>
+    <generator>lapland.blog custom generator</generator>
+    <image>
+      <url>https://lapland.blog/og-image.png</url>
+      <title>Lapland.blog</title>
+      <link>https://lapland.blog</link>
+    </image>
+    <item>
+      <title>Hello reindeer</title>
+      <link>https://lapland.blog/post/helloreindeer</link>
+      <guid isPermaLink="true">https://lapland.blog/post/helloreindeer</guid>
+      <pubDate>Fri, 10 Apr 2026 05:41:37 GMT</pubDate>
+      <description>a wonderfull day</description>
+      <category>stories</category>
+      <enclosure url="https://oogioaxmfnqcbvjbcodh.supabase.co/storage/v1/object/public/trip-images/0b4ae58c-653c-4a46-b076-aec35e3cc55e/1775799641676-eb2058e668.png" type="image/webp"/>
+      <author>laplandvibe@gmail.com (Vesa Pesola)</author>
+    </item>
+    <item>
+      <title>Living between two suns: what the darkness actually feels like</title>
+      <link>https://lapland.blog/post/living-between-two-suns</link>
+      <guid isPermaLink="true">https://lapland.blog/post/living-between-two-suns</guid>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Most of what you have read about the Finnish polar night is wrong. Here is what it actually feels like — from a 66.5°N resident who has been doing this for a decade, candles and all.</description>
+      <category>seasons</category>
+      <enclosure url="https://images.unsplash.com/photo-1681151335137-108527dc24fe?w=1920&amp;q=85&amp;fm=webp&amp;fit=crop" type="image/webp"/>
+      <author>laplandvibe@gmail.com (Vesa Pesola)</author>
+    </item>
+    <item>
+      <title>A bowl of salmon soup that cost more than the flight</title>
+      <link>https://lapland.blog/post/a-bowl-of-salmon-soup-that-cost-more-than-the-flight</link>
+      <guid isPermaLink="true">https://lapland.blog/post/a-bowl-of-salmon-soup-that-cost-more-than-the-flight</guid>
+      <pubDate>Sun, 08 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Forty-two euros. Juniper smoke. Thyme from the kitchen garden. The snow fell through the window and the chef came out and sat down, and I decided the price was correct.</description>
+      <category>food</category>
+      <enclosure url="https://images.unsplash.com/photo-1547592180-85f173990554?w=1920&amp;q=85&amp;fm=webp&amp;fit=crop" type="image/webp"/>
+      <author>laplandvibe@gmail.com (Vesa Pesola)</author>
+    </item>
+    <item>
+      <title>Five nights in a forest cabin — what I packed, what I forgot</title>
+      <link>https://lapland.blog/post/five-nights-in-a-forest-cabin</link>
+      <guid isPermaLink="true">https://lapland.blog/post/five-nights-in-a-forest-cabin</guid>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <description>A day-by-day field diary from a week at Tuulia&apos;s mökki. The gear that saved me, the one thing I forgot that nearly ended the trip, and the three items I will now never leave the city without.</description>
+      <category>cabins</category>
+      <enclosure url="https://images.unsplash.com/photo-1639863523753-3952079f6ded?w=1920&amp;q=85&amp;fm=webp&amp;fit=crop" type="image/webp"/>
+      <author>laplandvibe@gmail.com (Vesa Pesola)</author>
+    </item>
+    <item>
+      <title>Why I stopped chasing the aurora with an app</title>
+      <link>https://lapland.blog/post/why-i-stopped-chasing-the-aurora-with-an-app</link>
+      <guid isPermaLink="true">https://lapland.blog/post/why-i-stopped-chasing-the-aurora-with-an-app</guid>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
+      <description>I spent two winters watching my phone instead of the sky. Here is the small, boring practice that replaced it — and why it works better for almost everyone who doesn&apos;t live here.</description>
+      <category>aurora</category>
+      <enclosure url="https://images.unsplash.com/photo-1502288294350-301c0c4628c9?w=1920&amp;q=85&amp;fm=webp&amp;fit=crop" type="image/webp"/>
+      <author>laplandvibe@gmail.com (Vesa Pesola)</author>
+    </item>
+    <item>
+      <title>The night the sky broke open over Kemi</title>
+      <link>https://lapland.blog/post/the-night-the-sky-broke-open-over-kemi</link>
+      <guid isPermaLink="true">https://lapland.blog/post/the-night-the-sky-broke-open-over-kemi</guid>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate>
+      <description>It was minus twenty-three and three-forty-seven in the morning and I cried a little, for about a minute, and none of the photos I took that night are the one I remember.</description>
+      <category>aurora</category>
+      <enclosure url="https://images.unsplash.com/photo-1482249839525-2cd6b87ebc22?w=1920&amp;q=85&amp;fm=webp&amp;fit=crop" type="image/webp"/>
+      <author>laplandvibe@gmail.com (Vesa Pesola)</author>
+    </item>
+  </channel>
+</rss>

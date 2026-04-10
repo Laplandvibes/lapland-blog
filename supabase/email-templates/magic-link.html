@@ -1,0 +1,179 @@
+<!--
+  Lapland.blog · Magic link email template
+  ----------------------------------------------------------------
+  Paste this entire file into:
+    Supabase Dashboard → Authentication → Email Templates → Magic Link
+
+  Supabase template variables:
+    {{ .ConfirmationURL }}  — the one-click sign-in link
+    {{ .Email }}            — the recipient's email
+    {{ .SiteURL }}          — base URL (set in URL Configuration)
+    {{ .Token }}            — the 6-digit OTP (fallback)
+
+  Subject line to set above the template body:
+    Your magic link to lapland.blog
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="supported-color-schemes" content="dark light" />
+    <title>Your magic link to Lapland.blog</title>
+    <style>
+      /* Reset */
+      body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+      table { border-collapse: collapse !important; }
+      body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+      /* Brand colours mirror site theme */
+      .bg-night    { background-color: #0F172A; }
+      .bg-card     { background-color: #1E293B; }
+      .text-snow   { color: #F8FAFC; }
+      .text-mute   { color: #94A3B8; }
+      .text-pink   { color: #EC4899; }
+      .border-purple { border: 1px solid rgba(124, 58, 237, 0.35); }
+
+      /* Button */
+      .cta {
+        background-color: #EC4899;
+        color: #ffffff !important;
+        text-decoration: none;
+        display: inline-block;
+        padding: 16px 36px;
+        border-radius: 999px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 15px;
+      }
+      .cta:hover { background-color: #BE185D; }
+
+      .display {
+        font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+      }
+      .body-font {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      /* Aurora gradient strip */
+      .aurora-strip {
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          #34D399 0%,
+          #38BDF8 30%,
+          #7C3AED 60%,
+          #EC4899 100%
+        );
+      }
+
+      @media screen and (max-width: 600px) {
+        .container { width: 100% !important; }
+        .px-mobile { padding-left: 24px !important; padding-right: 24px !important; }
+        .h1-mobile { font-size: 28px !important; line-height: 1.15 !important; }
+      }
+    </style>
+  </head>
+  <body class="bg-night" style="margin:0;padding:0;background-color:#0F172A;">
+    <div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#0F172A;">
+      One click. Your Lapland trip blog opens. The link expires in one hour.
+    </div>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="bg-night">
+      <tr>
+        <td align="center" style="padding: 48px 16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="container" style="max-width:600px;">
+
+            <!-- Aurora strip -->
+            <tr>
+              <td class="aurora-strip" style="height:4px;line-height:4px;font-size:4px;border-radius:18px 18px 0 0;">&nbsp;</td>
+            </tr>
+
+            <!-- Card -->
+            <tr>
+              <td class="bg-card border-purple px-mobile" style="background-color:#1E293B;border-left:1px solid rgba(124,58,237,0.35);border-right:1px solid rgba(124,58,237,0.35);border-bottom:1px solid rgba(124,58,237,0.35);border-radius:0 0 18px 18px;padding:48px;">
+
+                <!-- Logo -->
+                <p class="body-font" style="margin:0 0 32px 0;text-align:center;">
+                  <span class="display text-snow" style="color:#F8FAFC;font-size:30px;font-weight:300;letter-spacing:-0.02em;">
+                    lapland<span style="color:#EC4899;">.</span>blog
+                  </span>
+                </p>
+
+                <!-- Kicker -->
+                <p class="body-font text-pink" style="margin:0 0 14px 0;color:#EC4899;font-size:11px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;text-align:center;">
+                  Your magic link
+                </p>
+
+                <!-- H1 -->
+                <h1 class="display text-snow h1-mobile" style="margin:0 0 20px 0;color:#F8FAFC;font-size:34px;line-height:1.1;font-weight:300;letter-spacing:-0.025em;text-align:center;font-family:'Space Grotesk','Inter',sans-serif;">
+                  One click and<br/>
+                  <span style="color:#EC4899;font-style:italic;">your trip blog opens.</span>
+                </h1>
+
+                <!-- Body copy -->
+                <p class="body-font text-mute" style="margin:0 0 36px 0;color:#94A3B8;font-size:15px;line-height:1.65;text-align:center;font-family:'Inter',sans-serif;">
+                  We just got a sign-in request from {{ .Email }}.<br/>
+                  Tap the button below and you're in. The link is only valid for one hour, and only on this device.
+                </p>
+
+                <!-- CTA -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td align="center" style="padding: 0 0 36px 0;">
+                      <a href="{{ .ConfirmationURL }}" class="cta" target="_blank" rel="noopener" style="background-color:#EC4899;color:#ffffff;text-decoration:none;display:inline-block;padding:16px 36px;border-radius:999px;font-weight:700;letter-spacing:0.02em;font-family:'Inter',sans-serif;font-size:15px;">
+                        Open my trip blog →
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Fallback link -->
+                <p class="body-font" style="margin:0 0 8px 0;color:#94A3B8;font-size:11px;line-height:1.5;text-align:center;font-family:'Inter',sans-serif;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">
+                  Button not working?
+                </p>
+                <p class="body-font" style="margin:0 0 32px 0;color:#94A3B8;font-size:12px;line-height:1.5;text-align:center;font-family:'Inter',sans-serif;word-break:break-all;">
+                  Copy this link into your browser:<br/>
+                  <a href="{{ .ConfirmationURL }}" style="color:#38BDF8;text-decoration:underline;">{{ .ConfirmationURL }}</a>
+                </p>
+
+                <!-- Divider -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td style="border-top:1px solid rgba(124,58,237,0.25);height:1px;line-height:1px;">&nbsp;</td>
+                  </tr>
+                </table>
+
+                <!-- Footer note -->
+                <p class="body-font" style="margin:24px 0 0 0;color:#64748B;font-size:11px;line-height:1.6;text-align:center;font-family:'Inter',sans-serif;">
+                  Didn't request this? You can ignore this email and nothing will happen — your account is safe.
+                </p>
+
+              </td>
+            </tr>
+
+            <!-- Brand footer -->
+            <tr>
+              <td align="center" style="padding: 32px 24px;">
+                <p class="body-font" style="margin:0 0 6px 0;color:#64748B;font-size:11px;line-height:1.6;font-family:'Inter',sans-serif;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;">
+                  Written from Finland
+                </p>
+                <p class="body-font" style="margin:0;color:#475569;font-size:11px;line-height:1.6;font-family:'Inter',sans-serif;">
+                  © Lapland.blog — a free trip-journal platform by
+                  <a href="https://laplandvibes.com" style="color:#94A3B8;text-decoration:none;">Lapeso Oy</a>, Rovaniemi.
+                </p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

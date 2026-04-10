@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
+
+    <title>Lapland.blog — Start a travel blog of your Finnish Lapland trip</title>
+    <meta name="description" content="A free travel-journal platform for visitors to Finnish Lapland. Pin where you saw the aurora, photograph the cabin, write what the temperature did. Build a beautiful blog of your trip your friends can actually follow." />
+    <meta name="keywords" content="Lapland travel blog, Finnish Lapland trip journal, travel diary, aurora map, Rovaniemi, Saariselkä, Levi, journal platform, Finland trip planner" />
+    <meta name="author" content="Lapeso Oy" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://lapland.blog/" />
+
+    <!-- RSS feed (auto-discovered by feed readers) -->
+    <link rel="alternate" type="application/rss+xml" title="Lapland.blog — Field journal" href="https://lapland.blog/rss.xml" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lapland.blog" />
+    <meta property="og:title" content="Lapland.blog — Start a travel blog of your Finnish Lapland trip" />
+    <meta property="og:description" content="A free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to Instagram. Your trip, told well." />
+    <meta property="og:url" content="https://lapland.blog/" />
+    <meta property="og:image" content="https://lapland.blog/images/hero-aurora-1920.webp" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="823" />
+    <meta property="og:image:alt" content="Green aurora borealis arching over a winding frozen river in Finnish Lapland" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lapland.blog — Start a travel blog of your Finnish Lapland trip" />
+    <meta name="twitter:description" content="A free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to Instagram." />
+    <meta name="twitter:image" content="https://lapland.blog/images/hero-aurora-1920.webp" />
+    <meta name="twitter:image:alt" content="Green aurora borealis arching over a winding frozen river in Finnish Lapland" />
+
+    <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload hero image (LCP element on home) — local WebP -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-aurora-1920.webp"
+      imagesrcset="/images/hero-aurora-1200.webp 1200w, /images/hero-aurora-1920.webp 1920w, /images/hero-aurora-2560.webp 2560w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
+    <!-- Google Analytics — Consent Mode v2 (default denied until banner accept) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+      if (localStorage.getItem('laplandblog_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    </script>
+
+    <!-- Google Analytics GA4 — cross-domain linker for the full Lapland network -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1MNNKEY0X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R1MNNKEY0X', {
+        linker: {
+          domains: [
+            'lapland.blog',
+            'laplandvibes.com',
+            'laplandnature.com',
+            'laplandstays.com',
+            'laplandbars.com',
+            'laplanddeals.com',
+            'laplanddining.com',
+            'laplandfood.com',
+            'laplandgifts.com',
+            'laplandnightlife.com',
+            'laplandtransport.com',
+            'laplandactivities.online'
+          ]
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
