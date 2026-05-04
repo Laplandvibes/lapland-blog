@@ -4,7 +4,7 @@
 // "be first to write here" — converts visitors into UGC writers.
 
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, PenLine } from 'lucide-react';
+import { ArrowRight, MapPin, PenLine, BedDouble } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
@@ -221,29 +221,44 @@ function DestinationCard({ d, count }: { d: Destination; count: number }) {
           </div>
         )}
       </div>
-      <div className="bg-night-light/40 p-5">
+      <div className="bg-night-light/40 p-5 flex flex-col">
         <p className="text-aurora-blue tracking-[0.3em] text-[10px] font-bold uppercase mb-2">
           {d.region}
         </p>
         <h3 className="font-display text-2xl text-snow mb-2 leading-tight">{d.name}</h3>
         <p className="text-slate-300 text-sm leading-relaxed mb-5">{d.blurb}</p>
-        {hasEntries ? (
-          <Link
-            to={`/stories?tag=${d.slug}`}
-            className="inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-xs uppercase tracking-[0.2em] font-semibold transition-colors"
+
+        <div className="space-y-2.5 mt-auto">
+          {hasEntries ? (
+            <Link
+              to={`/stories?tag=${d.slug}`}
+              className="inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-xs uppercase tracking-[0.2em] font-semibold transition-colors"
+            >
+              Read entries
+              <ArrowRight size={12} />
+            </Link>
+          ) : (
+            <Link
+              to="/signin"
+              className="inline-flex items-center gap-1.5 text-aurora-blue hover:text-pink text-xs uppercase tracking-[0.2em] font-semibold transition-colors"
+            >
+              Be the first to write
+              <ArrowRight size={12} />
+            </Link>
+          )}
+
+          {/* Sales CTA — every destination card gets a Hotels.com hook */}
+          <a
+            href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name)}%2C+Lapland%2C+Finland`}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            className="inline-flex items-center gap-1.5 text-aurora-green/85 hover:text-aurora-green text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
           >
-            Read entries
-            <ArrowRight size={12} />
-          </Link>
-        ) : (
-          <Link
-            to="/signin"
-            className="inline-flex items-center gap-1.5 text-aurora-blue hover:text-pink text-xs uppercase tracking-[0.2em] font-semibold transition-colors"
-          >
-            Be the first to write
-            <ArrowRight size={12} />
-          </Link>
-        )}
+            <BedDouble size={11} />
+            Find a stay in {d.name}
+            <ArrowRight size={11} />
+          </a>
+        </div>
       </div>
     </article>
   );

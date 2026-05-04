@@ -120,6 +120,11 @@ export interface PostInput {
   featured: boolean;
   read_time_minutes: number;
   published_at: string | null;
+  // Trip metadata (Phase 2)
+  visit_date: string | null;
+  location: string | null;
+  weather_note: string | null;
+  stay_type: string | null;
 }
 
 export async function createPost(

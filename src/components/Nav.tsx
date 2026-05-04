@@ -73,7 +73,7 @@ export default function Nav({ minimal = false }: { minimal?: boolean }) {
       }`;
 
   const logoWordColor = isEditorial ? 'text-[var(--color-ink)]' : 'text-snow';
-  const logoDotColor = isEditorial
+  const logoAccentColor = isEditorial
     ? 'text-[var(--color-accent)]'
     : 'text-pink';
   const linkBase = isEditorial
@@ -118,27 +118,14 @@ export default function Nav({ minimal = false }: { minimal?: boolean }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link
           to="/"
-          className="flex items-center gap-2 group"
-          aria-label="Lapland.blog — home"
+          className="group"
+          aria-label="#LaplandBlog — home"
           onClick={() => setOpen(false)}
         >
-          <span
-            className={`font-display text-[1.6rem] font-light leading-none italic transition-colors ${logoDotColor}`}
-          >
-            .
-          </span>
-          <span
-            className={`font-display text-xl font-medium tracking-tight transition-colors ${logoWordColor}`}
-          >
-            lapland
-            <span
-              className={`${
-                isEditorial ? 'text-[var(--color-accent)]' : 'text-pink'
-              } mx-0.5`}
-            >
-              .
-            </span>
-            blog
+          <span className="font-display tracking-wide text-[22px] sm:text-2xl md:text-[26px] font-semibold uppercase leading-none flex items-baseline">
+            <span className={`${logoAccentColor} transition-colors`}>#</span>
+            <span className={`${logoWordColor} transition-colors`}>LAPLAND</span>
+            <span className={`${logoAccentColor} transition-colors`}>.BLOG</span>
           </span>
         </Link>
 

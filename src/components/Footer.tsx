@@ -1,703 +1,415 @@
-// Footer — the "mainos alusta" hub. Lapland.blog is an editorial front
-// door into the LaplandVibes ecosystem, so the footer doubles as a
-// magazine-style affiliate showcase: featured trip deals, top stays,
-// trending traveler blogs, destination cities, partner activities, the
-// network sites, newsletter, social, and the usual legal row at the
-// bottom. Designed to look earned, not banner-ad spammy. Items link out
-// (target=_blank) to the relevant LaplandVibes site or stay internal.
-
 import { Link } from 'react-router-dom';
-import {
-  ArrowUpRight,
-  ExternalLink,
-  Rss,
-  Mail,
-  MapPin,
-  Sparkles,
-  Snowflake,
-  Tag,
-  Star,
-  TrendingUp,
-  Compass,
-  ChevronRight,
-} from 'lucide-react';
-import { getImage, type ImageSlot } from '../lib/images';
+import { AlertCircle, Briefcase, Newspaper } from 'lucide-react';
 
-// Lucide stripped Instagram/Facebook brand glyphs over a licensing concern,
-// so we ship tiny inline SVG components instead. Same size API as lucide.
-function InstagramIcon({ size = 14 }: { size?: number }) {
+// Finnish flag colors — match CookieBanner
+const BLUE = '#002F6C';
+const WHITE = '#F8FAFC';
+const PINK = '#EC4899';
+
+const defaultPillarLinks = [
+  { name: 'Northern Lights', href: 'https://laplandnorthernlights.com' },
+  { name: 'Husky Safaris', href: 'https://laplandhuskysafaris.com' },
+  { name: 'Ski Resorts', href: 'https://laplandskiresorts.com' },
+  { name: 'Where to Stay', href: 'https://laplandstays.com' },
+  { name: 'Things to Do', href: 'https://laplandactivities.online' },
+  { name: 'Nature & Parks', href: 'https://laplandnature.com' },
+];
+
+const siteGroups = [
+  {
+    title: 'Stay',
+    links: [
+      { name: 'Hotel Deals', url: 'https://laplandhoteldeals.com' },
+      { name: 'Stays & Cabins', url: 'https://laplandstays.com' },
+      { name: 'Where to Stay', url: 'https://stayinlapland.com' },
+      { name: 'Family Friendly', url: 'https://laplandkids.com' },
+    ],
+  },
+  {
+    title: 'Eat & Drink',
+    links: [
+      { name: 'Local Food', url: 'https://laplandfood.com' },
+      { name: 'Fine Dining', url: 'https://laplanddining.com' },
+      { name: 'Bars & Pubs', url: 'https://laplandbars.com' },
+    ],
+  },
+  {
+    title: 'Do',
+    links: [
+      { name: 'Activities', url: 'https://laplandactivities.online' },
+      { name: 'Husky Safaris', url: 'https://laplandhuskysafaris.com' },
+      { name: 'Ski Resorts', url: 'https://laplandskiresorts.com' },
+      { name: 'Snowmobile Tours', url: 'https://laplandsnowmobile.com' },
+      { name: 'Spa & Wellness', url: 'https://laplandwellness.com' },
+      { name: 'Nightlife', url: 'https://laplandnightlife.com' },
+    ],
+  },
+  {
+    title: 'Explore',
+    links: [
+      { name: 'Nature & Parks', url: 'https://laplandnature.com' },
+      { name: 'Travel Guide', url: 'https://laplandvisit.com' },
+      { name: 'Christmas in Lapland', url: 'https://laplandchristmas.com' },
+      { name: 'Gifts & Souvenirs', url: 'https://laplandgifts.com' },
+      { name: 'Travel Blog', url: 'https://lapland.blog' },
+    ],
+  },
+  {
+    title: 'Essentials',
+    links: [
+      { name: 'Deals & Offers', url: 'https://laplanddeals.com' },
+      { name: 'Transport', url: 'https://laplandtransport.com' },
+      { name: 'Car Rental', url: 'https://laplandcarrental.com' },
+      { name: 'Work in Lapland', url: 'https://laplandwork.fi' },
+    ],
+  },
+];
+
+const socials = [
+  {
+    label: 'YouTube',
+    href: 'https://youtube.com/@laplandvibes',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+        <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff" opacity="0.9" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Facebook',
+    href: 'https://facebook.com/laplandvibes',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Instagram',
+    href: 'https://instagram.com/laplandvibesofficial',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    label: 'TikTok',
+    href: 'https://tiktok.com/@laplandvibesofficial',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.19 8.19 0 0 0 4.84 1.56V6.79a4.85 4.85 0 0 1-1.07-.1z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Pinterest',
+    href: 'https://pinterest.com/laplandvibes',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'X / Twitter',
+    href: 'https://x.com/laplandvibes',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.26 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+    ),
+  },
+];
+
+interface SharedFooterProps {
+  pillarLinks?: { name: string; href: string }[];
+  onPillarClick?: (name: string) => void;
+}
+
+export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPillarClick }: SharedFooterProps) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  );
-}
-function FacebookIcon({ size = 14 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  );
-}
+    <footer>
 
-interface EcoLink {
-  label: string;
-  url: string;
-  desc: string;
-}
+      {/* ═══ GRADIENT TRANSITION — blends page content above into the footer's first blue band ═══ */}
+      <div
+        aria-hidden="true"
+        style={{
+          height: '100px',
+          background: `linear-gradient(to bottom, transparent, ${BLUE})`,
+        }}
+      />
 
-interface DealCard {
-  badge: string;
-  title: string;
-  location: string;
-  price: string;
-  oldPrice?: string;
-  url: string;
-  imageSlot: ImageSlot;
-  accent: 'pink' | 'green' | 'blue';
-}
+      {/* ═══ BAND 1: BLUE — Logo, badge, socials ═══ */}
+      <div style={{ background: BLUE }}>
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-12 py-8 sm:py-12">
 
-interface TrendingBlog {
-  username: string;
-  title: string;
-  location: string;
-  views: string;
-}
-
-// Same ecosystem list as the rest of the LaplandVibes network footers.
-const ecosystem: EcoLink[] = [
-  {
-    label: 'LaplandVibes',
-    url: 'https://laplandvibes.com',
-    desc: 'The mothership — every Lapland thing worth knowing',
-  },
-  {
-    label: 'LaplandStays',
-    url: 'https://laplandstays.com',
-    desc: '18 verified hotels, igloos, wilderness lodges',
-  },
-  {
-    label: 'LaplandActivities',
-    url: 'https://laplandactivities.online',
-    desc: '150+ guided tours and experiences',
-  },
-  {
-    label: 'LaplandDining',
-    url: 'https://laplanddining.com',
-    desc: 'Restaurants worth the reindeer',
-  },
-  {
-    label: 'LaplandNightlife',
-    url: 'https://laplandnightlife.com',
-    desc: 'Clubs, bars and the midnight sun scene',
-  },
-  {
-    label: 'LaplandTransport',
-    url: 'https://laplandtransport.com',
-    desc: 'Airport transfers, trains, rentals',
-  },
-  {
-    label: 'LaplandFood',
-    url: 'https://laplandfood.com',
-    desc: 'Reindeer, salmon, cloudberries — what to eat',
-  },
-  {
-    label: 'LaplandGifts',
-    url: 'https://laplandgifts.com',
-    desc: 'Local craft, design, things worth flying home',
-  },
-  {
-    label: 'LaplandDeals',
-    url: 'https://laplanddeals.com',
-    desc: 'Live offers across the Lapland network',
-  },
-  {
-    label: 'LaplandNature',
-    url: 'https://laplandnature.com',
-    desc: 'National parks, wildlife, the wilderness',
-  },
-  {
-    label: 'LaplandBars',
-    url: 'https://laplandbars.com',
-    desc: 'Where to drink north of the Arctic Circle',
-  },
-  {
-    label: 'LaplandStays · Igloos',
-    url: 'https://laplandstays.com/category/igloos',
-    desc: 'Glass igloos for aurora chasers',
-  },
-];
-
-// Featured trip deals — hand-curated showcase, each card uses one of the
-// real site images so no Unsplash duplication with other sections.
-// Replace with live LaplandDeals /featured feed once available.
-const featuredDeals: DealCard[] = [
-  {
-    badge: 'Bestseller',
-    title: 'Aurora chase · 3 nights',
-    location: 'Saariselkä',
-    price: '€485',
-    oldPrice: '€640',
-    url: 'https://laplandstays.com/category/igloos',
-    imageSlot: 'category-aurora',
-    accent: 'pink',
-  },
-  {
-    badge: 'New',
-    title: 'Cabin & sauna escape · 4 nights',
-    location: 'Pyhä',
-    price: '€329',
-    url: 'https://laplandstays.com',
-    imageSlot: 'category-cabins',
-    accent: 'green',
-  },
-  {
-    badge: '−25%',
-    title: 'Nordic table · dinner tasting menu',
-    location: 'Rovaniemi',
-    price: '€69',
-    oldPrice: '€92',
-    url: 'https://laplanddining.com',
-    imageSlot: 'category-food',
-    accent: 'blue',
-  },
-];
-
-const trendingBlogs: TrendingBlog[] = [
-  {
-    username: 'aurora.chase',
-    title: 'Five nights, four auroras',
-    location: 'Inari',
-    views: '8.1k',
-  },
-  {
-    username: 'cabinlife.no',
-    title: 'A wood cabin, no wifi, 8 days',
-    location: 'Pyhä',
-    views: '6.0k',
-  },
-  {
-    username: 'snowmachine',
-    title: '180 km of snowmobile',
-    location: 'Rovaniemi',
-    views: '5.7k',
-  },
-  {
-    username: 'ellie.skis',
-    title: 'Levi black runs and a 12m drop',
-    location: 'Levi',
-    views: '4.2k',
-  },
-];
-
-const destinations = [
-  { label: 'Rovaniemi', slug: 'rovaniemi', tag: 'Capital' },
-  { label: 'Levi', slug: 'levi', tag: 'Skiing' },
-  { label: 'Saariselkä', slug: 'saariselka', tag: 'Igloos' },
-  { label: 'Inari', slug: 'inari', tag: 'Sámi · Aurora' },
-  { label: 'Pyhä', slug: 'pyha', tag: 'Wilderness' },
-  { label: 'Ylläs', slug: 'yllas', tag: 'Cross-country' },
-  { label: 'Sodankylä', slug: 'sodankyla', tag: 'Aurora' },
-  { label: 'Kilpisjärvi', slug: 'kilpisjarvi', tag: 'Three borders' },
-];
-
-const exploreLinks = [
-  { to: '/stories', label: 'All trip blogs' },
-  { to: '/category/aurora', label: 'Aurora' },
-  { to: '/category/cabins', label: 'Cabins' },
-  { to: '/category/food', label: 'Food' },
-  { to: '/category/seasons', label: 'Seasons' },
-];
-
-const platformLinks = [
-  { to: '/signin', label: 'Start your blog' },
-  { to: '/about', label: 'How it works' },
-  { to: '/about', label: 'About Lapland.blog' },
-  { to: '/#how-it-works', label: 'Three steps' },
-];
-
-const ACCENT_PILL: Record<DealCard['accent'], string> = {
-  pink: 'bg-pink text-white',
-  green: 'bg-aurora-green text-night',
-  blue: 'bg-aurora-blue text-night',
-};
-
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="relative border-t border-purple/25 bg-gradient-to-b from-night via-night-light/30 to-night overflow-hidden">
-      {/* Ambient orbs */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-pink/5 blur-[160px] pointer-events-none" />
-      <div className="absolute top-1/3 right-0 w-[500px] h-[400px] bg-aurora-blue/5 blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[700px] h-[300px] bg-aurora-green/5 blur-[160px] pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
-        {/* ============================================================
-            BRAND ROW
-            ============================================================ */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <Link to="/" className="inline-flex items-center gap-1 mb-5 group">
-            <span className="font-display text-3xl md:text-5xl text-snow font-light leading-none tracking-tight group-hover:text-pink transition-colors">
-              lapland<span className="text-pink mx-0.5">.</span>blog
-            </span>
-          </Link>
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            A free travel-journal platform for visitors to Finnish Lapland —
-            and the editorial front door into the LaplandVibes network of 12
-            sites covering stays, activities, food, deals and the wilderness.
-          </p>
-          <div className="mt-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/40">
-            <Snowflake size={12} className="text-pink" />
-            <span className="text-pink text-[10px] tracking-[0.4em] uppercase font-bold">
-              Written from Finland
-            </span>
-          </div>
-        </div>
-
-        <div className="section-divider mb-16" />
-
-        {/* ============================================================
-            FEATURED DEALS — magazine ad strip
-            ============================================================ */}
-        <section className="mb-20" aria-labelledby="footer-deals-heading">
-          <div className="flex items-end justify-between mb-7 flex-wrap gap-3">
-            <div>
-              <div className="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-pink/10 border border-pink/40">
-                <Tag size={11} className="text-pink" />
-                <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase">
-                  Trip deals · Live
-                </p>
+          {/* Finnish Lapland Network badge */}
+          <div className="flex items-center gap-3 mb-8 sm:mb-12">
+            <div className="flex-1 h-px" style={{ background: 'rgba(248,250,252,0.25)' }} />
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-normal tracking-wide"
+              style={{ background: 'rgba(248,250,252,0.08)', border: '1px solid rgba(248,250,252,0.3)', color: WHITE }}>
+              <div className="relative flex-shrink-0 overflow-hidden" style={{ width: 20, height: 13, borderRadius: 2, background: WHITE, border: '1px solid rgba(0,47,108,0.5)' }}>
+                <div className="absolute left-0 right-0" style={{ top: 4, height: 4, background: BLUE }} />
+                <div className="absolute top-0 bottom-0" style={{ left: 5, width: 4, background: BLUE }} />
               </div>
-              <h3
-                id="footer-deals-heading"
-                className="font-display text-2xl md:text-3xl text-snow font-light tracking-tight"
-              >
-                Best Lapland deals this week
-              </h3>
+              Finnish Lapland Network
             </div>
-            <a
-              href="https://laplanddeals.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-1.5 text-pink hover:text-snow text-[10px] tracking-[0.3em] uppercase font-semibold transition-colors"
-            >
-              All deals
-              <ArrowUpRight
-                size={12}
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-              />
-            </a>
+            <div className="flex-1 h-px" style={{ background: 'rgba(248,250,252,0.25)' }} />
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {featuredDeals.map((deal) => {
-              const img = getImage(
-                deal.imageSlot,
-                '(max-width: 768px) 100vw, 33vw'
-              );
-              return (
-              <a
-                key={deal.title}
-                href={deal.url}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="group relative rounded-2xl overflow-hidden border border-purple/25 bg-night-light/40 hover:border-pink/60 hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={img.src}
-                    srcSet={img.srcSet}
-                    sizes={img.sizes}
-                    alt={img.alt}
-                    loading="lazy"
-                    decoding="async"
-                    width={1200}
-                    height={750}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-night via-night/30 to-transparent" />
-                  <span
-                    className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] tracking-[0.2em] uppercase font-bold shadow-lg ${ACCENT_PILL[deal.accent]}`}
-                  >
-                    {deal.badge}
-                  </span>
-                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-night/85 backdrop-blur-sm text-snow text-[10px] font-semibold inline-flex items-center gap-1">
-                    <MapPin size={10} className="text-pink" />
-                    {deal.location}
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h4 className="text-snow font-semibold text-sm leading-snug mb-3 group-hover:text-pink transition-colors">
-                    {deal.title}
-                  </h4>
-                  <div className="flex items-end justify-between">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-pink font-bold text-xl">
-                        {deal.price}
-                      </span>
-                      {deal.oldPrice && (
-                        <span className="text-slate-500 text-xs line-through">
-                          {deal.oldPrice}
-                        </span>
-                      )}
-                    </div>
-                    <span className="inline-flex items-center gap-1 text-[10px] tracking-wider uppercase text-aurora-blue font-semibold">
-                      Book
-                      <ArrowUpRight size={11} />
-                    </span>
-                  </div>
-                </div>
-              </a>
-              );
-            })}
-          </div>
-          <p className="mt-4 text-[10px] tracking-wider uppercase text-slate-500 text-center">
-            Affiliate partners · Booked through trusted operators in the
-            LaplandVibes network
-          </p>
-        </section>
-
-        {/* ============================================================
-            TRENDING BLOGS + DESTINATIONS — two-column showcase
-            ============================================================ */}
-        <section className="mb-20 grid gap-12 lg:grid-cols-[1.1fr_1fr]">
-          {/* Trending blogs */}
-          <div>
-            <div className="flex items-center gap-2 mb-5">
-              <TrendingUp size={14} className="text-aurora-green" />
-              <p className="text-aurora-green tracking-[0.3em] text-[10px] font-bold uppercase">
-                Trending traveler blogs
-              </p>
-            </div>
-            <h3 className="font-display text-2xl text-snow font-light tracking-tight mb-6">
-              What people are reading right now
-            </h3>
-            <ol className="space-y-4">
-              {trendingBlogs.map((blog, i) => (
-                <li key={blog.username}>
-                  <Link
-                    to="/stories"
-                    className="group flex items-start gap-4 rounded-xl border border-purple/20 bg-night-light/30 hover:bg-night-light/50 hover:border-aurora-green/40 p-3 transition-all"
-                  >
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-night flex items-center justify-center text-aurora-green text-sm font-bold border border-aurora-green/40">
-                      {i + 1}
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <p className="text-snow font-semibold text-sm leading-snug group-hover:text-aurora-green transition-colors truncate">
-                        {blog.title}
-                      </p>
-                      <p className="text-[10px] tracking-wider uppercase text-slate-500 mt-0.5">
-                        @{blog.username} · {blog.location} · {blog.views} reads
-                      </p>
-                    </div>
-                    <ChevronRight
-                      size={14}
-                      className="text-slate-500 group-hover:text-aurora-green group-hover:translate-x-0.5 transition-all flex-shrink-0 mt-2"
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          {/* Destinations grid */}
-          <div>
-            <div className="flex items-center gap-2 mb-5">
-              <Compass size={14} className="text-aurora-blue" />
-              <p className="text-aurora-blue tracking-[0.3em] text-[10px] font-bold uppercase">
-                Destinations
-              </p>
-            </div>
-            <h3 className="font-display text-2xl text-snow font-light tracking-tight mb-6">
-              Trip blogs by city
-            </h3>
-            <div className="grid grid-cols-2 gap-3">
-              {destinations.map((dest) => (
-                <Link
-                  key={dest.slug}
-                  to="/stories"
-                  className="group rounded-xl border border-purple/20 bg-night-light/30 hover:bg-night-light/50 hover:border-aurora-blue/40 p-3.5 transition-all"
-                >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-snow font-semibold text-sm group-hover:text-aurora-blue transition-colors truncate">
-                      {dest.label}
-                    </span>
-                    <ArrowUpRight
-                      size={12}
-                      className="text-slate-500 group-hover:text-aurora-blue group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all flex-shrink-0"
-                    />
-                  </div>
-                  <p className="text-[9px] tracking-[0.18em] uppercase text-slate-500 mt-1">
-                    {dest.tag}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ============================================================
-            PARTNER ECOSYSTEM — the network
-            ============================================================ */}
-        <section className="mb-20" aria-labelledby="footer-network-heading">
-          <div className="flex items-end justify-between mb-7 flex-wrap gap-3">
+          {/* Logo + tagline + socials */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8">
             <div>
-              <div className="inline-flex items-center gap-2 mb-2">
-                <Sparkles size={14} className="text-aurora-green" />
-                <p className="text-aurora-green tracking-[0.3em] text-[10px] font-bold uppercase">
-                  LaplandVibes network
-                </p>
-              </div>
-              <h3
-                id="footer-network-heading"
-                className="font-display text-2xl md:text-3xl text-snow font-light tracking-tight"
-              >
-                12 sites. One Lapland.
-              </h3>
-            </div>
-            <a
-              href="https://laplandvibes.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-1.5 text-aurora-green hover:text-snow text-[10px] tracking-[0.3em] uppercase font-semibold transition-colors"
-            >
-              The mothership
-              <ArrowUpRight
-                size={12}
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-              />
-            </a>
-          </div>
-
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {ecosystem.map((site) => (
-              <li key={site.url}>
-                <a
-                  href={site.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-start gap-2.5 rounded-xl p-3 border border-purple/15 bg-night-light/20 hover:bg-night-light/40 hover:border-aurora-green/40 transition-all"
-                >
-                  <ExternalLink
-                    size={13}
-                    className="text-aurora-green mt-1 flex-shrink-0 group-hover:text-pink transition-colors"
-                  />
-                  <div className="min-w-0">
-                    <span className="block text-snow font-semibold text-sm group-hover:text-pink transition-colors truncate">
-                      {site.label}
-                    </span>
-                    <span className="block text-slate-400 text-xs leading-snug mt-0.5">
-                      {site.desc}
-                    </span>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* ============================================================
-            NEWSLETTER + LINKS COLUMNS
-            ============================================================ */}
-        <section className="mb-16 grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          {/* Newsletter signup */}
-          <div className="rounded-2xl border border-pink/40 bg-gradient-to-br from-pink/10 via-night-light/30 to-aurora-blue/10 p-6 md:col-span-2 lg:col-span-1">
-            <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full bg-night/70 border border-pink/40">
-              <Mail size={11} className="text-pink" />
-              <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase">
-                Newsletter
+              <span className="font-heading tracking-wide text-3xl md:text-5xl">
+                <span className="text-vibe-pink">#</span>
+                <span style={{ color: WHITE }}>LAPLAND</span>
+                <span className="text-vibe-pink">VIBES</span>
+              </span>
+              <p className="text-[13px] sm:text-sm font-normal mt-2 tracking-wide" style={{ color: 'rgba(248,250,252,0.75)' }}>
+                The definitive digital home for Finnish Lapland travel.
               </p>
             </div>
-            <h4 className="font-display text-xl text-snow font-light leading-snug mb-3">
-              One field dispatch a week.
-              <br />
-              From Finland, with snow.
-            </h4>
-            <p className="text-slate-400 text-xs leading-relaxed mb-4">
-              New trip blogs, the best deal of the week, and what the aurora
-              forecast actually says. No junk.
-            </p>
-            <Link
-              to="/#newsletter"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-pink text-white font-semibold text-xs tracking-[0.18em] uppercase hover:bg-pink-dark transition-colors"
-            >
-              Subscribe
-              <ArrowUpRight size={12} />
-            </Link>
-          </div>
 
-          {/* Explore */}
-          <div>
-            <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-5">
-              Read
-            </p>
-            <ul className="space-y-3">
-              {exploreLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    className="group inline-flex items-center gap-1.5 text-slate-300 hover:text-pink text-sm transition-colors"
-                  >
-                    {link.label}
-                    <ArrowUpRight
-                      size={11}
-                      className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Platform */}
-          <div>
-            <p className="text-aurora-green tracking-[0.35em] text-[10px] font-bold uppercase mb-5">
-              Platform
-            </p>
-            <ul className="space-y-3">
-              {platformLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    className="group inline-flex items-center gap-1.5 text-slate-300 hover:text-aurora-green text-sm transition-colors"
-                  >
-                    {link.label}
-                    <ArrowUpRight
-                      size={11}
-                      className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Trust + social */}
-          <div>
-            <p className="text-aurora-blue tracking-[0.35em] text-[10px] font-bold uppercase mb-5">
-              Follow
-            </p>
-            <ul className="space-y-3 mb-5">
-              <li>
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+              {socials.map((s) => (
                 <a
-                  href="https://www.instagram.com/laplandvibes/"
+                  key={s.label}
+                  href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 text-slate-300 hover:text-aurora-blue text-sm transition-colors"
+                  aria-label={s.label}
+                  className="w-10 h-10 flex items-center justify-center rounded-full transition-all duration-200"
+                  style={{ background: 'rgba(248,250,252,0.12)', border: '1px solid rgba(248,250,252,0.3)', color: WHITE }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.background = '#EC4899';
+                    (e.currentTarget as HTMLElement).style.borderColor = '#EC4899';
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.background = 'rgba(248,250,252,0.12)';
+                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(248,250,252,0.3)';
+                  }}
                 >
-                  <InstagramIcon size={13} />
-                  Instagram
+                  {s.icon}
                 </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/laplandvibes"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 text-slate-300 hover:text-aurora-blue text-sm transition-colors"
-                >
-                  <FacebookIcon size={13} />
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/rss.xml"
-                  className="group inline-flex items-center gap-2 text-slate-300 hover:text-aurora-blue text-sm transition-colors"
-                >
-                  <Rss size={13} />
-                  RSS feed
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:laplandvibe@gmail.com"
-                  className="group inline-flex items-center gap-2 text-slate-300 hover:text-aurora-blue text-sm transition-colors"
-                >
-                  <Mail size={13} />
-                  Email us
-                </a>
-              </li>
-            </ul>
-            <div className="flex items-center gap-1 text-amber-300 text-xs">
-              <Star size={11} className="fill-amber-300" />
-              <Star size={11} className="fill-amber-300" />
-              <Star size={11} className="fill-amber-300" />
-              <Star size={11} className="fill-amber-300" />
-              <Star size={11} className="fill-amber-300" />
-              <span className="text-slate-500 ml-1">2.8k readers</span>
+              ))}
             </div>
-          </div>
-        </section>
-
-        {/* ============================================================
-            BOTTOM ROW
-            ============================================================ */}
-        <div className="pt-8 border-t border-purple/15 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p className="text-center md:text-left">
-            © {currentYear} Lapland.blog · A field journal platform by{' '}
-            <a
-              href="https://laplandvibes.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-aurora-blue hover:text-pink transition-colors font-semibold"
-            >
-              Lapeso Oy
-            </a>
-            , Rovaniemi, Finland
-          </p>
-          <div className="flex items-center gap-5 flex-wrap justify-center">
-            <Link
-              to="/privacy"
-              className="text-slate-400 hover:text-pink transition-colors"
-            >
-              Privacy
-            </Link>
-            <Link
-              to="/unsubscribe"
-              className="text-slate-400 hover:text-pink transition-colors"
-            >
-              Unsubscribe
-            </Link>
-            <a
-              href="/sitemap.xml"
-              className="text-slate-400 hover:text-pink transition-colors"
-            >
-              Sitemap
-            </a>
-            <a
-              href="/rss.xml"
-              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink transition-colors"
-              title="RSS feed"
-            >
-              <Rss size={11} /> RSS
-            </a>
           </div>
         </div>
       </div>
+
+      {/* ═══ BAND 2: WHITE — Travel Guide pillars ═══ */}
+      <div style={{ background: WHITE }}>
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-12 py-9 sm:py-10">
+          <p className="text-[10px] font-normal uppercase tracking-[0.25em] mb-4 sm:mb-5" style={{ color: BLUE }}>
+            Lapland Travel Guide
+          </p>
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-2">
+            {pillarLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => onPillarClick?.(link.name)}
+                className="text-[13px] sm:text-sm font-semibold px-3 sm:px-4 py-2.5 sm:py-2 rounded-full transition-all duration-200 hover:scale-105 whitespace-nowrap inline-flex items-center justify-center min-h-[44px] sm:min-h-0 shadow-sm"
+                style={{ background: PINK, border: `1.5px solid ${PINK}`, color: '#FFFFFF' }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.background = '#DB2777';
+                  (e.currentTarget as HTMLElement).style.borderColor = '#DB2777';
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.background = PINK;
+                  (e.currentTarget as HTMLElement).style.borderColor = PINK;
+                }}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ═══ BAND 3: BLUE — Site network (5 columns) ═══ */}
+      <div style={{ background: BLUE }}>
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-12 py-10 sm:py-14">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12">
+            {siteGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-[10px] font-semibold mb-4 sm:mb-5 pb-2.5 sm:pb-3 uppercase tracking-[0.2em] border-b"
+                  style={{ color: WHITE, borderColor: 'rgba(248,250,252,0.25)' }}>
+                  {group.title}
+                </h3>
+                <ul className="space-y-2.5 sm:space-y-3.5">
+                  {group.links.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[13px] sm:text-sm font-normal leading-snug transition-colors duration-200"
+                        style={{ color: 'rgba(248,250,252,0.85)' }}
+                        onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#EC4899'}
+                        onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'rgba(248,250,252,0.85)'}
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ═══ BAND 4: WHITE — About + CTA cards ═══ */}
+      <div style={{ background: WHITE }}>
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-12 py-10 sm:py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+
+            <div className="lg:col-span-2">
+              <p className="text-[10px] font-normal uppercase tracking-[0.25em] mb-5 pb-3 border-b"
+                style={{ color: BLUE, borderColor: 'rgba(0,47,108,0.2)' }}>
+                About LaplandVibes
+              </p>
+              <p className="text-sm font-normal leading-relaxed mb-5" style={{ color: '#374151' }}>
+                The definitive guide to Finnish Lapland — from the revontulet to the midnight sun.
+                Curated experiences, insider tips, and everything you need to plan your Arctic adventure,
+                built by people who know Lapland deeply.
+              </p>
+              <div className="inline-flex items-center gap-2 text-xs font-normal px-3 py-1.5 rounded-full"
+                style={{ background: 'rgba(16,185,129,0.10)', border: '1px solid rgba(16,185,129,0.25)', color: '#059669' }}>
+                <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: '#10b981' }} />
+                Content reviewed by local Lapland experts
+              </div>
+            </div>
+
+            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+              {/* Spotted an Error */}
+              <div className="rounded-xl flex flex-col transition-all duration-200 overflow-hidden"
+                style={{ background: WHITE, border: `2px solid ${BLUE}` }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = '#EC4899'}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BLUE}>
+                <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, #EC4899, #f472b6)' }} />
+                <div className="p-5 flex flex-col flex-1">
+                  <AlertCircle className="w-5 h-5 mb-3 shrink-0" style={{ color: '#EC4899' }} />
+                  <p className="font-heading text-lg mb-2 tracking-wide" style={{ color: BLUE }}>Spotted an Error?</p>
+                  <p className="text-sm font-normal leading-relaxed mb-5 flex-1" style={{ color: '#374151' }}>
+                    See something that needs fixing? Tell us — we'll correct it immediately.
+                  </p>
+                  <a href="mailto:info@lapland.blog"
+                    className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm"
+                    style={{ background: '#EC4899', border: '2px solid #EC4899', color: '#FFFFFF' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#DB2777'; (e.currentTarget as HTMLElement).style.borderColor = '#DB2777'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#EC4899'; (e.currentTarget as HTMLElement).style.borderColor = '#EC4899'; }}>
+                    Report an Error →
+                  </a>
+                </div>
+              </div>
+
+              {/* Partner With Us */}
+              <div className="rounded-xl flex flex-col transition-all duration-200 overflow-hidden"
+                style={{ background: WHITE, border: `2px solid ${BLUE}` }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = '#EC4899'}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BLUE}>
+                <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, #EC4899, #f472b6)' }} />
+                <div className="p-5 flex flex-col flex-1">
+                  <Briefcase className="w-5 h-5 mb-3 shrink-0" style={{ color: '#EC4899' }} />
+                  <p className="font-heading text-lg mb-2 tracking-wide" style={{ color: BLUE }}>Partner With Us</p>
+                  <p className="text-sm font-normal leading-relaxed mb-5 flex-1" style={{ color: '#374151' }}>
+                    Advertise or collaborate across 21+ Lapland sites.
+                  </p>
+                  <a href="mailto:sales@lapland.blog"
+                    className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm"
+                    style={{ background: '#EC4899', border: '2px solid #EC4899', color: '#FFFFFF' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#DB2777'; (e.currentTarget as HTMLElement).style.borderColor = '#DB2777'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#EC4899'; (e.currentTarget as HTMLElement).style.borderColor = '#EC4899'; }}>
+                    Get in Touch →
+                  </a>
+                </div>
+              </div>
+
+              {/* Press & Media */}
+              <div className="rounded-xl flex flex-col transition-all duration-200 overflow-hidden"
+                style={{ background: WHITE, border: `2px solid ${BLUE}` }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = '#EC4899'}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = BLUE}>
+                <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, #EC4899, #f472b6)' }} />
+                <div className="p-5 flex flex-col flex-1">
+                  <Newspaper className="w-5 h-5 mb-3 shrink-0" style={{ color: '#EC4899' }} />
+                  <p className="font-heading text-lg mb-2 tracking-wide" style={{ color: BLUE }}>Press & Media</p>
+                  <p className="text-sm font-normal leading-relaxed mb-5 flex-1" style={{ color: '#374151' }}>
+                    Editorial partnerships and press kits.
+                  </p>
+                  <a href="mailto:press@lapland.blog"
+                    className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm"
+                    style={{ background: '#EC4899', border: '2px solid #EC4899', color: '#FFFFFF' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#DB2777'; (e.currentTarget as HTMLElement).style.borderColor = '#DB2777'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#EC4899'; (e.currentTarget as HTMLElement).style.borderColor = '#EC4899'; }}>
+                    Press Enquiries →
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ═══ BAND 5: BLUE — Copyright + legal ═══ */}
+      <div style={{ background: BLUE, borderTop: '1px solid rgba(248,250,252,0.15)' }}>
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-12 py-5 sm:py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+            <p className="text-xs font-normal" style={{ color: WHITE }}>
+              &copy; {new Date().getFullYear()} #LaplandVibes — Part of the #LaplandVibes Network
+            </p>
+            <a
+              href="https://yrityspaketit.fi"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="text-xs font-normal transition-colors duration-200"
+              style={{ color: WHITE }}
+              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#EC4899'}
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = WHITE}
+            >
+              Website by Yrityspaketit.fi
+            </a>
+            <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-xs font-normal">
+              {[
+                { to: '/privacy', label: 'Privacy Policy' },
+                { to: '/cookie-policy', label: 'Cookie Policy' },
+                { to: '/terms', label: 'Terms of Use' },
+              ].map(({ to, label }) => (
+                <Link
+                  key={to}
+                  to={to}
+                  className="transition-colors duration-200 inline-flex items-center min-h-[44px] px-1"
+                  style={{ color: WHITE }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#EC4899'}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = WHITE}
+                >
+                  {label}
+                </Link>
+              ))}
+              <a
+                href="mailto:info@lapland.blog"
+                className="transition-colors duration-200 inline-flex items-center min-h-[44px] px-1"
+                style={{ color: WHITE }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#EC4899'}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = WHITE}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </footer>
   );
 }

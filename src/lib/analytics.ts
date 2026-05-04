@@ -1,6 +1,5 @@
 // Google Analytics 4 — Lapland.blog
-// Adapted from the shared LaplandVibes ecosystem pattern.
-// GA_ID matches laplandnightlife for now — update when Vesa provides a dedicated property.
+// Property: G-W5P9B85M2Y (Stream ID 14231630671)
 
 declare global {
   interface Window {
@@ -9,7 +8,7 @@ declare global {
   }
 }
 
-export const GA_ID = 'G-R1MNNKEY0X';
+export const GA_ID = 'G-W5P9B85M2Y';
 
 // Full LaplandVibes ecosystem — used for cross-domain linker + network tracking.
 export const NETWORK_DOMAINS = [

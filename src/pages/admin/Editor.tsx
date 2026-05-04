@@ -169,6 +169,10 @@ export default function Editor() {
       published_at: publishedAt
         ? new Date(publishedAt + 'T12:00:00Z').toISOString()
         : null,
+      visit_date: null,
+      location: null,
+      weather_note: null,
+      stay_type: null,
     };
 
     if (!input.title) {

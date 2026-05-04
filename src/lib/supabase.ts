@@ -59,4 +59,9 @@ export interface BlogPostRow {
   view_count: number;
   created_at: string;
   updated_at: string;
+  // Trip metadata (Phase 2)
+  visit_date: string | null;
+  location: string | null;
+  weather_note: string | null;
+  stay_type: string | null;
 }

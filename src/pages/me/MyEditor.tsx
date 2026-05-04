@@ -30,6 +30,18 @@ import {
   Check,
   Link2,
   ImagePlus,
+  MapPin,
+  CalendarDays,
+  Cloud,
+  Home,
+  Heading2,
+  List,
+  ListOrdered,
+  Quote,
+  Minus,
+  Bold,
+  Italic,
+  Link as LinkIcon,
 } from 'lucide-react';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
@@ -118,6 +130,12 @@ export default function MyEditor() {
   const [markdown, setMarkdown] = useState('');
   const [status, setStatus] = useState<'draft' | 'published'>('draft');
 
+  // Trip metadata (Phase 2)
+  const [visitDate, setVisitDate] = useState('');
+  const [location, setLocation] = useState('');
+  const [weatherNote, setWeatherNote] = useState('');
+  const [stayType, setStayType] = useState('');
+
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [savedAt, setSavedAt] = useState<Date | null>(null);
@@ -164,6 +182,10 @@ export default function MyEditor() {
     setHeroAlt(row.hero_alt ?? '');
     setMarkdown(contentToMarkdown(row.content));
     setStatus(row.status ?? 'draft');
+    setVisitDate(row.visit_date ?? '');
+    setLocation(row.location ?? '');
+    setWeatherNote(row.weather_note ?? '');
+    setStayType(row.stay_type ?? '');
   }, [row, user]);
 
   // Auto-slug from title as long as the user hasn't customised it.
@@ -214,6 +236,10 @@ export default function MyEditor() {
         featured: false,
         read_time_minutes: readTime,
         published_at: null,
+        visit_date: visitDate || null,
+        location: location || null,
+        weather_note: weatherNote || null,
+        stay_type: stayType || null,
       };
       if (!input.title) return; // don't save empty posts
       const { error } = await updatePost(id, input);
@@ -223,13 +249,13 @@ export default function MyEditor() {
         setTimeout(() => setAutoSaved(false), 2000);
       }
     }, 3000);
-  }, [isNew, id, saving, markdown, title, excerpt, categorySlug, heroImage, heroAlt, slug, status, readTime]);
+  }, [isNew, id, saving, markdown, title, excerpt, categorySlug, heroImage, heroAlt, slug, status, readTime, visitDate, location, weatherNote, stayType]);
 
   // Trigger auto-save on any content change
   useEffect(() => {
     triggerAutoSave();
     return () => { if (autoSaveTimer.current) clearTimeout(autoSaveTimer.current); };
-  }, [title, excerpt, markdown, categorySlug, heroImage, heroAlt, triggerAutoSave]);
+  }, [title, excerpt, markdown, categorySlug, heroImage, heroAlt, visitDate, location, weatherNote, stayType, triggerAutoSave]);
 
   // Insert a markdown snippet at the caret (or replace a range) and restore
   // focus so the author keeps typing right where they were.
@@ -350,6 +376,10 @@ export default function MyEditor() {
       featured: false,
       read_time_minutes: readTime,
       published_at: null,
+      visit_date: visitDate || null,
+      location: location || null,
+      weather_note: weatherNote || null,
+      stay_type: stayType || null,
     };
 
     if (!input.title) {
@@ -572,6 +602,37 @@ export default function MyEditor() {
                   }}
                 />
               </div>
+              {/* Formatting toolbar */}
+              <div className="flex flex-wrap items-center gap-1 px-2 py-1.5 bg-night-light/60 border border-purple/30 border-b-0 rounded-t-xl">
+                {([
+                  { icon: Bold, label: 'Bold', prefix: '**', suffix: '**', placeholder: 'bold text' },
+                  { icon: Italic, label: 'Italic', prefix: '*', suffix: '*', placeholder: 'italic text' },
+                  { icon: Heading2, label: 'Heading', prefix: '\n## ', suffix: '', placeholder: 'Heading' },
+                  { icon: List, label: 'Bullet list', prefix: '\n- ', suffix: '', placeholder: 'item' },
+                  { icon: ListOrdered, label: 'Numbered list', prefix: '\n1. ', suffix: '', placeholder: 'item' },
+                  { icon: Quote, label: 'Quote', prefix: '\n> ', suffix: '', placeholder: 'quote' },
+                  { icon: LinkIcon, label: 'Link', prefix: '[', suffix: '](https://)', placeholder: 'link text' },
+                  { icon: Minus, label: 'Divider', prefix: '\n\n---\n\n', suffix: '', placeholder: '' },
+                ] as const).map(({ icon: Icon, label, prefix, suffix, placeholder }) => (
+                  <button
+                    key={label}
+                    type="button"
+                    title={label}
+                    onClick={() => {
+                      const el = textareaRef.current;
+                      if (!el) return;
+                      const start = el.selectionStart;
+                      const end = el.selectionEnd;
+                      const selected = markdown.slice(start, end);
+                      const insert = prefix + (selected || placeholder) + suffix;
+                      spliceIntoBody(start, end, insert);
+                    }}
+                    className="p-1.5 rounded-md text-slate-400 hover:text-snow hover:bg-purple/20 transition-colors"
+                  >
+                    <Icon size={15} />
+                  </button>
+                ))}
+              </div>
               <textarea
                 ref={textareaRef}
                 value={markdown}
@@ -579,7 +640,7 @@ export default function MyEditor() {
                 onPaste={handleBodyPaste}
                 placeholder={`Start writing your trip story here...\n\nWhat did you see? Where did you go?\nHow did it feel?\n\nYou can add photos with the "Add photo" button above.`}
                 rows={previewOpen ? 12 : 22}
-                className="w-full px-4 py-4 bg-night-light/40 border border-purple/30 rounded-xl text-snow placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/40 focus:border-pink/60 text-sm font-mono leading-relaxed resize-y"
+                className="w-full px-4 py-4 bg-night-light/40 border border-purple/30 rounded-b-xl rounded-t-none text-snow placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/40 focus:border-pink/60 text-sm font-mono leading-relaxed resize-y"
               />
               <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
                 <p className="text-[11px] text-slate-300">
@@ -695,6 +756,91 @@ export default function MyEditor() {
                 <p className="mt-1 text-[11px] text-slate-300">
                   Created from your title. You can leave it as-is.
                 </p>
+              </div>
+            </div>
+
+            {/* ── Your trip metadata ───────────────────────────── */}
+            <div className="rounded-2xl border border-aurora-blue/25 bg-aurora-blue/5 p-5 space-y-4">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-aurora-blue font-bold">
+                Your trip
+              </p>
+
+              <div>
+                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                  <MapPin size={11} className="text-aurora-blue" />
+                  Where in Lapland?
+                </label>
+                <select
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  className="w-full px-3 py-2 bg-night/60 border border-purple/30 rounded-lg text-snow focus:outline-none focus:ring-2 focus:ring-aurora-blue/40 text-sm"
+                >
+                  <option value="">Choose a place...</option>
+                  <option value="Rovaniemi">Rovaniemi</option>
+                  <option value="Levi">Levi</option>
+                  <option value="Saariselkä">Saariselkä</option>
+                  <option value="Inari">Inari</option>
+                  <option value="Pyhä">Pyhä</option>
+                  <option value="Ylläs">Ylläs</option>
+                  <option value="Sodankylä">Sodankylä</option>
+                  <option value="Kilpisjärvi">Kilpisjärvi</option>
+                  <option value="Muonio">Muonio</option>
+                  <option value="Enontekiö">Enontekiö</option>
+                  <option value="Kemi">Kemi</option>
+                  <option value="Luosto">Luosto</option>
+                  <option value="Posio">Posio</option>
+                  <option value="Ranua">Ranua</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                  <CalendarDays size={11} className="text-aurora-blue" />
+                  When did you visit?
+                </label>
+                <input
+                  type="date"
+                  value={visitDate}
+                  onChange={(e) => setVisitDate(e.target.value)}
+                  className="w-full px-3 py-2 bg-night/60 border border-purple/30 rounded-lg text-snow focus:outline-none focus:ring-2 focus:ring-aurora-blue/40 text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                  <Home size={11} className="text-aurora-blue" />
+                  Where did you stay?
+                </label>
+                <select
+                  value={stayType}
+                  onChange={(e) => setStayType(e.target.value)}
+                  className="w-full px-3 py-2 bg-night/60 border border-purple/30 rounded-lg text-snow focus:outline-none focus:ring-2 focus:ring-aurora-blue/40 text-sm"
+                >
+                  <option value="">Choose...</option>
+                  <option value="cabin">Cabin / Mökki</option>
+                  <option value="hotel">Hotel</option>
+                  <option value="resort">Resort / Spa</option>
+                  <option value="igloo">Glass Igloo</option>
+                  <option value="hostel">Hostel</option>
+                  <option value="camping">Camping / Tent</option>
+                  <option value="airbnb">Airbnb / Rental</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                  <Cloud size={11} className="text-aurora-blue" />
+                  Weather
+                </label>
+                <input
+                  type="text"
+                  value={weatherNote}
+                  onChange={(e) => setWeatherNote(e.target.value)}
+                  placeholder="-22°C, clear skies, northern lights"
+                  className="w-full px-3 py-2 bg-night/60 border border-purple/30 rounded-lg text-snow placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-aurora-blue/40 text-sm"
+                />
               </div>
             </div>
 
