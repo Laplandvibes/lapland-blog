@@ -11,6 +11,9 @@ const Post = lazy(() => import('./pages/Post'));
 const Archive = lazy(() => import('./pages/Archive'));
 const Category = lazy(() => import('./pages/Category'));
 const About = lazy(() => import('./pages/About'));
+const StartHere = lazy(() => import('./pages/StartHere'));
+const TopReads = lazy(() => import('./pages/TopReads'));
+const Destinations = lazy(() => import('./pages/Destinations'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
@@ -50,6 +53,9 @@ export default function App() {
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/start-here" element={<StartHere />} />
+          <Route path="/top-reads" element={<TopReads />} />
+          <Route path="/destinations" element={<Destinations />} />
           <Route path="/stories" element={<Archive />} />
           <Route path="/category/:slug" element={<Category />} />
           <Route path="/post/:slug" element={<Post />} />

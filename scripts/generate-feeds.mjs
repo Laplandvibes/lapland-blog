@@ -80,6 +80,9 @@ function buildSitemap(posts) {
 
   const staticPages = [
     { loc: '/', changefreq: 'weekly', priority: '1.0', lastmod: today },
+    { loc: '/start-here', changefreq: 'monthly', priority: '0.95', lastmod: today },
+    { loc: '/top-reads', changefreq: 'weekly', priority: '0.95', lastmod: today },
+    { loc: '/destinations', changefreq: 'monthly', priority: '0.9', lastmod: today },
     { loc: '/stories', changefreq: 'weekly', priority: '0.9', lastmod: today },
     { loc: '/about', changefreq: 'monthly', priority: '0.7', lastmod: today },
     { loc: '/signin', changefreq: 'yearly', priority: '0.4', lastmod: today },

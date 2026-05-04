@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
@@ -15,7 +16,14 @@ type Filter = 'all' | (typeof categories)[number]['slug'];
 export default function Archive() {
   const [filter, setFilter] = useState<Filter>('all');
   const [query, setQuery] = useState('');
+  const [searchParams] = useSearchParams();
+  const tagParam = searchParams.get('tag')?.toLowerCase() ?? null;
   const { posts, loading } = usePosts();
+
+  // Pre-fill the search box from ?tag= so /destinations links filter Archive.
+  useEffect(() => {
+    if (tagParam) setQuery(tagParam);
+  }, [tagParam]);
 
   useSeo({
     title: 'All stories — Lapland.blog',

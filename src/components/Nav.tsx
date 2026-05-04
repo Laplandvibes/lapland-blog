@@ -10,10 +10,10 @@ import { useEffect, useRef, useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
 
 const links = [
-  { to: '/stories', label: 'Stories' },
-  { to: '/category/aurora', label: 'Aurora' },
-  { to: '/category/cabins', label: 'Cabins' },
-  { to: '/category/seasons', label: 'Seasons' },
+  { to: '/start-here', label: 'Start here' },
+  { to: '/top-reads', label: 'Top reads' },
+  { to: '/destinations', label: 'Destinations' },
+  { to: '/stories', label: 'Trip diaries' },
   { to: '/about', label: 'About' },
 ];
 

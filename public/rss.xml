@@ -9,23 +9,13 @@
     <copyright>© 2026 Lapeso Oy</copyright>
     <managingEditor>info@lapland.blog (Lapland.blog)</managingEditor>
     <webMaster>info@lapland.blog (Lapland.blog)</webMaster>
-    <lastBuildDate>Mon, 04 May 2026 07:39:11 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 11:13:24 GMT</lastBuildDate>
     <generator>lapland.blog custom generator</generator>
     <image>
       <url>https://lapland.blog/og-image.png</url>
       <title>Lapland.blog</title>
       <link>https://lapland.blog</link>
     </image>
-    <item>
-      <title>Hello reindeer</title>
-      <link>https://lapland.blog/post/helloreindeer</link>
-      <guid isPermaLink="true">https://lapland.blog/post/helloreindeer</guid>
-      <pubDate>Fri, 10 Apr 2026 05:41:37 GMT</pubDate>
-      <description>a wonderfull day</description>
-      <category>stories</category>
-      <enclosure url="https://oogioaxmfnqcbvjbcodh.supabase.co/storage/v1/object/public/trip-images/0b4ae58c-653c-4a46-b076-aec35e3cc55e/1775799641676-eb2058e668.png" type="image/webp"/>
-      <author>info@lapland.blog (The Field Journal)</author>
-    </item>
     <item>
       <title>Living between two suns: what the darkness actually feels like</title>
       <link>https://lapland.blog/post/living-between-two-suns</link>
