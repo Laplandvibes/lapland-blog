@@ -233,7 +233,7 @@ export default function SignIn() {
             </ul>
 
             <p className="text-[10px] tracking-[0.3em] uppercase text-slate-300">
-              Free forever · No credit card · Made in Finland
+              Free travel journals · No credit card · Made in Finland
             </p>
           </div>
 

@@ -36,6 +36,7 @@ const Editor = lazy(() => import('./pages/admin/Editor'));
 const AuthGuard = lazy(() => import('./components/me/AuthGuard'));
 const MyDashboard = lazy(() => import('./pages/me/MyDashboard'));
 const MyEditor = lazy(() => import('./pages/me/MyEditor'));
+const MySettings = lazy(() => import('./pages/me/MySettings'));
 
 // Lightweight skeleton shown while a chunk is in-flight. Same dark palette as
 // the rest of the app so there's no visual flash.
@@ -82,6 +83,14 @@ export default function App() {
             element={
               <AuthGuard>
                 <MyEditor />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/me/settings"
+            element={
+              <AuthGuard>
+                <MySettings />
               </AuthGuard>
             }
           />

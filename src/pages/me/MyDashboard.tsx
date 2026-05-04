@@ -249,13 +249,21 @@ export default function MyDashboard() {
             )}
           </div>
 
-          <Link
-            to="/me/new"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all"
-          >
-            <Plus size={16} />
-            Write new post
-          </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              to="/me/new"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all"
+            >
+              <Plus size={16} />
+              Write new post
+            </Link>
+            <Link
+              to="/me/settings"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-night-light/40 border border-purple/30 text-slate-200 hover:text-pink hover:border-pink/55 text-xs font-semibold uppercase tracking-[0.2em] rounded-full transition-colors"
+            >
+              Account &amp; settings
+            </Link>
+          </div>
         </Reveal>
 
         {/* ─── Status banners ───────────────────────────────────────── */}

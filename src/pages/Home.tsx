@@ -432,7 +432,7 @@ export default function Home() {
                 <ArrowRight size={18} />
               </Link>
               <p className="mt-4 text-[10px] tracking-[0.3em] uppercase text-slate-400">
-                Free forever · No card required · Sign in with Google
+                Free for travel journals · No card required · Sign in with Google
               </p>
             </div>
           </Reveal>
