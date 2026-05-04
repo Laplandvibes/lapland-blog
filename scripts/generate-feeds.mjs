@@ -137,7 +137,7 @@ function buildRss(posts) {
       <description>${escapeXml(p.excerpt ?? '')}</description>
       <category>${escapeXml(p.category_slug ?? 'stories')}</category>
       ${p.hero_image ? `<enclosure url="${escapeXml(p.hero_image)}" type="image/webp"/>` : ''}
-      <author>laplandvibe@gmail.com (Vesa Pesola)</author>
+      <author>info@lapland.blog (The Field Journal)</author>
     </item>`
     )
     .join('\n');
@@ -151,8 +151,8 @@ function buildRss(posts) {
     <description>A first-person field journal from Finnish Lapland — honest, seasonal, written by someone who actually lives here. Aurora, cabins, seasons, food, people.</description>
     <language>en</language>
     <copyright>© ${new Date().getFullYear()} Lapeso Oy</copyright>
-    <managingEditor>laplandvibe@gmail.com (Vesa Pesola)</managingEditor>
-    <webMaster>laplandvibe@gmail.com (Vesa Pesola)</webMaster>
+    <managingEditor>info@lapland.blog (Lapland.blog)</managingEditor>
+    <webMaster>info@lapland.blog (Lapland.blog)</webMaster>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
     <generator>lapland.blog custom generator</generator>
     <image>

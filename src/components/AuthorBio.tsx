@@ -7,7 +7,8 @@ interface Props {
 
 /**
  * AuthorBio — small author card shown at the end of a post and on About.
- * Intentionally no avatar photo — Vesa doesn't want a face on the page in v1.
+ * Renders the editorial voice (no real-person avatar) — actual user-submitted
+ * trip blogs render their own author from the user profile.
  */
 export default function AuthorBio({ variant = 'editorial' }: Props) {
   const isEditorial = variant === 'editorial';
@@ -43,7 +44,7 @@ export default function AuthorBio({ variant = 'editorial' }: Props) {
                 : 'text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-1'
             }
           >
-            Written by
+            Field journal entry
           </p>
           <h3
             className={
@@ -72,7 +73,7 @@ export default function AuthorBio({ variant = 'editorial' }: Props) {
                 : 'inline-flex items-center gap-1.5 text-pink hover:text-pink-dark text-sm font-semibold uppercase tracking-wider transition-colors'
             }
           >
-            More about Vesa →
+            About Lapland.blog →
           </Link>
         </div>
       </div>

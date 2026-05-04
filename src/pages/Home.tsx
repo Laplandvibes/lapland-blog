@@ -415,10 +415,11 @@ export default function Home() {
               </Link>
             </div>
             <p className="text-slate-300 text-sm md:text-base max-w-2xl mb-10 leading-relaxed">
-              This is what your own trip blog could look like. Vesa, who built
-              Lapland.blog, kept his own field journal across a Lapland winter
-              as the first user — five entries, real temperatures, real cabins,
-              real soup. Read one and picture your own.
+              This is what your own trip blog could look like. The five seed
+              entries below were written by The Field Journal — the editorial
+              voice of Lapland.blog — across one Lapland winter. Real
+              temperatures, real cabins, real soup. Read one and picture your
+              own.
             </p>
           </Reveal>
 
@@ -623,7 +624,7 @@ export default function Home() {
                 />
                 <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                   <p className="text-white text-[10px] tracking-[0.25em] uppercase font-semibold">
-                    Vesa · Rovaniemi
+                    Your trip · Your blog
                   </p>
                 </div>
               </div>
@@ -634,7 +635,7 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 mb-5">
                   <PenLine size={16} className="text-[#C1543B]" />
                   <p className="text-[#C1543B] tracking-[0.35em] text-[10px] font-bold uppercase">
-                    Why I built this
+                    Why this exists
                   </p>
                 </div>
                 <h2
@@ -646,18 +647,20 @@ export default function Home() {
                 </h2>
                 <div className="space-y-5 text-[#3B3935] text-base md:text-lg leading-relaxed">
                   <p>
-                    I'm Vesa. I live in Rovaniemi and I've spent ten consecutive
-                    winters north of the Arctic Circle. Every year I watch
-                    visitors arrive, see something extraordinary, and lose it to
-                    a phone roll they never look at again.
+                    Every year, thousands of visitors arrive in Lapland, see
+                    something extraordinary, and lose it to a phone roll they
+                    never look at again. The aurora over the cabin. The
+                    fingertip-numb walk back from the sauna. The bowl of
+                    salmon soup that was somehow worth €42. Gone in a week.
                   </p>
                   <p>
-                    Lapland.blog is a small free tool to fix that. Pin where you
-                    were. Write what you saw. Photograph the soup. By the time
-                    you fly home, you have a real blog of your trip — one your
-                    friends can actually follow, one you'll still want to read
-                    in five years. No stock photos. No <em>magical winter
-                    wonderland.</em> Just your own honest version of the place.
+                    Lapland.blog is a small free tool to fix that. Pin where
+                    you were. Write what you saw. Photograph the soup. By the
+                    time you fly home, you have a real blog of your trip —
+                    one your friends can actually follow, one you'll still
+                    want to read in five years. No stock photos. No{' '}
+                    <em>magical winter wonderland.</em> Just your own honest
+                    version of the place.
                   </p>
                 </div>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">

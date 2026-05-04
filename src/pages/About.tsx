@@ -2,20 +2,18 @@ import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
-import AuthorBio from '../components/AuthorBio';
-import { vesa } from '../data/author';
 import { useSeo, canonicalUrl } from '../lib/seo';
-import { useJsonLd, personSchema, breadcrumbSchema } from '../lib/jsonld';
+import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 
 export default function About() {
   useSeo({
     title: 'About — Lapland.blog',
     description:
-      "Who writes Lapland.blog, why it exists, and what you'll (and won't) find on it. Written by Vesa Pesola from Finland.",
+      "Lapland.blog is a free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to friends. Your trip, told well.",
     canonical: canonicalUrl('/about'),
   });
 
-  useJsonLd('person', personSchema());
+  useJsonLd('website', websiteSchema());
   useJsonLd(
     'about',
     breadcrumbSchema([
@@ -50,20 +48,20 @@ export default function About() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-[var(--color-cream)] rounded-2xl shadow-[0_40px_80px_-40px_rgba(0,0,0,0.5)] border border-[var(--color-paper-border)] px-6 py-10 md:px-14 md:py-14">
               <p className="text-[var(--color-accent)] text-[10px] uppercase tracking-[0.35em] font-bold mb-5">
-                About the blog
+                About the platform
               </p>
               <h1
                 className="text-[var(--color-ink)] font-normal leading-[1.05] tracking-[-0.01em] text-[clamp(2.25rem,6vw,4.5rem)] mb-8"
                 style={{ fontFamily: 'var(--font-editorial)' }}
               >
-                Why this blog exists.
+                A travel journal worth keeping.
               </h1>
               <p className="text-[var(--color-ink-soft)] text-lg md:text-xl leading-relaxed">
-                There are a lot of Lapland articles on the internet. Most of
-                them were written by people who have never been here in
-                February, or only been here for three days on a press trip.
-                This one is written from Finland, by someone who actually lives
-                with the weather.
+                Lapland.blog is a free travel-journal platform for visitors to
+                Finnish Lapland. Pin where you saw the aurora. Photograph the
+                cabin. Write what the temperature did. By the time you fly home
+                you have a beautiful blog of your trip — one your friends can
+                actually follow, and one you'll still want to read in five years.
               </p>
             </div>
           </div>
@@ -75,51 +73,64 @@ export default function About() {
       <main className="px-4 sm:px-6 lg:px-8 pb-12">
         <div className="prose-editorial">
           <p>
-            {vesa.longBio}
+            Most Lapland blogs read like a brochure. Most travel-journal apps
+            either get abandoned in a phone roll or get shared as a single
+            Instagram post that disappears in a day. Lapland.blog is the
+            in-between thing: a real, slow, photo-led blog of your trip,
+            hosted under a name that already gets traffic, kept for as long as
+            you want it kept.
           </p>
 
-          <h2>What you'll find here</h2>
+          <h2>How it works</h2>
           <p>
-            Slow pieces about Lapland life — the trips, the cabins, the cold,
-            the food, the saunas, the weather, the silences in between. I try
-            to include at least one real temperature, one real time of day,
-            and one small embarrassment in every post. Those are the details
-            that age well.
+            Sign in with your email or Google. Get a corner of lapland.blog at
+            <em> lapland.blog/me</em>. Each entry takes a hero image, a place
+            pin, and the words you want to say. Save drafts, publish when
+            ready, share the link to friends. Every published entry is indexed
+            and searchable — your trip becomes a small piece of the bigger
+            Lapland archive.
+          </p>
+
+          <h2>What's free</h2>
+          <p>
+            Writing entries. Hosting your own travel blog under
+            <em> lapland.blog/me/yourname</em>. Photos. The newsletter. There
+            is no paywall and no premium tier on the writer side.
           </p>
 
           <h2>What you won't find</h2>
           <p>
-            Sponsored posts. Affiliate shopping lists. The words{' '}
-            <em>unforgettable</em>, <em>bucket list</em>, <em>magical</em>, or{' '}
-            <em>winter wonderland</em>. I've banned them from my own drafts.
-            They're bad for writing and bad for readers.
+            Sponsored posts inside reader entries. Affiliate shopping lists
+            stuffed into your blog. The words <em>unforgettable</em>,
+            <em> bucket list</em>, <em>magical</em>, or <em>winter
+            wonderland</em> — they're banned from the editorial drafts and
+            we'd encourage you to ban them from yours too. They're bad for
+            writing and bad for readers.
           </p>
 
-          <h2>About the newsletter</h2>
+          <h2>The seed entries</h2>
           <p>
-            One email when a new post drops. No weekly roundups, no sponsor
-            plugs, no "top 10 Arctic hotels" listicles. The sign-up is on every
-            page of this site — including the bottom of this one. If you read
-            the blog and want the next one, that's the whole pitch.
+            The five entries already on the site are written by{' '}
+            <em>The Field Journal</em>, the editorial voice of Lapland.blog.
+            They're there to show what an honest, slow, photo-led trip blog
+            can read like — real temperatures, real times of day, no
+            brochure voice. Read one and picture your own.
           </p>
 
           <h2>About the network</h2>
           <p>
-            Lapland.blog is part of the LaplandVibes ecosystem — a small
-            network of Finnish-owned sites about Lapland. The other sites tell
-            you <em>where</em> to go, <em>where</em> to stay, and <em>what</em>{' '}
-            to do. This one tells you what it was actually like. If you want
-            the practical side of a trip, the sister sites in the footer are
-            where to go. This blog is where to come back to after.
+            Lapland.blog is part of the LaplandVibes ecosystem — a network of
+            Finnish-owned sites about Lapland. The other sites tell you
+            <em> where</em> to go, <em>where</em> to stay, and <em>what</em>{' '}
+            to do. This one is where the trip itself gets written down.
           </p>
 
           <h2>Get in touch</h2>
           <p>
             If you want to say hello, correct a factual error, or send a
-            photograph I can credit, you can email{' '}
-            <a href="mailto:laplandvibe@gmail.com">laplandvibe@gmail.com</a>.
-            I read everything and I try to answer within a week, unless I'm in
-            a cabin with no wifi, which happens more than you'd think.
+            photograph we can credit, email{' '}
+            <a href="mailto:info@lapland.blog">info@lapland.blog</a>. We read
+            everything and try to answer within a week.
           </p>
 
           <hr />
@@ -130,15 +141,20 @@ export default function About() {
           </p>
         </div>
 
-        <AuthorBio variant="editorial" />
-
-        <div className="max-w-[65ch] mx-auto text-center">
+        <div className="max-w-[65ch] mx-auto text-center mt-12">
           <Link
-            to="/stories"
-            className="inline-block mt-4 px-6 py-3 rounded-full bg-[var(--color-accent)] text-white font-semibold uppercase tracking-wider text-xs hover:bg-[var(--color-accent-dark)] transition-colors"
+            to="/signin"
+            className="inline-block px-7 py-3.5 rounded-full bg-[var(--color-accent)] text-white font-semibold uppercase tracking-wider text-xs hover:bg-[var(--color-accent-dark)] transition-colors"
           >
-            Start reading the stories →
+            Start your own journal →
           </Link>
+          <p className="text-[var(--color-ink-mute)] text-sm mt-4">
+            Or{' '}
+            <Link to="/stories" className="text-[var(--color-accent)] underline">
+              read the seed entries first
+            </Link>
+            .
+          </p>
         </div>
       </main>
 

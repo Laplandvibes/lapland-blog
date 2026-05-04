@@ -1,5 +1,5 @@
 // Real editorial content for lapland.blog launch.
-// Single author voice: Vesa Pesola.
+// Editorial voice: The Field Journal (de-personalised 2026-05-04).
 // Block-based content model — the Post page renders each block type.
 
 import type { CategorySlug } from './categories';
@@ -389,7 +389,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'A reasonable person would say: it is five days, Vesa, you will not get rickets in five days, eat a piece of salmon. A reasonable person would be technically correct. The problem is that I have learned, over a decade of winters at this latitude, that for me personally the difference between taking the vitamin D and not taking it during the dark months is not a question of long-term bone health. It is a question of whether I wake up on day four feeling like myself or whether I wake up on day four feeling like a slightly hollow version of myself who is having a hard time being interested in the things he is doing. The vitamin D, plus a daily ten minutes in front of a Lumie Vitamin L 10,000 lux lamp, is the small floor under my mood from November through March. Without those two things I am still functional but I am no longer good company for myself.',
+        text: 'A reasonable person would say: relax, it is five days, you will not get rickets in five days, eat a piece of salmon. A reasonable person would be technically correct. The problem is that I have learned, over a decade of winters at this latitude, that for me personally the difference between taking the vitamin D and not taking it during the dark months is not a question of long-term bone health. It is a question of whether I wake up on day four feeling like myself or whether I wake up on day four feeling like a slightly hollow version of myself who is having a hard time being interested in the things he is doing. The vitamin D, plus a daily ten minutes in front of a Lumie Vitamin L 10,000 lux lamp, is the small floor under my mood from November through March. Without those two things I am still functional but I am no longer good company for myself.',
       },
       {
         type: 'paragraph',

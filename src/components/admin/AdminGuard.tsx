@@ -36,10 +36,12 @@ export default function AdminGuard({ children }: Props) {
           <h1 className="font-display text-3xl text-pink mb-4">Not authorised</h1>
           <p className="text-slate-300 mb-2">
             You are signed in as <span className="text-snow">{user.email}</span>, but
-            this admin is reserved for <span className="text-snow">laplandvibe@gmail.com</span>.
+            this area is reserved for site administrators.
           </p>
           <p className="text-slate-400 text-sm mb-8">
-            If that is you, sign out and request a new magic link to the correct inbox.
+            If you're a contributor looking to write a trip blog, head to{' '}
+            <a href="/me" className="text-pink hover:text-pink-dark underline">/me</a>
+            {' '}instead.
           </p>
           <button
             type="button"

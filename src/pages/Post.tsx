@@ -107,7 +107,7 @@ export default function Post() {
     type: post ? 'article' : 'website',
     publishedAt: post?.publishedAt,
     modifiedAt: post?.publishedAt,
-    author: 'Vesa Pesola',
+    author: 'The Field Journal',
     tags: post?.tags ? [...post.tags, ...hashtags] : hashtags,
   });
 
@@ -209,7 +209,7 @@ export default function Post() {
                     className="w-8 h-8 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-[11px] font-semibold"
                     aria-hidden="true"
                   >
-                    VP
+                    FJ
                   </span>
                   <span>
                     By{' '}
@@ -217,7 +217,7 @@ export default function Post() {
                       to="/about"
                       className="text-[var(--color-ink)] font-semibold hover:text-[var(--color-accent)] transition-colors"
                     >
-                      Vesa Pesola
+                      The Field Journal
                     </Link>
                   </span>
                 </span>

@@ -55,7 +55,7 @@ export default function Login() {
     // from non-admin emails via RLS. We still block the request here to
     // avoid generating pointless magic-link emails to strangers.
     if (trimmed !== ADMIN_EMAIL) {
-      setError('This admin is reserved for laplandvibe@gmail.com.');
+      setError('This area is reserved for site administrators.');
       return;
     }
 
@@ -142,7 +142,7 @@ export default function Login() {
                   autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="laplandvibe@gmail.com"
+                  placeholder="you@example.com"
                   className="w-full pl-11 pr-4 py-3 rounded-full bg-night/80 text-snow placeholder:text-slate-500 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 text-sm"
                   required
                 />
