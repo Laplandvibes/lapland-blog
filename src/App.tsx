@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
+import NewsletterPopup from './components/NewsletterPopup';
 import Home from './pages/Home';
 
 // Lazy-load every non-landing route. Home stays in the main bundle so first
@@ -116,6 +117,7 @@ export default function App() {
         </Routes>
       </Suspense>
       <CookieBanner />
+      <NewsletterPopup />
     </BrowserRouter>
   );
 }

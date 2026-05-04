@@ -195,6 +195,128 @@ export default function Home() {
       </section>
 
       {/* ================================================================
+          1.5 · SEASONAL BAND — the midnight sun is the marketing gap
+          The 32-night window when Lapland flips from white to amber.
+          Warm cream + coral overlay breaks up the long dark hero scroll.
+          ================================================================ */}
+      <section
+        aria-labelledby="seasonal-heading"
+        className="relative overflow-hidden bg-gradient-to-br from-[#FAF7F2] via-[#FCE9D2] to-[#F4B36A] text-[#1A1815]"
+      >
+        {/* Soft sun glow */}
+        <div className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-[#F8C770]/55 blur-[140px] pointer-events-none" />
+        <div className="absolute -bottom-40 -right-32 w-[640px] h-[640px] rounded-full bg-[#E97C46]/30 blur-[160px] pointer-events-none" />
+
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-center">
+            <Reveal>
+              <div>
+                <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-white/65 backdrop-blur-sm border border-[#C1543B]/35">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#E97C46] animate-pulse" />
+                  <p className="tracking-[0.3em] text-[10px] font-bold uppercase text-[#8F3525]">
+                    Midnight sun · Jun 6 → Jul 7
+                  </p>
+                </div>
+                <h2
+                  id="seasonal-heading"
+                  className="font-normal text-4xl md:text-5xl leading-[1.05] tracking-[-0.01em] text-[#1A1815] mb-6"
+                  style={{ fontFamily: 'var(--font-editorial)' }}
+                >
+                  Lapland's other postcard.
+                </h2>
+                <p className="text-[#3B3935] text-base md:text-lg leading-relaxed mb-7 max-w-[55ch]">
+                  Thirty-two nights when the sun refuses to set. The forest
+                  goes amber. The lakes mirror sky. Most visitors only ever
+                  hear about the white version of Lapland — but summer is the
+                  trip you'll come back to write about. Start the journal
+                  while you're still in it.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to="/signin"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1A1815] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#3B3935] transition-colors"
+                  >
+                    Start a summer trip blog
+                    <ArrowRight size={14} />
+                  </Link>
+                  <Link
+                    to="/category/seasons"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#8F3525] font-semibold uppercase tracking-[0.18em] text-xs border border-[#C1543B]/35 transition-colors"
+                  >
+                    Read summer entries
+                  </Link>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={1}>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-2xl bg-white/65 backdrop-blur-sm border border-white/80 p-5 shadow-[0_30px_60px_-30px_rgba(143,53,37,0.25)]">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#8F3525] font-bold mb-2">
+                    01 · Light
+                  </p>
+                  <p
+                    className="text-[#1A1815] text-lg leading-snug"
+                    style={{ fontFamily: 'var(--font-editorial)' }}
+                  >
+                    24 h golden hour
+                  </p>
+                  <p className="text-sm text-[#3B3935] mt-2 leading-relaxed">
+                    The sun grazes the horizon. Photographers call it the
+                    longest blue hour on earth.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white/65 backdrop-blur-sm border border-white/80 p-5 shadow-[0_30px_60px_-30px_rgba(143,53,37,0.25)] mt-8">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#8F3525] font-bold mb-2">
+                    02 · Forest
+                  </p>
+                  <p
+                    className="text-[#1A1815] text-lg leading-snug"
+                    style={{ fontFamily: 'var(--font-editorial)' }}
+                  >
+                    Cloudberry season
+                  </p>
+                  <p className="text-sm text-[#3B3935] mt-2 leading-relaxed">
+                    Late July: the bog turns gold. Locals call it the second
+                    harvest.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white/65 backdrop-blur-sm border border-white/80 p-5 shadow-[0_30px_60px_-30px_rgba(143,53,37,0.25)]">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#8F3525] font-bold mb-2">
+                    03 · Water
+                  </p>
+                  <p
+                    className="text-[#1A1815] text-lg leading-snug"
+                    style={{ fontFamily: 'var(--font-editorial)' }}
+                  >
+                    Sauna, then a swim
+                  </p>
+                  <p className="text-sm text-[#3B3935] mt-2 leading-relaxed">
+                    14°C lake at midnight, 90°C sauna five steps away. Repeat.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white/65 backdrop-blur-sm border border-white/80 p-5 shadow-[0_30px_60px_-30px_rgba(143,53,37,0.25)] mt-8">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#8F3525] font-bold mb-2">
+                    04 · Quiet
+                  </p>
+                  <p
+                    className="text-[#1A1815] text-lg leading-snug"
+                    style={{ fontFamily: 'var(--font-editorial)' }}
+                  >
+                    No-one else
+                  </p>
+                  <p className="text-sm text-[#3B3935] mt-2 leading-relaxed">
+                    The cabins that book out in winter sit empty in July.
+                    Same forest, no queue.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================
           2 · HOW IT WORKS — three steps to your trip blog
           ================================================================ */}
       <section

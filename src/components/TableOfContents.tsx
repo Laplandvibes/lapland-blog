@@ -21,10 +21,7 @@ export default function TableOfContents({ blocks }: Props) {
   if (headings.length < 2) return null;
 
   return (
-    <nav
-      aria-label="Table of contents"
-      className="hidden xl:block sticky top-24 self-start"
-    >
+    <nav aria-label="Table of contents">
       <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-4 font-semibold">
         In this story
       </p>

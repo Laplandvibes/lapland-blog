@@ -12,6 +12,8 @@ import AuthorBio from '../components/AuthorBio';
 import PostCard from '../components/PostCard';
 import Reveal from '../components/Reveal';
 import ShareBar from '../components/ShareBar';
+import BannerAd from '../components/BannerAd';
+import HighlightShare from '../components/HighlightShare';
 import type { PostBlock } from '../data/posts';
 import { categoryBySlug } from '../data/categories';
 import { useSeo, canonicalUrl } from '../lib/seo';
@@ -240,14 +242,22 @@ export default function Post() {
           ================================================================ */}
       <main className="px-4 sm:px-6 lg:px-8 pb-24">
         <div className="max-w-[68rem] mx-auto">
-          <div className="xl:grid xl:grid-cols-[1fr_220px] xl:gap-16">
-            <div className="prose-editorial">
+          <div className="xl:grid xl:grid-cols-[1fr_240px] xl:gap-16">
+            <div id="post-body" className="prose-editorial">
               {post.content.map((block, i) => (
                 <Block key={i} block={block} index={i} />
               ))}
             </div>
-            <TableOfContents blocks={post.content} />
+            <aside className="hidden xl:flex xl:flex-col xl:gap-10 xl:sticky xl:top-24 xl:self-start">
+              <TableOfContents blocks={post.content} />
+              <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Lapland" />
+            </aside>
           </div>
+          <HighlightShare
+            containerSelector="#post-body"
+            url={canonicalUrl(`/post/${post.slug}`)}
+            slug={post.slug}
+          />
 
           {/* Auto-generated hashtags — always visible */}
           {hashtags.length > 0 && (
