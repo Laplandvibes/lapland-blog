@@ -11,6 +11,8 @@ const Archive = lazy(() => import('./pages/Archive'));
 const Category = lazy(() => import('./pages/Category'));
 const About = lazy(() => import('./pages/About'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const Unsubscribe = lazy(() => import('./pages/Unsubscribe'));
 const SignIn = lazy(() => import('./pages/SignIn'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -53,6 +55,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
 
           {/* ─── User's own trip blog ──────────────────────────────── */}

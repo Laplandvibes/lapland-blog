@@ -34,8 +34,8 @@ export default function About() {
       <header className="relative pt-16">
         <div className="relative h-[60vh] min-h-[420px] max-h-[640px] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1513688544456-c1a3b695728a?w=1920&q=85&fm=webp&fit=crop"
-            alt="A solitary figure standing among tall snow-laden trees in a Finnish winter wilderness"
+            src="/images/aside-vesa-1200.webp"
+            alt="A tiny figure with a headlamp standing under a giant aurora arc over Lapland tundra"
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
             decoding="async"

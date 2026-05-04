@@ -44,10 +44,9 @@ export const posts: Post[] = [
     tags: ['aurora', 'kemi', 'photography', 'winter'],
     publishedAt: '2026-01-18',
     readTimeMinutes: 9,
-    heroImage:
-      'https://images.unsplash.com/photo-1482249839525-2cd6b87ebc22?w=1920&q=85&fm=webp&fit=crop',
+    heroImage: '/images/trip-aurora-chase-1200.webp',
     heroAlt:
-      'Aurora borealis ribbons dancing above a tree-covered snow field in Finnish Lapland',
+      'Massive green aurora curtains over broken ice floes on the frozen Bay of Bothnia',
     author: 'vesa',
     content: [
       {
@@ -194,7 +193,7 @@ export const posts: Post[] = [
     publishedAt: '2026-02-02',
     readTimeMinutes: 7,
     heroImage:
-      'https://images.unsplash.com/photo-1502288294350-301c0c4628c9?w=1920&q=85&fm=webp&fit=crop',
+      '/images/category-aurora-1200.webp',
     heroAlt: 'Pine trees silhouetted against a green aurora band over a Lapland night',
     author: 'vesa',
     content: [
@@ -327,7 +326,7 @@ export const posts: Post[] = [
     publishedAt: '2026-02-20',
     readTimeMinutes: 11,
     heroImage:
-      'https://images.unsplash.com/photo-1639863523753-3952079f6ded?w=1920&q=85&fm=webp&fit=crop',
+      '/images/trip-cabin-life-1200.webp',
     heroAlt:
       'Small wooden forest cabin with warm window light on a snowy night',
     author: 'vesa',
@@ -537,7 +536,7 @@ export const posts: Post[] = [
     publishedAt: '2026-03-08',
     readTimeMinutes: 8,
     heroImage:
-      'https://images.unsplash.com/photo-1547592180-85f173990554?w=1920&q=85&fm=webp&fit=crop',
+      '/images/trip-food-1200.webp',
     heroAlt: 'Rustic bowl of creamy Finnish salmon soup with dill on a dark wooden table',
     author: 'vesa',
     content: [
@@ -675,7 +674,7 @@ export const posts: Post[] = [
     publishedAt: '2026-03-29',
     readTimeMinutes: 10,
     heroImage:
-      'https://images.unsplash.com/photo-1681151335137-108527dc24fe?w=1920&q=85&fm=webp&fit=crop',
+      '/images/category-seasons-1200.webp',
     heroAlt:
       'Snow-covered field of trees with a distant fjeld beyond, blue-hour Lapland twilight in Äkäslompolo',
     author: 'vesa',

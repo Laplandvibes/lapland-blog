@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
 @import "tailwindcss";
+@source "../../shared/**/*.{ts,tsx}";
 
 /* ================================================================
    LAPLAND.BLOG THEME
@@ -12,6 +13,9 @@
   --font-display: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-editorial: 'Fraunces', Georgia, 'Times New Roman', serif;
+  /* Canonical LV alias — used by shared/Legal/* (Bebas Neue not loaded here,
+     falls through to display so legal pages render in Space Grotesk). */
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
 
   /* Dark mode palette (matches laplandnightlife vibe) */
   --color-night: #0F172A;
@@ -36,6 +40,11 @@
   --color-ink-mute: #6B655C;         /* captions — 4.95:1 on cream (AA large) */
   --color-accent: #C1543B;           /* "hot lingonberry" — 5.1:1 on cream (AA) */
   --color-accent-dark: #8F3525;      /* hover — 8.2:1 on cream */
+
+  /* Canonical LV aliases — used by shared/Legal/* + shared/Footer */
+  --color-deep-night: #0F172A;
+  --color-vibe-pink: #EC4899;
+  --color-finland-blue: #002F6C;
 }
 
 /* ================================================================

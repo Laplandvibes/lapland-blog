@@ -1,4 +1,36 @@
+# lapland.blog — robots.txt
+# Editorial travel-journal platform. We welcome AI crawlers that cite sources.
+
 User-agent: *
 Allow: /
+
+# AI crawlers — explicitly allowed (citation-friendly answer engines)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Block admin & user editor surfaces from all crawlers
+User-agent: *
+Disallow: /admin/
+Disallow: /me/
+Disallow: /signin
+Disallow: /unsubscribe
 
 Sitemap: https://lapland.blog/sitemap.xml

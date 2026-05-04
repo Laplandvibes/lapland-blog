@@ -84,6 +84,8 @@ function buildSitemap(posts) {
     { loc: '/about', changefreq: 'monthly', priority: '0.7', lastmod: today },
     { loc: '/signin', changefreq: 'yearly', priority: '0.4', lastmod: today },
     { loc: '/privacy', changefreq: 'yearly', priority: '0.3', lastmod: today },
+    { loc: '/terms', changefreq: 'yearly', priority: '0.3', lastmod: today },
+    { loc: '/cookie-policy', changefreq: 'yearly', priority: '0.3', lastmod: today },
     { loc: '/unsubscribe', changefreq: 'yearly', priority: '0.2', lastmod: today },
   ];
 

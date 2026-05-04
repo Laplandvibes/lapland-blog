@@ -57,8 +57,8 @@ export default function Archive() {
       {/* Hero — moody full-bleed twilight backdrop */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[60vh] flex items-end">
         <img
-          src="https://images.unsplash.com/photo-1770793861392-5f0223651d19?w=1920&q=85&fm=webp&fit=crop"
-          alt="Snowy Lapland mountain range under a dark blue twilight sky"
+          src="/images/hero-dusk-lake-1920.webp"
+          alt="Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore"
           className="absolute inset-0 w-full h-full object-cover opacity-55"
           fetchPriority="high"
           decoding="async"
