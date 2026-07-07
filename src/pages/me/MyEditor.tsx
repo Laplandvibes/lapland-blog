@@ -156,8 +156,8 @@ export default function MyEditor() {
 
   useSeo({
     title: isNew
-      ? 'Write a new post — Lapland.blog'
-      : 'Edit post — Lapland.blog',
+      ? 'Write a new post · Lapland.blog'
+      : 'Edit post · Lapland.blog',
     description: 'Write your Lapland trip story.',
     canonical: canonicalUrl(isNew ? '/me/new' : `/me/${id ?? ''}`),
   });
@@ -389,7 +389,7 @@ export default function MyEditor() {
     }
     if (!input.slug) {
       setSaving(false);
-      setSaveError('Slug is required — try adding a few more letters to the title.');
+      setSaveError('Slug is required. Try adding a few more letters to the title.');
       return;
     }
 
@@ -429,7 +429,7 @@ export default function MyEditor() {
   if (!isNew && rowLoading) {
     return (
       <div className="min-h-screen bg-night text-snow">
-        <Nav minimal />
+        <Nav />
         <div className="pt-32 text-center text-slate-400">
           <div className="inline-block w-6 h-6 border-2 border-pink border-t-transparent rounded-full animate-spin" />
           <p className="mt-4 text-sm">Loading your post…</p>
@@ -441,7 +441,7 @@ export default function MyEditor() {
   if (!isNew && loadError) {
     return (
       <div className="min-h-screen bg-night text-snow flex flex-col">
-        <Nav minimal />
+        <Nav />
         <main className="flex-1 max-w-2xl mx-auto px-4 pt-32 pb-20 text-center">
           <AlertTriangle size={32} className="text-red-400 mx-auto mb-4" />
           <p className="text-slate-300 mb-2">Could not load that post.</p>
@@ -461,7 +461,7 @@ export default function MyEditor() {
   if (!ownershipOk) {
     return (
       <div className="min-h-screen bg-night text-snow flex flex-col">
-        <Nav minimal />
+        <Nav />
         <main className="flex-1 max-w-2xl mx-auto px-4 pt-32 pb-20 text-center">
           <AlertTriangle size={32} className="text-red-400 mx-auto mb-4" />
           <p className="text-slate-300 mb-2">
@@ -484,7 +484,7 @@ export default function MyEditor() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-night-light/50 via-night to-night text-snow flex flex-col">
-      <Nav minimal />
+      <Nav />
 
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24">
         {/* Toolbar */}
@@ -644,7 +644,7 @@ export default function MyEditor() {
               />
               <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
                 <p className="text-[11px] text-slate-300">
-                  Just write — about {readTime} min read so far. Use "Add photo" above or paste an image from your clipboard.
+                  Just write. About {readTime} min read so far. Use "Add photo" above or paste an image from your clipboard.
                 </p>
                 {bodyUploading && (
                   <span className="text-[11px] text-aurora-blue">Uploading photo…</span>
@@ -681,23 +681,23 @@ export default function MyEditor() {
                 <ol className="space-y-2.5 text-[13px] text-slate-200 leading-snug">
                   <li className="flex gap-2.5">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-pink/20 text-pink text-[11px] font-bold flex items-center justify-center">1</span>
-                    <span><strong className="text-snow">Title</strong> — give your trip a name</span>
+                    <span><strong className="text-snow">Title</strong>: give your trip a name</span>
                   </li>
                   <li className="flex gap-2.5">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-pink/20 text-pink text-[11px] font-bold flex items-center justify-center">2</span>
-                    <span><strong className="text-snow">Write your story</strong> — what happened, what you saw</span>
+                    <span><strong className="text-snow">Write your story</strong>: what happened, what you saw</span>
                   </li>
                   <li className="flex gap-2.5">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-pink/20 text-pink text-[11px] font-bold flex items-center justify-center">3</span>
-                    <span><strong className="text-snow">Add photos</strong> — use the button or paste from clipboard</span>
+                    <span><strong className="text-snow">Add photos</strong>: use the button or paste from clipboard</span>
                   </li>
                   <li className="flex gap-2.5">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-pink/20 text-pink text-[11px] font-bold flex items-center justify-center">4</span>
-                    <span><strong className="text-snow">Cover photo</strong> — upload a hero image below</span>
+                    <span><strong className="text-snow">Cover photo</strong>: upload a hero image below</span>
                   </li>
                   <li className="flex gap-2.5">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-pink/20 text-pink text-[11px] font-bold flex items-center justify-center">5</span>
-                    <span><strong className="text-snow">Publish</strong> — hit the pink button when you're ready!</span>
+                    <span><strong className="text-snow">Publish</strong>: hit the pink button when you're ready!</span>
                   </li>
                 </ol>
               </div>
@@ -869,7 +869,7 @@ export default function MyEditor() {
                     className="w-full px-3 py-2 bg-night/60 border border-purple/30 rounded-lg text-snow placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-pink/40 text-xs font-mono"
                   />
                   <p className="mt-1 text-[11px] text-slate-300">
-                    Paste a link to any image — Unsplash, Imgur, your own host.
+                    Paste a link to any image: Unsplash, Imgur, your own host.
                   </p>
                   {heroImage && (
                     <div className="mt-3 rounded-lg overflow-hidden border border-purple/20">

@@ -26,6 +26,8 @@ import { useAuth } from '../hooks/useAuth';
 import { supabase } from '../lib/supabase';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { getImage } from '../lib/images';
+import { useLang, useLocalePath, stripLocale } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 // Ambient backdrop — the dusk-lake hero. Fixed position, very low opacity.
 const backdrop = getImage('hero-dusk-lake', '100vw');
@@ -44,6 +46,9 @@ interface LocationState {
 }
 
 export default function SignIn() {
+  const lang = useLang();
+  const lp = useLocalePath();
+  const c = COPY[lang].signIn;
   const {
     user,
     loading: authLoading,
@@ -56,7 +61,14 @@ export default function SignIn() {
   // the original path through location state so we bounce them back after
   // the magic link. Otherwise the default landing zone is the user's own
   // trip blog dashboard (/me) — that's where every signup intends to go.
-  const from = (location.state as LocationState | null)?.from ?? '/me';
+  //
+  // The auth/dashboard area (/me/*) is locale-AGNOSTIC: those routes are only
+  // registered without a locale prefix, so the post-login redirect must never
+  // carry one. A visitor signing in from /fi/signin would otherwise be sent to
+  // /fi/me — a path with no matching route → the 404 page. stripLocale() peels
+  // any /fi, /de, … prefix back off so we always land on the real /me.
+  const rawFrom = (location.state as LocationState | null)?.from ?? '/me';
+  const from = stripLocale(rawFrom);
 
   const [email, setEmail] = useState('');
   const [sending, setSending] = useState(false);
@@ -69,10 +81,7 @@ export default function SignIn() {
   const [travelYear, setTravelYear] = useState<number | null>(2026);
   const [noDates, setNoDates] = useState(false);
 
-  const MONTHS = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December',
-  ];
+  const MONTHS = c.months;
 
   /** Fire-and-forget lead save — never blocks auth flow. */
   function saveLead(emailAddr: string) {
@@ -90,9 +99,8 @@ export default function SignIn() {
   }
 
   useSeo({
-    title: 'Plan your Lapland trip — Lapland.blog',
-    description:
-      'Get a free trip page, personalised tips, and the best deals for your Lapland journey. Tell us when you\'re visiting and we\'ll help plan every step.',
+    title: c.pageTitle,
+    description: c.pageDescription,
     canonical: canonicalUrl('/signin'),
   });
 
@@ -107,7 +115,7 @@ export default function SignIn() {
 
     const trimmed = email.trim().toLowerCase();
     if (!trimmed) {
-      setError('Enter your email to get started.');
+      setError(c.enterEmail);
       return;
     }
 
@@ -169,24 +177,18 @@ export default function SignIn() {
               to={from}
               className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors mb-6"
             >
-              <ArrowLeft size={14} /> Back
+              <ArrowLeft size={14} /> {c.back}
             </Link>
             <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
-              Your free trip page
+              {c.eyebrow}
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-snow font-light tracking-tight leading-[1.05] mb-6">
-              Plan your
+              {c.h1Pre}
               <br />
-              <span className="text-pink italic">Lapland trip.</span>
+              <span className="text-pink italic">{c.h1Italic}</span>
             </h1>
             <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-10 max-w-md">
-              Get your own page at{' '}
-              <span className="text-aurora-blue font-semibold">
-                lapland.blog/yourname
-              </span>{' '}
-              — write your trip story, share photos, and get personalised tips
-              and deals for your journey. Tell us when you're coming and we'll
-              help you plan every step.
+              {c.lead}
             </p>
 
             <ul className="space-y-4 mb-10">
@@ -196,10 +198,10 @@ export default function SignIn() {
                 </div>
                 <div>
                   <p className="text-snow font-semibold text-sm mb-0.5">
-                    Pin your route on the Lapland map
+                    {c.benefit1Title}
                   </p>
                   <p className="text-slate-400 text-xs leading-relaxed">
-                    Cabin, restaurant, aurora spot — drop pins before you fly.
+                    {c.benefit1Body}
                   </p>
                 </div>
               </li>
@@ -209,10 +211,10 @@ export default function SignIn() {
                 </div>
                 <div>
                   <p className="text-snow font-semibold text-sm mb-0.5">
-                    Write entries from your phone
+                    {c.benefit2Title}
                   </p>
                   <p className="text-slate-400 text-xs leading-relaxed">
-                    From the cabin, the car, the sauna. Photos, weather, stories.
+                    {c.benefit2Body}
                   </p>
                 </div>
               </li>
@@ -222,18 +224,17 @@ export default function SignIn() {
                 </div>
                 <div>
                   <p className="text-snow font-semibold text-sm mb-0.5">
-                    Share to Instagram in one tap
+                    {c.benefit3Title}
                   </p>
                   <p className="text-slate-400 text-xs leading-relaxed">
-                    Each entry exports as a vertical story your friends actually
-                    open.
+                    {c.benefit3Body}
                   </p>
                 </div>
               </li>
             </ul>
 
             <p className="text-[10px] tracking-[0.3em] uppercase text-slate-300">
-              Free travel journals · No credit card · Made in Finland
+              {c.footnote}
             </p>
           </div>
 
@@ -245,13 +246,17 @@ export default function SignIn() {
                   <Check size={26} className="text-aurora-green" />
                 </div>
                 <h2 className="text-snow text-2xl font-display mb-3">
-                  Check your inbox
+                  {c.sentTitle}
                 </h2>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  I sent a magic link to{' '}
-                  <span className="text-snow font-semibold">{email}</span>.
-                  Click it and your trip blog is live. The link expires in one
-                  hour.
+                  {c.sentBody.split('{email}').map((part, i, arr) => (
+                    <span key={i}>
+                      {part}
+                      {i < arr.length - 1 && (
+                        <span className="text-snow font-semibold">{email}</span>
+                      )}
+                    </span>
+                  ))}
                 </p>
                 <button
                   type="button"
@@ -261,7 +266,7 @@ export default function SignIn() {
                   }}
                   className="mt-6 text-xs text-slate-400 hover:text-pink transition-colors uppercase tracking-wider cursor-pointer"
                 >
-                  Use a different email
+                  {c.useDifferent}
                 </button>
               </div>
             ) : (
@@ -272,16 +277,16 @@ export default function SignIn() {
                 <div>
                   <div className="inline-flex items-center gap-2 text-pink text-[10px] tracking-[0.3em] uppercase font-bold mb-2">
                     <Sparkles size={12} />
-                    Reserve your page
+                    {c.reserveEyebrow}
                   </div>
                   <h2
                     className="font-display text-2xl md:text-3xl text-snow font-light leading-tight mb-2"
                     style={{ fontFamily: 'var(--font-editorial)' }}
                   >
-                    Plan your Lapland trip
+                    {c.formH2}
                   </h2>
                   <p className="text-slate-300 text-xs leading-relaxed">
-                    We'll create your trip page and send personalised tips based on when you're visiting.
+                    {c.formLead}
                   </p>
                 </div>
 
@@ -291,7 +296,7 @@ export default function SignIn() {
                     htmlFor="reader-email"
                     className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2"
                   >
-                    Your email
+                    {c.emailLabel}
                   </label>
                   <div className="relative">
                     <Mail
@@ -304,7 +309,7 @@ export default function SignIn() {
                       autoComplete="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="you@example.com"
+                      placeholder={c.emailPlaceholder}
                       className="w-full pl-11 pr-4 py-3.5 rounded-full bg-night/80 text-snow placeholder:text-slate-400 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 text-sm"
                       required
                     />
@@ -315,7 +320,7 @@ export default function SignIn() {
                 <div>
                   <label className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-3">
                     <CalendarDays size={13} className="text-aurora-blue" />
-                    When are you visiting Lapland?
+                    {c.travelLabel}
                   </label>
                   <div className={`grid grid-cols-2 gap-3 ${noDates ? 'opacity-40 pointer-events-none' : ''}`}>
                     <select
@@ -323,7 +328,7 @@ export default function SignIn() {
                       onChange={(e) => setTravelMonth(e.target.value ? Number(e.target.value) : null)}
                       className="w-full px-4 py-3 rounded-xl bg-night/80 text-snow border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 text-sm appearance-none"
                     >
-                      <option value="">Month…</option>
+                      <option value="">{c.monthLabel}</option>
                       {MONTHS.map((m, i) => (
                         <option key={i} value={i + 1}>{m}</option>
                       ))}
@@ -333,7 +338,7 @@ export default function SignIn() {
                       onChange={(e) => setTravelYear(e.target.value ? Number(e.target.value) : null)}
                       className="w-full px-4 py-3 rounded-xl bg-night/80 text-snow border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 text-sm appearance-none"
                     >
-                      <option value="">Year…</option>
+                      <option value="">{c.yearLabel}</option>
                       <option value={2026}>2026</option>
                       <option value={2027}>2027</option>
                       <option value={2028}>2028</option>
@@ -347,7 +352,7 @@ export default function SignIn() {
                       className="w-4 h-4 rounded border-purple/40 bg-night/80 text-pink focus:ring-pink/50 accent-pink"
                     />
                     <span className="text-xs text-slate-300 group-hover:text-snow transition-colors">
-                      I'm still dreaming — no dates yet
+                      {c.noDates}
                     </span>
                   </label>
                 </div>
@@ -364,10 +369,10 @@ export default function SignIn() {
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all cursor-pointer text-base shadow-[0_8px_30px_-5px_rgba(236,72,153,0.5)]"
                 >
                   {sending ? (
-                    'Sending magic link…'
+                    c.sending
                   ) : (
                     <>
-                      Reserve my trip page
+                      {c.submitCta}
                       <ArrowRight size={18} />
                     </>
                   )}
@@ -452,7 +457,7 @@ export default function SignIn() {
                 <p className="text-center text-[10px] text-slate-300 tracking-wider uppercase">
                   By continuing you agree to the{' '}
                   <Link
-                    to="/privacy"
+                    to={lp('/privacy')}
                     className="text-slate-400 hover:text-pink underline-offset-2 hover:underline"
                   >
                     Privacy

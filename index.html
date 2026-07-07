@@ -1,13 +1,73 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0F172A" />
+    <!-- LV-LOCALE-TITLE (managed by scripts/inject_locale_titles.mjs) -->
+    <script>
+      (function () {
+        try {
+          var T = {"en":"Lapland.blog · Start & Share Your Lapland Travel Blog","fi":"Lapland.blog · Aloita ja jaa Lapin-matkablogisi","de":"Lapland.blog · Starte deinen Lappland-Reiseblog","ja":"Lapland.blog · ラップランド旅行ブログを作って共有","es":"Lapland.blog · Crea y comparte tu blog de viaje","pt-br":"Lapland.blog · Crie e compartilhe seu blog de viagem","zh-cn":"Lapland.blog · 创建并分享你的拉普兰旅行博客","kr":"Lapland.blog · 라플란드 여행 블로그 만들기와 공유","fr":"Lapland.blog · Créez et partagez votre blog de voyage","it":"Lapland.blog · Crea e condividi il tuo blog di viaggio","nl":"Lapland.blog · Start en deel je Lapland-reisblog"};
+          var path = location.pathname || '/';
+          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', br: 'pt-br', cn: 'zh-cn', kr: 'kr', fr: 'fr', it: 'it', nl: 'nl' };
+          var loc = 'en';
+          for (var p in map) {
+            if (path === '/' + p || path.indexOf('/' + p + '/') === 0) { loc = map[p]; break; }
+          }
+          if (T[loc]) document.title = T[loc];
+        } catch (e) { /* fail silent */ }
+      })();
+    </script>
+    <!-- /LV-LOCALE-TITLE -->
+    <!-- LV-SYNC-LOCALE-REDIRECT (managed by scripts/inject_sync_redirect.mjs) -->
+    <script>
+      (function () {
+        try {
+          var path = location.pathname || '/';
+          // Already on a locale prefix? — never override
+          var prefixes = ['/fi','/de','/ja','/es','/br','/cn','/kr','/fr','/it','/nl'];
+          for (var i = 0; i < prefixes.length; i++) {
+            if (path === prefixes[i] || path.indexOf(prefixes[i] + '/') === 0) return;
+          }
+          // Only redirect from bare root or sub-pages without a locale prefix
+          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-br': 'br', 'zh-cn': 'cn', ko: 'kr', fr: 'fr', it: 'it', nl: 'nl' };
+          var stored = null;
+          try { stored = localStorage.getItem('lv_locale_choice'); } catch (e) {}
+          var target = null;
+          if (stored) {
+            var k = stored.toLowerCase();
+            if (map[k]) target = '/' + map[k];
+            else if (k === 'en') return; // explicit EN choice — stay
+          }
+          if (!target) {
+            var langs = navigator.languages || [navigator.language || 'en'];
+            for (var j = 0; j < langs.length; j++) {
+              var l = (langs[j] || '').toLowerCase();
+              if (l.indexOf('en') === 0) return; // EN browser — stay on /
+              if (l.indexOf('fi') === 0) { target = '/fi'; break; }
+              if (l.indexOf('de') === 0) { target = '/de'; break; }
+              if (l.indexOf('ja') === 0) { target = '/ja'; break; }
+              if (l.indexOf('es') === 0) { target = '/es'; break; }
+              if (l.indexOf('pt') === 0) { target = '/br'; break; }
+              if (l.indexOf('zh') === 0) { target = '/cn'; break; }
+              if (l.indexOf('ko') === 0) { target = '/kr'; break; }
+              if (l.indexOf('fr') === 0) { target = '/fr'; break; }
+              if (l.indexOf('it') === 0) { target = '/it'; break; }
+              if (l.indexOf('nl') === 0) { target = '/nl'; break; }
+            }
+          }
+          if (!target) return;
+          var dest = path === '/' ? target : target + path;
+          if (location.search) dest += location.search;
+          if (location.hash) dest += location.hash;
+          location.replace(dest);
+        } catch (err) { /* fail silent — fall through to React-based redirect */ }
+      })();
+    </script>
+    <!-- /LV-SYNC-LOCALE-REDIRECT -->
 
-    <title>Lapland.blog — Start a travel blog of your Finnish Lapland trip</title>
-    <meta name="description" content="A free travel-journal platform for visitors to Finnish Lapland. Pin where you saw the aurora, photograph the cabin, write what the temperature did. Build a beautiful blog of your trip your friends can actually follow." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lapland.blog · Start & Share Your Lapland Travel Blog</title>
+    <meta name="description" content="Turn your Finnish Lapland trip into a travel blog. Keep a diary as you go and share it to social media in one tap. Free and ready in minutes." />
     <meta name="keywords" content="Lapland travel blog, Finnish Lapland trip journal, travel diary, aurora map, Rovaniemi, Saariselkä, Levi, journal platform, Finland trip planner" />
     <meta name="author" content="Lapeso Oy" />
 
@@ -15,27 +75,19 @@
     <link rel="canonical" href="https://lapland.blog/" />
 
     <!-- RSS feed (auto-discovered by feed readers) -->
-    <link rel="alternate" type="application/rss+xml" title="Lapland.blog — Field journal" href="https://lapland.blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Lapland.blog · Field journal" href="https://lapland.blog/rss.xml" />
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Lapland.blog" />
-    <meta property="og:title" content="Lapland.blog — Start a travel blog of your Finnish Lapland trip" />
-    <meta property="og:description" content="A free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to Instagram. Your trip, told well." />
+    <meta property="og:title" content="Lapland.blog · Start & Share Your Lapland Travel Blog" />
+    <meta property="og:description" content="Turn your Finnish Lapland trip into a travel blog. Keep a diary as you go and share it to social media in one tap. Free and ready in minutes." />
     <meta property="og:url" content="https://lapland.blog/" />
-    <meta property="og:image" content="https://lapland.blog/images/hero-aurora-1920.webp" />
-    <meta property="og:image:width" content="1920" />
-    <meta property="og:image:height" content="823" />
-    <meta property="og:image:alt" content="Green aurora borealis arching over a winding frozen river in Finnish Lapland" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Lapland.blog — Start a travel blog of your Finnish Lapland trip" />
-    <meta name="twitter:description" content="A free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to Instagram." />
-    <meta name="twitter:image" content="https://lapland.blog/images/hero-aurora-1920.webp" />
-    <meta name="twitter:image:alt" content="Green aurora borealis arching over a winding frozen river in Finnish Lapland" />
-
+    <meta name="twitter:title" content="Lapland.blog · Start & Share Your Lapland Travel Blog" />
+    <meta name="twitter:description" content="Turn your Finnish Lapland trip into a travel blog. Keep a diary as you go and share it to social media in one tap. Free and ready in minutes." />
     <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -67,12 +119,12 @@
     </script>
 
     <!-- Google Analytics GA4 — cross-domain linker for the full Lapland network -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1MNNKEY0X"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5P9B85M2Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-R1MNNKEY0X', {
+      gtag('config', 'G-W5P9B85M2Y', {
         linker: {
           domains: [
             'lapland.blog',
@@ -91,6 +143,27 @@
         }
       });
     </script>
+      <!-- Open Graph image (1200×630 JPEG) -->
+    <meta property="og:image" content="https://lapland.blog/og-default.jpg?v=20260626b" />
+    <meta property="og:image:secure_url" content="https://lapland.blog/og-default.jpg?v=20260626b" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="#LAPLAND.BLOG · start and share your Finnish Lapland trip blog, free. Aurora over a frozen Lapland landscape." />
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://lapland.blog/og-default.jpg?v=20260626b" />
+    <meta name="twitter:image:alt" content="#LAPLAND.BLOG · start and share your Finnish Lapland trip blog, free. Aurora over a frozen Lapland landscape." />
+      <!-- Favicon stack (LV ecosystem unified design) -->
+    <link rel="icon" href="/favicon.svg?v=20260626b" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico?v=20260626b" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260626b" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0F172A" />
+    <meta name="apple-mobile-web-app-title" content="Lapland Blog" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="VRMKD7N"></script>
   </head>
   <body>
     <div id="root"></div>

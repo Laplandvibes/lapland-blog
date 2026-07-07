@@ -56,7 +56,7 @@ export default function MyDashboard() {
   const handleInputRef = useRef<HTMLInputElement>(null);
 
   useSeo({
-    title: 'Your trip blog — Lapland.blog',
+    title: 'Your trip blog · Lapland.blog',
     description: 'Your drafts, published stories and entries at a glance.',
     canonical: canonicalUrl('/me'),
   });
@@ -133,7 +133,7 @@ export default function MyDashboard() {
       .maybeSingle();
     if (existing) {
       setHandleSaving(false);
-      setHandleError(`"${clean}" is already taken — try another.`);
+      setHandleError(`"${clean}" is already taken. Try another.`);
       return;
     }
 
@@ -156,19 +156,19 @@ export default function MyDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-night-light/50 via-night to-night text-snow flex flex-col">
-      <Nav minimal />
+      <Nav />
 
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         {/* ─── Hero ─────────────────────────────────────────────────── */}
         <Reveal as="header" className="flex flex-wrap items-end justify-between gap-6 mb-10">
           <div>
-            <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
+            <p className="text-pink tracking-[0.35em] text-[11px] font-bold uppercase mb-3">
               Your trip blog
             </p>
-            <h1 className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight mb-3">
+            <h1 className="font-display text-5xl md:text-6xl text-snow font-light tracking-tight mb-4">
               Hei, <span className="italic text-pink">{firstName}</span>.
             </h1>
-            <p className="text-slate-300 text-sm">
+            <p className="text-slate-200 text-base md:text-lg">
               {published} published · {drafts} draft
               {drafts === 1 ? '' : 's'}
             </p>
@@ -195,7 +195,7 @@ export default function MyDashboard() {
                   </button>
                 </div>
                 <p className="text-[11px] text-slate-300 mt-1">
-                  This is your public blog address — share it with friends.
+                  This is your public blog address. Share it with friends.
                 </p>
               </div>
             )}
@@ -250,13 +250,20 @@ export default function MyDashboard() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <Link
-              to="/me/new"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all"
-            >
-              <Plus size={16} />
-              Write new post
-            </Link>
+            {/* Hide the top create button while the empty-state card is showing
+                (0 posts) so the "Write your first post" CTA is the single,
+                unambiguous call to action. Once the author has at least one
+                post — or while we're still loading — keep it as the create
+                action. */}
+            {(loading || posts.length > 0) && (
+              <Link
+                to="/me/new"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all"
+              >
+                <Plus size={16} />
+                Write new post
+              </Link>
+            )}
             <Link
               to="/me/settings"
               className="inline-flex items-center gap-2 px-5 py-3 bg-night-light/40 border border-purple/30 text-slate-200 hover:text-pink hover:border-pink/55 text-xs font-semibold uppercase tracking-[0.2em] rounded-full transition-colors"
@@ -288,23 +295,35 @@ export default function MyDashboard() {
             <p className="mt-4 text-sm">Loading your entries…</p>
           </div>
         ) : posts.length === 0 ? (
-          <div className="text-center py-20 rounded-2xl border border-dashed border-purple/30 bg-night-light/30">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-pink/15 border border-pink/30 mb-5">
-              <Compass size={24} className="text-pink" />
+          <div className="relative text-center py-20 px-6 rounded-3xl border border-pink/30 bg-gradient-to-b from-pink/15 via-night-light/60 to-night-light/40 shadow-[0_30px_90px_-50px_rgba(236,72,153,0.7)] overflow-hidden">
+            {/* Soft pink glow blooming from the top so the card feels warm,
+                not like an empty void. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-pink/25 blur-3xl"
+            />
+            <div className="relative">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-pink/20 border border-pink/40 mb-7 shadow-[0_0_40px_-6px_rgba(236,72,153,0.8)]">
+                <Compass size={34} className="text-pink" />
+              </div>
+              <h2 className="text-snow text-3xl md:text-4xl font-display font-light tracking-tight mb-4">
+                Your blog is a <span className="italic text-pink">blank map</span>.
+              </h2>
+              <p className="text-slate-200 text-base md:text-lg leading-relaxed mb-10 max-w-lg mx-auto">
+                Let&apos;s put the first pin on it. Write about a place you&apos;ve
+                been, a plan for the trip, or the colour of the sky on the drive
+                north. Whatever you want to remember.
+              </p>
+              <Link
+                to="/me/new"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-pink text-white font-semibold rounded-full text-base hover:bg-pink-dark hover:-translate-y-0.5 transition-all shadow-[0_12px_36px_-8px_rgba(236,72,153,0.65)]"
+              >
+                <Plus size={18} /> Write your first post
+              </Link>
+              <p className="text-slate-400 text-xs mt-5">
+                Takes a few minutes. You can save it as a draft and finish later.
+              </p>
             </div>
-            <p className="text-snow text-xl font-display mb-2">
-              Your blog is a blank map.
-            </p>
-            <p className="text-slate-300 text-sm mb-8 max-w-md mx-auto">
-              Write your first post — a place you've been, a plan for the trip,
-              a photo of the sky on the drive north.
-            </p>
-            <Link
-              to="/me/new"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-pink text-white font-semibold rounded-full text-sm hover:bg-pink-dark transition-colors"
-            >
-              <Plus size={14} /> Write your first post
-            </Link>
           </div>
         ) : (
           <div className="rounded-2xl border border-purple/25 bg-night-light/30 overflow-hidden">

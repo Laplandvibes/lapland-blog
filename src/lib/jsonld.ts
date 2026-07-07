@@ -47,7 +47,7 @@ export function websiteSchema(): JsonLd {
     name: SITE_NAME,
     url: SITE,
     description:
-      'A first-person field journal from Finnish Lapland — honest, seasonal, written by someone who actually lives here.',
+      'A free travel-journal platform for visitors to Finnish Lapland: pin places, write trip entries, and share them. Seed entries written by the in-house editorial voice, The Field Journal.',
     inLanguage: 'en',
     publisher: {
       '@type': 'Organization',
@@ -57,18 +57,25 @@ export function websiteSchema(): JsonLd {
   };
 }
 
-export function personSchema(): JsonLd {
+/**
+ * The site's authorial voice is "The Field Journal" — an editorial pen-name, not
+ * a real individual. We model it as an Organization (a Brand sub-org of the
+ * publisher), NOT a schema.org Person, so search engines never treat the seed
+ * entries as the work of a specific named resident. (Honest-attribution rule.)
+ */
+export function publisherSchema(): JsonLd {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Person',
+    '@type': 'Organization',
     name: vesa.name,
+    alternateName: SITE_NAME,
     description: vesa.bio,
     url: `${SITE}/about`,
-    jobTitle: vesa.role,
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'FI',
-      addressRegion: 'Lapland',
+    parentOrganization: { '@type': 'Organization', name: PUBLISHER },
+    areaServed: {
+      '@type': 'Place',
+      name: 'Finnish Lapland',
+      address: { '@type': 'PostalAddress', addressCountry: 'FI', addressRegion: 'Lapland' },
     },
   };
 }
@@ -83,7 +90,9 @@ export function blogPostingSchema(post: Post): JsonLd {
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     author: {
-      '@type': 'Person',
+      // Organization, not Person — "The Field Journal" is an editorial voice,
+      // not a real individual. (Honest-attribution rule.)
+      '@type': 'Organization',
       name: vesa.name,
       url: `${SITE}/about`,
     },
@@ -114,6 +123,21 @@ export function breadcrumbSchema(items: { name: string; url: string }[]): JsonLd
       position: i + 1,
       name: item.name,
       item: item.url,
+    })),
+  };
+}
+
+export function faqPageSchema(items: { q: string; a: string }[]): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((i) => ({
+      '@type': 'Question',
+      name: i.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: i.a,
+      },
     })),
   };
 }

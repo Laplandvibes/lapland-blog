@@ -3,12 +3,17 @@ import { ArrowLeft, Compass } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { useSeo, canonicalUrl } from '../lib/seo';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 export default function NotFound() {
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang].notFound;
+
   useSeo({
-    title: 'Not found — Lapland.blog',
-    description:
-      "This page doesn't exist. It might have been moved, renamed, or lost in the snow.",
+    title: c.pageTitle,
+    description: c.pageDescription,
     canonical: canonicalUrl('/404'),
   });
 
@@ -20,33 +25,29 @@ export default function NotFound() {
         <div className="absolute top-1/3 left-1/3 w-[520px] h-[520px] rounded-full bg-pink/10 blur-[160px] pointer-events-none animate-hero-pulse" />
 
         <div className="relative max-w-lg text-center">
-          <Compass
-            className="w-14 h-14 text-pink mx-auto mb-6 animate-soft-float"
-            strokeWidth={1.5}
-          />
+          <Compass className="w-14 h-14 text-pink mx-auto mb-6 animate-soft-float" strokeWidth={1.5} />
           <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
-            Not found · 404
+            {c.eyebrow}
           </p>
           <h1 className="font-display text-5xl md:text-6xl text-snow font-light tracking-tight mb-5 leading-tight">
-            Lost in the snow.
+            {c.h1}
           </h1>
           <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-10">
-            This page doesn't exist — or it doesn't exist yet. Either way, the
-            rest of the blog is this way.
+            {c.body}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
-              to="/"
+              to={to('/')}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink text-white font-semibold hover:bg-pink-dark transition-colors"
             >
               <ArrowLeft size={16} />
-              Back to home
+              {c.backHome}
             </Link>
             <Link
-              to="/stories"
+              to={to('/stories')}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-aurora-blue/50 text-aurora-blue hover:bg-aurora-blue/10 hover:border-aurora-blue transition-colors"
             >
-              All stories →
+              {c.allStories}
             </Link>
           </div>
         </div>

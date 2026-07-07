@@ -50,7 +50,7 @@ export default function Reveal({
           }
         }
       },
-      { root: null, rootMargin, threshold: 0.05 }
+      { root: null, rootMargin, threshold: 0 }
     );
 
     io.observe(el);

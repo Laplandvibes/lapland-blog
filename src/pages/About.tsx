@@ -1,15 +1,23 @@
 import { Link } from 'react-router-dom';
+import { MapPin, PenLine, Share2, Check, X } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
+import PageBreadcrumb from '../components/PageBreadcrumb';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 export default function About() {
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang].about;
+
   useSeo({
-    title: 'About — Lapland.blog',
-    description:
-      "Lapland.blog is a free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to friends. Your trip, told well.",
+    title: c.pageTitle,
+    description: c.pageDescription,
+    image: 'https://lapland.blog/og/page-about.jpg',
     canonical: canonicalUrl('/about'),
   });
 
@@ -26,132 +34,152 @@ export default function About() {
     <div className="theme-editorial min-h-screen">
       <Nav />
 
-      {/* ================================================================
-          HERO — full-bleed contemplative wilderness photo
-          ================================================================ */}
       <header className="relative pt-16">
-        <div className="relative h-[60vh] min-h-[420px] max-h-[640px] overflow-hidden">
-          <img
-            src="/images/aside-vesa-1200.webp"
-            alt="A tiny figure with a headlamp standing under a giant aurora arc over Lapland tundra"
-            className="absolute inset-0 w-full h-full object-cover"
-            fetchPriority="high"
-            decoding="async"
-            width={1920}
-            height={1080}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-black/40" />
+        <div className="relative h-[58vh] min-h-[420px] max-h-[620px] overflow-hidden bg-[var(--color-cream-deep)]">
+          <picture>
+            <source srcSet="/images/aside-vesa-1200.avif" type="image/avif" />
+            <source srcSet="/images/aside-vesa-1200.webp" type="image/webp" />
+            <img
+              src="/images/aside-vesa-1200.webp"
+              alt="A lone figure with a headlamp standing under a vast green aurora arc over Lapland tundra"
+              className="absolute inset-0 w-full h-full object-cover object-[50%_38%]"
+              fetchPriority="high"
+              decoding="async"
+              width={1920}
+              height={1080}
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/35" />
         </div>
 
-        {/* Title card overlapping the hero */}
-        <div className="relative px-4 sm:px-6 lg:px-8 -mt-32 md:-mt-40 mb-12">
+        <div className="relative px-4 sm:px-6 lg:px-8 -mt-28 md:-mt-36 mb-10">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-[var(--color-cream)] rounded-2xl shadow-[0_40px_80px_-40px_rgba(0,0,0,0.5)] border border-[var(--color-paper-border)] px-6 py-10 md:px-14 md:py-14">
-              <p className="text-[var(--color-accent)] text-[10px] uppercase tracking-[0.35em] font-bold mb-5">
-                About the platform
+            <div className="bg-[var(--color-cream)] rounded-[1.25rem] shadow-[0_50px_90px_-50px_rgba(0,0,0,0.55)] border border-[var(--color-paper-border)] px-6 py-10 md:px-14 md:py-14">
+              <p className="text-[var(--color-accent)] text-[11px] uppercase tracking-[0.32em] font-bold mb-5">
+                {c.eyebrow}
               </p>
               <h1
-                className="text-[var(--color-ink)] font-normal leading-[1.05] tracking-[-0.01em] text-[clamp(2.25rem,6vw,4.5rem)] mb-8"
-                style={{ fontFamily: 'var(--font-editorial)' }}
+                className="text-[var(--color-ink)] leading-[1.04] tracking-[-0.015em] text-[clamp(2.25rem,6vw,4.25rem)] mb-7"
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
               >
-                A travel journal worth keeping.
+                {c.h1}
               </h1>
               <p className="text-[var(--color-ink-soft)] text-lg md:text-xl leading-relaxed">
-                Lapland.blog is a free travel-journal platform for visitors to
-                Finnish Lapland. Pin where you saw the aurora. Photograph the
-                cabin. Write what the temperature did. By the time you fly home
-                you have a beautiful blog of your trip — one your friends can
-                actually follow, and one you'll still want to read in five years.
+                {c.lead}
               </p>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="divider-editorial max-w-3xl mx-auto mb-12" />
+      <PageBreadcrumb editorial />
 
       <main className="px-4 sm:px-6 lg:px-8 pb-12">
+        {/* Intro */}
         <div className="prose-editorial">
-          <p>
-            Most Lapland blogs read like a brochure. Most travel-journal apps
-            either get abandoned in a phone roll or get shared as a single
-            Instagram post that disappears in a day. Lapland.blog is the
-            in-between thing: a real, slow, photo-led blog of your trip,
-            hosted under a name that already gets traffic, kept for as long as
-            you want it kept.
-          </p>
+          <p>{c.intro}</p>
+        </div>
 
-          <h2>How it works</h2>
-          <p>
-            Sign in with your email or Google. Get a corner of lapland.blog at
-            <em> lapland.blog/me</em>. Each entry takes a hero image, a place
-            pin, and the words you want to say. Save drafts, publish when
-            ready, share the link to friends. Every published entry is indexed
-            and searchable — your trip becomes a small piece of the bigger
-            Lapland archive.
-          </p>
+        {/* How it works — three visual steps */}
+        <section className="max-w-5xl mx-auto mt-14 mb-4">
+          <h2
+            className="text-[var(--color-ink)] text-2xl md:text-3xl mb-8 text-center"
+            style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
+          >
+            {c.howHeading}
+          </h2>
+          <div className="grid gap-5 md:grid-cols-3">
+            {[
+              { Icon: MapPin, label: '01' },
+              { Icon: PenLine, label: '02' },
+              { Icon: Share2, label: '03' },
+            ].map((step, i) => (
+              <div
+                key={step.label}
+                className="rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream)] p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/25 flex items-center justify-center">
+                    <step.Icon size={18} className="text-[var(--color-accent)]" />
+                  </span>
+                  <span className="text-[var(--color-ink-mute)] text-xs font-bold tracking-[0.3em]">
+                    {step.label}
+                  </span>
+                </div>
+                <p className="text-[var(--color-ink-soft)] text-[0.95rem] leading-relaxed">
+                  {i === 0 ? c.howStepPin : i === 1 ? c.howStepWrite : c.howStepShare}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="prose-editorial mt-8">
+            <p>{c.howBody}</p>
+          </div>
+        </section>
 
-          <h2>What's free</h2>
-          <p>
-            Writing entries. Hosting your own travel blog under
-            <em> lapland.blog/me/yourname</em>. Photos. The newsletter. There
-            is no paywall and no premium tier on the writer side.
-          </p>
+        {/* What's free / What you won't find — two-column contrast panel */}
+        <section className="max-w-5xl mx-auto mt-10 grid gap-5 md:grid-cols-2">
+          <div className="rounded-2xl border border-[var(--color-accent)]/20 bg-[var(--color-cream)] p-7">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-8 rounded-full bg-[var(--color-accent)]/12 flex items-center justify-center">
+                <Check size={16} className="text-[var(--color-accent)]" />
+              </span>
+              <h3
+                className="text-[var(--color-ink)] text-xl"
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
+              >
+                {c.freeHeading}
+              </h3>
+            </div>
+            <p className="text-[var(--color-ink-soft)] text-[0.95rem] leading-relaxed">{c.freeBody}</p>
+          </div>
+          <div className="rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] p-7">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-8 rounded-full bg-[var(--color-ink-mute)]/15 flex items-center justify-center">
+                <X size={16} className="text-[var(--color-ink-mute)]" />
+              </span>
+              <h3
+                className="text-[var(--color-ink)] text-xl"
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
+              >
+                {c.notHeading}
+              </h3>
+            </div>
+            <p className="text-[var(--color-ink-soft)] text-[0.95rem] leading-relaxed">{c.notBody}</p>
+          </div>
+        </section>
 
-          <h2>What you won't find</h2>
-          <p>
-            Sponsored posts inside reader entries. Affiliate shopping lists
-            stuffed into your blog. The words <em>unforgettable</em>,
-            <em> bucket list</em>, <em>magical</em>, or <em>winter
-            wonderland</em> — they're banned from the editorial drafts and
-            we'd encourage you to ban them from yours too. They're bad for
-            writing and bad for readers.
-          </p>
+        {/* The seed entries — highlighted editorial callout */}
+        <section className="max-w-3xl mx-auto mt-10">
+          <div className="rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-cream-deep)] px-6 py-7 md:px-8">
+            <p className="text-[var(--color-accent)] text-[10px] uppercase tracking-[0.32em] font-bold mb-3">
+              {c.seedHeading}
+            </p>
+            <p className="text-[var(--color-ink-soft)] text-[1.05rem] leading-relaxed">{c.seedBody}</p>
+          </div>
+        </section>
 
-          <h2>The seed entries</h2>
-          <p>
-            The five entries already on the site are written by{' '}
-            <em>The Field Journal</em>, the editorial voice of Lapland.blog.
-            They're there to show what an honest, slow, photo-led trip blog
-            can read like — real temperatures, real times of day, no
-            brochure voice. Read one and picture your own.
-          </p>
-
-          <h2>About the network</h2>
-          <p>
-            Lapland.blog is part of the LaplandVibes ecosystem — a network of
-            Finnish-owned sites about Lapland. The other sites tell you
-            <em> where</em> to go, <em>where</em> to stay, and <em>what</em>{' '}
-            to do. This one is where the trip itself gets written down.
-          </p>
-
-          <h2>Get in touch</h2>
-          <p>
-            If you want to say hello, correct a factual error, or send a
-            photograph we can credit, email{' '}
-            <a href="mailto:info@lapland.blog">info@lapland.blog</a>. We read
-            everything and try to answer within a week.
-          </p>
-
+        {/* Network + contact — back to prose */}
+        <div className="prose-editorial mt-12">
+          <h2>{c.networkHeading}</h2>
+          <p>{c.networkBody}</p>
+          <h2>{c.contactHeading}</h2>
+          <p>{c.contactBody}</p>
           <hr />
-
-          <p>
-            Written from Finnish Lapland, at the temperature and the hour it
-            actually happened.
-          </p>
+          <p>{c.closing}</p>
         </div>
 
         <div className="max-w-[65ch] mx-auto text-center mt-12">
           <Link
-            to="/signin"
+            to={to('/signin')}
             className="inline-block px-7 py-3.5 rounded-full bg-[var(--color-accent)] text-white font-semibold uppercase tracking-wider text-xs hover:bg-[var(--color-accent-dark)] transition-colors"
           >
-            Start your own journal →
+            {c.ctaPrimary}
           </Link>
           <p className="text-[var(--color-ink-mute)] text-sm mt-4">
-            Or{' '}
-            <Link to="/stories" className="text-[var(--color-accent)] underline">
-              read the seed entries first
+            {c.ctaSecondary}{' '}
+            <Link to={to('/stories')} className="text-[var(--color-accent)] underline">
+              {c.ctaSecondaryLink}
             </Link>
             .
           </p>

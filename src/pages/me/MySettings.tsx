@@ -40,7 +40,7 @@ export default function MySettings() {
   const [postCount, setPostCount] = useState<number>(0);
 
   useSeo({
-    title: 'Account settings — Lapland.blog',
+    title: 'Account settings · Lapland.blog',
     description: 'Your Lapland.blog account: email, account deletion and data export.',
     canonical: canonicalUrl('/me/settings'),
   });
@@ -81,17 +81,17 @@ export default function MySettings() {
   // Mailto helpers — pre-fills the support email so the team can verify
   // identity (signed-in email matches the From: header).
   const exportMailto = `mailto:info@lapland.blog?subject=${encodeURIComponent(
-    'Data export request — Lapland.blog'
+    'Data export request · Lapland.blog'
   )}&body=${encodeURIComponent(
     `Hi,\n\nI'd like to request a copy of all the data Lapland.blog holds about my account.\n\nAccount email: ${email}\nHandle: @${handle}\n\nThank you.`
   )}`;
   const deleteMailto = `mailto:info@lapland.blog?subject=${encodeURIComponent(
-    'Account deletion request — Lapland.blog'
+    'Account deletion request · Lapland.blog'
   )}&body=${encodeURIComponent(
     `Hi,\n\nI'd like to permanently delete my Lapland.blog account and all my entries.\n\nAccount email: ${email}\nHandle: @${handle}\n\nI understand this is irreversible. Please confirm once it's done.\n\nThank you.`
   )}`;
   const emailChangeMailto = `mailto:info@lapland.blog?subject=${encodeURIComponent(
-    'Change email address — Lapland.blog'
+    'Change email address · Lapland.blog'
   )}&body=${encodeURIComponent(
     `Hi,\n\nI'd like to change the email address on my Lapland.blog account.\n\nCurrent email: ${email}\nHandle: @${handle}\nNew email: <please fill in>\n\nThank you.`
   )}`;
@@ -187,8 +187,8 @@ export default function MySettings() {
                     >
                       /signin
                     </Link>
-                    . Your account stays attached to the email on file —
-                    nobody else can sign in unless they have access to that
+                    . Your account stays attached to the email on file.
+                    Nobody else can sign in unless they have access to that
                     inbox.
                   </p>
                 </div>
@@ -254,7 +254,7 @@ export default function MySettings() {
                     Permanent and irreversible. Removes your profile, all
                     entries (published and drafts), every uploaded image, and
                     the auth identity tied to <span className="font-semibold text-snow">{email}</span>.
-                    The newsletter is a separate list — you can also unsubscribe
+                    The newsletter is a separate list. You can also unsubscribe
                     via{' '}
                     <Link
                       to="/unsubscribe"

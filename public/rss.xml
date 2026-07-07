@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Lapland.blog — Field journal from Finnish Lapland</title>
+    <title>Lapland.blog · Field journal from Finnish Lapland</title>
     <link>https://lapland.blog</link>
     <atom:link href="https://lapland.blog/rss.xml" rel="self" type="application/rss+xml"/>
-    <description>A first-person field journal from Finnish Lapland — honest, seasonal, written by someone who actually lives here. Aurora, cabins, seasons, food, people.</description>
+    <description>A first-person field journal from Finnish Lapland: honest, seasonal, written by someone who actually lives here. Aurora, cabins, seasons, food, people.</description>
     <language>en</language>
     <copyright>© 2026 Lapeso Oy</copyright>
     <managingEditor>info@lapland.blog (Lapland.blog)</managingEditor>
     <webMaster>info@lapland.blog (Lapland.blog)</webMaster>
-    <lastBuildDate>Mon, 04 May 2026 15:16:36 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 10:08:08 GMT</lastBuildDate>
     <generator>lapland.blog custom generator</generator>
     <image>
       <url>https://lapland.blog/og-image.png</url>

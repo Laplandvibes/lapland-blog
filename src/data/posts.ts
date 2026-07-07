@@ -1,6 +1,6 @@
 // Real editorial content for lapland.blog launch.
 // Editorial voice: The Field Journal (de-personalised 2026-05-04).
-// Block-based content model — the Post page renders each block type.
+// Block-based content model. The Post page renders each block type.
 
 import type { CategorySlug } from './categories';
 
@@ -10,7 +10,12 @@ export type PostBlock =
   | { type: 'pullquote'; text: string }
   | { type: 'divider' }
   | { type: 'list'; ordered?: boolean; items: string[] }
-  | { type: 'markdown'; text: string };
+  | { type: 'markdown'; text: string }
+  // In-article image. `src` is a /public path (the registry slots in
+  // src/lib/images.ts). `full` renders edge-to-edge (full-bleed) between
+  // sections; otherwise it sits within the text measure. `caption` is shown
+  // below in the editorial caption style.
+  | { type: 'image'; src: string; alt: string; caption?: string; full?: boolean };
 
 export interface Post {
   slug: string;
@@ -68,11 +73,11 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'For the first hour after I parked there was nothing. A dim grey-green smear over the northern horizon — the kind of thing you would only believe was aurora if someone had told you it was. I have learned to not get excited about that smear. It is the aurora-equivalent of a band tuning up backstage. It does not mean a show is coming. It just means the sky has remembered it has a job to do and is thinking about it.',
+        text: 'For the first hour after I parked there was nothing. A dim grey-green smear over the northern horizon, the kind of thing you would only believe was aurora if someone had told you it was. I have learned to not get excited about that smear. It is the aurora-equivalent of a band tuning up backstage. It does not mean a show is coming. It just means the sky has remembered it has a job to do and is thinking about it.',
       },
       {
         type: 'paragraph',
-        text: 'I drank some coffee. I did some test shots — ISO 3200, eight seconds, f/1.8, manual focus on the brightest star in the northwest, which was probably Capella but at that hour I had stopped caring about astronomy and started caring about my fingers. The test shots came out grey. The histogram was a sad lump on the left. I told myself this was fine. I was here for the moment, not the photo.',
+        text: 'I drank some coffee. I did some test shots. ISO 3200, eight seconds, f/1.8, manual focus on the brightest star in the northwest, which was probably Capella but at that hour I had stopped caring about astronomy and started caring about my fingers. The test shots came out grey. The histogram was a sad lump on the left. I told myself this was fine. I was here for the moment, not the photo.',
       },
       {
         type: 'paragraph',
@@ -84,11 +89,18 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'Around half past one in the morning I started doing the small, slightly unhinged things you do when you have been alone in a forest for ninety minutes at minus twenty-three. I jogged in place. I sang two verses of an old Finnish hymn my grandmother used to sing in Pori, badly and in the wrong key. I ate a piece of dark chocolate from my pocket which had become as hard as a piece of slate and which I had to crack between my back teeth. I checked the camera battery. I rotated the tripod six degrees clockwise so the framing now included the silhouette of one particular pine I had decided was beautiful. I put my hands inside my jacket and against my stomach for ninety seconds and counted to ninety, slowly.',
+        text: 'Around half past one in the morning you start doing the small, slightly unhinged things you do when you have been alone in a forest for ninety minutes at minus twenty-three. Jog in place. Sing two verses of an old Finnish hymn, badly and in the wrong key. Eat a piece of dark chocolate from your pocket that has gone as hard as a piece of slate and has to be cracked between your back teeth. Check the camera battery. Rotate the tripod six degrees clockwise so the framing now includes the silhouette of one particular pine you have decided is beautiful. Put your hands inside your jacket against your stomach for ninety seconds and count to ninety, slowly.',
       },
       {
         type: 'paragraph',
         text: 'Around two-fifteen the smear on the horizon brightened a little. Then it went back to being a smear. I want to be honest about this part because the cliché version of the aurora story skips it. Most of an aurora night, even on a high-Kp night, is the smear coming and going and you standing there negotiating with your toes.',
+      },
+      {
+        type: 'image',
+        src: '/images/trip-night-forest-1200.webp',
+        alt: 'Snow-draped spruce forest at night under a faint starry sky',
+        caption: 'The pine forest to the north: the kind of black you only get when there are no streetlights for fifteen kilometres.',
+        full: true,
       },
       {
         type: 'heading',
@@ -101,11 +113,11 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'It was as if something on the other side of the atmosphere had been holding its breath for five hours and then it exhaled. The smear over the north did not brighten gradually — it tore. A long ribbon of green came down from somewhere near the zenith and pulled itself horizontal across the sky from west to east in maybe four seconds, and then it folded back on itself, and then a second ribbon dropped through it at an angle, and then a third, and the green at the bottom of the ribbons went pink, the way the underside of a wave goes pink at sunset, and the whole thing started to move.',
+        text: 'It was as if something on the other side of the atmosphere had been holding its breath for five hours and then it exhaled. The smear over the north did not brighten gradually. It tore. A long ribbon of green came down from somewhere near the zenith and pulled itself horizontal across the sky from west to east in maybe four seconds, and then it folded back on itself, and then a second ribbon dropped through it at an angle, and then a third, and the green at the bottom of the ribbons went pink, the way the underside of a wave goes pink at sunset, and the whole thing started to move.',
       },
       {
         type: 'paragraph',
-        text: 'I have seen the aurora maybe a hundred and fifty nights in my life. I have lived in or near Lapland since 2014. I have been north of the Arctic Circle for every winter for ten years. I have stood under aurora that filled the whole sky with a slow, rolling green that you could read a book by. None of those nights prepared me for this one. The thing about the substorm that night was the speed. The ribbons did not glow — they ran. They ran from one horizon to the other and the pink under-edge ran with them, and the air, which had been silent except for the small ticking sound the cold makes on your jacket, did not actually make a sound but felt like it should have. I want to write that I heard the aurora but I did not. I felt the absence of the sound it should have made.',
+        text: 'You can see the aurora a hundred and fifty nights and still not be ready for one like this. Winters of standing under green that filled the whole sky with a slow, rolling glow you could almost read a book by, and none of it prepares you. The thing about the substorm that night was the speed. The ribbons did not glow. They ran. They ran from one horizon to the other and the pink under-edge ran with them, and the air, which had been silent except for the small ticking sound the cold makes on your jacket, did not actually make a sound but felt like it should have. You want to write that you heard the aurora, but you did not. You felt the absence of the sound it should have made.',
       },
       {
         type: 'paragraph',
@@ -126,7 +138,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I took, in the end, about four hundred frames that night. The intervalometer kept firing through the substorm and I corrected the framing twice afterwards, when the show calmed down to a slow, beautiful, normal aurora night. About thirty of the four hundred are what most people would call good aurora photos. There is one in particular — a long curtain of green folding down to pink behind the silhouette of the one pine I had decided was beautiful — that I will probably print and sell prints of, eventually, because it is technically the best aurora photograph I have ever made.',
+        text: 'I took, in the end, about four hundred frames that night. The intervalometer kept firing through the substorm and I corrected the framing twice afterwards, when the show calmed down to a slow, beautiful, normal aurora night. About thirty of the four hundred are what most people would call good aurora photos. There is one in particular, a long curtain of green folding down to pink behind the silhouette of the one pine I had decided was beautiful, that I will probably print and sell prints of, eventually, because it is technically the best aurora photograph I have ever made.',
       },
       {
         type: 'paragraph',
@@ -143,7 +155,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'For anyone who wants to actually go and stand in the cold and wait for this and not freeze and not miss it because their phone went flat — a few things I have learned the long way:',
+        text: 'For anyone who wants to go and stand in the cold and wait for this and not freeze and not miss it because their phone went flat, a few things I have learned the long way:',
       },
       {
         type: 'list',
@@ -187,7 +199,7 @@ export const posts: Post[] = [
     title: 'Why I stopped chasing the aurora with an app',
     kicker: 'Rovaniemi · Field notes · Aurora',
     excerpt:
-      'I spent two winters watching my phone instead of the sky. Here is the small, boring practice that replaced it — and why it works better for almost everyone who doesn\'t live here.',
+      'I spent two winters watching my phone instead of the sky. Here is the small, boring practice that replaced it, and why it works better for almost everyone who doesn\'t live here.',
     category: 'aurora',
     tags: ['aurora', 'field-notes', 'rovaniemi', 'practice'],
     publishedAt: '2026-02-02',
@@ -203,7 +215,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'And here is what those two winters looked like in practice. I would be at home in Rovaniemi in the evening, doing dishes or watching something, and the phone in my pocket would buzz. I would pull it out. I would read the alert. I would look out the kitchen window. I would see nothing — because aurora is rarely visible from a kitchen window, even up here, because of the streetlights, because of the angle, because of a hundred small reasons. I would put on layers. I would drive ten minutes to my usual spot. I would stand there for twenty minutes. I would see a faint smear that the app had decided was a substorm. I would feel mildly cheated. I would drive home.',
+        text: 'And here is what those two winters looked like in practice. I would be at home in Rovaniemi in the evening, doing dishes or watching something, and the phone in my pocket would buzz. I would pull it out. I would read the alert. I would look out the kitchen window. I would see nothing, because aurora is rarely visible from a kitchen window, even up here, because of the streetlights, because of the angle, because of a hundred small reasons. I would put on layers. I would drive ten minutes to my usual spot. I would stand there for twenty minutes. I would see a faint smear that the app had decided was a substorm. I would feel mildly cheated. I would drive home.',
       },
       {
         type: 'paragraph',
@@ -214,13 +226,20 @@ export const posts: Post[] = [
         text: 'The phone was making me a worse aurora hunter. It was teaching me to outsource the looking, and the looking is most of the skill.',
       },
       {
+        type: 'image',
+        src: '/images/trip-silence-1200.webp',
+        alt: 'A single snow-covered pine on a frozen lake at twilight',
+        caption: 'The ten-minute walk-out: the riverbank where the streetlights end and the sky opens to the north.',
+        full: true,
+      },
+      {
         type: 'heading',
         level: 2,
         text: 'The boring practice that replaced it',
       },
       {
         type: 'paragraph',
-        text: 'In the third winter I deleted the apps. All three of them. I kept exactly one bookmark — the NOAA SWPC three-day Kp forecast — and I committed to checking it once, in the morning, with my coffee, and not again. Whatever the morning forecast said about that night was what I was going to plan around. If the morning forecast said Kp 4 or higher between 21:00 and 03:00, that was a possible night. If the forecast was for the next day or the day after, that was a planning prompt — start watching the weather, line up the tripod, charge the batteries.',
+        text: 'In the third winter I deleted the apps. All three of them. I kept exactly one bookmark, the NOAA SWPC three-day Kp forecast, and I committed to checking it once, in the morning, with my coffee, and not again. Whatever the morning forecast said about that night was what I was going to plan around. If the morning forecast said Kp 4 or higher between 21:00 and 03:00, that was a possible night. If the forecast was for the next day or the day after, that was a planning prompt: start watching the weather, line up the tripod, charge the batteries.',
       },
       {
         type: 'paragraph',
@@ -255,7 +274,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'About fifteen kilometres south-west of Kemi, on the Mansikkanokka peninsula, there is a small road that ends at a pull-off used by ice fishermen in winter. The Bay of Bothnia is to the south, pine forest to the north. Almost zero light pollution. This is where I was on the night I wrote about in the previous post. Drive carefully on the last kilometre — it is plowed but narrow.',
+        text: 'About fifteen kilometres south-west of Kemi, on the Mansikkanokka peninsula, there is a small road that ends at a pull-off used by ice fishermen in winter. The Bay of Bothnia is to the south, pine forest to the north. Almost zero light pollution. This is where I was on the night I wrote about in the previous post. Drive carefully on the last kilometre. It is plowed but narrow.',
       },
       {
         type: 'heading',
@@ -268,7 +287,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I want to add an honest caveat. These are real spots — I drive to all three regularly — but conditions change. The forestry road past Vikajärvi sometimes has timber trucks parked in it. The Mansikkanokka pull-off sometimes has another car already in it. If you drive out and the spot is taken, do not get angry. There are a thousand other clearings within five kilometres in any direction. The Lapland forest is mostly forest.',
+        text: 'I want to add an honest caveat. These are real spots. I drive to all three regularly. But conditions change. The forestry road past Vikajärvi sometimes has timber trucks parked in it. The Mansikkanokka pull-off sometimes has another car already in it. If you drive out and the spot is taken, do not get angry. There are a thousand other clearings within five kilometres in any direction. The Lapland forest is mostly forest.',
       },
       {
         type: 'pullquote',
@@ -281,7 +300,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'Here is the part the apps will not tell you. The reason apps do not work is not technical. It is psychological. An app teaches you that the aurora is a notification — a thing that arrives in your pocket and demands a reaction. But the aurora is not a notification. The aurora is a state of the sky that lasts for minutes or hours and that you can only really enter into by being already outside.',
+        text: 'Here is the part the apps will not tell you. The reason apps do not work is not technical. It is psychological. An app teaches you that the aurora is a notification, a thing that arrives in your pocket and demands a reaction. But the aurora is not a notification. The aurora is a state of the sky that lasts for minutes or hours and that you can only really enter into by being already outside.',
       },
       {
         type: 'paragraph',
@@ -289,7 +308,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I will admit that the practice is easier when you live here. When the cost of a wasted night is "I drove ten minutes home and went to bed", you can afford to be patient. When the cost is "I flew here from Singapore for four nights and this was night two", patience is harder. I respect that. But the structural answer is the same — be outside on purpose, for the duration, without the phone — and I have watched far more visitors miss the aurora because they were checking the app than because the app failed to alert them.',
+        text: 'I will admit that the practice is easier when you live here. When the cost of a wasted night is "I drove ten minutes home and went to bed", you can afford to be patient. When the cost is "I flew here from Singapore for four nights and this was night two", patience is harder. I respect that. But the structural answer is the same. Be outside on purpose, for the duration, without the phone. And I have watched far more visitors miss the aurora because they were checking the app than because the app failed to alert them.',
       },
       {
         type: 'heading',
@@ -302,7 +321,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'Last week the forecast said Kp 3 — a quiet night. I went out anyway because I had not been outside in three nights. At eleven-twenty I saw a faint band of green over the river. It lasted about six minutes and never got brighter than a smear. I would have missed it from inside. I would have missed it from inside even with three apps and a smart watch and a notification on my fridge. I saw it because I was already standing on the riverbank with my hood down and my hands in my pockets and the cold on my face and nothing in my pocket buzzing.',
+        text: 'Last week the forecast said Kp 3, a quiet night. I went out anyway because I had not been outside in three nights. At eleven-twenty I saw a faint band of green over the river. It lasted about six minutes and never got brighter than a smear. I would have missed it from inside. I would have missed it from inside even with three apps and a smart watch and a notification on my fridge. I saw it because I was already standing on the riverbank with my hood down and my hands in my pockets and the cold on my face and nothing in my pocket buzzing.',
       },
       { type: 'divider' },
       {
@@ -317,7 +336,7 @@ export const posts: Post[] = [
   // ───────────────────────────────────────────────────────────────────
   {
     slug: 'five-nights-in-a-forest-cabin',
-    title: 'Five nights in a forest cabin — what I packed, what I forgot',
+    title: 'Five nights in a forest cabin: what I packed, what I forgot',
     kicker: 'Kemijärvi · Late February · Cabins',
     excerpt:
       "A day-by-day field diary from a week at Tuulia's mökki. The gear that saved me, the one thing I forgot that nearly ended the trip, and the three items I will now never leave the city without.",
@@ -343,7 +362,7 @@ export const posts: Post[] = [
       {
         type: 'heading',
         level: 2,
-        text: 'Day 1 — Sunday — minus 18°C at dawn',
+        text: 'Day 1. Sunday. Minus 18°C at dawn',
       },
       {
         type: 'paragraph',
@@ -360,15 +379,15 @@ export const posts: Post[] = [
       {
         type: 'heading',
         level: 2,
-        text: 'Day 2 — Monday — minus 22°C at dawn',
+        text: 'Day 2. Monday. Minus 22°C at dawn',
       },
       {
         type: 'paragraph',
-        text: 'I woke at six-thirty because the fire had gone out at some point in the small hours and the cabin was cold. Not dangerous cold — Tuulia had three thick wool blankets on the loft bed — but the kind of cold that makes you decide, with great clarity, that the first job of the day is the fire. I went down the ladder in my thermal layers, opened the stove, found the embers were cold ash, and started over. Kindling, paper, three small splits, then a larger split. The cabin was warm in twenty minutes. I have made fires hundreds of times but there is something about making the fire in a cold cabin at six-thirty in the morning that feels like a more serious version of the same task. There is no margin. If you do it badly the cabin stays cold.',
+        text: 'I woke at six-thirty because the fire had gone out at some point in the small hours and the cabin was cold. Not dangerous cold. Tuulia had three thick wool blankets on the loft bed. But it was the kind of cold that makes you decide, with great clarity, that the first job of the day is the fire. I went down the ladder in my thermal layers, opened the stove, found the embers were cold ash, and started over. Kindling, paper, three small splits, then a larger split. The cabin was warm in twenty minutes. I have made fires hundreds of times but there is something about making the fire in a cold cabin at six-thirty in the morning that feels like a more serious version of the same task. There is no margin. If you do it badly the cabin stays cold.',
       },
       {
         type: 'paragraph',
-        text: 'After breakfast — porridge, made on the wood stove, with butter and a spoon of cloudberry jam — I went out on snowshoes around the lake. The snow was deep, maybe eighty centimetres on the trail, more in the drifts. I was wearing my Sorel Caribou boots, two pairs of merino socks, ski trousers over thermal long johns, a merino base layer, a fleece, and my heavy down jacket from a Norwegian brand whose name I keep forgetting because the jacket is so good I never have to think about it. Hat, neck gaiter, mittens with liner gloves underneath. I was warm. I have spent enough money on cold-weather clothing over ten years to know what I am doing here, and on day two I was warm.',
+        text: 'After breakfast, which was porridge made on the wood stove with butter and a spoon of cloudberry jam, I went out on snowshoes around the lake. The snow was deep, maybe eighty centimetres on the trail, more in the drifts. I was wearing my Sorel Caribou boots, two pairs of merino socks, ski trousers over thermal long johns, a merino base layer, a fleece, and my heavy down jacket from a Norwegian brand whose name I keep forgetting because the jacket is so good I never have to think about it. Hat, neck gaiter, mittens with liner gloves underneath. I was warm. I have spent enough money on cold-weather clothing over ten years to know what I am doing here, and on day two I was warm.',
       },
       {
         type: 'paragraph',
@@ -381,7 +400,7 @@ export const posts: Post[] = [
       {
         type: 'heading',
         level: 2,
-        text: 'Day 3 — Tuesday — minus 25°C at dawn — the day I nearly ended the trip',
+        text: 'Day 3. Tuesday. Minus 25°C at dawn. The day I nearly ended the trip',
       },
       {
         type: 'paragraph',
@@ -389,7 +408,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'A reasonable person would say: relax, it is five days, you will not get rickets in five days, eat a piece of salmon. A reasonable person would be technically correct. The problem is that I have learned, over a decade of winters at this latitude, that for me personally the difference between taking the vitamin D and not taking it during the dark months is not a question of long-term bone health. It is a question of whether I wake up on day four feeling like myself or whether I wake up on day four feeling like a slightly hollow version of myself who is having a hard time being interested in the things he is doing. The vitamin D, plus a daily ten minutes in front of a Lumie Vitamin L 10,000 lux lamp, is the small floor under my mood from November through March. Without those two things I am still functional but I am no longer good company for myself.',
+        text: 'A reasonable person would say: relax, it is five days, you will not get rickets in five days, eat a piece of salmon. A reasonable person would be technically correct. The problem is that, winter after winter at this latitude, the difference between taking the vitamin D and not taking it during the dark months turns out not to be a question of long-term bone health. It is a question of whether you wake up on day four feeling like yourself or like a slightly hollow version of yourself who is having a hard time being interested in anything. The vitamin D, plus a daily ten minutes in front of a Lumie Vitamin L 10,000 lux lamp, is the small floor under the mood from November through March. Without those two things you are still functional but you are no longer good company for yourself.',
       },
       {
         type: 'paragraph',
@@ -408,9 +427,16 @@ export const posts: Post[] = [
         text: 'Lesson, written into the small notebook on the cabin table that night: VITAMIN D in capital letters, with a circle around it.',
       },
       {
+        type: 'image',
+        src: '/images/category-cabins-1200.webp',
+        alt: 'Cabin interior with a wood stove, folded wool blankets and a steaming mug',
+        caption: 'One room and a sleeping loft: wood stove, kerosene lamp, no electricity, no signal except one corner of the loft.',
+        full: true,
+      },
+      {
         type: 'heading',
         level: 2,
-        text: 'Day 4 — Wednesday — minus 19°C at dawn — the sauna',
+        text: 'Day 4. Wednesday. Minus 19°C at dawn. The sauna',
       },
       {
         type: 'paragraph',
@@ -418,11 +444,11 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'When the sauna was finally hot — about eighty-five degrees, which is a respectable Finnish temperature, not the showy ninety-five-plus that some saunas chase — I sat on the upper bench for the first löyly with the small wooden ladle in my hand and I poured a half-ladle of water on the rocks. The steam came up. The smell was the smell of a cedar-and-spruce löyly with a faint top note of birch from the firewood. I sat there for maybe four minutes, then went outside in nothing but a towel, walked the ten metres to the lake, and stood barefoot on the snow at the edge of the ice. I did not roll in the snow, because I am forty-one and I have my limits. I stood there until my feet started to hurt — about forty seconds — and then I walked back to the sauna and did the whole thing two more times.',
+        text: 'When the sauna was finally hot, about eighty-five degrees, which is a respectable Finnish temperature and not the showy ninety-five-plus that some saunas chase, I sat on the upper bench for the first löyly with the small wooden ladle in my hand and I poured a half-ladle of water on the rocks. The steam came up. The smell was the smell of a cedar-and-spruce löyly with a faint top note of birch from the firewood. I sat there for maybe four minutes, then went outside in nothing but a towel, walked the ten metres to the lake, and stood barefoot on the snow at the edge of the ice. I did not roll in the snow. Everyone has their limits. I stood there until my feet started to hurt, about forty seconds, and then I walked back to the sauna and did the whole thing two more times.',
       },
       {
         type: 'paragraph',
-        text: 'After the third round I sat in the changing room with the small window open six inches and a beer in my hand from the cooler I had brought from the car. The stars came out over the lake while I was sitting there. I watched a small ridge of green appear on the northern horizon and stay for maybe ten minutes — not strong enough to call it a substorm, just enough to call it aurora — and I did not move to get the camera. The camera was in the cabin. The cabin was thirty metres away. The aurora would not stay for the time it took to get the camera. I sat in the towel and the half-light and watched it.',
+        text: 'After the third round I sat in the changing room with the small window open six inches and a beer in my hand from the cooler I had brought from the car. The stars came out over the lake while I was sitting there. I watched a small ridge of green appear on the northern horizon and stay for maybe ten minutes, not strong enough to call it a substorm, just enough to call it aurora, and I did not move to get the camera. The camera was in the cabin. The cabin was thirty metres away. The aurora would not stay for the time it took to get the camera. I sat in the towel and the half-light and watched it.',
       },
       {
         type: 'pullquote',
@@ -431,7 +457,7 @@ export const posts: Post[] = [
       {
         type: 'heading',
         level: 2,
-        text: 'Day 5 — Thursday — minus 14°C at dawn — Reijo on the lake',
+        text: 'Day 5. Thursday. Minus 14°C at dawn. Reijo on the lake',
       },
       {
         type: 'paragraph',
@@ -443,7 +469,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I made coffee on the wood stove. We sat at the small table for about an hour and I cooked the smaller of the two whitefish in a pan on the stove with a little butter and salt. Reijo ate one half. I ate the other. We did not say very much. He told me about the ice on the lake — eighty centimetres thick now, perfectly safe, but watch the spot where the small stream comes in on the east side because the current keeps the ice thinner there. He told me he had been ice fishing on this lake for fifty-two years. He told me that the fishing now was not as good as it had been in the seventies but it was better than five years ago, which surprised him. He drank one cup of coffee and ate the fish and shook my hand and went back down the path to his snowshoes and walked across the lake to his house, which I could now see, faintly, on the far shore.',
+        text: 'I made coffee on the wood stove. We sat at the small table for about an hour and I cooked the smaller of the two whitefish in a pan on the stove with a little butter and salt. Reijo ate one half. I ate the other. We did not say very much. He told me about the ice on the lake: eighty centimetres thick now, perfectly safe, but watch the spot where the small stream comes in on the east side because the current keeps the ice thinner there. He told me he had been ice fishing on this lake for fifty-two years. He told me that the fishing now was not as good as it had been in the seventies but it was better than five years ago, which surprised him. He drank one cup of coffee and ate the fish and shook my hand and went back down the path to his snowshoes and walked across the lake to his house, which I could now see, faintly, on the far shore.',
       },
       {
         type: 'paragraph',
@@ -459,7 +485,7 @@ export const posts: Post[] = [
         items: [
           'Sorel Caribou boots, sized one full size up to fit two pairs of merino socks. The single best cold-weather purchase I have made in ten years.',
           'A Norwegian-brand 800-fill down jacket which I will not name because it does not need my help. Any decent 700+ fill down at a length that covers your hips will do. Length matters more than fill weight.',
-          'Two pairs of merino base layers — one to wear, one drying by the stove. Wool, not synthetic. Synthetics smell after twenty-four hours in a closed cabin and you cannot do laundry.',
+          'Two pairs of merino base layers: one to wear, one drying by the stove. Wool, not synthetic. Synthetics smell after twenty-four hours in a closed cabin and you cannot do laundry.',
           'A Petromax kerosene lamp because the cabin had only one and I wanted a second for the loft. Tuulia did not have one. I brought my own.',
           'A small French press and 200 g of coffee from a roaster I trust in Rovaniemi. Cabin coffee is part of cabin time. Bring the good coffee.',
           'A puukko knife on my belt. I used it for cutting bread, opening packages, kindling small twigs into smaller twigs, and, on day four, cleaning the smaller whitefish that Reijo brought me. A good puukko is the most useful single object in a Finnish forest cabin.',
@@ -493,7 +519,7 @@ export const posts: Post[] = [
         ordered: true,
         items: [
           'The vitamin D bottle, in the toiletry bag, double-checked the night before. Non-negotiable from November to March.',
-          'A puukko knife. Not for emergencies, not for safety — for the small daily uses that come up four times a day in a forest cabin and that you only notice when you do not have a knife.',
+          'A puukko knife. Not for emergencies, not for safety, but for the small daily uses that come up four times a day in a forest cabin and that you only notice when you do not have a knife.',
           'A small notebook and a soft pencil. The cabin time is when the things you have been thinking about for three months suddenly become writeable. If the notebook is not there you lose the sentences.',
         ],
       },
@@ -504,11 +530,11 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'On Friday morning I packed the car. I cleaned the cabin the way Tuulia had asked me to clean it — swept the floor, washed the dishes, brought in the last of the firewood and stacked it next to the stove for whoever came after me, left a small fire ready in the stove with kindling and one match in a saucer on top so the next person could light it without thinking. I locked the door with the small old iron key Tuulia had given me. I walked once around the cabin in the snow to check I had not left anything outside. I had not.',
+        text: 'On Friday morning I packed the car. I cleaned the cabin the way Tuulia had asked me to clean it. Swept the floor, washed the dishes, brought in the last of the firewood and stacked it next to the stove for whoever came after me, left a small fire ready in the stove with kindling and one match in a saucer on top so the next person could light it without thinking. I locked the door with the small old iron key Tuulia had given me. I walked once around the cabin in the snow to check I had not left anything outside. I had not.',
       },
       {
         type: 'paragraph',
-        text: 'I drove down the access road to the main road and turned south toward Rovaniemi. About a kilometre down the lake, where the road bends and you can see the cabin one last time through the trees, I stopped the car. I sat in the driver\'s seat with the engine running and looked at the cabin in the distance for maybe forty seconds. The smoke from the stove was no longer coming out of the chimney because I had let the fire die. The cabin looked exactly the way it had looked when I arrived on Sunday — small, brown, almost invisible in the trees, the kind of building you would not notice if you were not looking for it.',
+        text: 'I drove down the access road to the main road and turned south toward Rovaniemi. About a kilometre down the lake, where the road bends and you can see the cabin one last time through the trees, I stopped the car. I sat in the driver\'s seat with the engine running and looked at the cabin in the distance for maybe forty seconds. The smoke from the stove was no longer coming out of the chimney because I had let the fire die. The cabin looked exactly the way it had looked when I arrived on Sunday: small, brown, almost invisible in the trees, the kind of building you would not notice if you were not looking for it.',
       },
       {
         type: 'paragraph',
@@ -542,15 +568,15 @@ export const posts: Post[] = [
     content: [
       {
         type: 'paragraph',
-        text: 'I want to be clear about the price first because the price is the thing the post is about. The bowl of lohikeitto — salmon soup — at Arctic Restaurant Roka on Ainonkatu in central Rovaniemi cost me forty-two euros. Not the meal. The bowl of soup. As a single course, on its own, with a basket of dark rye on the side and a glass of sparkling water from a small Finnish spring whose name I will not pretend to remember.',
+        text: 'I want to be clear about the price first because the price is the thing the post is about. The bowl of lohikeitto, salmon soup, at Arctic Restaurant Roka on Ainonkatu in central Rovaniemi cost me forty-two euros. Not the meal. The bowl of soup. As a single course, on its own, with a basket of dark rye on the side and a glass of sparkling water from a small Finnish spring whose name I will not pretend to remember.',
       },
       {
         type: 'paragraph',
-        text: 'My return flight from Helsinki to Rovaniemi the week before had cost thirty-nine euros. The soup cost more than the flight. I want to write that sentence down again because it is genuinely a lot of money for a soup and I do not want to soft-pedal it: the soup cost more than the flight.',
+        text: 'My return flight from Helsinki to Rovaniemi the week before had cost thirty-nine euros. The soup cost more than the flight. I want to write that sentence down again because it is a lot of money for a soup and I do not want to soft-pedal it: the soup cost more than the flight.',
       },
       {
         type: 'paragraph',
-        text: 'I am going to spend the rest of this post explaining why I think the price was correct. Not "worth it" — that is the language of TripAdvisor and I do not trust it. Correct. The price was correct. By the time I finished the bowl I had stopped doing the small calculation in my head about what each spoonful was worth and I had started to think about the soup as a single complete object that had been built by people who knew exactly what they were doing, and the price was the price of that object.',
+        text: 'I am going to spend the rest of this post explaining why I think the price was correct. Not "worth it". That is the language of TripAdvisor and I do not trust it. Correct. The price was correct. By the time I finished the bowl I had stopped doing the small calculation in my head about what each spoonful was worth and I had started to think about the soup as a single complete object that had been built by people who knew exactly what they were doing, and the price was the price of that object.',
       },
       {
         type: 'pullquote',
@@ -563,15 +589,22 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'Roka is in a renovated wooden building on Ainonkatu, two streets back from the river. From the outside it looks small. From the inside it is small — maybe twenty-eight covers across two rooms, with a wood-burning open kitchen at the back you can see from every table. I had a table for one against the south window. The window was about eighty centimetres above the table and looked out into the small back yard, where there was a snowed-over kitchen garden with the tops of three thyme bushes still poking through the snow and a single ceramic pot with a juniper bush in it that had been pruned into a small tight ball.',
+        text: 'Roka is in a renovated wooden building on Ainonkatu, two streets back from the river. From the outside it looks small. From the inside it is small, maybe twenty-eight covers across two rooms, with a wood-burning open kitchen at the back you can see from every table. I had a table for one against the south window. The window was about eighty centimetres above the table and looked out into the small back yard, where there was a snowed-over kitchen garden with the tops of three thyme bushes still poking through the snow and a single ceramic pot with a juniper bush in it that had been pruned into a small tight ball.',
       },
       {
         type: 'paragraph',
-        text: 'It was four o\'clock in the afternoon on a Saturday in early March. The light coming through the window was the pale blue light you get an hour before sunset in Lapland in March, when the snow on the ground takes on a shade of blue that does not exist anywhere south of about sixty-three degrees of latitude. There were six other diners in the room — a couple in their fifties speaking French to each other, two women in their thirties speaking Italian, and two older Finnish men in wool jumpers eating in silence and reading separate sections of the same newspaper.',
+        text: 'It was four o\'clock in the afternoon on a Saturday in early March. The light coming through the window was the pale blue light you get an hour before sunset in Lapland in March, when the snow on the ground takes on a shade of blue that does not exist anywhere south of about sixty-three degrees of latitude. There were six other diners in the room: a couple in their fifties speaking French to each other, two women in their thirties speaking Italian, and two older Finnish men in wool jumpers eating in silence and reading separate sections of the same newspaper.',
       },
       {
         type: 'paragraph',
-        text: 'The waitress was a woman in her late twenties with her hair in a single braid down her back and a small canvas apron with the restaurant\'s logo embroidered in white thread. Her name was Elina — she said it on the second visit to my table and I made a mental note. She had the particular calm of a person who has worked in restaurants long enough to know that the customer is not in fact always right but who is also not bored by the work yet. There is a window of years when servers are like this. Before the window, they are anxious. After the window, they are tired. Inside the window, they are very good company for a meal alone.',
+        text: 'The waitress was a woman in her late twenties with her hair in a single braid down her back and a small canvas apron with the restaurant\'s logo embroidered in white thread. Her name was Elina. She said it on the second visit to my table and I made a mental note. She had the particular calm of a person who has worked in restaurants long enough to know that the customer is not in fact always right but who is also not bored by the work yet. There is a window of years when servers are like this. Before the window, they are anxious. After the window, they are tired. Inside the window, they are very good company for a meal alone.',
+      },
+      {
+        type: 'image',
+        src: '/images/category-food-1200.webp',
+        alt: 'Slate board with salmon, cloudberries, lingonberries and crispbread',
+        caption: 'Wild Finnish salmon, brought up from a small operation on the Kemijoki near Tervola twice a week, in person.',
+        full: true,
       },
       {
         type: 'heading',
@@ -584,11 +617,11 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'The soup arrived in a heavy ceramic bowl that had been warmed in the oven. The first thing I noticed was the smell. There was the smell of salmon, obviously — but underneath it there was a smell of woodsmoke, the kind you get from juniper twigs burned slowly. I had not expected the smoke. The menu had said "lohikeitto, smoked salmon, leek, dill, new potatoes, cream" and I had read "smoked" as a description of the salmon, the way you read it on a supermarket package. I had not understood that the smoke was a presence in the bowl itself — that the broth had been finished, somehow, in the smoke, or that smoked salmon trim had been simmered in it long enough to lend the broth that quality.',
+        text: 'The soup arrived in a heavy ceramic bowl that had been warmed in the oven. The first thing I noticed was the smell. There was the smell of salmon, obviously, but underneath it there was a smell of woodsmoke, the kind you get from juniper twigs burned slowly. I had not expected the smoke. The menu had said "lohikeitto, smoked salmon, leek, dill, new potatoes, cream" and I had read "smoked" as a description of the salmon, the way you read it on a supermarket package. I had not understood that the smoke was a presence in the bowl itself, that the broth had been finished, somehow, in the smoke, or that smoked salmon trim had been simmered in it long enough to lend the broth that quality.',
       },
       {
         type: 'paragraph',
-        text: 'The colour of the broth was the colour of bone china that had been left out in cold sunlight — a creamy white with the faintest gold underneath. The salmon was in two pieces, one larger and one smaller, both the deep pink-orange of wild Finnish salmon, both poached so gently that the flakes were holding together by surface tension and would have separated if I had touched them with the side of the spoon. The leeks were cut into thin half-moons. The new potatoes were small, peeled, and had clearly been cooked in a separate pot of salted water and added to the bowl at the last moment, because their edges were not soft. There was a single sprig of thyme floating in the middle. I looked out the window at the snow over the kitchen garden and counted the thyme bushes. There were three. I am going to assume the sprig in the bowl was from one of those bushes. I cannot prove this. I am going to believe it anyway.',
+        text: 'The colour of the broth was the colour of bone china that had been left out in cold sunlight, a creamy white with the faintest gold underneath. The salmon was in two pieces, one larger and one smaller, both the deep pink-orange of wild Finnish salmon, both poached so gently that the flakes were holding together by surface tension and would have separated if I had touched them with the side of the spoon. The leeks were cut into thin half-moons. The new potatoes were small, peeled, and had clearly been cooked in a separate pot of salted water and added to the bowl at the last moment, because their edges were not soft. There was a single sprig of thyme floating in the middle. I looked out the window at the snow over the kitchen garden and counted the thyme bushes. There were three. I am going to assume the sprig in the bowl was from one of those bushes. I cannot prove this. I am going to believe it anyway.',
       },
       {
         type: 'paragraph',
@@ -613,15 +646,15 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I told him about the smoke. I asked him where it came from. He said the broth was finished by adding back trim from cold-smoked salmon they smoked themselves in a small smokehouse in the back yard, twice a week, with juniper twigs and a little birch. The salmon itself, the pink flakes in the bowl, was farmed but well-farmed — from a man named Juho who ran a small operation on the Kemijoki near Tervola, about ninety kilometres south, who delivered to Roka twice a week in person. Mikko said the price he paid Juho for the salmon was, per kilo, almost three times the wholesale price he could get from a Norwegian importer. The thyme, yes, was from the bushes outside the window. The cream was from a small farm called Munno, also near Tervola. The leeks in March had to come from southern Finland, he admitted, because no one was growing leeks in Lapland in March, but in summer they were from the kitchen garden too.',
+        text: 'I told him about the smoke. I asked him where it came from. He said the broth was finished by adding back trim from cold-smoked salmon they smoked themselves in a small smokehouse in the back yard, twice a week, with juniper twigs and a little birch. The salmon itself, the pink flakes in the bowl, was farmed but well-farmed, from a man named Juho who ran a small operation on the Kemijoki near Tervola, about ninety kilometres south, who delivered to Roka twice a week in person. Mikko said the price he paid Juho for the salmon was, per kilo, almost three times the wholesale price he could get from a Norwegian importer. The thyme, yes, was from the bushes outside the window. The cream was from a small farm called Munno, also near Tervola. The leeks in March had to come from southern Finland, he admitted, because no one was growing leeks in Lapland in March, but in summer they were from the kitchen garden too.',
       },
       {
         type: 'paragraph',
-        text: 'I asked him, in the most polite Finnish-context way I could phrase it, why the soup was forty-two euros. I did not say "why is it so expensive". I said "what does the price contain". He laughed a little — not defensively, more in the way of a person who has been asked the question before and has worked out an honest answer.',
+        text: 'I asked him, in the most polite Finnish-context way I could phrase it, why the soup was forty-two euros. I did not say "why is it so expensive". I said "what does the price contain". He laughed a little, not defensively, more in the way of a person who has been asked the question before and has worked out an honest answer.',
       },
       {
         type: 'paragraph',
-        text: 'The price, he said, contained Juho driving up from Tervola twice a week in his own van. It contained the smokehouse out back, which they had built themselves the previous summer and had not yet finished paying off. It contained Elina, who he wanted to pay properly so she would not leave for a hotel job in March when the tourist money in Rovaniemi was at its peak and every restaurant in town was trying to poach servers. It contained the building, which was old and which they had been quietly fixing for three years. It contained the fact that they served maybe twenty-eight covers a night and not eighty, because the room was small and they were not willing to add tables. It contained — he said this slowly, in the way of a person who had thought about it — the small number of people in the world who would, on a Saturday afternoon in March, walk into a restaurant in Rovaniemi and order a single bowl of soup as a complete meal and pay forty-two euros for it without thinking the restaurant was trying to fool them.',
+        text: 'The price, he said, contained Juho driving up from Tervola twice a week in his own van. It contained the smokehouse out back, which they had built themselves the previous summer and had not yet finished paying off. It contained Elina, who he wanted to pay properly so she would not leave for a hotel job in March when the tourist money in Rovaniemi was at its peak and every restaurant in town was trying to poach servers. It contained the building, which was old and which they had been quietly fixing for three years. It contained the fact that they served maybe twenty-eight covers a night and not eighty, because the room was small and they were not willing to add tables. It contained, he said this slowly, in the way of a person who had thought about it, the small number of people in the world who would, on a Saturday afternoon in March, walk into a restaurant in Rovaniemi and order a single bowl of soup as a complete meal and pay forty-two euros for it without thinking the restaurant was trying to fool them.',
       },
       {
         type: 'paragraph',
@@ -650,12 +683,12 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I left a small tip — Finnish restaurants do not really do tips, but I left ten euros on the table anyway, for Elina specifically — and I walked the four blocks home through the slow March snow. The bowl was still warm in my stomach. I had not eaten anything else that day and I would not eat anything else that night and I did not need to. The soup had been the meal.',
+        text: 'I left a small tip. Finnish restaurants do not really do tips, but I left ten euros on the table anyway, for Elina specifically, and I walked the four blocks home through the slow March snow. The bowl was still warm in my stomach. I had not eaten anything else that day and I would not eat anything else that night and I did not need to. The soup had been the meal.',
       },
       { type: 'divider' },
       {
         type: 'paragraph',
-        text: 'Written at a kitchen table in Rovaniemi the next morning, with the receipt from Roka — forty-two euros for the soup, four euros for the water, sixty cents for the rye, totalling forty-six euros sixty — pinned to the wall above the desk where I can see it.',
+        text: 'Written at a kitchen table in Rovaniemi the next morning, with the receipt from Roka pinned to the wall above the desk where I can see it: forty-two euros for the soup, four euros for the water, sixty cents for the rye, totalling forty-six euros sixty.',
       },
     ],
   },
@@ -668,7 +701,7 @@ export const posts: Post[] = [
     title: 'Living between two suns: what the darkness actually feels like',
     kicker: 'Rovaniemi · Seasons · Kaamos',
     excerpt:
-      'Most of what you have read about the Finnish polar night is wrong. Here is what it actually feels like — from a 66.5°N resident who has been doing this for a decade, candles and all.',
+      'Most of what you have read about the Finnish polar night is wrong. Here is what it actually feels like through a winter at 66.5°N: the biology, the blue hour, the candles, and the four small habits that get you through it.',
     category: 'seasons',
     tags: ['kaamos', 'seasons', 'polar-night', 'rovaniemi', 'essay'],
     publishedAt: '2026-03-29',
@@ -681,15 +714,15 @@ export const posts: Post[] = [
     content: [
       {
         type: 'paragraph',
-        text: 'I live at 66.5 degrees north, which is roughly the latitude of the Arctic Circle, in a small flat in central Rovaniemi where the kitchen window faces south-southwest and the bedroom window faces almost due north. I have lived here, or within twenty kilometres of here, since 2014. This is my eleventh winter in Lapland. I am writing this in late March, which is the moment when the kaamos has been over for almost three months but when the body is still recovering, and I want to tell you what the darkness actually feels like, because most of what you have read about it is wrong.',
+        text: 'Rovaniemi sits at 66.5 degrees north, right on the Arctic Circle. These are field notes from a winter spent there: the south-southwest kitchen window, the almost-due-north bedroom window, the walk down to the river. They are written in late March, the moment when the kaamos has been over for almost three months but the body is still recovering, and they try to say what the darkness actually feels like, because most of what you read about it is wrong.',
       },
       {
         type: 'paragraph',
-        text: 'Kaamos is the Finnish word for the polar night. At Rovaniemi the sun does not rise above the horizon for one or two days in December — at the most, three. We do not have the months-long absolute darkness that you get further north in Utsjoki or Kirkenes. What we have is something more interesting, which is a long stretch of weeks in which the sun is technically below the horizon for the entire day but the sky still goes through a slow, beautiful, elaborate cycle from black to deep blue to pale blue to a kind of luminous bone-grey at the southern horizon around noon and then back through pale blue and deep blue to black.',
+        text: 'Kaamos is the Finnish word for the polar night. At Rovaniemi the sun does not rise above the horizon for one or two days in December, at the most three. We do not have the months-long absolute darkness that you get further north in Utsjoki or Kirkenes. What we have is something more interesting, which is a long stretch of weeks in which the sun is technically below the horizon for the entire day but the sky still goes through a slow, beautiful, elaborate cycle from black to deep blue to pale blue to a kind of luminous bone-grey at the southern horizon around noon and then back through pale blue and deep blue to black.',
       },
       {
         type: 'paragraph',
-        text: 'Most of November and most of December at this latitude is what we call sininen hetki — the blue moment — except it is not a moment, it is a several-hour state of the sky that is the dominant fact of every day for about six weeks. The sky is blue. The snow is blue. The walls of the buildings are blue. The faces of the people in the cafés are blue, around the eyes especially. Everything is blue and everything is quiet and you have to live inside that.',
+        text: 'Most of November and most of December at this latitude is what we call sininen hetki, the blue moment, except it is not a moment. It is a several-hour state of the sky that is the dominant fact of every day for about six weeks. The sky is blue. The snow is blue. The walls of the buildings are blue. The faces of the people in the cafés are blue, around the eyes especially. Everything is blue and everything is quiet and you have to live inside that.',
       },
       {
         type: 'pullquote',
@@ -702,7 +735,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I am going to be honest about this part because the romantic version of the Finnish polar night skips it. Kaamos, the first time, is hard. The first winter I lived here, in 2014–15, I did not understand what was happening to me. I was sleeping ten hours a night and waking up tired. I was eating more sugar than I had ever eaten in my life and not enjoying it. I was finishing work at three in the afternoon — by which I mean my body was finishing work at three in the afternoon, regardless of what my calendar said — and I would lie on the sofa in my flat in the dark not because the dark was peaceful but because I did not have the energy to get up and turn the light on. I had not understood, until that winter, that there is a thing the human body does in the absence of sunlight that is not depression in the medical sense and is not laziness and is not personal failure. It is a slow chemical refusal. The body says: I do not want to.',
+        text: 'We are going to be honest about this part because the romantic version of the Finnish polar night skips it. Kaamos, the first time, is hard. That first winter, you do not understand what is happening to you. You sleep ten hours a night and wake up tired. You eat more sugar than you ever have and do not enjoy it. You finish work at three in the afternoon. Your body finishes work at three in the afternoon, regardless of what the calendar says, and you lie on the sofa in the dark, not because the dark is peaceful but because you do not have the energy to get up and turn the light on. There is a thing the human body does in the absence of sunlight that is not depression in the medical sense and is not laziness and is not personal failure. It is a slow chemical refusal. The body says: I do not want to.',
       },
       {
         type: 'paragraph',
@@ -719,7 +752,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I am putting these in order of effect, from largest to smallest, based on ten winters of running the experiment on myself. None of these is a substitute for medical advice. If you are seriously struggling, see a doctor. But if you are a normal human being living through a normal Lapland winter and you are wondering why you feel the way you feel, here is what works for me.',
+        text: 'Here they are in order of effect, from largest to smallest, drawn from many winters of trial and error at this latitude. None of these is a substitute for medical advice. If you are seriously struggling, see a doctor. But if you are a normal human being living through a normal Lapland winter and you are wondering why you feel the way you feel, this is what works.',
       },
       {
         type: 'heading',
@@ -737,7 +770,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'The Finnish national nutrition guidelines recommend supplementation for adults at northern latitudes during the dark months, and 2000 IU is a typical figure. I have taken this dose every morning from October through April for nine years. I do not take it in the summer because the sun does the work then. I take it with food because vitamin D is fat-soluble and absorbs better with a meal containing some fat. The first winter I took it, in 2016–17, was noticeably better than the three winters before it. I am not going to claim that the vitamin D is the entire reason. But I am going to say that I have not had a winter without it since, because I am not willing to run the control experiment.',
+        text: 'The Finnish national nutrition guidelines recommend supplementation for adults at northern latitudes during the dark months, and 2000 IU is a typical figure. Take this dose every morning from October through April. Skip it in the summer, when the sun does the work. Take it with food, because vitamin D is fat-soluble and absorbs better with a meal containing some fat. The winter you start taking it tends to be noticeably better than the ones before, not because the vitamin D is the entire reason, but because it is the cheapest lever to pull and there is no good reason to run the control experiment on yourself.',
       },
       {
         type: 'heading',
@@ -759,7 +792,7 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I light two candles in my flat at four o\'clock every winter afternoon. One on the kitchen table where I work, one on the small table by the sofa where I read in the evenings. They are not decorative. They are functional. The flame of a candle puts out roughly the same colour temperature as a fire — around 1800K — and the human eye and the human nervous system have a specific positive response to that colour temperature that you do not get from any electric bulb, even a warm one. I have read papers about this. I have also lived it. The candle on the table makes the kitchen feel like a place a human being would want to be at five o\'clock in the afternoon in early December, and the absence of the candle makes the same kitchen feel like a place where you are waiting for something.',
+        text: 'I light two candles in my flat at four o\'clock every winter afternoon. One on the kitchen table where I work, one on the small table by the sofa where I read in the evenings. They are not decorative. They are functional. The flame of a candle puts out roughly the same colour temperature as a fire, around 1800K, and the human eye and the human nervous system have a specific positive response to that colour temperature that you do not get from any electric bulb, even a warm one. I have read papers about this. I have also lived it. The candle on the table makes the kitchen feel like a place a human being would want to be at five o\'clock in the afternoon in early December, and the absence of the candle makes the same kitchen feel like a place where you are waiting for something.',
       },
       {
         type: 'paragraph',
@@ -768,6 +801,13 @@ export const posts: Post[] = [
       {
         type: 'pullquote',
         text: 'The candles are not decoration. They are how you make the room into a place a person can live in at four o\'clock on a December afternoon when the sky is the colour of a wet stone.',
+      },
+      {
+        type: 'image',
+        src: '/images/pillar-cold-1200.webp',
+        alt: 'A snow-covered city bench under a lit apartment window on a frozen blue-hour evening',
+        caption: 'The blue moment: for six weeks the sky, the snow and the walls of the buildings all go the same deep luminous blue.',
+        full: true,
       },
       {
         type: 'heading',
@@ -793,7 +833,7 @@ export const posts: Post[] = [
       {
         type: 'heading',
         level: 2,
-        text: 'The five things I wish someone had told me in 2014',
+        text: 'The five things worth knowing before your first Lapland winter',
       },
       {
         type: 'list',
@@ -803,7 +843,7 @@ export const posts: Post[] = [
           'The midday walk is the single most important thing. Not the lamp, not the supplement, not the candles. The walk. Outside. Hood down. Thirty minutes minimum. Every day from November to February.',
           'Candles in the afternoon are not a Pinterest aesthetic. They are an intervention. Buy a box of plain beeswax candles in October and burn two of them every winter evening from four onwards. The light from the flame is the right colour temperature for a human nervous system at the end of a dark day.',
           'You will eat more in winter. This is also normal. Your body wants more carbohydrates and more fat in November than in May. Do not fight it too hard. Eat the rye bread, eat the butter, eat the potato. Lose the small winter weight in April when the light comes back. The body knows what it is doing.',
-          'The sun coming back in late January is the most underrated event of the year in Lapland and nobody warns you about how good it feels. The first day in late January when you walk outside at one in the afternoon and the sun is actually above the horizon and you can feel the light on your face for the first time in two months — that day is worth the whole winter. Mark it. Pay attention.',
+          'The sun coming back in late January is the most underrated event of the year in Lapland and nobody warns you about how good it feels. The first day in late January when you walk outside at one in the afternoon and the sun is actually above the horizon and you can feel the light on your face for the first time in two months: that day is worth the whole winter. Mark it. Pay attention.',
         ],
       },
       {
@@ -813,11 +853,11 @@ export const posts: Post[] = [
       },
       {
         type: 'paragraph',
-        text: 'I am writing this in late March, which is the moment in the year when the recovery is mostly done and the days are long again — sunrise around six, sunset around eight — and the light has the particular quality of late winter Lapland light, which is bright and clean and almost loud. There is a wooden bench on the path along the Ounasjoki river, near the spot where I do the ten-minute aurora check, that I sit on for five minutes most afternoons in late March. The bench is in the sun for most of the day now. The wood is warm to the touch when you sit on it, even when the air is still minus five. I sit on the bench for five minutes and I close my eyes and I let the sun be on my face for the first time since October and I do not think about anything in particular.',
+        text: 'I am writing this in late March, which is the moment in the year when the recovery is mostly done and the days are long again, sunrise around six and sunset around eight, and the light has the particular quality of late winter Lapland light, which is bright and clean and almost loud. There is a wooden bench on the path along the Ounasjoki river, near the spot where I do the ten-minute aurora check, that I sit on for five minutes most afternoons in late March. The bench is in the sun for most of the day now. The wood is warm to the touch when you sit on it, even when the air is still minus five. I sit on the bench for five minutes and I close my eyes and I let the sun be on my face for the first time since October and I do not think about anything in particular.',
       },
       {
         type: 'paragraph',
-        text: 'The kaamos was hard this year. They are all hard. I will tell you that even after ten of them and even with all four of the practices on the list above, the third week of December is still the hardest week of my year, and probably always will be. But the bench is still there. The bench is still there in late March, and the wood is warm, and the sun is back, and the river is starting to think about breaking up in another six weeks, and that is the deal for living at 66.5 degrees north and I would not trade it.',
+        text: 'The kaamos is hard. It is always hard. Even with all four of the practices on the list above, the third week of December is the hardest week of the Lapland year, and probably always will be. But the bench is still there in late March, and the wood is warm, and the sun is back, and the river is starting to think about breaking up in another six weeks. That is the deal for a winter at 66.5 degrees north, and it is one worth taking.',
       },
       { type: 'divider' },
       {

@@ -43,9 +43,11 @@ function sqlTextArray(arr) {
   return `ARRAY[${items}]::text[]`;
 }
 
+// Editorial voice, not a real individual (honest-attribution rule). The seed
+// posts are bylined "The Field Journal", matching src/data/author.ts.
 const authorSnapshot = {
-  handle: 'vesa',
-  display_name: 'Vesa Pesola',
+  handle: 'fieldjournal',
+  display_name: 'The Field Journal',
   avatar_url: null,
 };
 

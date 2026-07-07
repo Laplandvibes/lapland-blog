@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300..700&display=swap');
 @import "tailwindcss";
 @source "../../shared/**/*.{ts,tsx}";
 
@@ -9,13 +9,17 @@
    ================================================================ */
 
 @theme {
-  /* Typography */
-  --font-display: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+  /* Typography — clean modern sans (Manrope) for headings + editorial,
+     Inter for body. Owner direction: professional, highly legible, no quirk
+     (problogger.com / blogit.fi feel). Space Grotesk + Fraunces removed. */
+  --font-display: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-editorial: 'Fraunces', Georgia, 'Times New Roman', serif;
-  /* Canonical LV alias — used by shared/Legal/* (Bebas Neue not loaded here,
-     falls through to display so legal pages render in Space Grotesk). */
-  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  /* Former serif "editorial" voice — now the same Manrope sans, set tastefully
+     (drop-caps + pull-quotes styled in Manrope). No serif display type left. */
+  --font-editorial: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+  /* Canonical LV alias — used by shared/Legal/* + shared/Footer. Points at
+     Manrope so those components match the rest of the site. */
+  --font-heading: 'Manrope', 'Inter', system-ui, sans-serif;
 
   /* Dark mode palette (matches laplandnightlife vibe) */
   --color-night: #0F172A;
@@ -27,8 +31,12 @@
   --color-purple: #7C3AED;
   --color-purple-dark: #5B21B6;
   --color-purple-light: #A78BFA;
-  --color-aurora-green: #34D399;
-  --color-aurora-blue: #38BDF8;
+  /* Former "aurora" accents — remapped to the vibe-pink brand for ecosystem
+     consistency. aurora-blue → vibe-pink, aurora-green → pink-600 (a darker
+     pink tint) so the handful of two-tone gradients that paired the two still
+     read with depth instead of collapsing to flat pink-on-pink. */
+  --color-aurora-green: #DB2777;
+  --color-aurora-blue: #EC4899;
   --color-neon-yellow: #FACC15;
 
   /* Light editorial palette (Post pages, About) */
@@ -68,14 +76,36 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.02em;
-  font-feature-settings: "ss02", "ss05", "tnum";
+  /* Manrope ships no stylistic sets, so keep tabular numbers only. */
+  font-feature-settings: "tnum";
+  /* Balance headings so no single word is ever orphaned on its own line
+     (e.g. the "...säilyttää." headline never drops one word alone). */
+  text-wrap: balance;
 }
 
-h1 { letter-spacing: -0.035em; font-weight: 500; }
-h2 { letter-spacing: -0.025em; font-weight: 500; }
-h3 { letter-spacing: -0.015em; font-weight: 500; }
+/* Manrope is wider + reads heavier than Space Grotesk. Pull tracking tighter
+   on the big sizes so headlines stay compact and don't overflow. */
+h1 { letter-spacing: -0.035em; font-weight: 800; }
+h2 { letter-spacing: -0.03em; font-weight: 700; }
+h3 { letter-spacing: -0.02em; font-weight: 700; }
+
+/* ----------------------------------------------------------------
+   FONT-WEIGHT NORMALIZATION (Manrope migration)
+   The pages were authored against Space Grotesk + Fraunces, whose thin
+   weights read elegantly. Manrope at 300/400 reads weak + washed-out for
+   display type, and the owner asked for a confident, professional sans.
+   The display/editorial headings carry Tailwind `font-light`/`font-normal`
+   utilities all over the codebase; rather than touch 38 call sites, lift
+   those combinations here. Two-class selectors out-specify the single-class
+   Tailwind utility, so no !important and body/UI text is untouched. */
+.font-display.font-light,
+.font-editorial.font-light { font-weight: 700; }
+.font-display.font-normal,
+.font-editorial.font-normal { font-weight: 700; }
+/* (Editorial cream-page headings — .theme-editorial h1..h4 — are weighted up
+   in the EDITORIAL THEME block below, where the canonical rule lives.) */
 
 /* Link focus — keyboard accessibility */
 a:focus-visible,
@@ -157,7 +187,7 @@ textarea:focus-visible {
     transparent 0%,
     rgba(124, 58, 237, 0.35) 35%,
     rgba(236, 72, 153, 0.45) 50%,
-    rgba(56, 189, 248, 0.35) 65%,
+    rgba(124, 58, 237, 0.35) 65%,
     transparent 100%
   );
 }
@@ -192,8 +222,12 @@ textarea:focus-visible {
 .theme-editorial h4 {
   font-family: var(--font-editorial);
   color: var(--color-ink);
-  font-weight: 400;
-  letter-spacing: -0.015em;
+  /* Manrope needs real weight to read as display type (the old serif looked
+     fine at 400). The page-level `font-normal` utility on these headings is
+     out-specified here, so the cream reading pages get a confident headline. */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .theme-editorial a:focus-visible,
@@ -219,44 +253,69 @@ textarea:focus-visible {
    ~65ch measure, ample leading, drop cap, pull quotes, footnotes
    ================================================================ */
 
+/* The prose container is the WIDER media column. Text elements inside are
+   re-constrained to a ~65ch reading measure (centred), so paragraphs stay
+   comfortable while figures + pull-quotes can run wider for a modern,
+   magazine-style long-read rhythm. */
 .prose-editorial {
   font-family: var(--font-body);
   font-size: 1.1875rem;      /* 19px */
   line-height: 1.75;
   color: var(--color-ink);
-  max-width: 65ch;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+/* Reading measure for running text. */
+.prose-editorial p,
+.prose-editorial ul,
+.prose-editorial ol,
+.prose-editorial h2,
+.prose-editorial h3,
+.prose-editorial .footnotes {
+  max-width: 38rem;          /* ~65ch at this size */
   margin-inline: auto;
 }
 
 .prose-editorial p {
   margin: 0 0 1.4em;
+  max-width: 38rem;
+  margin-inline: auto;
 }
 
+/* Drop cap — kept, but now a bold Manrope letter. A heavy sans initial reads
+   as a deliberate design move; a thin one would just look broken. */
 .prose-editorial > p:first-of-type::first-letter {
   font-family: var(--font-editorial);
-  font-weight: 500;
+  font-weight: 800;
   float: left;
-  font-size: 5.25rem;
-  line-height: 0.85;
-  padding: 0.35rem 0.65rem 0 0;
+  font-size: 5rem;
+  line-height: 0.82;
+  padding: 0.4rem 0.6rem 0 0;
   color: var(--color-accent);
-  font-feature-settings: "ss01";
+  letter-spacing: -0.02em;
 }
 
 .prose-editorial h2 {
   font-family: var(--font-editorial);
-  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 3.2vw, 2.05rem);
+  line-height: 1.2;
   margin: 2.6em 0 0.7em;
   color: var(--color-ink);
+  text-wrap: balance;
 }
 
 .prose-editorial h3 {
   font-family: var(--font-editorial);
-  font-size: clamp(1.375rem, 2.6vw, 1.6rem);
-  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  font-size: clamp(1.3rem, 2.4vw, 1.5rem);
+  line-height: 1.25;
   margin: 2em 0 0.6em;
   color: var(--color-ink);
+  text-wrap: balance;
 }
 
 .prose-editorial a {
@@ -278,16 +337,19 @@ textarea:focus-visible {
 }
 .prose-editorial li { margin-bottom: 0.5em; }
 
+/* Pull-quote — Manrope medium, upright (sans italics read weak at display
+   size). The accent rail + larger size still set it apart from body copy. */
 .prose-editorial blockquote.pullquote {
   font-family: var(--font-editorial);
-  font-style: italic;
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  line-height: 1.38;
   color: var(--color-ink);
   border-left: 3px solid var(--color-accent);
-  padding: 0.2em 0 0.2em 1.25em;
-  margin: 2.2em 0;
-  font-weight: 300;
+  padding: 0.15em 0 0.15em 1.35em;
+  margin: 2.4em auto;
+  max-width: 40rem;
 }
 
 .prose-editorial hr {
@@ -295,22 +357,47 @@ textarea:focus-visible {
   height: 1px;
   background: var(--color-paper-border);
   margin: 3em auto;
-  width: 40%;
+  width: 6rem;
 }
 
+/* Inline figure — a touch wider than the text measure. */
 .prose-editorial figure {
-  margin: 2.4em -1rem;
+  margin: 2.8em auto;
+  max-width: 44rem;
 }
 .prose-editorial figure img {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
+  display: block;
+  box-shadow: 0 30px 60px -36px rgba(26, 24, 21, 0.45);
 }
 .prose-editorial figcaption {
   font-size: 0.875rem;
   color: var(--color-ink-mute);
   text-align: center;
-  margin-top: 0.6em;
+  margin-top: 0.85em;
   font-style: italic;
+  line-height: 1.5;
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+/* Wide figure — fills the full media column (52rem), wider than the 38rem text
+   measure, for cinematic section breaks. Bounded by the Post column so it never
+   collides with the sticky rail on xl. */
+.prose-editorial figure.figure-full {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 3.2em;
+  margin-bottom: 3.2em;
+}
+.prose-editorial figure.figure-full img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+@media (max-width: 640px) {
+  .prose-editorial figure.figure-full img { border-radius: 0.75rem; }
 }
 
 /* Footnote markers */
@@ -344,15 +431,16 @@ textarea:focus-visible {
   will-change: transform, opacity;
 }
 
-/* Drop cap for the home featured-story excerpt */
+/* Drop cap for the home featured-story excerpt — Manrope bold initial. */
 .drop-cap-pink::first-letter {
   float: left;
-  font-family: var(--font-editorial, 'Fraunces', serif);
-  font-size: 4.5rem;
-  line-height: 0.85;
-  padding: 0.45rem 0.6rem 0 0;
+  font-family: var(--font-editorial, 'Manrope', sans-serif);
+  font-size: 4.25rem;
+  line-height: 0.82;
+  padding: 0.5rem 0.55rem 0 0;
   color: var(--color-pink, #EC4899);
-  font-weight: 500;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 /* ================================================================

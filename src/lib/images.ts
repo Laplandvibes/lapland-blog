@@ -46,12 +46,36 @@ type ImageMeta = {
   alt: string;        // default alt — components may override
 };
 
+/**
+ * Northern-hemisphere season switch for the home hero.
+ * May–Sep (months 5–9) → summer; Oct–Apr → winter.
+ * Runs at module load (client + prerender), so the served hero matches
+ * the season the page is built/visited in.
+ */
+const isSummerSeason = (): boolean => {
+  const m = new Date().getMonth() + 1; // 1–12
+  return m >= 5 && m <= 9;
+};
+
+/**
+ * Map a slot to the on-disk filename prefix. Most slots use their own name,
+ * but `hero-aurora` swaps between the summer set (`hero-aurora-*`) and the
+ * recovered winter set (`hero-aurora-winter-*`) depending on the season.
+ * Both sets ship the same widths, so the srcSet stays identical in shape.
+ */
+const fileBaseFor = (slot: ImageSlot): string => {
+  if (slot === 'hero-aurora') {
+    return isSummerSeason() ? 'hero-aurora' : 'hero-aurora-winter';
+  }
+  return slot;
+};
+
 // Keep order consistent with scripts/download-and-process-images.mjs
 const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'hero-aurora': {
     sizes: [2560, 1920, 1200],
     ratio: '21:9',
-    alt: 'Green aurora borealis arching over a winding frozen river in Lapland',
+    alt: 'Red wooden cabins on a forested lake shore in Lapland, bathed in golden summer evening light',
   },
   'hero-dusk-lake': {
     sizes: [2560, 1920, 1200],
@@ -164,11 +188,12 @@ export function getImage(
   altOverride?: string
 ): ResolvedImage {
   const meta = REGISTRY[slot];
+  const base = fileBaseFor(slot);
   const sorted = [...meta.sizes].sort((a, b) => b - a); // largest first
   const largest = sorted[0];
 
   const srcSet = sorted
-    .map((w) => `/images/${slot}-${w}.webp ${w}w`)
+    .map((w) => `/images/${base}-${w}.webp ${w}w`)
     .join(', ');
 
   const defaultSizes =
@@ -177,7 +202,7 @@ export function getImage(
       : '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw';
 
   return {
-    src: `/images/${slot}-${largest}.webp`,
+    src: `/images/${base}-${largest}.webp`,
     srcSet,
     sizes: sizesHint ?? defaultSizes,
     alt: altOverride ?? meta.alt,
@@ -189,5 +214,5 @@ export function getImage(
 export function getImagePreloadSrc(slot: ImageSlot): string {
   const meta = REGISTRY[slot];
   const largest = [...meta.sizes].sort((a, b) => b - a)[0];
-  return `/images/${slot}-${largest}.webp`;
+  return `/images/${fileBaseFor(slot)}-${largest}.webp`;
 }

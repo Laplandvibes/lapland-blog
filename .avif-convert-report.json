@@ -1,0 +1,308 @@
+{
+  "site": "lapland-blog-new",
+  "scanned_webp": 51,
+  "converted": 49,
+  "skipped_exists": 0,
+  "skipped_avif_larger": 2,
+  "errors": 0,
+  "total_webp_bytes": 2879314,
+  "total_avif_bytes": 2361605,
+  "saved_mb": "0.49",
+  "saved_pct": "18.0",
+  "report": [
+    {
+      "file": "public\\images\\aside-vesa-1200.webp",
+      "webp_bytes": 43390,
+      "avif_bytes": 26878,
+      "saved_pct": "38.1"
+    },
+    {
+      "file": "public\\images\\aside-vesa-480.webp",
+      "webp_bytes": 3964,
+      "avif_bytes": 2529,
+      "saved_pct": "36.2"
+    },
+    {
+      "file": "public\\images\\aside-vesa-800.webp",
+      "webp_bytes": 13206,
+      "avif_bytes": 7827,
+      "saved_pct": "40.7"
+    },
+    {
+      "file": "public\\images\\category-aurora-1200.webp",
+      "webp_bytes": 23862,
+      "avif_bytes": 14924,
+      "saved_pct": "37.5"
+    },
+    {
+      "file": "public\\images\\category-aurora-480.webp",
+      "webp_bytes": 4308,
+      "avif_bytes": 3953,
+      "saved_pct": "8.2"
+    },
+    {
+      "file": "public\\images\\category-aurora-800.webp",
+      "webp_bytes": 9692,
+      "avif_bytes": 8383,
+      "saved_pct": "13.5"
+    },
+    {
+      "file": "public\\images\\category-cabins-1200.webp",
+      "webp_bytes": 39890,
+      "avif_bytes": 26868,
+      "saved_pct": "32.6"
+    },
+    {
+      "file": "public\\images\\category-cabins-480.webp",
+      "webp_bytes": 9390,
+      "avif_bytes": 7096,
+      "saved_pct": "24.4"
+    },
+    {
+      "file": "public\\images\\category-cabins-800.webp",
+      "webp_bytes": 20826,
+      "avif_bytes": 14725,
+      "saved_pct": "29.3"
+    },
+    {
+      "file": "public\\images\\category-food-1200.webp",
+      "webp_bytes": 173812,
+      "avif_bytes": 146456,
+      "saved_pct": "15.7"
+    },
+    {
+      "file": "public\\images\\category-food-480.webp",
+      "webp_bytes": 25402,
+      "avif_bytes": 24977,
+      "saved_pct": "1.7"
+    },
+    {
+      "file": "public\\images\\category-food-800.webp",
+      "webp_bytes": 78064,
+      "avif_bytes": 74322,
+      "saved_pct": "4.8"
+    },
+    {
+      "file": "public\\images\\category-seasons-1200.webp",
+      "webp_bytes": 69790,
+      "avif_bytes": 69592,
+      "saved_pct": "0.3"
+    },
+    {
+      "file": "public\\images\\hero-aurora-1200.webp",
+      "webp_bytes": 48380,
+      "avif_bytes": 38807,
+      "saved_pct": "19.8"
+    },
+    {
+      "file": "public\\images\\hero-aurora-1920.webp",
+      "webp_bytes": 124648,
+      "avif_bytes": 86260,
+      "saved_pct": "30.8"
+    },
+    {
+      "file": "public\\images\\hero-aurora-2560.webp",
+      "webp_bytes": 219830,
+      "avif_bytes": 128428,
+      "saved_pct": "41.6"
+    },
+    {
+      "file": "public\\images\\hero-dusk-lake-1200.webp",
+      "webp_bytes": 78238,
+      "avif_bytes": 75170,
+      "saved_pct": "3.9"
+    },
+    {
+      "file": "public\\images\\hero-dusk-lake-1920.webp",
+      "webp_bytes": 172988,
+      "avif_bytes": 150348,
+      "saved_pct": "13.1"
+    },
+    {
+      "file": "public\\images\\hero-dusk-lake-2560.webp",
+      "webp_bytes": 285272,
+      "avif_bytes": 218244,
+      "saved_pct": "23.5"
+    },
+    {
+      "file": "public\\images\\pillar-cold-1200.webp",
+      "webp_bytes": 30588,
+      "avif_bytes": 17593,
+      "saved_pct": "42.5"
+    },
+    {
+      "file": "public\\images\\pillar-cold-480.webp",
+      "webp_bytes": 7802,
+      "avif_bytes": 5911,
+      "saved_pct": "24.2"
+    },
+    {
+      "file": "public\\images\\pillar-cold-800.webp",
+      "webp_bytes": 15380,
+      "avif_bytes": 11061,
+      "saved_pct": "28.1"
+    },
+    {
+      "file": "public\\images\\pillar-people-1200.webp",
+      "webp_bytes": 55370,
+      "avif_bytes": 36736,
+      "saved_pct": "33.7"
+    },
+    {
+      "file": "public\\images\\pillar-people-480.webp",
+      "webp_bytes": 10280,
+      "avif_bytes": 8255,
+      "saved_pct": "19.7"
+    },
+    {
+      "file": "public\\images\\pillar-people-800.webp",
+      "webp_bytes": 24542,
+      "avif_bytes": 17975,
+      "saved_pct": "26.8"
+    },
+    {
+      "file": "public\\images\\pillar-shelter-1200.webp",
+      "webp_bytes": 150558,
+      "avif_bytes": 133072,
+      "saved_pct": "11.6"
+    },
+    {
+      "file": "public\\images\\pillar-shelter-480.webp",
+      "webp_bytes": 25534,
+      "avif_bytes": 24079,
+      "saved_pct": "5.7"
+    },
+    {
+      "file": "public\\images\\pillar-shelter-800.webp",
+      "webp_bytes": 69854,
+      "avif_bytes": 65342,
+      "saved_pct": "6.5"
+    },
+    {
+      "file": "public\\images\\trip-aurora-chase-1200.webp",
+      "webp_bytes": 177980,
+      "avif_bytes": 162197,
+      "saved_pct": "8.9"
+    },
+    {
+      "file": "public\\images\\trip-aurora-chase-480.webp",
+      "webp_bytes": 12028,
+      "avif_bytes": 9025,
+      "saved_pct": "25.0"
+    },
+    {
+      "file": "public\\images\\trip-aurora-chase-800.webp",
+      "webp_bytes": 44062,
+      "avif_bytes": 28813,
+      "saved_pct": "34.6"
+    },
+    {
+      "file": "public\\images\\trip-cabin-life-1200.webp",
+      "webp_bytes": 67188,
+      "avif_bytes": 52354,
+      "saved_pct": "22.1"
+    },
+    {
+      "file": "public\\images\\trip-cabin-life-480.webp",
+      "webp_bytes": 15448,
+      "avif_bytes": 13678,
+      "saved_pct": "11.5"
+    },
+    {
+      "file": "public\\images\\trip-cabin-life-800.webp",
+      "webp_bytes": 35008,
+      "avif_bytes": 29745,
+      "saved_pct": "15.0"
+    },
+    {
+      "file": "public\\images\\trip-food-1200.webp",
+      "webp_bytes": 71158,
+      "avif_bytes": 56720,
+      "saved_pct": "20.3"
+    },
+    {
+      "file": "public\\images\\trip-food-480.webp",
+      "webp_bytes": 15732,
+      "avif_bytes": 13696,
+      "saved_pct": "12.9"
+    },
+    {
+      "file": "public\\images\\trip-food-800.webp",
+      "webp_bytes": 37026,
+      "avif_bytes": 30436,
+      "saved_pct": "17.8"
+    },
+    {
+      "file": "public\\images\\trip-forest-walk-1200.webp",
+      "webp_bytes": 100492,
+      "avif_bytes": 85933,
+      "saved_pct": "14.5"
+    },
+    {
+      "file": "public\\images\\trip-forest-walk-480.webp",
+      "webp_bytes": 29992,
+      "avif_bytes": 29737,
+      "saved_pct": "0.9"
+    },
+    {
+      "file": "public\\images\\trip-forest-walk-800.webp",
+      "webp_bytes": 61464,
+      "avif_bytes": 58154,
+      "saved_pct": "5.4"
+    },
+    {
+      "file": "public\\images\\trip-night-forest-1200.webp",
+      "webp_bytes": 34892,
+      "avif_bytes": 27004,
+      "saved_pct": "22.6"
+    },
+    {
+      "file": "public\\images\\trip-night-forest-480.webp",
+      "webp_bytes": 6982,
+      "avif_bytes": 6973,
+      "saved_pct": "0.1"
+    },
+    {
+      "file": "public\\images\\trip-night-forest-800.webp",
+      "webp_bytes": 16192,
+      "avif_bytes": 15148,
+      "saved_pct": "6.4"
+    },
+    {
+      "file": "public\\images\\trip-silence-1200.webp",
+      "webp_bytes": 21272,
+      "avif_bytes": 17990,
+      "saved_pct": "15.4"
+    },
+    {
+      "file": "public\\images\\trip-silence-480.webp",
+      "webp_bytes": 4520,
+      "avif_bytes": 4308,
+      "saved_pct": "4.7"
+    },
+    {
+      "file": "public\\images\\trip-silence-800.webp",
+      "webp_bytes": 10980,
+      "avif_bytes": 9940,
+      "saved_pct": "9.5"
+    },
+    {
+      "file": "public\\images\\trip-solo-trek-1200.webp",
+      "webp_bytes": 161088,
+      "avif_bytes": 147816,
+      "saved_pct": "8.2"
+    },
+    {
+      "file": "public\\images\\trip-solo-trek-480.webp",
+      "webp_bytes": 35662,
+      "avif_bytes": 35025,
+      "saved_pct": "1.8"
+    },
+    {
+      "file": "public\\images\\trip-solo-trek-800.webp",
+      "webp_bytes": 85288,
+      "avif_bytes": 81102,
+      "saved_pct": "4.9"
+    }
+  ]
+}

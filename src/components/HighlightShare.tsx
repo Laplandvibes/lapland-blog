@@ -74,12 +74,12 @@ export default function HighlightShare({ containerSelector, url, slug }: Highlig
   if (!pill.visible) return null;
 
   const trimmed = pill.text.length > 240 ? pill.text.slice(0, 237) + '…' : pill.text;
-  const tweetText = `"${trimmed}" — via lapland.blog`;
+  const tweetText = `"${trimmed}" via lapland.blog`;
   const tweetHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(url)}`;
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(`"${pill.text}" — ${url}`);
+      await navigator.clipboard.writeText(`"${pill.text}" ${url}`);
       setCopied(true);
       trackShare('copy', slug);
       setTimeout(() => setCopied(false), 2000);

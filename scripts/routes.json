@@ -1,0 +1,332 @@
+[
+  {
+    "path": "/",
+    "ogImage": "/og/page-home.jpg",
+    "fallbackTitle": "Lapland.blog · Start & Share Your Lapland Travel Blog",
+    "fallbackDescription": "Turn your Finnish Lapland trip into a travel blog, keep a diary as you go and share it to social media in one tap. Free and ready in minutes.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Lapland.blog · Aloita ja jaa Lapin-matkablogisi",
+      "de": "Lapland.blog · Starte deinen Lappland-Reiseblog",
+      "ja": "Lapland.blog · ラップランド旅行ブログを作って共有",
+      "es": "Lapland.blog · Crea y comparte tu blog de viaje",
+      "pt-BR": "Lapland.blog · Crie e compartilhe seu blog de viagem",
+      "zh-CN": "Lapland.blog · 创建并分享你的拉普兰旅行博客",
+      "ko": "Lapland.blog · 라플란드 여행 블로그 만들기와 공유",
+      "fr": "Lapland.blog · Créez et partagez votre blog de voyage",
+      "it": "Lapland.blog · Crea e condividi il tuo blog di viaggio",
+      "nl": "Lapland.blog · Start en deel je Lapland-reisblog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Tee Suomen Lapin matkastasi matkablogi, pidä päiväkirjaa matkan aikana ja jaa se someen yhdellä napautuksella. Ilmainen ja valmis minuuteissa.",
+      "de": "Mach aus deiner Finnisch-Lappland-Reise einen Reiseblog, führe unterwegs ein Tagebuch und teile es mit einem Tipp in den sozialen Medien. Kostenlos, in Minuten fertig.",
+      "ja": "フィンランド・ラップランドの旅を旅行ブログに。旅しながら日記をつけ、ワンタップでSNSにシェア。無料で、数分で始められます。",
+      "es": "Convierte tu viaje a la Laponia finlandesa en un blog de viaje: lleva un diario sobre la marcha y compártelo en redes con un toque. Gratis y listo en minutos.",
+      "pt-BR": "Transforme sua viagem à Lapônia finlandesa em um blog de viagem: faça um diário durante o trajeto e compartilhe nas redes com um toque. Grátis e pronto em minutos.",
+      "zh-CN": "把你的芬兰拉普兰之旅变成旅行博客：边走边写日记，一键分享到社交媒体。免费，几分钟即可开始。",
+      "ko": "핀란드 라플란드 여행을 여행 블로그로 만들어 보세요. 여행하면서 일기를 쓰고, 한 번의 탭으로 소셜 미디어에 공유하세요. 무료이며 몇 분이면 시작할 수 있습니다.",
+      "fr": "Transformez votre voyage en Laponie finlandaise en blog de voyage : tenez un journal en chemin et partagez-le sur les réseaux en un geste. Gratuit, prêt en quelques minutes.",
+      "it": "Trasforma il tuo viaggio in Lapponia finlandese in un blog di viaggio: tieni un diario lungo il percorso e condividilo sui social con un tocco. Gratis e pronto in pochi minuti.",
+      "nl": "Maak van je reis door Fins Lapland een reisblog: houd onderweg een dagboek bij en deel het met één tik op social media. Gratis en in enkele minuten klaar."
+    }
+  },
+  {
+    "path": "/start-here",
+    "fallbackTitle": "Start Here · Your First Steps on Lapland.blog",
+    "fallbackDescription": "New to Lapland.blog? Three ways in: read the field-journal entries, find your Finnish Lapland destination, or start your own free travel blog.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Aloita tästä · ensiaskeleet Lapland.blogissa",
+      "de": "Hier starten · deine ersten Schritte auf Lapland.blog",
+      "ja": "はじめに · Lapland.blogの歩き方",
+      "es": "Empieza aquí · tus primeros pasos en Lapland.blog",
+      "pt-BR": "Comece aqui · seus primeiros passos no Lapland.blog",
+      "zh-CN": "从这里开始 · Lapland.blog 新手指引",
+      "ko": "여기서 시작 · Lapland.blog 첫걸음",
+      "fr": "Commencez ici · vos premiers pas sur Lapland.blog",
+      "it": "Inizia qui · i primi passi su Lapland.blog",
+      "nl": "Begin hier · je eerste stappen op Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Uusi Lapland.blogissa? Kolme reittiä sisään: lue kenttäpäiväkirjamerkinnät, löydä Suomen Lapin kohteesi tai aloita oma ilmainen matkablogi.",
+      "de": "Neu auf Lapland.blog? Drei Wege hinein: lies die Feldtagebuch-Einträge, finde dein Ziel in Finnisch-Lappland oder starte deinen eigenen kostenlosen Reiseblog.",
+      "ja": "Lapland.blogは初めて？入口は三つ。フィールド日記の記事を読む、フィンランド・ラップランドの目的地を探す、または無料で自分の旅行ブログを始める。",
+      "es": "¿Nuevo en Lapland.blog? Tres caminos: lee las entradas del diario de campo, encuentra tu destino en la Laponia finlandesa o empieza tu propio blog de viaje gratis.",
+      "pt-BR": "Novo no Lapland.blog? Três caminhos: leia as entradas do diário de campo, encontre seu destino na Lapônia finlandesa ou comece seu próprio blog de viagem grátis.",
+      "zh-CN": "初到 Lapland.blog？三种入门方式：读田野日志文章、找到你的芬兰拉普兰目的地，或免费开始你自己的旅行博客。",
+      "ko": "Lapland.blog가 처음이신가요? 들어가는 세 가지 길: 현장 일기 글 읽기, 핀란드 라플란드 여행지 찾기, 또는 나만의 무료 여행 블로그 시작하기.",
+      "fr": "Nouveau sur Lapland.blog ? Trois entrées : lisez les entrées du carnet de terrain, trouvez votre destination en Laponie finlandaise ou lancez votre blog de voyage gratuit.",
+      "it": "Nuovo su Lapland.blog? Tre vie d'accesso: leggi le voci del diario di campo, trova la tua destinazione in Lapponia finlandese o avvia il tuo blog di viaggio gratuito.",
+      "nl": "Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind je bestemming in Fins Lapland of start je eigen gratis reisblog."
+    }
+  },
+  {
+    "path": "/top-reads",
+    "fallbackTitle": "Top reads · Lapland.blog",
+    "fallbackDescription": "Where to start on Lapland.blog. Curated lists: best entries for first-timers, best aurora pieces, best food entries, the seasonal ones. Picked by the editor.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Suosituimmat · Lapland.blog",
+      "de": "Beliebt · Lapland.blog",
+      "ja": "おすすめ記事 · Lapland.blog",
+      "es": "Lo más leído · Lapland.blog",
+      "pt-BR": "Mais lidos · Lapland.blog",
+      "zh-CN": "热门阅读 · Lapland.blog",
+      "ko": "인기 글 · Lapland.blog",
+      "fr": "À lire en priorité · Lapland.blog",
+      "it": "Letture top · Lapland.blog",
+      "nl": "Topartikelen · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Mistä aloittaa Lapland.blogissa. Käsin valitut listat: parhaat ensikertalaisille, parhaat revontulijutut, parhaat ruokamerkinnät, sesonkijutut.",
+      "de": "Wo Sie auf Lapland.blog anfangen sollten. Kuratierte Listen: beste Einträge für Erstbesucher, beste Nordlicht-Stücke, beste Essen-Einträge, die saisonalen.",
+      "ja": "Lapland.blogでの読み始めに。編集者の厳選リスト：初めての方向けのベスト記事、オーロラ記事、食事記事、季節記事。クリック数ではなく編集者の選定。",
+      "es": "Por dónde empezar en Lapland.blog. Listas de la redacción: las mejores entradas para primerizos, sobre auroras, sobre comida y de cada temporada.",
+      "pt-BR": "Por onde começar no Lapland.blog. Listas da redação: as melhores entradas para iniciantes, sobre auroras, sobre comida e de cada temporada.",
+      "zh-CN": "在 Lapland.blog 从何读起。精选清单：最适合初次到访者的文章、最佳极光篇、最佳美食篇，以及当季之选。由编辑挑选。",
+      "ko": "Lapland.blog에서 어디부터 읽기 시작할지. 편집자의 큐레이션 목록: 초심자용 베스트, 오로라 글, 음식 글, 계절 글. 클릭수가 아닌 편집자의 안목으로 골랐습니다.",
+      "fr": "Par où commencer sur Lapland.blog. Listes de la rédaction : première visite, aurores, cuisine et entrées saisonnières, choisies par l'éditeur.",
+      "it": "Da dove cominciare su Lapland.blog. Liste curate: migliori voci per chi arriva la prima volta, migliori pezzi sull'aurora, voci sul cibo, voci stagionali.",
+      "nl": "Waar te beginnen op Lapland.blog. Lijsten van de redactie: beste notities voor de eerste reis, beste noorderlichtstukken, beste eetnotities, seizoenen."
+    }
+  },
+  {
+    "path": "/destinations",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Destinations · Lapland.blog",
+    "fallbackDescription": "The eight main Finnish Lapland destinations: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Read the field-journal entries from each, or be the first to write one.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Kohteet · Lapland.blog",
+      "de": "Reiseziele · Lapland.blog",
+      "ja": "目的地 · Lapland.blog",
+      "es": "Destinos · Lapland.blog",
+      "pt-BR": "Destinos · Lapland.blog",
+      "zh-CN": "目的地 · Lapland.blog",
+      "ko": "여행지 · Lapland.blog",
+      "fr": "Destinations · Lapland.blog",
+      "it": "Destinazioni · Lapland.blog",
+      "nl": "Bestemmingen · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Suomen Lapin kahdeksan pääkohdetta: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lue merkinnät kustakin tai kirjoita ensimmäinen.",
+      "de": "Die acht wichtigsten Ziele im finnischen Lappland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lesen Sie die Einträge.",
+      "ja": "フィンランド・ラップランドの主要8つの目的地：ロヴァニエミ、サーリセルカ、レヴィ、ケミ、イナリ、ムオニオ、ウッラス、ケミヤルヴィ。各地のフィールドジャーナル記事を読むか、最初の記事を書いてください。",
+      "es": "Los ocho destinos principales de la Laponia finlandesa: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lea las entradas de cada uno.",
+      "pt-BR": "Os oito principais destinos da Lapônia finlandesa: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Leia as entradas de cada um.",
+      "zh-CN": "芬兰拉普兰的八大目的地：罗瓦涅米、萨利色尔卡、莱维、凯米、伊纳里、穆奥尼奥、于莱斯、凯米耶尔维。阅读每个地方的田野日志文章，或成为第一个动笔的人。",
+      "ko": "라플란드의 주요 여덟 곳: 로바니에미, 사리셀카, 레비, 케미, 이나리, 무오니오, 윌래스, 케미얘르비. 각 지역의 현장 일기를 읽거나, 최초의 글을 작성하십시오.",
+      "fr": "Les huit principales destinations de Laponie finlandaise : Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lisez les entrées de chacune.",
+      "it": "Le otto principali destinazioni della Lapponia finlandese: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Legga le voci di ciascuna.",
+      "nl": "De acht belangrijkste bestemmingen in Fins Lapland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lees de veldnotities van elk."
+    }
+  },
+  {
+    "path": "/stories",
+    "ogImage": "/og/page-stories.jpg",
+    "fallbackTitle": "All stories · Lapland.blog",
+    "fallbackDescription": "Every story on Lapland.blog. Aurora, cabins, food, seasons, people, gear and long-form reads from Finnish Lapland.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Kaikki jutut · Lapland.blog",
+      "de": "Alle Geschichten · Lapland.blog",
+      "ja": "すべての記事 · Lapland.blog",
+      "es": "Todas las historias · Lapland.blog",
+      "pt-BR": "Todas as histórias · Lapland.blog",
+      "zh-CN": "全部文章 · Lapland.blog",
+      "ko": "모든 글 · Lapland.blog",
+      "fr": "Toutes les entrées · Lapland.blog",
+      "it": "Tutte le voci · Lapland.blog",
+      "nl": "Alle verhalen · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Kaikki Lapland.blogin jutut. Revontulet, mökit, ruoka, vuodenajat, ihmiset, varustus ja pidemmät luettavat Suomen Lapista.",
+      "de": "Jede Geschichte auf Lapland.blog. Nordlichter, Hütten, Essen, Jahreszeiten, Menschen, Ausrüstung und lange Stücke aus dem finnischen Lappland.",
+      "ja": "Lapland.blog のすべての記事。オーロラ、コテージ、食事、季節、人、装備、フィンランド・ラップランドからの長文記事。",
+      "es": "Todas las historias de Lapland.blog. Auroras, cabañas, comida, estaciones, gente, equipo y lecturas largas de la Laponia finlandesa.",
+      "pt-BR": "Todas as histórias do Lapland.blog. Auroras, cabanas, comida, estações, pessoas, equipamentos e leituras longas da Lapônia finlandesa.",
+      "zh-CN": "Lapland.blog 的全部文章。极光、木屋、美食、季节、人物、装备，以及来自芬兰拉普兰的长篇阅读。",
+      "ko": "Lapland.blog의 모든 글. 오로라, 통나무집, 음식, 계절, 사람, 장비, 그리고 라플란드에서 보내 드리는 장문의 글.",
+      "fr": "Tous les récits de Lapland.blog. Aurores, chalets, cuisine, saisons, gens, équipement et lectures longues depuis la Laponie finlandaise.",
+      "it": "Tutti i racconti di Lapland.blog. Aurore, baite, cibo, stagioni, persone, attrezzatura e letture lunghe dalla Lapponia finlandese.",
+      "nl": "Elk verhaal op Lapland.blog. Noorderlicht, hutten, eten, seizoenen, mensen, uitrusting en lange leesstukken uit Fins Lapland."
+    }
+  },
+  {
+    "path": "/about",
+    "ogImage": "/og/page-about.jpg",
+    "fallbackTitle": "About · Lapland.blog",
+    "fallbackDescription": "Lapland.blog is a free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to friends. Your trip, told well.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Tietoa · Lapland.blog",
+      "de": "Über uns · Lapland.blog",
+      "ja": "当サイトについて · Lapland.blog",
+      "es": "Sobre · Lapland.blog",
+      "pt-BR": "Sobre · Lapland.blog",
+      "zh-CN": "关于 · Lapland.blog",
+      "ko": "소개 · Lapland.blog",
+      "fr": "À propos · Lapland.blog",
+      "it": "Chi siamo · Lapland.blog",
+      "nl": "Over ons · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Lapland.blog on ilmainen matkapäiväkirja Suomen Lappiin matkustaville. Merkitse paikat, kirjoita merkinnät, jaa kavereille. Matkasi, hyvin kerrottuna.",
+      "de": "Lapland.blog ist eine kostenlose Reisetagebuch-Plattform für Besucher des finnischen Lapplands. Orte markieren, Einträge schreiben, mit Freunden teilen.",
+      "ja": "Lapland.blogは、フィンランド・ラップランドを訪れる人のための無料の旅行記プラットフォームです。場所にピンを立て、記事を書き、友人と共有。よく語られたあなたの旅。",
+      "es": "Lapland.blog es una plataforma gratuita de diario de viaje para quienes visitan la Laponia finlandesa. Marque lugares, escriba entradas, compártalas.",
+      "pt-BR": "O Lapland.blog é uma plataforma gratuita de diário de viagem para quem visita a Lapônia finlandesa. Marque lugares, escreva entradas, compartilhe com os amigos.",
+      "zh-CN": "Lapland.blog 是一个免费的旅行日志平台，为前往芬兰拉普兰的游客而设。标记地点、撰写文章、分享给朋友。您的旅程，讲得精彩。",
+      "ko": "Lapland.blog은 라플란드를 찾는 분들을 위한 무료 여행 일기 플랫폼입니다. 장소에 핀을 꽂고, 글을 쓰고, 친구들과 공유하십시오. 잘 쓰인 귀하의 여행입니다.",
+      "fr": "Lapland.blog est une plateforme gratuite de carnet de voyage pour les visiteurs de la Laponie finlandaise. Épinglez des lieux, écrivez des entrées, partagez.",
+      "it": "Lapland.blog è una piattaforma gratuita di diario di viaggio per chi visita la Lapponia finlandese. Segni luoghi, scriva voci, condivida con gli amici.",
+      "nl": "Lapland.blog is een gratis reisdagboekplatform voor bezoekers van Fins Lapland. Prik plekken vast, schrijf notities, deel met vrienden. Uw reis, goed verteld."
+    }
+  },
+  {
+    "path": "/privacy",
+    "fallbackTitle": "Privacy Policy · Lapland.blog",
+    "fallbackDescription": "How Lapland.blog handles your data, the free Finnish Lapland travel-blog platform operated by Lapeso Oy. GDPR compliant.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Tietosuojaseloste · Lapland.blog",
+      "de": "Datenschutzerklärung · Lapland.blog",
+      "ja": "プライバシーポリシー · Lapland.blog",
+      "es": "Política de privacidad · Lapland.blog",
+      "pt-BR": "Política de Privacidade · Lapland.blog",
+      "zh-CN": "隐私政策 · Lapland.blog",
+      "ko": "개인정보처리방침 · Lapland.blog",
+      "fr": "Politique de confidentialité · Lapland.blog",
+      "it": "Informativa sulla privacy · Lapland.blog",
+      "nl": "Privacybeleid · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Miten Lapland.blog käsittelee tietojasi, ilmainen Suomen Lapin matkablogialusta, jota ylläpitää Lapeso Oy. GDPR:n mukainen.",
+      "de": "Wie Lapland.blog mit deinen Daten umgeht, die kostenlose Reiseblog-Plattform für Finnisch-Lappland, betrieben von Lapeso Oy. DSGVO-konform.",
+      "ja": "Lapland.blogがあなたのデータをどう扱うか。Lapeso Oyが運営する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。GDPR準拠。",
+      "es": "Cómo trata tus datos Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa operada por Lapeso Oy. Conforme al RGPD.",
+      "pt-BR": "Como o Lapland.blog trata seus dados: a plataforma gratuita de blogs de viagem à Lapônia finlandesa operada pela Lapeso Oy. Em conformidade com o RGPD.",
+      "zh-CN": "Lapland.blog 如何处理你的数据。由 Lapeso Oy 运营的免费芬兰拉普兰旅行博客平台。符合 GDPR。",
+      "ko": "Lapland.blog가 귀하의 데이터를 처리하는 방식. Lapeso Oy가 운영하는 무료 핀란드 라플란드 여행 블로그 플랫폼. GDPR 준수.",
+      "fr": "Comment Lapland.blog traite vos données, la plateforme gratuite de blogs de voyage en Laponie finlandaise exploitée par Lapeso Oy. Conforme au RGPD.",
+      "it": "Come Lapland.blog tratta i tuoi dati: la piattaforma gratuita di blog di viaggio in Lapponia finlandese gestita da Lapeso Oy. Conforme al GDPR.",
+      "nl": "Hoe Lapland.blog met je gegevens omgaat, het gratis reisblogplatform voor Fins Lapland, beheerd door Lapeso Oy. AVG-conform."
+    }
+  },
+  {
+    "path": "/terms",
+    "fallbackTitle": "Terms of Service · Lapland.blog",
+    "fallbackDescription": "The terms for using Lapland.blog, the free Finnish Lapland travel-blog platform where you keep and share a trip diary. Operated by Lapeso Oy.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Käyttöehdot · Lapland.blog",
+      "de": "Nutzungsbedingungen · Lapland.blog",
+      "ja": "利用規約 · Lapland.blog",
+      "es": "Términos del servicio · Lapland.blog",
+      "pt-BR": "Termos de Serviço · Lapland.blog",
+      "zh-CN": "服务条款 · Lapland.blog",
+      "ko": "이용약관 · Lapland.blog",
+      "fr": "Conditions d'utilisation · Lapland.blog",
+      "it": "Termini di servizio · Lapland.blog",
+      "nl": "Servicevoorwaarden · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Lapland.blogin käyttöehdot, ilmainen Suomen Lapin matkablogialusta, jolla pidät ja jaat matkapäiväkirjaa. Ylläpitäjä Lapeso Oy.",
+      "de": "Die Nutzungsbedingungen von Lapland.blog, der kostenlosen Reiseblog-Plattform für Finnisch-Lappland, auf der du ein Reisetagebuch führst und teilst. Von Lapeso Oy.",
+      "ja": "Lapland.blogの利用規約。旅の日記を残して共有する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。運営はLapeso Oy。",
+      "es": "Las condiciones para usar Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa donde llevas y compartes un diario. Operada por Lapeso Oy.",
+      "pt-BR": "As condições para usar o Lapland.blog: a plataforma gratuita de blogs de viagem à Lapônia finlandesa onde você mantém e compartilha um diário. Operada pela Lapeso Oy.",
+      "zh-CN": "使用 Lapland.blog 的条款。这个免费的芬兰拉普兰旅行博客平台让你记录并分享旅行日记。由 Lapeso Oy 运营。",
+      "ko": "Lapland.blog 이용 조건. 여행 일기를 쓰고 공유하는 무료 핀란드 라플란드 여행 블로그 플랫폼. Lapeso Oy가 운영합니다.",
+      "fr": "Les conditions d'utilisation de Lapland.blog, la plateforme gratuite de blogs de voyage en Laponie finlandaise où vous tenez et partagez un journal. Exploitée par Lapeso Oy.",
+      "it": "Le condizioni per usare Lapland.blog: la piattaforma gratuita di blog di viaggio in Lapponia finlandese dove tieni e condividi un diario. Gestita da Lapeso Oy.",
+      "nl": "De voorwaarden voor het gebruik van Lapland.blog, het gratis reisblogplatform voor Fins Lapland waar je een reisdagboek bijhoudt en deelt. Beheerd door Lapeso Oy."
+    }
+  },
+  {
+    "path": "/cookie-policy",
+    "fallbackTitle": "Cookie Policy · Lapland.blog",
+    "fallbackDescription": "What cookies and storage Lapland.blog uses, why, and how to opt out, the free Finnish Lapland travel-blog platform by Lapeso Oy.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Evästekäytäntö · Lapland.blog",
+      "de": "Cookie-Richtlinie · Lapland.blog",
+      "ja": "クッキーポリシー · Lapland.blog",
+      "es": "Política de cookies · Lapland.blog",
+      "pt-BR": "Política de Cookies · Lapland.blog",
+      "zh-CN": "Cookie 政策 · Lapland.blog",
+      "ko": "쿠키 정책 · Lapland.blog",
+      "fr": "Politique relative aux cookies · Lapland.blog",
+      "it": "Informativa sui cookie · Lapland.blog",
+      "nl": "Cookiebeleid · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Mitä evästeitä ja tallennusta Lapland.blog käyttää, miksi ja miten kiellät ne, ilmainen Suomen Lapin matkablogialusta, ylläpitäjä Lapeso Oy.",
+      "de": "Welche Cookies und welchen Speicher Lapland.blog nutzt, warum und wie du widersprichst, die kostenlose Reiseblog-Plattform für Finnisch-Lappland von Lapeso Oy.",
+      "ja": "Lapland.blogが使うクッキーとストレージの種類、その理由、オプトアウトの方法。Lapeso Oyによるフィンランド・ラップランドの無料旅行ブログプラットフォーム。",
+      "es": "Qué cookies y almacenamiento usa Lapland.blog, por qué y cómo rechazarlos: la plataforma gratuita de blogs de viaje a la Laponia finlandesa de Lapeso Oy.",
+      "pt-BR": "Quais cookies e armazenamento o Lapland.blog usa, por quê e como recusar: a plataforma gratuita de blogs de viagem à Lapônia finlandesa da Lapeso Oy.",
+      "zh-CN": "Lapland.blog 使用哪些 Cookie 和存储、为何使用，以及如何选择退出。由 Lapeso Oy 运营的免费芬兰拉普兰旅行博客平台。",
+      "ko": "Lapland.blog가 사용하는 쿠키와 저장소, 그 이유, 그리고 거부 방법. Lapeso Oy의 무료 핀란드 라플란드 여행 블로그 플랫폼.",
+      "fr": "Quels cookies et stockage Lapland.blog utilise, pourquoi et comment les refuser, la plateforme gratuite de blogs de voyage en Laponie finlandaise par Lapeso Oy.",
+      "it": "Quali cookie e archiviazione usa Lapland.blog, perché e come rifiutarli: la piattaforma gratuita di blog di viaggio in Lapponia finlandese di Lapeso Oy.",
+      "nl": "Welke cookies en opslag Lapland.blog gebruikt, waarom en hoe je je afmeldt, het gratis reisblogplatform voor Fins Lapland van Lapeso Oy."
+    }
+  },
+  {
+    "path": "/category/aurora"
+  },
+  {
+    "path": "/category/cabins"
+  },
+  {
+    "path": "/category/food"
+  },
+  {
+    "path": "/category/seasons"
+  },
+  {
+    "path": "/category/people"
+  },
+  {
+    "path": "/category/gear"
+  },
+  {
+    "path": "/category/stories"
+  },
+  {
+    "path": "/post/the-night-the-sky-broke-open-over-kemi",
+    "ogImage": "/og/the-night-the-sky-broke-open-over-kemi.jpg",
+    "appendSiteName": false,
+    "fallbackTitle": "The night the sky broke open over Kemi · Lapland.blog",
+    "fallbackDescription": "−23°C, 03:47, and four hours of waiting on a frozen bay near Kemi before the aurora finally tore across the sky. A Field Journal entry on the night the photos couldn't catch."
+  },
+  {
+    "path": "/post/why-i-stopped-chasing-the-aurora-with-an-app",
+    "ogImage": "/og/why-i-stopped-chasing-the-aurora-with-an-app.jpg",
+    "appendSiteName": false,
+    "fallbackTitle": "Why I stopped chasing the aurora with an app · Lapland.blog",
+    "fallbackDescription": "Two winters of watching a phone instead of the sky. The small, boring practice that replaced it, plus three real dark-sky spots in central Lapland, and why it works for visitors."
+  },
+  {
+    "path": "/post/five-nights-in-a-forest-cabin",
+    "ogImage": "/og/five-nights-in-a-forest-cabin.jpg",
+    "appendSiteName": false,
+    "fallbackTitle": "Five nights in a forest cabin: what I packed, what I forgot · Lapland.blog",
+    "fallbackDescription": "A day-by-day field diary from a week at a mökki outside Kemijärvi, the gear that saved the trip, the one thing forgotten that nearly ended it, and the three items never to leave the city without."
+  },
+  {
+    "path": "/post/a-bowl-of-salmon-soup-that-cost-more-than-the-flight",
+    "ogImage": "/og/a-bowl-of-salmon-soup-that-cost-more-than-the-flight.jpg",
+    "appendSiteName": false,
+    "fallbackTitle": "A bowl of salmon soup that cost more than the flight · Lapland.blog",
+    "fallbackDescription": "€42 for one bowl of lohikeitto in Rovaniemi, more than the flight up. Juniper smoke, thyme from the garden, and the chef who sat down to explain why the price was, in the end, correct."
+  },
+  {
+    "path": "/post/living-between-two-suns",
+    "ogImage": "/og/living-between-two-suns.jpg",
+    "appendSiteName": false,
+    "fallbackTitle": "Living between two suns: what the darkness actually feels like · Lapland.blog",
+    "fallbackDescription": "Most of what you've read about the Finnish polar night is wrong. What kaamos really does to the body at 66.5°N, the biology, the blue hour, and the four small habits that get you through it."
+  }
+]

@@ -48,6 +48,18 @@ function parseContent(raw: unknown): PostBlock[] {
       });
     } else if (type === 'markdown' && typeof b.text === 'string') {
       blocks.push({ type: 'markdown', text: b.text });
+    } else if (
+      type === 'image' &&
+      typeof b.src === 'string' &&
+      typeof b.alt === 'string'
+    ) {
+      blocks.push({
+        type: 'image',
+        src: b.src,
+        alt: b.alt,
+        caption: typeof b.caption === 'string' ? b.caption : undefined,
+        full: Boolean(b.full),
+      });
     }
   }
   return blocks;

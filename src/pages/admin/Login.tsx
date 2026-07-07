@@ -203,7 +203,7 @@ export default function Login() {
             </div>
 
             <p className="text-center text-[10px] text-slate-500 tracking-wider uppercase">
-              Only one admin exists — everyone else is read-only.
+              Only one admin exists. Everyone else is read-only.
             </p>
           </form>
         )}

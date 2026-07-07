@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { vesa } from '../data/author';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 interface Props {
   variant?: 'editorial' | 'dark';
@@ -12,6 +14,8 @@ interface Props {
  */
 export default function AuthorBio({ variant = 'editorial' }: Props) {
   const isEditorial = variant === 'editorial';
+  const lp = useLocalePath();
+  const c = COPY[useLang()].chrome;
 
   return (
     <aside
@@ -44,7 +48,7 @@ export default function AuthorBio({ variant = 'editorial' }: Props) {
                 : 'text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-1'
             }
           >
-            Field journal entry
+            {c.fieldJournalEntry}
           </p>
           <h3
             className={
@@ -66,7 +70,7 @@ export default function AuthorBio({ variant = 'editorial' }: Props) {
             {vesa.bio}
           </p>
           <Link
-            to="/about"
+            to={lp('/about')}
             className={
               isEditorial
                 ? 'inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-sm font-semibold uppercase tracking-wider transition-colors'

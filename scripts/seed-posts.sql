@@ -80,7 +80,7 @@ insert into public.blog_posts (
   read_time_minutes
 ) values (
   'five-nights-in-a-forest-cabin',
-  'Five nights in a forest cabin — what I packed, what I forgot',
+  'Five nights in a forest cabin: what I packed, what I forgot',
   'Kemijärvi · Late February · Cabins',
   'A day-by-day field diary from a week at Tuulia''s mökki. The gear that saved me, the one thing I forgot that nearly ended the trip, and the three items I will now never leave the city without.',
   'cabins',

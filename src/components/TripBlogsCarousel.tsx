@@ -17,6 +17,8 @@ import {
   Eye,
 } from 'lucide-react';
 import { getImage, type TripSlot } from '../lib/images';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 interface DemoBlog {
   username: string;
@@ -137,10 +139,14 @@ const ACCENT_BORDER: Record<DemoBlog['accent'], string> = {
   purple: 'group-hover:border-purple/70',
 };
 
+// Small (10px) labels on the dark card body. The vivid brand pinks (#EC4899 /
+// #DB2777) only reach ~3.3–4.3:1 at this size and fail WCAG AA, so the text
+// uses lighter pink tints (~8:1). Colour variety still comes from the per-card
+// borders, dots and avatar gradients below, which keep the brand hues.
 const ACCENT_TEXT: Record<DemoBlog['accent'], string> = {
-  pink: 'text-pink',
-  blue: 'text-aurora-blue',
-  green: 'text-aurora-green',
+  pink: 'text-pink-300',
+  blue: 'text-pink-300',
+  green: 'text-pink-300',
   purple: 'text-purple-light',
 };
 
@@ -152,6 +158,8 @@ const ACCENT_DOT: Record<DemoBlog['accent'], string> = {
 };
 
 export default function TripBlogsCarousel() {
+  const lp = useLocalePath();
+  const c = COPY[useLang()].chrome;
   const trackRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
   const resumeTimer = useRef<number | null>(null);
@@ -259,7 +267,7 @@ export default function TripBlogsCarousel() {
             className="group snap-start shrink-0 w-[300px] sm:w-[340px] md:w-[380px]"
           >
             <Link
-              to="/signin"
+              to={lp('/signin')}
               className={`block relative rounded-2xl overflow-hidden border border-purple/30 bg-night-light/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(236,72,153,0.5)] ${ACCENT_BORDER[blog.accent]}`}
             >
               {/* Hero image */}
@@ -334,7 +342,7 @@ export default function TripBlogsCarousel() {
                 <div className="mt-4 pt-4 border-t border-purple/20 flex items-center justify-between">
                   <span className={`inline-flex items-center gap-1.5 text-[10px] tracking-[0.2em] uppercase font-bold ${ACCENT_TEXT[blog.accent]}`}>
                     <span className={`w-1.5 h-1.5 rounded-full ${ACCENT_DOT[blog.accent]} animate-pulse`} />
-                    Live trip blog
+                    {c.liveTripBlog}
                   </span>
                   <ArrowRight
                     size={14}
@@ -353,7 +361,7 @@ export default function TripBlogsCarousel() {
           className="snap-start shrink-0 w-[300px] sm:w-[340px] md:w-[380px]"
         >
           <Link
-            to="/signin"
+            to={lp('/signin')}
             className="group block relative rounded-2xl overflow-hidden border-2 border-dashed border-pink/50 bg-gradient-to-br from-pink/10 via-night-light/30 to-aurora-blue/10 h-full min-h-[460px] flex flex-col items-center justify-center text-center p-8 hover:border-pink hover:-translate-y-1 transition-all duration-300"
           >
             <div className="w-16 h-16 rounded-full bg-pink/20 border border-pink/60 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
@@ -366,7 +374,7 @@ export default function TripBlogsCarousel() {
               className="font-display text-snow text-2xl leading-tight font-light mb-4"
               style={{ fontFamily: 'var(--font-editorial)' }}
             >
-              Yours could be next on this carousel.
+              {c.yoursCouldBeNext}
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
               Free. Two minutes to start. Yours forever.

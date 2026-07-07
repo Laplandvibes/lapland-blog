@@ -1,4 +1,6 @@
 import type { PostBlock } from '../data/posts';
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 interface Props {
   blocks: PostBlock[];
@@ -11,6 +13,7 @@ interface Props {
  * sidebar for space.
  */
 export default function TableOfContents({ blocks }: Props) {
+  const c = COPY[useLang()].chrome;
   const headings = blocks
     .map((b, i) => ({ block: b, index: i }))
     .filter(
@@ -23,7 +26,7 @@ export default function TableOfContents({ blocks }: Props) {
   return (
     <nav aria-label="Table of contents">
       <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-4 font-semibold">
-        In this story
+        {c.inThisStory}
       </p>
       <ul className="space-y-2.5 border-l border-[var(--color-paper-border)]">
         {headings.map(({ block, index }) => {

@@ -9,10 +9,13 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
+import PageBreadcrumb from '../components/PageBreadcrumb';
 import { usePosts } from '../hooks/usePosts';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import type { Post } from '../data/posts';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 interface Destination {
   slug: string;            // matches the lower-case tag
@@ -35,14 +38,14 @@ const DESTINATIONS: Destination[] = [
   {
     slug: 'saariselka',
     name: 'Saariselkä',
-    region: 'Far north — fells country',
+    region: 'Far north, fells country',
     blurb: 'Treeless tundra, glass igloos, the Urho Kekkonen national park out the back door.',
-    hero: '/images/hero-dusk-lake-1920.webp',
+    hero: '/images/trip-forest-walk-1200.webp',
   },
   {
     slug: 'levi',
     name: 'Levi',
-    region: 'West Lapland — fell country',
+    region: 'West Lapland, fell country',
     blurb: "Finland's biggest ski resort. Direct flights from Helsinki in winter. Family-friendly basecamp.",
     hero: '/images/trip-cabin-life-1200.webp',
   },
@@ -50,7 +53,7 @@ const DESTINATIONS: Destination[] = [
     slug: 'kemi',
     name: 'Kemi',
     region: 'Bay of Bothnia coast',
-    blurb: 'Snow castle, ice-breaker tours, and the southernmost Lapland coast — flatter, salt air, sea aurora.',
+    blurb: 'Snow castle, ice-breaker tours, and the southernmost Lapland coast. Flatter ground, salt air, sea aurora.',
     hero: '/images/trip-aurora-chase-1200.webp',
   },
   {
@@ -63,23 +66,23 @@ const DESTINATIONS: Destination[] = [
   {
     slug: 'muonio',
     name: 'Muonio',
-    region: 'West Lapland — northern lights belt',
+    region: 'West Lapland, northern lights belt',
     blurb: 'Pallastunturi national park edge. Among the highest aurora-visibility readings in Europe.',
     hero: '/images/pillar-cold-1200.webp',
   },
   {
     slug: 'yllas',
     name: 'Ylläs',
-    region: 'West Lapland — fell country',
+    region: 'West Lapland, fell country',
     blurb: 'Quieter sister to Levi. Wider trails, slower pace, the fell that owns its own seasons.',
     hero: '/images/pillar-shelter-1200.webp',
   },
   {
     slug: 'kemijarvi',
     name: 'Kemijärvi',
-    region: 'East Lapland — lake country',
+    region: 'East Lapland, lake country',
     blurb: "Finland's northernmost city. Frozen lake, a dozen mökki within walking distance. Quiet.",
-    hero: '/images/trip-cabin-life-1200.webp',
+    hero: '/images/trip-silence-1200.webp',
   },
 ];
 
@@ -88,12 +91,15 @@ function countMatching(posts: Post[], slug: string): number {
 }
 
 export default function Destinations() {
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang].destinations;
   const { posts } = usePosts();
 
   useSeo({
-    title: 'Destinations — Lapland.blog',
-    description:
-      "The eight main Finnish Lapland destinations: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Read the field-journal entries from each, or be the first to write one.",
+    title: c.pageTitle,
+    description: c.pageDescription,
+    image: 'https://lapland.blog/og/page-destinations.jpg',
     canonical: canonicalUrl('/destinations'),
   });
 
@@ -107,95 +113,123 @@ export default function Destinations() {
   );
 
   return (
-    <div className="min-h-screen bg-night text-snow">
+    <div className="theme-editorial min-h-screen">
       <Nav />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-night via-night-light/30 to-night" />
-        <div className="absolute top-1/3 left-1/3 w-[480px] h-[480px] rounded-full bg-aurora-blue/15 blur-[140px] animate-soft-float pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-night/70 border border-aurora-blue/40">
-              <MapPin size={12} className="text-aurora-blue" />
-              <p className="text-aurora-blue tracking-[0.35em] text-[10px] font-bold uppercase">
-                Where to go
+      {/* ================================================================
+          HERO — full-bleed image + cream title plate (matches Post/About).
+          Lifts the page out of the old dark, cold treatment into the light
+          editorial system the rest of the blog uses.
+          ================================================================ */}
+      <header className="relative pt-16">
+        <div className="relative h-[52vh] min-h-[380px] max-h-[560px] overflow-hidden bg-[var(--color-cream-deep)]">
+          <picture>
+            <source srcSet="/images/hero-dusk-lake-1920.avif 1920w, /images/hero-dusk-lake-1200.avif 1200w" type="image/avif" />
+            <source srcSet="/images/hero-dusk-lake-1920.webp 1920w, /images/hero-dusk-lake-1200.webp 1200w" type="image/webp" />
+            <img
+              src="/images/hero-dusk-lake-1920.webp"
+              alt="Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore"
+              className="absolute inset-0 w-full h-full object-cover object-[50%_45%]"
+              fetchPriority="high"
+              decoding="async"
+              width={1920}
+              height={823}
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30" />
+        </div>
+
+        <div className="relative px-4 sm:px-6 lg:px-8 -mt-24 md:-mt-32 mb-10">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-[var(--color-cream)] rounded-[1.25rem] shadow-[0_50px_90px_-50px_rgba(0,0,0,0.55)] border border-[var(--color-paper-border)] px-6 py-9 md:px-12 md:py-12">
+              <p className="inline-flex items-center gap-2 text-[var(--color-accent)] tracking-[0.32em] text-[11px] font-bold uppercase mb-5">
+                <MapPin size={13} /> {c.eyebrow}
+              </p>
+              <h1
+                className="text-[var(--color-ink)] leading-[1.04] tracking-[-0.015em] text-[clamp(2.25rem,5.5vw,3.75rem)] mb-5"
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
+              >
+                {c.h1Pre} <span className="text-[var(--color-accent)]">{c.h1Italic}</span>
+              </h1>
+              <p className="text-[var(--color-ink-soft)] text-lg md:text-xl leading-relaxed">
+                {c.lead}
               </p>
             </div>
-          </Reveal>
-          <Reveal delay={1}>
-            <h1 className="font-display text-[clamp(2.25rem,5.5vw,4rem)] font-light leading-[1.05] tracking-tight text-snow mb-6">
-              Eight places. <span className="text-aurora-blue italic">One Lapland.</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={2}>
-            <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
-              Pick a destination and read the entries from there. Empty ones
-              are the next ones to write — you can be the first.
-            </p>
-          </Reveal>
+          </div>
         </div>
-      </section>
+      </header>
 
-      <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
+      <PageBreadcrumb editorial />
 
       {/* Grid */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="dest-grid">
+      <section className="px-4 sm:px-6 lg:px-8 py-12 md:py-16" aria-labelledby="dest-grid">
         <h2 id="dest-grid" className="sr-only">All destinations</h2>
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {DESTINATIONS.map((d, i) => {
             const count = countMatching(posts, d.slug);
             return (
               <Reveal key={d.slug} delay={(Math.min(i, 5) + 1) as 1 | 2 | 3 | 4 | 5 | 6}>
-                <DestinationCard d={d} count={count} />
+                <DestinationCard d={d} count={count} c={c} to={to} lang={lang} />
               </Reveal>
             );
           })}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="max-w-3xl mx-auto text-center">
+      {/* CTA — warm cream panel */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-3xl mx-auto">
           <Reveal>
-            <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
-              Don't see your place?
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-4">
-              Plant the flag.
-            </h2>
-            <p className="text-slate-300 text-base leading-relaxed mb-8">
-              Going somewhere not on this list? Sodankylä, Posio, Kilpisjärvi,
-              Hetta — write the first entry from there and we'll add it to
-              the map.
-            </p>
-            <Link
-              to="/signin"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-pink text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink-dark transition-colors"
-            >
-              Start your blog
-              <ArrowRight size={14} />
-            </Link>
+            <div className="rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-6 py-12 md:px-12 text-center">
+              <p className="text-[var(--color-accent)] tracking-[0.32em] text-[10px] font-bold uppercase mb-4">
+                {c.dontSeeEyebrow}
+              </p>
+              <h2
+                className="text-[var(--color-ink)] text-3xl md:text-4xl mb-4"
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
+              >
+                {c.plantH2}
+              </h2>
+              <p className="text-[var(--color-ink-soft)] text-base leading-relaxed mb-8 max-w-xl mx-auto">
+                {c.plantLead}
+              </p>
+              <Link
+                to={to('/signin')}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[var(--color-accent)] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[var(--color-accent-dark)] transition-colors"
+              >
+                {c.plantCta}
+                <ArrowRight size={14} />
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      <Newsletter />
-      <Footer />
+      <div className="bg-night text-snow">
+        <Newsletter />
+        <Footer />
+      </div>
     </div>
   );
 }
 
-function DestinationCard({ d, count }: { d: Destination; count: number }) {
+type DestCopy = typeof COPY['en']['destinations'];
+function DestinationCard({
+  d,
+  count,
+  c,
+  to,
+  lang,
+}: {
+  d: Destination;
+  count: number;
+  c: DestCopy;
+  to: (p: string) => string;
+  lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+}) {
   const hasEntries = count > 0;
   return (
-    <article
-      className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 ${
-        hasEntries
-          ? 'border-purple/30 hover:border-pink/60'
-          : 'border-purple/15 hover:border-aurora-blue/55'
-      }`}
-    >
+    <article className="group relative flex flex-col rounded-2xl overflow-hidden bg-[var(--color-cream)] border border-[var(--color-paper-border)] hover:-translate-y-1 hover:shadow-[0_28px_60px_-30px_rgba(26,24,21,0.35)] transition-all duration-300">
       <div className="aspect-[3/2] overflow-hidden relative">
         <img
           src={d.hero}
@@ -204,58 +238,62 @@ function DestinationCard({ d, count }: { d: Destination; count: number }) {
           loading="lazy"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-night via-night/30 to-transparent" />
-        {!hasEntries && (
-          <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-aurora-blue/15 border border-aurora-blue/40 backdrop-blur-sm">
-            <PenLine size={10} className="text-aurora-blue" />
-            <span className="text-aurora-blue text-[9px] font-bold uppercase tracking-[0.25em]">
-              Be the first
+        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
+        {!hasEntries ? (
+          <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-cream)]/95 border border-[var(--color-accent)]/30 backdrop-blur-sm">
+            <PenLine size={10} className="text-[var(--color-accent)]" />
+            <span className="text-[var(--color-accent)] text-[9px] font-bold uppercase tracking-[0.25em]">
+              {c.beTheFirst}
             </span>
           </div>
-        )}
-        {hasEntries && (
-          <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-pink/15 border border-pink/40 backdrop-blur-sm">
-            <span className="text-pink text-[9px] font-bold uppercase tracking-[0.25em]">
-              {count} {count === 1 ? 'entry' : 'entries'}
+        ) : (
+          <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-cream)]/95 border border-[var(--color-accent)]/30 backdrop-blur-sm">
+            <span className="text-[var(--color-accent)] text-[9px] font-bold uppercase tracking-[0.25em]">
+              {count} {count === 1 ? c.entrySingular : c.entryPlural}
             </span>
           </div>
         )}
       </div>
-      <div className="bg-night-light/40 p-5 flex flex-col">
-        <p className="text-aurora-blue tracking-[0.3em] text-[10px] font-bold uppercase mb-2">
+      <div className="p-5 flex flex-col flex-1">
+        <p className="text-[var(--color-ink-mute)] tracking-[0.28em] text-[10px] font-bold uppercase mb-2">
           {d.region}
         </p>
-        <h3 className="font-display text-2xl text-snow mb-2 leading-tight">{d.name}</h3>
-        <p className="text-slate-300 text-sm leading-relaxed mb-5">{d.blurb}</p>
+        <h3
+          className="text-2xl text-[var(--color-ink)] mb-2 leading-tight"
+          style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
+        >
+          {d.name}
+        </h3>
+        <p className="text-[var(--color-ink-soft)] text-sm leading-relaxed mb-5">{d.blurb}</p>
 
-        <div className="space-y-2.5 mt-auto">
+        <div className="space-y-3 mt-auto pt-4 border-t border-[var(--color-paper-border)]">
           {hasEntries ? (
             <Link
-              to={`/stories?tag=${d.slug}`}
-              className="inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-xs uppercase tracking-[0.2em] font-semibold transition-colors"
+              to={to(`/stories?tag=${d.slug}`)}
+              className="inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
-              Read entries
+              {c.readEntries}
               <ArrowRight size={12} />
             </Link>
           ) : (
             <Link
-              to="/signin"
-              className="inline-flex items-center gap-1.5 text-aurora-blue hover:text-pink text-xs uppercase tracking-[0.2em] font-semibold transition-colors"
+              to={to('/signin')}
+              className="inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
-              Be the first to write
+              {c.beFirstWrite}
               <ArrowRight size={12} />
             </Link>
           )}
 
           {/* Sales CTA — every destination card gets a Hotels.com hook */}
           <a
-            href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name)}%2C+Lapland%2C+Finland`}
+            href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name)}%2C+Lapland%2C+Finland&locale=${lang === 'fi' ? 'fi_FI' : lang === 'de' ? 'de_DE' : 'en_US'}`}
             target="_blank"
             rel="sponsored nofollow noopener"
-            className="inline-flex items-center gap-1.5 text-aurora-green/85 hover:text-aurora-green text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
+            className="inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
           >
             <BedDouble size={11} />
-            Find a stay in {d.name}
+            {c.findStayPrefix} {d.name}
             <ArrowRight size={11} />
           </a>
         </div>

@@ -23,7 +23,7 @@ export default function TagChip({
 
   const variantCls =
     variant === 'dark'
-      ? 'bg-night-light/70 border border-pink/40 text-pink hover:border-pink hover:text-snow'
+      ? 'bg-night-light/70 border border-pink/40 text-pink-300 hover:border-pink hover:text-snow'
       : variant === 'editorial'
       ? 'bg-[var(--color-cream-deep)] border border-[var(--color-paper-border)] text-[var(--color-ink-soft)] hover:text-[var(--color-accent)]'
       : 'border border-slate-500/40 text-slate-300 hover:border-pink/60 hover:text-pink';

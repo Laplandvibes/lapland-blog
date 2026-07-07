@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { Clock, ArrowUpRight } from 'lucide-react';
 import type { Post } from '../data/posts';
 import { categoryBySlug } from '../data/categories';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 interface Props {
   post: Post;
@@ -25,6 +27,8 @@ function formatDate(iso: string): string {
  */
 export default function PostCard({ post, variant = 'dark', priority = false }: Props) {
   const cat = categoryBySlug(post.category);
+  const lp = useLocalePath();
+  const c = COPY[useLang()].chrome;
 
   const isEditorial = variant === 'editorial';
 
@@ -37,7 +41,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
       }
     >
       <Link
-        to={`/post/${post.slug}`}
+        to={lp(`/post/${post.slug}`)}
         className="block focus:outline-none"
         aria-label={`Read: ${post.title}`}
       >
@@ -65,7 +69,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
               className={
                 isEditorial
                   ? 'absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-[var(--color-cream)] text-[var(--color-accent)] border border-[var(--color-accent)]/30'
-                  : 'absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-night/80 backdrop-blur-sm text-pink border border-pink/40'
+                  : 'absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-night/85 backdrop-blur-sm text-pink-300 border border-pink/40'
               }
             >
               {cat.name}
@@ -117,7 +121,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
               <span aria-hidden="true">·</span>
               <span className="inline-flex items-center gap-1">
                 <Clock size={12} />
-                {post.readTimeMinutes} min read
+                {post.readTimeMinutes} {c.minRead}
               </span>
             </div>
             <ArrowUpRight

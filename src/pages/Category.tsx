@@ -11,8 +11,13 @@ import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { trackCategoryView } from '../lib/analytics';
 import { useEffect } from 'react';
 import { usePosts } from '../hooks/usePosts';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 export default function Category() {
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang].category;
   const { slug } = useParams<{ slug: string }>();
   const category = slug ? categoryBySlug(slug) : undefined;
   const { posts: postsInCat, loading } = usePosts({
@@ -22,8 +27,8 @@ export default function Category() {
   // Hooks before any early return.
   useSeo({
     title: category
-      ? `${category.name} — Lapland.blog`
-      : 'Category — Lapland.blog',
+      ? `${category.name} · Lapland.blog`
+      : 'Category · Lapland.blog',
     description: category?.description ?? 'Browse Lapland.blog stories by theme.',
     canonical: category ? canonicalUrl(`/category/${category.slug}`) : canonicalUrl('/stories'),
   });
@@ -62,16 +67,16 @@ export default function Category() {
         <div className="relative max-w-4xl mx-auto">
           <Reveal>
             <Link
-              to="/stories"
+              to={to('/stories')}
               className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-8 transition-colors"
             >
-              <ArrowLeft size={14} /> All stories
+              <ArrowLeft size={14} /> {c.allStoriesBack}
             </Link>
 
-            <p className="text-aurora-green tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
-              Category · {postsInCat.length} {postsInCat.length === 1 ? 'story' : 'stories'}
+            <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
+              {c.categoryPrefix} · {postsInCat.length} {postsInCat.length === 1 ? c.storySingular : c.storyPlural}
             </p>
-            <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-6">
+            <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-6 hero-text-shadow">
               {category.name}
             </h1>
             <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl">
@@ -87,19 +92,17 @@ export default function Category() {
           {loading ? (
             <div className="text-center py-24 text-slate-400">
               <div className="inline-block w-6 h-6 border-2 border-pink border-t-transparent rounded-full animate-spin" />
-              <p className="mt-4 text-sm">Loading stories…</p>
+              <p className="mt-4 text-sm">{c.loading}</p>
             </div>
           ) : postsInCat.length === 0 ? (
             <div className="text-center py-24 text-slate-400">
-              <p className="text-xl mb-3">Nothing here yet.</p>
-              <p className="text-sm mb-6">
-                This category is waiting for its first story. Check back soon.
-              </p>
+              <p className="text-xl mb-3">{c.emptyTitle}</p>
+              <p className="text-sm mb-6">{c.emptyBody}</p>
               <Link
-                to="/stories"
+                to={to('/stories')}
                 className="inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold uppercase tracking-wider transition-colors"
               >
-                Browse all stories →
+                {c.emptyLink}
               </Link>
             </div>
           ) : (
@@ -122,10 +125,10 @@ export default function Category() {
         <div className="max-w-5xl mx-auto">
           <div className="section-divider mb-16" />
           <p className="text-aurora-blue tracking-[0.35em] text-[10px] font-bold uppercase mb-4 text-center">
-            Keep exploring
+            {c.keepExploringEyebrow}
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-snow font-light tracking-tight text-center mb-10">
-            Other themes
+            {c.otherThemes}
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {categories
@@ -133,7 +136,7 @@ export default function Category() {
               .map((cat) => (
                 <Link
                   key={cat.slug}
-                  to={`/category/${cat.slug}`}
+                  to={to(`/category/${cat.slug}`)}
                   className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-night-light/60 border border-purple/30 hover:border-pink hover:bg-night-light transition-all"
                 >
                   <span className="font-display text-base text-snow group-hover:text-pink transition-colors">

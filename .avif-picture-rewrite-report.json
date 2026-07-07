@@ -1,0 +1,18 @@
+{
+  "site": "lapland-blog-new",
+  "files_touched": 2,
+  "img_rewrites": 2,
+  "skipped_no_avif": 0,
+  "skipped_in_picture": 0,
+  "skipped_dynamic": 0,
+  "log": [
+    {
+      "file": "src\\pages\\About.tsx",
+      "src": "/images/aside-vesa-1200.webp"
+    },
+    {
+      "file": "src\\pages\\Archive.tsx",
+      "src": "/images/hero-dusk-lake-1920.webp"
+    }
+  ]
+}

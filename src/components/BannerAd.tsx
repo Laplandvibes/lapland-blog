@@ -6,8 +6,21 @@
 // Accent matches whichever theme they sit on — pass `variant` to switch.
 
 import { ArrowUpRight, BedDouble, Plane, MapPin } from 'lucide-react';
+import { useLang } from '../i18n/useLang';
 
 const GO = 'https://go.laplandvibes.com';
+
+type _Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+const HOTELS_LOCALE: Record<_Lang, string> = {
+  en: 'en_US', fi: 'fi_FI', de: 'de_DE', ja: 'ja_JP',
+  es: 'es_ES', 'pt-BR': 'pt_BR', 'zh-CN': 'zh_CN',
+  ko: 'ko_KR', fr: 'fr_FR', it: 'it_IT', nl: 'nl_NL',
+};
+const CARS_LANG: Record<_Lang, string> = {
+  en: 'en', fi: 'fi', de: 'de', ja: 'ja',
+  es: 'es', 'pt-BR': 'pt', 'zh-CN': 'zh',
+  ko: 'ko', fr: 'fr', it: 'it', nl: 'nl',
+};
 
 type Partner = 'hotels' | 'flights' | 'activities';
 type Variant = 'editorial' | 'dark';
@@ -28,7 +41,7 @@ interface BannerAdProps {
 const PARTNER_DEFAULTS: Record<Partner, { headline: string; copy: string; cta: string; Icon: typeof BedDouble }> = {
   hotels: {
     headline: 'Find your cabin or igloo',
-    copy: 'Compare 1,200+ Lapland stays — from glass igloos in Saariselkä to log cabins outside Levi.',
+    copy: 'Compare Lapland stays, from glass igloos in Saariselkä to log cabins outside Levi.',
     cta: 'Browse stays',
     Icon: BedDouble,
   },
@@ -46,14 +59,17 @@ const PARTNER_DEFAULTS: Record<Partner, { headline: string; copy: string; cta: s
   },
 };
 
-function buildHref(partner: Partner, sid: string, destination?: string) {
+function buildHref(partner: Partner, sid: string, destination?: string, lang: _Lang = 'en') {
   const params = new URLSearchParams({ sid });
   if (partner === 'hotels' && destination) params.set('ss', destination);
   if (partner === 'flights' && destination) params.set('origin', destination);
   if (partner === 'activities' && destination) {
+    params.set('locale', lang);
     return `${GO}/go/activities/${destination}?${params.toString()}`;
   }
-  const partnerPath = partner === 'flights' ? 'cars' : partner; // flights still routed via cars Worker — placeholder until trip.com is wired
+  const partnerPath = partner === 'flights' ? 'cars' : partner;
+  if (partner === 'hotels') params.set('locale', HOTELS_LOCALE[lang]);
+  else if (partner === 'flights') params.set('lang', CARS_LANG[lang]);
   return `${GO}/go/${partnerPath}?${params.toString()}`;
 }
 
@@ -67,7 +83,8 @@ export default function BannerAd({
 }: BannerAdProps) {
   const defaults = PARTNER_DEFAULTS[partner];
   const Icon = defaults.Icon;
-  const href = buildHref(partner, sid, destination);
+  const lang = useLang();
+  const href = buildHref(partner, sid, destination, lang);
 
   if (variant === 'editorial') {
     return (
@@ -125,7 +142,7 @@ export default function BannerAd({
         href={href}
         target="_blank"
         rel="sponsored nofollow noopener"
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-pink hover:text-aurora-blue transition-colors"
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-pink-300 hover:text-pink-200 transition-colors"
       >
         {defaults.cta}
         <ArrowUpRight size={14} />

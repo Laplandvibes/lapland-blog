@@ -20,6 +20,7 @@ import { rowToPost } from '../lib/postAdapter';
 import type { Post } from '../data/posts';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
+import { useLocalePath } from '../i18n/useLang';
 
 interface Profile {
   id: string;
@@ -37,6 +38,7 @@ export default function AuthorProfile() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const lp = useLocalePath();
 
   useEffect(() => {
     if (!handle) return;
@@ -83,11 +85,11 @@ export default function AuthorProfile() {
 
   useSeo({
     title: profile
-      ? `${profile.display_name} (@${profile.handle}) — Lapland.blog`
-      : 'Author — Lapland.blog',
+      ? `${profile.display_name} (@${profile.handle}) · Lapland.blog`
+      : 'Author · Lapland.blog',
     description: profile?.bio
       ? `${profile.display_name} on Lapland.blog. ${profile.bio.slice(0, 130)}`
-      : `${profile?.display_name ?? 'An author'} on Lapland.blog — trip-blog entries from Finnish Lapland.`,
+      : `${profile?.display_name ?? 'An author'} on Lapland.blog. Trip-blog entries from Finnish Lapland.`,
     canonical: profile ? canonicalUrl(`/by/${profile.handle}`) : undefined,
   });
 
@@ -114,7 +116,7 @@ export default function AuthorProfile() {
         <div className="absolute top-1/3 left-1/3 w-[420px] h-[420px] rounded-full bg-aurora-blue/15 blur-[140px] pointer-events-none animate-soft-float" />
         <div className="relative max-w-4xl mx-auto">
           <Link
-            to="/destinations"
+            to={lp('/destinations')}
             className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-6 transition-colors"
           >
             <ArrowLeft size={14} /> Lapland.blog
@@ -194,7 +196,7 @@ export default function AuthorProfile() {
                 wifi.
               </p>
               <Link
-                to="/signin"
+                to={lp('/signin')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink-dark transition-colors"
               >
                 Start your own
@@ -209,7 +211,7 @@ export default function AuthorProfile() {
       <section className="px-4 sm:px-6 lg:px-8 pb-24">
         <div className="max-w-3xl mx-auto text-center">
           <Reveal>
-            <p className="text-aurora-blue tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
+            <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
               While you're here
             </p>
             <h2 className="font-display text-2xl md:text-3xl font-light tracking-tight text-snow mb-3">
@@ -217,19 +219,19 @@ export default function AuthorProfile() {
             </h2>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-7 max-w-xl mx-auto">
               The editor's picks, the destinations, and the seed entries from
-              The Field Journal — all curated.
+              The Field Journal. All curated.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                to="/top-reads"
+                to={lp('/top-reads')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink-dark transition-colors"
               >
                 Top reads
                 <ArrowRight size={14} />
               </Link>
               <Link
-                to="/destinations"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-night-light/60 border border-aurora-blue/40 text-aurora-blue font-semibold uppercase tracking-[0.18em] text-xs hover:bg-night-light/80 transition-colors"
+                to={lp('/destinations')}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-night-light/60 border border-aurora-blue/40 text-pink-300 font-semibold uppercase tracking-[0.18em] text-xs hover:bg-night-light/80 hover:text-pink-200 transition-colors"
               >
                 Destinations
               </Link>

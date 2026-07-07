@@ -75,6 +75,35 @@ const fmtRfc822 = (d) => {
 const CATEGORY_SLUGS = ['aurora', 'cabins', 'food', 'seasons', 'people', 'gear', 'stories'];
 
 // ───── sitemap ─────
+// 11-locale hreflang rollout (2026-05-22). Tier-3 locales kr/fr/it/nl served.
+const LOCALES = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl'];
+const DEFAULT_LOCALE = 'en';
+const URL_PREFIX_OF = {
+  en: '',
+  fi: 'fi',
+  de: 'de',
+  ja: 'ja',
+  es: 'es',
+  'pt-BR': 'br',
+  'zh-CN': 'cn',
+  ko: 'kr',
+  fr: 'fr',
+  it: 'it',
+  nl: 'nl',
+};
+
+const localisedLoc = (path, locale) => {
+  const norm = path === '/' ? '' : path;
+  const prefix = URL_PREFIX_OF[locale] ?? locale;
+  if (!prefix) return path; // EN root
+  return path === '/' ? `/${prefix}` : `/${prefix}${norm}`;
+};
+
+// Absolute URL in TRAILING-SLASH form — matches the prerendered static HTML
+// (Cloudflare Pages serves /path/index.html at /path/ with 200; the no-slash
+// form 308-redirects, which Google flags as a redirecting sitemap URL).
+const absUrl = (path, locale) => `${SITE_URL}${localisedLoc(path, locale)}`.replace(/\/?$/, '/');
+
 function buildSitemap(posts) {
   const today = new Date().toISOString().slice(0, 10);
 
@@ -99,29 +128,44 @@ function buildSitemap(posts) {
     lastmod: today,
   }));
 
+  // Bump lastmod to today on every build so Search Console doesn't see stale
+  // entries even when the underlying DB row hasn't changed (re-translations,
+  // template tweaks, hreflang additions are all reasons to re-crawl).
   const postPages = posts.map((p) => ({
     loc: `/post/${p.slug}`,
     changefreq: 'monthly',
     priority: '0.9',
-    lastmod: (p.updated_at ?? p.published_at ?? today).slice(0, 10),
+    lastmod: today,
   }));
 
   const all = [...staticPages, ...categoryPages, ...postPages];
 
-  const urls = all
-    .map(
-      (u) => `  <url>
-    <loc>${SITE_URL}${u.loc}</loc>
+  // Emit one <url> entry PER (path, locale) combination, with xhtml:link
+  // alternates for every locale + x-default → English. Mirrors the pattern
+  // used by laplandvibes.com hub generator (multi-language sitemap spec).
+  const entries = [];
+  for (const u of all) {
+    for (const locale of LOCALES) {
+      const fullLoc = absUrl(u.loc, locale);
+      const alts = LOCALES.map(
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${absUrl(u.loc, l)}"/>`,
+      ).join('\n');
+      const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${absUrl(u.loc, DEFAULT_LOCALE)}"/>`;
+      entries.push(`  <url>
+    <loc>${fullLoc}</loc>
     <lastmod>${u.lastmod}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
-  </url>`
-    )
-    .join('\n');
+${alts}
+${xDefault}
+  </url>`);
+    }
+  }
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${entries.join('\n')}
 </urlset>
 `;
 }
@@ -148,10 +192,10 @@ function buildRss(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Lapland.blog — Field journal from Finnish Lapland</title>
+    <title>Lapland.blog · Field journal from Finnish Lapland</title>
     <link>${SITE_URL}</link>
     <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml"/>
-    <description>A first-person field journal from Finnish Lapland — honest, seasonal, written by someone who actually lives here. Aurora, cabins, seasons, food, people.</description>
+    <description>A first-person field journal from Finnish Lapland: honest, seasonal, written by someone who actually lives here. Aurora, cabins, seasons, food, people.</description>
     <language>en</language>
     <copyright>© ${new Date().getFullYear()} Lapeso Oy</copyright>
     <managingEditor>info@lapland.blog (Lapland.blog)</managingEditor>

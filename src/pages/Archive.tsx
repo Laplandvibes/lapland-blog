@@ -6,14 +6,19 @@ import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
 import PostCard from '../components/PostCard';
+import PageBreadcrumb from '../components/PageBreadcrumb';
 import { categories } from '../data/categories';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { usePosts } from '../hooks/usePosts';
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 type Filter = 'all' | (typeof categories)[number]['slug'];
 
 export default function Archive() {
+  const lang = useLang();
+  const c = COPY[lang].archive;
   const [filter, setFilter] = useState<Filter>('all');
   const [query, setQuery] = useState('');
   const [searchParams] = useSearchParams();
@@ -26,9 +31,9 @@ export default function Archive() {
   }, [tagParam]);
 
   useSeo({
-    title: 'All stories — Lapland.blog',
-    description:
-      'Every story on Lapland.blog. Aurora, cabins, food, seasons, people, gear and long-form reads from Finnish Lapland.',
+    title: c.pageTitle,
+    description: c.pageDescription,
+    image: 'https://lapland.blog/og/page-stories.jpg',
     canonical: canonicalUrl('/stories'),
   });
 
@@ -63,34 +68,36 @@ export default function Archive() {
       <Nav />
 
       {/* Hero — moody full-bleed twilight backdrop */}
-      <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[60vh] flex items-end">
-        <img
+      <section className="relative px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[56vh] md:min-h-[62vh] flex items-center pt-16">
+        <picture><source srcSet="/images/hero-dusk-lake-1920.avif" type="image/avif" /><source srcSet="/images/hero-dusk-lake-1920.webp" type="image/webp" /><img
           src="/images/hero-dusk-lake-1920.webp"
           alt="Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore"
-          className="absolute inset-0 w-full h-full object-cover opacity-55"
+          className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
           decoding="async"
           width={1920}
-          height={1080}
+          height={1080} /></picture>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'linear-gradient(to top, rgba(15,23,42,0.80) 0%, rgba(15,23,42,0.55) 50%, rgba(15,23,42,0.50) 100%)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/80 via-night/55 to-night pointer-events-none" />
         <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] rounded-full bg-pink/10 blur-[140px] pointer-events-none animate-hero-pulse" />
-        <div className="relative max-w-5xl mx-auto w-full">
+        <div className="relative max-w-5xl mx-auto w-full py-16 md:py-20">
           <Reveal>
             <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
-              Archive
+              {c.eyebrow}
             </p>
             <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-5 hero-text-shadow">
-              Every story.
+              {c.h1}
             </h1>
             <p className="text-slate-200 text-lg md:text-xl max-w-2xl leading-relaxed hero-text-shadow-sm">
-              No algorithm, no curation trick. The newest is on top. Use the
-              filter to narrow things down, or search if you already know what
-              you're looking for.
+              {c.lead}
             </p>
           </Reveal>
         </div>
       </section>
+
+      <PageBreadcrumb />
 
       {/* Filters + search */}
       <section className="px-4 sm:px-6 lg:px-8 pb-12">
@@ -99,7 +106,7 @@ export default function Archive() {
             <div
               className="flex flex-wrap gap-2"
               role="group"
-              aria-label="Filter by category"
+              aria-label={c.filterAria}
             >
               <button
                 type="button"
@@ -110,7 +117,7 @@ export default function Archive() {
                     : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
                 }`}
               >
-                All
+                {c.all}
               </button>
               {categories.map((cat) => (
                 <button
@@ -130,7 +137,7 @@ export default function Archive() {
 
             <div className="relative md:w-72">
               <label htmlFor="archive-search" className="sr-only">
-                Search stories
+                {c.searchSr}
               </label>
               <Search
                 size={16}
@@ -141,7 +148,7 @@ export default function Archive() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search titles, tags…"
+                placeholder={c.searchPlaceholder}
                 className="w-full pl-11 pr-4 py-3 rounded-full bg-night-light/60 text-snow placeholder:text-slate-500 border border-purple/25 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 text-sm"
               />
             </div>
@@ -155,14 +162,12 @@ export default function Archive() {
           {loading ? (
             <div className="text-center py-24 text-slate-400">
               <div className="inline-block w-6 h-6 border-2 border-pink border-t-transparent rounded-full animate-spin" />
-              <p className="mt-4 text-sm">Loading stories…</p>
+              <p className="mt-4 text-sm">{c.loading}</p>
             </div>
           ) : filtered.length === 0 ? (
             <div className="text-center py-24 text-slate-400">
-              <p className="text-xl mb-2">No stories match that.</p>
-              <p className="text-sm">
-                Try clearing the filter or searching for a different word.
-              </p>
+              <p className="text-xl mb-2">{c.emptyTitle}</p>
+              <p className="text-sm">{c.emptyBody}</p>
             </div>
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

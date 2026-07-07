@@ -22,7 +22,7 @@ export const categories: Category[] = [
     slug: 'aurora',
     name: 'Aurora',
     description:
-      'Nights under the northern lights — the honest ones. Weather, Kp-index, waiting, cold, and the moments that actually land.',
+      'Nights under the northern lights, the honest ones. Weather, Kp-index, waiting, cold, and the moments that actually land.',
     tagline: 'The sky, when it behaves.',
     accent: 'aurora-green',
   },
@@ -46,7 +46,7 @@ export const categories: Category[] = [
     slug: 'seasons',
     name: 'Seasons',
     description:
-      'Polar night in December. Midnight sun in June. Ruska in September. Eight distinct seasons, not four — and none of them are a gimmick.',
+      'Polar night in December. Midnight sun in June. Ruska in September. Eight distinct seasons, not four. None of them a gimmick.',
     tagline: 'Eight, not four.',
     accent: 'aurora-blue',
   },
@@ -54,7 +54,7 @@ export const categories: Category[] = [
     slug: 'people',
     name: 'People',
     description:
-      'The reindeer herders, ski patrollers, sauna masters and strangers in hotel lobbies. Lapland is quiet — but never empty.',
+      'The reindeer herders, ski patrollers, sauna masters and strangers in hotel lobbies. Lapland is quiet, but never empty.',
     tagline: 'Who you meet up here.',
     accent: 'purple-light',
   },
@@ -62,7 +62,7 @@ export const categories: Category[] = [
     slug: 'gear',
     name: 'Gear',
     description:
-      'Boots, gloves, layers, batteries, camera choices. What actually works at -25°C — and what I\'ve thrown away.',
+      'Boots, gloves, layers, batteries, camera choices. What actually works at -25°C, and what I\'ve thrown away.',
     tagline: 'What survives -25°C.',
     accent: 'aurora-blue',
   },

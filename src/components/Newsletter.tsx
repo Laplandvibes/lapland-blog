@@ -1,6 +1,8 @@
 import { Send, CheckCircle, AlertCircle, Loader2, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 import { trackNewsletterSignup } from '../lib/analytics';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
@@ -12,6 +14,9 @@ const SOURCE = 'laplandblog-website';
  * See reference_laplandvibes_newsletter.md for the contract.
  */
 export default function Newsletter() {
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang].newsletter;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'already' | 'error'
@@ -72,7 +77,7 @@ export default function Newsletter() {
         <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/40">
           <Sparkles size={12} className="text-pink" />
           <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
-            The field journal
+            {c.eyebrow}
           </p>
         </div>
 
@@ -80,32 +85,30 @@ export default function Newsletter() {
           id="newsletter-heading"
           className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight mb-5"
         >
-          Get new stories in your inbox.
+          {c.h2}
         </h2>
         <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-          One email when a new post drops. No calendar blasts, no roundups, no
-          sponsored garbage. Just the next story — once it is written and once
-          it is ready.
+          {c.lead}
         </p>
 
         {status === 'success' ? (
           <div className="bg-night-light/70 backdrop-blur-sm rounded-2xl p-8 border border-pink/40">
             <CheckCircle className="w-12 h-12 text-aurora-green mx-auto mb-3" />
             <p className="text-snow text-xl font-semibold font-display">
-              You're in.
+              {c.successTitle}
             </p>
             <p className="text-slate-300 mt-2 text-sm">
-              Check your inbox — a welcome email is on its way.
+              {c.successBody}
             </p>
           </div>
         ) : status === 'already' ? (
           <div className="bg-night-light/70 backdrop-blur-sm rounded-2xl p-8 border border-aurora-blue/40">
             <CheckCircle className="w-12 h-12 text-aurora-blue mx-auto mb-3" />
             <p className="text-snow text-xl font-semibold font-display">
-              You're already on the list.
+              {c.alreadyTitle}
             </p>
             <p className="text-slate-300 mt-2 text-sm">
-              The next story will land the same way as always.
+              {c.alreadyBody}
             </p>
           </div>
         ) : (
@@ -116,14 +119,14 @@ export default function Newsletter() {
               noValidate
             >
               <label htmlFor="newsletter-email" className="sr-only">
-                Email address
+                {c.placeholder}
               </label>
               <input
                 id="newsletter-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                placeholder={c.placeholder}
                 required
                 autoComplete="email"
                 disabled={status === 'loading'}
@@ -137,12 +140,12 @@ export default function Newsletter() {
                 {status === 'loading' ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    Subscribing…
+                    {c.subscribing}
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    Subscribe
+                    {c.subscribe}
                   </>
                 )}
               </button>
@@ -159,11 +162,11 @@ export default function Newsletter() {
             )}
 
             <p className="text-slate-500 text-xs mt-6">
-              By subscribing you agree to our{' '}
-              <a href="/privacy" className="text-slate-300 hover:text-pink underline">
-                Privacy Policy
+              {c.agreeText}{' '}
+              <a href={to('/privacy')} className="text-slate-300 hover:text-pink underline">
+                {c.privacyLink}
               </a>
-              . Unsubscribe anytime.
+              . {c.unsubscribeNote}
             </p>
           </>
         )}

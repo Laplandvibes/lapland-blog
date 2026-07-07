@@ -2,6 +2,8 @@ import { useState, type ReactElement } from 'react';
 import { Mail, Link2, Check } from 'lucide-react';
 import { trackShare, type ShareNetwork } from '../lib/analytics';
 import { canonicalUrl } from '../lib/seo';
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 interface ShareBarProps {
   slug: string;
@@ -124,6 +126,7 @@ const TARGETS: ShareTarget[] = [
 export default function ShareBar({ slug, title, excerpt = '', hashtags = '' }: ShareBarProps) {
   const [copied, setCopied] = useState(false);
   const url = canonicalUrl(`/post/${slug}`);
+  const c = COPY[useLang()].chrome;
 
   const handleShare = (network: ShareNetwork) => {
     trackShare(network, slug);
@@ -156,10 +159,10 @@ export default function ShareBar({ slug, title, excerpt = '', hashtags = '' }: S
   return (
     <aside
       className="max-w-[65ch] mx-auto mt-14 pt-8 border-t border-[var(--color-paper-border)]"
-      aria-label="Share this story"
+      aria-label={c.shareThisStory}
     >
       <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-4 font-semibold">
-        Share this story
+        {c.shareThisStory}
       </p>
       <div className="flex flex-wrap gap-2">
         {TARGETS.map(({ network, label, Icon, href }) => {
