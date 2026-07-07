@@ -22,9 +22,9 @@ export default defineConfig({
             if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|scheduler)[\\/]/.test(id)) return 'react-vendor'
             if (/[\\/]node_modules[\\/]lucide-react/.test(id)) return 'ui-vendor'
           }
-          // Split locale COPY into its own chunk so the main entry bundle stays
-          // small. Loaded in parallel with main.
-          if (id.includes('/src/locales/copy') || id.includes('\\src\\locales\\copy')) return 'locales'
+          // NOTE: locales are now per-language lazy chunks (copy.<lang>.ts via
+          // dynamic import in src/locales/copy.ts) — do NOT force them into a
+          // single 'locales' chunk here, that would re-bundle all 11 languages.
           return undefined
         },
       },

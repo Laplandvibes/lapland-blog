@@ -20,16 +20,15 @@ export default function Category() {
   const c = COPY[lang].category;
   const { slug } = useParams<{ slug: string }>();
   const category = slug ? categoryBySlug(slug) : undefined;
+  const theme = category ? c.themes[category.slug] : undefined;
   const { posts: postsInCat, loading } = usePosts({
     category: category?.slug,
   });
 
   // Hooks before any early return.
   useSeo({
-    title: category
-      ? `${category.name} · Lapland.blog`
-      : 'Category · Lapland.blog',
-    description: category?.description ?? 'Browse Lapland.blog stories by theme.',
+    title: theme ? theme.metaTitle : 'Category · Lapland.blog',
+    description: theme?.metaDescription ?? 'Browse Lapland.blog stories by theme.',
     canonical: category ? canonicalUrl(`/category/${category.slug}`) : canonicalUrl('/stories'),
   });
 
@@ -40,7 +39,7 @@ export default function Category() {
           { name: 'Home', url: canonicalUrl('/') },
           { name: 'Stories', url: canonicalUrl('/stories') },
           {
-            name: category.name,
+            name: theme?.name ?? category.name,
             url: canonicalUrl(`/category/${category.slug}`),
           },
         ])
@@ -77,10 +76,10 @@ export default function Category() {
               {c.categoryPrefix} · {postsInCat.length} {postsInCat.length === 1 ? c.storySingular : c.storyPlural}
             </p>
             <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-6 hero-text-shadow">
-              {category.name}
+              {theme?.name ?? category.name}
             </h1>
             <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl">
-              {category.description}
+              {theme?.description ?? category.description}
             </p>
           </Reveal>
         </div>
@@ -132,7 +131,7 @@ export default function Category() {
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {categories
-              .filter((c) => c.slug !== category.slug)
+              .filter((other) => other.slug !== category.slug)
               .map((cat) => (
                 <Link
                   key={cat.slug}
@@ -140,10 +139,10 @@ export default function Category() {
                   className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-night-light/60 border border-purple/30 hover:border-pink hover:bg-night-light transition-all"
                 >
                   <span className="font-display text-base text-snow group-hover:text-pink transition-colors">
-                    {cat.name}
+                    {c.themes[cat.slug]?.name ?? cat.name}
                   </span>
                   <span className="text-xs text-slate-500 group-hover:text-slate-300 transition-colors">
-                    {cat.tagline}
+                    {c.themes[cat.slug]?.tagline ?? cat.tagline}
                   </span>
                 </Link>
               ))}

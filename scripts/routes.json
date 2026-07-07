@@ -274,25 +274,39 @@
     }
   },
   {
-    "path": "/category/aurora"
+    "path": "/category/aurora",
+    "copyKey": "aurora",
+    "appendSiteName": false
   },
   {
-    "path": "/category/cabins"
+    "path": "/category/cabins",
+    "copyKey": "cabins",
+    "appendSiteName": false
   },
   {
-    "path": "/category/food"
+    "path": "/category/food",
+    "copyKey": "food",
+    "appendSiteName": false
   },
   {
-    "path": "/category/seasons"
+    "path": "/category/seasons",
+    "copyKey": "seasons",
+    "appendSiteName": false
   },
   {
-    "path": "/category/people"
+    "path": "/category/people",
+    "copyKey": "people",
+    "appendSiteName": false
   },
   {
-    "path": "/category/gear"
+    "path": "/category/gear",
+    "copyKey": "gear",
+    "appendSiteName": false
   },
   {
-    "path": "/category/stories"
+    "path": "/category/stories",
+    "copyKey": "stories",
+    "appendSiteName": false
   },
   {
     "path": "/post/the-night-the-sky-broke-open-over-kemi",

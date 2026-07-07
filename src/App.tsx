@@ -1,4 +1,5 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useReducer, type ReactNode } from 'react';
+import { COPY, loadCopy } from './locales/copy';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from '../../shared/CookieBanner';
@@ -76,12 +77,31 @@ function LocalisedCookieBanner() {
   return <CookieBanner consentKey="laplandblog_cookie_consent" lang={lang} />;
 }
 
+/**
+ * Non-EN copy lives in per-language lazy chunks (see locales/copy.ts).
+ * Gate the route tree until the active language's chunk is registered in
+ * COPY, so every consumer keeps reading COPY[lang] synchronously.
+ * EN is bundled eagerly — English visitors never hit the gate.
+ */
+function CopyGate({ children }: { children: ReactNode }) {
+  const lang = useLang();
+  const [, bump] = useReducer((x: number) => x + 1, 0);
+  useEffect(() => {
+    let alive = true;
+    if (!COPY[lang]) loadCopy(lang).then(() => { if (alive) bump(); });
+    return () => { alive = false; };
+  }, [lang]);
+  if (!COPY[lang]) return <RouteFallback />;
+  return <>{children}</>;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <LocaleAutoRedirect />
       <LocaleSync />
+      <CopyGate>
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -344,6 +364,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+      </CopyGate>
       <LocalisedCookieBanner />
       <NewsletterPopup />
     </BrowserRouter>
