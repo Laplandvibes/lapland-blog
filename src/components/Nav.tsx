@@ -56,12 +56,13 @@ export default function Nav() {
     { to: to('/about'), label: c.about },
   ];
 
-  // Editorial (light) variant on reading pages — match any locale prefix.
-  const isEditorial =
-    /^\/(?:fi|de)?\/?post\//.test(pathname) ||
-    pathname === '/about' ||
-    pathname === '/fi/about' ||
-    pathname === '/de/about';
+  // Nav is ALWAYS the dark brand bar across every route (Vesa 2026-07-08:
+  // "yhtenäistä tummaksi kaikkialla"). The old cream editorial variant made the
+  // header + logo colours "jump" on /post and /about, and left the shared
+  // network (VERKOSTO) button near-invisible on the cream background. Keeping
+  // the whole colour system driven by this single flag so the light branches can
+  // be re-enabled later if ever wanted.
+  const isEditorial = false;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -232,7 +233,7 @@ export default function Nav() {
     >
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
         <div className="flex items-center gap-3 sm:gap-5 shrink-0">
-          <EcosystemMenu lang={lang} currentDomain="lapland-blog" />
+          <EcosystemMenu lang={lang} currentDomain="lapland-blog" variant={isEditorial ? 'light' : 'dark'} />
           <Link
             to={to('/')}
             className="group"
@@ -386,16 +387,19 @@ export default function Nav() {
         </nav>
 
         <div className="xl:hidden flex items-center gap-2">
-            <select
-              value={lang}
-              onChange={(e) => switchTo(e.target.value as Lang)}
-              aria-label="Language"
-              className={`bg-transparent border rounded px-2 py-1 text-xs font-semibold uppercase ${isEditorial ? 'border-[var(--color-paper-border)] text-[var(--color-ink)]' : 'border-snow/40 text-snow'}`}
-            >
-              {ALL_LANGS.map((l) => (
-                <option key={l.code} value={l.code}>{l.label}</option>
-              ))}
-            </select>
+            <div className="relative inline-flex items-center">
+              <select
+                value={lang}
+                onChange={(e) => switchTo(e.target.value as Lang)}
+                aria-label="Language"
+                className={`appearance-none bg-transparent border rounded pl-2 pr-6 py-1 text-xs font-semibold uppercase ${isEditorial ? 'border-[var(--color-paper-border)] text-[var(--color-ink)]' : 'border-snow/40 text-snow'}`}
+              >
+                {ALL_LANGS.map((l) => (
+                  <option key={l.code} value={l.code}>{l.label}</option>
+                ))}
+              </select>
+              <ChevronDown aria-hidden="true" className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 ${isEditorial ? 'text-[var(--color-ink)]' : 'text-snow'}`} />
+            </div>
             <button
               className={`transition-colors ${mobileBtnCls}`}
               onClick={() => setOpen((o) => !o)}
