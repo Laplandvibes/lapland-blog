@@ -110,19 +110,19 @@ const en: SectionCopy = {
       'Your entries become a public blog at lapland.blog/your-name. Friends can follow it. Each post exports to an Instagram story so the trip lives twice.',
     howCta: 'Start your trip blog',
     howFootnote: 'Free for travel journals · No card required · Sign in with Google',
-    liveEyebrow: 'Live trip blogs',
-    liveH2Pre: 'Real trips.',
-    liveH2Italic: 'Real travellers.',
+    liveEyebrow: 'Editorial example blogs',
+    liveH2Pre: 'This is what a trip blog',
+    liveH2Italic: 'looks like.',
     liveH2Tail: 'Yours is next.',
     liveLead:
-      'Skiing the black runs at Levi. Hunting aurora at Inari. 60 km on a husky sled in Saariselkä. Every blog you see here was written by a visitor on a single trip, and built in under five minutes.',
+      'Black runs at Levi. Aurora nights in Inari. 60 km by husky sled in Saariselkä. The Field Journal — our editorial desk — built these example blogs to show the format. Your real one takes under five minutes to start.',
     liveBrowseAll: 'Browse all blogs',
     liveCta: 'Start my trip blog',
     liveFootnote: 'Free · No card · 2 minutes to your first entry',
     featuredEyebrow: "Founder's example journal",
     featuredEvery: 'Every entry →',
     featuredLead:
-      'This is what your own trip blog could look like. The five seed entries below were written by The Field Journal, the editorial voice of Lapland.blog, across one Lapland winter. Real temperatures, real cabins, real soup. Read one and picture your own.',
+      'This is what your own trip blog could look like. The entries below come from The Field Journal, the editorial desk of Lapland.blog — a small circle of writers covering the Lapland year, from midnight sun to kaamos. Real temperatures, real cabins, real soup. Read one and picture your own.',
     featuredLoading: 'Loading example…',
     featuredNone: 'No example entries yet.',
     featuredReadEntry: 'Read this entry',
@@ -257,7 +257,7 @@ const en: SectionCopy = {
       'Sponsored posts inside reader entries. Affiliate shopping lists stuffed into your blog. The words "unforgettable", "bucket list", "magical" or "winter wonderland" are banned from the editorial drafts, and worth banning from yours too. They are bad for writing and bad for readers.',
     seedHeading: 'The seed entries',
     seedBody:
-      'The five entries already on the site are written by The Field Journal, the editorial voice of Lapland.blog. They are there to show what an honest, slow, photo-led trip blog can read like: real temperatures, real times of day, no brochure voice. Read one and picture your own.',
+      'The entries already on the site are written by The Field Journal, the editorial desk of Lapland.blog — five named editorial voices, each with their own beat: seasons, trails, food, cabins and gear. They are there to show what an honest, slow, photo-led trip blog can read like: real temperatures, real times of day, no brochure voice. Read one and picture your own.',
     networkHeading: 'About the network',
     networkBody:
       'Lapland.blog is part of the LaplandVibes ecosystem, a network of Finnish-owned sites about Lapland. The other sites tell you where to go, where to stay, and what to do. This one is where the trip itself gets written down.',
@@ -289,6 +289,40 @@ const en: SectionCopy = {
     plantLead:
       'Going somewhere not on this list? Sodankylä, Posio, Kilpisjärvi, Hetta. Write the first entry from there and we will add it to the map.',
     plantCta: 'Start your blog',
+    places: {
+      rovaniemi: {
+        region: 'On the Arctic Circle',
+        blurb: "Lapland's capital. Where most flights land. The base camp for everything north of here.",
+      },
+      saariselka: {
+        region: 'Far north, fells country',
+        blurb: 'Treeless tundra, glass igloos, the Urho Kekkonen national park out the back door.',
+      },
+      levi: {
+        region: 'West Lapland, fell country',
+        blurb: "Finland's biggest ski resort. Direct flights from Helsinki in winter. Family-friendly basecamp.",
+      },
+      kemi: {
+        region: 'Bay of Bothnia coast',
+        blurb: 'Snow castle, ice-breaker tours, and the southernmost Lapland coast. Flatter ground, salt air, sea aurora.',
+      },
+      inari: {
+        region: 'Sámi heartland',
+        blurb: "Finland's third-largest lake. The Sámi cultural centre Siida. Where Lapland feels furthest from Europe.",
+      },
+      muonio: {
+        region: 'West Lapland, northern lights belt',
+        blurb: 'Pallastunturi national park edge. Among the highest aurora-visibility readings in Europe.',
+      },
+      yllas: {
+        region: 'West Lapland, fell country',
+        blurb: 'Quieter sister to Levi. Wider trails, slower pace, the fell that owns its own seasons.',
+      },
+      kemijarvi: {
+        region: 'East Lapland, lake country',
+        blurb: "Finland's northernmost city. Frozen lake, a dozen mökki within walking distance. Quiet.",
+      },
+    },
   },
   topReads: {
     pageTitle: 'Top reads | Lapland.blog',
@@ -497,10 +531,49 @@ const en: SectionCopy = {
     shareThisStory: 'Share this story',
     inThisStory: 'In this story',
     fieldJournalEntry: 'Field journal entry',
-    liveTripBlog: 'Live trip blog',
+    liveTripBlog: 'Example trip blog',
     yoursCouldBeNext: 'Yours could be next on this carousel.',
     featuredBadge: 'Featured',
     minRead: 'min read',
+    exampleBadge: 'Example',
+    byEditorial: 'Editorial example',
+    entriesLabel: 'entries',
+    daysLabel: 'days',
+    yourTripYourBlog: 'Your trip · Your blog',
+    startFree: 'Free. Two minutes to start. Yours forever.',
+    startMine: 'Start mine',
+    examples: {
+      aurora: {
+        title: 'Five nights, four auroras, one frozen tripod',
+        snippet:
+          'Kp index said 2. The sky said otherwise. Pillars from 21:14 to 23:40, photographed at minus 27.',
+      },
+      cabin: {
+        title: 'A wood cabin, no wifi, eight days off the grid',
+        snippet:
+          'Chopped wood every morning. Sauna every night. Slept harder than I have in years.',
+      },
+      forest: {
+        title: 'Six mornings of silence in a pine forest',
+        snippet:
+          'Left the cabin at 07:30 every day. No music. No phone. Just the creak of boots on fresh snow.',
+      },
+      nightforest: {
+        title: 'What a spruce forest sounds like at -22°C',
+        snippet:
+          'Nothing. Then a single branch snapping a hundred metres away. It carries. It carries very far.',
+      },
+      silence: {
+        title: 'One tree, one lake, one hour at blue hour',
+        snippet:
+          'Walked out on the ice until the shore disappeared. A single pine. Zero wind. I understood the word silence differently.',
+      },
+      food: {
+        title: 'The forty-two-euro bowl of salmon soup, reviewed',
+        snippet:
+          'It came with rye bread and a curl of butter. I finished it in eight minutes. I ordered a second bowl.',
+      },
+    },
   },
 };
 

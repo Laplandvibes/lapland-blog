@@ -110,19 +110,19 @@ const zhCN: SectionCopy = {
       '您的文章会汇成一个公开博客,网址是 lapland.blog/您的名字。朋友们可以关注。每篇还能导出成 Instagram 快拍,让旅程活上两次。',
     howCta: '创建您的旅行博客',
     howFootnote: '旅行日志免费 · 无需银行卡 · 用 Google 登录',
-    liveEyebrow: '正在更新的旅行博客',
-    liveH2Pre: '真实的旅程。',
-    liveH2Italic: '真实的旅人。',
-    liveH2Tail: '下一个就是您。',
+    liveEyebrow: '编辑部示例博客',
+    liveH2Pre: '旅行博客,',
+    liveH2Italic: '就是这个样子。',
+    liveH2Tail: '下一个就是您的。',
     liveLead:
-      '在莱维滑黑道雪道。在伊纳里追极光。在萨利色尔卡乘哈士奇雪橇行进 60 公里。您在这里看到的每一个博客,都是一位游客在一趟旅程中写下的，而且不到五分钟就建好了。',
+      '在莱维滑黑道雪道。在伊纳里看极光的夜晚。在萨利色尔卡乘哈士奇雪橇行进 60 公里。这些示例博客由我们的编辑部 The Field Journal 制作,用来展示这种形式。您自己真正的那一个,不到五分钟就能开始。',
     liveBrowseAll: '浏览所有博客',
     liveCta: '创建我的旅行博客',
     liveFootnote: '免费 · 无需银行卡 · 2 分钟写下第一篇',
     featuredEyebrow: '创始人的示例日志',
     featuredEvery: '全部文章 →',
     featuredLead:
-      '这就是您自己的旅行博客可能呈现的样子。下面五篇起始文章由 The Field Journal，也就是 Lapland.blog 的编辑之声，在拉普兰的一个冬天里写成。真实的气温、真实的木屋、真实的汤。读一篇,想象属于您的那一篇。',
+      '这就是您自己的旅行博客可能呈现的样子。下面的文章出自 The Field Journal——Lapland.blog 的编辑部，一个小小的写作圈子，从极昼写到极夜，记录拉普兰的一年。真实的气温、真实的木屋、真实的汤。读一篇,想象属于您的那一篇。',
     featuredLoading: '正在加载示例…',
     featuredNone: '暂无示例文章。',
     featuredReadEntry: '阅读这篇文章',
@@ -257,7 +257,7 @@ const zhCN: SectionCopy = {
       '读者文章里夹带的赞助贴文。硬塞进您博客的联盟购物清单。「难忘」「人生清单」「梦幻」或「冬日仙境」这些词，在编辑草稿中被禁用,也值得在您自己的文章里禁用。它们对写作有害,对读者也有害。',
     seedHeading: '起始文章',
     seedBody:
-      '网站上已有的五篇文章由 The Field Journal 撰写,它是 Lapland.blog 的编辑之声。它们的作用,是展示一个诚实、不赶时间、以图片为主的旅程博客读起来是什么样子:真实的气温、真实的时刻,没有宣传册的腔调。读一篇,想象属于您的那一篇。',
+      '网站上的文章由 The Field Journal 撰写,它是 Lapland.blog 的编辑部——五位署名的编辑写作者,各有各的领域:季节、步道、美食、木屋与装备。它们的作用,是展示一个诚实、不赶时间、以图片为主的旅程博客读起来是什么样子:真实的气温、真实的时刻,没有宣传册的腔调。读一篇,想象属于您的那一篇。',
     networkHeading: '关于这个网络',
     networkBody:
       'Lapland.blog 是 LaplandVibes 生态系统的一部分，一个由芬兰人拥有、以拉普兰为主题的网站网络。其他网站告诉您去哪儿、住哪儿、做什么。而这个网站,是把旅程本身写下来的地方。',
@@ -289,6 +289,40 @@ const zhCN: SectionCopy = {
     plantLead:
       '要去的地方不在这份名单上?索丹屈莱、波西奥、基尔皮斯耶尔维、海塔，从那里写下第一篇，我们就把它加到地图上。',
     plantCta: '创建您的博客',
+    places: {
+      rovaniemi: {
+        region: '北极圈上',
+        blurb: '拉普兰的首府,大多数航班在此降落。此地以北一切行程的大本营。',
+      },
+      saariselka: {
+        region: '极北,山原地带',
+        blurb: '无树的苔原、玻璃穹顶小屋,乌尔霍·凯科宁国家公园就在后门外。',
+      },
+      levi: {
+        region: '西拉普兰,山地地带',
+        blurb: '芬兰最大的滑雪度假地。冬季有赫尔辛基直飞航班。适合全家的大本营。',
+      },
+      kemi: {
+        region: '波的尼亚湾沿岸',
+        blurb: '雪堡、破冰船之旅,以及拉普兰最南端的海岸。地势更平坦,空气带着咸味,极光映在海上。',
+      },
+      inari: {
+        region: '萨米人的腹地',
+        blurb: '芬兰第三大湖。萨米文化中心 Siida。在这里,拉普兰离欧洲最遥远。',
+      },
+      muonio: {
+        region: '西拉普兰,极光带',
+        blurb: '帕拉斯山国家公园的边缘。极光可见度在欧洲名列前茅。',
+      },
+      yllas: {
+        region: '西拉普兰,山地地带',
+        blurb: '莱维安静的姐妹。雪道更宽,节奏更慢,一座有着自己季节的山。',
+      },
+      kemijarvi: {
+        region: '东拉普兰,湖区',
+        blurb: '芬兰最北的城市。冰封的湖面,步行可达的十几座木屋。安静。',
+      },
+    },
   },
   topReads: {
     pageTitle: '热门阅读 | Lapland.blog',
@@ -497,10 +531,49 @@ const zhCN: SectionCopy = {
     shareThisStory: '分享这个故事',
     inThisStory: '本文内容',
     fieldJournalEntry: '田野日志记录',
-    liveTripBlog: '实时旅行博客',
+    liveTripBlog: '示例旅行博客',
     yoursCouldBeNext: '下一个出现在这里的可能就是你。',
     featuredBadge: '精选',
     minRead: '分钟阅读',
+    exampleBadge: '示例',
+    byEditorial: '编辑部示例',
+    entriesLabel: '篇记录',
+    daysLabel: '天',
+    yourTripYourBlog: '您的旅行 · 您的博客',
+    startFree: '免费。两分钟即可开始。永远属于您。',
+    startMine: '创建我的博客',
+    examples: {
+      aurora: {
+        title: '五个夜晚,四场极光,一个冻住的三脚架',
+        snippet:
+          'Kp 指数说是 2。天空却不这么认为。光柱从 21:14 持续到 23:40,在零下 27 度拍下。',
+      },
+      cabin: {
+        title: '一间木屋,没有 wifi,离网八天',
+        snippet:
+          '每天早上劈柴。每天晚上蒸桑拿。睡得比这些年任何时候都沉。',
+      },
+      forest: {
+        title: '松林里六个寂静的清晨',
+        snippet:
+          '每天 07:30 走出木屋。没有音乐。没有手机。只有靴子踩在新雪上的吱嘎声。',
+      },
+      nightforest: {
+        title: '零下 22 度的云杉林是什么声音',
+        snippet:
+          '什么也没有。然后是一百米外一根树枝折断的声响。声音传得很远。传得非常远。',
+      },
+      silence: {
+        title: '一棵树,一片湖,蓝调时刻的一个小时',
+        snippet:
+          '在冰面上一直走到看不见岸。一棵孤零零的松树。一丝风也没有。我对“寂静”这个词有了新的理解。',
+      },
+      food: {
+        title: '四十二欧元一碗的三文鱼汤,测评',
+        snippet:
+          '配了黑麦面包和一卷黄油。八分钟吃完。我又点了一碗。',
+      },
+    },
   },
 };
 

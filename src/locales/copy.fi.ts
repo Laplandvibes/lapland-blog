@@ -110,19 +110,19 @@ const fi: SectionCopy = {
       'Merkinnöistäsi tulee julkinen blogi osoitteessa lapland.blog/oma-nimi. Kaverit voivat seurata. Jokaisen voi viedä Instagram-tarinaksi, jotta matka elää kahdesti.',
     howCta: 'Aloita matkablogi',
     howFootnote: 'Ilmainen matkapäiväkirjoille · Ei korttia · Kirjaudu Googlella',
-    liveEyebrow: 'Eläviä matkablogeja',
-    liveH2Pre: 'Oikeita matkoja.',
-    liveH2Italic: 'Oikeita matkailijoita.',
+    liveEyebrow: 'Toimituksen esimerkkiblogit',
+    liveH2Pre: 'Tältä matkablogi',
+    liveH2Italic: 'näyttää.',
     liveH2Tail: 'Sinun on seuraava.',
     liveLead:
-      'Mustia rinteitä Levillä. Revontulia Inarissa. 60 km koiravaljakolla Saariselällä. Jokainen täällä näkyvä blogi on yhden matkan tulos, ja tehty alle viidessä minuutissa.',
+      'Mustia rinteitä Levillä. Revontuliöitä Inarissa. 60 km koiravaljakolla Saariselällä. The Field Journal — toimituksemme — rakensi nämä esimerkkiblogit näyttämään formaatin. Oma oikea blogisi syntyy alle viidessä minuutissa.',
     liveBrowseAll: 'Selaa kaikkia blogeja',
     liveCta: 'Aloita oma matkablogi',
     liveFootnote: 'Ilmainen · Ei korttia · 2 minuuttia ensimmäiseen merkintään',
     featuredEyebrow: 'Toimituksen esimerkkipäiväkirja',
     featuredEvery: 'Kaikki merkinnät →',
     featuredLead:
-      'Tältä oma matkablogisi voisi näyttää. Alla viisi siemenmerkintää, jotka Lapland.blogin toimituksellinen ääni The Field Journal kirjoitti yhden Lapin talven aikana. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele oma.',
+      'Tältä oma matkablogisi voisi näyttää. Alla olevat merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus — pieni kirjoittajapiiri, joka kattaa Lapin vuoden yöttömästä yöstä kaamokseen. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele oma.',
     featuredLoading: 'Ladataan esimerkkiä…',
     featuredNone: 'Ei esimerkkimerkintöjä vielä.',
     featuredReadEntry: 'Lue tämä merkintä',
@@ -257,7 +257,7 @@ const fi: SectionCopy = {
       'Sponsoroituja juttuja lukijoiden merkinnöissä. Affiliate-ostoslistoja blogiisi tungettuna. Sanat "unohtumaton", "bucket list", "taianomainen" tai "talvimaailma" on kielletty toimituksellisissa luonnoksissa, ja kannattaa kieltää myös omissasi. Ne ovat huonoja kirjoittamiselle ja huonoja lukijoille.',
     seedHeading: 'Siemenmerkinnät',
     seedBody:
-      'Sivulla jo olevat viisi merkintää on kirjoittanut The Field Journal, Lapland.blogin toimituksellinen ääni. Ne näyttävät, miltä rehellinen, hidas, kuvavetoinen matkablogi voi lukea: oikeat lämpötilat, oikea kellonaika, ei esiteääntä. Lue yksi ja kuvittele oma.',
+      'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus — viisi nimettyä toimituksellista ääntä, joilla jokaisella on oma aihepiirinsä: vuodenajat, reitit, ruoka, mökit ja varusteet. Ne näyttävät, miltä rehellinen, hidas, kuvavetoinen matkablogi voi lukea: oikeat lämpötilat, oikea kellonaika, ei esiteääntä. Lue yksi ja kuvittele oma.',
     networkHeading: 'Verkostosta',
     networkBody:
       'Lapland.blog on osa LaplandVibes-ekosysteemiä, suomalaisomisteista verkostoa Lappi-sivustoja. Muut sivustot kertovat minne mennä, missä yöpyä ja mitä tehdä. Tämä on se, johon itse matka kirjoitetaan ylös.',
@@ -289,6 +289,40 @@ const fi: SectionCopy = {
     plantLead:
       'Menetkö paikkaan, jota ei listalla ole? Sodankylä, Posio, Kilpisjärvi, Hetta. Kirjoita ensimmäinen merkintä sieltä, niin lisäämme sen kartalle.',
     plantCta: 'Aloita oma blogi',
+    places: {
+      rovaniemi: {
+        region: 'Napapiirillä',
+        blurb: 'Lapin pääkaupunki. Tänne useimmat lennot laskeutuvat. Tukikohta kaikelle tästä pohjoiseen.',
+      },
+      saariselka: {
+        region: 'Kaukana pohjoisessa, tunturimaata',
+        blurb: 'Puutonta tunturiylänköä, lasi-igluja ja Urho Kekkosen kansallispuisto takaovella.',
+      },
+      levi: {
+        region: 'Länsi-Lappi, tunturimaata',
+        blurb: 'Suomen suurin hiihtokeskus. Suorat lennot Helsingistä talvella. Perheystävällinen tukikohta.',
+      },
+      kemi: {
+        region: 'Perämeren rannikko',
+        blurb: 'Lumilinna, jäänmurtajaristeilyt ja Lapin eteläisin rannikko. Tasaisempaa maata, meri-ilmaa, revontulia meren yllä.',
+      },
+      inari: {
+        region: 'Saamelaisalueen sydän',
+        blurb: 'Suomen kolmanneksi suurin järvi. Saamelaiskulttuurikeskus Siida. Täällä Lappi tuntuu kauimmalta Euroopasta.',
+      },
+      muonio: {
+        region: 'Länsi-Lappi, revontulivyöhyke',
+        blurb: 'Pallastunturin kansallispuiston laita. Euroopan parhaita revontulien näkyvyyslukemia.',
+      },
+      yllas: {
+        region: 'Länsi-Lappi, tunturimaata',
+        blurb: 'Levin hiljaisempi sisar. Leveämmät ladut, rauhallisempi tahti, tunturi jolla on omat vuodenaikansa.',
+      },
+      kemijarvi: {
+        region: 'Itä-Lappi, järvimaata',
+        blurb: 'Suomen pohjoisin kaupunki. Jäätynyt järvi, tusina mökkiä kävelymatkan päässä. Hiljaista.',
+      },
+    },
   },
   topReads: {
     pageTitle: 'Suosituimmat | Lapland.blog',
@@ -498,10 +532,49 @@ const fi: SectionCopy = {
     shareThisStory: 'Jaa tämä tarina',
     inThisStory: 'Tässä tarinassa',
     fieldJournalEntry: 'Kenttäpäiväkirjan merkintä',
-    liveTripBlog: 'Live-matkablogi',
+    liveTripBlog: 'Esimerkkimatkablogi',
     yoursCouldBeNext: 'Sinun voisi olla seuraava tässä karusellissa.',
     featuredBadge: 'Nostettu',
     minRead: 'min lukuaika',
+    exampleBadge: 'Esimerkki',
+    byEditorial: 'Toimituksen esimerkki',
+    entriesLabel: 'merkintää',
+    daysLabel: 'päivää',
+    yourTripYourBlog: 'Sinun matkasi · Sinun blogisi',
+    startFree: 'Ilmainen. Alkuun kahdessa minuutissa. Omasi pysyvästi.',
+    startMine: 'Aloita oma',
+    examples: {
+      aurora: {
+        title: 'Viisi yötä, neljät revontulet, yksi jäätynyt jalusta',
+        snippet:
+          'Kp-indeksi lupasi kakkosta. Taivas oli toista mieltä. Pilareita 21.14–23.40, kuvattu 27 asteen pakkasessa.',
+      },
+      cabin: {
+        title: 'Hirsimökki, ei wifiä, kahdeksan päivää irti verkosta',
+        snippet:
+          'Halkoja joka aamu. Sauna joka ilta. Nukuin sikeämmin kuin vuosiin.',
+      },
+      forest: {
+        title: 'Kuusi hiljaista aamua mäntymetsässä',
+        snippet:
+          'Lähdin mökiltä 7.30 joka aamu. Ei musiikkia. Ei puhelinta. Vain saappaiden narina uudella lumella.',
+      },
+      nightforest: {
+        title: 'Miltä kuusimetsä kuulostaa −22 °C:ssa',
+        snippet:
+          'Ei miltään. Sitten yksi oksa napsahtaa sadan metrin päässä. Se kantaa. Se kantaa todella kauas.',
+      },
+      silence: {
+        title: 'Yksi puu, yksi järvi, yksi tunti sinisellä hetkellä',
+        snippet:
+          'Kävelin jäälle kunnes ranta katosi. Yksi mänty. Nolla tuulta. Ymmärsin sanan hiljaisuus uudella tavalla.',
+      },
+      food: {
+        title: 'Se 42 euron lohikeittoannos, arvosteltuna',
+        snippet:
+          'Mukana ruisleipää ja voikiehkura. Söin sen kahdeksassa minuutissa. Tilasin toisen annoksen.',
+      },
+    },
   },
 };
 

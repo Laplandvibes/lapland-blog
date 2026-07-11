@@ -19,6 +19,8 @@ type Filter = 'all' | (typeof categories)[number]['slug'];
 export default function Archive() {
   const lang = useLang();
   const c = COPY[lang].archive;
+  // Localized filter-chip labels — categories.ts names are EN-only data.
+  const themes = COPY[lang].category.themes;
   const [filter, setFilter] = useState<Filter>('all');
   const [query, setQuery] = useState('');
   const [searchParams] = useSearchParams();
@@ -130,7 +132,7 @@ export default function Archive() {
                       : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
                   }`}
                 >
-                  {cat.name}
+                  {themes[cat.slug].name}
                 </button>
               ))}
             </div>

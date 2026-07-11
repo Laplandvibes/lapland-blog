@@ -18,6 +18,7 @@ import { usePosts } from '../hooks/usePosts';
 import { getImage } from '../lib/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import type { CategorySlug } from '../data/categories';
 
 const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   'en': {
@@ -79,7 +80,9 @@ type AccentColor = 'pink' | 'green' | 'blue';
 interface PillarMeta {
   accent: AccentColor;
   image: ReturnType<typeof getImage>;
-  links: { label: string; to: string }[];
+  /** Category slugs — labels resolve from COPY[lang].category.themes so the
+      link chips localize like everything else. */
+  links: { slug: CategorySlug; to: string }[];
 }
 
 const PILLAR_META: PillarMeta[] = [
@@ -87,24 +90,24 @@ const PILLAR_META: PillarMeta[] = [
     accent: 'green',
     image: getImage('pillar-cold', '(max-width: 768px) 100vw, 33vw'),
     links: [
-      { label: 'Aurora', to: '/category/aurora' },
-      { label: 'Seasons', to: '/category/seasons' },
+      { slug: 'aurora', to: '/category/aurora' },
+      { slug: 'seasons', to: '/category/seasons' },
     ],
   },
   {
     accent: 'pink',
     image: getImage('pillar-shelter', '(max-width: 768px) 100vw, 33vw'),
     links: [
-      { label: 'Cabins', to: '/category/cabins' },
-      { label: 'Food', to: '/category/food' },
+      { slug: 'cabins', to: '/category/cabins' },
+      { slug: 'food', to: '/category/food' },
     ],
   },
   {
     accent: 'blue',
     image: getImage('pillar-people', '(max-width: 768px) 100vw, 33vw'),
     links: [
-      { label: 'People', to: '/category/people' },
-      { label: 'Stories', to: '/category/stories' },
+      { slug: 'people', to: '/category/people' },
+      { slug: 'stories', to: '/category/stories' },
     ],
   },
 ];
@@ -613,7 +616,7 @@ export default function Home() {
                             to={to(link.to)}
                             className={`group/link inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-semibold ${accentColor} hover:opacity-80 transition-opacity`}
                           >
-                            {link.label}
+                            {COPY[lang].category.themes[link.slug].name}
                             <ArrowRight
                               size={12}
                               className="group-hover/link:translate-x-0.5 transition-transform"

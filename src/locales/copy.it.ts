@@ -60,19 +60,19 @@ const it: SectionCopy = {
       'Le Sue voci diventano un blog pubblico a lapland.blog/il-suo-nome. Gli amici possono seguirlo. Ogni post si esporta in una storia Instagram, e il viaggio vive due volte.',
     howCta: 'Avvia il blog di viaggio',
     howFootnote: 'Gratuito per i diari di viaggio · Senza carta · Accesso con Google',
-    liveEyebrow: 'Blog di viaggio in corso',
-    liveH2Pre: 'Viaggi veri.',
-    liveH2Italic: 'Viaggiatori veri.',
+    liveEyebrow: 'Blog-esempio della redazione',
+    liveH2Pre: 'Ecco come si presenta',
+    liveH2Italic: 'un blog di viaggio.',
     liveH2Tail: 'Il prossimo è il Suo.',
     liveLead:
-      'Piste nere a Levi. Caccia all’aurora a Inari. 60 km in slitta trainata da husky a Saariselkä. Ogni blog che vede qui è stato scritto da un visitatore durante un singolo viaggio, e creato in meno di cinque minuti.',
+      'Piste nere a Levi. Notti di aurora a Inari. 60 km in slitta trainata da husky a Saariselkä. The Field Journal — la nostra redazione — ha costruito questi blog-esempio per mostrare il formato. Il Suo, quello vero, si avvia in meno di cinque minuti.',
     liveBrowseAll: 'Vedere tutti i blog',
     liveCta: 'Avvia il mio blog di viaggio',
     liveFootnote: 'Gratuito · Senza carta · Prima voce in 2 minuti',
     featuredEyebrow: 'Diario-esempio del fondatore',
     featuredEvery: 'Tutte le voci →',
     featuredLead:
-      'Ecco come potrebbe apparire il Suo blog di viaggio. Le cinque voci-seme qui sotto sono state scritte da The Field Journal, la voce editoriale di Lapland.blog, nel corso di un inverno lappone. Temperature reali, baite reali, zuppa reale. Ne legga una e immagini la Sua.',
+      'Ecco come potrebbe apparire il Suo blog di viaggio. Le voci qui sotto sono firmate da The Field Journal, la redazione di Lapland.blog: un piccolo cerchio di penne che attraversa l’anno lappone, dal sole di mezzanotte alla notte polare. Temperature reali, baite reali, zuppa reale. Ne legga una e immagini la Sua.',
     featuredLoading: 'Caricamento dell’esempio…',
     featuredNone: 'Ancora nessuna voce-esempio.',
     featuredReadEntry: 'Leggi questa voce',
@@ -207,7 +207,7 @@ const it: SectionCopy = {
       'Articoli sponsorizzati dentro le voci dei lettori. Liste affiliate infilate nel Suo blog. Le parole «indimenticabile», «da fare nella vita», «magico» o «paese delle meraviglie invernale» sono bandite dalle bozze editoriali e altrettanto da bandire dalle Sue. Fanno male alla scrittura e ai lettori.',
     seedHeading: 'Le voci-seme',
     seedBody:
-      'Le cinque voci già presenti sono state scritte da The Field Journal, la voce editoriale di Lapland.blog. Stanno qui per mostrare com’è un blog di viaggio onesto, lento, centrato sulle foto: temperature reali, orari reali, niente voce da brochure. Ne legga una e immagini la Sua.',
+      'Le voci del sito sono scritte da The Field Journal, la redazione di Lapland.blog: cinque penne editoriali con nome proprio, ognuna con il suo ambito — stagioni, sentieri, cibo, baite e attrezzatura. Stanno qui per mostrare com’è un blog di viaggio onesto, lento, centrato sulle foto: temperature reali, orari reali, niente voce da brochure. Ne legga una e immagini la Sua.',
     networkHeading: 'Il network',
     networkBody:
       'Lapland.blog fa parte dell’ecosistema LaplandVibes, una rete di siti finlandesi sulla Lapponia. Gli altri siti Le dicono dove andare, dove dormire e cosa fare. Questo è il luogo dove il viaggio stesso viene messo per iscritto.',
@@ -239,6 +239,40 @@ const it: SectionCopy = {
     plantLead:
       'Parte per un luogo che non è in elenco? Sodankylä, Posio, Kilpisjärvi, Hetta. Scriva da lì la prima voce e la aggiungeremo alla mappa.',
     plantCta: 'Avvia il Tuo blog',
+    places: {
+      rovaniemi: {
+        region: 'Sul Circolo Polare Artico',
+        blurb: 'La capitale della Lapponia. Dove atterra la maggior parte dei voli. Il campo base per tutto ciò che sta più a nord.',
+      },
+      saariselka: {
+        region: 'Estremo nord, terra dei tunturi',
+        blurb: 'Tundra senza alberi, igloo di vetro, il parco nazionale Urho Kekkonen appena fuori dalla porta.',
+      },
+      levi: {
+        region: 'Lapponia occidentale, terra dei tunturi',
+        blurb: 'La più grande stazione sciistica della Finlandia. Voli diretti da Helsinki in inverno. Campo base a misura di famiglia.',
+      },
+      kemi: {
+        region: 'Costa del Golfo di Botnia',
+        blurb: 'Il castello di neve, le escursioni in rompighiaccio e la costa più meridionale della Lapponia. Terreno più piatto, aria salmastra, aurora sul mare.',
+      },
+      inari: {
+        region: 'Cuore della terra sami',
+        blurb: 'Il terzo lago della Finlandia. Il centro culturale sami Siida. Dove la Lapponia sembra più lontana dall’Europa.',
+      },
+      muonio: {
+        region: 'Lapponia occidentale, fascia dell’aurora',
+        blurb: 'Al margine del parco nazionale di Pallastunturi. Tra i valori di visibilità dell’aurora più alti d’Europa.',
+      },
+      yllas: {
+        region: 'Lapponia occidentale, terra dei tunturi',
+        blurb: 'La sorella più tranquilla di Levi. Piste più ampie, ritmo più lento, il tunturi che vive le proprie stagioni.',
+      },
+      kemijarvi: {
+        region: 'Lapponia orientale, terra dei laghi',
+        blurb: 'La città più settentrionale della Finlandia. Un lago ghiacciato, una dozzina di baite raggiungibili a piedi. Silenzio.',
+      },
+    },
   },
   topReads: {
     pageTitle: 'Letture top | Lapland.blog',
@@ -447,10 +481,49 @@ const it: SectionCopy = {
     shareThisStory: 'Condividi questa storia',
     inThisStory: 'In questa storia',
     fieldJournalEntry: 'Voce del diario di campo',
-    liveTripBlog: 'Blog di viaggio dal vivo',
+    liveTripBlog: 'Blog-esempio di viaggio',
     yoursCouldBeNext: 'Il tuo potrebbe essere il prossimo in questo carosello.',
     featuredBadge: 'In evidenza',
     minRead: 'min di lettura',
+    exampleBadge: 'Esempio',
+    byEditorial: 'Esempio della redazione',
+    entriesLabel: 'voci',
+    daysLabel: 'giorni',
+    yourTripYourBlog: 'Il Suo viaggio · Il Suo blog',
+    startFree: 'Gratuito. Due minuti per iniziare. Suo per sempre.',
+    startMine: 'Avvia il mio',
+    examples: {
+      aurora: {
+        title: 'Cinque notti, quattro aurore, un treppiede congelato',
+        snippet:
+          'L’indice Kp diceva 2. Il cielo la pensava diversamente. Colonne dalle 21:14 alle 23:40, fotografate a meno 27.',
+      },
+      cabin: {
+        title: 'Una baita di legno, niente wifi, otto giorni fuori dal mondo',
+        snippet:
+          'Legna spaccata ogni mattina. Sauna ogni sera. Ho dormito come non dormivo da anni.',
+      },
+      forest: {
+        title: 'Sei mattine di silenzio in una pineta',
+        snippet:
+          'Fuori dalla baita alle 07:30 ogni giorno. Niente musica. Niente telefono. Solo lo scricchiolio degli scarponi sulla neve fresca.',
+      },
+      nightforest: {
+        title: 'Che suono ha un bosco di abeti a −22 °C',
+        snippet:
+          'Nessuno. Poi un solo ramo che si spezza a cento metri. Il suono arriva. Arriva molto lontano.',
+      },
+      silence: {
+        title: 'Un albero, un lago, un’ora nell’ora blu',
+        snippet:
+          'Ho camminato sul ghiaccio finché la riva non è scomparsa. Un solo pino. Zero vento. Ho capito la parola silenzio in un altro modo.',
+      },
+      food: {
+        title: 'La zuppa di salmone da quarantadue euro, recensita',
+        snippet:
+          'Servita con pane di segale e un ricciolo di burro. Finita in otto minuti. Ne ho ordinata una seconda.',
+      },
+    },
   },
   footer: {
     ...en.footer,

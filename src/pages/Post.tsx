@@ -15,6 +15,7 @@ import ShareBar from '../components/ShareBar';
 import BannerAd from '../components/BannerAd';
 import HighlightShare from '../components/HighlightShare';
 import type { PostBlock } from '../data/posts';
+import { authors, vesa } from '../data/author';
 import { categoryBySlug } from '../data/categories';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import {
@@ -28,14 +29,7 @@ import { detectCrossSiteLinks } from '../lib/crossSiteLinks';
 import { usePost, useRelated } from '../hooks/usePost';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
-}
+import { formatPostDate } from '../lib/dates';
 
 /**
  * Render a single content block. H2s receive anchor ids derived from index
@@ -121,6 +115,11 @@ export default function Post() {
     'five-nights-in-a-forest-cabin',
     'a-bowl-of-salmon-soup-that-cost-more-than-the-flight',
     'living-between-two-suns',
+    'the-sun-did-not-set-it-just-circled-the-house',
+    'twelve-kilometres-at-one-in-the-morning',
+    'strawberry-hour-at-the-rovaniemi-market',
+    'the-sauna-thermometer-said-eighty-two',
+    'what-july-in-lapland-actually-asks-you-to-pack',
   ]);
   const ogImage = post
     ? SEED_OG_SLUGS.has(post.slug)
@@ -135,7 +134,7 @@ export default function Post() {
     type: post ? 'article' : 'website',
     publishedAt: post?.publishedAt,
     modifiedAt: post?.publishedAt,
-    author: 'The Field Journal',
+    author: (post && authors[post.author]?.name) || vesa.name,
     tags: post?.tags ? [...post.tags, ...hashtags] : hashtags,
   });
 
@@ -179,6 +178,10 @@ export default function Post() {
   }
 
   const cat = categoryBySlug(post.category);
+  const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
+  // Editorial pen for the byline + bio card; unknown handles fall back to the
+  // umbrella Field Journal voice.
+  const voice = authors[post.author] ?? vesa;
 
   return (
     <div className="theme-editorial min-h-screen">
@@ -225,7 +228,7 @@ export default function Post() {
                   className="inline-flex items-center gap-2 text-[var(--color-accent)] text-[11px] uppercase tracking-[0.32em] font-bold mb-5 hover:text-[var(--color-accent-dark)] transition-colors"
                 >
                   <span className="w-6 h-px bg-[var(--color-accent)]/50" />
-                  {cat.name} · {post.kicker}
+                  {catName} · {post.kicker}
                 </Link>
               )}
 
@@ -246,7 +249,7 @@ export default function Post() {
                     className="w-9 h-9 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-[11px] font-bold"
                     aria-hidden="true"
                   >
-                    FJ
+                    {voice.initials}
                   </span>
                   <span>
                     {c.by}{' '}
@@ -254,13 +257,16 @@ export default function Post() {
                       to={to('/about')}
                       className="text-[var(--color-ink)] font-semibold hover:text-[var(--color-accent)] transition-colors"
                     >
-                      The Field Journal
+                      {voice.name}
                     </Link>
+                    {voice.id !== vesa.id && (
+                      <span className="text-[var(--color-ink-mute)]"> · The Field Journal</span>
+                    )}
                   </span>
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Calendar size={14} />
-                  <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+                  <time dateTime={post.publishedAt}>{formatPostDate(post.publishedAt, lang)}</time>
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Clock size={14} />
@@ -296,7 +302,7 @@ export default function Post() {
             </div>
             <aside className="hidden xl:flex xl:flex-col xl:gap-8 xl:sticky xl:top-24 xl:self-start">
               <TableOfContents blocks={post.content} />
-              <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Lapland" />
+              <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Rovaniemi" />
             </aside>
           </div>
           <HighlightShare
@@ -369,7 +375,7 @@ export default function Post() {
             </div>
           )}
 
-          <AuthorBio variant="editorial" />
+          <AuthorBio variant="editorial" author={post.author} />
         </div>
       </main>
 

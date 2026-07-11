@@ -206,6 +206,11 @@ export type SectionCopy = {
     plantH2: string;
     plantLead: string;
     plantCta: string;
+    /** Localized region + blurb per destination card (names stay as proper nouns). */
+    places: Record<
+      'rovaniemi' | 'saariselka' | 'levi' | 'kemi' | 'inari' | 'muonio' | 'yllas' | 'kemijarvi',
+      { region: string; blurb: string }
+    >;
   };
   topReads: {
     pageTitle: string;
@@ -347,5 +352,19 @@ export type SectionCopy = {
     yoursCouldBeNext: string;
     featuredBadge: string;
     minRead: string;
+    /** "Example" badge on every editorial example card (honest model). */
+    exampleBadge: string;
+    /** Byline under "The Field Journal" on example cards. */
+    byEditorial: string;
+    entriesLabel: string;
+    daysLabel: string;
+    yourTripYourBlog: string;
+    startFree: string;
+    startMine: string;
+    /** Example trip-blog card content — clearly-labelled editorial examples. */
+    examples: Record<
+      'aurora' | 'cabin' | 'forest' | 'nightforest' | 'silence' | 'food',
+      { title: string; snippet: string }
+    >;
   };
 };

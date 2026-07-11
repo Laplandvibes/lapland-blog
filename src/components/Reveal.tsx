@@ -45,6 +45,12 @@ export default function Reveal({
           if (entry.isIntersecting) {
             setVisible(true);
             if (once) io.unobserve(entry.target);
+          } else if (entry.boundingClientRect.bottom < 0) {
+            // Already scrolled past (anchor jump / restored scroll position):
+            // the element never intersected, so reveal it immediately instead
+            // of leaving it at opacity 0 above the viewport.
+            setVisible(true);
+            if (once) io.unobserve(entry.target);
           } else if (!once) {
             setVisible(false);
           }

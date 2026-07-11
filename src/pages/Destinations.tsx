@@ -256,7 +256,7 @@ function DestinationCard({
       </div>
       <div className="p-5 flex flex-col flex-1">
         <p className="text-[var(--color-ink-mute)] tracking-[0.28em] text-[10px] font-bold uppercase mb-2">
-          {d.region}
+          {c.places[d.slug as keyof DestCopy['places']]?.region ?? d.region}
         </p>
         <h3
           className="text-2xl text-[var(--color-ink)] mb-2 leading-tight"
@@ -264,7 +264,9 @@ function DestinationCard({
         >
           {d.name}
         </h3>
-        <p className="text-[var(--color-ink-soft)] text-sm leading-relaxed mb-5">{d.blurb}</p>
+        <p className="text-[var(--color-ink-soft)] text-sm leading-relaxed mb-5">
+          {c.places[d.slug as keyof DestCopy['places']]?.blurb ?? d.blurb}
+        </p>
 
         <div className="space-y-3 mt-auto pt-4 border-t border-[var(--color-paper-border)]">
           {hasEntries ? (

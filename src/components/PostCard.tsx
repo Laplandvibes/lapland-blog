@@ -4,20 +4,13 @@ import type { Post } from '../data/posts';
 import { categoryBySlug } from '../data/categories';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { formatPostDate } from '../lib/dates';
 
 interface Props {
   post: Post;
   /** `editorial` renders on a cream background (archive bridge). Default is dark. */
   variant?: 'dark' | 'editorial';
   priority?: boolean;
-}
-
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  });
 }
 
 /**
@@ -28,7 +21,10 @@ function formatDate(iso: string): string {
 export default function PostCard({ post, variant = 'dark', priority = false }: Props) {
   const cat = categoryBySlug(post.category);
   const lp = useLocalePath();
-  const c = COPY[useLang()].chrome;
+  const lang = useLang();
+  const c = COPY[lang].chrome;
+  // Localized category label — categories.ts names are EN-only data.
+  const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
 
   const isEditorial = variant === 'editorial';
 
@@ -72,7 +68,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
                   : 'absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-night/85 backdrop-blur-sm text-pink-300 border border-pink/40'
               }
             >
-              {cat.name}
+              {catName}
             </span>
           )}
         </div>
@@ -117,7 +113,9 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
             }
           >
             <div className="flex items-center gap-3">
-              <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+              <time dateTime={post.publishedAt}>
+                {formatPostDate(post.publishedAt, lang, { day: 'numeric', month: 'short', year: 'numeric' })}
+              </time>
               <span aria-hidden="true">·</span>
               <span className="inline-flex items-center gap-1">
                 <Clock size={12} />

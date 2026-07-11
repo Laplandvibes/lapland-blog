@@ -60,19 +60,19 @@ const nl: SectionCopy = {
       'Uw notities worden een openbare blog op lapland.blog/uw-naam. Vrienden kunnen hem volgen. Elke post wordt geëxporteerd naar een Instagram-story, en de reis leeft tweemaal.',
     howCta: 'Start uw reisblog',
     howFootnote: 'Gratis voor reisdagboeken · Geen creditcard nodig · Aanmelden met Google',
-    liveEyebrow: 'Live reisblogs',
-    liveH2Pre: 'Echte reizen.',
-    liveH2Italic: 'Echte reizigers.',
-    liveH2Tail: 'De volgende bent u.',
+    liveEyebrow: 'Voorbeeldblogs van de redactie',
+    liveH2Pre: 'Zo ziet een reisblog',
+    liveH2Italic: 'eruit.',
+    liveH2Tail: 'De volgende is die van u.',
     liveLead:
-      'De zwarte pistes van Levi. Noorderlichtjagen in Inari. 60 km met huskysleeën in Saariselkä. Elke blog die u hier ziet is geschreven door een bezoeker tijdens één reis, en in minder dan vijf minuten opgezet.',
+      'De zwarte pistes van Levi. Noorderlichtnachten in Inari. 60 km met de huskyslee in Saariselkä. The Field Journal — onze redactie — bouwde deze voorbeeldblogs om het format te laten zien. Uw echte blog start u in minder dan vijf minuten.',
     liveBrowseAll: 'Alle blogs bekijken',
     liveCta: 'Start mijn reisblog',
     liveFootnote: 'Gratis · Geen kaart · Eerste notitie binnen 2 minuten',
     featuredEyebrow: 'Voorbeelddagboek van de oprichter',
     featuredEvery: 'Elke notitie →',
     featuredLead:
-      'Dit is hoe uw eigen reisblog eruit zou kunnen zien. De vijf voorbeeldnotities hieronder zijn geschreven door The Field Journal, de redactionele stem van Lapland.blog, gedurende één Laplandse winter. Echte temperaturen, echte hutten, echte soep. Lees er één en stel zich uw eigen reis voor.',
+      'Dit is hoe uw eigen reisblog eruit zou kunnen zien. De notities hieronder komen van The Field Journal, de redactie van Lapland.blog: een kleine kring schrijvers die het Laplandse jaar volgt, van middernachtzon tot poolnacht. Echte temperaturen, echte hutten, echte soep. Lees er één en stel zich uw eigen reis voor.',
     featuredLoading: 'Voorbeeld laden…',
     featuredNone: 'Nog geen voorbeeldnotities.',
     featuredReadEntry: 'Lees deze notitie',
@@ -207,7 +207,7 @@ const nl: SectionCopy = {
       'Gesponsorde berichten in de lezersnotities. Affiliate winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor schrijven, slecht voor lezers.',
     seedHeading: 'De voorbeeldnotities',
     seedBody:
-      'De vijf notities die al op de site staan zijn geschreven door The Field Journal, de redactionele stem van Lapland.blog. Ze laten zien hoe een eerlijke, langzame, fotogerichte reisblog kan lezen: echte temperaturen, echte tijden, geen brochurestem. Lees er één en stel zich uw eigen reis voor.',
+      'De notities op de site zijn geschreven door The Field Journal, de redactie van Lapland.blog: vijf redactionele stemmen met naam, elk met een eigen terrein — seizoenen, paden, eten, hutten en uitrusting. Ze laten zien hoe een eerlijke, langzame, fotogerichte reisblog kan lezen: echte temperaturen, echte tijden, geen brochurestem. Lees er één en stel zich uw eigen reis voor.',
     networkHeading: 'Over het netwerk',
     networkBody:
       'Lapland.blog maakt deel uit van het LaplandVibes-ecosysteem, een netwerk van Finse sites over Lapland. De andere sites vertellen u waar u heen moet, waar u slaapt en wat u doet. Deze site is waar de reis zelf wordt opgeschreven.',
@@ -239,6 +239,40 @@ const nl: SectionCopy = {
     plantLead:
       'Gaat u ergens heen die niet in deze lijst staat? Sodankylä, Posio, Kilpisjärvi, Hetta. Schrijf van daar de eerste notitie en wij zetten hem op de kaart.',
     plantCta: 'Start uw blog',
+    places: {
+      rovaniemi: {
+        region: 'Op de poolcirkel',
+        blurb: 'De hoofdstad van Lapland. Waar de meeste vluchten landen. Het basiskamp voor alles ten noorden van hier.',
+      },
+      saariselka: {
+        region: 'Hoge noorden, fjell-land',
+        blurb: 'Boomloze toendra, glazen iglo’s, het nationale park Urho Kekkonen achter de deur.',
+      },
+      levi: {
+        region: 'West-Lapland, fjell-land',
+        blurb: 'Het grootste skigebied van Finland. In de winter directe vluchten vanuit Helsinki. Gezinsvriendelijk basiskamp.',
+      },
+      kemi: {
+        region: 'Kust van de Botnische Golf',
+        blurb: 'Sneeuwkasteel, ijsbrekertochten en de zuidelijkste kust van Lapland. Vlakker terrein, zilte lucht, noorderlicht boven zee.',
+      },
+      inari: {
+        region: 'Hart van het Sámi-land',
+        blurb: 'Het op twee na grootste meer van Finland. Het Sámi-cultuurcentrum Siida. Waar Lapland het verst van Europa voelt.',
+      },
+      muonio: {
+        region: 'West-Lapland, noorderlichtgordel',
+        blurb: 'Aan de rand van het nationale park Pallastunturi. Een van de hoogste noorderlicht-zichtwaarden van Europa.',
+      },
+      yllas: {
+        region: 'West-Lapland, fjell-land',
+        blurb: 'De rustigere zus van Levi. Bredere pistes, trager tempo, de fjell met zijn eigen seizoenen.',
+      },
+      kemijarvi: {
+        region: 'Oost-Lapland, merenland',
+        blurb: 'De noordelijkste stad van Finland. Een bevroren meer, een dozijn hutten op loopafstand. Stil.',
+      },
+    },
   },
   topReads: {
     pageTitle: 'Topartikelen | Lapland.blog',
@@ -447,10 +481,49 @@ const nl: SectionCopy = {
     shareThisStory: 'Deel dit verhaal',
     inThisStory: 'In dit verhaal',
     fieldJournalEntry: 'Veldjournaal-notitie',
-    liveTripBlog: 'Live-reisblog',
+    liveTripBlog: 'Voorbeeld-reisblog',
     yoursCouldBeNext: 'De jouwe kan de volgende zijn in deze carrousel.',
     featuredBadge: 'Uitgelicht',
     minRead: 'min leestijd',
+    exampleBadge: 'Voorbeeld',
+    byEditorial: 'Redactievoorbeeld',
+    entriesLabel: 'notities',
+    daysLabel: 'dagen',
+    yourTripYourBlog: 'Uw reis · Uw blog',
+    startFree: 'Gratis. Twee minuten om te starten. Voor altijd van u.',
+    startMine: 'Start de mijne',
+    examples: {
+      aurora: {
+        title: 'Vijf nachten, vier keer noorderlicht, één bevroren statief',
+        snippet:
+          'De Kp-index zei 2. De lucht dacht er anders over. Zuilen van 21:14 tot 23:40, gefotografeerd bij min 27.',
+      },
+      cabin: {
+        title: 'Een houten hut, geen wifi, acht dagen offline',
+        snippet:
+          'Elke ochtend hout gehakt. Elke avond sauna. Geslapen zoals ik in jaren niet heb geslapen.',
+      },
+      forest: {
+        title: 'Zes ochtenden stilte in een dennenbos',
+        snippet:
+          'Elke dag om 07:30 de hut uit. Geen muziek. Geen telefoon. Alleen het kraken van laarzen op verse sneeuw.',
+      },
+      nightforest: {
+        title: 'Hoe een sparrenbos klinkt bij −22 °C',
+        snippet:
+          'Naar niets. Dan één tak die knapt op honderd meter afstand. Het geluid draagt. Het draagt heel ver.',
+      },
+      silence: {
+        title: 'Eén boom, één meer, één uur in het blauwe uur',
+        snippet:
+          'Het ijs op gelopen tot de oever verdween. Eén den. Geen wind. Ik begreep het woord stilte opeens anders.',
+      },
+      food: {
+        title: 'De kom zalmsoep van tweeënveertig euro, besproken',
+        snippet:
+          'Hij kwam met roggebrood en een krul boter. In acht minuten leeg. Ik bestelde een tweede kom.',
+      },
+    },
   },
   footer: {
     ...en.footer,

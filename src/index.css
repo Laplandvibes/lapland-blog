@@ -121,21 +121,23 @@ textarea:focus-visible {
    MOTION SYSTEM — mirrors laplandnightlife
    ================================================================ */
 
+/* 380ms / 14px: reads as motion but a fast mobile fling never catches
+   half-faded sections (Vesa mobile QA 2026-07-11). */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
-              transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(14px);
+  transition: opacity 380ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-.reveal-delay-1 { transition-delay: 80ms; }
-.reveal-delay-2 { transition-delay: 160ms; }
-.reveal-delay-3 { transition-delay: 240ms; }
-.reveal-delay-4 { transition-delay: 320ms; }
-.reveal-delay-5 { transition-delay: 400ms; }
-.reveal-delay-6 { transition-delay: 480ms; }
+.reveal-delay-1 { transition-delay: 60ms; }
+.reveal-delay-2 { transition-delay: 120ms; }
+.reveal-delay-3 { transition-delay: 180ms; }
+.reveal-delay-4 { transition-delay: 240ms; }
+.reveal-delay-5 { transition-delay: 300ms; }
+.reveal-delay-6 { transition-delay: 360ms; }
 
 /* ================================================================
    HERO LEGIBILITY — text shadow + radial scrim
@@ -230,6 +232,14 @@ textarea:focus-visible {
   text-wrap: balance;
 }
 
+/* Dark sections rendered INSIDE an editorial page (Destinations/About/Post
+   wrap the whole route in .theme-editorial) must not inherit the ink heading
+   colour — ink on deep-night is invisible. The #newsletter id out-specifies
+   the .theme-editorial h2 rule above. */
+.theme-editorial #newsletter :is(h1, h2, h3, h4) {
+  color: var(--color-snow);
+}
+
 .theme-editorial a:focus-visible,
 .theme-editorial button:focus-visible,
 .theme-editorial input:focus-visible {
@@ -289,7 +299,9 @@ textarea:focus-visible {
   font-family: var(--font-editorial);
   font-weight: 800;
   float: left;
-  font-size: 5rem;
+  /* Scales down on phones — a full 5rem initial swallowed half the first
+     line at 375px (Vesa mobile QA 2026-07-11). */
+  font-size: clamp(3.25rem, 13vw, 5rem);
   line-height: 0.82;
   padding: 0.4rem 0.6rem 0 0;
   color: var(--color-accent);
@@ -435,7 +447,7 @@ textarea:focus-visible {
 .drop-cap-pink::first-letter {
   float: left;
   font-family: var(--font-editorial, 'Manrope', sans-serif);
-  font-size: 4.25rem;
+  font-size: clamp(3rem, 11.5vw, 4.25rem);
   line-height: 0.82;
   padding: 0.5rem 0.55rem 0 0;
   color: var(--color-pink, #EC4899);

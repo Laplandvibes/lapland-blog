@@ -24,16 +24,9 @@ import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { formatPostDate } from '../lib/dates';
 
 type IconType = ComponentType<{ size?: number; className?: string }>;
-
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  });
-}
 
 export default function TopReads() {
   const lang = useLang();
@@ -233,6 +226,8 @@ export default function TopReads() {
    ------------------------------------------------------------------ */
 function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) => string; minRead: string }) {
   const cat = categoryBySlug(post.category);
+  const lang = useLang();
+  const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
   return (
     <Link
       to={to(`/post/${post.slug}`)}
@@ -262,7 +257,7 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
           <span className="hidden md:block absolute left-0 top-8 bottom-8 w-1 rounded-full bg-gradient-to-b from-pink to-pink-600" />
           {cat && (
             <span className="inline-flex self-start items-center px-2.5 py-1 mb-4 rounded-full text-[10px] font-bold uppercase tracking-[0.22em] bg-pink/15 text-pink-200 border border-pink/35">
-              {cat.name}
+              {catName}
             </span>
           )}
           <h3 className="font-display text-2xl md:text-[2rem] leading-[1.08] tracking-tight text-snow group-hover:text-pink transition-colors mb-4">
@@ -272,7 +267,9 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
             {post.excerpt}
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-400">
-            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+            <time dateTime={post.publishedAt}>
+              {formatPostDate(post.publishedAt, lang, { day: 'numeric', month: 'short', year: 'numeric' })}
+            </time>
             <span aria-hidden>·</span>
             <span className="inline-flex items-center gap-1.5">
               <Clock size={12} /> {post.readTimeMinutes} {minRead}
@@ -348,6 +345,8 @@ function ListSection({ id, eyebrow, title, subtitle, posts, Icon, to, minRead, s
    ------------------------------------------------------------------ */
 function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; to: (p: string) => string; minRead: string }) {
   const cat = categoryBySlug(post.category);
+  const lang = useLang();
+  const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
   return (
     <Link
       to={to(`/post/${post.slug}`)}
@@ -379,7 +378,7 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
         <div className="flex items-center gap-2.5 mb-2 flex-wrap">
           {cat && (
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-[0.22em] bg-pink/15 text-pink-200 border border-pink/30">
-              {cat.name}
+              {catName}
             </span>
           )}
           <span className="inline-flex items-center gap-1 text-slate-400 text-[11px] tracking-wide">
@@ -387,7 +386,7 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
           </span>
           <span className="text-slate-500 text-[11px] hidden sm:inline">·</span>
           <time className="text-slate-400 text-[11px] hidden sm:inline" dateTime={post.publishedAt}>
-            {formatDate(post.publishedAt)}
+            {formatPostDate(post.publishedAt, lang, { day: 'numeric', month: 'short', year: 'numeric' })}
           </time>
         </div>
         <h3 className="font-display text-lg sm:text-xl md:text-2xl leading-snug tracking-tight text-snow group-hover:text-pink transition-colors line-clamp-2">

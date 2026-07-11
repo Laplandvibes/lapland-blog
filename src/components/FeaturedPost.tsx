@@ -4,6 +4,7 @@ import type { Post } from '../data/posts';
 import { categoryBySlug } from '../data/categories';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { formatPostDate } from '../lib/dates';
 
 interface Props {
   post: Post;
@@ -16,7 +17,9 @@ interface Props {
 export default function FeaturedPost({ post }: Props) {
   const cat = categoryBySlug(post.category);
   const lp = useLocalePath();
-  const c = COPY[useLang()].chrome;
+  const lang = useLang();
+  const c = COPY[lang].chrome;
+  const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
 
   return (
     <article className="relative overflow-hidden rounded-3xl border border-purple/25 shadow-[0_40px_100px_-40px_rgba(0,0,0,0.6)]">
@@ -24,7 +27,7 @@ export default function FeaturedPost({ post }: Props) {
         {/* Image */}
         <Link
           to={lp(`/post/${post.slug}`)}
-          className="md:col-span-3 relative overflow-hidden focus:outline-none"
+          className="md:col-span-3 relative overflow-hidden focus:outline-none aspect-[16/10] md:aspect-auto"
           aria-label={`Read featured story: ${post.title}`}
         >
           <img
@@ -51,7 +54,7 @@ export default function FeaturedPost({ post }: Props) {
 
           {cat && (
             <p className="text-pink-300 text-[10px] uppercase tracking-[0.3em] mb-3 font-bold">
-              {cat.name} · {post.readTimeMinutes} min
+              {catName} · {post.readTimeMinutes} min
             </p>
           )}
 
@@ -65,11 +68,7 @@ export default function FeaturedPost({ post }: Props) {
 
           <div className="flex items-center gap-5 text-xs text-slate-300 mb-7">
             <time dateTime={post.publishedAt}>
-              {new Date(post.publishedAt).toLocaleDateString('en-GB', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-              })}
+              {formatPostDate(post.publishedAt, lang)}
             </time>
             <span className="inline-flex items-center gap-1.5">
               <Clock size={12} />

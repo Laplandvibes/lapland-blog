@@ -1,10 +1,10 @@
-// TripBlogsCarousel — horizontal scroll-snap showcase of traveler trip blogs.
-// Until real users exist this is hand-curated demo data — stories built
-// around the 7 real trip photos in public/images/ (see lib/images.ts).
-// Designed to plant the "I want to make one too" feeling for first-time
-// visitors. Snap is `proximity` not `mandatory` so the scroll flows freely
-// instead of yanking on every drag. Auto-advance pauses for 6s after any
-// touch interaction so the user can swipe and the carousel respects it.
+// TripBlogsCarousel — horizontal scroll-snap showcase of EXAMPLE trip blogs
+// built by The Field Journal (the site's editorial desk) around the 7 real
+// trip photos in public/images/ (see lib/images.ts). Clearly labelled as
+// examples — no fabricated users, no fake view counts (honest model,
+// laplandblog_editorial_model). Designed to plant the "I want to make one
+// too" feeling. Snap is `proximity` not `mandatory` so the scroll flows
+// freely; auto-advance pauses for 6s after any touch interaction.
 
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -14,125 +14,44 @@ import {
   ChevronRight,
   MapPin,
   CalendarDays,
-  Eye,
 } from 'lucide-react';
 import { getImage, type TripSlot } from '../lib/images';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
-interface DemoBlog {
-  username: string;
-  fullName: string;
-  /** Initials shown inside a gradient avatar circle */
-  initials: string;
-  /** Tailwind gradient classes for the avatar */
-  avatarGradient: string;
-  location: string;
+// HONEST MODEL (laplandblog_editorial_model, Vesa 2026-06-26 / enforced
+// 2026-07-11): no fabricated private individuals, no fake view counts.
+// These cards are EXAMPLE journals built by The Field Journal (the site's
+// own editorial desk) to show the format. Every card is labelled as an
+// example, attributed to The Field Journal, and titles/snippets come from
+// the copy files so they localize with the rest of the page.
+export type ExampleBlogKey =
+  | 'aurora'
+  | 'cabin'
+  | 'forest'
+  | 'nightforest'
+  | 'silence'
+  | 'food';
+
+interface ExampleBlog {
+  key: ExampleBlogKey;
+  place: string;
   entries: number;
   days: number;
-  views: string;
-  title: string;
-  snippet: string;
   heroSlot: TripSlot;
   accent: 'pink' | 'blue' | 'green' | 'purple';
-  badge?: string;
 }
 
-const DEMO_BLOGS: DemoBlog[] = [
-  {
-    username: 'aurora.chase',
-    fullName: 'Sara Lindgren',
-    initials: 'SL',
-    avatarGradient: 'from-aurora-green to-aurora-blue',
-    location: 'Inari · 5 days',
-    entries: 9,
-    days: 5,
-    views: '8.1k',
-    title: 'Five nights, four auroras, one frozen tripod',
-    snippet:
-      'Kp index said 2. The sky said otherwise. Pillars from 21:14 to 23:40, photographed at minus 27.',
-    heroSlot: 'trip-aurora-chase',
-    accent: 'green',
-    badge: 'Featured',
-  },
-  {
-    username: 'cabinlife.no',
-    fullName: 'Ingrid Sørensen',
-    initials: 'IS',
-    avatarGradient: 'from-pink to-purple',
-    location: 'Pyhä · 8 days',
-    entries: 14,
-    days: 8,
-    views: '6.0k',
-    title: 'A wood cabin, no wifi, eight days off the grid',
-    snippet:
-      'Chopped wood every morning. Sauna every night. Slept harder than I have in years.',
-    heroSlot: 'trip-cabin-life',
-    accent: 'purple',
-  },
-  {
-    username: 'foresttracks',
-    fullName: 'Marcus Weber',
-    initials: 'MW',
-    avatarGradient: 'from-aurora-blue to-purple',
-    location: 'Rovaniemi · 6 days',
-    entries: 11,
-    days: 6,
-    views: '4.2k',
-    title: 'Six mornings of silence in a pine forest',
-    snippet:
-      'Left the cabin at 07:30 every day. No music. No phone. Just the creak of boots on fresh snow.',
-    heroSlot: 'trip-forest-walk',
-    accent: 'blue',
-  },
-  {
-    username: 'nightforest',
-    fullName: 'Camille Dubois',
-    initials: 'CD',
-    avatarGradient: 'from-purple to-aurora-green',
-    location: 'Korouoma · 3 days',
-    entries: 6,
-    days: 3,
-    views: '2.6k',
-    title: 'What a spruce forest sounds like at -22°C',
-    snippet:
-      'Nothing. Then a single branch snapping a hundred metres away. It carries. It carries very far.',
-    heroSlot: 'trip-night-forest',
-    accent: 'blue',
-  },
-  {
-    username: 'icelakelife',
-    fullName: 'Yuki & Ren',
-    initials: 'YR',
-    avatarGradient: 'from-aurora-green to-pink',
-    location: 'Sodankylä · 4 days',
-    entries: 7,
-    days: 4,
-    views: '1.9k',
-    title: 'One tree, one lake, one hour at blue hour',
-    snippet:
-      'Walked out on the ice until the shore disappeared. A single pine. Zero wind. I understood the word silence differently.',
-    heroSlot: 'trip-silence',
-    accent: 'green',
-  },
-  {
-    username: 'soupandsauna',
-    fullName: 'Tomás & Lila',
-    initials: 'TL',
-    avatarGradient: 'from-pink to-aurora-green',
-    location: 'Levi · 7 days',
-    entries: 12,
-    days: 7,
-    views: '5.7k',
-    title: 'The forty-two-euro bowl of salmon soup, reviewed',
-    snippet:
-      'It came with rye bread and a curl of butter. I finished it in eight minutes. I ordered a second bowl.',
-    heroSlot: 'trip-food',
-    accent: 'pink',
-  },
+const EXAMPLE_BLOGS: ExampleBlog[] = [
+  { key: 'aurora', place: 'Inari', entries: 9, days: 5, heroSlot: 'trip-aurora-chase', accent: 'green' },
+  { key: 'cabin', place: 'Pyhä', entries: 14, days: 8, heroSlot: 'trip-cabin-life', accent: 'purple' },
+  { key: 'forest', place: 'Rovaniemi', entries: 11, days: 6, heroSlot: 'trip-forest-walk', accent: 'blue' },
+  { key: 'nightforest', place: 'Korouoma', entries: 6, days: 3, heroSlot: 'trip-night-forest', accent: 'blue' },
+  { key: 'silence', place: 'Sodankylä', entries: 7, days: 4, heroSlot: 'trip-silence', accent: 'green' },
+  { key: 'food', place: 'Levi', entries: 12, days: 7, heroSlot: 'trip-food', accent: 'pink' },
 ];
 
-const ACCENT_BORDER: Record<DemoBlog['accent'], string> = {
+const ACCENT_BORDER: Record<ExampleBlog['accent'], string> = {
   pink: 'group-hover:border-pink/70',
   blue: 'group-hover:border-aurora-blue/70',
   green: 'group-hover:border-aurora-green/70',
@@ -143,14 +62,14 @@ const ACCENT_BORDER: Record<DemoBlog['accent'], string> = {
 // #DB2777) only reach ~3.3–4.3:1 at this size and fail WCAG AA, so the text
 // uses lighter pink tints (~8:1). Colour variety still comes from the per-card
 // borders, dots and avatar gradients below, which keep the brand hues.
-const ACCENT_TEXT: Record<DemoBlog['accent'], string> = {
+const ACCENT_TEXT: Record<ExampleBlog['accent'], string> = {
   pink: 'text-pink-300',
   blue: 'text-pink-300',
   green: 'text-pink-300',
   purple: 'text-purple-light',
 };
 
-const ACCENT_DOT: Record<DemoBlog['accent'], string> = {
+const ACCENT_DOT: Record<ExampleBlog['accent'], string> = {
   pink: 'bg-pink',
   blue: 'bg-aurora-blue',
   green: 'bg-aurora-green',
@@ -255,14 +174,15 @@ export default function TripBlogsCarousel() {
           scrollSnapStop: 'normal',
         }}
       >
-        {DEMO_BLOGS.map((blog) => {
+        {EXAMPLE_BLOGS.map((blog) => {
           const img = getImage(
             blog.heroSlot,
             '(max-width: 640px) 300px, (max-width: 1024px) 380px, 380px'
           );
+          const ex = c.examples[blog.key];
           return (
           <article
-            key={blog.username}
+            key={blog.key}
             data-card
             className="group snap-start shrink-0 w-[300px] sm:w-[340px] md:w-[380px]"
           >
@@ -285,32 +205,25 @@ export default function TripBlogsCarousel() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night via-night/40 to-transparent" />
 
-                {blog.badge && (
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-pink text-white text-[9px] tracking-[0.25em] uppercase font-bold shadow-lg">
-                    {blog.badge}
-                  </span>
-                )}
+                {/* Every card is transparently labelled an editorial example */}
+                <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-night/85 backdrop-blur-md border border-pink/50 text-pink-200 text-[9px] tracking-[0.25em] uppercase font-bold">
+                  {c.exampleBadge}
+                </span>
 
-                {/* Stats overlay top-right */}
-                <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-night/80 backdrop-blur-md text-snow text-[10px] font-semibold">
-                  <Eye size={11} />
-                  {blog.views}
-                </div>
-
-                {/* Author overlay bottom */}
+                {/* Author overlay bottom — the real editorial desk */}
                 <div className="absolute bottom-0 inset-x-0 p-4 flex items-center gap-3">
                   <div
                     aria-hidden
-                    className={`w-10 h-10 rounded-full border-2 border-snow/90 bg-gradient-to-br ${blog.avatarGradient} flex items-center justify-center text-snow text-xs font-bold tracking-wide shadow-lg`}
+                    className="w-10 h-10 rounded-full border-2 border-snow/90 bg-gradient-to-br from-pink to-aurora-blue flex items-center justify-center text-snow text-xs font-bold tracking-wide shadow-lg"
                   >
-                    {blog.initials}
+                    FJ
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-snow text-sm font-semibold truncate">
-                      {blog.fullName}
+                      The Field Journal
                     </p>
                     <p className={`text-[10px] tracking-wider uppercase font-semibold truncate ${ACCENT_TEXT[blog.accent]}`}>
-                      lapland.blog/{blog.username}
+                      {c.byEditorial}
                     </p>
                   </div>
                 </div>
@@ -321,27 +234,27 @@ export default function TripBlogsCarousel() {
                 <div className="flex items-center gap-3 mb-3 text-[10px] tracking-[0.18em] uppercase font-semibold text-slate-400">
                   <span className="inline-flex items-center gap-1">
                     <MapPin size={11} className={ACCENT_TEXT[blog.accent]} />
-                    {blog.location}
+                    {blog.place} · {blog.days} {c.daysLabel}
                   </span>
                   <span className="w-1 h-1 rounded-full bg-slate-600" />
                   <span className="inline-flex items-center gap-1">
                     <CalendarDays size={11} className={ACCENT_TEXT[blog.accent]} />
-                    {blog.entries} entries
+                    {blog.entries} {c.entriesLabel}
                   </span>
                 </div>
                 <h3
                   className="font-display text-snow text-lg leading-snug font-medium mb-2"
                   style={{ fontFamily: 'var(--font-editorial)' }}
                 >
-                  {blog.title}
+                  {ex.title}
                 </h3>
                 <p className="text-slate-400 text-xs leading-relaxed line-clamp-2">
-                  "{blog.snippet}"
+                  "{ex.snippet}"
                 </p>
 
                 <div className="mt-4 pt-4 border-t border-purple/20 flex items-center justify-between">
                   <span className={`inline-flex items-center gap-1.5 text-[10px] tracking-[0.2em] uppercase font-bold ${ACCENT_TEXT[blog.accent]}`}>
-                    <span className={`w-1.5 h-1.5 rounded-full ${ACCENT_DOT[blog.accent]} animate-pulse`} />
+                    <span className={`w-1.5 h-1.5 rounded-full ${ACCENT_DOT[blog.accent]}`} />
                     {c.liveTripBlog}
                   </span>
                   <ArrowRight
@@ -368,7 +281,7 @@ export default function TripBlogsCarousel() {
               <ArrowRight size={24} className="text-pink" />
             </div>
             <p className="text-pink text-[10px] tracking-[0.35em] uppercase font-bold mb-3">
-              Your trip · Your blog
+              {c.yourTripYourBlog}
             </p>
             <h3
               className="font-display text-snow text-2xl leading-tight font-light mb-4"
@@ -377,10 +290,10 @@ export default function TripBlogsCarousel() {
               {c.yoursCouldBeNext}
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
-              Free. Two minutes to start. Yours forever.
+              {c.startFree}
             </p>
             <span className="px-6 py-3 bg-pink text-white font-semibold rounded-full text-xs tracking-[0.2em] uppercase group-hover:bg-pink-dark transition-colors">
-              Start mine
+              {c.startMine}
             </span>
           </Link>
         </article>
