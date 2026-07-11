@@ -19,6 +19,8 @@ import { getImage } from '../lib/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import type { CategorySlug } from '../data/categories';
+import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import { AD_SLOTS } from '../data/adSlots';
 
 const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   'en': {
@@ -236,6 +238,10 @@ export default function Home() {
 
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-night pointer-events-none" />
       </section>
+
+      {/* PÄÄKUMPPANI-banneri HETI heron alle (LV Media; tyhjä → house-ad).
+          Tumma pinta — istuu sivun bg-night-taustaan. */}
+      <MainPartnerBanner config={AD_SLOTS} locale={lang} />
 
       {/* SEASONAL BAND */}
       <section
@@ -487,6 +493,10 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* LV Media -kumppaniosio heti ensimmäisen sisältöosion (live trip blogs)
+          jälkeen: kakkospääkumppani + 6 kohdepaikkaa (house-adit kun tyhjänä). */}
+      <HomeAdSlots config={AD_SLOTS} locale={lang} />
 
       <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
 
