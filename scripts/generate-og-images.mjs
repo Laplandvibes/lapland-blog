@@ -33,6 +33,12 @@ const CARDS = [
   { slug: 'five-nights-in-a-forest-cabin', src: 'trip-cabin-life-1200.webp', kicker: 'CABINS · KEMIJÄRVI', focus: 'attention' },
   { slug: 'a-bowl-of-salmon-soup-that-cost-more-than-the-flight', src: 'trip-food-1200.webp', kicker: 'FOOD · ROVANIEMI', focus: 'centre' },
   { slug: 'living-between-two-suns', src: 'category-seasons-1200.webp', kicker: 'SEASONS · KAAMOS', focus: 'attention' },
+  // ── Summer 2026 batch (Field Journal pens) ─────────────────────────────
+  { slug: 'the-sun-did-not-set-it-just-circled-the-house', src: 'summer-midnight-sun-1200.webp', kicker: 'SEASONS · NIGHTLESS NIGHT', focus: 'attention' },
+  { slug: 'twelve-kilometres-at-one-in-the-morning', src: 'summer-fell-boardwalk-1200.webp', kicker: 'TRAILS · KIILOPÄÄ', focus: 'attention' },
+  { slug: 'strawberry-hour-at-the-rovaniemi-market', src: 'summer-market-strawberries-1200.webp', kicker: 'FOOD · ROVANIEMI', focus: 'centre' },
+  { slug: 'the-sauna-thermometer-said-eighty-two', src: 'summer-lake-sauna-1200.webp', kicker: 'CABINS · KEMIJÄRVI', focus: 'attention' },
+  { slug: 'what-july-in-lapland-actually-asks-you-to-pack', src: 'summer-gear-porch-1200.webp', kicker: 'GEAR · JULY', focus: 'centre' },
 
   // ── Key pages (source = page hero) ──────────────────────────────────────
   { slug: 'page-home', src: 'hero-aurora-1920.webp', kicker: 'FREE TRAVEL-BLOG PLATFORM', focus: 'attention' },

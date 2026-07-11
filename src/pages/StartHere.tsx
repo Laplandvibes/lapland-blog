@@ -184,6 +184,8 @@ export default function StartHere() {
                 body={c.planStay.body}
                 href="https://laplandstays.com"
                 cta="laplandstays.com"
+                img="/images/plan-stay-1200.webp"
+                gradient="from-vibe-pink/45 via-night/25 to-night"
               />
             </Reveal>
             <Reveal delay={2}>
@@ -194,6 +196,8 @@ export default function StartHere() {
                 body={c.planTransport.body}
                 href="https://laplandtransport.com"
                 cta="laplandtransport.com"
+                img="/images/plan-transport-1200.webp"
+                gradient="from-sky-500/45 via-night/25 to-night"
               />
             </Reveal>
             <Reveal delay={3}>
@@ -202,8 +206,10 @@ export default function StartHere() {
                 kicker={c.planDo.kicker}
                 title={c.planDo.title}
                 body={c.planDo.body}
-                href="https://laplandactivities.online"
-                cta="laplandactivities.online"
+                href="https://laplandactivities.fi"
+                cta="laplandactivities.fi"
+                img="/images/plan-do-1200.webp"
+                gradient="from-cyan-500/45 via-night/25 to-night"
               />
             </Reveal>
             <Reveal delay={4}>
@@ -214,6 +220,8 @@ export default function StartHere() {
                 body={c.planEat.body}
                 href="https://laplanddining.com"
                 cta="laplanddining.com"
+                img="/images/plan-eat-1200.webp"
+                gradient="from-orange-500/45 via-night/25 to-night"
               />
             </Reveal>
           </div>
@@ -338,26 +346,41 @@ interface PlanCardProps {
   href: string;
   cta: string;
   Icon: React.ComponentType<{ size?: number; className?: string }>;
+  /** Background photo (/public path). Falls back to the gradient alone if it 404s. */
+  img?: string;
+  /** Tailwind gradient stops for the category tint sitting over the photo (and as
+   *  the standalone background before the photo loads / if it's missing). */
+  gradient?: string;
 }
 
-function PlanCard({ kicker, title, body, href, cta, Icon }: PlanCardProps) {
+function PlanCard({ kicker, title, body, href, cta, Icon, img, gradient = 'from-pink/40 via-night/30 to-night' }: PlanCardProps) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener"
-      className="group block h-full rounded-2xl border border-purple/25 bg-night-light/50 p-6 transition-all duration-300 hover:bg-night-light/70 hover:-translate-y-1 hover:border-pink/55"
+      className="group relative block h-full min-h-[280px] overflow-hidden rounded-2xl border border-purple/25 bg-night-light/50 bg-cover bg-center transition-all duration-300 hover:-translate-y-1 hover:border-pink/55 hover:shadow-[0_24px_60px_-30px_rgba(0,0,0,0.9)]"
+      style={img ? { backgroundImage: `url(${img})` } : undefined}
     >
-      <div className="flex items-center gap-2 mb-4">
-        <Icon size={18} className="text-pink" />
-        <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase">{kicker}</p>
+      {/* A missing background-image simply shows the category gradient below — no
+          broken-image icon, so the section looks intentional before/without photos. */}
+      {/* Category-tinted gradient scrim: legible text + on-brand even with no photo. */}
+      <div className={`absolute inset-0 bg-gradient-to-b ${gradient}`} />
+      <div className="absolute inset-0 bg-gradient-to-t from-night via-night/50 to-transparent" />
+
+      {/* Content, bottom-anchored over the image. */}
+      <div className="relative flex h-full flex-col justify-end p-6">
+        <div className="flex items-center gap-2 mb-2">
+          <Icon size={18} className="text-pink drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]" />
+          <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">{kicker}</p>
+        </div>
+        <h3 className="font-display text-xl text-snow mb-2 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{title}</h3>
+        <p className="text-slate-200 text-sm leading-relaxed mb-4 drop-shadow-[0_1px_6px_rgba(0,0,0,0.95)]">{body}</p>
+        <span className="inline-flex items-center gap-1.5 text-pink group-hover:text-snow text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors">
+          {cta}
+          <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+        </span>
       </div>
-      <h3 className="font-display text-xl text-snow mb-2 leading-tight">{title}</h3>
-      <p className="text-slate-300 text-sm leading-relaxed mb-5">{body}</p>
-      <span className="inline-flex items-center gap-1.5 text-pink group-hover:text-snow text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors">
-        {cta}
-        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-      </span>
     </a>
   );
 }

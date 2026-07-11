@@ -30,7 +30,7 @@ const SITE_RULES: {
     patterns: [/safari/i, /reindeer.*ride/i, /husky/i, /snowmobile/i, /ski/i, /hike/i, /activit/i, /excursion/i, /tour/i, /sledg/i],
     link: {
       site: 'LaplandActivities',
-      url: 'https://laplandactivities.online',
+      url: 'https://laplandactivities.fi',
       label: 'Book activities',
       description: 'Safaris, husky rides, snowmobiles & more',
       icon: 'mountain-snow',

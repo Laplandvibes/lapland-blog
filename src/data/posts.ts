@@ -28,7 +28,8 @@ export interface Post {
   readTimeMinutes: number;
   heroImage: string;            // absolute URL
   heroAlt: string;
-  author: 'vesa';
+  /** Author registry key (src/data/author.ts) — 'vesa'/'fieldjournal' or a pen handle. */
+  author: string;
   featured?: boolean;
   content: PostBlock[];
 }

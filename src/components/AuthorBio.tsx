@@ -1,21 +1,24 @@
 import { Link } from 'react-router-dom';
-import { vesa } from '../data/author';
+import { vesa, authors } from '../data/author';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 interface Props {
   variant?: 'editorial' | 'dark';
+  /** Author registry key — an editorial pen handle. Defaults to the umbrella Field Journal voice. */
+  author?: string;
 }
 
 /**
  * AuthorBio — small author card shown at the end of a post and on About.
- * Renders the editorial voice (no real-person avatar) — actual user-submitted
+ * Renders an editorial voice (no real-person avatar) — actual user-submitted
  * trip blogs render their own author from the user profile.
  */
-export default function AuthorBio({ variant = 'editorial' }: Props) {
+export default function AuthorBio({ variant = 'editorial', author }: Props) {
   const isEditorial = variant === 'editorial';
   const lp = useLocalePath();
   const c = COPY[useLang()].chrome;
+  const voice = (author && authors[author]) || vesa;
 
   return (
     <aside
@@ -37,7 +40,7 @@ export default function AuthorBio({ variant = 'editorial' }: Props) {
           style={isEditorial ? { fontFamily: 'var(--font-editorial)' } : undefined}
           aria-hidden="true"
         >
-          {vesa.initials}
+          {voice.initials}
         </div>
 
         <div className="flex-1">
@@ -58,7 +61,7 @@ export default function AuthorBio({ variant = 'editorial' }: Props) {
             }
             style={isEditorial ? { fontFamily: 'var(--font-editorial)' } : undefined}
           >
-            {vesa.name}
+            {voice.name}
           </h3>
           <p
             className={
@@ -67,7 +70,7 @@ export default function AuthorBio({ variant = 'editorial' }: Props) {
                 : 'text-slate-300 leading-relaxed text-[0.95rem] mb-4'
             }
           >
-            {vesa.bio}
+            {voice.bio}
           </p>
           <Link
             to={lp('/about')}

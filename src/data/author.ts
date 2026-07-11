@@ -76,7 +76,7 @@ export const marja: Author = {
   role: 'Editorial · Food & the Cabin Table',
   bio: 'Writes the food column of The Field Journal, the editorial desk of Lapland.blog: market squares, cabin kitchens, and what things actually cost.',
   longBio:
-    'Marja Aho is an editorial pen of The Field Journal, the in-house desk of Lapland.blog. The beat: what people in Finnish Lapland actually eat and where — market squares, smoke saunas that double as kitchens, roadside grills, the one café in a village of two hundred. Entries in this column carry real prices and real portions, and never call anything world-class.',
+    'Marja Aho is an editorial pen of The Field Journal, the in-house desk of Lapland.blog. The beat: what people in Finnish Lapland actually eat and where — market squares, smoke saunas that double as kitchens, roadside grills, the one café in a village of two hundred. Entries in this column carry real prices and real portions, and never reach for the big adjectives.',
   location: 'Finnish Lapland',
   social: {
     email: 'info@lapland.blog',
