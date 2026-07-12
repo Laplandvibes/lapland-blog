@@ -141,7 +141,7 @@ export default function Category() {
                   <span className="font-display text-base text-snow group-hover:text-pink transition-colors">
                     {c.themes[cat.slug]?.name ?? cat.name}
                   </span>
-                  <span className="text-xs text-slate-500 group-hover:text-slate-300 transition-colors">
+                  <span className="hidden lg:inline text-xs text-slate-500 group-hover:text-slate-300 transition-colors">
                     {c.themes[cat.slug]?.tagline ?? cat.tagline}
                   </span>
                 </Link>

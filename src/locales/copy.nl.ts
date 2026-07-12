@@ -278,7 +278,7 @@ const nl: SectionCopy = {
     pageTitle: 'Topartikelen | Lapland.blog',
     pageDescription:
       'Waar te beginnen op Lapland.blog. Lijsten van de redactie: beste notities voor de eerste reis, beste noorderlichtstukken, beste eetnotities, seizoenen.',
-    eyebrow: 'Lijsten van de redactie',
+    eyebrow: 'Keuze van de redactie',
     h1: 'Topartikelen.',
     lead: 'Hier begint u. Door de redactie gekozen, niet door klikken. Naarmate er meer veldnotities verschijnen, groeien deze lijsten mee.',
     onlyEyebrow: 'Als u er maar één leest',

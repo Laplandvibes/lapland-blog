@@ -328,7 +328,7 @@ const zhCN: SectionCopy = {
     pageTitle: '热门阅读 | Lapland.blog',
     pageDescription:
       '在 Lapland.blog 从何读起。精选清单:最适合初次到访者的文章、最佳极光篇、最佳美食篇,以及当季之选。由编辑挑选。',
-    eyebrow: '编辑精选清单',
+    eyebrow: '编辑精选',
     h1: '热门阅读。',
     lead: '从何读起。由编辑挑选,而非由点击量决定。随着更多田野日志文章发布,这些清单会不断扩充。',
     onlyEyebrow: '如果您只读一篇',

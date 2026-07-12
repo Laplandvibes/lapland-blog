@@ -329,7 +329,7 @@ const de: SectionCopy = {
     pageTitle: 'Beliebt | Lapland.blog',
     pageDescription:
       'Wo Sie auf Lapland.blog anfangen sollten. Kuratierte Listen: beste Einträge für Erstbesucher, beste Nordlicht-Stücke, beste Essen-Einträge, die saisonalen.',
-    eyebrow: 'Kuratierte Listen der Redaktion',
+    eyebrow: 'Auswahl der Redaktion',
     h1: 'Meistgelesene.',
     lead:
       'Wo anfangen. Vom Redakteur gewählt, nicht von Klicks. Die Listen wachsen, sobald weitere Feldtagebuch-Einträge erscheinen.',

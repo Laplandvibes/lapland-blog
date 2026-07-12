@@ -278,7 +278,7 @@ const it: SectionCopy = {
     pageTitle: 'Letture top | Lapland.blog',
     pageDescription:
       'Da dove cominciare su Lapland.blog. Liste curate: migliori voci per chi arriva la prima volta, migliori pezzi sull’aurora, voci sul cibo, voci stagionali.',
-    eyebrow: 'Liste curate dalla redazione',
+    eyebrow: 'Scelte della redazione',
     h1: 'Letture top.',
     lead: 'Da dove cominciare. Scelte dalla redazione, non dai clic. Man mano che escono nuove voci dal campo, queste liste si arricchiscono.',
     onlyEyebrow: 'Se ne legge una sola',

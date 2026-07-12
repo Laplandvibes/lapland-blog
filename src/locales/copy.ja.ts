@@ -328,7 +328,7 @@ const ja: SectionCopy = {
     pageTitle: 'おすすめ記事 | Lapland.blog',
     pageDescription:
       'Lapland.blogでの読み始めに。編集者の厳選リスト：初めての方向けのベスト記事、オーロラ記事、食事記事、季節記事。クリック数ではなく編集者の選定。',
-    eyebrow: '編集者の厳選リスト',
+    eyebrow: '編集部の厳選',
     h1: 'おすすめ記事。',
     lead: '読み始めはこちらから。クリック数ではなく編集者が選んでいます。フィールドジャーナルの記事が増えるたびに、リストも育ちます。',
     onlyEyebrow: 'もし一本だけ読むなら',

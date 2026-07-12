@@ -328,7 +328,7 @@ const ptBR: SectionCopy = {
     pageTitle: 'Mais lidos | Lapland.blog',
     pageDescription:
       'Por onde começar no Lapland.blog. Listas da redação: as melhores entradas para iniciantes, sobre auroras, sobre comida e de cada temporada.',
-    eyebrow: 'Listas selecionadas pela redação',
+    eyebrow: 'Seleção da redação',
     h1: 'Mais lidos.',
     lead: 'Por onde começar. Selecionado pela redação, não pelos cliques. À medida que mais entradas do diário de campo são publicadas, estas listas crescem.',
     onlyEyebrow: 'Se você só ler uma',

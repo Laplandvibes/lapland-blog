@@ -328,7 +328,7 @@ const en: SectionCopy = {
     pageTitle: 'Top reads | Lapland.blog',
     pageDescription:
       'Where to start on Lapland.blog. Curated lists: best entries for first-timers, best aurora pieces, best food entries, the seasonal ones. Picked by the editor.',
-    eyebrow: "Editor's curated lists",
+    eyebrow: "Editor's picks",
     h1: 'Top reads.',
     lead: 'Where to start. Curated by the editor, not by clicks. As more field-journal entries ship, these lists grow.',
     onlyEyebrow: 'If you only read one',

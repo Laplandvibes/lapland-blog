@@ -328,7 +328,7 @@ const es: SectionCopy = {
     pageTitle: 'Lo más leído | Lapland.blog',
     pageDescription:
       'Por dónde empezar en Lapland.blog. Listas de la redacción: las mejores entradas para primerizos, sobre auroras, sobre comida y de cada temporada.',
-    eyebrow: 'Listas seleccionadas por la redacción',
+    eyebrow: 'Selección de la redacción',
     h1: 'Lo más leído.',
     lead: 'Por dónde empezar. Seleccionado por la redacción, no por los clics. A medida que se publican más entradas del diario de campo, estas listas crecen.',
     onlyEyebrow: 'Si solo lee uno',

@@ -278,7 +278,7 @@ const fr: SectionCopy = {
     pageTitle: 'À lire en priorité | Lapland.blog',
     pageDescription:
       'Par où commencer sur Lapland.blog. Listes de la rédaction : première visite, aurores, cuisine et saisonnières.',
-    eyebrow: 'Listes de la rédaction',
+    eyebrow: 'Choix de la rédaction',
     h1: 'À lire en priorité.',
     lead: 'Par où commencer. Choix de la rédaction, pas des clics. Au fur et à mesure que de nouvelles entrées paraissent, ces listes s’étoffent.',
     onlyEyebrow: 'Si vous n’en lisez qu’une',

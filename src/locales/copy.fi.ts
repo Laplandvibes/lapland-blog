@@ -328,7 +328,7 @@ const fi: SectionCopy = {
     pageTitle: 'Suosituimmat | Lapland.blog',
     pageDescription:
       'Mistä aloittaa Lapland.blogissa. Käsin valitut listat: parhaat ensikertalaisille, parhaat revontulijutut, parhaat ruokamerkinnät, sesonkijutut.',
-    eyebrow: 'Toimituksen käsin valitsemat listat',
+    eyebrow: 'Toimituksen valinnat',
     h1: 'Suosituimmat luetut.',
     lead:
       'Mistä aloittaa. Toimituksen valitsemaa, ei klikkilukujen mukaista. Listat kasvavat, kun uusia kenttämerkintöjä julkaistaan.',

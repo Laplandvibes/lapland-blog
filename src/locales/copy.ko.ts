@@ -278,7 +278,7 @@ const ko: SectionCopy = {
     pageTitle: '인기 글 | Lapland.blog',
     pageDescription:
       'Lapland.blog에서 어디부터 읽기 시작할지. 편집자의 큐레이션 목록: 초심자용 베스트, 오로라 글, 음식 글, 계절 글. 클릭수가 아닌 편집자의 안목으로 골랐습니다.',
-    eyebrow: '편집자가 고른 목록',
+    eyebrow: '편집자 추천',
     h1: '인기 글.',
     lead: '읽기 시작하실 곳입니다. 클릭이 아니라 편집자가 골랐습니다. 현장 일기가 늘어날수록 목록도 함께 자랍니다.',
     onlyEyebrow: '한 편만 읽으시려면',

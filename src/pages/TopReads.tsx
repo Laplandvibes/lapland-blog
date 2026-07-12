@@ -88,7 +88,7 @@ export default function TopReads() {
           <Reveal>
             <div className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full bg-night/70 border border-pink/45 backdrop-blur-sm">
               <Sparkles size={13} className="text-pink-300" />
-              <p className="text-pink-200 tracking-[0.32em] text-[10px] font-bold uppercase">
+              <p className="text-pink-200 tracking-[0.32em] text-[10px] font-bold uppercase whitespace-nowrap">
                 {c.eyebrow}
               </p>
             </div>

@@ -189,11 +189,16 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
           <Reveal>
-            <div className="inline-flex items-center gap-3 mb-6 px-4 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/40">
-              <Snowflake size={12} className="text-pink" />
-              <span className="text-pink tracking-[0.4em] text-[11px] uppercase font-bold">
-                {c.heroEyebrow}
-              </span>
+            <div className="flex flex-wrap items-center justify-center gap-1.5 mb-6">
+              {c.heroEyebrow.split('·').map((part, i) => (
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/40 text-pink tracking-[0.4em] text-[11px] uppercase font-bold whitespace-nowrap"
+                >
+                  {i === 0 && <Snowflake size={12} className="text-pink" />}
+                  {part.trim()}
+                </span>
+              ))}
             </div>
           </Reveal>
 
@@ -255,11 +260,16 @@ export default function Home() {
           <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-center">
             <Reveal>
               <div>
-                <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-white/65 backdrop-blur-sm border border-[#C1543B]/35">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E97C46] animate-pulse" />
-                  <p className="tracking-[0.3em] text-[10px] font-bold uppercase text-[#8F3525]">
-                    {c.seasonalBadge}
-                  </p>
+                <div className="flex flex-wrap items-center gap-1.5 mb-6">
+                  {c.seasonalBadge.split('·').map((part, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/65 backdrop-blur-sm border border-[#C1543B]/35 tracking-[0.3em] text-[10px] font-bold uppercase text-[#8F3525] whitespace-nowrap"
+                    >
+                      {i === 0 && <span className="w-1.5 h-1.5 rounded-full bg-[#E97C46] animate-pulse" />}
+                      {part.trim()}
+                    </span>
+                  ))}
                 </div>
                 <h2
                   id="seasonal-heading"
@@ -271,17 +281,17 @@ export default function Home() {
                 <p className="text-[#3B3935] text-base md:text-lg leading-relaxed mb-7 max-w-[55ch]">
                   {c.seasonalLead}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
                   <Link
                     to={to('/signin')}
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1A1815] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#3B3935] transition-colors"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1A1815] text-white font-semibold uppercase tracking-[0.18em] text-xs whitespace-nowrap hover:bg-[#3B3935] transition-colors"
                   >
                     {c.seasonalCta1}
                     <ArrowRight size={14} />
                   </Link>
                   <Link
                     to={to('/category/seasons')}
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#8F3525] font-semibold uppercase tracking-[0.18em] text-xs border border-[#C1543B]/35 transition-colors"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#8F3525] font-semibold uppercase tracking-[0.18em] text-xs whitespace-nowrap border border-[#C1543B]/35 transition-colors"
                   >
                     {c.seasonalCta2}
                   </Link>
@@ -734,17 +744,17 @@ export default function Home() {
                   <p>{c.asideP1}</p>
                   <p>{c.asideP2}</p>
                 </div>
-                <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
                   <Link
                     to={to('/signin')}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C1543B] text-white font-semibold uppercase tracking-[0.2em] text-xs hover:bg-[#8F3525] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C1543B]/40"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C1543B] text-white font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#8F3525] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C1543B]/40"
                   >
                     {c.asideCta1}
                     <ArrowRight size={14} />
                   </Link>
                   <Link
                     to={to('/about')}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#C1543B]/40 text-[#C1543B] font-semibold uppercase tracking-[0.2em] text-xs hover:bg-[#C1543B]/10 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#C1543B]/40 text-[#C1543B] font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#C1543B]/10 transition-colors"
                   >
                     {c.asideCta2}
                   </Link>
