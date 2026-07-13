@@ -67,6 +67,10 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
     seoTitle: 'Lapland.blog · Start en deel je Lapland-reisblog',
     seoDescription: 'Maak van je reis door Fins Lapland een reisblog: houd onderweg een dagboek bij en deel het met één tik op social media. Gratis en in enkele minuten klaar.',
   },
+  'sv': {
+    seoTitle: 'Lapland.blog · Starta och dela din reseblogg om Lappland',
+    seoDescription: 'Gör din resa i finska Lappland till en reseblogg: för dagbok under resan och dela den på sociala medier med en tryckning. Gratis och klart på några minuter.',
+  },
 };
 
 const heroImage = getImage('hero-aurora', '100vw', 'Lapland landscape');

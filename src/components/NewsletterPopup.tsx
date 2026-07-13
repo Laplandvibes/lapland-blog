@@ -19,7 +19,7 @@ export default function NewsletterPopup() {
   // per-blog-entry framing.
   return (
     <SharedNewsletterPopup
-      lang={langRaw as 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl'}
+      lang={langRaw as 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv'}
       siteId="laplandblog"
       brandWord=".BLOG"
       supabaseUrl={SUPABASE_URL}

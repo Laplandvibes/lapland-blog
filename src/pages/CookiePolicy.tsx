@@ -19,6 +19,7 @@ const TITLE: Record<Lang, string> = {
   fr: 'Politique relative aux cookies · Lapland.blog',
   it: 'Informativa sui cookie · Lapland.blog',
   nl: 'Cookiebeleid · Lapland.blog',
+  sv: 'Cookiepolicy · Lapland.blog',
 };
 const DESCRIPTION: Record<Lang, string> = {
   en: 'What cookies and storage Lapland.blog uses, why, and how to opt out. The free Finnish Lapland travel-blog platform by Lapeso Oy.',
@@ -32,6 +33,7 @@ const DESCRIPTION: Record<Lang, string> = {
   fr: 'Quels cookies et stockage Lapland.blog utilise, pourquoi et comment les refuser. La plateforme gratuite de blogs de voyage en Laponie finlandaise par Lapeso Oy.',
   it: 'Quali cookie e archiviazione usa Lapland.blog, perché e come rifiutarli: la piattaforma gratuita di blog di viaggio in Lapponia finlandese di Lapeso Oy.',
   nl: 'Welke cookies en opslag Lapland.blog gebruikt, waarom en hoe je je afmeldt. Het gratis reisblogplatform voor Fins Lapland van Lapeso Oy.',
+  sv: 'Vilka cookies och vilken lagring Lapland.blog använder, varför och hur du tackar nej. Den gratis resebloggplattformen för finska Lappland från Lapeso Oy.',
 };
 
 export default function CookiePolicy() {

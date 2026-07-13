@@ -287,6 +287,22 @@ export default function App() {
           <Route path="/nl/cookie-policy" element={<CookiePolicy />} />
           <Route path="/nl/unsubscribe" element={<Unsubscribe />} />
 
+      {/* SV */}
+          <Route path="/sv" element={<Home />} />
+          <Route path="/sv/start-here" element={<StartHere />} />
+          <Route path="/sv/top-reads" element={<TopReads />} />
+          <Route path="/sv/destinations" element={<Destinations />} />
+          <Route path="/sv/by/:handle" element={<AuthorProfile />} />
+          <Route path="/sv/stories" element={<Archive />} />
+          <Route path="/sv/category/:slug" element={<Category />} />
+          <Route path="/sv/post/:slug" element={<Post />} />
+          <Route path="/sv/about" element={<About />} />
+          <Route path="/sv/signin" element={<SignIn />} />
+          <Route path="/sv/privacy" element={<PrivacyPolicy />} />
+          <Route path="/sv/terms" element={<Terms />} />
+          <Route path="/sv/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/sv/unsubscribe" element={<Unsubscribe />} />
+
           {/* ─── User's own trip blog ──────────────────────────────────
               The /me/* dashboard area is auth-gated and conceptually
               locale-agnostic. But a signed-in visitor can arrive carrying a

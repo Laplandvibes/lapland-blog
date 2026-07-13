@@ -27,6 +27,7 @@ const ALL_LANGS: { code: Lang; label: string; native: string }[] = [
   { code: 'fr', label: 'FR', native: 'Français' },
   { code: 'it', label: 'IT', native: 'Italiano' },
   { code: 'nl', label: 'NL', native: 'Nederlands' },
+  { code: 'sv', label: 'SV', native: 'Svenska' },
 ];
 
 /**

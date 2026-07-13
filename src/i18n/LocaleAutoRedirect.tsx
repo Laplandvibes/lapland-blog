@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { LANG_PREFIX, type Lang } from './useLang';
 
 const STORAGE_KEY = 'lv_locale_choice';
-const ALL: Lang[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl'];
+const ALL: Lang[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 
 export default function LocaleAutoRedirect() {
   const { pathname } = useLocation();
@@ -33,6 +33,7 @@ export default function LocaleAutoRedirect() {
       else if (lang.startsWith('fr')) target = 'fr';
       else if (lang.startsWith('it')) target = 'it';
       else if (lang.startsWith('nl')) target = 'nl';
+      else if (lang.startsWith('sv')) target = 'sv';
     }
 
     if (target !== 'en') {

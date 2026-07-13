@@ -263,6 +263,30 @@
           "a": "Over alles wat je niet wilt vergeten. Waar je sliep, hoe het noorderlicht eruitzag, de temperatuur op de koudste ochtend, de maaltijd die je verraste, de huskytocht, de stilte van het bos. Korte berichten met een foto en een plaatsspeld werken goed, een paar regels per dag groeien uit tot een blog die je opnieuw wilt lezen."
         }
       ]
+    },
+    "sv": {
+      "faq": [
+        {
+          "q": "Hur startar jag en reseblogg på lapland.blog?",
+          "a": "Logga in med ditt Google-konto, ge din blogg ett namn och skriv ditt första inlägg. Varje inlägg kan innehålla text, foton, datumet och en kartnål för var du var. Din blogg finns på lapland.blog/ditt-namn och är redo att delas i samma stund du publicerar. Det finns inget att installera och ingen inställning utöver att logga in."
+        },
+        {
+          "q": "Är lapland.blog gratis att använda?",
+          "a": "Ja. Att starta en blogg, skriva inlägg, lägga till foton, nåla fast platser på kartan och dela din blogg är allt gratis. Det krävs inget kort för att registrera sig och det finns inga annonser på din blogg."
+        },
+        {
+          "q": "Kan jag dela min Lapplandsblogg på Instagram och Facebook?",
+          "a": "Ja. Varje blogg har en offentlig länk du kan lägga upp var som helst, och varje inlägg kan exporteras som en bild i Instagram-story-format så att du kan dela en enda dag med en tryckning. Vänner och familj kan öppna din blogg utan ett eget konto."
+        },
+        {
+          "q": "Måste jag vara i Lappland för att skriva en blogg här?",
+          "a": "Nej. Vi byggde lapland.blog för resenärer på väg till finska Lappland, så kartan och uppmaningarna är anpassade för resor norrut, men vem som helst kan ha en blogg här, oavsett om du planerar en resa, skriver under en, eller fyller i den efter att du kommit hem. Du kan börja innan du flyger och lägga till inlägg dag för dag."
+        },
+        {
+          "q": "Vad ska jag skriva om i min Lapplandsdagbok?",
+          "a": "Vad du än inte vill glömma. Var du bodde, hur norrskenet såg ut, temperaturen den kallaste morgonen, måltiden som överraskade dig, hundspannsturen, skogens tystnad. Korta inlägg med ett foto och en platsnål fungerar bra. Några rader om dagen blir till slut en blogg värd att läsa om."
+        }
+      ]
     }
   }
 }

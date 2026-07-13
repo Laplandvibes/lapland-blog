@@ -75,8 +75,8 @@ const fmtRfc822 = (d) => {
 const CATEGORY_SLUGS = ['aurora', 'cabins', 'food', 'seasons', 'people', 'gear', 'stories'];
 
 // ───── sitemap ─────
-// 11-locale hreflang rollout (2026-05-22). Tier-3 locales kr/fr/it/nl served.
-const LOCALES = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl'];
+// 12-locale hreflang rollout (2026-05-22; sv added 2026-07-13). Tier-3 locales kr/fr/it/nl/sv served.
+const LOCALES = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 const DEFAULT_LOCALE = 'en';
 const URL_PREFIX_OF = {
   en: '',
@@ -90,6 +90,7 @@ const URL_PREFIX_OF = {
   fr: 'fr',
   it: 'it',
   nl: 'nl',
+  sv: 'sv',
 };
 
 const localisedLoc = (path, locale) => {

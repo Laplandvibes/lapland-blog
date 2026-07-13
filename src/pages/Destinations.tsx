@@ -225,7 +225,7 @@ function DestinationCard({
   count: number;
   c: DestCopy;
   to: (p: string) => string;
-  lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+  lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
 }) {
   const hasEntries = count > 0;
   return (

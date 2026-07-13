@@ -29,6 +29,7 @@ const TITLE: Record<Lang, string> = {
   fr: 'Commencez ici · vos premiers pas sur Lapland.blog',
   it: 'Inizia qui · i primi passi su Lapland.blog',
   nl: 'Begin hier · je eerste stappen op Lapland.blog',
+  sv: 'Börja här · dina första steg på Lapland.blog',
 };
 const DESCRIPTION: Record<Lang, string> = {
   en: 'New to Lapland.blog? Three ways in: read the field-journal entries, find your Finnish Lapland destination, or start your own free travel blog.',
@@ -42,6 +43,7 @@ const DESCRIPTION: Record<Lang, string> = {
   fr: 'Nouveau sur Lapland.blog ? Trois entrées : lisez les entrées du carnet de terrain, trouvez votre destination en Laponie finlandaise ou lancez votre blog de voyage gratuit.',
   it: 'Nuovo su Lapland.blog? Tre vie d\'accesso: leggi le voci del diario di campo, trova la tua destinazione in Lapponia finlandese o avvia il tuo blog di viaggio gratuito.',
   nl: 'Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind je bestemming in Fins Lapland of start je eigen gratis reisblog.',
+  sv: 'Ny på Lapland.blog? Tre vägar in: läs inläggen i fältdagboken, hitta ditt resmål i finska Lappland eller starta din egen gratis reseblogg.',
 };
 
 export default function StartHere() {

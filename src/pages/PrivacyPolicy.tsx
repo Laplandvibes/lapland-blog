@@ -19,6 +19,7 @@ const TITLE: Record<Lang, string> = {
   fr: 'Politique de confidentialité · Lapland.blog',
   it: 'Informativa sulla privacy · Lapland.blog',
   nl: 'Privacybeleid · Lapland.blog',
+  sv: 'Integritetspolicy · Lapland.blog',
 };
 const DESCRIPTION: Record<Lang, string> = {
   en: 'How Lapland.blog handles your data. The free Finnish Lapland travel-blog platform operated by Lapeso Oy. GDPR compliant.',
@@ -32,6 +33,7 @@ const DESCRIPTION: Record<Lang, string> = {
   fr: 'Comment Lapland.blog traite vos données. La plateforme gratuite de blogs de voyage en Laponie finlandaise exploitée par Lapeso Oy. Conforme au RGPD.',
   it: 'Come Lapland.blog tratta i tuoi dati: la piattaforma gratuita di blog di viaggio in Lapponia finlandese gestita da Lapeso Oy. Conforme al GDPR.',
   nl: 'Hoe Lapland.blog met je gegevens omgaat. Het gratis reisblogplatform voor Fins Lapland, beheerd door Lapeso Oy. AVG-conform.',
+  sv: 'Hur Lapland.blog hanterar dina uppgifter. Den gratis resebloggplattformen för finska Lappland som drivs av Lapeso Oy. GDPR-förenlig.',
 };
 
 export default function PrivacyPolicy() {

@@ -19,6 +19,7 @@ const TITLE: Record<Lang, string> = {
   fr: "Conditions d'utilisation · Lapland.blog",
   it: 'Termini di servizio · Lapland.blog',
   nl: 'Servicevoorwaarden · Lapland.blog',
+  sv: 'Användarvillkor · Lapland.blog',
 };
 const DESCRIPTION: Record<Lang, string> = {
   en: 'The terms for using Lapland.blog, the free Finnish Lapland travel-blog platform where you keep and share a trip diary. Operated by Lapeso Oy.',
@@ -32,6 +33,7 @@ const DESCRIPTION: Record<Lang, string> = {
   fr: "Les conditions d'utilisation de Lapland.blog, la plateforme gratuite de blogs de voyage en Laponie finlandaise où vous tenez et partagez un journal. Exploitée par Lapeso Oy.",
   it: 'Le condizioni per usare Lapland.blog: la piattaforma gratuita di blog di viaggio in Lapponia finlandese dove tieni e condividi un diario. Gestita da Lapeso Oy.',
   nl: 'De voorwaarden voor het gebruik van Lapland.blog, het gratis reisblogplatform voor Fins Lapland waar je een reisdagboek bijhoudt en deelt. Beheerd door Lapeso Oy.',
+  sv: 'Villkoren för att använda Lapland.blog, den gratis resebloggplattformen för finska Lappland där du för och delar en resedagbok. Drivs av Lapeso Oy.',
 };
 
 export default function Terms() {

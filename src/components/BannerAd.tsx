@@ -10,16 +10,16 @@ import { useLang } from '../i18n/useLang';
 
 const GO = 'https://go.laplandvibes.com';
 
-type _Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+type _Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
 const HOTELS_LOCALE: Record<_Lang, string> = {
   en: 'en_US', fi: 'fi_FI', de: 'de_DE', ja: 'ja_JP',
   es: 'es_ES', 'pt-BR': 'pt_BR', 'zh-CN': 'zh_CN',
-  ko: 'ko_KR', fr: 'fr_FR', it: 'it_IT', nl: 'nl_NL',
+  ko: 'ko_KR', fr: 'fr_FR', it: 'it_IT', nl: 'nl_NL', sv: 'sv_SE',
 };
 const CARS_LANG: Record<_Lang, string> = {
   en: 'en', fi: 'fi', de: 'de', ja: 'ja',
   es: 'es', 'pt-BR': 'pt', 'zh-CN': 'zh',
-  ko: 'ko', fr: 'fr', it: 'it', nl: 'nl',
+  ko: 'ko', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv',
 };
 
 type Partner = 'hotels' | 'flights' | 'activities';
