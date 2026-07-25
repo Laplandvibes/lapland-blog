@@ -289,7 +289,7 @@ function DestinationCard({
 
           {/* Sales CTA — every destination card gets a Hotels.com hook */}
           <a
-            href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name)}%2C+Lapland%2C+Finland&locale=${lang === 'fi' ? 'fi_FI' : lang === 'de' ? 'de_DE' : 'en_US'}`}
+            href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name === 'Ylläs' ? 'Äkäslompolo' : d.name)}%2C+Finland&locale=${lang === 'fi' ? 'fi_FI' : lang === 'de' ? 'de_DE' : 'en_US'}`}
             target="_blank"
             rel="sponsored nofollow noopener"
             className="inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
