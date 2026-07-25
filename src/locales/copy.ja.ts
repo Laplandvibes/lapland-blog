@@ -225,7 +225,7 @@ const ja: SectionCopy = {
       title: '食事と飲み物',
       body: '実際に食べに行くべき場所：サーモンスープ、ライ麦パン、より良かった時代を知るバー。',
     },
-    planAllSites: 'またはlaplandvibes.comで21以上のサイトすべてを見る',
+    planAllSites: 'またはlaplandvibes.comで27のサイトすべてを見る',
     onlyEyebrow: 'もし一本だけ読むなら',
     onlyH2: 'これを読んでください。',
     onlyLead: '最新のフィールドジャーナル記事。本物の気温、本物の時間、パンフレット調なし。',

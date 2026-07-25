@@ -175,7 +175,7 @@ const ko: SectionCopy = {
       title: '식음료',
       body: '실제로 가서 먹어 볼 만한 곳: 연어 수프, 호밀빵, 더 좋았던 시절을 기억하는 바.',
     },
-    planAllSites: '또는 laplandvibes.com 에서 21개 이상의 모든 사이트 둘러보기',
+    planAllSites: '또는 laplandvibes.com 에서 27개 사이트 모두 둘러보기',
     onlyEyebrow: '한 편만 읽으시려면',
     onlyH2: '이 한 편을 읽으십시오.',
     onlyLead: '가장 최근의 현장 일기. 진짜 기온, 진짜 시각, 안내 책자식 어투 없음.',

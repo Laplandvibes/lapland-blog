@@ -226,7 +226,7 @@ const de: SectionCopy = {
       title: 'Essen & Trinken',
       body: 'Wo es sich wirklich zu essen lohnt: die Lachssuppe, das Roggenbrot, die Bars, die bessere Jahrzehnte gesehen haben.',
     },
-    planAllSites: 'Oder alle 26 Seiten auf laplandvibes.com ansehen',
+    planAllSites: 'Oder alle 27 Seiten auf laplandvibes.com ansehen',
     onlyEyebrow: 'Wenn Sie nur einen lesen',
     onlyH2: 'Lesen Sie diesen.',
     onlyLead: 'Der neueste Feldtagebuch-Eintrag. Echte Temperatur, echte Uhrzeit, kein Broschüren-Ton.',

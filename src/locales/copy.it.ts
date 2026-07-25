@@ -175,7 +175,7 @@ const it: SectionCopy = {
       title: 'Cibo e bevande',
       body: 'Dove mangiare davvero: la zuppa di salmone, la segale, i bar che hanno visto decenni migliori.',
     },
-    planAllSites: 'Oppure sfogli i 26 siti su laplandvibes.com',
+    planAllSites: 'Oppure sfogli i 27 siti su laplandvibes.com',
     onlyEyebrow: 'Se ne legge una sola',
     onlyH2: 'Legga questa.',
     onlyLead: 'L’ultima voce del diario sul campo. Temperatura reale, orario reale, niente voce da brochure.',
