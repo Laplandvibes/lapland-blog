@@ -115,7 +115,7 @@ const ptBR: SectionCopy = {
     liveH2Italic: 'é assim.',
     liveH2Tail: 'O seu é o próximo.',
     liveLead:
-      'As pistas pretas de Levi. As noites de aurora em Inari. 60 km num trenó puxado por huskies em Saariselkä. O The Field Journal — nossa redação — montou estes blogs de exemplo para mostrar o formato. Começar o seu, de verdade, leva menos de cinco minutos.',
+      'As pistas pretas de Levi. As noites de aurora em Inari. 60 km num trenó puxado por huskies em Saariselkä. O The Field Journal, nossa redação, montou estes blogs de exemplo para mostrar o formato. Começar o seu, de verdade, leva menos de cinco minutos.',
     liveBrowseAll: 'Ver todos os blogs',
     liveCta: 'Criar meu blog de viagem',
     liveFootnote: 'Grátis · Sem cartão · 2 minutos até a sua primeira entrada',
@@ -257,7 +257,7 @@ const ptBR: SectionCopy = {
       'Posts patrocinados dentro das entradas dos leitores. Listas de compras de afiliados enfiadas no seu blog. As palavras «inesquecível», «lista de desejos», «mágico» ou «país das maravilhas do inverno» são banidas dos rascunhos editoriais, e vale bani-las também dos seus. Fazem mal à escrita e mal a quem lê.',
     seedHeading: 'As entradas iniciais',
     seedBody:
-      'As entradas do site são escritas pelo The Field Journal, a redação do Lapland.blog: cinco vozes editoriais com nome próprio, cada uma com o seu tema — estações, trilhas, comida, cabanas e equipamento. Elas estão ali para mostrar como pode ser um blog de viagem honesto, sem pressa e guiado pelas imagens: temperaturas reais, horas reais do dia, sem voz de folheto. Leia uma e imagine a sua.',
+      'As entradas do site são escritas pelo The Field Journal, a redação do Lapland.blog: cinco vozes editoriais com nome próprio, cada uma com o seu tema: estações, trilhas, comida, cabanas e equipamento. Elas estão ali para mostrar como pode ser um blog de viagem honesto, sem pressa e guiado pelas imagens: temperaturas reais, horas reais do dia, sem voz de folheto. Leia uma e imagine a sua.',
     networkHeading: 'Sobre a rede',
     networkBody:
       'O Lapland.blog faz parte do ecossistema LaplandVibes, uma rede de sites sobre a Lapônia de propriedade finlandesa. Os outros sites dizem aonde ir, onde ficar e o que fazer. Este é onde a viagem em si é colocada no papel.',

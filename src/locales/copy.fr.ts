@@ -65,7 +65,7 @@ const fr: SectionCopy = {
     liveH2Italic: 'un blog de voyage.',
     liveH2Tail: 'Le vôtre est le prochain.',
     liveLead:
-      'Pistes noires à Levi. Nuits d’aurores à Inari. 60 km en traîneau à chiens à Saariselkä. The Field Journal — notre rédaction — a construit ces blogs-exemples pour montrer le format. Le vôtre, le vrai, se lance en moins de cinq minutes.',
+      'Pistes noires à Levi. Nuits d’aurores à Inari. 60 km en traîneau à chiens à Saariselkä. The Field Journal, notre rédaction, a construit ces blogs-exemples pour montrer le format. Le vôtre, le vrai, se lance en moins de cinq minutes.',
     liveBrowseAll: 'Parcourir tous les blogs',
     liveCta: 'Lancer mon blog de voyage',
     liveFootnote: 'Gratuit · Sans carte · Première entrée en 2 minutes',
@@ -207,7 +207,7 @@ const fr: SectionCopy = {
       'Des publications sponsorisées dans les entrées des lecteurs. Des listes d’affiliés glissées dans votre blog. Les mots « inoubliable », « bucket list », « magique », « pays des merveilles hivernal » sont bannis des brouillons éditoriaux, et tout aussi à bannir des vôtres. Mauvais pour l’écriture, mauvais pour le lecteur.',
     seedHeading: 'Les entrées-germes',
     seedBody:
-      'Les entrées du site sont écrites par The Field Journal, la rédaction de Lapland.blog : cinq plumes éditoriales nommées, chacune avec son domaine — saisons, sentiers, cuisine, chalets et équipement. Elles sont là pour montrer ce que peut être un blog de voyage honnête, lent, porté par la photo : vraies températures, vraies heures, sans voix de brochure. Lisez-en une et imaginez la vôtre.',
+      'Les entrées du site sont écrites par The Field Journal, la rédaction de Lapland.blog : cinq plumes éditoriales nommées, chacune avec son domaine: saisons, sentiers, cuisine, chalets et équipement. Elles sont là pour montrer ce que peut être un blog de voyage honnête, lent, porté par la photo : vraies températures, vraies heures, sans voix de brochure. Lisez-en une et imaginez la vôtre.',
     networkHeading: 'À propos du réseau',
     networkBody:
       'Lapland.blog fait partie de l’écosystème LaplandVibes, un réseau de sites finlandais sur la Laponie. Les autres sites vous disent où aller, où dormir et quoi faire. Celui-ci est l’endroit où le voyage lui-même se met par écrit.',

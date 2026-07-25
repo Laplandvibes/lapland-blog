@@ -115,14 +115,14 @@ const en: SectionCopy = {
     liveH2Italic: 'looks like.',
     liveH2Tail: 'Yours is next.',
     liveLead:
-      'Black runs at Levi. Aurora nights in Inari. 60 km by husky sled in Saariselkä. The Field Journal — our editorial desk — built these example blogs to show the format. Your real one takes under five minutes to start.',
+      'Black runs at Levi. Aurora nights in Inari. 60 km by husky sled in Saariselkä. The Field Journal, our editorial desk, built these example blogs to show the format. Your real one takes under five minutes to start.',
     liveBrowseAll: 'Browse all blogs',
     liveCta: 'Start my trip blog',
     liveFootnote: 'Free · No card · 2 minutes to your first entry',
     featuredEyebrow: "Founder's example journal",
     featuredEvery: 'Every entry →',
     featuredLead:
-      'This is what your own trip blog could look like. The entries below come from The Field Journal, the editorial desk of Lapland.blog — a small circle of writers covering the Lapland year, from midnight sun to kaamos. Real temperatures, real cabins, real soup. Read one and picture your own.',
+      'This is what your own trip blog could look like. The entries below come from The Field Journal, the editorial desk of Lapland.blog, a small circle of writers covering the Lapland year, from midnight sun to kaamos. Real temperatures, real cabins, real soup. Read one and picture your own.',
     featuredLoading: 'Loading example…',
     featuredNone: 'No example entries yet.',
     featuredReadEntry: 'Read this entry',
@@ -257,7 +257,7 @@ const en: SectionCopy = {
       'Sponsored posts inside reader entries. Affiliate shopping lists stuffed into your blog. The words "unforgettable", "bucket list", "magical" or "winter wonderland" are banned from the editorial drafts, and worth banning from yours too. They are bad for writing and bad for readers.',
     seedHeading: 'The seed entries',
     seedBody:
-      'The entries already on the site are written by The Field Journal, the editorial desk of Lapland.blog — five named editorial voices, each with their own beat: seasons, trails, food, cabins and gear. They are there to show what an honest, slow, photo-led trip blog can read like: real temperatures, real times of day, no brochure voice. Read one and picture your own.',
+      'The entries already on the site are written by The Field Journal, the editorial desk of Lapland.blog, five named editorial voices, each with their own beat: seasons, trails, food, cabins and gear. They are there to show what an honest, slow, photo-led trip blog can read like: real temperatures, real times of day, no brochure voice. Read one and picture your own.',
     networkHeading: 'About the network',
     networkBody:
       'Lapland.blog is part of the LaplandVibes ecosystem, a network of Finnish-owned sites about Lapland. The other sites tell you where to go, where to stay, and what to do. This one is where the trip itself gets written down.',

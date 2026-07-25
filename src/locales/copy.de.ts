@@ -116,14 +116,14 @@ const de: SectionCopy = {
     liveH2Italic: 'aus.',
     liveH2Tail: 'Ihrer ist der nächste.',
     liveLead:
-      'Schwarze Pisten in Levi. Nordlicht-Nächte in Inari. 60 km mit dem Hundeschlitten in Saariselkä. The Field Journal — unsere Redaktion — hat diese Beispielblogs gebaut, um das Format zu zeigen. Ihr echter ist in unter fünf Minuten gestartet.',
+      'Schwarze Pisten in Levi. Nordlicht-Nächte in Inari. 60 km mit dem Hundeschlitten in Saariselkä. The Field Journal, unsere Redaktion, hat diese Beispielblogs gebaut, um das Format zu zeigen. Ihr echter ist in unter fünf Minuten gestartet.',
     liveBrowseAll: 'Alle Blogs ansehen',
     liveCta: 'Eigenen Reiseblog starten',
     liveFootnote: 'Kostenlos · Keine Karte · 2 Minuten bis zum ersten Eintrag',
     featuredEyebrow: 'Beispiel-Tagebuch der Redaktion',
     featuredEvery: 'Alle Einträge →',
     featuredLead:
-      'So könnte Ihr eigener Reiseblog aussehen. Die Einträge unten stammen von The Field Journal, der Redaktion von Lapland.blog — einem kleinen Kreis von Stimmen, der das Lappland-Jahr von der Mitternachtssonne bis zur Polarnacht begleitet. Echte Temperaturen, echte Hütten, echte Suppe. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
+      'So könnte Ihr eigener Reiseblog aussehen. Die Einträge unten stammen von The Field Journal, der Redaktion von Lapland.blog, einem kleinen Kreis von Stimmen, der das Lappland-Jahr von der Mitternachtssonne bis zur Polarnacht begleitet. Echte Temperaturen, echte Hütten, echte Suppe. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
     featuredLoading: 'Beispiel wird geladen…',
     featuredNone: 'Noch keine Beispiel-Einträge.',
     featuredReadEntry: 'Diesen Eintrag lesen',
@@ -258,7 +258,7 @@ const de: SectionCopy = {
       'Gesponserte Beiträge in Leser-Einträgen. Affiliate-Einkaufslisten, in Ihren Blog gestopft. Die Wörter "unvergesslich", "Bucket List", "magisch" oder "Winterwunderland" sind aus den redaktionellen Entwürfen verbannt und auch in Ihren einen Bann wert. Sie sind schlecht fürs Schreiben und schlecht für Leser.',
     seedHeading: 'Die Beispiel-Einträge',
     seedBody:
-      'Die Einträge auf der Website schreibt The Field Journal, die Redaktion von Lapland.blog — fünf benannte redaktionelle Stimmen, jede mit eigenem Themenfeld: Jahreszeiten, Wege, Essen, Hütten und Ausrüstung. Sie zeigen, wie sich ein ehrlicher, ruhiger, bildgetragener Reiseblog lesen kann: echte Temperaturen, echte Uhrzeiten, kein Broschüren-Ton. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
+      'Die Einträge auf der Website schreibt The Field Journal, die Redaktion von Lapland.blog, fünf benannte redaktionelle Stimmen, jede mit eigenem Themenfeld: Jahreszeiten, Wege, Essen, Hütten und Ausrüstung. Sie zeigen, wie sich ein ehrlicher, ruhiger, bildgetragener Reiseblog lesen kann: echte Temperaturen, echte Uhrzeiten, kein Broschüren-Ton. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
     networkHeading: 'Über das Netzwerk',
     networkBody:
       'Lapland.blog ist Teil des LaplandVibes-Ökosystems, eines Netzwerks finnisch geführter Seiten über Lappland. Die anderen Seiten sagen Ihnen, wohin, wo Sie übernachten und was Sie tun können. Diese ist die, in der die Reise selbst aufgeschrieben wird.',

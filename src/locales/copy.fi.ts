@@ -115,14 +115,14 @@ const fi: SectionCopy = {
     liveH2Italic: 'näyttää.',
     liveH2Tail: 'Sinun on seuraava.',
     liveLead:
-      'Mustia rinteitä Levillä. Revontuliöitä Inarissa. 60 km koiravaljakolla Saariselällä. The Field Journal — toimituksemme — rakensi nämä esimerkkiblogit näyttämään formaatin. Oma oikea blogisi syntyy alle viidessä minuutissa.',
+      'Mustia rinteitä Levillä. Revontuliöitä Inarissa. 60 km koiravaljakolla Saariselällä. The Field Journal, toimituksemme, rakensi nämä esimerkkiblogit näyttämään formaatin. Oma oikea blogisi syntyy alle viidessä minuutissa.',
     liveBrowseAll: 'Selaa kaikkia blogeja',
     liveCta: 'Aloita oma matkablogi',
     liveFootnote: 'Ilmainen · Ei korttia · 2 minuuttia ensimmäiseen merkintään',
     featuredEyebrow: 'Toimituksen esimerkkipäiväkirja',
     featuredEvery: 'Kaikki merkinnät →',
     featuredLead:
-      'Tältä oma matkablogisi voisi näyttää. Alla olevat merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus — pieni kirjoittajapiiri, joka kattaa Lapin vuoden yöttömästä yöstä kaamokseen. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele oma.',
+      'Tältä oma matkablogisi voisi näyttää. Alla olevat merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus, pieni kirjoittajapiiri, joka kattaa Lapin vuoden yöttömästä yöstä kaamokseen. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele oma.',
     featuredLoading: 'Ladataan esimerkkiä…',
     featuredNone: 'Ei esimerkkimerkintöjä vielä.',
     featuredReadEntry: 'Lue tämä merkintä',
@@ -257,7 +257,7 @@ const fi: SectionCopy = {
       'Sponsoroituja juttuja lukijoiden merkinnöissä. Affiliate-ostoslistoja blogiisi tungettuna. Sanat "unohtumaton", "bucket list", "taianomainen" tai "talvimaailma" on kielletty toimituksellisissa luonnoksissa, ja kannattaa kieltää myös omissasi. Ne ovat huonoja kirjoittamiselle ja huonoja lukijoille.',
     seedHeading: 'Siemenmerkinnät',
     seedBody:
-      'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus — viisi nimettyä toimituksellista ääntä, joilla jokaisella on oma aihepiirinsä: vuodenajat, reitit, ruoka, mökit ja varusteet. Ne näyttävät, miltä rehellinen, hidas, kuvavetoinen matkablogi voi lukea: oikeat lämpötilat, oikea kellonaika, ei esiteääntä. Lue yksi ja kuvittele oma.',
+      'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus, viisi nimettyä toimituksellista ääntä, joilla jokaisella on oma aihepiirinsä: vuodenajat, reitit, ruoka, mökit ja varusteet. Ne näyttävät, miltä rehellinen, hidas, kuvavetoinen matkablogi voi lukea: oikeat lämpötilat, oikea kellonaika, ei esiteääntä. Lue yksi ja kuvittele oma.',
     networkHeading: 'Verkostosta',
     networkBody:
       'Lapland.blog on osa LaplandVibes-ekosysteemiä, suomalaisomisteista verkostoa Lappi-sivustoja. Muut sivustot kertovat minne mennä, missä yöpyä ja mitä tehdä. Tämä on se, johon itse matka kirjoitetaan ylös.',

@@ -257,7 +257,7 @@ const es: SectionCopy = {
       'Publicaciones patrocinadas dentro de las entradas de los lectores. Listas de compra de afiliados metidas a la fuerza en su blog. Las palabras «inolvidable», «lista de deseos», «mágico» o «país de las maravillas invernal» están vetadas en los borradores editoriales, y conviene vetarlas también en los suyos. Son malas para escribir y malas para quien lee.',
     seedHeading: 'Las entradas iniciales',
     seedBody:
-      'Las entradas del sitio las escribe The Field Journal, la redacción de Lapland.blog: cinco voces editoriales con nombre propio, cada una con su tema — estaciones, senderos, comida, cabañas y equipo. Están ahí para mostrar cómo puede leerse un blog de viaje honesto, pausado y guiado por la imagen: temperaturas reales, horas reales del día, sin voz de folleto. Lea una e imagine la suya.',
+      'Las entradas del sitio las escribe The Field Journal, la redacción de Lapland.blog: cinco voces editoriales con nombre propio, cada una con su tema: estaciones, senderos, comida, cabañas y equipo. Están ahí para mostrar cómo puede leerse un blog de viaje honesto, pausado y guiado por la imagen: temperaturas reales, horas reales del día, sin voz de folleto. Lea una e imagine la suya.',
     networkHeading: 'Sobre la red',
     networkBody:
       'Lapland.blog forma parte del ecosistema LaplandVibes, una red de sitios sobre Laponia de propiedad finlandesa. Los demás sitios le dicen adónde ir, dónde dormir y qué hacer. Este es donde se pone por escrito el viaje en sí.',

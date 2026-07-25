@@ -65,7 +65,7 @@ const it: SectionCopy = {
     liveH2Italic: 'un blog di viaggio.',
     liveH2Tail: 'Il prossimo è il Suo.',
     liveLead:
-      'Piste nere a Levi. Notti di aurora a Inari. 60 km in slitta trainata da husky a Saariselkä. The Field Journal — la nostra redazione — ha costruito questi blog-esempio per mostrare il formato. Il Suo, quello vero, si avvia in meno di cinque minuti.',
+      'Piste nere a Levi. Notti di aurora a Inari. 60 km in slitta trainata da husky a Saariselkä. The Field Journal, la nostra redazione, ha costruito questi blog-esempio per mostrare il formato. Il Suo, quello vero, si avvia in meno di cinque minuti.',
     liveBrowseAll: 'Vedere tutti i blog',
     liveCta: 'Avvia il mio blog di viaggio',
     liveFootnote: 'Gratuito · Senza carta · Prima voce in 2 minuti',
@@ -207,7 +207,7 @@ const it: SectionCopy = {
       'Articoli sponsorizzati dentro le voci dei lettori. Liste affiliate infilate nel Suo blog. Le parole «indimenticabile», «da fare nella vita», «magico» o «paese delle meraviglie invernale» sono bandite dalle bozze editoriali e altrettanto da bandire dalle Sue. Fanno male alla scrittura e ai lettori.',
     seedHeading: 'Le voci-seme',
     seedBody:
-      'Le voci del sito sono scritte da The Field Journal, la redazione di Lapland.blog: cinque penne editoriali con nome proprio, ognuna con il suo ambito — stagioni, sentieri, cibo, baite e attrezzatura. Stanno qui per mostrare com’è un blog di viaggio onesto, lento, centrato sulle foto: temperature reali, orari reali, niente voce da brochure. Ne legga una e immagini la Sua.',
+      'Le voci del sito sono scritte da The Field Journal, la redazione di Lapland.blog: cinque penne editoriali con nome proprio, ognuna con il suo ambito: stagioni, sentieri, cibo, baite e attrezzatura. Stanno qui per mostrare com’è un blog di viaggio onesto, lento, centrato sulle foto: temperature reali, orari reali, niente voce da brochure. Ne legga una e immagini la Sua.',
     networkHeading: 'Il network',
     networkBody:
       'Lapland.blog fa parte dell’ecosistema LaplandVibes, una rete di siti finlandesi sulla Lapponia. Gli altri siti Le dicono dove andare, dove dormire e cosa fare. Questo è il luogo dove il viaggio stesso viene messo per iscritto.',

@@ -115,14 +115,14 @@ const sv: SectionCopy = {
     liveH2Italic: 'ut.',
     liveH2Tail: 'Din är näst på tur.',
     liveLead:
-      'Svarta pister i Levi. Norrskensnätter i Inari. 60 km med hundspann i Saariselkä. The Field Journal — vår redaktion — byggde de här exempelbloggarna för att visa formatet. Din riktiga tar under fem minuter att starta.',
+      'Svarta pister i Levi. Norrskensnätter i Inari. 60 km med hundspann i Saariselkä. The Field Journal, vår redaktion, byggde de här exempelbloggarna för att visa formatet. Din riktiga tar under fem minuter att starta.',
     liveBrowseAll: 'Bläddra bland alla bloggar',
     liveCta: 'Starta min reseblogg',
     liveFootnote: 'Gratis · Inget kort · 2 minuter till ditt första inlägg',
     featuredEyebrow: 'Grundarens exempeldagbok',
     featuredEvery: 'Varje inlägg →',
     featuredLead:
-      'Så här skulle din egen reseblogg kunna se ut. Inläggen nedan kommer från The Field Journal, redaktionen bakom Lapland.blog — en liten krets skribenter som täcker Lapplandsåret, från midnattssol till kaamos. Riktiga temperaturer, riktiga stugor, riktig soppa. Läs ett och föreställ dig ditt eget.',
+      'Så här skulle din egen reseblogg kunna se ut. Inläggen nedan kommer från The Field Journal, redaktionen bakom Lapland.blog, en liten krets skribenter som täcker Lapplandsåret, från midnattssol till kaamos. Riktiga temperaturer, riktiga stugor, riktig soppa. Läs ett och föreställ dig ditt eget.',
     featuredLoading: 'Laddar exempel…',
     featuredNone: 'Inga exempelinlägg än.',
     featuredReadEntry: 'Läs det här inlägget',
@@ -257,7 +257,7 @@ const sv: SectionCopy = {
       'Sponsrade inlägg inuti läsarnas inlägg. Affiliate-shoppinglistor instoppade i din blogg. Orden "oförglömlig", "bucket list", "magisk" eller "vinterland" är bannlysta från de redaktionella utkasten, och värda att bannlysa från dina också. De är dåliga för skrivandet och dåliga för läsarna.',
     seedHeading: 'Startinläggen',
     seedBody:
-      'Inläggen som redan finns på sajten är skrivna av The Field Journal, redaktionen bakom Lapland.blog — fem namngivna redaktionella röster, var och en med sitt eget område: årstider, leder, mat, stugor och utrustning. De finns där för att visa hur en ärlig, långsam, bildledd reseblogg kan läsas: riktiga temperaturer, riktiga tider på dygnet, ingen broschyrröst. Läs ett och föreställ dig ditt eget.',
+      'Inläggen som redan finns på sajten är skrivna av The Field Journal, redaktionen bakom Lapland.blog, fem namngivna redaktionella röster, var och en med sitt eget område: årstider, leder, mat, stugor och utrustning. De finns där för att visa hur en ärlig, långsam, bildledd reseblogg kan läsas: riktiga temperaturer, riktiga tider på dygnet, ingen broschyrröst. Läs ett och föreställ dig ditt eget.',
     networkHeading: 'Om nätverket',
     networkBody:
       'Lapland.blog är en del av LaplandVibes-ekosystemet, ett nätverk av finskägda sajter om Lappland. De andra sajterna berättar vart du ska åka, var du ska bo och vad du ska göra. Den här är där själva resan skrivs ner.',

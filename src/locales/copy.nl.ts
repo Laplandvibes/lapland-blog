@@ -65,7 +65,7 @@ const nl: SectionCopy = {
     liveH2Italic: 'eruit.',
     liveH2Tail: 'De volgende is die van u.',
     liveLead:
-      'De zwarte pistes van Levi. Noorderlichtnachten in Inari. 60 km met de huskyslee in Saariselkä. The Field Journal — onze redactie — bouwde deze voorbeeldblogs om het format te laten zien. Uw echte blog start u in minder dan vijf minuten.',
+      'De zwarte pistes van Levi. Noorderlichtnachten in Inari. 60 km met de huskyslee in Saariselkä. The Field Journal, onze redactie, bouwde deze voorbeeldblogs om het format te laten zien. Uw echte blog start u in minder dan vijf minuten.',
     liveBrowseAll: 'Alle blogs bekijken',
     liveCta: 'Start mijn reisblog',
     liveFootnote: 'Gratis · Geen kaart · Eerste notitie binnen 2 minuten',
@@ -207,7 +207,7 @@ const nl: SectionCopy = {
       'Gesponsorde berichten in de lezersnotities. Affiliate winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor schrijven, slecht voor lezers.',
     seedHeading: 'De voorbeeldnotities',
     seedBody:
-      'De notities op de site zijn geschreven door The Field Journal, de redactie van Lapland.blog: vijf redactionele stemmen met naam, elk met een eigen terrein — seizoenen, paden, eten, hutten en uitrusting. Ze laten zien hoe een eerlijke, langzame, fotogerichte reisblog kan lezen: echte temperaturen, echte tijden, geen brochurestem. Lees er één en stel zich uw eigen reis voor.',
+      'De notities op de site zijn geschreven door The Field Journal, de redactie van Lapland.blog: vijf redactionele stemmen met naam, elk met een eigen terrein: seizoenen, paden, eten, hutten en uitrusting. Ze laten zien hoe een eerlijke, langzame, fotogerichte reisblog kan lezen: echte temperaturen, echte tijden, geen brochurestem. Lees er één en stel zich uw eigen reis voor.',
     networkHeading: 'Over het netwerk',
     networkBody:
       'Lapland.blog maakt deel uit van het LaplandVibes-ecosysteem, een netwerk van Finse sites over Lapland. De andere sites vertellen u waar u heen moet, waar u slaapt en wat u doet. Deze site is waar de reis zelf wordt opgeschreven.',

@@ -46,7 +46,7 @@ export async function uploadTripImage(
   userId: string
 ): Promise<UploadResult> {
   if (!userId) {
-    return { url: null, path: null, error: 'Not signed in — cannot upload.' };
+    return { url: null, path: null, error: 'Not signed in. Cannot upload.' };
   }
   const type = file.type || 'application/octet-stream';
   if (!ALLOWED.has(type)) {
@@ -60,7 +60,7 @@ export async function uploadTripImage(
     return {
       url: null,
       path: null,
-      error: `Image is ${(file.size / 1024 / 1024).toFixed(1)} MB — max is 10 MB.`,
+      error: `Image is ${(file.size / 1024 / 1024).toFixed(1)} MB. Max is 10 MB.`,
     };
   }
 
