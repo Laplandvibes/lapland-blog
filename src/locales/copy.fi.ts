@@ -134,15 +134,15 @@ const fi: SectionCopy = {
     pillar1Kicker: 'I · Kylmyys',
     pillar1Title: 'Mitä kylmyys oikeasti tekee',
     pillar1Body:
-      'Revontuliyöt, kaamos, ne kahdeksan vuodenaikaa, jotka useimmat listat unohtavat. Sää on täällä päähenkilö, ei tausta. Kenttämuistiinpanoja siitä, miltä −23 astetta tuntuu kello 03.47 ja mitä se tekee puhelimen akulle, ja ihmiselle.',
+      'Revontuliyöt, kaamos, ne kahdeksan vuodenaikaa, jotka useimmat listat unohtavat. Sää on täällä päähenkilö, ei tausta. Kenttämuistiinpanoja siitä, miltä −23 astetta tuntuu kello 03.47 ja mitä se tekee puhelimen akulle ja ihmiselle.',
     pillar2Kicker: 'II · Suoja',
     pillar2Title: 'Missä nukut, missä syöt',
     pillar2Body:
-      'Hirsimökit, lasi-iglut, saunat jotka toimivat ja saunat jotka eivät. 42 euron lohikeitto, joka osoittautui hintansa arvoiseksi. Reissunkestävä ruisleipä ja se kahvi, jonka juot kello kahdelta yöllä, kun aurinko unohti laskea.',
+      'Hirsimökit, lasi-iglut, saunat, jotka toimivat, ja saunat, jotka eivät. 42 euron lohikeitto, joka osoittautui hintansa arvoiseksi. Reissunkestävä ruisleipä ja se kahvi, jonka juot kello kahdelta yöllä, kun aurinko unohti laskea.',
     pillar3Kicker: 'III · Toiset ihmiset',
     pillar3Title: 'Ketä muita täällä asuu',
     pillar3Body:
-      'Poromiehet, hiihtopartiolaiset, saunamestarit, se Sodankylän huoltoaseman mies joka puhui neljää kieltä. Lappi on hiljainen, mutta ei koskaan tyhjä. Pidempiä juttuja ihmisistä, jotka oikeasti kohtaat.',
+      'Poromiehet, hiihtopartiolaiset, saunamestarit, se Sodankylän huoltoaseman mies, joka puhui neljää kieltä. Lappi on hiljainen, mutta ei koskaan tyhjä. Pidempiä juttuja ihmisistä, jotka oikeasti kohtaat.',
     latestEyebrow: 'Esimerkkimerkinnät',
     latestH2: 'Katso miltä matkablogi näyttää.',
     latestEvery: 'Kaikki merkinnät',
@@ -260,7 +260,7 @@ const fi: SectionCopy = {
       'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus, viisi nimettyä toimituksellista ääntä, joilla jokaisella on oma aihepiirinsä: vuodenajat, reitit, ruoka, mökit ja varusteet. Ne näyttävät, miltä rehellinen, hidas, kuvavetoinen matkablogi voi lukea: oikeat lämpötilat, oikea kellonaika, ei esiteääntä. Lue yksi ja kuvittele oma.',
     networkHeading: 'Verkostosta',
     networkBody:
-      'Lapland.blog on osa LaplandVibes-ekosysteemiä, suomalaisomisteista verkostoa Lappi-sivustoja. Muut sivustot kertovat minne mennä, missä yöpyä ja mitä tehdä. Tämä on se, johon itse matka kirjoitetaan ylös.',
+      'Lapland.blog on osa LaplandVibes-ekosysteemiä, suomalaisomisteista Lappi-sivustojen verkostoa. Muut sivustot kertovat minne mennä, missä yöpyä ja mitä tehdä. Tämä on se, johon itse matka kirjoitetaan ylös.',
     contactHeading: 'Ota yhteyttä',
     contactBody:
       'Jos haluat sanoa terve, korjata asiavirheen tai lähettää kuvan jonka voimme krediteerata, kirjoita info@lapland.blog. Luemme kaiken ja yritämme vastata viikossa.',
@@ -342,11 +342,11 @@ const fi: SectionCopy = {
       'Miksi revontulet ymmärretään yleensä väärin, mitä mökille kannattaa pakata ja miksi kaamos on itse asiassa ihan ok. Lue nämä ja saavut vähemmän yllättyneenä.',
     auroraEyebrow: 'Revontulijuttuja',
     auroraTitle: 'Yötaivasmerkinnät.',
-    auroraSubtitle: 'Niiden jahtaamisesta, kuvaamisesta, ja niistä öistä jolloin ne tulevat silti.',
+    auroraSubtitle: 'Niiden jahtaamisesta, kuvaamisesta ja niistä öistä, jolloin ne tulevat silti.',
     cabinsEyebrow: 'Mökit',
     cabinsTitle: 'Mökkimerkinnät.',
     cabinsSubtitle:
-      'Millaista suomalaisessa metsämökissä oikeasti on: tuli, sauna, hiljaisuus, ja se pieni juttu ulkohuusista −30 asteessa, jota kukaan ei mainitse.',
+      'Millaista suomalaisessa metsämökissä oikeasti on: tuli, sauna, hiljaisuus ja se pieni juttu ulkohuusista −30 asteessa, jota kukaan ei mainitse.',
     foodEyebrow: 'Ruoka ja juoma',
     foodTitle: 'Keittiömerkinnät.',
     foodSubtitle:
@@ -354,11 +354,11 @@ const fi: SectionCopy = {
     seasonalEyebrow: 'Sesonki',
     seasonalTitle: 'Mitä kylmyys oikeasti tekee.',
     seasonalSubtitle:
-      'Kaamos, ne kahdeksan Lapin vuodenaikaa jotka useimmat listat unohtavat, ja se pieni tehtävä päästä joulukuusta läpi ilman aurinkoa.',
+      'Kaamos, ne kahdeksan Lapin vuodenaikaa, jotka useimmat listat unohtavat, ja se pieni tehtävä päästä joulukuusta läpi ilman aurinkoa.',
     ctaEyebrow: 'Sinun matkasi seuraavaksi?',
     ctaH2: 'Ole seuraava merkintä tällä sivulla.',
     ctaLead:
-      'Listat kasvavat kun lukijat kirjoittavat. Kirjaudu, kirjoita muutama merkintä, ja toimitus nostaa esiin ne jotka ansaitsevat.',
+      'Listat kasvavat kun lukijat kirjoittavat. Kirjaudu, kirjoita muutama merkintä, ja toimitus nostaa esiin ne, jotka ansaitsevat.',
     ctaButton: 'Aloita oma blogi',
   },
   archive: {
@@ -402,10 +402,10 @@ const fi: SectionCopy = {
         name: 'Mökit',
         tagline: 'Neljä seinää, yksi kamiina, nolla wifiä.',
         description:
-          'Hirsimökit, lasi-iglut, saunat jotka toimivat ja saunat jotka eivät. Millaista on oikeasti nukkua kaukana kaupungista.',
+          'Hirsimökit, lasi-iglut, saunat, jotka toimivat, ja saunat, jotka eivät. Millaista on oikeasti nukkua kaukana kaupungista.',
         metaTitle: 'Mökkiyöt Suomen Lapissa · Lapland.blog',
         metaDescription:
-          'Hirsimökit, lasi-iglut, saunat jotka toimivat ja saunat jotka eivät. Millaista on oikeasti nukkua kaukana kaupungista Suomen Lapissa.',
+          'Hirsimökit, lasi-iglut, saunat, jotka toimivat, ja saunat, jotka eivät. Millaista on oikeasti nukkua kaukana kaupungista Suomen Lapissa.',
       },
       food: {
         name: 'Ruoka',
