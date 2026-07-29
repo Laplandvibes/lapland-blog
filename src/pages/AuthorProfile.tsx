@@ -17,6 +17,8 @@ import PostCard from '../components/PostCard';
 import { supabase } from '../lib/supabase';
 import type { BlogPostRow } from '../lib/supabase';
 import { rowToPost } from '../lib/postAdapter';
+import { dedupeByLang } from '../lib/pickTranslation';
+import { useLang } from '../i18n/useLang';
 import type { Post } from '../data/posts';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
@@ -34,6 +36,7 @@ interface Profile {
 
 export default function AuthorProfile() {
   const { handle } = useParams();
+  const lang = useLang();
   const [profile, setProfile] = useState<Profile | null>(null);
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
@@ -72,7 +75,9 @@ export default function AuthorProfile() {
         .order('published_at', { ascending: false });
 
       if (!cancelled) {
-        setPosts(((postsData ?? []) as BlogPostRow[]).map(rowToPost));
+        // One row per language — collapse to one card per article.
+        const unique = dedupeByLang((postsData ?? []) as BlogPostRow[], lang);
+        setPosts(unique.map(rowToPost));
         setLoading(false);
       }
     }
@@ -81,7 +86,7 @@ export default function AuthorProfile() {
     return () => {
       cancelled = true;
     };
-  }, [handle]);
+  }, [handle, lang]);
 
   useSeo({
     title: profile

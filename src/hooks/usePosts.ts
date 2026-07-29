@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import type { BlogPostRow } from '../lib/supabase';
 import { rowToPost } from '../lib/postAdapter';
+import { dedupeByLang } from '../lib/pickTranslation';
+import { useLang } from '../i18n/useLang';
 import type { Post } from '../data/posts';
 import type { CategorySlug } from '../data/categories';
 
@@ -21,6 +23,7 @@ interface UsePostsResult {
 
 export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
   const { category, limit } = options;
+  const lang = useLang();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -39,7 +42,9 @@ export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
         .order('published_at', { ascending: false });
 
       if (category) query = query.eq('category_slug', category);
-      if (limit) query = query.limit(limit);
+      // NOTE: no server-side limit. Every article exists once per language, so
+      // the rows have to be collapsed to one per article first — limiting here
+      // would cut the list before the duplicates are removed.
 
       const { data, error: err } = await query;
 
@@ -49,7 +54,8 @@ export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
         setError(err.message);
         setPosts([]);
       } else {
-        setPosts((data as BlogPostRow[]).map(rowToPost));
+        const unique = dedupeByLang(data as BlogPostRow[], lang);
+        setPosts((limit ? unique.slice(0, limit) : unique).map(rowToPost));
       }
       setLoading(false);
     }
@@ -58,7 +64,7 @@ export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
     return () => {
       cancelled = true;
     };
-  }, [category, limit]);
+  }, [category, limit, lang]);
 
   return { posts, loading, error };
 }

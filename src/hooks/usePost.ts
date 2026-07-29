@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import type { BlogPostRow } from '../lib/supabase';
 import { rowToPost } from '../lib/postAdapter';
+import { dedupeByLang, pickForLang } from '../lib/pickTranslation';
+import { useLang } from '../i18n/useLang';
 import type { Post } from '../data/posts';
 
 interface UsePostResult {
@@ -14,6 +16,7 @@ interface UsePostResult {
 }
 
 export function usePost(slug: string | undefined): UsePostResult {
+  const lang = useLang();
   const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -34,23 +37,27 @@ export function usePost(slug: string | undefined): UsePostResult {
       setError(null);
       setNotFound(false);
 
+      // A slug is shared by every translation of an article, so this returns
+      // one row per language — `maybeSingle()` here would error out.
       const { data, error: err } = await supabase
         .from('blog_posts')
         .select('*')
         .eq('slug', slug as string)
-        .eq('status', 'published')
-        .maybeSingle();
+        .eq('status', 'published');
 
       if (cancelled) return;
+
+      const rows = (data ?? []) as BlogPostRow[];
+      const match = pickForLang(rows, lang);
 
       if (err) {
         setError(err.message);
         setPost(null);
-      } else if (!data) {
+      } else if (!match) {
         setPost(null);
         setNotFound(true);
       } else {
-        setPost(rowToPost(data as BlogPostRow));
+        setPost(rowToPost(match));
       }
       setLoading(false);
     }
@@ -59,7 +66,7 @@ export function usePost(slug: string | undefined): UsePostResult {
     return () => {
       cancelled = true;
     };
-  }, [slug]);
+  }, [slug, lang]);
 
   return { post, loading, error, notFound };
 }
@@ -75,6 +82,7 @@ export function useRelated(
   category: string | undefined,
   limit = 2
 ): UseRelatedResult {
+  const lang = useLang();
   const [related, setRelated] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -95,15 +103,16 @@ export function useRelated(
         .eq('status', 'published')
         .eq('category_slug', category as string)
         .neq('slug', slug as string)
-        .order('published_at', { ascending: false })
-        .limit(limit);
+        .order('published_at', { ascending: false });
+      // Limit is applied after collapsing translations, not in the query.
 
       if (cancelled) return;
 
       if (err || !data) {
         setRelated([]);
       } else {
-        setRelated((data as BlogPostRow[]).map(rowToPost));
+        const unique = dedupeByLang(data as BlogPostRow[], lang);
+        setRelated(unique.slice(0, limit).map(rowToPost));
       }
       setLoading(false);
     }
@@ -112,7 +121,7 @@ export function useRelated(
     return () => {
       cancelled = true;
     };
-  }, [slug, category, limit]);
+  }, [slug, category, limit, lang]);
 
   return { related, loading };
 }

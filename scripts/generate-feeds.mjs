@@ -37,10 +37,14 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // ───── fetch ─────
 async function fetchPosts() {
+  // Only the original (EN) row per article. Translations share the slug, so
+  // including them would repeat every entry once per language in the feed and
+  // the sitemap.
   const { data, error } = await supabase
     .from('blog_posts')
     .select('slug, title, excerpt, category_slug, published_at, hero_image, updated_at')
     .eq('status', 'published')
+    .is('translation_of', null)
     .order('published_at', { ascending: false });
 
   if (error) {

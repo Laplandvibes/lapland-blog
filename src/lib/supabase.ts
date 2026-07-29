@@ -55,6 +55,10 @@ export interface BlogPostRow {
   status: 'draft' | 'published';
   published_at: string | null;
   featured: boolean;
+  // i18n: a post exists once per language. `translation_of` points at the
+  // original (EN) row; it is null on the original itself.
+  lang: string | null;
+  translation_of: string | null;
   read_time_minutes: number;
   view_count: number;
   created_at: string;
