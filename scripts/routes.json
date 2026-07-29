@@ -331,69 +331,149 @@
     "ogImage": "/og/the-night-the-sky-broke-open-over-kemi.jpg",
     "appendSiteName": false,
     "fallbackTitle": "The night the sky broke open over Kemi · Lapland.blog",
-    "fallbackDescription": "−23°C, 03:47, and four hours of waiting on a frozen bay near Kemi before the aurora finally tore across the sky. A Field Journal entry on the night the photos couldn't catch."
+    "fallbackDescription": "−23°C, 03:47, and four hours of waiting on a frozen bay near Kemi before the aurora finally tore across the sky. A Field Journal entry on the night the photos couldn't catch.",
+    "fallbackTitleByLang": {
+      "fi": "Yö jona taivas repesi Kemin yllä · Lapland.blog",
+      "sv": "Natten då himlen sprack upp över Kemi · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Oli miinus kaksikymmentäkolme astetta ja kello kolme neljäkymmentäseitsemän aamuyöllä, ja itkin hetken, ehkä minuutin, eikä yksikään sinä yönä ottamani kuva ole se jonka muistan.",
+      "sv": "Det var tjugotre grader kallt och klockan var tre och fyrtiosju på natten, och jag grät en liten stund, kanske en minut, och ingen av bilderna jag tog den natten är den jag minns."
+    }
   },
   {
     "path": "/post/why-i-stopped-chasing-the-aurora-with-an-app",
     "ogImage": "/og/why-i-stopped-chasing-the-aurora-with-an-app.jpg",
     "appendSiteName": false,
     "fallbackTitle": "Why I stopped chasing the aurora with an app · Lapland.blog",
-    "fallbackDescription": "Two winters of watching a phone instead of the sky. The small, boring practice that replaced it, plus three real dark-sky spots in central Lapland, and why it works for visitors."
+    "fallbackDescription": "Two winters of watching a phone instead of the sky. The small, boring practice that replaced it, plus three real dark-sky spots in central Lapland, and why it works for visitors.",
+    "fallbackTitleByLang": {
+      "fi": "Miksi lopetin revontulten jahtaamisen sovelluksella · Lapland.blog",
+      "sv": "Varför jag slutade jaga norrsken med en app · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Katsoin kaksi talvea puhelinta enkä taivasta. Tässä on se pieni ja tylsä käytäntö joka korvasi sen, ja syy siihen miksi se toimii paremmin melkein kaikilla jotka eivät asu täällä.",
+      "sv": "Jag tittade på telefonen i stället för på himlen i två vintrar. Här är den lilla, tråkiga vana som ersatte den, och varför den fungerar bättre för nästan alla som inte bor här."
+    }
   },
   {
     "path": "/post/five-nights-in-a-forest-cabin",
     "ogImage": "/og/five-nights-in-a-forest-cabin.jpg",
     "appendSiteName": false,
     "fallbackTitle": "Five nights in a forest cabin: what I packed, what I forgot · Lapland.blog",
-    "fallbackDescription": "A day-by-day field diary from a week at a mökki outside Kemijärvi, the gear that saved the trip, the one thing forgotten that nearly ended it, and the three items never to leave the city without."
+    "fallbackDescription": "A day-by-day field diary from a week at a mökki outside Kemijärvi, the gear that saved the trip, the one thing forgotten that nearly ended it, and the three items never to leave the city without.",
+    "fallbackTitleByLang": {
+      "fi": "Viisi yötä metsämökissä: mitä pakkasin, mitä unohdin · Lapland.blog",
+      "sv": "Fem nätter i en skogsstuga: vad jag packade, vad jag glömde · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Päiväkohtainen kenttäpäiväkirja viikolta Tuulian mökillä. Varusteet jotka pelastivat minut, se yksi unohdus joka melkein päätti reissun, ja kolme esinettä joita en enää koskaan jätä kaupunkiin.",
+      "sv": "En fältdagbok dag för dag från en vecka i Tuulias stuga. Utrustningen som räddade mig, den enda glömska som nästan avslutade resan, och de tre sakerna jag aldrig mer lämnar kvar i stan."
+    }
   },
   {
     "path": "/post/a-bowl-of-salmon-soup-that-cost-more-than-the-flight",
     "ogImage": "/og/a-bowl-of-salmon-soup-that-cost-more-than-the-flight.jpg",
     "appendSiteName": false,
     "fallbackTitle": "A bowl of salmon soup that cost more than the flight · Lapland.blog",
-    "fallbackDescription": "€42 for one bowl of lohikeitto in Rovaniemi, more than the flight up. Juniper smoke, thyme from the garden, and the chef who sat down to explain why the price was, in the end, correct."
+    "fallbackDescription": "€42 for one bowl of lohikeitto in Rovaniemi, more than the flight up. Juniper smoke, thyme from the garden, and the chef who sat down to explain why the price was, in the end, correct.",
+    "fallbackTitleByLang": {
+      "fi": "Kulhollinen lohikeittoa joka maksoi enemmän kuin lento · Lapland.blog",
+      "sv": "En skål laxsoppa som kostade mer än flyget · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Neljäkymmentäkaksi euroa. Katajansavua. Timjamia keittiöpuutarhasta. Lumi satoi ikkunan ohi, keittiömestari tuli ulos ja istuutui, ja päätin että hinta oli oikea.",
+      "sv": "Fyrtiotvå euro. Enrök. Timjan från köksträdgården. Snön föll utanför fönstret, kocken kom ut och satte sig, och jag bestämde mig för att priset var rätt."
+    }
   },
   {
     "path": "/post/living-between-two-suns",
     "ogImage": "/og/living-between-two-suns.jpg",
     "appendSiteName": false,
     "fallbackTitle": "Living between two suns: what the darkness actually feels like · Lapland.blog",
-    "fallbackDescription": "Most of what you've read about the Finnish polar night is wrong. What kaamos really does to the body at 66.5°N, the biology, the blue hour, and the four small habits that get you through it."
+    "fallbackDescription": "Most of what you've read about the Finnish polar night is wrong. What kaamos really does to the body at 66.5°N, the biology, the blue hour, and the four small habits that get you through it.",
+    "fallbackTitleByLang": {
+      "fi": "Kahden auringon välissä: millaista pimeä oikeasti on · Lapland.blog",
+      "sv": "Mellan två solar: hur mörkret faktiskt känns · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Suurin osa siitä mitä kaamoksesta kirjoitetaan on väärin. Tässä on se miltä pimeä oikeasti tuntuu talven ajan 66,5 pohjoista leveyttä — biologia, sininen hetki, kynttilät ja ne neljä pientä tapaa jotka kantavat läpi.",
+      "sv": "Det mesta du läst om den finska polarnatten är fel. Så här känns mörkret faktiskt genom en vinter på 66,5 grader nord — biologin, den blå timmen, ljusen och de fyra små vanor som bär en igenom."
+    }
   },
   {
     "path": "/post/the-sun-did-not-set-it-just-circled-the-house",
     "ogImage": "/og/the-sun-did-not-set-it-just-circled-the-house.jpg",
     "appendSiteName": false,
     "fallbackTitle": "The sun did not set, it just circled the house · Lapland.blog",
-    "fallbackDescription": "A week above the Arctic Circle in June, in which the sun goes around the cabin like a slow moth around a lamp, the birds refuse to stop singing, and sleep becomes a matter of opinion."
+    "fallbackDescription": "A week above the Arctic Circle in June, in which the sun goes around the cabin like a slow moth around a lamp, the birds refuse to stop singing, and sleep becomes a matter of opinion.",
+    "fallbackTitleByLang": {
+      "fi": "Aurinko ei laskenut, se vain kiersi talon ympäri · Lapland.blog",
+      "sv": "Solen gick inte ner, den cirklade bara runt huset · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Viikko napapiirin pohjoispuolella kesäkuussa, jonka aikana aurinko kiertää mökkiä kuin hidas yöperhonen lampun ympäri, linnut kieltäytyvät lopettamasta laulamista ja unesta tulee mielipidekysymys.",
+      "sv": "En vecka norr om polcirkeln i juni, där solen går runt stugan som en långsam nattfjäril kring en lampa, fåglarna vägrar sluta sjunga och sömnen blir en åsiktsfråga."
+    }
   },
   {
     "path": "/post/twelve-kilometres-at-one-in-the-morning",
     "ogImage": "/og/twelve-kilometres-at-one-in-the-morning.jpg",
     "appendSiteName": false,
     "fallbackTitle": "Twelve kilometres at one in the morning · Lapland.blog",
-    "fallbackDescription": "A night hike on the marked trails above Kiilopää, in which the sun refuses to leave, the reindeer hold a meeting on the path, and the mosquitoes stay in the valley where they belong."
+    "fallbackDescription": "A night hike on the marked trails above Kiilopää, in which the sun refuses to leave, the reindeer hold a meeting on the path, and the mosquitoes stay in the valley where they belong.",
+    "fallbackTitleByLang": {
+      "fi": "Kaksitoista kilometriä kello yksi yöllä · Lapland.blog",
+      "sv": "Tolv kilometer klockan ett på natten · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Yövaellus merkityillä reiteillä Kiilopään yläpuolella, jonka aikana aurinko kieltäytyy lähtemästä, porot pitävät kokouksen polulla ja hyttyset pysyvät laaksossa jonne ne kuuluvatkin.",
+      "sv": "En nattvandring på de markerade lederna ovanför Kiilopää, där solen vägrar ge sig av, renarna håller möte på stigen och myggen stannar kvar i dalen där de hör hemma."
+    }
   },
   {
     "path": "/post/strawberry-hour-at-the-rovaniemi-market",
     "ogImage": "/og/strawberry-hour-at-the-rovaniemi-market.jpg",
     "appendSiteName": false,
     "fallbackTitle": "Strawberry hour at the Rovaniemi market · Lapland.blog",
-    "fallbackDescription": "The first Finnish strawberries reach the Rovaniemi market in early July, and for a few weeks the whole town organises itself around a wooden crate. A field report on berries, new potatoes, and fried vendace eaten standing up."
+    "fallbackDescription": "The first Finnish strawberries reach the Rovaniemi market in early July, and for a few weeks the whole town organises itself around a wooden crate. A field report on berries, new potatoes, and fried vendace eaten standing up.",
+    "fallbackTitleByLang": {
+      "fi": "Mansikkatunti Rovaniemen torilla · Lapland.blog",
+      "sv": "Jordgubbstimmen på torget i Rovaniemi · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Ensimmäiset kotimaiset mansikat saapuvat Rovaniemen torille heinäkuun alussa, ja muutaman viikon ajan koko kaupunki järjestäytyy puisen laatikon ympärille. Kenttäraportti marjoista, uusista perunoista ja seisaaltaan syödyistä muikuista.",
+      "sv": "De första finska jordgubbarna når torget i Rovaniemi i början av juli, och i några veckor organiserar sig hela staden kring en trälåda. En fältrapport om bär, färskpotatis och stekt siklöja äten stående."
+    }
   },
   {
     "path": "/post/the-sauna-thermometer-said-eighty-two",
     "ogImage": "/og/the-sauna-thermometer-said-eighty-two.jpg",
     "appendSiteName": false,
     "fallbackTitle": "The sauna thermometer said eighty-two · Lapland.blog",
-    "fallbackDescription": "One July evening at a lakeside cabin, told in sauna rounds: the two-hour fire, the birch whisk, the walk down the dock, and the exact temperature of a Lapland lake at midnight."
+    "fallbackDescription": "One July evening at a lakeside cabin, told in sauna rounds: the two-hour fire, the birch whisk, the walk down the dock, and the exact temperature of a Lapland lake at midnight.",
+    "fallbackTitleByLang": {
+      "fi": "Saunan mittari näytti kahdeksaakymmentäkahta · Lapland.blog",
+      "sv": "Bastutermometern visade åttiotvå · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Yksi heinäkuun ilta järven rannalla mökillä, kerrottuna löylyissä: kahden tunnin lämmitys, vasta, kävely laiturille ja lappilaisen järven tarkka lämpötila keskiyöllä.",
+      "sv": "En julikväll vid en stuga invid sjön, berättad i bastuvarv: den två timmar långa eldningen, björkkvasten, promenaden ut på bryggan och den exakta temperaturen i en lappländsk sjö vid midnatt."
+    }
   },
   {
     "path": "/post/what-july-in-lapland-actually-asks-you-to-pack",
     "ogImage": "/og/what-july-in-lapland-actually-asks-you-to-pack.jpg",
     "appendSiteName": false,
     "fallbackTitle": "What July in Lapland actually asks you to pack · Lapland.blog",
-    "fallbackDescription": "Ten days in the north with one duffel bag: what earned its place, what failed in the field, and the three cheap items that outperformed everything with a logo. A packing report from the warm end of the Lapland year."
+    "fallbackDescription": "Ten days in the north with one duffel bag: what earned its place, what failed in the field, and the three cheap items that outperformed everything with a logo. A packing report from the warm end of the Lapland year.",
+    "fallbackTitleByLang": {
+      "fi": "Mitä heinäkuun Lappi oikeasti vaatii laukkuusi · Lapland.blog",
+      "sv": "Vad juli i Lappland faktiskt kräver av din väska · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Kymmenen päivää pohjoisessa yhdellä kassilla: mikä ansaitsi paikkansa, mikä petti maastossa ja ne kolme halpaa esinettä jotka päihittivät kaiken logollisen. Pakkausraportti Lapin vuoden lämpimästä päästä.",
+      "sv": "Tio dagar i norr med en enda bag: vad som förtjänade sin plats, vad som fallerade i fält och de tre billiga sakerna som slog allt med logga. En packningsrapport från det lappländska årets varma ände."
+    }
   }
 ]

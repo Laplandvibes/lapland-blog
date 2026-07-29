@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generate-og-images.mjs && node scripts/generate-feeds.mjs",
+    "prebuild": "node scripts/generate-og-images.mjs && node scripts/generate-feeds.mjs && node scripts/sync-post-meta-langs.mjs",
     "build:nossg": "tsc -b && vite build",
     "build": "tsc -b && vite build && node ../_prerender_routes.mjs --site=https://lapland.blog --siteName=LaplandBlog --twitter=@laplandvibes --defaultOg=/og-default.jpg --routes=scripts/routes.json --meta=scripts/prerender-meta.json --addLocales=sv",
     "feeds": "node scripts/generate-feeds.mjs",
