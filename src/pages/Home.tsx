@@ -20,6 +20,7 @@ import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import type { CategorySlug } from '../data/categories';
 import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import { AppPromoHero } from '../components/AppPromo';
 import { AD_SLOTS } from '../data/adSlots';
 
 const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
@@ -511,6 +512,14 @@ export default function Home() {
       {/* LV Media -kumppaniosio heti ensimmäisen sisältöosion (live trip blogs)
           jälkeen: kakkospääkumppani + 6 kohdepaikkaa (house-adit kun tyhjänä). */}
       <HomeAdSlots config={AD_SLOTS} locale={lang} />
+
+      {/* The app announcement — same fixed block as every other site in the
+          network, below the paid partner slots (they are sold on being first). */}
+      <section className="px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <AppPromoHero />
+        </div>
+      </section>
 
       <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
 

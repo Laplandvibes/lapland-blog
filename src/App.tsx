@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from '../../shared/CookieBanner';
 import NewsletterPopup from './components/NewsletterPopup';
+import { AppPromoNudge } from './components/AppPromo';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import { useHtmlLang, useLang, LANG_PREFIX } from './i18n/useLang';
 
@@ -383,6 +384,8 @@ export default function App() {
       </CopyGate>
       <LocalisedCookieBanner />
       <NewsletterPopup />
+      {/* App promo: engagement-triggered, never on arrival. */}
+      <AppPromoNudge />
     </BrowserRouter>
   );
 }
