@@ -12,6 +12,9 @@
    ================================================================ */
 
 @theme {
+  /* LV ecosystem tokens required by shared/ components (added 2026-08-04:
+     without them Tailwind v4 silently drops e.g. bg-vibe-pink from the build). */
+  --color-arctic-cyan: #06B6D4;
   /* Typography — clean modern sans (Manrope) for headings + editorial,
      Inter for body. Owner direction: professional, highly legible, no quirk
      (problogger.com / blogit.fi feel). Space Grotesk + Fraunces removed. */
