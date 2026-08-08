@@ -75,7 +75,7 @@ const ja: SectionCopy = {
       'オーロラを見た場所にピンを立てる。コテージを撮影する。気温を書き留める。友人が実際にフォローできる、美しい旅行ブログを作りましょう。',
     heroPrimaryCta: '旅行ブログを始める',
     heroSecondaryCta: '使い方を見る',
-    heroFootnote: '無料 · フィンランド製 · Instagramにシェア · 広告なし',
+    heroFootnote: '自分のジャーナルは無料でご利用いただけます · フィンランド製 · Instagramにシェア',
     seasonalBadge: 'いまが季節 · 白夜 · 6月6日 → 7月7日',
     seasonalH2: 'ラップランド旅行の無料ブログ。旅しながら書けます。',
     seasonalLead:

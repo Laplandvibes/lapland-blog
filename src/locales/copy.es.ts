@@ -75,7 +75,7 @@ const es: SectionCopy = {
       'Marque en el mapa dónde vio las auroras. Fotografíe la cabaña. Anote lo que marcó el termómetro. Cree un blog precioso de su viaje, uno que sus amigos podrán seguir de verdad.',
     heroPrimaryCta: 'Crear su blog de viaje',
     heroSecondaryCta: 'Ver cómo funciona',
-    heroFootnote: 'Gratis · Hecho en Finlandia · Compártelo en Instagram · Sin anuncios',
+    heroFootnote: 'Su propio diario es gratis para usted · Hecho en Finlandia · Compártelo en Instagram',
     seasonalBadge: 'En temporada · Sol de medianoche · 6 jun → 7 jul',
     seasonalH2: 'Un blog de viaje gratis para tu viaje a Laponia, escrito sobre la marcha.',
     seasonalLead:

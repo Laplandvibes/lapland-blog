@@ -76,7 +76,7 @@ const de: SectionCopy = {
       'Markieren Sie, wo Sie die Nordlichter sahen. Fotografieren Sie die Hütte. Notieren Sie die Temperatur. Bauen Sie einen schönen Blog Ihrer Reise, einen, dem Ihre Freunde wirklich folgen können.',
     heroPrimaryCta: 'Reiseblog starten',
     heroSecondaryCta: 'So funktioniert es',
-    heroFootnote: 'Kostenlos · Aus Finnland · Auf Instagram teilen · Keine Werbung',
+    heroFootnote: 'Dein eigenes Tagebuch ist für dich kostenlos · Aus Finnland · Auf Instagram teilen',
     seasonalBadge: 'Jetzt Saison · Mitternachtssonne · 6.6. → 7.7.',
     seasonalH2: 'Ein kostenloser Reiseblog für deine Lappland-Reise, unterwegs geschrieben.',
     seasonalLead:

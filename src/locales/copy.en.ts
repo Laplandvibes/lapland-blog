@@ -75,7 +75,7 @@ const en: SectionCopy = {
       'Pin where you saw the aurora. Photograph the cabin. Write what the temperature did. Build a beautiful blog of your trip, one your friends can actually follow.',
     heroPrimaryCta: 'Start your trip blog',
     heroSecondaryCta: 'See how it works',
-    heroFootnote: 'Free · Made in Finland · Share to Instagram · No ads',
+    heroFootnote: 'Your own journal is free for you · Made in Finland · Share to Instagram',
     seasonalBadge: 'In season now · Midnight sun · Jun 6 → Jul 7',
     seasonalH2: 'A free travel blog for your Lapland trip, written as you go.',
     seasonalLead:

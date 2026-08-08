@@ -75,7 +75,7 @@ const sv: SectionCopy = {
       'Nåla fast var du såg norrskenet. Fotografera stugan. Skriv vad temperaturen gjorde. Bygg en fin blogg om din resa, en som dina vänner faktiskt kan följa.',
     heroPrimaryCta: 'Starta din reseblogg',
     heroSecondaryCta: 'Se hur det fungerar',
-    heroFootnote: 'Gratis · Gjord i Finland · Dela till Instagram · Inga annonser',
+    heroFootnote: 'Din egen dagbok är gratis för dig · Gjord i Finland · Dela till Instagram',
     seasonalBadge: 'Aktuellt nu · Midnattssol · 6 juni → 7 juli',
     seasonalH2: 'En gratis reseblogg för din Lapplandsresa, skriven medan du är där.',
     seasonalLead:

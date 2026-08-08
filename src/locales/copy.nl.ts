@@ -25,7 +25,7 @@ const nl: SectionCopy = {
       'Zet een speld op de plek waar u het noorderlicht zag. Fotografeer de hut. Schrijf op wat de temperatuur deed. Bouw een mooie blog van uw reis, een blog die uw vrienden echt kunnen volgen.',
     heroPrimaryCta: 'Start uw reisblog',
     heroSecondaryCta: 'Zie hoe het werkt',
-    heroFootnote: 'Gratis · Gemaakt in Finland · Deel via Instagram · Zonder reclame',
+    heroFootnote: 'Uw eigen dagboek is gratis voor u · Gemaakt in Finland · Deel via Instagram',
     seasonalBadge: 'Nu in het seizoen · Middernachtszon · 6 jun → 7 jul',
     seasonalH2: 'Een gratis reisblog voor je Lapland-reis, onderweg geschreven.',
     seasonalLead:

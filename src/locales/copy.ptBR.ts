@@ -75,7 +75,7 @@ const ptBR: SectionCopy = {
       'Marque no mapa onde você viu a aurora. Fotografe a cabana. Anote o que o termômetro fez. Monte um blog bonito da sua viagem, um que seus amigos possam de fato acompanhar.',
     heroPrimaryCta: 'Criar seu blog de viagem',
     heroSecondaryCta: 'Ver como funciona',
-    heroFootnote: 'Grátis · Feito na Finlândia · Compartilhe no Instagram · Sem anúncios',
+    heroFootnote: 'Seu próprio diário é grátis para você · Feito na Finlândia · Compartilhe no Instagram',
     seasonalBadge: 'Na temporada · Sol da meia-noite · 6 jun → 7 jul',
     seasonalH2: 'Um blog de viagem gratuito para sua viagem à Lapônia, escrito durante o trajeto.',
     seasonalLead:

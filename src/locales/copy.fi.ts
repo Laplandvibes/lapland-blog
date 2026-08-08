@@ -75,7 +75,7 @@ const fi: SectionCopy = {
       'Merkitse paikka, jossa näit revontulet. Kuvaa mökki. Kirjoita mitä lämpötila teki. Rakenna matkastasi blogi, jota kaverit oikeasti seuraavat.',
     heroPrimaryCta: 'Aloita matkablogi',
     heroSecondaryCta: 'Katso miten se toimii',
-    heroFootnote: 'Ilmainen · Tehty Suomessa · Jaa Instagramiin · Ei mainoksia',
+    heroFootnote: 'Oma blogisi on sinulle ilmainen · Tehty Suomessa · Jaa Instagramiin',
     seasonalBadge: 'Juuri nyt · Keskiyön aurinko · 6.6. → 7.7.',
     seasonalH2: 'Ilmainen matkablogi Lapin-reissullesi, kirjoita matkan aikana.',
     seasonalLead:

@@ -75,7 +75,7 @@ const zhCN: SectionCopy = {
       '标出您看到极光的地方。拍下木屋。记下气温的变化。把您的旅程做成一个漂亮的博客，一个朋友们真的能跟着看下去的博客。',
     heroPrimaryCta: '创建您的旅行博客',
     heroSecondaryCta: '看看它如何运作',
-    heroFootnote: '免费 · 芬兰出品 · 分享到 Instagram · 无广告',
+    heroFootnote: '您自己的日志免费使用 · 芬兰出品 · 分享到 Instagram',
     seasonalBadge: '当季 · 午夜阳光 · 6月6日 → 7月7日',
     seasonalH2: '为你的拉普兰之旅打造的免费旅行博客，边走边写。',
     seasonalLead:

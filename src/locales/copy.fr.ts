@@ -25,7 +25,7 @@ const fr: SectionCopy = {
       'Épinglez l’endroit où vous avez vu les aurores. Photographiez le chalet. Notez la température. Construisez un beau blog de votre voyage, un blog que vos amis peuvent vraiment suivre.',
     heroPrimaryCta: 'Lancer votre blog de voyage',
     heroSecondaryCta: 'Voir comment ça marche',
-    heroFootnote: 'Gratuit · Fait en Finlande · Partage Instagram · Sans publicité',
+    heroFootnote: 'Votre carnet personnel est gratuit · Fait en Finlande · Partage Instagram',
     seasonalBadge: 'En saison · Soleil de minuit · 6 juin → 7 juillet',
     seasonalH2: 'Un blog de voyage gratuit pour votre séjour en Laponie, écrit en chemin.',
     seasonalLead:

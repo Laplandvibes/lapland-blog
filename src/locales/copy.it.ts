@@ -25,7 +25,7 @@ const it: SectionCopy = {
       'Segni sulla mappa il luogo in cui ha visto l’aurora. Fotografi la baita. Annoti che cosa faceva la temperatura. Costruisca un bel blog del Suo viaggio, uno che i Suoi amici possano davvero seguire.',
     heroPrimaryCta: 'Avvia il blog di viaggio',
     heroSecondaryCta: 'Veda come funziona',
-    heroFootnote: 'Gratuito · Realizzato in Finlandia · Condivisione su Instagram · Senza pubblicità',
+    heroFootnote: 'Il tuo diario personale è gratuito · Realizzato in Finlandia · Condivisione su Instagram',
     seasonalBadge: 'Di stagione · Sole di mezzanotte · 6 giugno → 7 luglio',
     seasonalH2: 'Un blog di viaggio gratuito per il tuo viaggio in Lapponia, scritto lungo il percorso.',
     seasonalLead:

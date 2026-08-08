@@ -25,7 +25,7 @@ const ko: SectionCopy = {
       '오로라를 본 자리에 핀을 꽂으십시오. 통나무집을 사진에 담으십시오. 기온이 어땠는지 기록하십시오. 친구들이 실제로 따라 읽을 수 있는 아름다운 여행 블로그를 만드세요.',
     heroPrimaryCta: '여행 블로그 시작하기',
     heroSecondaryCta: '사용 방법 보기',
-    heroFootnote: '무료 · 핀란드 제작 · Instagram 공유 · 광고 없음',
+    heroFootnote: '나만의 일기는 무료로 이용 · 핀란드 제작 · Instagram 공유',
     seasonalBadge: '지금이 제철 · 백야 · 6월 6일 → 7월 7일',
     seasonalH2: '라플란드 여행을 위한 무료 여행 블로그, 여행하면서 씁니다.',
     seasonalLead:
