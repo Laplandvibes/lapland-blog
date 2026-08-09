@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import FounderByline from '../../../shared/FounderByline';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
@@ -113,6 +114,7 @@ export default function Newsletter() {
           </div>
         ) : (
           <>
+            <FounderByline tone="pink" />
             <form
               onSubmit={handleSubmit}
               className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
