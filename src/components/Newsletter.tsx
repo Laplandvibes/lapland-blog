@@ -114,7 +114,7 @@ export default function Newsletter() {
           </div>
         ) : (
           <>
-            <FounderByline tone="pink" />
+            <><FounderByline tone="pink" />
             <form
               onSubmit={handleSubmit}
               className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
@@ -151,7 +151,7 @@ export default function Newsletter() {
                   </>
                 )}
               </button>
-            </form>
+            </form></>
 
             {status === 'error' && (
               <div
