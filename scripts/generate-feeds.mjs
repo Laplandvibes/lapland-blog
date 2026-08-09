@@ -119,11 +119,13 @@ function buildSitemap(posts) {
     { loc: '/destinations', changefreq: 'monthly', priority: '0.9', lastmod: today },
     { loc: '/stories', changefreq: 'weekly', priority: '0.9', lastmod: today },
     { loc: '/about', changefreq: 'monthly', priority: '0.7', lastmod: today },
-    { loc: '/signin', changefreq: 'yearly', priority: '0.4', lastmod: today },
     { loc: '/privacy', changefreq: 'yearly', priority: '0.3', lastmod: today },
     { loc: '/terms', changefreq: 'yearly', priority: '0.3', lastmod: today },
     { loc: '/cookie-policy', changefreq: 'yearly', priority: '0.3', lastmod: today },
-    { loc: '/unsubscribe', changefreq: 'yearly', priority: '0.2', lastmod: today },
+    // /unsubscribe is deliberately NOT prerendered (see scripts/prerender.mjs),
+    // so listing it here submitted 12 locale URLs that serve the SPA shell with a
+    // root canonical — GSC read them as duplicates of the home page. Transactional
+    // page, no search value: keep it out of the sitemap.
   ];
 
   const categoryPages = CATEGORY_SLUGS.map((slug) => ({

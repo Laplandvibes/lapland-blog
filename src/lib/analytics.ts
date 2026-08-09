@@ -23,7 +23,7 @@ export const NETWORK_DOMAINS = [
   'laplandfood.com',
   'laplandgifts.com',
   'laplandtransport.com',
-  'laplandactivities.online',
+  'laplandactivities.fi',
 ];
 
 function gtag(...args: unknown[]) {

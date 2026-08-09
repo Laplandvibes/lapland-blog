@@ -475,5 +475,19 @@
       "fi": "Kymmenen päivää pohjoisessa yhdellä kassilla: mikä ansaitsi paikkansa, mikä petti maastossa ja ne kolme halpaa esinettä jotka päihittivät kaiken logollisen. Pakkausraportti Lapin vuoden lämpimästä päästä.",
       "sv": "Tio dagar i norr med en enda bag: vad som förtjänade sin plats, vad som fallerade i fält och de tre billiga sakerna som slog allt med logga. En packningsrapport från det lappländska årets varma ände."
     }
+  },
+  {
+    "path": "/post/wilderness-hut-firewood-ends-2026",
+    "appendSiteName": false,
+    "fallbackTitle": "The woodshed may be empty next winter: 154 Lapland rest areas lose maintenance · Lapland.blog",
+    "fallbackDescription": "Finland's park agency is ending firewood and toilet servicing at 154 rest areas. Here is what it means for a hiker in Lapland, which sites are on the list, and why the saving lands in the wrong place.",
+    "fallbackTitleByLang": {
+      "fi": "Autiotuvan puuvaja voi olla tyhjä ensi talvena — 154 taukopaikkaa jäi huollon ulkopuolelle · Lapland.blog",
+      "sv": "Vedboden kan vara tom nästa vinter — 154 rastplatser faller utanför underhållet · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Kerromme mitä se tarkoittaa Lapin retkeilijälle, mitkä kohteet ovat listalla ja miksi säästö osuu väärään kohtaan.",
+      "sv": "Forststyrelsen avslutar ved- och toalettunderhållet på 154 rastplatser. Vi går igenom vad det betyder för vandraren i Lappland, vilka mål som finns på listan och varför besparingen träffar fel."
+    }
   }
 ]
