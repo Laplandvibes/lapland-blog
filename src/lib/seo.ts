@@ -33,10 +33,29 @@ const OG_LOCALE: Record<Lang, string> = {
   'pt-BR': 'pt_BR', 'zh-CN': 'zh_CN', ko: 'ko_KR', fr: 'fr_FR', it: 'it_IT', nl: 'nl_NL', sv: 'sv_SE',
 };
 
+// Strips EVERY leading locale segment (see i18n/useLang.ts for the why): stale
+// stacked-prefix URLs are still indexed, and one-segment stripping let them
+// regenerate. Code forms (pt-BR, zh-CN, ko) are matched alongside the short forms.
+const LOCALE_RUN = /^(?:\/(?:pt-BR|zh-CN|fi|de|ja|es|br|cn|kr|ko|fr|it|nl|sv))+(?=\/|$)/i;
+
 function stripLocalePrefix(path: string): string {
-  const m = path.match(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl|sv)(?=\/|$)/);
-  if (m) return path.replace(m[0], '') || '/';
-  return path;
+  return path.replace(LOCALE_RUN, '') || '/';
+}
+
+// 2026-08-13: `canonical` is documented as path-only, but every page passes
+// canonicalUrl('/x'), which returns the ABSOLUTE form — and JSON-LD breadcrumbs
+// need it absolute, so canonicalUrl itself must not change. Without this
+// normalisation the locale prefix was concatenated onto the whole URL and the
+// runtime canonical became 'https://lapland.blog/fi/https://lapland.blog/'.
+// Prerendered HTML was correct; React overwrote it on mount, and Googlebot
+// runs JS — so every page shipped a broken canonical (GSC URL inspection,
+// 2026-08-13). Accepts a path or an absolute URL, always returns a path.
+function toPath(input: string): string {
+  const s = input.trim();
+  if (s.startsWith(SITE)) return s.slice(SITE.length) || '/';
+  const abs = /^(?:https?:)?\/\/[^/]*(\/.*)?$/i.exec(s);
+  if (abs) return abs[1] || '/';
+  return s.startsWith('/') ? s : `/${s}`;
 }
 
 function injectInLanguage(node: unknown, bcp47: string): unknown {
@@ -71,9 +90,7 @@ export function useSeo(opts: SeoOptions) {
 
     // Trailing-slash form matches the prerendered static HTML (Cloudflare Pages
     // serves /path/index.html at /path/ with 200; the no-slash form 308-redirects).
-    const cleanPath = canonical
-      ? stripLocalePrefix(canonical.startsWith('/') ? canonical : `/${canonical}`)
-      : undefined;
+    const cleanPath = canonical ? stripLocalePrefix(toPath(canonical)) : undefined;
     const currentUrl = cleanPath
       ? (SITE + URL_PREFIX_OF[lang] + (cleanPath === '/' ? '' : cleanPath)).replace(/\/?$/, '/')
       : undefined;

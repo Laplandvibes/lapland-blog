@@ -59,8 +59,16 @@ export function useHtmlLang(): 'en-US' | 'fi-FI' | 'de-DE' | 'ja-JP' | 'es-ES' |
   return 'en-US';
 }
 
+// Strips EVERY leading locale segment, not just the first, and knows the
+// code-form prefixes (pt-BR, zh-CN, ko) as well as the short URL forms.
+//
+// 2026-08-13: this site emitted 12 broken hreflang links per page
+// (https://lapland.blog/kr/https://lapland.blog/destinations/ — reproduced exactly,
+// and present in GSC), so Google crawled and indexed stacked/garbled URLs. The
+// href generator is fixed in lib/seo.ts, but stripping only the FIRST segment meant
+// a visitor landing on a stale junk URL and switching language minted a new one.
+const LOCALE_RUN = /^(?:\/(?:pt-BR|zh-CN|fi|de|ja|es|br|cn|kr|ko|fr|it|nl|sv))+(?=\/|$)/i;
+
 export function stripLocale(path: string): string {
-  const m = path.match(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl|sv)(?=\/|$)/);
-  if (m) return path.replace(m[0], '') || '/';
-  return path;
+  return path.replace(LOCALE_RUN, '') || '/';
 }
