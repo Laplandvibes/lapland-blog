@@ -47,7 +47,13 @@ export default function CookiePolicy() {
   return (
     <>
       <Nav />
-      <CookieContent siteId="laplandblog" siteName="Lapland Blog" lang={lang} />
+      {/* 🔴 The landmark for this page. shared/Legal/CookieContent opens a
+          plain <div> (only its sibling TermsContent opens a <main>), so without
+          this wrapper the page has NO main landmark at all -- measured from the
+          rendered DOM 2026-08-13 across 10 network sites. Do not remove. */}
+      <main>
+        <CookieContent siteId="laplandblog" siteName="Lapland Blog" lang={lang} />
+      </main>
       <Footer />
     </>
   );
