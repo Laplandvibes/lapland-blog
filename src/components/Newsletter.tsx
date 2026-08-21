@@ -16,8 +16,11 @@ function track(event: string, data?: Record<string, unknown>) {
   } catch { /* ignore */ }
 }
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// 🔴 Env-only reads here compile to undefined in every clean-clone build
+// (.env is gitignored, CI never has it) and this fetch would post to
+// "undefined/functions/v1/...". Values + fallbacks: ../lib/supabaseConfig.
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabaseConfig';
+
 const SOURCE = 'laplandblog-website';
 
 // Marketing consent + 18+ confirmation, one entry per Lang from useLang().

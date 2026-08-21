@@ -5,8 +5,10 @@ import SharedNewsletterPopup from '../../../shared/NewsletterPopup';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang } from '../i18n/useLang'
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// 🔴 Values + why they carry fallbacks: ../lib/supabaseConfig. Env-only reads
+// here made the shared popup post to "undefined/functions/v1/..." on sibling
+// sites built without .env (nightlife, tours — 2026-08-21).
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabaseConfig';
 
 export default function NewsletterPopup() {
   const langRaw = useLang();

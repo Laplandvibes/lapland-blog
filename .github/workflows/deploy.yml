@@ -87,9 +87,22 @@ jobs:
         run: ln -s site/node_modules node_modules
         working-directory: parent
 
+      # This job builds from a clean clone, so .env (gitignored: `.env` +
+      # `.env.*`) is absent and Vite would compile import.meta.env.VITE_* to
+      # undefined. On this site that killed more than the newsletter:
+      # createClient('', '') throws at module load, so the whole blog would
+      # render blank. src/lib/supabaseConfig.ts + scripts/supabase-config.mjs
+      # now carry the public (role=anon) fallbacks, so the build is correct with
+      # or without these secrets -- setting them simply keeps the env path
+      # authoritative. Unset secrets arrive as empty strings, which the fallback
+      # also covers. scripts/assert-newsletter-wired.mjs fails the build if a
+      # newsletter surface ever loses its endpoint again.
       - name: Build
         run: npm run build
         working-directory: parent/site
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

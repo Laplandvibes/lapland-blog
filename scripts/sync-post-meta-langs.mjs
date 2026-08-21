@@ -7,24 +7,15 @@
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createClient } from '@supabase/supabase-js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase-config.mjs';
 
 const ROUTES = new URL('./routes.json', import.meta.url);
 
-// .env is not loaded automatically in a plain node script. Same parser as
-// generate-feeds.mjs so both scripts read the file identically.
-for (const line of readFileSync(new URL('../.env', import.meta.url), 'utf-8').split('\n')) {
-  const m = line.match(/^([A-Z0-9_]+)=["']?(.+?)["']?\s*$/);
-  if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
-}
-
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
-const SUPABASE_KEY = process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('[post-meta] Missing VITE_SUPABASE_URL or VITE_SUPABASE_PUBLISHABLE_KEY');
-  process.exit(1);
-}
-
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+// Config (incl. the .env loader and the reason it carries fallbacks) lives in
+// ./supabase-config.mjs, shared with generate-feeds.mjs. This file used to read
+// ../.env with an unguarded readFileSync, so `npm run build` died with ENOENT
+// anywhere .env was absent - which is every clean-clone CI build.
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const SITE_SUFFIX = ' · Lapland.blog';
 

@@ -9,31 +9,17 @@ import { createClient } from '@supabase/supabase-js';
 import { writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
-import { readFileSync, existsSync } from 'node:fs';
+import { existsSync } from 'node:fs';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase-config.mjs';
 
 // ───── env ─────
+// Config (incl. the .env loader and the reason it carries fallbacks) lives in
+// ./supabase-config.mjs, shared with sync-post-meta-langs.mjs.
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
-const envPath = resolve(root, '.env');
-
-if (existsSync(envPath)) {
-  const txt = readFileSync(envPath, 'utf8');
-  for (const line of txt.split('\n')) {
-    const m = line.match(/^([A-Z0-9_]+)=["']?(.+?)["']?$/);
-    if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
-  }
-}
-
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
-const SUPABASE_KEY = process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 const SITE_URL = 'https://lapland.blog';
 
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('[feeds] Missing VITE_SUPABASE_URL or VITE_SUPABASE_PUBLISHABLE_KEY');
-  process.exit(1);
-}
-
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ───── fetch ─────
 async function fetchPosts() {

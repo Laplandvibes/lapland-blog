@@ -4,20 +4,15 @@
 // this module only ever reads/writes `blog_*` tables and `auth.users` via supabase.auth.
 
 import { createClient } from '@supabase/supabase-js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabaseConfig';
 
-const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
+// 🔴 Do NOT read import.meta.env here again. It used to, with `?? ''` as the
+// only guard — but createClient('', '') throws 'supabaseUrl is required.' at
+// module load, so a build without .env (every clean-clone CI build; .env is
+// gitignored) killed the entire blog, not just one fetch. The values and the
+// rationale for their fallbacks live in ./supabaseConfig.
 
-if (!url || !anonKey) {
-  // Fail loud in dev, quietly in prod (so the site still builds).
-  // eslint-disable-next-line no-console
-  console.error(
-    '[supabase] Missing VITE_SUPABASE_URL or VITE_SUPABASE_PUBLISHABLE_KEY. ' +
-      'Check your .env file.'
-  );
-}
-
-export const supabase = createClient(url ?? '', anonKey ?? '', {
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,

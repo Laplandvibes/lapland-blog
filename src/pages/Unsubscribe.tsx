@@ -18,8 +18,9 @@ function track(event: string, data?: Record<string, unknown>) {
   } catch { /* ignore */ }
 }
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// 🔴 Values + why they carry fallbacks: ../lib/supabaseConfig. Unsubscribe is
+// a CAN-SPAM/GDPR obligation — it must not depend on a build-time .env.
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabaseConfig';
 
 export default function Unsubscribe() {
   const lang = useLang();
