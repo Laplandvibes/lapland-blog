@@ -1,9 +1,20 @@
 import { Send, CheckCircle, AlertCircle, Loader2, Sparkles } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import FounderByline from '../../../shared/FounderByline';
+
+/**
+ * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
+ * ei jaettua importtia (vendoroitu sync on refresh-only). Ei saa koskaan
+ * rikkoa lomaketta. Standardi: memory _procedural/lv_form_funnel_events.md.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
@@ -92,12 +103,41 @@ export default function Newsletter() {
   >('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
+  // [LV-FUNNEL] view = osio vieritetty näkyviin (kerran), start = 1. fokus.
+  // Lomake on noValidate, joten natiivia invalid-eventtiä ei tule — blocked
+  // syntyy vain handleSubmitin guardista.
+  const funnelData = { surface: 'inline', lang };
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const startTracked = useRef(false);
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) {
+        track('nl_view', funnelData);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const trackStart = () => {
+    if (startTracked.current) return;
+    startTracked.current = true;
+    track('nl_start', funnelData);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !consented) return;
+    if (!email || !consented) {
+      track('nl_blocked', { ...funnelData, reason: !email ? 'email' : 'consent' });
+      return;
+    }
 
     setStatus('loading');
     setErrorMessage('');
+    track('nl_submit', funnelData);
 
     try {
       const res = await fetch(`${SUPABASE_URL}/functions/v1/send-welcome-email`, {
@@ -123,8 +163,10 @@ export default function Newsletter() {
 
       if (data.alreadySubscribed) {
         setStatus('already');
+        track('nl_success', { ...funnelData, already: true });
       } else {
         setStatus('success');
+        track('nl_success', funnelData);
         trackNewsletterSignup(SOURCE);
       }
       setEmail('');
@@ -134,12 +176,14 @@ export default function Newsletter() {
       setErrorMessage(
         err instanceof Error ? err.message : 'Failed to subscribe. Please try again.'
       );
+      track('nl_error', funnelData);
     }
   };
 
   return (
     <section
       id="newsletter"
+      ref={sectionRef}
       className="relative py-24 px-4 overflow-hidden border-y border-pink/15"
       aria-labelledby="newsletter-heading"
     >
@@ -202,6 +246,7 @@ export default function Newsletter() {
                   id="newsletter-email"
                   type="email"
                   value={email}
+                  onFocus={trackStart}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={c.placeholder}
                   required
