@@ -225,7 +225,10 @@
       "it": "Come Lapland.blog tratta i tuoi dati: la piattaforma gratuita di blog di viaggio in Lapponia finlandese gestita da Lapeso Oy. Conforme al GDPR.",
       "nl": "Hoe Lapland.blog met je gegevens omgaat, het gratis reisblogplatform voor Fins Lapland, beheerd door Lapeso Oy. AVG-conform.",
       "sv": "Hur Lapland.blog hanterar dina uppgifter, den gratis resebloggplattformen för finska Lappland som drivs av Lapeso Oy. GDPR-förenlig."
-    }
+    },
+    "harvestFiles": [
+      "../shared/Legal/PrivacyContent.tsx"
+    ]
   },
   {
     "path": "/terms",
@@ -257,7 +260,10 @@
       "it": "Le condizioni per usare Lapland.blog: la piattaforma gratuita di blog di viaggio in Lapponia finlandese dove tieni e condividi un diario. Gestita da Lapeso Oy.",
       "nl": "De voorwaarden voor het gebruik van Lapland.blog, het gratis reisblogplatform voor Fins Lapland waar je een reisdagboek bijhoudt en deelt. Beheerd door Lapeso Oy.",
       "sv": "Villkoren för att använda Lapland.blog, den gratis resebloggplattformen för finska Lappland där du för och delar en resedagbok. Drivs av Lapeso Oy."
-    }
+    },
+    "harvestFiles": [
+      "../shared/Legal/TermsContent.tsx"
+    ]
   },
   {
     "path": "/cookie-policy",
@@ -289,7 +295,10 @@
       "it": "Quali cookie e archiviazione usa Lapland.blog, perché e come rifiutarli: la piattaforma gratuita di blog di viaggio in Lapponia finlandese di Lapeso Oy.",
       "nl": "Welke cookies en opslag Lapland.blog gebruikt, waarom en hoe je je afmeldt, het gratis reisblogplatform voor Fins Lapland van Lapeso Oy.",
       "sv": "Vilka cookies och vilken lagring Lapland.blog använder, varför och hur du tackar nej, den gratis resebloggplattformen för finska Lappland från Lapeso Oy."
-    }
+    },
+    "harvestFiles": [
+      "../shared/Legal/CookieContent.tsx"
+    ]
   },
   {
     "path": "/category/aurora",
