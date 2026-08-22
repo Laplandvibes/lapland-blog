@@ -227,7 +227,7 @@
       "sv": "Hur Lapland.blog hanterar dina uppgifter, den gratis resebloggplattformen för finska Lappland som drivs av Lapeso Oy. GDPR-förenlig."
     },
     "harvestFiles": [
-      "../shared/Legal/PrivacyContent.tsx"
+      "src/shared/Legal/PrivacyContent.tsx"
     ]
   },
   {
@@ -262,7 +262,7 @@
       "sv": "Villkoren för att använda Lapland.blog, den gratis resebloggplattformen för finska Lappland där du för och delar en resedagbok. Drivs av Lapeso Oy."
     },
     "harvestFiles": [
-      "../shared/Legal/TermsContent.tsx"
+      "src/shared/Legal/TermsContent.tsx"
     ]
   },
   {
@@ -297,7 +297,7 @@
       "sv": "Vilka cookies och vilken lagring Lapland.blog använder, varför och hur du tackar nej, den gratis resebloggplattformen för finska Lappland från Lapeso Oy."
     },
     "harvestFiles": [
-      "../shared/Legal/CookieContent.tsx"
+      "src/shared/Legal/CookieContent.tsx"
     ]
   },
   {

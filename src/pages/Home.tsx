@@ -19,7 +19,7 @@ import { getImage } from '../lib/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import type { CategorySlug } from '../data/categories';
-import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AppPromoHero } from '../components/AppPromo';
 import { AD_SLOTS } from '../data/adSlots';
 

@@ -1,7 +1,7 @@
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { useSeo, canonicalUrl } from '../lib/seo';
-import TermsContent from '../../../shared/Legal/TermsContent';
+import TermsContent from '../shared/Legal/TermsContent';
 import { useLang, type Lang } from '../i18n/useLang';
 
 // Localized title/description — kept in sync with scripts/routes.json
