@@ -409,7 +409,7 @@
    which pins its own faces so it looks identical on every LV site. The blog's
    own type stays Manrope/Inter. */
 @import "tailwindcss";
-@source "../../shared/**/*.{ts,tsx}";
+@source "./shared/**/*.{ts,tsx}";
 
 /* ================================================================
    LAPLAND.BLOG THEME

@@ -1,7 +1,7 @@
 // Site-specific wrapper around the shared LV NewsletterPopup.
 // Mounted once at the root (App.tsx) — triggers after 25 s OR 55 % scroll.
 
-import SharedNewsletterPopup from '../../../shared/NewsletterPopup';
+import SharedNewsletterPopup from '../shared/NewsletterPopup';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang } from '../i18n/useLang'
 

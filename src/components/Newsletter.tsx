@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-import FounderByline from '../../../shared/FounderByline';
+import FounderByline from '../shared/FounderByline';
 
 /**
  * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,

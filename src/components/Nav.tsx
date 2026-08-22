@@ -13,7 +13,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useLang, useLocalePath, stripLocale, LANG_PREFIX } from '../i18n/useLang';
 import type { Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-import EcosystemMenu from '../../../shared/EcosystemMenu';
+import EcosystemMenu from '../shared/EcosystemMenu';
 
 const ALL_LANGS: { code: Lang; label: string; native: string }[] = [
   { code: 'en', label: 'EN', native: 'English' },

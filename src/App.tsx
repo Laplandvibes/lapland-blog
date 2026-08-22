@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useReducer, type ReactNode } from 'react';
 import { COPY, loadCopy } from './locales/copy';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
-import CookieBanner from '../../shared/CookieBanner';
+import CookieBanner from './shared/CookieBanner';
 import NewsletterPopup from './components/NewsletterPopup';
 import { AppPromoNudge } from './components/AppPromo';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
