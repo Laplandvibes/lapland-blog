@@ -29,3 +29,9 @@ dist-ssr
 
 # Temp files
 .tmp/
+
+# Sisaiset auditit ja build-lokit. TAMA REPO ON JULKINEN (github.com/Laplandvibes/
+# lapland-blog) — sisainen auditti kertoo RLS-rakenteen ja avoimet seurantakohdat,
+# eli antaa kartan hyokkaajalle vaikka salaisuuksia ei olisikaan. Pida ne poissa.
+ACCOUNT-AUDIT-*.md
+_buildlog*.txt
