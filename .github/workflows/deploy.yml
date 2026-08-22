@@ -101,6 +101,15 @@ jobs:
         run: npm run build
         working-directory: parent/site
         env:
+          # 🔵 MITATTU 22.8.2026: kumpaakaan naista secreteista EI OLE tassa
+          # repossa (`gh secret list` -> vain CLOUDFLARE_ACCOUNT_ID +
+          # CLOUDFLARE_API_TOKEN), joten ne resolvoituvat TYHJIKSI. Se on
+          # turvallista vain koska src/lib/supabaseConfig.ts kantaa julkiset
+          # fallbackit ja kasittelee myos tyhjan merkkijonon. ALA POISTA
+          # naita riveja (env voittaa kun se on olemassa) mutta ala myoskaan
+          # oleta etta ne toimivat: jos fallbackit joskus poistetaan, taman
+          # workflown build tuottaa kuolleen uutiskirjeen. Portti joka
+          # pysayttaa sen on scripts/assert-newsletter-wired.mjs.
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
