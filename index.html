@@ -90,8 +90,6 @@
     <meta name="twitter:title" content="Lapland.blog · Start & Share Your Lapland Travel Blog" />
     <meta name="twitter:description" content="Turn your Finnish Lapland trip into a travel blog. Keep a diary as you go and share it to social media in one tap. Free and ready in minutes." />
     <!-- Preconnect to critical origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Preload hero image (LCP element on home) — local WebP -->
     <link
@@ -182,6 +180,14 @@
     <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="VRMKD7N"></script>
     <!-- Umami Cloud — cookieless analytics, no consent gate needed (writes nothing to the browser) -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="88bbdad8-b9aa-49f7-b5ba-efa2dcae240e" data-domains="lapland.blog,www.lapland.blog"></script>
+      <!-- Self-hosted fonts (2026-08-16). Preload is required: without it the
+         browser cannot discover the faces until the bundled CSS has parsed,
+         which guarantees a visible pass in the fallback sans on every cold
+         load. crossorigin is required even same-origin — fonts are fetched in
+         CORS mode and a preload without it downloads the file twice. -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/v16-JTUSjIg69CK48gW7PXoo9Wlhyw.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/v17-rP2Hp2ywxg089UriCZOIHQ.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/v20-xn7gYHE41ni1AdIRggexSg.woff2" />
   </head>
   <body>
     <div id="root"></div>
