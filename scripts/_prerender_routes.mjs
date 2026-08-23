@@ -636,6 +636,54 @@ function harvestFromTsBlock(block, out, meta, seen, budget) {
   }
 }
 
+/** Argument order of the network's `pick(lang, en, fi, …)` helper. A missing
+ *  argument falls back to English, exactly as the runtime helper does. */
+const PICK_ORDER = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
+
+/** Split the balanced ( … ) starting at openIdx into top-level arguments,
+ *  respecting nested brackets and string literals. Returns null on imbalance. */
+function splitCallArgs(src, openIdx) {
+  let depth = 0, start = -1, inStr = false, q = '', esc = false;
+  const args = [];
+  for (let i = openIdx; i < src.length; i++) {
+    const c = src[i];
+    if (inStr) {
+      if (esc) { esc = false; continue; }
+      if (c === '\\') { esc = true; continue; }
+      if (c === q) inStr = false;
+      continue;
+    }
+    if (c === '"' || c === "'" || c === '`') { inStr = true; q = c; continue; }
+    if (c === '(' || c === '[' || c === '{') { depth++; if (depth === 1) start = i + 1; continue; }
+    if (c === ')' || c === ']' || c === '}') {
+      depth--;
+      if (depth === 0) { args.push(src.slice(start, i)); return args; }
+      continue;
+    }
+    if (c === ',' && depth === 1) { args.push(src.slice(start, i)); start = i + 1; }
+  }
+  return null;
+}
+
+/** Harvest this locale's argument out of every `pick(lang, …)` call in src. */
+function harvestPickCalls(src, loc, out, meta, seen, budget) {
+  const idx = PICK_ORDER.indexOf(loc.lang);
+  if (idx < 0) return;
+  const re = /\bpick\s*\(/g;
+  let m;
+  while ((m = re.exec(src)) !== null && budget.words > 0) {
+    const args = splitCallArgs(src, m.index + m[0].length - 1);
+    if (!args || args.length < 2) continue;
+    // args[0] is the lang argument; args[1] is English.
+    const pickArg = args[1 + idx] !== undefined ? args[1 + idx].trim() : '';
+    const chosen = pickArg || (args[1] || '').trim();
+    const lit = /^(['"`])((?:\\.|(?!\1).)*)\1$/.exec(chosen);
+    if (!lit) continue;
+    const kept = harvestKeep(unescapeJsString(lit[2]), meta, seen);
+    if (kept) { out.push(kept); budget.words -= kept.split(/\s+/).length; }
+  }
+}
+
 /** Slice the balanced [ … ] starting at openIdx. Same fail-open contract as
  *  sliceBlock: an imbalance yields null and the caller harvests nothing. */
 function sliceArray(src, openIdx) {
@@ -784,6 +832,18 @@ function harvestRouteText(loc, route, meta) {
         }
       }
     }
+    }
+
+    // Positional pick(lang, en, fi, …) copy co-located with a page.
+    if (Array.isArray(route.harvestPickFiles)) {
+      for (const rel of route.harvestPickFiles) {
+        if (budget.words <= 0) break;
+        const fp = resolve(CWD, rel);
+        if (!existsSync(fp)) continue;
+        let src = inlinePageCache.get(fp);
+        if (!src) { src = readFileSync(fp, 'utf-8'); inlinePageCache.set(fp, src); }
+        harvestPickCalls(src, loc, out, meta, seen, budget);
+      }
     }
 
     if (Array.isArray(route.harvestFiles)) {

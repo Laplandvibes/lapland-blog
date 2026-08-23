@@ -30,7 +30,8 @@
       "it": "Trasforma il tuo viaggio in Lapponia finlandese in un blog di viaggio: tieni un diario lungo il percorso e condividilo sui social con un tocco. Gratis e pronto in pochi minuti.",
       "nl": "Maak van je reis door Fins Lapland een reisblog: houd onderweg een dagboek bij en deel het met één tik op social media. Gratis en in enkele minuten klaar.",
       "sv": "Gör din resa i finska Lappland till en reseblogg: för dagbok under resan och dela den på sociala medier med en tryckning. Gratis och klart på några minuter."
-    }
+    },
+    "copyKey": "home"
   },
   {
     "path": "/start-here",
@@ -62,7 +63,8 @@
       "it": "Nuovo su Lapland.blog? Tre vie d'accesso: leggi le voci del diario di campo, trova la tua destinazione in Lapponia finlandese o avvia il tuo blog di viaggio gratuito.",
       "nl": "Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind je bestemming in Fins Lapland of start je eigen gratis reisblog.",
       "sv": "Ny på Lapland.blog? Tre vägar in: läs inläggen i fältdagboken, hitta ditt resmål i finska Lappland eller starta din egen gratis reseblogg."
-    }
+    },
+    "copyKey": "startHere"
   },
   {
     "path": "/top-reads",
@@ -94,7 +96,8 @@
       "it": "Da dove cominciare su Lapland.blog. Liste curate: migliori voci per chi arriva la prima volta, migliori pezzi sull'aurora, voci sul cibo, voci stagionali.",
       "nl": "Waar te beginnen op Lapland.blog. Lijsten van de redactie: beste notities voor de eerste reis, beste noorderlichtstukken, beste eetnotities, seizoenen.",
       "sv": "Var du börjar på Lapland.blog. Redaktionens listor: bästa inläggen för förstagångsbesökare, bästa norrskensinläggen, bästa matinläggen, de säsongsbetonade. Valda av redaktören."
-    }
+    },
+    "copyKey": "topReads"
   },
   {
     "path": "/destinations",
@@ -127,7 +130,8 @@
       "it": "Le otto principali destinazioni della Lapponia finlandese: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Legga le voci di ciascuna.",
       "nl": "De acht belangrijkste bestemmingen in Fins Lapland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lees de veldnotities van elk.",
       "sv": "Finska Lapplands åtta främsta resmål: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Läs inläggen från varje, eller bli först med att skriva ett."
-    }
+    },
+    "copyKey": "destinations"
   },
   {
     "path": "/stories",
@@ -160,7 +164,8 @@
       "it": "Tutti i racconti di Lapland.blog. Aurore, baite, cibo, stagioni, persone, attrezzatura e letture lunghe dalla Lapponia finlandese.",
       "nl": "Elk verhaal op Lapland.blog. Noorderlicht, hutten, eten, seizoenen, mensen, uitrusting en lange leesstukken uit Fins Lapland.",
       "sv": "Varje berättelse på Lapland.blog. Norrsken, stugor, mat, årstider, människor, utrustning och längre läsning från finska Lappland."
-    }
+    },
+    "copyKey": "archive"
   },
   {
     "path": "/about",
@@ -193,7 +198,8 @@
       "it": "Lapland.blog è una piattaforma gratuita di diario di viaggio per chi visita la Lapponia finlandese. Segni luoghi, scriva voci, condivida con gli amici.",
       "nl": "Lapland.blog is een gratis reisdagboekplatform voor bezoekers van Fins Lapland. Prik plekken vast, schrijf notities, deel met vrienden. Uw reis, goed verteld.",
       "sv": "Lapland.blog är en gratis resedagboksplattform för dig som besöker finska Lappland. Nåla fast platser, skriv inlägg, dela med vänner. Din resa, väl berättad."
-    }
+    },
+    "copyKey": "about"
   },
   {
     "path": "/privacy",
@@ -302,37 +308,37 @@
   },
   {
     "path": "/category/aurora",
-    "copyKey": "aurora",
+    "copyKey": "category",
     "appendSiteName": false
   },
   {
     "path": "/category/cabins",
-    "copyKey": "cabins",
+    "copyKey": "category",
     "appendSiteName": false
   },
   {
     "path": "/category/food",
-    "copyKey": "food",
+    "copyKey": "category",
     "appendSiteName": false
   },
   {
     "path": "/category/seasons",
-    "copyKey": "seasons",
+    "copyKey": "category",
     "appendSiteName": false
   },
   {
     "path": "/category/people",
-    "copyKey": "people",
+    "copyKey": "category",
     "appendSiteName": false
   },
   {
     "path": "/category/gear",
-    "copyKey": "gear",
+    "copyKey": "category",
     "appendSiteName": false
   },
   {
     "path": "/category/stories",
-    "copyKey": "stories",
+    "copyKey": "category",
     "appendSiteName": false
   },
   {
@@ -348,7 +354,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Oli miinus kaksikymmentäkolme astetta ja kello kolme neljäkymmentäseitsemän aamuyöllä, ja itkin hetken, ehkä minuutin, eikä yksikään sinä yönä ottamani kuva ole se jonka muistan.",
       "sv": "Det var tjugotre grader kallt och klockan var tre och fyrtiosju på natten, och jag grät en liten stund, kanske en minut, och ingen av bilderna jag tog den natten är den jag minns."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/why-i-stopped-chasing-the-aurora-with-an-app",
@@ -363,7 +370,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Katsoin kaksi talvea puhelinta enkä taivasta. Tässä on se pieni ja tylsä käytäntö joka korvasi sen, ja syy siihen miksi se toimii paremmin melkein kaikilla jotka eivät asu täällä.",
       "sv": "Jag tittade på telefonen i stället för på himlen i två vintrar. Här är den lilla, tråkiga vana som ersatte den, och varför den fungerar bättre för nästan alla som inte bor här."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/five-nights-in-a-forest-cabin",
@@ -378,7 +386,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Päiväkohtainen kenttäpäiväkirja viikolta Tuulian mökillä. Varusteet jotka pelastivat minut, se yksi unohdus joka melkein päätti reissun, ja kolme esinettä joita en enää koskaan jätä kaupunkiin.",
       "sv": "En fältdagbok dag för dag från en vecka i Tuulias stuga. Utrustningen som räddade mig, den enda glömska som nästan avslutade resan, och de tre sakerna jag aldrig mer lämnar kvar i stan."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/a-bowl-of-salmon-soup-that-cost-more-than-the-flight",
@@ -393,7 +402,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Neljäkymmentäkaksi euroa. Katajansavua. Timjamia keittiöpuutarhasta. Lumi satoi ikkunan ohi, keittiömestari tuli ulos ja istuutui, ja päätin että hinta oli oikea.",
       "sv": "Fyrtiotvå euro. Enrök. Timjan från köksträdgården. Snön föll utanför fönstret, kocken kom ut och satte sig, och jag bestämde mig för att priset var rätt."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/living-between-two-suns",
@@ -408,7 +418,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Suurin osa siitä mitä kaamoksesta kirjoitetaan on väärin. Tässä on se miltä pimeä oikeasti tuntuu talven ajan 66,5 pohjoista leveyttä — biologia, sininen hetki, kynttilät ja ne neljä pientä tapaa jotka kantavat läpi.",
       "sv": "Det mesta du läst om den finska polarnatten är fel. Så här känns mörkret faktiskt genom en vinter på 66,5 grader nord — biologin, den blå timmen, ljusen och de fyra små vanor som bär en igenom."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/the-sun-did-not-set-it-just-circled-the-house",
@@ -423,7 +434,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Viikko napapiirin pohjoispuolella kesäkuussa, jonka aikana aurinko kiertää mökkiä kuin hidas yöperhonen lampun ympäri, linnut kieltäytyvät lopettamasta laulamista ja unesta tulee mielipidekysymys.",
       "sv": "En vecka norr om polcirkeln i juni, där solen går runt stugan som en långsam nattfjäril kring en lampa, fåglarna vägrar sluta sjunga och sömnen blir en åsiktsfråga."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/twelve-kilometres-at-one-in-the-morning",
@@ -438,7 +450,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Yövaellus merkityillä reiteillä Kiilopään yläpuolella, jonka aikana aurinko kieltäytyy lähtemästä, porot pitävät kokouksen polulla ja hyttyset pysyvät laaksossa jonne ne kuuluvatkin.",
       "sv": "En nattvandring på de markerade lederna ovanför Kiilopää, där solen vägrar ge sig av, renarna håller möte på stigen och myggen stannar kvar i dalen där de hör hemma."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/strawberry-hour-at-the-rovaniemi-market",
@@ -453,7 +466,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Ensimmäiset kotimaiset mansikat saapuvat Rovaniemen torille heinäkuun alussa, ja muutaman viikon ajan koko kaupunki järjestäytyy puisen laatikon ympärille. Kenttäraportti marjoista, uusista perunoista ja seisaaltaan syödyistä muikuista.",
       "sv": "De första finska jordgubbarna når torget i Rovaniemi i början av juli, och i några veckor organiserar sig hela staden kring en trälåda. En fältrapport om bär, färskpotatis och stekt siklöja äten stående."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/the-sauna-thermometer-said-eighty-two",
@@ -468,7 +482,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Yksi heinäkuun ilta järven rannalla mökillä, kerrottuna löylyissä: kahden tunnin lämmitys, vasta, kävely laiturille ja lappilaisen järven tarkka lämpötila keskiyöllä.",
       "sv": "En julikväll vid en stuga invid sjön, berättad i bastuvarv: den två timmar långa eldningen, björkkvasten, promenaden ut på bryggan och den exakta temperaturen i en lappländsk sjö vid midnatt."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/what-july-in-lapland-actually-asks-you-to-pack",
@@ -483,7 +498,8 @@
     "fallbackDescriptionByLang": {
       "fi": "Kymmenen päivää pohjoisessa yhdellä kassilla: mikä ansaitsi paikkansa, mikä petti maastossa ja ne kolme halpaa esinettä jotka päihittivät kaiken logollisen. Pakkausraportti Lapin vuoden lämpimästä päästä.",
       "sv": "Tio dagar i norr med en enda bag: vad som förtjänade sin plats, vad som fallerade i fält och de tre billiga sakerna som slog allt med logga. En packningsrapport från det lappländska årets varma ände."
-    }
+    },
+    "copyKey": "post"
   },
   {
     "path": "/post/wilderness-hut-firewood-ends-2026",
@@ -497,6 +513,7 @@
     "fallbackDescriptionByLang": {
       "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Kerromme mitä se tarkoittaa Lapin retkeilijälle, mitkä kohteet ovat listalla ja miksi säästö osuu väärään kohtaan.",
       "sv": "Forststyrelsen avslutar ved- och toalettunderhållet på 154 rastplatser. Vi går igenom vad det betyder för vandraren i Lappland, vilka mål som finns på listan och varför besparingen träffar fel."
-    }
+    },
+    "copyKey": "post"
   }
 ]
