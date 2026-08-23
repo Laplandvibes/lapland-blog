@@ -261,7 +261,7 @@ const PARTNER_ICON: Record<Partner, typeof BedDouble> = {
 
 /**
  * Anchor any hotels search to Finnish Lapland. A bare "Lapland" makes
- * Hotels.com geocode to *Lapland, Indiana, USA* — a real revenue/trust bug
+ * the lodging partner geocode to *Lapland, Indiana, USA* — a real revenue/trust bug
  * (Vesa 2026-07-08). So we force ", Finland" onto every hotels query that
  * doesn't already name the country. Callers cannot re-introduce the bug.
  */

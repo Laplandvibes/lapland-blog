@@ -287,7 +287,7 @@ function DestinationCard({
             </Link>
           )}
 
-          {/* Sales CTA — every destination card gets a Hotels.com hook */}
+          {/* Sales CTA — every destination card gets a lodging hook */}
           <a
             href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name === 'Ylläs' ? 'Äkäslompolo' : d.name)}%2C+Finland&locale=${lang === 'fi' ? 'fi_FI' : lang === 'de' ? 'de_DE' : 'en_US'}`}
             target="_blank"
