@@ -307,6 +307,38 @@
     ]
   },
   {
+    "path": "/unsubscribe",
+    "fallbackTitle": "Unsubscribe | Lapland.blog",
+    "fallbackDescription": "Unsubscribe from the Lapland.blog newsletter. One click, no hard feelings.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Peru tilaus | Lapland.blog",
+      "de": "Abbestellen | Lapland.blog",
+      "ja": "配信解除 | Lapland.blog",
+      "es": "Cancelar suscripción | Lapland.blog",
+      "pt-BR": "Cancelar inscrição | Lapland.blog",
+      "zh-CN": "取消订阅 | Lapland.blog",
+      "ko": "구독 해지 | Lapland.blog",
+      "fr": "Désabonnement | Lapland.blog",
+      "it": "Disiscrizione | Lapland.blog",
+      "nl": "Uitschrijven | Lapland.blog",
+      "sv": "Avsluta prenumeration | Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Peru Lapland.blog-uutiskirjeen tilaus. Yksi klikkaus, ei pahaa mieltä.",
+      "de": "Den Lapland.blog-Newsletter abbestellen. Ein Klick, kein böses Blut.",
+      "ja": "Lapland.blogのニュースレターを配信解除。ワンクリックで完了、引き止めません。",
+      "es": "Cancele la suscripción al boletín de Lapland.blog. Un clic, sin rencores.",
+      "pt-BR": "Cancele a inscrição no boletim do Lapland.blog. Um clique, sem ressentimentos.",
+      "zh-CN": "取消订阅 Lapland.blog 新闻通讯。一键完成,绝无芥蒂。",
+      "ko": "Lapland.blog 뉴스레터를 구독 해지합니다. 한 번의 클릭, 붙잡지 않습니다.",
+      "fr": "Désabonnez-vous de la newsletter Lapland.blog. Un clic, sans rancune.",
+      "it": "Si disiscriva dalla newsletter di Lapland.blog. Un clic, nessun rancore.",
+      "nl": "Schrijf u uit van de Lapland.blog-nieuwsbrief. Eén klik, zonder hard gevoel.",
+      "sv": "Avsluta prenumerationen på Lapland.blogs nyhetsbrev. Ett klick, inga hårda känslor."
+    }
+  },
+  {
     "path": "/category/aurora",
     "copyKey": "category",
     "appendSiteName": false

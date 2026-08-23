@@ -70,3 +70,48 @@ writeFileSync(ROUTES, JSON.stringify(routes, null, 2) + '\n', 'utf-8');
 console.log(
   `[post-meta] wrote ${touched} post routes · languages: ${[...langsSeen].sort().join(', ')}`
 );
+
+// ── Ajautumisvahti: julkaistut postit vs. prerenderoidyt reitit ────────────
+// 🔴 routes.json on KASIN yllapidetty, mutta postit julkaistaan /admin-CMS:sta.
+// Kun catch-all poistui 23.8.2026, prerenderoimaton polku ei enaa vastaa
+// automaattisesti 200:lla — functions/_middleware.js kysyy Supabaselta ja
+// pitaa uuden postin elossa, mutta se sivu jaa ILMAN prerenderoityja metoja
+// (title, description, og, hreflang). Se ei nay mistaan ilman tata riviä.
+//
+// Ei kaada buildia: middleware kattaa tilanteen ajonaikaisesti, ja punainen
+// build estaisi kaikki muut korjaukset yhden julkaisematta jaaneen metan
+// takia. AanekaS varoitus riittaa — hiljainen ei.
+{
+  const { data: kaikki, error: virhe } = await supabase
+    .from('blog_posts')
+    .select('slug')
+    .eq('status', 'published');
+  if (virhe) {
+    console.warn('[post-meta] ajautumisvahtia ei voitu ajaa:', virhe.message);
+  } else {
+    const julkaistut = [...new Set((kaikki ?? []).map((r) => r.slug))];
+    const prerenderoidyt = new Set(
+      routes.filter((r) => r.path.startsWith('/post/')).map((r) => r.path.slice(6)),
+    );
+    const puuttuvat = julkaistut.filter((s) => !prerenderoidyt.has(s));
+    const ylimaaraiset = [...prerenderoidyt].filter((s) => !julkaistut.includes(s));
+    if (puuttuvat.length) {
+      console.warn(
+        `\n[post-meta] ⚠️  ${puuttuvat.length} julkaistua postia ILMAN prerenderoityja metoja:\n` +
+          puuttuvat.map((s) => '    /post/' + s).join('\n') +
+          '\n    Sivu toimii (middleware), mutta silla ei ole title/description/og/hreflangia.\n' +
+          '    Lisaa reitti scripts/routes.jsoniin ja aja build uudelleen.\n',
+      );
+    }
+    if (ylimaaraiset.length) {
+      console.warn(
+        `[post-meta] ⚠️  ${ylimaaraiset.length} prerenderoitya reittia joita ei ole julkaistuna: ` +
+          ylimaaraiset.map((s) => '/post/' + s).join(', ') +
+          ' — poistettu tai luonnos? Prerenderoity sivu vastaa 200:lla.',
+      );
+    }
+    if (!puuttuvat.length && !ylimaaraiset.length) {
+      console.log(`[post-meta] ajautumisvahti OK — ${julkaistut.length} julkaistua postia, kaikki prerenderoitu`);
+    }
+  }
+}
