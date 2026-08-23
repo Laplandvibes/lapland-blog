@@ -483,7 +483,7 @@ const fr: SectionCopy = {
     fieldJournalEntry: 'Entrée du carnet de terrain',
     liveTripBlog: 'Blog de voyage-exemple',
     yoursCouldBeNext: 'Le vôtre pourrait être le prochain dans ce carrousel.',
-    featuredBadge: 'À la une',
+    featuredBadge: 'Choix de la rédaction',
     minRead: 'min de lecture',
     exampleBadge: 'Exemple',
     byEditorial: 'Exemple de la rédaction',

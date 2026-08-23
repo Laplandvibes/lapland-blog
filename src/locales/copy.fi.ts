@@ -534,7 +534,7 @@ const fi: SectionCopy = {
     fieldJournalEntry: 'Kenttäpäiväkirjan merkintä',
     liveTripBlog: 'Esimerkkimatkablogi',
     yoursCouldBeNext: 'Sinun voisi olla seuraava tässä karusellissa.',
-    featuredBadge: 'Nostettu',
+    featuredBadge: 'Toimituksen poiminta',
     minRead: 'min lukuaika',
     exampleBadge: 'Esimerkki',
     byEditorial: 'Toimituksen esimerkki',

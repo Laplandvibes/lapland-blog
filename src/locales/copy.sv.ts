@@ -533,7 +533,7 @@ const sv: SectionCopy = {
     fieldJournalEntry: 'Fältdagboksinlägg',
     liveTripBlog: 'Exempelreseblogg',
     yoursCouldBeNext: 'Din kan vara näst på tur i den här karusellen.',
-    featuredBadge: 'Utvald',
+    featuredBadge: 'Redaktionens val',
     minRead: 'min läsning',
     exampleBadge: 'Exempel',
     byEditorial: 'Redaktionellt exempel',

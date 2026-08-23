@@ -533,7 +533,7 @@ const ptBR: SectionCopy = {
     fieldJournalEntry: 'Registro do diário de campo',
     liveTripBlog: 'Blog de viagem de exemplo',
     yoursCouldBeNext: 'O seu pode ser o próximo neste carrossel.',
-    featuredBadge: 'Destaque',
+    featuredBadge: 'Escolha da redação',
     minRead: 'min de leitura',
     exampleBadge: 'Exemplo',
     byEditorial: 'Exemplo da redação',

@@ -483,7 +483,7 @@ const ko: SectionCopy = {
     fieldJournalEntry: '필드 저널 기록',
     liveTripBlog: '예시 여행 블로그',
     yoursCouldBeNext: '다음은 당신의 차례일 수 있습니다.',
-    featuredBadge: '추천',
+    featuredBadge: '편집부 추천',
     minRead: '분 분량',
     exampleBadge: '예시',
     byEditorial: '편집부 예시',

@@ -483,7 +483,7 @@ const it: SectionCopy = {
     fieldJournalEntry: 'Voce del diario di campo',
     liveTripBlog: 'Blog-esempio di viaggio',
     yoursCouldBeNext: 'Il tuo potrebbe essere il prossimo in questo carosello.',
-    featuredBadge: 'In evidenza',
+    featuredBadge: 'Scelta della redazione',
     minRead: 'min di lettura',
     exampleBadge: 'Esempio',
     byEditorial: 'Esempio della redazione',

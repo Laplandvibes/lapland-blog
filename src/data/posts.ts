@@ -30,6 +30,16 @@ export interface Post {
   heroAlt: string;
   /** Author registry key (src/data/author.ts) — 'vesa'/'fieldjournal' or a pen handle. */
   author: string;
+  /**
+   * Editorial — marks the post that leads the front page (see featuredPost()).
+   * Nothing is paid for it: adSlots.ts carries `sponsors: [null, null]`.
+   *
+   * 🔴 The SAME field name means the OPPOSITE in the app: there
+   * `Event.featured` is a SOLD placement. If a paid placement is ever
+   * introduced here, give it its own field and mark it as advertising — do not
+   * reuse this one. The badge copy (`featuredBadge`) says "editor's pick" in
+   * all twelve languages and would then be labelling an ad as a staff pick.
+   */
   featured?: boolean;
   content: PostBlock[];
 }

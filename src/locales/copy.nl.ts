@@ -483,7 +483,7 @@ const nl: SectionCopy = {
     fieldJournalEntry: 'Veldjournaal-notitie',
     liveTripBlog: 'Voorbeeld-reisblog',
     yoursCouldBeNext: 'De jouwe kan de volgende zijn in deze carrousel.',
-    featuredBadge: 'Uitgelicht',
+    featuredBadge: 'Redactiekeuze',
     minRead: 'min leestijd',
     exampleBadge: 'Voorbeeld',
     byEditorial: 'Redactievoorbeeld',

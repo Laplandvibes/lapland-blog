@@ -533,7 +533,7 @@ const zhCN: SectionCopy = {
     fieldJournalEntry: '田野日志记录',
     liveTripBlog: '示例旅行博客',
     yoursCouldBeNext: '下一个出现在这里的可能就是你。',
-    featuredBadge: '精选',
+    featuredBadge: '编辑推荐',
     minRead: '分钟阅读',
     exampleBadge: '示例',
     byEditorial: '编辑部示例',

@@ -535,7 +535,7 @@ const de: SectionCopy = {
     fieldJournalEntry: 'Feldtagebuch-Eintrag',
     liveTripBlog: 'Beispiel-Reiseblog',
     yoursCouldBeNext: 'Deiner könnte als Nächstes in diesem Karussell stehen.',
-    featuredBadge: 'Empfohlen',
+    featuredBadge: 'Redaktionsempfehlung',
     minRead: 'Min. Lesezeit',
     exampleBadge: 'Beispiel',
     byEditorial: 'Beispiel der Redaktion',

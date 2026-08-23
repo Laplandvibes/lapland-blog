@@ -533,7 +533,7 @@ const ja: SectionCopy = {
     fieldJournalEntry: 'フィールドジャーナルの記録',
     liveTripBlog: 'サンプル旅ブログ',
     yoursCouldBeNext: '次はあなたの番かもしれません。',
-    featuredBadge: '注目記事',
+    featuredBadge: '編集部の選定',
     minRead: '分で読めます',
     exampleBadge: 'サンプル',
     byEditorial: '編集部のサンプル',
