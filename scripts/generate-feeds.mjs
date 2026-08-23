@@ -9,7 +9,7 @@ import { createClient } from '@supabase/supabase-js';
 import { writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase-config.mjs';
 
 // ───── env ─────
@@ -133,14 +133,29 @@ function buildSitemap(posts) {
 
   const all = [...staticPages, ...categoryPages, ...postPages];
 
+  // A route flagged `canonicalLocale` in routes.json serves ONE language on every
+  // locale URL, and its HTML says so: canonical → that locale, hreflang en +
+  // x-default only. Emitting twelve sitemap rows with full alternates for such a
+  // route contradicts the page itself — it submits 121 URLs that each declare
+  // "I am not the canonical". Read the flag from the SAME file the prerenderer
+  // reads, so the sitemap and the HTML cannot drift apart.
+  const routesPath = resolve(root, 'scripts', 'routes.json');
+  const canonicalOnly = new Map();
+  if (existsSync(routesPath)) {
+    for (const r of JSON.parse(readFileSync(routesPath, 'utf-8'))) {
+      if (r.canonicalLocale) canonicalOnly.set(r.path, r.canonicalLocale);
+    }
+  }
+
   // Emit one <url> entry PER (path, locale) combination, with xhtml:link
   // alternates for every locale + x-default → English. Mirrors the pattern
   // used by laplandvibes.com hub generator (multi-language sitemap spec).
   const entries = [];
   for (const u of all) {
-    for (const locale of LOCALES) {
+    const only = canonicalOnly.get(u.loc);
+    for (const locale of only ? [only] : LOCALES) {
       const fullLoc = absUrl(u.loc, locale);
-      const alts = LOCALES.map(
+      const alts = (only ? [only] : LOCALES).map(
         (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${absUrl(u.loc, l)}"/>`,
       ).join('\n');
       const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${absUrl(u.loc, DEFAULT_LOCALE)}"/>`;

@@ -387,7 +387,8 @@
       "fi": "Oli miinus kaksikymmentäkolme astetta ja kello kolme neljäkymmentäseitsemän aamuyöllä, ja itkin hetken, ehkä minuutin, eikä yksikään sinä yönä ottamani kuva ole se jonka muistan.",
       "sv": "Det var tjugotre grader kallt och klockan var tre och fyrtiosju på natten, och jag grät en liten stund, kanske en minut, och ingen av bilderna jag tog den natten är den jag minns."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/why-i-stopped-chasing-the-aurora-with-an-app",
@@ -403,7 +404,8 @@
       "fi": "Katsoin kaksi talvea puhelinta enkä taivasta. Tässä on se pieni ja tylsä käytäntö joka korvasi sen, ja syy siihen miksi se toimii paremmin melkein kaikilla jotka eivät asu täällä.",
       "sv": "Jag tittade på telefonen i stället för på himlen i två vintrar. Här är den lilla, tråkiga vana som ersatte den, och varför den fungerar bättre för nästan alla som inte bor här."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/five-nights-in-a-forest-cabin",
@@ -419,7 +421,8 @@
       "fi": "Päiväkohtainen kenttäpäiväkirja viikolta Tuulian mökillä. Varusteet jotka pelastivat minut, se yksi unohdus joka melkein päätti reissun, ja kolme esinettä joita en enää koskaan jätä kaupunkiin.",
       "sv": "En fältdagbok dag för dag från en vecka i Tuulias stuga. Utrustningen som räddade mig, den enda glömska som nästan avslutade resan, och de tre sakerna jag aldrig mer lämnar kvar i stan."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/a-bowl-of-salmon-soup-that-cost-more-than-the-flight",
@@ -435,7 +438,8 @@
       "fi": "Neljäkymmentäkaksi euroa. Katajansavua. Timjamia keittiöpuutarhasta. Lumi satoi ikkunan ohi, keittiömestari tuli ulos ja istuutui, ja päätin että hinta oli oikea.",
       "sv": "Fyrtiotvå euro. Enrök. Timjan från köksträdgården. Snön föll utanför fönstret, kocken kom ut och satte sig, och jag bestämde mig för att priset var rätt."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/living-between-two-suns",
@@ -451,7 +455,8 @@
       "fi": "Suurin osa siitä mitä kaamoksesta kirjoitetaan on väärin. Tässä on se miltä pimeä oikeasti tuntuu talven ajan 66,5 pohjoista leveyttä — biologia, sininen hetki, kynttilät ja ne neljä pientä tapaa jotka kantavat läpi.",
       "sv": "Det mesta du läst om den finska polarnatten är fel. Så här känns mörkret faktiskt genom en vinter på 66,5 grader nord — biologin, den blå timmen, ljusen och de fyra små vanor som bär en igenom."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/the-sun-did-not-set-it-just-circled-the-house",
@@ -467,7 +472,8 @@
       "fi": "Viikko napapiirin pohjoispuolella kesäkuussa, jonka aikana aurinko kiertää mökkiä kuin hidas yöperhonen lampun ympäri, linnut kieltäytyvät lopettamasta laulamista ja unesta tulee mielipidekysymys.",
       "sv": "En vecka norr om polcirkeln i juni, där solen går runt stugan som en långsam nattfjäril kring en lampa, fåglarna vägrar sluta sjunga och sömnen blir en åsiktsfråga."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/twelve-kilometres-at-one-in-the-morning",
@@ -483,7 +489,8 @@
       "fi": "Yövaellus merkityillä reiteillä Kiilopään yläpuolella, jonka aikana aurinko kieltäytyy lähtemästä, porot pitävät kokouksen polulla ja hyttyset pysyvät laaksossa jonne ne kuuluvatkin.",
       "sv": "En nattvandring på de markerade lederna ovanför Kiilopää, där solen vägrar ge sig av, renarna håller möte på stigen och myggen stannar kvar i dalen där de hör hemma."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/strawberry-hour-at-the-rovaniemi-market",
@@ -499,7 +506,8 @@
       "fi": "Ensimmäiset kotimaiset mansikat saapuvat Rovaniemen torille heinäkuun alussa, ja muutaman viikon ajan koko kaupunki järjestäytyy puisen laatikon ympärille. Kenttäraportti marjoista, uusista perunoista ja seisaaltaan syödyistä muikuista.",
       "sv": "De första finska jordgubbarna når torget i Rovaniemi i början av juli, och i några veckor organiserar sig hela staden kring en trälåda. En fältrapport om bär, färskpotatis och stekt siklöja äten stående."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/the-sauna-thermometer-said-eighty-two",
@@ -515,7 +523,8 @@
       "fi": "Yksi heinäkuun ilta järven rannalla mökillä, kerrottuna löylyissä: kahden tunnin lämmitys, vasta, kävely laiturille ja lappilaisen järven tarkka lämpötila keskiyöllä.",
       "sv": "En julikväll vid en stuga invid sjön, berättad i bastuvarv: den två timmar långa eldningen, björkkvasten, promenaden ut på bryggan och den exakta temperaturen i en lappländsk sjö vid midnatt."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/what-july-in-lapland-actually-asks-you-to-pack",
@@ -531,12 +540,13 @@
       "fi": "Kymmenen päivää pohjoisessa yhdellä kassilla: mikä ansaitsi paikkansa, mikä petti maastossa ja ne kolme halpaa esinettä jotka päihittivät kaiken logollisen. Pakkausraportti Lapin vuoden lämpimästä päästä.",
       "sv": "Tio dagar i norr med en enda bag: vad som förtjänade sin plats, vad som fallerade i fält och de tre billiga sakerna som slog allt med logga. En packningsrapport från det lappländska årets varma ände."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   },
   {
     "path": "/post/wilderness-hut-firewood-ends-2026",
     "appendSiteName": false,
-    "fallbackTitle": "The woodshed may be empty next winter: 154 Lapland rest areas lose maintenance · Lapland.blog",
+    "fallbackTitle": "154 Lapland rest areas lose their firewood service · Lapland.blog",
     "fallbackDescription": "Finland's park agency is ending firewood and toilet servicing at 154 rest areas. Here is what it means for a hiker in Lapland, which sites are on the list, and why the saving lands in the wrong place.",
     "fallbackTitleByLang": {
       "fi": "Autiotuvan puuvaja voi olla tyhjä ensi talvena — 154 taukopaikkaa jäi huollon ulkopuolelle · Lapland.blog",
@@ -546,6 +556,7 @@
       "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Kerromme mitä se tarkoittaa Lapin retkeilijälle, mitkä kohteet ovat listalla ja miksi säästö osuu väärään kohtaan.",
       "sv": "Forststyrelsen avslutar ved- och toalettunderhållet på 154 rastplatser. Vi går igenom vad det betyder för vandraren i Lappland, vilka mål som finns på listan och varför besparingen träffar fel."
     },
-    "copyKey": "post"
+    "copyKey": "post",
+    "canonicalLocale": "en"
   }
 ]
