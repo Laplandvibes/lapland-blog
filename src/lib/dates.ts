@@ -23,5 +23,9 @@ export function formatPostDate(
   lang: Lang,
   options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' }
 ): string {
-  return new Date(iso).toLocaleDateString(DATE_LOCALE[lang], options);
+  // timeZone UTC: `publishedAt` is a bare date ("2026-01-18"), so it parses as
+  // UTC midnight and reads back a day early for every reader west of UTC — a New
+  // York reader saw "17 January" on a post published on the 18th. Callers can
+  // still override it, but the default must not depend on the device.
+  return new Date(iso).toLocaleDateString(DATE_LOCALE[lang], { timeZone: 'UTC', ...options });
 }
