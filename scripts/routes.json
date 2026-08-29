@@ -39,32 +39,32 @@
     "fallbackDescription": "New to Lapland.blog? Three ways in: read the field-journal entries, find your Finnish Lapland destination, or start your own free travel blog.",
     "appendSiteName": false,
     "fallbackTitleByLang": {
-      "fi": "Aloita tästä · ensiaskeleet Lapland.blogissa",
-      "de": "Hier starten · deine ersten Schritte auf Lapland.blog",
-      "ja": "はじめに · Lapland.blogの歩き方",
-      "es": "Empieza aquí · tus primeros pasos en Lapland.blog",
-      "pt-BR": "Comece aqui · seus primeiros passos no Lapland.blog",
-      "zh-CN": "从这里开始 · Lapland.blog 新手指引",
+      "fi": "Aloita tästä · Ensiaskeleet Lapland.blogissa",
+      "sv": "Börja här · Dina första steg på Lapland.blog",
+      "de": "Hier starten · Ihre ersten Schritte auf Lapland.blog",
+      "fr": "Commencer ici · Vos premiers pas sur Lapland.blog",
+      "es": "Empieza aquí · Tus primeros pasos en Lapland.blog",
+      "it": "Inizia qui · I tuoi primi passi su Lapland.blog",
+      "nl": "Begin hier · Je eerste stappen op Lapland.blog",
+      "ja": "ここから始める · Lapland.blogの最初の一歩",
       "ko": "여기서 시작 · Lapland.blog 첫걸음",
-      "fr": "Commencez ici · vos premiers pas sur Lapland.blog",
-      "it": "Inizia qui · i primi passi su Lapland.blog",
-      "nl": "Begin hier · je eerste stappen op Lapland.blog",
-      "sv": "Börja här · dina första steg på Lapland.blog"
+      "zh-CN": "从这里开始 · Lapland.blog入门",
+      "pt-BR": "Comece aqui · Seus primeiros passos no Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Uusi Lapland.blogissa? Kolme reittiä sisään: lue kenttäpäiväkirjamerkinnät, löydä Suomen Lapin kohteesi tai aloita oma ilmainen matkablogi.",
-      "de": "Neu auf Lapland.blog? Drei Wege hinein: lies die Feldtagebuch-Einträge, finde dein Ziel in Finnisch-Lappland oder starte deinen eigenen kostenlosen Reiseblog.",
-      "ja": "Lapland.blogは初めて？入口は三つ。フィールド日記の記事を読む、フィンランド・ラップランドの目的地を探す、または無料で自分の旅行ブログを始める。",
-      "es": "¿Nuevo en Lapland.blog? Tres caminos: lee las entradas del diario de campo, encuentra tu destino en la Laponia finlandesa o empieza tu propio blog de viaje gratis.",
-      "pt-BR": "Novo no Lapland.blog? Três caminhos: leia as entradas do diário de campo, encontre seu destino na Lapônia finlandesa ou comece seu próprio blog de viagem grátis.",
-      "zh-CN": "初到 Lapland.blog？三种入门方式：读田野日志文章、找到你的芬兰拉普兰目的地，或免费开始你自己的旅行博客。",
-      "ko": "Lapland.blog가 처음이신가요? 들어가는 세 가지 길: 현장 일기 글 읽기, 핀란드 라플란드 여행지 찾기, 또는 나만의 무료 여행 블로그 시작하기.",
-      "fr": "Nouveau sur Lapland.blog ? Trois entrées : lisez les entrées du carnet de terrain, trouvez votre destination en Laponie finlandaise ou lancez votre blog de voyage gratuit.",
-      "it": "Nuovo su Lapland.blog? Tre vie d'accesso: leggi le voci del diario di campo, trova la tua destinazione in Lapponia finlandese o avvia il tuo blog di viaggio gratuito.",
-      "nl": "Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind je bestemming in Fins Lapland of start je eigen gratis reisblog.",
-      "sv": "Ny på Lapland.blog? Tre vägar in: läs inläggen i fältdagboken, hitta ditt resmål i finska Lappland eller starta din egen gratis reseblogg."
+      "fi": "Uusi täällä? Kolme reittiä sisään: lue kenttäpäiväkirjat, löydä Lapin kohteesi tai aloita oma ilmainen matkablogi.",
+      "sv": "Ny här? Tre vägar in: läs fältdagböckerna, hitta ditt Lapplandsresmål eller starta din egen kostnadsfria reseblogg.",
+      "de": "Neu hier? Drei Wege hinein: Feldtagebücher lesen, Ihr Lappland-Ziel finden oder ein eigenes kostenloses Reiseblog starten.",
+      "fr": "Nouveau ici ? Trois portes d’entrée : lire les carnets de terrain, trouver votre destination en Laponie ou créer votre blog de voyage gratuit.",
+      "es": "¿Nuevo aquí? Tres caminos: leer los diarios de campo, encontrar tu destino en Laponia o crear tu blog de viaje gratuito.",
+      "it": "Nuovo qui? Tre strade: leggere i diari sul campo, trovare la tua destinazione in Lapponia o creare il tuo blog di viaggio gratuito.",
+      "nl": "Nieuw hier? Drie routes: lees de velddagboeken, vind je Lapland-bestemming of start je eigen gratis reisblog.",
+      "ja": "初めてですか？入口は3つ：フィールド日記を読む、ラップランドの行き先を探す、無料の旅行ブログを始める。",
+      "ko": "처음이신가요? 세 가지 길: 필드 저널 읽기, 라플란드 여행지 찾기, 무료 여행 블로그 시작하기.",
+      "zh-CN": "第一次来？三个入口：读实地日记、找到你的拉普兰目的地，或开一个免费旅行博客。",
+      "pt-BR": "Novo por aqui? Três caminhos: ler os diários de campo, encontrar seu destino na Lapônia ou criar seu blog de viagem gratuito."
     },
-    "copyKey": "startHere"
+    "copyKey": null
   },
   {
     "path": "/top-reads",
@@ -113,7 +113,7 @@
       "pt-BR": "Destinos · Lapland.blog",
       "zh-CN": "目的地 · Lapland.blog",
       "ko": "여행지 · Lapland.blog",
-      "fr": "Destinations · Lapland.blog",
+      "fr": "Destinations de Laponie · Lapland.blog",
       "it": "Destinazioni · Lapland.blog",
       "nl": "Bestemmingen · Lapland.blog",
       "sv": "Resmål · Lapland.blog"
