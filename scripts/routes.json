@@ -340,37 +340,37 @@
   },
   {
     "path": "/category/aurora",
-    "copyKey": "category",
+    "copyKey": "category.themes.aurora",
     "appendSiteName": false
   },
   {
     "path": "/category/cabins",
-    "copyKey": "category",
+    "copyKey": "category.themes.cabins",
     "appendSiteName": false
   },
   {
     "path": "/category/food",
-    "copyKey": "category",
+    "copyKey": "category.themes.food",
     "appendSiteName": false
   },
   {
     "path": "/category/seasons",
-    "copyKey": "category",
+    "copyKey": "category.themes.seasons",
     "appendSiteName": false
   },
   {
     "path": "/category/people",
-    "copyKey": "category",
+    "copyKey": "category.themes.people",
     "appendSiteName": false
   },
   {
     "path": "/category/gear",
-    "copyKey": "category",
+    "copyKey": "category.themes.gear",
     "appendSiteName": false
   },
   {
     "path": "/category/stories",
-    "copyKey": "category",
+    "copyKey": "category.themes.stories",
     "appendSiteName": false
   },
   {
@@ -380,12 +380,12 @@
     "fallbackTitle": "The night the sky broke open over Kemi · Lapland.blog",
     "fallbackDescription": "−23°C, 03:47, and four hours of waiting on a frozen bay near Kemi before the aurora finally tore across the sky. A Field Journal entry on the night the photos couldn't catch.",
     "fallbackTitleByLang": {
-      "fi": "Yö jona taivas repesi Kemin yllä · Lapland.blog",
-      "sv": "Natten då himlen sprack upp över Kemi · Lapland.blog"
+      "sv": "Natten då himlen sprack upp över Kemi · Lapland.blog",
+      "fi": "Yö jona taivas repesi Kemin yllä · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Oli miinus kaksikymmentäkolme astetta ja kello kolme neljäkymmentäseitsemän aamuyöllä, ja itkin hetken, ehkä minuutin, eikä yksikään sinä yönä ottamani kuva ole se jonka muistan.",
-      "sv": "Det var tjugotre grader kallt och klockan var tre och fyrtiosju på natten, och jag grät en liten stund, kanske en minut, och ingen av bilderna jag tog den natten är den jag minns."
+      "sv": "Det var tjugotre grader kallt och klockan var tre och fyrtiosju på natten, och jag grät en liten stund, kanske en minut, och ingen av bilderna jag tog den natten är den jag minns.",
+      "fi": "Oli miinus kaksikymmentäkolme astetta ja kello kolme neljäkymmentäseitsemän aamuyöllä, ja itkin hetken, ehkä minuutin, eikä yksikään sinä yönä ottamani kuva ole se, jonka muistan."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -397,12 +397,12 @@
     "fallbackTitle": "Why I stopped chasing the aurora with an app · Lapland.blog",
     "fallbackDescription": "Two winters of watching a phone instead of the sky. The small, boring practice that replaced it, plus three real dark-sky spots in central Lapland, and why it works for visitors.",
     "fallbackTitleByLang": {
-      "fi": "Miksi lopetin revontulten jahtaamisen sovelluksella · Lapland.blog",
-      "sv": "Varför jag slutade jaga norrsken med en app · Lapland.blog"
+      "sv": "Varför jag slutade jaga norrsken med en app · Lapland.blog",
+      "fi": "Miksi lopetin revontulten jahtaamisen sovelluksella · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Katsoin kaksi talvea puhelinta enkä taivasta. Tässä on se pieni ja tylsä käytäntö joka korvasi sen, ja syy siihen miksi se toimii paremmin melkein kaikilla jotka eivät asu täällä.",
-      "sv": "Jag tittade på telefonen i stället för på himlen i två vintrar. Här är den lilla, tråkiga vana som ersatte den, och varför den fungerar bättre för nästan alla som inte bor här."
+      "sv": "Jag tittade på telefonen i stället för på himlen i två vintrar. Här är den lilla, tråkiga vana som ersatte den, och varför den fungerar bättre för nästan alla som inte bor här.",
+      "fi": "Katsoin kaksi talvea puhelinta enkä taivasta. Tässä on se pieni ja tylsä käytäntö, joka korvasi sen, ja syy siihen, miksi se toimii paremmin melkein kaikilla, jotka eivät asu täällä."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -414,12 +414,12 @@
     "fallbackTitle": "Five nights in a forest cabin: what I packed, what I forgot · Lapland.blog",
     "fallbackDescription": "A day-by-day field diary from a week at a mökki outside Kemijärvi, the gear that saved the trip, the one thing forgotten that nearly ended it, and the three items never to leave the city without.",
     "fallbackTitleByLang": {
-      "fi": "Viisi yötä metsämökissä: mitä pakkasin, mitä unohdin · Lapland.blog",
-      "sv": "Fem nätter i en skogsstuga: vad jag packade, vad jag glömde · Lapland.blog"
+      "sv": "Fem nätter i en skogsstuga: vad jag packade, vad jag glömde · Lapland.blog",
+      "fi": "Viisi yötä metsämökissä: mitä pakkasin, mitä unohdin · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Päiväkohtainen kenttäpäiväkirja viikolta Tuulian mökillä. Varusteet jotka pelastivat minut, se yksi unohdus joka melkein päätti reissun, ja kolme esinettä joita en enää koskaan jätä kaupunkiin.",
-      "sv": "En fältdagbok dag för dag från en vecka i Tuulias stuga. Utrustningen som räddade mig, den enda glömska som nästan avslutade resan, och de tre sakerna jag aldrig mer lämnar kvar i stan."
+      "sv": "En fältdagbok dag för dag från en vecka i Tuulias stuga. Utrustningen som räddade mig, den enda glömska som nästan avslutade resan, och de tre sakerna jag aldrig mer lämnar kvar i stan.",
+      "fi": "Päiväkohtainen kenttäpäiväkirja viikolta Tuulian mökillä. Varusteet, jotka pelastivat minut, se yksi unohdus, joka melkein päätti reissun, ja kolme esinettä, joita en enää koskaan jätä kaupunkiin."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -431,12 +431,12 @@
     "fallbackTitle": "A bowl of salmon soup that cost more than the flight · Lapland.blog",
     "fallbackDescription": "€42 for one bowl of lohikeitto in Rovaniemi, more than the flight up. Juniper smoke, thyme from the garden, and the chef who sat down to explain why the price was, in the end, correct.",
     "fallbackTitleByLang": {
-      "fi": "Kulhollinen lohikeittoa joka maksoi enemmän kuin lento · Lapland.blog",
-      "sv": "En skål laxsoppa som kostade mer än flyget · Lapland.blog"
+      "sv": "En skål laxsoppa som kostade mer än flyget · Lapland.blog",
+      "fi": "Kulhollinen lohikeittoa, joka maksoi enemmän kuin lento · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Neljäkymmentäkaksi euroa. Katajansavua. Timjamia keittiöpuutarhasta. Lumi satoi ikkunan ohi, keittiömestari tuli ulos ja istuutui, ja päätin että hinta oli oikea.",
-      "sv": "Fyrtiotvå euro. Enrök. Timjan från köksträdgården. Snön föll utanför fönstret, kocken kom ut och satte sig, och jag bestämde mig för att priset var rätt."
+      "sv": "Fyrtiotvå euro. Enrök. Timjan från köksträdgården. Snön föll utanför fönstret, kocken kom ut och satte sig, och jag bestämde mig för att priset var rätt.",
+      "fi": "Neljäkymmentäkaksi euroa. Katajansavua. Timjamia keittiöpuutarhasta. Lumi satoi ikkunan ohi, keittiömestari tuli ulos ja istuutui, ja päätin että hinta oli oikea."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -448,12 +448,12 @@
     "fallbackTitle": "Living between two suns: what the darkness actually feels like · Lapland.blog",
     "fallbackDescription": "Most of what you've read about the Finnish polar night is wrong. What kaamos really does to the body at 66.5°N, the biology, the blue hour, and the four small habits that get you through it.",
     "fallbackTitleByLang": {
-      "fi": "Kahden auringon välissä: millaista pimeä oikeasti on · Lapland.blog",
-      "sv": "Mellan två solar: hur mörkret faktiskt känns · Lapland.blog"
+      "sv": "Mellan två solar: hur mörkret faktiskt känns · Lapland.blog",
+      "fi": "Kahden auringon välissä: millaista pimeä oikeasti on · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Suurin osa siitä mitä kaamoksesta kirjoitetaan on väärin. Tässä on se miltä pimeä oikeasti tuntuu talven ajan 66,5 pohjoista leveyttä — biologia, sininen hetki, kynttilät ja ne neljä pientä tapaa jotka kantavat läpi.",
-      "sv": "Det mesta du läst om den finska polarnatten är fel. Så här känns mörkret faktiskt genom en vinter på 66,5 grader nord — biologin, den blå timmen, ljusen och de fyra små vanor som bär en igenom."
+      "sv": "Det mesta du läst om den finska polarnatten är fel. Så här känns mörkret faktiskt genom en vinter på 66,5 grader nord — biologin, den blå timmen, ljusen och de fyra små vanor som bär en igenom.",
+      "fi": "Suurin osa siitä mitä kaamoksesta kirjoitetaan on väärin. Tässä on se, miltä pimeä oikeasti tuntuu talven ajan 66,5:n pohjoisella leveydellä: biologia, sininen hetki, kynttilät ja ne neljä pientä tapaa, jotka kantavat läpi."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -482,12 +482,12 @@
     "fallbackTitle": "Twelve kilometres at one in the morning · Lapland.blog",
     "fallbackDescription": "A night hike on the marked trails above Kiilopää, in which the sun refuses to leave, the reindeer hold a meeting on the path, and the mosquitoes stay in the valley where they belong.",
     "fallbackTitleByLang": {
-      "fi": "Kaksitoista kilometriä kello yksi yöllä · Lapland.blog",
-      "sv": "Tolv kilometer klockan ett på natten · Lapland.blog"
+      "sv": "Tolv kilometer klockan ett på natten · Lapland.blog",
+      "fi": "Kaksitoista kilometriä kello yksi yöllä · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Yövaellus merkityillä reiteillä Kiilopään yläpuolella, jonka aikana aurinko kieltäytyy lähtemästä, porot pitävät kokouksen polulla ja hyttyset pysyvät laaksossa jonne ne kuuluvatkin.",
-      "sv": "En nattvandring på de markerade lederna ovanför Kiilopää, där solen vägrar ge sig av, renarna håller möte på stigen och myggen stannar kvar i dalen där de hör hemma."
+      "sv": "En nattvandring på de markerade lederna ovanför Kiilopää, där solen vägrar ge sig av, renarna håller möte på stigen och myggen stannar kvar i dalen där de hör hemma.",
+      "fi": "Yövaellus merkityillä reiteillä Kiilopään yläpuolella, jonka aikana aurinko kieltäytyy lähtemästä, porot pitävät kokouksen polulla ja hyttyset pysyvät laaksossa, jonne ne kuuluvatkin."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -533,12 +533,12 @@
     "fallbackTitle": "What July in Lapland actually asks you to pack · Lapland.blog",
     "fallbackDescription": "Ten days in the north with one duffel bag: what earned its place, what failed in the field, and the three cheap items that outperformed everything with a logo. A packing report from the warm end of the Lapland year.",
     "fallbackTitleByLang": {
-      "fi": "Mitä heinäkuun Lappi oikeasti vaatii laukkuusi · Lapland.blog",
-      "sv": "Vad juli i Lappland faktiskt kräver av din väska · Lapland.blog"
+      "sv": "Vad juli i Lappland faktiskt kräver av din väska · Lapland.blog",
+      "fi": "Mitä heinäkuun Lappi oikeasti vaatii laukkuusi · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Kymmenen päivää pohjoisessa yhdellä kassilla: mikä ansaitsi paikkansa, mikä petti maastossa ja ne kolme halpaa esinettä jotka päihittivät kaiken logollisen. Pakkausraportti Lapin vuoden lämpimästä päästä.",
-      "sv": "Tio dagar i norr med en enda bag: vad som förtjänade sin plats, vad som fallerade i fält och de tre billiga sakerna som slog allt med logga. En packningsrapport från det lappländska årets varma ände."
+      "sv": "Tio dagar i norr med en enda bag: vad som förtjänade sin plats, vad som fallerade i fält och de tre billiga sakerna som slog allt med logga. En packningsrapport från det lappländska årets varma ände.",
+      "fi": "Kymmenen päivää pohjoisessa yhdellä kassilla: mikä ansaitsi paikkansa, mikä petti maastossa ja ne kolme halpaa esinettä, jotka päihittivät kaiken logollisen. Pakkausraportti Lapin vuoden lämpimästä päästä."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -549,11 +549,11 @@
     "fallbackTitle": "154 Lapland rest areas lose their firewood service · Lapland.blog",
     "fallbackDescription": "Finland's park agency is ending firewood and toilet servicing at 154 rest areas. Here is what it means for a hiker in Lapland, which sites are on the list, and why the saving lands in the wrong place.",
     "fallbackTitleByLang": {
-      "fi": "Autiotuvan puuvaja voi olla tyhjä ensi talvena — 154 taukopaikkaa jäi huollon ulkopuolelle · Lapland.blog",
+      "fi": "Autiotuvan puuvaja voi olla tyhjä ensi talvena: 154 taukopaikkaa jää ilman huoltoa · Lapland.blog",
       "sv": "Vedboden kan vara tom nästa vinter — 154 rastplatser faller utanför underhållet · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Kerromme mitä se tarkoittaa Lapin retkeilijälle, mitkä kohteet ovat listalla ja miksi säästö osuu väärään kohtaan.",
+      "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Kerromme, mitä se tarkoittaa Lapin retkeilijälle, mitkä kohteet ovat listalla ja miksi säästö osuu väärään kohtaan.",
       "sv": "Forststyrelsen avslutar ved- och toalettunderhållet på 154 rastplatser. Vi går igenom vad det betyder för vandraren i Lappland, vilka mål som finns på listan och varför besparingen träffar fel."
     },
     "copyKey": "post",
