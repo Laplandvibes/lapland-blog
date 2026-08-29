@@ -173,7 +173,7 @@ const en: SectionCopy = {
       },
       {
         q: 'Do I have to be in Lapland to write a blog here?',
-        a: 'No. We built lapland.blog for travelers heading to Finnish Lapland, so the map and prompts are tuned for trips up north, but anyone can keep a blog here, whether you are planning a trip, writing during one, or filling it in after you get home. You can start before you fly and add entries day by day.',
+        a: 'No. We built lapland.blog for travellers heading to Finnish Lapland, so the map and prompts are tuned for trips up north, but anyone can keep a blog here, whether you are planning a trip, writing during one, or filling it in after you get home. You can start before you fly and add entries day by day.',
       },
       {
         q: 'What should I write about in my Lapland travel diary?',
