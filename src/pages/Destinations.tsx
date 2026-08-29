@@ -67,7 +67,7 @@ const DESTINATIONS: Destination[] = [
     slug: 'muonio',
     name: 'Muonio',
     region: 'West Lapland, northern lights belt',
-    blurb: 'Pallastunturi national park edge. Among the highest aurora-visibility readings in Europe.',
+    blurb: 'Pallas-Yllästunturi national park edge. Among the highest aurora-visibility readings in Europe.',
     hero: '/images/pillar-cold-1200.webp',
   },
   {

@@ -262,7 +262,7 @@ const it: SectionCopy = {
       },
       muonio: {
         region: 'Lapponia occidentale, fascia dell’aurora',
-        blurb: 'Al margine del parco nazionale di Pallastunturi. Tra i valori di visibilità dell’aurora più alti d’Europa.',
+        blurb: 'Al margine del parco nazionale di Pallas-Yllästunturi. Tra i valori di visibilità dell’aurora più alti d’Europa.',
       },
       yllas: {
         region: 'Lapponia occidentale, terra dei tunturi',

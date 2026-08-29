@@ -77,8 +77,8 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
       cta: 'Selaa majoituksia',
     },
     de: {
-      headline: 'Finde deine Hütte oder dein Iglu',
-      copy: 'Vergleiche Unterkünfte in Lappland, von Glasiglus in Saariselkä bis zu Blockhütten bei Levi.',
+      headline: 'Finden Sie Ihre Hütte oder Ihr Iglu',
+      copy: 'Vergleichen Sie Unterkünfte in Lappland, von Glasiglus in Saariselkä bis zu Blockhütten bei Levi.',
       cta: 'Unterkünfte ansehen',
     },
     ja: {
@@ -140,7 +140,7 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
     },
     de: {
       headline: 'Helsinki → Rovaniemi',
-      copy: 'Suche Flug + Hotel-Pakete in die Arktis. Direktflüge ab Helsinki, ca. 75 Minuten.',
+      copy: 'Suchen Sie Pakete aus Flug und Hotel in die Arktis. Direktflüge ab Helsinki, ca. 75 Minuten.',
       cta: 'Flüge vergleichen',
     },
     ja: {

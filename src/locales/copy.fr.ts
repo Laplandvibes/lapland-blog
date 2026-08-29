@@ -262,7 +262,7 @@ const fr: SectionCopy = {
       },
       muonio: {
         region: 'Laponie de l’Ouest, ceinture des aurores',
-        blurb: 'En bordure du parc national de Pallastunturi. Parmi les meilleurs taux de visibilité des aurores en Europe.',
+        blurb: 'En bordure du parc national de Pallas-Yllästunturi. Parmi les meilleurs taux de visibilité des aurores en Europe.',
       },
       yllas: {
         region: 'Laponie de l’Ouest, pays des fjells',

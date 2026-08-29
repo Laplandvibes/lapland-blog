@@ -33,8 +33,8 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
     seoDescription: 'Tee Suomen Lapin matkastasi matkablogi. Pidä päiväkirjaa matkan aikana ja jaa se someen yhdellä napautuksella. Ilmainen ja valmis minuuteissa.',
   },
   'de': {
-    seoTitle: 'Lapland.blog · Starte deinen Lappland-Reiseblog',
-    seoDescription: 'Mach aus deiner Finnisch-Lappland-Reise einen Reiseblog. Führe unterwegs ein Tagebuch und teile es mit einem Tipp in den sozialen Medien. Kostenlos, in Minuten fertig.',
+    seoTitle: 'Lapland.blog · Starten Sie Ihren Lappland-Reiseblog',
+    seoDescription: 'Machen Sie aus Ihrer Finnisch-Lappland-Reise einen Reiseblog. Unterwegs Tagebuch führen, mit einem Fingertipp teilen. Kostenlos, in Minuten fertig.',
   },
   'ja': {
     seoTitle: 'Lapland.blog · ラップランド旅行ブログを作って共有',

@@ -24,7 +24,7 @@ const TITLE: Record<Lang, string> = {
 const DESCRIPTION: Record<Lang, string> = {
   en: 'How Lapland.blog handles your data. The free Finnish Lapland travel-blog platform operated by Lapeso Oy. GDPR compliant.',
   fi: 'Miten Lapland.blog käsittelee tietojasi. Ilmainen Suomen Lapin matkablogialusta, jota ylläpitää Lapeso Oy. GDPR:n mukainen.',
-  de: 'Wie Lapland.blog mit deinen Daten umgeht. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland, betrieben von Lapeso Oy. DSGVO-konform.',
+  de: 'Wie Lapland.blog mit Ihren Daten umgeht. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland, betrieben von Lapeso Oy. DSGVO-konform.',
   ja: 'Lapland.blogがあなたのデータをどう扱うか。Lapeso Oyが運営する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。GDPR準拠。',
   es: 'Cómo trata tus datos Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa operada por Lapeso Oy. Conforme al RGPD.',
   'pt-BR': 'Como o Lapland.blog trata seus dados: a plataforma gratuita de blogs de viagem à Lapônia finlandesa operada pela Lapeso Oy. Em conformidade com o RGPD.',

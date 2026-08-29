@@ -312,7 +312,7 @@ const sv: SectionCopy = {
       },
       muonio: {
         region: 'Västra Lappland, norrskensbältet',
-        blurb: 'Kanten av nationalparken Pallastunturi. Bland de högsta norrskensvärdena i Europa.',
+        blurb: 'Kanten av nationalparken Pallas-Yllästunturi. Bland de högsta norrskensvärdena i Europa.',
       },
       yllas: {
         region: 'Västra Lappland, fjällvärld',

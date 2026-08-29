@@ -24,7 +24,7 @@ const TITLE: Record<Lang, string> = {
 const DESCRIPTION: Record<Lang, string> = {
   en: 'The terms for using Lapland.blog, the free Finnish Lapland travel-blog platform where you keep and share a trip diary. Operated by Lapeso Oy.',
   fi: 'Lapland.blogin käyttöehdot. Ilmainen Suomen Lapin matkablogialusta, jolla pidät ja jaat matkapäiväkirjaa. Ylläpitäjä Lapeso Oy.',
-  de: 'Die Nutzungsbedingungen von Lapland.blog, der kostenlosen Reiseblog-Plattform für Finnisch-Lappland, auf der du ein Reisetagebuch führst und teilst. Von Lapeso Oy.',
+  de: 'Die Nutzungsbedingungen von Lapland.blog, der kostenlosen Reiseblog-Plattform für Finnisch-Lappland, auf der Sie ein Reisetagebuch führen und teilen.',
   ja: 'Lapland.blogの利用規約。旅の日記を残して共有する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。運営はLapeso Oy。',
   es: 'Las condiciones para usar Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa donde llevas y compartes un diario. Operada por Lapeso Oy.',
   'pt-BR': 'As condições para usar o Lapland.blog: a plataforma gratuita de blogs de viagem à Lapônia finlandesa onde você mantém e compartilha um diário. Operada pela Lapeso Oy.',

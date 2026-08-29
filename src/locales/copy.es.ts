@@ -312,7 +312,7 @@ const es: SectionCopy = {
       },
       muonio: {
         region: 'Laponia occidental, cinturón de auroras',
-        blurb: 'El borde del parque nacional de Pallastunturi. Entre los mejores registros de visibilidad de auroras de Europa.',
+        blurb: 'El borde del parque nacional de Pallas-Yllästunturi. Entre los mejores registros de visibilidad de auroras de Europa.',
       },
       yllas: {
         region: 'Laponia occidental, tierra de colinas árticas',

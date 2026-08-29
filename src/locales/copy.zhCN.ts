@@ -312,7 +312,7 @@ const zhCN: SectionCopy = {
       },
       muonio: {
         region: '西拉普兰,极光带',
-        blurb: '帕拉斯山国家公园的边缘。极光可见度在欧洲名列前茅。',
+        blurb: 'Pallas-Yllästunturi 国家公园的边缘。极光可见度在欧洲名列前茅。',
       },
       yllas: {
         region: '西拉普兰,山地地带',

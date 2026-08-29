@@ -312,7 +312,7 @@ const en: SectionCopy = {
       },
       muonio: {
         region: 'West Lapland, northern lights belt',
-        blurb: 'Pallastunturi national park edge. Among the highest aurora-visibility readings in Europe.',
+        blurb: 'Pallas-Yllästunturi national park edge. Among the highest aurora-visibility readings in Europe.',
       },
       yllas: {
         region: 'West Lapland, fell country',

@@ -262,7 +262,7 @@ const nl: SectionCopy = {
       },
       muonio: {
         region: 'West-Lapland, noorderlichtgordel',
-        blurb: 'Aan de rand van het nationale park Pallastunturi. Een van de hoogste noorderlicht-zichtwaarden van Europa.',
+        blurb: 'Aan de rand van het nationale park Pallas-Yllästunturi. Een van de hoogste noorderlicht-zichtwaarden van Europa.',
       },
       yllas: {
         region: 'West-Lapland, fjell-land',

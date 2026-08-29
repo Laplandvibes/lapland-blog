@@ -24,7 +24,7 @@ const TITLE: Record<Lang, string> = {
 const DESCRIPTION: Record<Lang, string> = {
   en: 'What cookies and storage Lapland.blog uses, why, and how to opt out. The free Finnish Lapland travel-blog platform by Lapeso Oy.',
   fi: 'Mitä evästeitä ja tallennusta Lapland.blog käyttää, miksi ja miten kiellät ne. Ilmainen Suomen Lapin matkablogialusta, ylläpitäjä Lapeso Oy.',
-  de: 'Welche Cookies und welchen Speicher Lapland.blog nutzt, warum und wie du widersprichst. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland von Lapeso Oy.',
+  de: 'Welche Cookies und welchen Speicher Lapland.blog nutzt, warum, und wie Sie widersprechen. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland.',
   ja: 'Lapland.blogが使うクッキーとストレージの種類、その理由、オプトアウトの方法。Lapeso Oyによるフィンランド・ラップランドの無料旅行ブログプラットフォーム。',
   es: 'Qué cookies y almacenamiento usa Lapland.blog, por qué y cómo rechazarlos: la plataforma gratuita de blogs de viaje a la Laponia finlandesa de Lapeso Oy.',
   'pt-BR': 'Quais cookies e armazenamento o Lapland.blog usa, por quê e como recusar: a plataforma gratuita de blogs de viagem à Lapônia finlandesa da Lapeso Oy.',

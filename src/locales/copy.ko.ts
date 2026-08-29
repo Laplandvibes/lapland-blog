@@ -262,7 +262,7 @@ const ko: SectionCopy = {
       },
       muonio: {
         region: '서부 라플란드, 오로라 벨트',
-        blurb: '팔라스툰투리 국립공원의 가장자리. 유럽에서 오로라 관측 확률이 가장 높은 축에 듭니다.',
+        blurb: 'Pallas-Yllästunturi 국립공원의 가장자리. 유럽에서 오로라 관측 확률이 가장 높은 축에 듭니다.',
       },
       yllas: {
         region: '서부 라플란드, 민둥산 지대',

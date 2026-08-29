@@ -312,7 +312,7 @@ const ptBR: SectionCopy = {
       },
       muonio: {
         region: 'Lapônia ocidental, cinturão das auroras',
-        blurb: 'Na borda do parque nacional de Pallastunturi. Entre os índices de visibilidade de aurora mais altos da Europa.',
+        blurb: 'Na borda do parque nacional de Pallas-Yllästunturi. Entre os índices de visibilidade de aurora mais altos da Europa.',
       },
       yllas: {
         region: 'Lapônia ocidental, região dos montes',

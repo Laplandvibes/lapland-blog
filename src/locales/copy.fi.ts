@@ -312,7 +312,7 @@ const fi: SectionCopy = {
       },
       muonio: {
         region: 'Länsi-Lappi, revontulivyöhyke',
-        blurb: 'Pallastunturin kansallispuiston laita. Euroopan parhaita revontulien näkyvyyslukemia.',
+        blurb: 'Pallas-Yllästunturin kansallispuiston laita. Euroopan parhaita revontulien näkyvyyslukemia.',
       },
       yllas: {
         region: 'Länsi-Lappi, tunturimaata',

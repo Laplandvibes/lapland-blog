@@ -7,7 +7,7 @@
     "appendSiteName": false,
     "fallbackTitleByLang": {
       "fi": "Lapland.blog · Aloita ja jaa Lapin-matkablogisi",
-      "de": "Lapland.blog · Starte deinen Lappland-Reiseblog",
+      "de": "Lapland.blog · Starten Sie Ihren Lappland-Reiseblog",
       "ja": "Lapland.blog · ラップランド旅行ブログを作って共有",
       "es": "Lapland.blog · Crea y comparte tu blog de viaje",
       "pt-BR": "Lapland.blog · Crie e compartilhe seu blog de viagem",
@@ -20,7 +20,7 @@
     },
     "fallbackDescriptionByLang": {
       "fi": "Tee Suomen Lapin matkastasi matkablogi, pidä päiväkirjaa matkan aikana ja jaa se someen yhdellä napautuksella. Ilmainen ja valmis minuuteissa.",
-      "de": "Mach aus deiner Finnisch-Lappland-Reise einen Reiseblog, führe unterwegs ein Tagebuch und teile es mit einem Tipp in den sozialen Medien. Kostenlos, in Minuten fertig.",
+      "de": "Machen Sie aus Ihrer Finnisch-Lappland-Reise einen Reiseblog. Unterwegs Tagebuch führen, mit einem Fingertipp teilen. Kostenlos, in Minuten fertig.",
       "ja": "フィンランド・ラップランドの旅を旅行ブログに。旅しながら日記をつけ、ワンタップでSNSにシェア。無料で、数分で始められます。",
       "es": "Convierte tu viaje a la Laponia finlandesa en un blog de viaje: lleva un diario sobre la marcha y compártelo en redes con un toque. Gratis y listo en minutos.",
       "pt-BR": "Transforme sua viagem à Lapônia finlandesa em um blog de viagem: faça um diário durante o trajeto e compartilhe nas redes com um toque. Grátis e pronto em minutos.",
@@ -54,7 +54,7 @@
     "fallbackDescriptionByLang": {
       "fi": "Uusi täällä? Kolme reittiä sisään: lue kenttäpäiväkirjat, löydä Lapin kohteesi tai aloita oma ilmainen matkablogi.",
       "sv": "Ny här? Tre vägar in: läs fältdagböckerna, hitta ditt Lapplandsresmål eller starta din egen kostnadsfria reseblogg.",
-      "de": "Neu hier? Drei Wege hinein: Feldtagebücher lesen, Ihr Lappland-Ziel finden oder ein eigenes kostenloses Reiseblog starten.",
+      "de": "Neu auf Lapland.blog? Drei Wege hinein: Feldtagebuch-Einträge lesen, Ihr Ziel in Finnisch-Lappland finden oder einen eigenen kostenlosen Reiseblog starten.",
       "fr": "Nouveau ici ? Trois portes d’entrée : lire les carnets de terrain, trouver votre destination en Laponie ou créer votre blog de voyage gratuit.",
       "es": "¿Nuevo aquí? Tres caminos: leer los diarios de campo, encontrar tu destino en Laponia o crear tu blog de viaje gratuito.",
       "it": "Nuovo qui? Tre strade: leggere i diari sul campo, trovare la tua destinazione in Lapponia o creare il tuo blog di viaggio gratuito.",
@@ -221,7 +221,7 @@
     },
     "fallbackDescriptionByLang": {
       "fi": "Miten Lapland.blog käsittelee tietojasi, ilmainen Suomen Lapin matkablogialusta, jota ylläpitää Lapeso Oy. GDPR:n mukainen.",
-      "de": "Wie Lapland.blog mit deinen Daten umgeht, die kostenlose Reiseblog-Plattform für Finnisch-Lappland, betrieben von Lapeso Oy. DSGVO-konform.",
+      "de": "Wie Lapland.blog mit Ihren Daten umgeht. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland, betrieben von Lapeso Oy. DSGVO-konform.",
       "ja": "Lapland.blogがあなたのデータをどう扱うか。Lapeso Oyが運営する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。GDPR準拠。",
       "es": "Cómo trata tus datos Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa operada por Lapeso Oy. Conforme al RGPD.",
       "pt-BR": "Como o Lapland.blog trata seus dados: a plataforma gratuita de blogs de viagem à Lapônia finlandesa operada pela Lapeso Oy. Em conformidade com o RGPD.",
@@ -256,7 +256,7 @@
     },
     "fallbackDescriptionByLang": {
       "fi": "Lapland.blogin käyttöehdot, ilmainen Suomen Lapin matkablogialusta, jolla pidät ja jaat matkapäiväkirjaa. Ylläpitäjä Lapeso Oy.",
-      "de": "Die Nutzungsbedingungen von Lapland.blog, der kostenlosen Reiseblog-Plattform für Finnisch-Lappland, auf der du ein Reisetagebuch führst und teilst. Von Lapeso Oy.",
+      "de": "Die Nutzungsbedingungen von Lapland.blog, der kostenlosen Reiseblog-Plattform für Finnisch-Lappland, auf der Sie ein Reisetagebuch führen und teilen.",
       "ja": "Lapland.blogの利用規約。旅の日記を残して共有する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。運営はLapeso Oy。",
       "es": "Las condiciones para usar Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa donde llevas y compartes un diario. Operada por Lapeso Oy.",
       "pt-BR": "As condições para usar o Lapland.blog: a plataforma gratuita de blogs de viagem à Lapônia finlandesa onde você mantém e compartilha um diário. Operada pela Lapeso Oy.",
@@ -291,7 +291,7 @@
     },
     "fallbackDescriptionByLang": {
       "fi": "Mitä evästeitä ja tallennusta Lapland.blog käyttää, miksi ja miten kiellät ne, ilmainen Suomen Lapin matkablogialusta, ylläpitäjä Lapeso Oy.",
-      "de": "Welche Cookies und welchen Speicher Lapland.blog nutzt, warum und wie du widersprichst, die kostenlose Reiseblog-Plattform für Finnisch-Lappland von Lapeso Oy.",
+      "de": "Welche Cookies und welchen Speicher Lapland.blog nutzt, warum, und wie Sie widersprechen. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland.",
       "ja": "Lapland.blogが使うクッキーとストレージの種類、その理由、オプトアウトの方法。Lapeso Oyによるフィンランド・ラップランドの無料旅行ブログプラットフォーム。",
       "es": "Qué cookies y almacenamiento usa Lapland.blog, por qué y cómo rechazarlos: la plataforma gratuita de blogs de viaje a la Laponia finlandesa de Lapeso Oy.",
       "pt-BR": "Quais cookies e armazenamento o Lapland.blog usa, por quê e como recusar: a plataforma gratuita de blogs de viagem à Lapônia finlandesa da Lapeso Oy.",
