@@ -32,7 +32,7 @@ const DESCRIPTION: Record<Lang, string> = {
   ko: 'Lapland.blog 이용 조건. 여행 일기를 쓰고 공유하는 무료 핀란드 라플란드 여행 블로그 플랫폼. Lapeso Oy가 운영합니다.',
   fr: "Les conditions d'utilisation de Lapland.blog, la plateforme gratuite de blogs de voyage en Laponie finlandaise où vous tenez et partagez un journal. Exploitée par Lapeso Oy.",
   it: 'Le condizioni per usare Lapland.blog: la piattaforma gratuita di blog di viaggio in Lapponia finlandese dove tiene e condivide un diario. Gestita da Lapeso Oy.',
-  nl: 'De voorwaarden voor het gebruik van Lapland.blog, het gratis reisblogplatform voor Fins Lapland waar je een reisdagboek bijhoudt en deelt. Beheerd door Lapeso Oy.',
+  nl: 'De voorwaarden voor het gebruik van Lapland.blog, het gratis reisblogplatform voor Fins Lapland waar u een reisdagboek bijhoudt en deelt. Beheerd door Lapeso Oy.',
   sv: 'Villkoren för att använda Lapland.blog, den gratis resebloggplattformen för finska Lappland där du för och delar en resedagbok. Drivs av Lapeso Oy.',
 };
 

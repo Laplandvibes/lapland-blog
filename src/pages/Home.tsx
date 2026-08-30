@@ -65,8 +65,8 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
     seoDescription: 'Trasformi il Suo viaggio in Lapponia finlandese in un blog di viaggio: tenga un diario lungo il percorso e lo condivida sui social con un tocco. Gratis e pronto in pochi minuti.',
   },
   'nl': {
-    seoTitle: 'Lapland.blog · Start en deel je Lapland-reisblog',
-    seoDescription: 'Maak van je reis door Fins Lapland een reisblog: houd onderweg een dagboek bij en deel het met één tik op social media. Gratis en in enkele minuten klaar.',
+    seoTitle: 'Lapland.blog · Start en deel uw Lapland-reisblog',
+    seoDescription: 'Maak van uw reis door Fins Lapland een reisblog: houd onderweg een dagboek bij en deel het met één tik op social media. Gratis en in enkele minuten klaar.',
   },
   'sv': {
     seoTitle: 'Lapland.blog · Starta och dela din reseblogg om Lappland',

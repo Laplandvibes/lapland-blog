@@ -28,7 +28,7 @@ const TITLE: Record<Lang, string> = {
   ko: '여기서 시작 · Lapland.blog 첫걸음',
   fr: 'Commencez ici · vos premiers pas sur Lapland.blog',
   it: 'Inizi qui · i Suoi primi passi su Lapland.blog',
-  nl: 'Begin hier · je eerste stappen op Lapland.blog',
+  nl: 'Begin hier · uw eerste stappen op Lapland.blog',
   sv: 'Börja här · dina första steg på Lapland.blog',
 };
 const DESCRIPTION: Record<Lang, string> = {
@@ -42,7 +42,7 @@ const DESCRIPTION: Record<Lang, string> = {
   ko: 'Lapland.blog가 처음이신가요? 들어가는 세 가지 길: 현장 일기 글 읽기, 핀란드 라플란드 여행지 찾기, 또는 나만의 무료 여행 블로그 시작하기.',
   fr: 'Nouveau sur Lapland.blog ? Trois entrées : lisez les entrées du carnet de terrain, trouvez votre destination en Laponie finlandaise ou lancez votre blog de voyage gratuit.',
   it: 'Nuovo su Lapland.blog? Tre vie d\'accesso: legga le voci del diario di campo, trovi la Sua destinazione in Lapponia finlandese o avvii il Suo blog di viaggio gratuito.',
-  nl: 'Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind je bestemming in Fins Lapland of start je eigen gratis reisblog.',
+  nl: 'Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind uw bestemming in Fins Lapland of start uw eigen gratis reisblog.',
   sv: 'Ny på Lapland.blog? Tre vägar in: läs inläggen i fältdagboken, hitta ditt resmål i finska Lappland eller starta din egen gratis reseblogg.',
 };
 

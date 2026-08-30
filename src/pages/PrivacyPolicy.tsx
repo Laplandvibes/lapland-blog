@@ -32,7 +32,7 @@ const DESCRIPTION: Record<Lang, string> = {
   ko: 'Lapland.blog가 귀하의 데이터를 처리하는 방식. Lapeso Oy가 운영하는 무료 핀란드 라플란드 여행 블로그 플랫폼. GDPR 준수.',
   fr: 'Comment Lapland.blog traite vos données. La plateforme gratuite de blogs de voyage en Laponie finlandaise exploitée par Lapeso Oy. Conforme au RGPD.',
   it: 'Come Lapland.blog tratta i Suoi dati: la piattaforma gratuita di blog di viaggio in Lapponia finlandese gestita da Lapeso Oy. Conforme al GDPR.',
-  nl: 'Hoe Lapland.blog met je gegevens omgaat. Het gratis reisblogplatform voor Fins Lapland, beheerd door Lapeso Oy. AVG-conform.',
+  nl: 'Hoe Lapland.blog met uw gegevens omgaat. Het gratis reisblogplatform voor Fins Lapland, beheerd door Lapeso Oy. AVG-conform.',
   sv: 'Hur Lapland.blog hanterar dina uppgifter. Den gratis resebloggplattformen för finska Lappland som drivs av Lapeso Oy. GDPR-förenlig.',
 };
 

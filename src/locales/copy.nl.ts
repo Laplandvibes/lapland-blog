@@ -27,10 +27,10 @@ const nl: SectionCopy = {
     heroSecondaryCta: 'Zie hoe het werkt',
     heroFootnote: 'Uw eigen dagboek is gratis voor u · Gemaakt in Finland · Deel via Instagram',
     seasonalBadge: 'Nu in het seizoen · Middernachtszon · 6 jun → 7 jul',
-    seasonalH2: 'Een gratis reisblog voor je Lapland-reis, onderweg geschreven.',
+    seasonalH2: 'Een gratis reisblog voor uw Lapland-reis, onderweg geschreven.',
     seasonalLead:
-      'Lapland.blog maakt van je reis een eenvoudige, mooie blog: prik de plekken vast, voeg foto’s toe, schrijf op wat er gebeurde, en deel de link met vrienden. Op dit moment betekent dat zomer. Tweeëndertig nachten waarin de zon niet ondergaat, het bos amberkleurig wordt en de meren de hemel weerspiegelen. Begin het dagboek terwijl je er nog bent.',
-    seasonalCta1: 'Start je reisblog',
+      'Lapland.blog maakt van uw reis een eenvoudige, mooie blog: prik de plekken vast, voeg foto’s toe, schrijf op wat er gebeurde, en deel de link met vrienden. Op dit moment betekent dat zomer. Tweeëndertig nachten waarin de zon niet ondergaat, het bos amberkleurig wordt en de meren de hemel weerspiegelen. Begin het dagboek terwijl u er nog bent.',
+    seasonalCta1: 'Start uw reisblog',
     seasonalCta2: 'Lees zomerverhalen',
     seasonalCard1Title: '24 uur gouden uur',
     seasonalCard1Body: 'De zon scheert langs de horizon. Fotografen noemen het het langste blauwe uur ter aarde.',
@@ -194,9 +194,9 @@ const nl: SectionCopy = {
     intro:
       'De meeste Lapland-blogs lezen als een brochure. De meeste reisdagboek-apps belanden achtergelaten in een fotorol of als één Instagram-post die binnen een dag verdwijnt. Lapland.blog is daartussenin: een echte, langzame, fotogerichte blog van uw reis, gehost onder een naam die al verkeer trekt, zo lang bewaard als u wilt.',
     howHeading: 'Hoe het werkt',
-    howStepPin: 'Prik de hut, het restaurant, de donkere-hemelplek vast. Bouw je route voordat je vertrekt.',
+    howStepPin: 'Prik de hut, het restaurant, de donkere-hemelplek vast. Bouw uw route voordat u vertrekt.',
     howStepWrite: 'Schrijf onderweg, vanuit de hut, de auto, de sauna. Voeg foto’s toe, de temperatuur en hoe de soep smaakte.',
-    howStepShare: 'Je berichten worden een openbare blog op lapland.blog/jouw-naam. Vrienden kunnen volgen; elk bericht exporteer je als Instagram-story.',
+    howStepShare: 'Uw berichten worden een openbare blog op lapland.blog/uw-naam. Vrienden kunnen volgen; elk bericht exporteert u als Instagram-story.',
     howBody:
       'Meld u aan met e-mail of Google. U krijgt uw plek op lapland.blog/me. Elke notitie heeft een hoofdbeeld, een plek op de kaart en de woorden die u wilt zeggen. Sla concepten op, publiceer wanneer het klaar is, deel de link met vrienden. Elke gepubliceerde notitie wordt geïndexeerd en is doorzoekbaar, en uw reis wordt een klein stukje van het grotere Lapland-archief.',
     freeHeading: 'Wat gratis is',
@@ -360,7 +360,7 @@ const nl: SectionCopy = {
         name: 'Eten',
         tagline: 'Hoe Lapland in de winter smaakt.',
         description:
-          'Zalmsoep, roggebrood, rendier op drie manieren en de koffie die je om 2 uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
+          'Zalmsoep, roggebrood, rendier op drie manieren en de koffie die u om 2 uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
         metaTitle: 'Eten in Fins Lapland · Lapland.blog',
         metaDescription:
           'Zalmsoep, roggebrood, rendier op drie manieren en de koffie van 2 uur ’s nachts omdat de zon vergat onder te gaan. Eten in Fins Lapland.',
@@ -376,7 +376,7 @@ const nl: SectionCopy = {
       },
       people: {
         name: 'Mensen',
-        tagline: 'Wie je hier in het noorden ontmoet.',
+        tagline: 'Wie u hier in het noorden ontmoet.',
         description:
           'Rendierhoeders, pistewachten, saunameesters en vreemden in hotellobby’s. Lapland is stil, maar nooit leeg.',
         metaTitle: 'De mensen van Fins Lapland · Lapland.blog',
@@ -413,7 +413,7 @@ const nl: SectionCopy = {
     tagged: 'Getagd',
     exploreMore: 'Ontdek meer in het LaplandVibes-netwerk',
     editorialLabel: 'Een Field Journal-bericht',
-    editorialNote: 'Een van de paar voorbeeldberichten geschreven door The Field Journal, de redactionele stem van Lapland.blog, om te laten zien hoe een eerlijk reisdagboek leest. Echte plekken, echte temperaturen. Je eigen berichten schrijf je zelf.',
+    editorialNote: 'Een van de paar voorbeeldberichten geschreven door The Field Journal, de redactionele stem van Lapland.blog, om te laten zien hoe een eerlijk reisdagboek leest. Echte plekken, echte temperaturen. Uw eigen berichten schrijft u zelf.',
   },
   signIn: {
     pageTitle: 'Plan uw Lapland-reis | Lapland.blog',
@@ -553,7 +553,7 @@ const nl: SectionCopy = {
     subscribing: 'Inschrijven…',
     subscribe: 'Abonneren',
     successTitle: 'Bijna klaar.',
-    successBody: 'Bevestig je aanmelding via de e-mail die we net hebben gestuurd.',
+    successBody: 'Bevestig uw aanmelding via de e-mail die we net hebben gestuurd.',
     alreadyTitle: 'Al ingeschreven',
     alreadyBody: 'U staat al op de lijst. Bedankt dat u erbij blijft.',
     agreeText: 'Door u te abonneren gaat u akkoord met ons',

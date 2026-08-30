@@ -117,7 +117,7 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
       cta: 'Sfogli gli alloggi',
     },
     nl: {
-      headline: 'Vind je hut of iglo',
+      headline: 'Vind uw hut of iglo',
       copy: 'Vergelijk verblijven in Lapland, van glazen iglo’s in Saariselkä tot blokhutten bij Levi.',
       cta: 'Bekijk verblijven',
     },

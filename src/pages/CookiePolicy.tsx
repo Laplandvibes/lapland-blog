@@ -32,7 +32,7 @@ const DESCRIPTION: Record<Lang, string> = {
   ko: 'Lapland.blog가 사용하는 쿠키와 저장소, 그 이유, 그리고 거부 방법. Lapeso Oy의 무료 핀란드 라플란드 여행 블로그 플랫폼.',
   fr: 'Quels cookies et stockage Lapland.blog utilise, pourquoi et comment les refuser. La plateforme gratuite de blogs de voyage en Laponie finlandaise par Lapeso Oy.',
   it: 'Quali cookie e archiviazione usa Lapland.blog, perché e come rifiutarli: la piattaforma gratuita di blog di viaggio in Lapponia finlandese di Lapeso Oy.',
-  nl: 'Welke cookies en opslag Lapland.blog gebruikt, waarom en hoe je je afmeldt. Het gratis reisblogplatform voor Fins Lapland van Lapeso Oy.',
+  nl: 'Welke cookies en opslag Lapland.blog gebruikt, waarom en hoe u zich afmeldt. Het gratis reisblogplatform voor Fins Lapland van Lapeso Oy.',
   sv: 'Vilka cookies och vilken lagring Lapland.blog använder, varför och hur du tackar nej. Den gratis resebloggplattformen för finska Lappland från Lapeso Oy.',
 };
 
