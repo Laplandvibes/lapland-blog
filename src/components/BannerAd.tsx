@@ -112,9 +112,9 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
       cta: 'Voir les hébergements',
     },
     it: {
-      headline: 'Trova la tua baita o il tuo iglù',
-      copy: 'Confronta gli alloggi in Lapponia, dagli igloo di vetro di Saariselkä alle baite di tronchi vicino a Levi.',
-      cta: 'Sfoglia gli alloggi',
+      headline: 'Trovi la Sua baita o il Suo igloo',
+      copy: 'Confronti gli alloggi in Lapponia, dagli igloo di vetro di Saariselkä alle baite di tronchi vicino a Levi.',
+      cta: 'Sfogli gli alloggi',
     },
     nl: {
       headline: 'Vind je hut of iglo',
@@ -175,8 +175,8 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
     },
     it: {
       headline: 'Helsinki → Rovaniemi',
-      copy: 'Cerca pacchetti volo + hotel per l’Artico. Voli diretti da Helsinki, circa 75 minuti.',
-      cta: 'Confronta i voli',
+      copy: 'Cerchi pacchetti volo + hotel per l’Artico. Voli diretti da Helsinki, circa 75 minuti.',
+      cta: 'Confronti i voli',
     },
     nl: {
       headline: 'Helsinki → Rovaniemi',
@@ -238,7 +238,7 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
     it: {
       headline: 'Safari con gli husky, sauna, motoslitta',
       copy: 'Attività prenotabili dagli operatori che le organizzano davvero, con recensioni.',
-      cta: 'Vedi le attività',
+      cta: 'Vedere le attività',
     },
     nl: {
       headline: 'Huskysafari’s, sauna, sneeuwscooter',

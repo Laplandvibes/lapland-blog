@@ -4,14 +4,14 @@ import en from './copy.en'
 const it: SectionCopy = {
   ...en,
   nav: {
-    startHere: 'Inizia da qui',
+    startHere: 'Inizi da qui',
     topReads: 'Letture top',
     destinations: 'Destinazioni',
     tripDiaries: 'Diari di viaggio',
     about: 'Chi siamo',
-    startYourBlog: 'Avvia il Tuo blog',
+    startYourBlog: 'Avvii il Suo blog',
     signIn: 'Accedi',
-    subscribe: 'Iscriviti',
+    subscribe: 'Si iscriva',
     myTripBlog: 'Il mio blog di viaggio',
     adminDashboard: 'Dashboard admin',
     signOut: 'Esci',
@@ -23,15 +23,15 @@ const it: SectionCopy = {
     heroLine2: 'Avvii un blog del Suo viaggio.',
     heroLead:
       'Segni sulla mappa il luogo in cui ha visto l’aurora. Fotografi la baita. Annoti che cosa faceva la temperatura. Costruisca un bel blog del Suo viaggio, uno che i Suoi amici possano davvero seguire.',
-    heroPrimaryCta: 'Avvia il blog di viaggio',
+    heroPrimaryCta: 'Avvii il blog di viaggio',
     heroSecondaryCta: 'Veda come funziona',
-    heroFootnote: 'Il tuo diario personale è gratuito · Realizzato in Finlandia · Condivisione su Instagram',
+    heroFootnote: 'Il Suo diario personale è gratuito · Realizzato in Finlandia · Condivisione su Instagram',
     seasonalBadge: 'Di stagione · Sole di mezzanotte · 6 giugno → 7 luglio',
-    seasonalH2: 'Un blog di viaggio gratuito per il tuo viaggio in Lapponia, scritto lungo il percorso.',
+    seasonalH2: 'Un blog di viaggio gratuito per il Suo viaggio in Lapponia, scritto lungo il percorso.',
     seasonalLead:
-      'Lapland.blog trasforma il tuo viaggio in un blog semplice e bello: segna i luoghi, aggiungi foto, racconta cosa è successo e condividi il link con gli amici. In questo momento significa estate. Trentadue notti in cui il sole non tramonta, la foresta diventa ambrata e i laghi rispecchiano il cielo. Inizia il diario mentre ne fai ancora parte.',
-    seasonalCta1: 'Avviare il tuo blog di viaggio',
-    seasonalCta2: 'Leggere i racconti d’estate',
+      'Lapland.blog trasforma il Suo viaggio in un blog semplice e bello: segni i luoghi, aggiunga foto, racconti cosa è successo e condivida il link con gli amici. In questo momento significa estate. Trentadue notti in cui il sole non tramonta, la foresta diventa ambrata e i laghi rispecchiano il cielo. Inizi il diario mentre ne fa ancora parte.',
+    seasonalCta1: 'Avvii il Suo blog di viaggio',
+    seasonalCta2: 'Legga i racconti d’estate',
     seasonalCard1Title: '24 ore di ora dorata',
     seasonalCard1Body: 'Il sole sfiora l’orizzonte. I fotografi la chiamano l’ora blu più lunga del pianeta.',
     seasonalCard2Title: 'Stagione del lampone artico',
@@ -49,7 +49,7 @@ const it: SectionCopy = {
     howStep1Kicker: 'Passo 01 · Pianificazione',
     howStep1Title: 'Segni i luoghi sulla mappa.',
     howStep1Body:
-      'Posizioni sulla mappa della Lapponia la baita prenotata, il ristorante che vuole provare e il punto di cielo scuro per l’aurora. Costruisca l’itinerario prima di partire.',
+      'Sulla mappa della Lapponia segni la baita prenotata, il ristorante che vuole provare e il punto di cielo scuro per l’aurora. Costruisca l’itinerario prima di partire.',
     howStep2Kicker: 'Passo 02 · Diario',
     howStep2Title: 'Scriva mentre viaggia.',
     howStep2Body:
@@ -58,7 +58,7 @@ const it: SectionCopy = {
     howStep3Title: 'Il Suo viaggio, raccontato bene.',
     howStep3Body:
       'Le Sue voci diventano un blog pubblico a lapland.blog/il-suo-nome. Gli amici possono seguirlo. Ogni post si esporta in una storia Instagram, e il viaggio vive due volte.',
-    howCta: 'Avvia il blog di viaggio',
+    howCta: 'Avvii il blog di viaggio',
     howFootnote: 'Gratuito per i diari di viaggio · Senza carta · Accesso con Google',
     liveEyebrow: 'Blog-esempio della redazione',
     liveH2Pre: 'Ecco come si presenta',
@@ -67,7 +67,7 @@ const it: SectionCopy = {
     liveLead:
       'Piste nere a Levi. Notti di aurora a Inari. 60 km in slitta trainata da husky a Saariselkä. The Field Journal, la nostra redazione, ha costruito questi blog-esempio per mostrare il formato. Il Suo, quello vero, si avvia in meno di cinque minuti.',
     liveBrowseAll: 'Vedere tutti i blog',
-    liveCta: 'Avvia il mio blog di viaggio',
+    liveCta: 'Avviare il mio blog di viaggio',
     liveFootnote: 'Gratuito · Senza carta · Prima voce in 2 minuti',
     featuredEyebrow: 'Diario-esempio del fondatore',
     featuredEvery: 'Tutte le voci →',
@@ -75,12 +75,12 @@ const it: SectionCopy = {
       'Ecco come potrebbe apparire il Suo blog di viaggio. Le voci qui sotto sono firmate da The Field Journal, la redazione di Lapland.blog: un piccolo cerchio di penne che attraversa l’anno lappone, dal sole di mezzanotte alla notte polare. Temperature reali, baite reali, zuppa reale. Ne legga una e immagini la Sua.',
     featuredLoading: 'Caricamento dell’esempio…',
     featuredNone: 'Ancora nessuna voce-esempio.',
-    featuredReadEntry: 'Leggi questa voce',
+    featuredReadEntry: 'Legga questa voce',
     pillarsEyebrow: 'Cosa raccontare',
     pillarsH2Pre: 'Il viaggio in Lapponia,',
     pillarsH2Italic: 'in tre fili.',
     pillarsLead:
-      'Veda cosa altri viaggiatori hanno annotato, e scelga i fili che vuole raccontare nel Suo viaggio. Aurora, baite, cibo, il freddo, le persone, i silenzi nel mezzo.',
+      'Sfogli ciò che altri viaggiatori hanno annotato, e scelga i fili che vuole raccontare nel Suo viaggio. Aurora, baite, cibo, il freddo, le persone, i silenzi nel mezzo.',
     pillar1Kicker: 'I · Il freddo',
     pillar1Title: 'Cosa fa davvero il freddo',
     pillar1Body:
@@ -92,7 +92,7 @@ const it: SectionCopy = {
     pillar3Kicker: 'III · Le altre persone',
     pillar3Title: 'Chi altro vive quassù',
     pillar3Body:
-      'Allevatori di renne, soccorritori sulle piste, maestri di sauna, l’uomo della stazione di servizio fuori Sodankylä che parlava quattro lingue. La Lapponia è silenziosa, ma non è mai vuota. Approfondimenti sulle persone che si incontrano davvero.',
+      'Allevatori di renne, soccorritori delle piste, maestri di sauna, l’uomo della stazione di servizio fuori Sodankylä che parlava quattro lingue. La Lapponia è silenziosa, ma non è mai vuota. Approfondimenti sulle persone che si incontrano davvero.',
     latestEyebrow: 'Voci-esempio',
     latestH2: 'Veda com’è fatto un blog di viaggio.',
     latestEvery: 'Tutte le voci',
@@ -103,7 +103,7 @@ const it: SectionCopy = {
       'Ogni anno migliaia di visitatori arrivano in Lapponia, vedono qualcosa di straordinario e lo perdono in un rullino del telefono che non riapriranno mai più. L’aurora sopra la baita. Il ritorno dalla sauna con le dita intorpidite. La ciotola di zuppa di salmone che in qualche modo valeva 42 €. Sparito in una settimana.',
     asideP2:
       'Lapland.blog è un piccolo strumento gratuito per rimediare. Segni dove era. Scriva cosa ha visto. Fotografi la zuppa. Al ritorno in aereo, avrà un vero blog del Suo viaggio: uno che gli amici possono davvero seguire, uno che fra cinque anni avrà ancora voglia di rileggere. Niente foto d’archivio. Niente «paese delle meraviglie invernale». Soltanto la Sua versione onesta del luogo.',
-    asideCta1: 'Avvia il Tuo blog',
+    asideCta1: 'Avvii il Suo blog',
     asideCta2: 'Chi è lapland.blog',
     asidePill: 'Il Suo viaggio · Il Suo blog',
     travelJournalBadge: 'Gratuito per i diari di viaggio',
@@ -111,23 +111,23 @@ const it: SectionCopy = {
     faq: [
       {
         q: 'Come avvio un blog di viaggio su lapland.blog?',
-        a: "Accedi con il tuo account Google, dai un nome al blog e scrivi la prima voce. Ogni voce può contenere testo, foto, la data e un segnaposto sulla mappa per il luogo in cui ti trovavi. Il tuo blog si trova all'indirizzo lapland.blog/il-tuo-nome ed è pronto da condividere appena lo pubblichi: non c'è nulla da installare e nessuna configurazione oltre all'accesso.",
+        a: "Acceda con il Suo account Google, dia un nome al blog e scriva la prima voce. Ogni voce può contenere testo, foto, la data e un segnaposto sulla mappa per il luogo in cui si trovava. Il Suo blog si trova all'indirizzo lapland.blog/il-suo-nome ed è pronto da condividere appena lo pubblica: non c'è nulla da installare e nessuna configurazione oltre all'accesso.",
       },
       {
         q: 'lapland.blog è gratuito?',
-        a: "Sì. Avviare un blog, scrivere voci, aggiungere foto, segnare luoghi sulla mappa e condividere il blog è tutto gratuito. Non serve alcuna carta per registrarsi e sul tuo blog non c'è pubblicità.",
+        a: "Sì. Avviare un blog, scrivere voci, aggiungere foto, segnare luoghi sulla mappa e condividere il blog è tutto gratuito. Non serve alcuna carta per registrarsi e sul Suo blog non c'è pubblicità.",
       },
       {
         q: 'Posso condividere il mio blog della Lapponia su Instagram e Facebook?',
-        a: "Sì. Ogni blog ha un link pubblico che puoi pubblicare ovunque e ogni voce può essere esportata come immagine in formato storia di Instagram, così condividi una singola giornata con un tocco. Amici e familiari possono aprire il tuo blog senza un account proprio.",
+        a: "Sì. Ogni blog ha un link pubblico che può pubblicare ovunque e ogni voce può essere esportata come immagine in formato storia di Instagram, così condivide una singola giornata con un tocco. Amici e familiari possono aprire il Suo blog senza un account proprio.",
       },
       {
         q: 'Devo essere in Lapponia per scrivere un blog qui?',
-        a: "No. Abbiamo creato lapland.blog per chi viaggia verso la Lapponia finlandese, quindi la mappa e gli spunti sono pensati per i viaggi al nord, ma chiunque può tenere un blog qui, che tu stia pianificando un viaggio, scrivendo durante il viaggio o completandolo dopo il rientro. Puoi iniziare prima di partire e aggiungere voci giorno per giorno.",
+        a: "No. Abbiamo creato lapland.blog per chi viaggia verso la Lapponia finlandese, quindi la mappa e gli spunti sono pensati per i viaggi al nord, ma chiunque può tenere un blog qui, che stia pianificando un viaggio, scrivendo durante il viaggio o completandolo dopo il rientro. Può iniziare prima di partire e aggiungere voci giorno per giorno.",
       },
       {
         q: 'Di cosa scrivo nel mio diario di viaggio in Lapponia?',
-        a: "Di tutto ciò che non vuoi dimenticare. Dove hai alloggiato, com'era l'aurora, la temperatura della mattina più fredda, il pasto che ti ha sorpreso, il giro in slitta con i husky, il silenzio della foresta. Le voci brevi con una foto e un segnaposto di luogo funzionano bene: poche righe al giorno diventano un blog che vale la pena rileggere.",
+        a: "Di tutto ciò che non vuole dimenticare. Dove ha alloggiato, com'era l'aurora, la temperatura della mattina più fredda, il pasto che L'ha sorpresa, il giro in slitta con gli husky, il silenzio della foresta. Le voci brevi con una foto e un segnaposto di luogo funzionano bene: poche righe al giorno diventano un blog che vale la pena rileggere.",
       },
     ],
   },
@@ -140,7 +140,7 @@ const it: SectionCopy = {
     path1Title: 'Sto pianificando un viaggio in Lapponia.',
     path1Body:
       'Dove dormire, come arrivare, cosa fare, dove mangiare: la parte pratica. Si sposti sui siti gemelli di LaplandVibes che si occupano delle prenotazioni.',
-    path1Cta: 'Pianifica il viaggio',
+    path1Cta: 'Pianifichi il viaggio',
     path2Kicker: '02 · Lettura',
     path2Title: 'Voglio leggere cosa hanno scritto altri.',
     path2Body:
@@ -150,8 +150,8 @@ const it: SectionCopy = {
     path3Title: 'Sono qui. Voglio un blog del mio viaggio.',
     path3Body:
       'Accesso via e-mail o Google. Riceva un angolo di lapland.blog. Segni luoghi, scriva voci, condivida con gli amici. Gratis, senza trappole, senza piani premium.',
-    path3Cta: 'Avvia il Tuo blog',
-    planEyebrow: 'Pianifica il viaggio',
+    path3Cta: 'Avvii il Suo blog',
+    planEyebrow: 'Pianifichi il viaggio',
     planH2: 'La parte pratica, sui siti gemelli.',
     planLead:
       'Lapland.blog è il diario. Le prenotazioni avvengono sui siti del network LaplandVibes, ognuno specializzato in una sola cosa che sa fare bene.',
@@ -194,9 +194,9 @@ const it: SectionCopy = {
     intro:
       'La maggior parte dei blog sulla Lapponia si leggono come una brochure. La maggior parte delle app di diario di viaggio finiscono abbandonate in un rullino o condivise come un singolo post Instagram che sparisce in un giorno. Lapland.blog è la via di mezzo: un vero blog di viaggio lento, centrato sulle foto, ospitato su un dominio già con traffico e conservato finché lo vorrà.',
     howHeading: 'Come funziona',
-    howStepPin: 'Segna la baita, il ristorante, il punto di cielo buio. Costruisci il tuo itinerario prima di partire.',
-    howStepWrite: 'Scrivi lungo il percorso, dalla baita, dall’auto, dalla sauna. Aggiungi foto, la temperatura e il sapore della zuppa.',
-    howStepShare: 'Le tue voci diventano un blog pubblico su lapland.blog/il-tuo-nome. Gli amici possono seguirlo; ogni voce si esporta come storia di Instagram.',
+    howStepPin: 'Segni la baita, il ristorante, il punto di cielo buio. Costruisca il Suo itinerario prima di partire.',
+    howStepWrite: 'Scriva lungo il percorso, dalla baita, dall’auto, dalla sauna. Aggiunga foto, la temperatura e il sapore della zuppa.',
+    howStepShare: 'Le Sue voci diventano un blog pubblico su lapland.blog/il-suo-nome. Gli amici possono seguirlo; ogni voce si esporta come storia di Instagram.',
     howBody:
       'Acceda con e-mail o Google. Ottenga il Suo angolo su lapland.blog/me. Ogni voce ha un’immagine principale, un luogo sulla mappa e le parole che vuole dire. Salvi le bozze, pubblichi quando è pronto, condivida il link. Ogni voce pubblicata viene indicizzata ed è ricercabile, e il Suo viaggio diventa un piccolo pezzo del più grande archivio della Lapponia.',
     freeHeading: 'Cos’è gratuito',
@@ -204,7 +204,7 @@ const it: SectionCopy = {
       'Scrivere le voci. Ospitare il blog di viaggio sotto lapland.blog/me/ilsuonome. Le foto. La newsletter. Lato autore non c’è paywall né piano premium.',
     notHeading: 'Cosa non troverà',
     notBody:
-      'Articoli sponsorizzati dentro le voci dei lettori. Liste affiliate infilate nel Suo blog. Le parole «indimenticabile», «da fare nella vita», «magico» o «paese delle meraviglie invernale» sono bandite dalle bozze editoriali e altrettanto da bandire dalle Sue. Fanno male alla scrittura e ai lettori.',
+      'Articoli sponsorizzati dentro le voci dei lettori. Liste affiliate infilate nel Suo blog. Le parole «indimenticabile», «da fare nella vita», «magico» o «paese delle meraviglie invernale» sono bandite dalle bozze editoriali e vale la pena bandirle anche dalle Sue. Fanno male alla scrittura e ai lettori.',
     seedHeading: 'Le voci-seme',
     seedBody:
       'Le voci del sito sono scritte da The Field Journal, la redazione di Lapland.blog: cinque penne editoriali con nome proprio, ognuna con il suo ambito: stagioni, sentieri, cibo, baite e attrezzatura. Stanno qui per mostrare com’è un blog di viaggio onesto, lento, centrato sulle foto: temperature reali, orari reali, niente voce da brochure. Ne legga una e immagini la Sua.',
@@ -215,7 +215,7 @@ const it: SectionCopy = {
     contactBody:
       'Per un saluto, per segnalare un errore o per inviarci una fotografia da accreditare, scriva a info@lapland.blog. Leggiamo tutto e cerchiamo di rispondere entro una settimana.',
     closing: 'Scritto dalla Lapponia finlandese, alla temperatura e all’ora in cui è davvero accaduto.',
-    ctaPrimary: 'Avvia il Tuo diario →',
+    ctaPrimary: 'Avvii il Suo diario →',
     ctaSecondary: 'Oppure',
     ctaSecondaryLink: 'legga prima le voci-seme',
   },
@@ -227,29 +227,29 @@ const it: SectionCopy = {
     h1Pre: 'Otto luoghi.',
     h1Italic: 'Una Lapponia.',
     lead:
-      'Scelga una destinazione e legga le voci che ne provengono. Quelle vuote sono le prossime da scrivere, può essere il primo.',
-    beTheFirst: 'Sii il primo',
+      'Scelga una destinazione e legga le voci che ne provengono. Quelle vuote sono le prossime da scrivere: può essere Lei il primo.',
+    beTheFirst: 'Sia il primo',
     entrySingular: 'voce',
     entryPlural: 'voci',
-    readEntries: 'Leggi le voci',
-    beFirstWrite: 'Sii il primo a scrivere',
-    findStayPrefix: 'Cerca un alloggio a',
+    readEntries: 'Legga le voci',
+    beFirstWrite: 'Sia il primo a scrivere',
+    findStayPrefix: 'Cerchi un alloggio a',
     dontSeeEyebrow: 'Non vede il Suo luogo?',
     plantH2: 'Pianti la bandiera.',
     plantLead:
       'Parte per un luogo che non è in elenco? Sodankylä, Posio, Kilpisjärvi, Hetta. Scriva da lì la prima voce e la aggiungeremo alla mappa.',
-    plantCta: 'Avvia il Tuo blog',
+    plantCta: 'Avvii il Suo blog',
     places: {
       rovaniemi: {
         region: 'Sul Circolo Polare Artico',
         blurb: 'La capitale della Lapponia. Dove atterra la maggior parte dei voli. Il campo base per tutto ciò che sta più a nord.',
       },
       saariselka: {
-        region: 'Estremo nord, terra dei tunturi',
+        region: 'Estremo nord, terra dei fjäll',
         blurb: 'Tundra senza alberi, igloo di vetro, il parco nazionale Urho Kekkonen appena fuori dalla porta.',
       },
       levi: {
-        region: 'Lapponia occidentale, terra dei tunturi',
+        region: 'Lapponia occidentale, terra dei fjäll',
         blurb: 'La più grande stazione sciistica della Finlandia. Voli diretti da Helsinki in inverno. Campo base a misura di famiglia.',
       },
       kemi: {
@@ -265,8 +265,8 @@ const it: SectionCopy = {
         blurb: 'Al margine del parco nazionale di Pallas-Yllästunturi. Tra i valori di visibilità dell’aurora più alti d’Europa.',
       },
       yllas: {
-        region: 'Lapponia occidentale, terra dei tunturi',
-        blurb: 'La sorella più tranquilla di Levi. Piste più ampie, ritmo più lento, il tunturi che vive le proprie stagioni.',
+        region: 'Lapponia occidentale, terra dei fjäll',
+        blurb: 'La sorella più tranquilla di Levi. Piste più ampie, ritmo più lento, il fjäll che vive le proprie stagioni.',
       },
       kemijarvi: {
         region: 'Lapponia orientale, terra dei laghi',
@@ -308,7 +308,7 @@ const it: SectionCopy = {
     ctaH2: 'Sia la prossima voce di questa pagina.',
     ctaLead:
       'Le liste crescono quando i lettori scrivono. Acceda, scriva qualche voce e la redazione metterà in evidenza quelle che lo meritano.',
-    ctaButton: 'Avvia il Tuo blog',
+    ctaButton: 'Avvii il Suo blog',
   },
   archive: {
     pageTitle: 'Tutte le voci | Lapland.blog',
@@ -317,10 +317,10 @@ const it: SectionCopy = {
     eyebrow: 'Archivio',
     h1: 'Tutte le voci.',
     lead:
-      'Nessun algoritmo, nessun trucco editoriale. La più recente in cima. Filtri per restringere o cerchi se sa già cosa vuole leggere.',
+      'Nessun algoritmo, nessun trucco editoriale. La più recente in cima. Usi il filtro per restringere, oppure cerchi se sa già cosa vuole leggere.',
     all: 'Tutte',
-    filterAria: 'Filtra per categoria',
-    searchSr: 'Cerca nei racconti',
+    filterAria: 'Filtro per categoria',
+    searchSr: 'Ricerca nei racconti',
     searchPlaceholder: 'Titoli, tag…',
     loading: 'Caricamento racconti…',
     emptyTitle: 'Nessun racconto corrisponde.',
@@ -334,7 +334,7 @@ const it: SectionCopy = {
     loading: 'Caricamento racconti…',
     emptyTitle: 'Ancora nulla qui.',
     emptyBody: 'Questa categoria aspetta il suo primo racconto. Ripassi presto.',
-    emptyLink: 'Vedi tutti i racconti →',
+    emptyLink: 'Vedere tutti i racconti →',
     keepExploringEyebrow: 'Continui a esplorare',
     otherThemes: 'Altri temi',
     themes: {
@@ -360,7 +360,7 @@ const it: SectionCopy = {
         name: 'Cibo',
         tagline: 'Il sapore della Lapponia d’inverno.',
         description:
-          'Zuppa di salmone, pane di segale, renna in tre modi e il caffè che bevi alle 2 di notte perché il sole ha dimenticato di tramontare.',
+          'Zuppa di salmone, pane di segale, renna in tre modi e il caffè che si beve alle 2 di notte perché il sole ha dimenticato di tramontare.',
         metaTitle: 'Il cibo in Lapponia finlandese · Lapland.blog',
         metaDescription:
           'Zuppa di salmone, pane di segale, renna in tre modi e il caffè delle 2 di notte perché il sole ha dimenticato di tramontare. Mangiare in Lapponia finlandese.',
@@ -378,10 +378,10 @@ const it: SectionCopy = {
         name: 'Persone',
         tagline: 'Chi si incontra quassù.',
         description:
-          'Allevatori di renne, pattugliatori di piste, maestri di sauna e sconosciuti nelle hall degli hotel. La Lapponia è silenziosa, ma mai vuota.',
+          'Allevatori di renne, soccorritori delle piste, maestri di sauna e sconosciuti nelle hall degli hotel. La Lapponia è silenziosa, ma mai vuota.',
         metaTitle: 'Le persone della Lapponia finlandese · Lapland.blog',
         metaDescription:
-          'Allevatori di renne, pattugliatori di piste, maestri di sauna e sconosciuti nelle hall degli hotel. La Lapponia è silenziosa, ma mai vuota.',
+          'Allevatori di renne, soccorritori delle piste, maestri di sauna e sconosciuti nelle hall degli hotel. La Lapponia è silenziosa, ma mai vuota.',
       },
       gear: {
         name: 'Attrezzatura',
@@ -413,7 +413,7 @@ const it: SectionCopy = {
     tagged: 'Taggato',
     exploreMore: 'Esplori altro dal network LaplandVibes',
     editorialLabel: 'Una voce del Field Journal',
-    editorialNote: "Una delle poche voci di esempio scritte da The Field Journal, la voce editoriale di Lapland.blog, per mostrare come si legge un diario di viaggio onesto. Luoghi e temperature reali; le tue voci le scrivi tu.",
+    editorialNote: "Una delle poche voci di esempio scritte da The Field Journal, la voce editoriale di Lapland.blog, per mostrare come si legge un diario di viaggio onesto. Luoghi e temperature reali; le Sue voci le scrive Lei.",
   },
   signIn: {
     pageTitle: 'Pianifichi il Suo viaggio in Lapponia | Lapland.blog',
@@ -435,37 +435,37 @@ const it: SectionCopy = {
     sentTitle: 'Controlli la Sua casella di posta',
     sentBody:
       'Abbiamo inviato un link magico a {email}. Lo clicchi e il Suo blog di viaggio è online. Il link scade tra un’ora.',
-    useDifferent: 'Usa un altro indirizzo e-mail',
+    useDifferent: 'Usi un altro indirizzo e-mail',
     reserveEyebrow: 'Prenoti la Sua pagina',
     formH2: 'Pianifichi il Suo viaggio in Lapponia',
     formLead: 'Creiamo la Sua pagina viaggio e Le inviamo consigli personalizzati in base alla data del soggiorno.',
     emailLabel: 'La Sua e-mail',
-    emailPlaceholder: 'tu@example.com',
+    emailPlaceholder: 'nome@esempio.com',
     travelLabel: 'Quando viene in Lapponia?',
     monthLabel: 'Mese…',
     yearLabel: 'Anno…',
     noDates: 'Sto ancora sognando, niente date',
     enterEmail: 'Inserisca la Sua e-mail per iniziare.',
     sending: 'Invio del link magico…',
-    submitCta: 'Prenota la mia pagina viaggio',
+    submitCta: 'Prenotare la mia pagina viaggio',
     months: [
       'gennaio','febbraio','marzo','aprile','maggio','giugno',
       'luglio','agosto','settembre','ottobre','novembre','dicembre',
     ],
   },
   unsubscribe: {
-    pageTitle: 'Disiscrizione | Lapland.blog',
-    pageDescription: 'Si disiscriva dalla newsletter di Lapland.blog. Un clic, nessun rancore.',
+    pageTitle: 'Cancellazione dell’iscrizione | Lapland.blog',
+    pageDescription: 'Annulli l’iscrizione alla newsletter di Lapland.blog. Un clic, nessun rancore.',
     eyebrow: 'Newsletter',
-    h1: 'Disiscrizione',
-    successTitle: 'La disiscrizione è avvenuta.',
+    h1: 'Cancellazione dell’iscrizione',
+    successTitle: 'Iscrizione annullata.',
     successBody:
       'Ci dispiace vederLa andare via. Non riceverà più e-mail da Lapland.blog. Se cambia idea, il modulo di iscrizione è in ogni pagina.',
-    backHome: '← Torna alla home',
+    backHome: '← Torni alla home',
     lead: 'Inserisca l’e-mail con cui si è iscritto/a. Un clic e ha finito. Niente loop «è sicuro?», niente sondaggi.',
-    emailPlaceholder: 'tua@email.com',
+    emailPlaceholder: 'sua@email.com',
     processing: 'Elaborazione…',
-    submit: 'Disiscriviti',
+    submit: 'Annulli l’iscrizione',
   },
   notFound: {
     pageTitle: 'Pagina non trovata | Lapland.blog',
@@ -473,16 +473,16 @@ const it: SectionCopy = {
     eyebrow: 'Non trovata · 404',
     h1: 'Persi nella neve.',
     body: 'Questa pagina non esiste, o non esiste ancora. In ogni caso, il resto del blog è da questa parte.',
-    backHome: 'Torna alla home',
+    backHome: 'Torni alla home',
     allStories: 'Tutti i racconti →',
   },
   chrome: {
-    readTheStory: 'Leggi la storia',
-    shareThisStory: 'Condividi questa storia',
+    readTheStory: 'Legga la storia',
+    shareThisStory: 'Condivida questa storia',
     inThisStory: 'In questa storia',
     fieldJournalEntry: 'Voce del diario di campo',
     liveTripBlog: 'Blog-esempio di viaggio',
-    yoursCouldBeNext: 'Il tuo potrebbe essere il prossimo in questo carosello.',
+    yoursCouldBeNext: 'Il Suo potrebbe essere il prossimo in questo carosello.',
     featuredBadge: 'Scelta della redazione',
     minRead: 'min di lettura',
     exampleBadge: 'Esempio',
@@ -491,7 +491,7 @@ const it: SectionCopy = {
     daysLabel: 'giorni',
     yourTripYourBlog: 'Il Suo viaggio · Il Suo blog',
     startFree: 'Gratuito. Due minuti per iniziare. Suo per sempre.',
-    startMine: 'Avvia il mio',
+    startMine: 'Avviare il mio',
     examples: {
       aurora: {
         title: 'Cinque notti, quattro aurore, un treppiede congelato',
@@ -533,7 +533,7 @@ const it: SectionCopy = {
     aboutEyebrow: 'Su Lapland Blog',
     aboutBody: "Un vero blog della Lapponia: diari di viaggio, cultura sami, aurora boreale e vita artica quotidiana, scritti da autori locali.",
     aboutBadge: 'Gestito in modo indipendente · fonti citate',
-    spottedError: { title: 'Ha visto un errore?', body: 'Qualcosa da correggere? Ce lo segnali, interveniamo subito.', cta: 'Segnala un errore →' },
+    spottedError: { title: 'Ha visto un errore?', body: 'Qualcosa da correggere? Ce lo segnali, interveniamo subito.', cta: 'Segnali un errore →' },
     partner: { title: 'Collabori con noi', body: 'Pubblicità o collaborazioni su 27 siti dedicati alla Lapponia.', cta: 'Contatti →' },
     press: { title: 'Stampa e media', body: 'Collaborazioni editoriali e cartelle stampa.', cta: 'Richieste stampa →' },
     copyright: '© {{year}} #LaplandVibes · Parte del network #LaplandVibes',
@@ -549,16 +549,16 @@ const it: SectionCopy = {
     eyebrow: 'La newsletter #LaplandVibes',
     h2: 'Notizie dalla Lapponia direttamente nella Sua casella',
     lead: "Come leggere le previsioni dell'aurora, quando chalet ed escursioni vanno davvero esauriti, e note di viaggio stagionali scritte dalla Finlandia. Niente spam, niente riempitivi. Solo quando c'è davvero qualcosa da raccontare.",
-    placeholder: 'tua@email.com',
+    placeholder: 'sua@email.com',
     subscribing: 'Iscrizione…',
-    subscribe: 'Iscriviti',
+    subscribe: 'Si iscriva',
     successTitle: 'Ci siamo quasi.',
-    successBody: 'Conferma l\'iscrizione dall\'e-mail che ti abbiamo appena inviato.',
+    successBody: 'Confermi l\'iscrizione dall\'e-mail che Le abbiamo appena inviato.',
     alreadyTitle: 'Già iscritto/a',
     alreadyBody: 'È già nella lista. Grazie per restare con noi.',
     agreeText: 'Iscrivendosi accetta la nostra',
     privacyLink: 'privacy policy',
-    unsubscribeNote: 'Si disiscriva quando vuole. Il Suo indirizzo non viene condiviso.',
+    unsubscribeNote: 'Può annullare l’iscrizione quando vuole. Il Suo indirizzo non viene condiviso.',
   },
   cookieBanner: {
     headline: 'Cookie',
