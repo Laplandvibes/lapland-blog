@@ -263,7 +263,7 @@ const ptBR: SectionCopy = {
       'O Lapland.blog faz parte do ecossistema LaplandVibes, uma rede de sites sobre a Lapônia de propriedade finlandesa. Os outros sites dizem aonde ir, onde ficar e o que fazer. Este é onde a viagem em si é colocada no papel.',
     contactHeading: 'Entre em contato',
     contactBody:
-      'Se quiser dar um oi, corrigir um erro factual ou enviar uma fotografia que possamos creditar, escreva para info@lapland.blog. Lemos tudo e tentamos responder em uma semana.',
+      'Se quiser dar um oi, corrigir um erro factual ou enviar uma fotografia que possamos creditar, escreva para info@laplandvibes.com. Lemos tudo e tentamos responder em uma semana.',
     closing: 'Escrito a partir da Lapônia finlandesa, na temperatura e na hora em que de fato aconteceu.',
     ctaPrimary: 'Começar o seu próprio diário →',
     ctaSecondary: 'Ou',

@@ -263,7 +263,7 @@ const fi: SectionCopy = {
       'Lapland.blog on osa LaplandVibes-ekosysteemiä, suomalaisomisteista Lappi-sivustojen verkostoa. Muut sivustot kertovat minne mennä, missä yöpyä ja mitä tehdä. Tämä on se, johon itse matka kirjoitetaan ylös.',
     contactHeading: 'Ota yhteyttä',
     contactBody:
-      'Jos haluat sanoa hei, korjata asiavirheen tai lähettää kuvan, jonka voimme julkaista nimesi kanssa, kirjoita info@lapland.blog. Luemme kaiken ja yritämme vastata viikossa.',
+      'Jos haluat sanoa hei, korjata asiavirheen tai lähettää kuvan, jonka voimme julkaista nimesi kanssa, kirjoita info@laplandvibes.com. Luemme kaiken ja yritämme vastata viikossa.',
     closing: 'Kirjoitettu Suomen Lapissa, siinä lämpötilassa ja sillä hetkellä, jona kaikki tapahtui.',
     ctaPrimary: 'Aloita oma päiväkirja →',
     ctaSecondary: 'Tai',

@@ -264,7 +264,7 @@ const de: SectionCopy = {
       'Lapland.blog ist Teil des LaplandVibes-Ökosystems, eines Netzwerks finnisch geführter Seiten über Lappland. Die anderen Seiten sagen Ihnen, wohin, wo Sie übernachten und was Sie tun können. Diese ist die, in der die Reise selbst aufgeschrieben wird.',
     contactHeading: 'Kontakt',
     contactBody:
-      'Wenn Sie hallo sagen, einen Sachfehler korrigieren oder ein Foto schicken möchten, das wir mit Namensnennung zeigen dürfen: info@lapland.blog. Wir lesen alles und versuchen, innerhalb einer Woche zu antworten.',
+      'Wenn Sie hallo sagen, einen Sachfehler korrigieren oder ein Foto schicken möchten, das wir mit Namensnennung zeigen dürfen: info@laplandvibes.com. Wir lesen alles und versuchen, innerhalb einer Woche zu antworten.',
     closing: 'Geschrieben aus dem finnischen Lappland, bei der Temperatur und zur Stunde, in der es tatsächlich passierte.',
     ctaPrimary: 'Eigenes Tagebuch starten →',
     ctaSecondary: 'Oder',

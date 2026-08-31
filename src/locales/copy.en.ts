@@ -263,7 +263,7 @@ const en: SectionCopy = {
       'Lapland.blog is part of the LaplandVibes ecosystem, a network of Finnish-owned sites about Lapland. The other sites tell you where to go, where to stay, and what to do. This one is where the trip itself gets written down.',
     contactHeading: 'Get in touch',
     contactBody:
-      'If you want to say hello, correct a factual error, or send a photograph we can credit, email info@lapland.blog. We read everything and try to answer within a week.',
+      'If you want to say hello, correct a factual error, or send a photograph we can credit, email info@laplandvibes.com. We read everything and try to answer within a week.',
     closing: 'Written from Finnish Lapland, at the temperature and the hour it actually happened.',
     ctaPrimary: 'Start your own journal →',
     ctaSecondary: 'Or',

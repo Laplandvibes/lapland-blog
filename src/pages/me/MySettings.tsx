@@ -3,7 +3,7 @@
 // authors DO need: confirm email on file, request data export, delete
 // their account. Self-serve email change requires Supabase auth UpdateUser
 // + confirmation flow that we haven't wired yet — for now those go via
-// mailto so a human at info@lapland.blog handles them.
+// mailto so a human at info@laplandvibes.com handles them.
 //
 // Phase 5+ — Vesa flagged that GDPR account deletion + data export
 // must have a path before scaling user signups.
@@ -80,17 +80,17 @@ export default function MySettings() {
 
   // Mailto helpers — pre-fills the support email so the team can verify
   // identity (signed-in email matches the From: header).
-  const exportMailto = `mailto:info@lapland.blog?subject=${encodeURIComponent(
+  const exportMailto = `mailto:info@laplandvibes.com?subject=${encodeURIComponent(
     'Data export request · Lapland.blog'
   )}&body=${encodeURIComponent(
     `Hi,\n\nI'd like to request a copy of all the data Lapland.blog holds about my account.\n\nAccount email: ${email}\nHandle: @${handle}\n\nThank you.`
   )}`;
-  const deleteMailto = `mailto:info@lapland.blog?subject=${encodeURIComponent(
+  const deleteMailto = `mailto:info@laplandvibes.com?subject=${encodeURIComponent(
     'Account deletion request · Lapland.blog'
   )}&body=${encodeURIComponent(
     `Hi,\n\nI'd like to permanently delete my Lapland.blog account and all my entries.\n\nAccount email: ${email}\nHandle: @${handle}\n\nI understand this is irreversible. Please confirm once it's done.\n\nThank you.`
   )}`;
-  const emailChangeMailto = `mailto:info@lapland.blog?subject=${encodeURIComponent(
+  const emailChangeMailto = `mailto:info@laplandvibes.com?subject=${encodeURIComponent(
     'Change email address · Lapland.blog'
   )}&body=${encodeURIComponent(
     `Hi,\n\nI'd like to change the email address on my Lapland.blog account.\n\nCurrent email: ${email}\nHandle: @${handle}\nNew email: <please fill in>\n\nThank you.`
@@ -211,7 +211,7 @@ export default function MySettings() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-aurora-blue/45 bg-night-light/40 text-aurora-blue text-xs font-semibold uppercase tracking-[0.18em] hover:bg-night-light/70 transition-colors"
               >
                 <Mail size={13} />
-                Email info@lapland.blog
+                Email info@laplandvibes.com
               </a>
             </div>
           </Reveal>

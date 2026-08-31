@@ -213,7 +213,7 @@ const nl: SectionCopy = {
       'Lapland.blog maakt deel uit van het LaplandVibes-ecosysteem, een netwerk van Finse sites over Lapland. De andere sites vertellen u waar u heen moet, waar u slaapt en wat u doet. Deze site is waar de reis zelf wordt opgeschreven.',
     contactHeading: 'Neem contact op',
     contactBody:
-      'Wilt u gedag zeggen, een feitelijke fout corrigeren of een foto sturen die we kunnen crediteren, mail dan naar info@lapland.blog. We lezen alles en proberen binnen een week te antwoorden.',
+      'Wilt u gedag zeggen, een feitelijke fout corrigeren of een foto sturen die we kunnen crediteren, mail dan naar info@laplandvibes.com. We lezen alles en proberen binnen een week te antwoorden.',
     closing: 'Geschreven vanuit Fins Lapland, op de temperatuur en het uur waarop het werkelijk gebeurde.',
     ctaPrimary: 'Start uw eigen dagboek →',
     ctaSecondary: 'Of',
@@ -245,11 +245,11 @@ const nl: SectionCopy = {
         blurb: 'De hoofdstad van Lapland. Waar de meeste vluchten landen. Het basiskamp voor alles ten noorden van hier.',
       },
       saariselka: {
-        region: 'Hoge noorden, fjell-land',
+        region: 'Hoge noorden, fjäll-land',
         blurb: 'Boomloze toendra, glazen iglo’s, het nationale park Urho Kekkonen achter de deur.',
       },
       levi: {
-        region: 'West-Lapland, fjell-land',
+        region: 'West-Lapland, fjäll-land',
         blurb: 'Het grootste skigebied van Finland. In de winter directe vluchten vanuit Helsinki. Gezinsvriendelijk basiskamp.',
       },
       kemi: {
@@ -265,8 +265,8 @@ const nl: SectionCopy = {
         blurb: 'Aan de rand van het nationale park Pallas-Yllästunturi. Een van de hoogste noorderlicht-zichtwaarden van Europa.',
       },
       yllas: {
-        region: 'West-Lapland, fjell-land',
-        blurb: 'De rustigere zus van Levi. Bredere pistes, trager tempo, de fjell met zijn eigen seizoenen.',
+        region: 'West-Lapland, fjäll-land',
+        blurb: 'De rustigere zus van Levi. Bredere pistes, trager tempo, de fjäll met zijn eigen seizoenen.',
       },
       kemijarvi: {
         region: 'Oost-Lapland, merenland',

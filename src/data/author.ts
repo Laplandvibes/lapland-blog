@@ -33,7 +33,7 @@ export const vesa: Author = {
     "Lapland.blog is a free travel-journal platform built for visitors to Finnish Lapland. The Field Journal is the editorial voice of the site: a small handful of seed entries written in the first person from inside Finland's Arctic, meant to show what your own trip blog could read like once you start writing your own. Every entry has a real temperature, a real time of day, and a small embarrassment. No brochure voice. No cliché vocabulary. Just the trip and what it felt like.",
   location: 'Finnish Lapland',
   social: {
-    email: 'info@lapland.blog',
+    email: 'info@laplandvibes.com',
   },
 };
 
@@ -51,7 +51,7 @@ export const aino: Author = {
     'Aino Karvonen is an editorial pen of The Field Journal, the in-house desk of Lapland.blog. The beat: what the light is actually doing in Finnish Lapland, the nightless night of June and July, the polar night of December, and the long slow dimmer switch between them. Entries in this column carry a real date, a real hour, and a note on what the sky was doing at the time.',
   location: 'Finnish Lapland',
   social: {
-    email: 'info@lapland.blog',
+    email: 'info@laplandvibes.com',
   },
 };
 
@@ -65,7 +65,7 @@ export const eero: Author = {
     'Eero Mattila is an editorial pen of The Field Journal, the in-house desk of Lapland.blog. The beat: Lapland on foot, marked trails and open fell country, what the ground does underfoot in each month, and honest notes on distances, water, and insects. Entries in this column name the trail, the day, and the thing that went wrong.',
   location: 'Finnish Lapland',
   social: {
-    email: 'info@lapland.blog',
+    email: 'info@laplandvibes.com',
   },
 };
 
@@ -79,7 +79,7 @@ export const marja: Author = {
     'Marja Aho is an editorial pen of The Field Journal, the in-house desk of Lapland.blog. The beat: what people in Finnish Lapland actually eat and where, market squares, smoke saunas that double as kitchens, roadside grills, the one café in a village of two hundred. Entries in this column carry real prices and real portions, and never reach for the big adjectives.',
   location: 'Finnish Lapland',
   social: {
-    email: 'info@lapland.blog',
+    email: 'info@laplandvibes.com',
   },
 };
 
@@ -93,7 +93,7 @@ export const ilkka: Author = {
     'Ilkka Rautio is an editorial pen of The Field Journal, the in-house desk of Lapland.blog. The beat: the Finnish cabin, how a mökki actually works, what the sauna is for, which sounds a lake makes at two in the morning, and the small maintenance rituals that keep a cabin alive. Entries in this column include at least one practical mistake so you can skip making it yourself.',
   location: 'Finnish Lapland',
   social: {
-    email: 'info@lapland.blog',
+    email: 'info@laplandvibes.com',
   },
 };
 
@@ -107,7 +107,7 @@ export const sanna: Author = {
     'Sanna Kivelä is an editorial pen of The Field Journal, the in-house desk of Lapland.blog. The beat: equipment for Finnish Lapland in every season, tested by carrying it, layers, boots, repellents, batteries, and the difference between what the shop said and what the weather did. Entries in this column list what was carried, what was used, and what should have stayed home.',
   location: 'Finnish Lapland',
   social: {
-    email: 'info@lapland.blog',
+    email: 'info@laplandvibes.com',
   },
 };
 

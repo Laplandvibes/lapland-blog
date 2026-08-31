@@ -263,7 +263,7 @@ const zhCN: SectionCopy = {
       'Lapland.blog 是 LaplandVibes 生态系统的一部分，一个由芬兰人拥有、以拉普兰为主题的网站网络。其他网站告诉您去哪儿、住哪儿、做什么。而这个网站,是把旅程本身写下来的地方。',
     contactHeading: '联系我们',
     contactBody:
-      '如果您想打个招呼、纠正一处事实错误,或寄来一张我们可以署名的照片,请写信至 info@lapland.blog。我们会阅读每一封,并尽量在一周内回复。',
+      '如果您想打个招呼、纠正一处事实错误,或寄来一张我们可以署名的照片,请写信至 info@laplandvibes.com。我们会阅读每一封,并尽量在一周内回复。',
     closing: '写自芬兰拉普兰,就在事情真正发生时的那个气温与那个时刻。',
     ctaPrimary: '开始属于您的日志 →',
     ctaSecondary: '或者',

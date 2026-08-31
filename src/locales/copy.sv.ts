@@ -263,7 +263,7 @@ const sv: SectionCopy = {
       'Lapland.blog är en del av LaplandVibes-ekosystemet, ett nätverk av finskägda sajter om Lappland. De andra sajterna berättar vart du ska åka, var du ska bo och vad du ska göra. Den här är där själva resan skrivs ner.',
     contactHeading: 'Hör av dig',
     contactBody:
-      'Om du vill säga hej, rätta ett faktafel eller skicka ett fotografi vi kan kreditera, mejla info@lapland.blog. Vi läser allt och försöker svara inom en vecka.',
+      'Om du vill säga hej, rätta ett faktafel eller skicka ett fotografi vi kan kreditera, mejla info@laplandvibes.com. Vi läser allt och försöker svara inom en vecka.',
     closing: 'Skrivet från finska Lappland, vid den temperatur och den timme det faktiskt hände.',
     ctaPrimary: 'Starta din egen dagbok →',
     ctaSecondary: 'Eller',

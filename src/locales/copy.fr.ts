@@ -84,7 +84,7 @@ const fr: SectionCopy = {
     pillar1Kicker: 'I · Le froid',
     pillar1Title: 'Ce que le froid fait vraiment',
     pillar1Body:
-      'Nuits aurorales, nuit polaire, les huit saisons que la plupart des listes oublient. Ici la météo est un personnage principal, pas un décor. Notes de terrain sur ce que ressent –23 à 3 h 47, sur ce que ça fait à une batterie de téléphone, et à une personne.',
+      'Nuits aurorales, nuit polaire, les huit saisons que la plupart des listes oublient. Ici la météo est un personnage principal, pas un décor. Notes de terrain sur l’effet que fait –23 à 3 h 47, sur ce que ça fait à une batterie de téléphone, et à une personne.',
     pillar2Kicker: 'II · Le refuge',
     pillar2Title: 'Où vous dormez, où vous mangez',
     pillar2Body:
@@ -102,7 +102,7 @@ const fr: SectionCopy = {
     asideP1:
       'Chaque année, des milliers de visiteurs arrivent en Laponie, voient quelque chose d’extraordinaire et le perdent dans un rouleau photo qu’ils ne rouvriront jamais. L’aurore au-dessus du chalet. Le retour du sauna, les doigts engourdis. Le bol de soupe de saumon qui valait, va savoir comment, 42 €. Disparu en une semaine.',
     asideP2:
-      'Lapland.blog est un petit outil gratuit pour y remédier. Épinglez où vous étiez. Écrivez ce que vous avez vu. Photographiez la soupe. Avant d’avoir repris l’avion, vous tenez un vrai blog de votre voyage : un blog que vos amis peuvent vraiment suivre, un blog que vous aurez encore envie de relire dans cinq ans. Pas de photos d’archive. Pas de « féerique hiver merveilleux ». Juste votre version honnête du lieu.',
+      'Lapland.blog est un petit outil gratuit pour y remédier. Épinglez où vous étiez. Écrivez ce que vous avez vu. Photographiez la soupe. Avant d’avoir repris l’avion, vous tenez un vrai blog de votre voyage : un blog que vos amis peuvent vraiment suivre, un blog que vous aurez encore envie de relire dans cinq ans. Pas de photos d’archive. Pas de « pays des merveilles hivernal ». Juste votre version honnête du lieu.',
     asideCta1: 'Lancer le vôtre',
     asideCta2: 'À propos de lapland.blog',
     asidePill: 'Votre voyage · Votre blog',
@@ -135,7 +135,7 @@ const fr: SectionCopy = {
     eyebrow: 'Bienvenue',
     h1: 'Bonjour. Trois entrées possibles.',
     lead:
-      'Lapland.blog est un site de carnet de voyage gratuit, lent, photo-led, pensé pour ceux qui se rendent vraiment en Laponie finlandaise. Que vous planifiiez un voyage, soyez en pleine expédition ou rentré chez vous en regrettant de ne pas l’avoir écrit, choisissez votre voie.',
+      'Lapland.blog est un site de carnet de voyage gratuit, lent, porté par la photo, pensé pour ceux qui se rendent vraiment en Laponie finlandaise. Que vous planifiiez un voyage, soyez en pleine expédition ou rentré chez vous en regrettant de ne pas l’avoir écrit, choisissez votre voie.',
     path1Kicker: '01 · Planification',
     path1Title: 'Je planifie un voyage en Laponie.',
     path1Body:
@@ -175,7 +175,7 @@ const fr: SectionCopy = {
       title: 'Cuisine et boissons',
       body: 'Où aller manger pour de vrai : la soupe de saumon, le pain de seigle, les bars qui ont connu de meilleures décennies.',
     },
-    planAllSites: 'Ou parcourez les 27 sites à laplandvibes.com',
+    planAllSites: 'Ou parcourez les 27 sites sur laplandvibes.com',
     onlyEyebrow: 'Si vous n’en lisez qu’une',
     onlyH2: 'Lisez celle-ci.',
     onlyLead: 'La dernière entrée du carnet de terrain. Vraie température, vraie heure, sans voix de brochure.',
@@ -192,7 +192,7 @@ const fr: SectionCopy = {
     lead:
       'Lapland.blog est une plateforme gratuite de carnet de voyage pour les visiteurs de la Laponie finlandaise. Épinglez l’endroit où vous avez vu les aurores. Photographiez le chalet. Notez ce que la température faisait. Au moment de rentrer, vous avez un blog de votre voyage : que vos amis peuvent vraiment suivre, et que vous aurez encore envie de relire dans cinq ans.',
     intro:
-      'La plupart des blogs sur la Laponie se lisent comme une brochure. La plupart des applis de carnet de voyage finissent abandonnées dans un rouleau photo ou partagées en un seul post Instagram qui disparaît en une journée. Lapland.blog est l’entre-deux : un vrai blog de voyage, lent, photo-led, hébergé sous un nom qui reçoit déjà du trafic, conservé aussi longtemps que vous le voulez.',
+      'La plupart des blogs sur la Laponie se lisent comme une brochure. La plupart des applis de carnet de voyage finissent abandonnées dans un rouleau photo ou partagées en un seul post Instagram qui disparaît en une journée. Lapland.blog est l’entre-deux : un vrai blog de voyage, lent, porté par la photo, hébergé sous un nom qui reçoit déjà du trafic, conservé aussi longtemps que vous le voulez.',
     howHeading: 'Comment ça marche',
     howStepPin: 'Épinglez le chalet, le restaurant, le spot de ciel noir. Construisez votre itinéraire avant de partir.',
     howStepWrite: 'Écrivez en chemin, depuis le chalet, la voiture, le sauna. Ajoutez des photos, la température et le goût de la soupe.',
@@ -207,13 +207,13 @@ const fr: SectionCopy = {
       'Des publications sponsorisées dans les entrées des lecteurs. Des listes d’affiliés glissées dans votre blog. Les mots « inoubliable », « bucket list », « magique », « pays des merveilles hivernal » sont bannis des brouillons éditoriaux, et tout aussi à bannir des vôtres. Mauvais pour l’écriture, mauvais pour le lecteur.',
     seedHeading: 'Les entrées-germes',
     seedBody:
-      'Les entrées du site sont écrites par The Field Journal, la rédaction de Lapland.blog : cinq plumes éditoriales nommées, chacune avec son domaine: saisons, sentiers, cuisine, chalets et équipement. Elles sont là pour montrer ce que peut être un blog de voyage honnête, lent, porté par la photo : vraies températures, vraies heures, sans voix de brochure. Lisez-en une et imaginez la vôtre.',
+      'Les entrées du site sont écrites par The Field Journal, la rédaction de Lapland.blog : cinq plumes éditoriales nommées, chacune avec son domaine : saisons, sentiers, cuisine, chalets et équipement. Elles sont là pour montrer ce que peut être un blog de voyage honnête, lent, porté par la photo : vraies températures, vraies heures, sans voix de brochure. Lisez-en une et imaginez la vôtre.',
     networkHeading: 'À propos du réseau',
     networkBody:
       'Lapland.blog fait partie de l’écosystème LaplandVibes, un réseau de sites finlandais sur la Laponie. Les autres sites vous disent où aller, où dormir et quoi faire. Celui-ci est l’endroit où le voyage lui-même se met par écrit.',
     contactHeading: 'Nous contacter',
     contactBody:
-      'Pour nous saluer, signaler une erreur factuelle ou nous envoyer une photo à créditer, écrivez à info@lapland.blog. Nous lisons tout et nous essayons de répondre sous une semaine.',
+      'Pour nous saluer, signaler une erreur factuelle ou nous envoyer une photo à créditer, écrivez à info@laplandvibes.com. Nous lisons tout et nous essayons de répondre sous une semaine.',
     closing: 'Écrit depuis la Laponie finlandaise, à la température et à l’heure réelles.',
     ctaPrimary: 'Lancer votre propre carnet →',
     ctaSecondary: 'Ou',
@@ -245,11 +245,11 @@ const fr: SectionCopy = {
         blurb: 'La capitale de la Laponie. Là où atterrissent la plupart des vols. Le camp de base pour tout ce qui se trouve plus au nord.',
       },
       saariselka: {
-        region: 'Grand Nord, pays des fjells',
+        region: 'Grand Nord, pays des fjälls',
         blurb: 'Toundra sans arbres, igloos de verre, le parc national Urho Kekkonen juste derrière la porte.',
       },
       levi: {
-        region: 'Laponie de l’Ouest, pays des fjells',
+        region: 'Laponie de l’Ouest, pays des fjälls',
         blurb: 'La plus grande station de ski de Finlande. Vols directs depuis Helsinki en hiver. Camp de base familial.',
       },
       kemi: {
@@ -265,8 +265,8 @@ const fr: SectionCopy = {
         blurb: 'En bordure du parc national de Pallas-Yllästunturi. Parmi les meilleurs taux de visibilité des aurores en Europe.',
       },
       yllas: {
-        region: 'Laponie de l’Ouest, pays des fjells',
-        blurb: 'La sœur plus discrète de Levi. Pistes plus larges, rythme plus lent, le fjell qui vit ses propres saisons.',
+        region: 'Laponie de l’Ouest, pays des fjälls',
+        blurb: 'La sœur plus discrète de Levi. Pistes plus larges, rythme plus lent, le fjäll qui vit ses propres saisons.',
       },
       kemijarvi: {
         region: 'Laponie de l’Est, pays des lacs',
@@ -519,7 +519,7 @@ const fr: SectionCopy = {
           'Marché sur la glace jusqu’à ce que la rive disparaisse. Un seul pin. Zéro vent. J’ai compris le mot silence autrement.',
       },
       food: {
-        title: 'Le bol de soupe au saumon à quarante-deux euros, passé en revue',
+        title: 'Le bol de soupe de saumon à quarante-deux euros, passé en revue',
         snippet:
           'Servi avec du pain de seigle et une noix de beurre. Terminé en huit minutes. J’en ai commandé un deuxième.',
       },

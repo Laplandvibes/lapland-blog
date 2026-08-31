@@ -213,7 +213,7 @@ const it: SectionCopy = {
       'Lapland.blog fa parte dell’ecosistema LaplandVibes, una rete di siti finlandesi sulla Lapponia. Gli altri siti Le dicono dove andare, dove dormire e cosa fare. Questo è il luogo dove il viaggio stesso viene messo per iscritto.',
     contactHeading: 'Contatti',
     contactBody:
-      'Per un saluto, per segnalare un errore o per inviarci una fotografia da accreditare, scriva a info@lapland.blog. Leggiamo tutto e cerchiamo di rispondere entro una settimana.',
+      'Per un saluto, per segnalare un errore o per inviarci una fotografia da accreditare, scriva a info@laplandvibes.com. Leggiamo tutto e cerchiamo di rispondere entro una settimana.',
     closing: 'Scritto dalla Lapponia finlandese, alla temperatura e all’ora in cui è davvero accaduto.',
     ctaPrimary: 'Avvii il Suo diario →',
     ctaSecondary: 'Oppure',
