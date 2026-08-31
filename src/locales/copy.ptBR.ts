@@ -107,7 +107,7 @@ const ptBR: SectionCopy = {
     howStep3Kicker: 'Passo 03 · Compartilhe',
     howStep3Title: 'Sua viagem, bem contada.',
     howStep3Body:
-      'Suas entradas formam um blog público em lapland.blog/seu-nome. Seus amigos podem acompanhar. Cada entrada é exportada como story do Instagram, então a viagem vive duas vezes.',
+      'Suas entradas formam um blog público em lapland.blog/by/seu-nome. Seus amigos podem acompanhar. Cada entrada é exportada como story do Instagram, então a viagem vive duas vezes.',
     howCta: 'Criar seu blog de viagem',
     howFootnote: 'Grátis para diários de viagem · Sem cartão · Entre com o Google',
     liveEyebrow: 'Blogs de exemplo da redação',
@@ -161,7 +161,7 @@ const ptBR: SectionCopy = {
     faq: [
       {
         q: 'Como começo um blog de viagem no lapland.blog?',
-        a: 'Faça login com sua conta do Google, dê um nome ao seu blog e escreva a primeira entrada. Cada entrada pode ter texto, fotos, a data e um pino no mapa do lugar onde você esteve. Seu blog fica em lapland.blog/seu-nome e está pronto para compartilhar assim que você publica. Não há nada para instalar e nenhuma configuração além do login.',
+        a: 'Faça login com sua conta do Google, dê um nome ao seu blog e escreva a primeira entrada. Cada entrada pode ter texto, fotos, a data e um pino no mapa do lugar onde você esteve. Seu blog fica em lapland.blog/by/seu-nome e está pronto para compartilhar assim que você publica. Não há nada para instalar e nenhuma configuração além do login.',
       },
       {
         q: 'O lapland.blog é gratuito?',
@@ -246,12 +246,12 @@ const ptBR: SectionCopy = {
     howHeading: 'Como funciona',
     howStepPin: 'Marque a cabana, o restaurante, o ponto de céu escuro. Monte seu roteiro antes de embarcar.',
     howStepWrite: 'Escreva durante a viagem, da cabana, do carro, da sauna. Adicione fotos, a temperatura e o sabor da sopa.',
-    howStepShare: 'Suas entradas viram um blog público em lapland.blog/seu-nome. Amigos podem seguir; cada entrada é exportada como story do Instagram.',
+    howStepShare: 'Suas entradas viram um blog público em lapland.blog/by/seu-nome. Amigos podem seguir; cada entrada é exportada como story do Instagram.',
     howBody:
       'Entre com seu e-mail ou com o Google. Ganhe um cantinho no lapland.blog em lapland.blog/me. Cada entrada aceita uma imagem principal, um marcador de lugar e o texto que você quiser escrever. Salve rascunhos, publique quando estiver pronto, compartilhe o link com os amigos. Cada entrada publicada é indexada e pesquisável, e sua viagem vira uma pequena peça do arquivo maior da Lapônia.',
     freeHeading: 'O que é grátis',
     freeBody:
-      'Escrever entradas. Hospedar seu blog de viagem em lapland.blog/me/seunome. As fotos. O boletim. Não há paywall nem nível premium para quem escreve.',
+      'Escrever entradas. Hospedar seu blog de viagem em lapland.blog/by/seu-nome. As fotos. O boletim. Não há paywall nem nível premium para quem escreve.',
     notHeading: 'O que você não vai encontrar',
     notBody:
       'Posts patrocinados dentro das entradas dos leitores. Listas de compras de afiliados enfiadas no seu blog. As palavras «inesquecível», «lista de desejos», «mágico» ou «país das maravilhas do inverno» são banidas dos rascunhos editoriais, e vale bani-las também dos seus. Fazem mal à escrita e mal a quem lê.',
@@ -474,7 +474,7 @@ const ptBR: SectionCopy = {
     h1Pre: 'Planeje sua',
     h1Italic: 'viagem à Lapônia.',
     lead:
-      'Ganhe sua página em lapland.blog/seunome. Escreva a história da sua viagem, compartilhe fotos e receba dicas e ofertas personalizadas para o seu trajeto. Diga-nos quando você vem e ajudaremos a planejar cada passo.',
+      'Ganhe sua página em lapland.blog/by/seu-nome. Escreva a história da sua viagem, compartilhe fotos e receba dicas e ofertas personalizadas para o seu trajeto. Diga-nos quando você vem e ajudaremos a planejar cada passo.',
     benefit1Title: 'Marque sua rota no mapa da Lapônia',
     benefit1Body: 'Cabana, restaurante, ponto de aurora: coloque os marcadores antes de voar.',
     benefit2Title: 'Escreva entradas pelo celular',

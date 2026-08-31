@@ -107,7 +107,7 @@ const sv: SectionCopy = {
     howStep3Kicker: 'Steg 03 · Dela',
     howStep3Title: 'Din resa, väl berättad.',
     howStep3Body:
-      'Dina inlägg blir en offentlig blogg på lapland.blog/ditt-namn. Vänner kan följa den. Varje inlägg exporteras till en Instagram-story så resan lever två gånger.',
+      'Dina inlägg blir en offentlig blogg på lapland.blog/by/ditt-namn. Vänner kan följa den. Varje inlägg exporteras till en Instagram-story så resan lever två gånger.',
     howCta: 'Starta din reseblogg',
     howFootnote: 'Gratis för resedagböcker · Inget kort krävs · Logga in med Google',
     liveEyebrow: 'Redaktionella exempelbloggar',
@@ -161,7 +161,7 @@ const sv: SectionCopy = {
     faq: [
       {
         q: 'Hur startar jag en reseblogg på lapland.blog?',
-        a: 'Logga in med ditt Google-konto, ge din blogg ett namn och skriv ditt första inlägg. Varje inlägg kan innehålla text, foton, datumet och en kartnål för var du var. Din blogg finns på lapland.blog/ditt-namn och är redo att delas i samma stund du publicerar. Det finns inget att installera och ingen inställning utöver att logga in.',
+        a: 'Logga in med ditt Google-konto, ge din blogg ett namn och skriv ditt första inlägg. Varje inlägg kan innehålla text, foton, datumet och en kartnål för var du var. Din blogg finns på lapland.blog/by/ditt-namn och är redo att delas i samma stund du publicerar. Det finns inget att installera och ingen inställning utöver att logga in.',
       },
       {
         q: 'Är lapland.blog gratis att använda?',
@@ -246,12 +246,12 @@ const sv: SectionCopy = {
     howHeading: 'Så fungerar det',
     howStepPin: 'Nåla fast stugan, restaurangen, den mörka platsen. Bygg din rutt innan du flyger.',
     howStepWrite: 'Skriv medan du reser, från stugan, bilen, bastun. Lägg till foton, temperaturen, hur soppan smakade.',
-    howStepShare: 'Dina inlägg blir en offentlig blogg på lapland.blog/ditt-namn. Vänner kan följa den; varje inlägg exporteras till en Instagram-story.',
+    howStepShare: 'Dina inlägg blir en offentlig blogg på lapland.blog/by/ditt-namn. Vänner kan följa den; varje inlägg exporteras till en Instagram-story.',
     howBody:
       'Logga in med e-post eller Google. Få ett eget hörn av lapland.blog på lapland.blog/me. Varje inlägg tar en huvudbild, en platsnål och orden du vill säga. Spara utkast, publicera när du är redo, dela länken med vänner. Varje publicerat inlägg indexeras och är sökbart, så din resa blir en liten del av det större Lappland-arkivet.',
     freeHeading: 'Vad som är gratis',
     freeBody:
-      'Att skriva inlägg. Att publicera din reseblogg under lapland.blog/me/dittnamn. Foton. Nyhetsbrevet. Det finns ingen betalvägg och ingen premiumnivå på skribentsidan.',
+      'Att skriva inlägg. Att publicera din reseblogg under lapland.blog/by/ditt-namn. Foton. Nyhetsbrevet. Det finns ingen betalvägg och ingen premiumnivå på skribentsidan.',
     notHeading: 'Vad du inte hittar',
     notBody:
       'Sponsrade inlägg inuti läsarnas inlägg. Affiliate-shoppinglistor instoppade i din blogg. Orden "oförglömlig", "bucket list", "magisk" eller "vinterland" är bannlysta från de redaktionella utkasten, och värda att bannlysa från dina också. De är dåliga för skrivandet och dåliga för läsarna.',
@@ -474,7 +474,7 @@ const sv: SectionCopy = {
     h1Pre: 'Planera din',
     h1Italic: 'Lapplandsresa.',
     lead:
-      'Få din sida på lapland.blog/dittnamn. Skriv din reseberättelse, dela foton, och få personliga tips och erbjudanden för din resa. Berätta när du kommer så hjälper vi dig planera varje steg.',
+      'Få din sida på lapland.blog/by/ditt-namn. Skriv din reseberättelse, dela foton, och få personliga tips och erbjudanden för din resa. Berätta när du kommer så hjälper vi dig planera varje steg.',
     benefit1Title: 'Nåla fast din rutt på Lapplandskartan',
     benefit1Body: 'Stuga, restaurang, norrskensplats: sätt nålar innan du flyger.',
     benefit2Title: 'Skriv inlägg från telefonen',

@@ -1,7 +1,7 @@
 // SignIn — entry point to start your own Lapland trip blog. This is the
 // front door of the platform: a traveler arrives, types an email, gets a
 // magic link, and after one click is the author of their own
-// lapland.blog/their-name page. OAuth providers (Google/Facebook) are
+// lapland.blog/by/their-name page. OAuth providers (Google/Facebook) are
 // scaffolded but currently hidden behind a feature flag because they have
 // not yet been enabled in the Supabase Auth dashboard. Re-enable by
 // flipping ENABLE_OAUTH = true once Vesa configures the Google + Facebook

@@ -57,7 +57,7 @@ const nl: SectionCopy = {
     howStep3Kicker: 'Stap 03 · Delen',
     howStep3Title: 'Uw reis, goed verteld.',
     howStep3Body:
-      'Uw notities worden een openbare blog op lapland.blog/uw-naam. Vrienden kunnen hem volgen. Elke post wordt geëxporteerd naar een Instagram-story, en de reis leeft tweemaal.',
+      'Uw notities worden een openbare blog op lapland.blog/by/uw-naam. Vrienden kunnen hem volgen. Elke post wordt geëxporteerd naar een Instagram-story, en de reis leeft tweemaal.',
     howCta: 'Start uw reisblog',
     howFootnote: 'Gratis voor reisdagboeken · Geen creditcard nodig · Aanmelden met Google',
     liveEyebrow: 'Voorbeeldblogs van de redactie',
@@ -111,7 +111,7 @@ const nl: SectionCopy = {
     faq: [
       {
         q: 'Hoe begin ik een reisblog op lapland.blog?',
-        a: "Log in met uw Google-account, geef uw blog een naam en schrijf uw eerste bericht. Elk bericht kan tekst, foto's, de datum en een kaartspeld voor uw locatie bevatten. Uw blog staat op lapland.blog/uw-naam en is klaar om te delen zodra u publiceert. Er valt niets te installeren en er is geen instelling nodig behalve inloggen.",
+        a: "Log in met uw Google-account, geef uw blog een naam en schrijf uw eerste bericht. Elk bericht kan tekst, foto's, de datum en een kaartspeld voor uw locatie bevatten. Uw blog staat op lapland.blog/by/uw-naam en is klaar om te delen zodra u publiceert. Er valt niets te installeren en er is geen instelling nodig behalve inloggen.",
       },
       {
         q: 'Is lapland.blog gratis?',
@@ -196,12 +196,12 @@ const nl: SectionCopy = {
     howHeading: 'Hoe het werkt',
     howStepPin: 'Prik de hut, het restaurant, de donkere-hemelplek vast. Bouw uw route voordat u vertrekt.',
     howStepWrite: 'Schrijf onderweg, vanuit de hut, de auto, de sauna. Voeg foto’s toe, de temperatuur en hoe de soep smaakte.',
-    howStepShare: 'Uw berichten worden een openbare blog op lapland.blog/uw-naam. Vrienden kunnen volgen; elk bericht exporteert u als Instagram-story.',
+    howStepShare: 'Uw berichten worden een openbare blog op lapland.blog/by/uw-naam. Vrienden kunnen volgen; elk bericht exporteert u als Instagram-story.',
     howBody:
       'Meld u aan met e-mail of Google. U krijgt uw plek op lapland.blog/me. Elke notitie heeft een hoofdbeeld, een plek op de kaart en de woorden die u wilt zeggen. Sla concepten op, publiceer wanneer het klaar is, deel de link met vrienden. Elke gepubliceerde notitie wordt geïndexeerd en is doorzoekbaar, en uw reis wordt een klein stukje van het grotere Lapland-archief.',
     freeHeading: 'Wat gratis is',
     freeBody:
-      'Notities schrijven. Uw reisblog hosten onder lapland.blog/me/uwnaam. Foto’s. De nieuwsbrief. Aan de auteurskant is er geen paywall en geen premium niveau.',
+      'Notities schrijven. Uw reisblog hosten onder lapland.blog/by/uw-naam. Foto’s. De nieuwsbrief. Aan de auteurskant is er geen paywall en geen premium niveau.',
     notHeading: 'Wat u hier niet vindt',
     notBody:
       'Gesponsorde berichten in de lezersnotities. Affiliate winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor schrijven, slecht voor lezers.',
@@ -424,7 +424,7 @@ const nl: SectionCopy = {
     h1Pre: 'Plan uw',
     h1Italic: 'Lapland-reis.',
     lead:
-      'U krijgt uw pagina op lapland.blog/uwnaam. Schrijf uw reisverhaal, deel foto’s en ontvang persoonlijke tips en deals voor uw reis. Vertel ons wanneer u komt en we helpen u stap voor stap.',
+      'U krijgt uw pagina op lapland.blog/by/uw-naam. Schrijf uw reisverhaal, deel foto’s en ontvang persoonlijke tips en deals voor uw reis. Vertel ons wanneer u komt en we helpen u stap voor stap.',
     benefit1Title: 'Prik uw route vast op de Lapland-kaart',
     benefit1Body: 'Hut, restaurant, noorderlichtplek: zet de spelden voordat u vliegt.',
     benefit2Title: 'Schrijf notities vanaf uw telefoon',

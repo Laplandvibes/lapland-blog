@@ -107,7 +107,7 @@ const es: SectionCopy = {
     howStep3Kicker: 'Paso 03 · Comparta',
     howStep3Title: 'Su viaje, bien contado.',
     howStep3Body:
-      'Sus entradas forman un blog público en lapland.blog/su-nombre. Sus amigos pueden seguirlo. Cada entrada se exporta como historia de Instagram, así el viaje vive dos veces.',
+      'Sus entradas forman un blog público en lapland.blog/by/su-nombre. Sus amigos pueden seguirlo. Cada entrada se exporta como historia de Instagram, así el viaje vive dos veces.',
     howCta: 'Crear su blog de viaje',
     howFootnote: 'Gratis para diarios de viaje · Sin tarjeta · Inicie sesión con Google',
     liveEyebrow: 'Blogs de ejemplo de la redacción',
@@ -161,7 +161,7 @@ const es: SectionCopy = {
     faq: [
       {
         q: '¿Cómo empiezo un blog de viaje en lapland.blog?',
-        a: 'Inicia sesión con tu cuenta de Google, dale un nombre a tu blog y escribe tu primera entrada. Cada entrada puede incluir texto, fotos, la fecha y un pin en el mapa del lugar donde estuviste. Tu blog vive en lapland.blog/tu-nombre y está listo para compartir en cuanto lo publicas: no hay nada que instalar ni más configuración que iniciar sesión.',
+        a: 'Inicia sesión con tu cuenta de Google, dale un nombre a tu blog y escribe tu primera entrada. Cada entrada puede incluir texto, fotos, la fecha y un pin en el mapa del lugar donde estuviste. Tu blog vive en lapland.blog/by/tu-nombre y está listo para compartir en cuanto lo publicas: no hay nada que instalar ni más configuración que iniciar sesión.',
       },
       {
         q: '¿Es gratis usar lapland.blog?',
@@ -246,12 +246,12 @@ const es: SectionCopy = {
     howHeading: 'Cómo funciona',
     howStepPin: 'Marca la cabaña, el restaurante, el lugar de cielo oscuro. Arma tu ruta antes de volar.',
     howStepWrite: 'Escribe sobre la marcha: desde la cabaña, el coche, la sauna. Añade fotos, la temperatura y a qué sabía la sopa.',
-    howStepShare: 'Tus entradas se convierten en un blog público en lapland.blog/tu-nombre. Tus amigos pueden seguirlo; cada entrada se exporta como historia de Instagram.',
+    howStepShare: 'Tus entradas se convierten en un blog público en lapland.blog/by/tu-nombre. Tus amigos pueden seguirlo; cada entrada se exporta como historia de Instagram.',
     howBody:
       'Inicie sesión con su correo o con Google. Reciba un rincón en lapland.blog en lapland.blog/me. Cada entrada admite una imagen principal, un marcador de lugar y el texto que quiera escribir. Guarde borradores, publique cuando esté listo, comparta el enlace con sus amigos. Cada entrada publicada queda indexada y se puede buscar, y su viaje se convierte en una pequeña pieza del archivo mayor de Laponia.',
     freeHeading: 'Qué es gratis',
     freeBody:
-      'Escribir entradas. Alojar su blog de viaje en lapland.blog/me/sunombre. Las fotos. El boletín. No hay muro de pago ni nivel premium para quien escribe.',
+      'Escribir entradas. Alojar su blog de viaje en lapland.blog/by/su-nombre. Las fotos. El boletín. No hay muro de pago ni nivel premium para quien escribe.',
     notHeading: 'Qué no encontrará',
     notBody:
       'Publicaciones patrocinadas dentro de las entradas de los lectores. Listas de compra de afiliados metidas a la fuerza en su blog. Las palabras «inolvidable», «lista de deseos», «mágico» o «país de las maravillas invernal» están vetadas en los borradores editoriales, y conviene vetarlas también en los suyos. Son malas para escribir y malas para quien lee.',
@@ -474,7 +474,7 @@ const es: SectionCopy = {
     h1Pre: 'Planee su',
     h1Italic: 'viaje a Laponia.',
     lead:
-      'Reciba su página en lapland.blog/sunombre. Escriba la historia de su viaje, comparta fotos y reciba consejos y ofertas personalizadas para su viaje. Díganos cuándo viene y le ayudaremos a planear cada paso.',
+      'Reciba su página en lapland.blog/by/su-nombre. Escriba la historia de su viaje, comparta fotos y reciba consejos y ofertas personalizadas para su viaje. Díganos cuándo viene y le ayudaremos a planear cada paso.',
     benefit1Title: 'Marque su ruta en el mapa de Laponia',
     benefit1Body: 'Cabaña, restaurante, rincón de auroras: ponga los marcadores antes de volar.',
     benefit2Title: 'Escriba entradas desde el móvil',

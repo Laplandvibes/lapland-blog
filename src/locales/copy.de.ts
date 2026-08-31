@@ -108,7 +108,7 @@ const de: SectionCopy = {
     howStep3Kicker: 'Schritt 03 · Teilen',
     howStep3Title: 'Ihre Reise, gut erzählt.',
     howStep3Body:
-      'Ihre Einträge werden zu einem öffentlichen Blog unter lapland.blog/ihr-name. Freunde können folgen. Jeder Beitrag wird als Instagram-Story exportiert, damit die Reise doppelt lebt.',
+      'Ihre Einträge werden zu einem öffentlichen Blog unter lapland.blog/by/ihr-name. Freunde können folgen. Jeder Beitrag wird als Instagram-Story exportiert, damit die Reise doppelt lebt.',
     howCta: 'Reiseblog starten',
     howFootnote: 'Kostenlos für Reisetagebücher · Keine Kreditkarte nötig · Anmeldung mit Google',
     liveEyebrow: 'Beispielblogs der Redaktion',
@@ -162,7 +162,7 @@ const de: SectionCopy = {
     faq: [
       {
         q: 'Wie starte ich einen Reiseblog auf lapland.blog?',
-        a: 'Melden Sie sich mit Ihrem Google-Konto an, geben Sie Ihrem Blog einen Namen und schreiben Sie Ihren ersten Eintrag. Jeder Eintrag kann Text, Fotos, das Datum und eine Kartennadel für Ihren Standort enthalten. Ihr Blog liegt unter lapland.blog/ihr-name und ist sofort nach dem Veröffentlichen teilbar. Es gibt nichts zu installieren und keine Einrichtung außer der Anmeldung.',
+        a: 'Melden Sie sich mit Ihrem Google-Konto an, geben Sie Ihrem Blog einen Namen und schreiben Sie Ihren ersten Eintrag. Jeder Eintrag kann Text, Fotos, das Datum und eine Kartennadel für Ihren Standort enthalten. Ihr Blog liegt unter lapland.blog/by/ihr-name und ist sofort nach dem Veröffentlichen teilbar. Es gibt nichts zu installieren und keine Einrichtung außer der Anmeldung.',
       },
       {
         q: 'Ist lapland.blog kostenlos?',
@@ -247,12 +247,12 @@ const de: SectionCopy = {
     howHeading: 'So funktioniert es',
     howStepPin: 'Markieren Sie die Hütte, das Restaurant, den Dark-Sky-Spot. Bauen Sie Ihre Route schon vor dem Abflug.',
     howStepWrite: 'Schreiben Sie unterwegs, aus der Hütte, dem Auto, der Sauna. Fügen Sie Fotos, die Temperatur und den Geschmack der Suppe hinzu.',
-    howStepShare: 'Ihre Einträge werden zu einem öffentlichen Blog unter lapland.blog/ihr-name. Freunde können folgen; jeder Eintrag lässt sich als Instagram-Story exportieren.',
+    howStepShare: 'Ihre Einträge werden zu einem öffentlichen Blog unter lapland.blog/by/ihr-name. Freunde können folgen; jeder Eintrag lässt sich als Instagram-Story exportieren.',
     howBody:
       'Anmelden per E-Mail oder Google. Sie bekommen Ihren Bereich unter lapland.blog/me. Jeder Eintrag bekommt ein Titelbild, einen Orts-Pin und Ihre Worte. Entwürfe speichern, bei Bereitschaft veröffentlichen, Link mit Freunden teilen. Jeder veröffentlichte Eintrag wird indexiert und ist durchsuchbar, und Ihre Reise wird Teil des größeren Lappland-Archivs.',
     freeHeading: 'Was kostenlos ist',
     freeBody:
-      'Einträge schreiben. Den Reiseblog unter lapland.blog/me/ihrname hosten. Fotos. Der Newsletter. Es gibt keine Bezahlschranke und keine Premium-Stufe auf der Schreiberseite.',
+      'Einträge schreiben. Den Reiseblog unter lapland.blog/by/ihr-name hosten. Fotos. Der Newsletter. Es gibt keine Bezahlschranke und keine Premium-Stufe auf der Schreiberseite.',
     notHeading: 'Was Sie hier nicht finden',
     notBody:
       'Gesponserte Beiträge in Leser-Einträgen. Affiliate-Einkaufslisten, in Ihren Blog gestopft. Die Wörter „unvergesslich“, „Bucket List“, „magisch“ und „Winterwunderland“ sind aus den redaktionellen Entwürfen verbannt, und in Ihren sollten sie es auch sein. Sie sind schlecht fürs Schreiben und schlecht für Leser.',
@@ -476,7 +476,7 @@ const de: SectionCopy = {
     h1Pre: 'Planen Sie Ihre',
     h1Italic: 'Lappland-Reise.',
     lead:
-      'Ihre eigene Seite unter lapland.blog/ihrname. Schreiben Sie Ihre Reise auf, teilen Sie Fotos und erhalten Sie persönliche Tipps und Angebote. Sagen Sie uns, wann Sie kommen, und wir helfen bei jedem Schritt.',
+      'Ihre eigene Seite unter lapland.blog/by/ihr-name. Schreiben Sie Ihre Reise auf, teilen Sie Fotos und erhalten Sie persönliche Tipps und Angebote. Sagen Sie uns, wann Sie kommen, und wir helfen bei jedem Schritt.',
     benefit1Title: 'Markieren Sie Ihre Route auf der Lappland-Karte',
     benefit1Body: 'Hütte, Restaurant, Nordlicht-Spot: vor dem Flug setzen.',
     benefit2Title: 'Schreiben Sie Einträge vom Handy',

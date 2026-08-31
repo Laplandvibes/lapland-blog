@@ -57,7 +57,7 @@ const it: SectionCopy = {
     howStep3Kicker: 'Passo 03 · Condivisione',
     howStep3Title: 'Il Suo viaggio, raccontato bene.',
     howStep3Body:
-      'Le Sue voci diventano un blog pubblico a lapland.blog/il-suo-nome. Gli amici possono seguirlo. Ogni post si esporta in una storia Instagram, e il viaggio vive due volte.',
+      'Le Sue voci diventano un blog pubblico a lapland.blog/by/il-suo-nome. Gli amici possono seguirlo. Ogni post si esporta in una storia Instagram, e il viaggio vive due volte.',
     howCta: 'Avvii il blog di viaggio',
     howFootnote: 'Gratuito per i diari di viaggio · Senza carta · Accesso con Google',
     liveEyebrow: 'Blog-esempio della redazione',
@@ -111,7 +111,7 @@ const it: SectionCopy = {
     faq: [
       {
         q: 'Come avvio un blog di viaggio su lapland.blog?',
-        a: "Acceda con il Suo account Google, dia un nome al blog e scriva la prima voce. Ogni voce può contenere testo, foto, la data e un segnaposto sulla mappa per il luogo in cui si trovava. Il Suo blog si trova all'indirizzo lapland.blog/il-suo-nome ed è pronto da condividere appena lo pubblica: non c'è nulla da installare e nessuna configurazione oltre all'accesso.",
+        a: "Acceda con il Suo account Google, dia un nome al blog e scriva la prima voce. Ogni voce può contenere testo, foto, la data e un segnaposto sulla mappa per il luogo in cui si trovava. Il Suo blog si trova all'indirizzo lapland.blog/by/il-suo-nome ed è pronto da condividere appena lo pubblica: non c'è nulla da installare e nessuna configurazione oltre all'accesso.",
       },
       {
         q: 'lapland.blog è gratuito?',
@@ -196,12 +196,12 @@ const it: SectionCopy = {
     howHeading: 'Come funziona',
     howStepPin: 'Segni la baita, il ristorante, il punto di cielo buio. Costruisca il Suo itinerario prima di partire.',
     howStepWrite: 'Scriva lungo il percorso, dalla baita, dall’auto, dalla sauna. Aggiunga foto, la temperatura e il sapore della zuppa.',
-    howStepShare: 'Le Sue voci diventano un blog pubblico su lapland.blog/il-suo-nome. Gli amici possono seguirlo; ogni voce si esporta come storia di Instagram.',
+    howStepShare: 'Le Sue voci diventano un blog pubblico su lapland.blog/by/il-suo-nome. Gli amici possono seguirlo; ogni voce si esporta come storia di Instagram.',
     howBody:
       'Acceda con e-mail o Google. Ottenga il Suo angolo su lapland.blog/me. Ogni voce ha un’immagine principale, un luogo sulla mappa e le parole che vuole dire. Salvi le bozze, pubblichi quando è pronto, condivida il link. Ogni voce pubblicata viene indicizzata ed è ricercabile, e il Suo viaggio diventa un piccolo pezzo del più grande archivio della Lapponia.',
     freeHeading: 'Cos’è gratuito',
     freeBody:
-      'Scrivere le voci. Ospitare il blog di viaggio sotto lapland.blog/me/ilsuonome. Le foto. La newsletter. Lato autore non c’è paywall né piano premium.',
+      'Scrivere le voci. Ospitare il blog di viaggio sotto lapland.blog/by/il-suo-nome. Le foto. La newsletter. Lato autore non c’è paywall né piano premium.',
     notHeading: 'Cosa non troverà',
     notBody:
       'Articoli sponsorizzati dentro le voci dei lettori. Liste affiliate infilate nel Suo blog. Le parole «indimenticabile», «da fare nella vita», «magico» o «paese delle meraviglie invernale» sono bandite dalle bozze editoriali e vale la pena bandirle anche dalle Sue. Fanno male alla scrittura e ai lettori.',
@@ -424,7 +424,7 @@ const it: SectionCopy = {
     h1Pre: 'Pianifichi il',
     h1Italic: 'Suo viaggio in Lapponia.',
     lead:
-      'Ottenga la Sua pagina su lapland.blog/ilsuonome. Scriva la storia del viaggio, condivida le foto e riceva consigli e offerte personalizzati. Ci dica quando viene e La aiuteremo in ogni passo.',
+      'Ottenga la Sua pagina su lapland.blog/by/il-suo-nome. Scriva la storia del viaggio, condivida le foto e riceva consigli e offerte personalizzati. Ci dica quando viene e La aiuteremo in ogni passo.',
     benefit1Title: 'Segni l’itinerario sulla mappa della Lapponia',
     benefit1Body: 'Baita, ristorante, punto aurora: segni i luoghi prima di partire.',
     benefit2Title: 'Scriva le voci dal telefono',

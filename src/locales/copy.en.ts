@@ -107,7 +107,7 @@ const en: SectionCopy = {
     howStep3Kicker: 'Step 03 · Share',
     howStep3Title: 'Your trip, told well.',
     howStep3Body:
-      'Your entries become a public blog at lapland.blog/your-name. Friends can follow it. Each post exports to an Instagram story so the trip lives twice.',
+      'Your entries become a public blog at lapland.blog/by/your-name. Friends can follow it. Each post exports to an Instagram story so the trip lives twice.',
     howCta: 'Start your trip blog',
     howFootnote: 'Free for travel journals · No card required · Sign in with Google',
     liveEyebrow: 'Editorial example blogs',
@@ -161,7 +161,7 @@ const en: SectionCopy = {
     faq: [
       {
         q: 'How do I start a travel blog on lapland.blog?',
-        a: 'Sign in with your Google account, give your blog a name, and write your first entry. Each entry can hold text, photos, the date, and a map pin for where you were. Your blog lives at lapland.blog/your-name and is ready to share the moment you publish. There is nothing to install and no setup beyond signing in.',
+        a: 'Sign in with your Google account, give your blog a name, and write your first entry. Each entry can hold text, photos, the date, and a map pin for where you were. Your blog lives at lapland.blog/by/your-name and is ready to share the moment you publish. There is nothing to install and no setup beyond signing in.',
       },
       {
         q: 'Is lapland.blog free to use?',
@@ -246,12 +246,12 @@ const en: SectionCopy = {
     howHeading: 'How it works',
     howStepPin: 'Pin the cabin, the restaurant, the dark-sky spot. Build your route before you fly.',
     howStepWrite: 'Write as you go, from the cabin, the car, the sauna. Add photos, the temperature, what the soup tasted like.',
-    howStepShare: 'Your entries become a public blog at lapland.blog/your-name. Friends can follow it; each post exports to an Instagram story.',
+    howStepShare: 'Your entries become a public blog at lapland.blog/by/your-name. Friends can follow it; each post exports to an Instagram story.',
     howBody:
       'Sign in with your email or Google. Get a corner of lapland.blog at lapland.blog/me. Each entry takes a hero image, a place pin, and the words you want to say. Save drafts, publish when ready, share the link to friends. Every published entry is indexed and searchable, so your trip becomes a small piece of the bigger Lapland archive.',
     freeHeading: "What's free",
     freeBody:
-      'Writing entries. Hosting your travel blog under lapland.blog/me/yourname. Photos. The newsletter. There is no paywall and no premium tier on the writer side.',
+      'Writing entries. Hosting your travel blog under lapland.blog/by/your-name. Photos. The newsletter. There is no paywall and no premium tier on the writer side.',
     notHeading: "What you won't find",
     notBody:
       'Sponsored posts inside reader entries. Affiliate shopping lists stuffed into your blog. The words "unforgettable", "bucket list", "magical" or "winter wonderland" are banned from the editorial drafts, and worth banning from yours too. They are bad for writing and bad for readers.',
@@ -474,7 +474,7 @@ const en: SectionCopy = {
     h1Pre: 'Plan your',
     h1Italic: 'Lapland trip.',
     lead:
-      'Get your page at lapland.blog/yourname. Write your trip story, share photos, and get personalised tips and deals for your journey. Tell us when you are coming and we will help plan every step.',
+      'Get your page at lapland.blog/by/your-name. Write your trip story, share photos, and get personalised tips and deals for your journey. Tell us when you are coming and we will help plan every step.',
     benefit1Title: 'Pin your route on the Lapland map',
     benefit1Body: 'Cabin, restaurant, aurora spot: drop pins before you fly.',
     benefit2Title: 'Write entries from your phone',

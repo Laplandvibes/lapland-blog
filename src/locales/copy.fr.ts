@@ -57,7 +57,7 @@ const fr: SectionCopy = {
     howStep3Kicker: 'Étape 03 · Partager',
     howStep3Title: 'Votre voyage, bien raconté.',
     howStep3Body:
-      'Vos entrées deviennent un blog public à l’adresse lapland.blog/votre-nom. Vos amis peuvent le suivre. Chaque article s’exporte en story Instagram, et le voyage vit deux fois.',
+      'Vos entrées deviennent un blog public à l’adresse lapland.blog/by/votre-nom. Vos amis peuvent le suivre. Chaque article s’exporte en story Instagram, et le voyage vit deux fois.',
     howCta: 'Lancer votre blog de voyage',
     howFootnote: 'Gratuit pour les carnets de voyage · Sans carte · Connexion Google',
     liveEyebrow: 'Blogs-exemples de la rédaction',
@@ -111,7 +111,7 @@ const fr: SectionCopy = {
     faq: [
       {
         q: 'Comment démarrer un blog de voyage sur lapland.blog ?',
-        a: "Connectez-vous avec votre compte Google, donnez un nom à votre blog et écrivez votre première entrée. Chaque entrée peut contenir du texte, des photos, la date et un repère sur la carte pour l'endroit où vous étiez. Votre blog se trouve à l'adresse lapland.blog/votre-nom et est prêt à être partagé dès sa publication : rien à installer et aucune configuration en dehors de la connexion.",
+        a: "Connectez-vous avec votre compte Google, donnez un nom à votre blog et écrivez votre première entrée. Chaque entrée peut contenir du texte, des photos, la date et un repère sur la carte pour l'endroit où vous étiez. Votre blog se trouve à l'adresse lapland.blog/by/votre-nom et est prêt à être partagé dès sa publication : rien à installer et aucune configuration en dehors de la connexion.",
       },
       {
         q: 'lapland.blog est-il gratuit ?',
@@ -196,12 +196,12 @@ const fr: SectionCopy = {
     howHeading: 'Comment ça marche',
     howStepPin: 'Épinglez le chalet, le restaurant, le spot de ciel noir. Construisez votre itinéraire avant de partir.',
     howStepWrite: 'Écrivez en chemin, depuis le chalet, la voiture, le sauna. Ajoutez des photos, la température et le goût de la soupe.',
-    howStepShare: 'Vos entrées deviennent un blog public sur lapland.blog/votre-nom. Vos proches peuvent suivre ; chaque entrée s’exporte en story Instagram.',
+    howStepShare: 'Vos entrées deviennent un blog public sur lapland.blog/by/votre-nom. Vos proches peuvent suivre ; chaque entrée s’exporte en story Instagram.',
     howBody:
       'Connectez-vous par e-mail ou Google. Recevez votre coin à lapland.blog/me. Chaque entrée se compose d’une image principale, d’une épingle de lieu et des mots que vous voulez dire. Sauvegardez en brouillon, publiez quand c’est prêt, partagez le lien à vos amis. Chaque entrée publiée est indexée et cherchable, et votre voyage devient un petit morceau de la grande archive de la Laponie.',
     freeHeading: 'Ce qui est gratuit',
     freeBody:
-      'Écrire des entrées. Héberger votre blog de voyage sous lapland.blog/me/votrenom. Photos. Newsletter. Pas de paywall, pas de formule premium côté auteur.',
+      'Écrire des entrées. Héberger votre blog de voyage sous lapland.blog/by/votre-nom. Photos. Newsletter. Pas de paywall, pas de formule premium côté auteur.',
     notHeading: 'Ce que vous ne trouverez pas',
     notBody:
       'Des publications sponsorisées dans les entrées des lecteurs. Des listes d’affiliés glissées dans votre blog. Les mots « inoubliable », « bucket list », « magique », « pays des merveilles hivernal » sont bannis des brouillons éditoriaux, et tout aussi à bannir des vôtres. Mauvais pour l’écriture, mauvais pour le lecteur.',
@@ -424,7 +424,7 @@ const fr: SectionCopy = {
     h1Pre: 'Planifiez votre',
     h1Italic: 'voyage en Laponie.',
     lead:
-      'Obtenez votre page à lapland.blog/votrenom. Écrivez le récit de votre voyage, partagez vos photos et recevez conseils et offres personnalisés. Dites-nous quand vous venez et nous vous aiderons à planifier chaque étape.',
+      'Obtenez votre page à lapland.blog/by/votre-nom. Écrivez le récit de votre voyage, partagez vos photos et recevez conseils et offres personnalisés. Dites-nous quand vous venez et nous vous aiderons à planifier chaque étape.',
     benefit1Title: 'Épinglez votre itinéraire sur la carte de Laponie',
     benefit1Body: 'Chalet, restaurant, spot à aurores : posez vos épingles avant de partir.',
     benefit2Title: 'Écrivez vos entrées depuis votre téléphone',

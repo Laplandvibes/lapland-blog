@@ -107,7 +107,7 @@ const fi: SectionCopy = {
     howStep3Kicker: 'Askel 03 · Jaa',
     howStep3Title: 'Matkasi, hyvin kerrottuna.',
     howStep3Body:
-      'Merkinnöistäsi tulee julkinen blogi osoitteessa lapland.blog/oma-nimi. Kaverit voivat seurata. Jokaisen voi viedä Instagram-tarinaksi, jotta matka elää kahdesti.',
+      'Merkinnöistäsi tulee julkinen blogi osoitteessa lapland.blog/by/oma-nimi. Kaverit voivat seurata. Jokaisen voi viedä Instagram-tarinaksi, jotta matka elää kahdesti.',
     howCta: 'Aloita matkablogi',
     howFootnote: 'Ilmaiset matkapäiväkirjat · Ei korttia · Kirjaudu Googlella',
     liveEyebrow: 'Toimituksen esimerkkiblogit',
@@ -161,7 +161,7 @@ const fi: SectionCopy = {
     faq: [
       {
         q: 'Miten aloitan matkablogin lapland.blogissa?',
-        a: 'Kirjaudu sisään Google-tilillä, anna blogillesi nimi ja kirjoita ensimmäinen merkintä. Jokaiseen merkintään voi liittää tekstiä, kuvia, päivämäärän ja karttapinnin paikasta, jossa olit. Blogisi löytyy osoitteesta lapland.blog/nimesi ja on valmis jaettavaksi heti julkaisun jälkeen. Mitään ei tarvitse asentaa, eikä muuta käyttöönottoa ole kuin sisäänkirjautuminen.',
+        a: 'Kirjaudu sisään Google-tilillä, anna blogillesi nimi ja kirjoita ensimmäinen merkintä. Jokaiseen merkintään voi liittää tekstiä, kuvia, päivämäärän ja karttapinnin paikasta, jossa olit. Blogisi löytyy osoitteesta lapland.blog/by/oma-nimi ja on valmis jaettavaksi heti julkaisun jälkeen. Mitään ei tarvitse asentaa, eikä muuta käyttöönottoa ole kuin sisäänkirjautuminen.',
       },
       {
         q: 'Onko lapland.blog ilmainen?',
@@ -246,12 +246,12 @@ const fi: SectionCopy = {
     howHeading: 'Näin se toimii',
     howStepPin: 'Merkitse mökki, ravintola ja pimeän taivaan paikka. Rakenna reittisi jo ennen lähtöä.',
     howStepWrite: 'Kirjoita matkan aikana, mökiltä, autosta, saunasta. Lisää kuvat, lämpötila ja miltä keitto maistui.',
-    howStepShare: 'Merkinnöistäsi tulee julkinen blogi osoitteeseen lapland.blog/nimesi. Ystävät voivat seurata, ja jokaisen voi viedä Instagram-tarinaksi.',
+    howStepShare: 'Merkinnöistäsi tulee julkinen blogi osoitteeseen lapland.blog/by/oma-nimi. Ystävät voivat seurata, ja jokaisen voi viedä Instagram-tarinaksi.',
     howBody:
       'Kirjaudu sähköpostilla tai Googlella. Saat kulman lapland.blogista osoitteessa lapland.blog/me. Jokainen merkintä saa pääkuvan, paikkapinnin ja tekstit. Tallenna luonnoksia, julkaise valmiina, jaa linkki kavereille. Jokainen julkaistu merkintä indeksoituu ja on haettavissa, ja matkastasi tulee pieni pala isompaa Lapin arkistoa.',
     freeHeading: 'Mikä on ilmaista',
     freeBody:
-      'Merkintöjen kirjoittaminen. Oman matkablogin hostaaminen osoitteessa lapland.blog/me/omanimi. Kuvat. Uutiskirje. Kirjoittajan puolella ei ole maksumuuria eikä premium-tasoa.',
+      'Merkintöjen kirjoittaminen. Oman matkablogin hostaaminen osoitteessa lapland.blog/by/oma-nimi. Kuvat. Uutiskirje. Kirjoittajan puolella ei ole maksumuuria eikä premium-tasoa.',
     notHeading: 'Mitä et löydä',
     notBody:
       'Sponsoroituja juttuja lukijoiden merkinnöissä. Affiliate-ostoslistoja blogiisi tungettuina. Sanat "unohtumaton", "bucket list", "taianomainen" tai "talvimaailma" on kielletty toimituksellisissa luonnoksissa, ja kannattaa kieltää myös omissasi. Ne ovat huonoja kirjoittamiselle ja huonoja lukijoille.',
@@ -475,7 +475,7 @@ const fi: SectionCopy = {
     h1Pre: 'Suunnittele',
     h1Italic: 'Lapin matkasi.',
     lead:
-      'Saat oman sivun osoitteessa lapland.blog/omanimi. Kirjoita tarinasi, jaa kuvat, ja saat henkilökohtaisia vinkkejä ja tarjouksia matkallesi. Kerro, milloin tulet, niin autamme joka vaiheessa.',
+      'Saat oman sivun osoitteessa lapland.blog/by/oma-nimi. Kirjoita tarinasi, jaa kuvat, ja saat henkilökohtaisia vinkkejä ja tarjouksia matkallesi. Kerro, milloin tulet, niin autamme joka vaiheessa.',
     benefit1Title: 'Merkitse reittisi Lapin kartalle',
     benefit1Body: 'Mökki, ravintola, revontulipaikka: pudota pinnit ennen lentoa.',
     benefit2Title: 'Kirjoita merkinnät puhelimella',

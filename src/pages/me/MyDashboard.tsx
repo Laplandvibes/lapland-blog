@@ -178,10 +178,10 @@ export default function MyDashboard() {
               <div className="mt-2">
                 <div className="flex items-center gap-2">
                   <a
-                    href={`/${profile.handle}`}
+                    href={`/by/${profile.handle}`}
                     className="inline-flex items-center gap-1 text-aurora-blue hover:text-pink text-sm transition-colors"
                   >
-                    lapland.blog/{profile.handle}
+                    lapland.blog/by/{profile.handle}
                     <ExternalLink size={11} />
                   </a>
                   <button
@@ -202,7 +202,7 @@ export default function MyDashboard() {
             {editingHandle && (
               <div className="mt-2 space-y-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="text-slate-400 text-sm">lapland.blog/</span>
+                  <span className="text-slate-400 text-sm">lapland.blog/by/</span>
                   <input
                     ref={handleInputRef}
                     type="text"
