@@ -5,7 +5,7 @@ import { vesa } from '../data/author';
 const SITE = 'https://lapland.blog';
 const LOGO = `${SITE}/favicon.svg`;
 const SITE_NAME = 'Lapland.blog';
-const PUBLISHER = 'Lapeso Oy';
+const PUBLISHER = 'LaPeso Oy';
 
 type JsonLd = Record<string, unknown>;
 
