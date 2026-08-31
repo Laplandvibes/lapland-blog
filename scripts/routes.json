@@ -121,7 +121,7 @@
     "fallbackDescriptionByLang": {
       "fi": "Suomen Lapin kahdeksan pääkohdetta: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lue merkinnät kustakin tai kirjoita ensimmäinen.",
       "de": "Die acht wichtigsten Ziele im finnischen Lappland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lesen Sie die Einträge.",
-      "ja": "フィンランド・ラップランドの主要8つの目的地：ロヴァニエミ、サーリセルカ、レヴィ、ケミ、イナリ、ムオニオ、ウッラス、ケミヤルヴィ。各地のフィールドジャーナル記事を読むか、最初の記事を書いてください。",
+      "ja": "フィンランド・ラップランドの主要8つの目的地：ロヴァニエミ、サーリセルカ、レヴィ、ケミ、イナリ、ムオニオ、ユッラス、ケミヤルヴィ。各地のフィールドジャーナル記事を読むか、最初の記事を書いてください。",
       "es": "Los ocho destinos principales de la Laponia finlandesa: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lea las entradas de cada uno.",
       "pt-BR": "Os oito principais destinos da Lapônia finlandesa: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Leia as entradas de cada um.",
       "zh-CN": "芬兰拉普兰的八大目的地：罗瓦涅米、萨利色尔卡、莱维、凯米、伊纳里、穆奥尼奥、于莱斯、凯米耶尔维。阅读每个地方的田野日志文章，或成为第一个动笔的人。",
@@ -204,7 +204,7 @@
   {
     "path": "/privacy",
     "fallbackTitle": "Privacy Policy · Lapland.blog",
-    "fallbackDescription": "How Lapland.blog handles your data, the free Finnish Lapland travel-blog platform operated by Lapeso Oy. GDPR compliant.",
+    "fallbackDescription": "How Lapland.blog handles your data, the free Finnish Lapland travel-blog platform operated by LaPeso Oy. GDPR compliant.",
     "appendSiteName": false,
     "fallbackTitleByLang": {
       "fi": "Tietosuojaseloste · Lapland.blog",
@@ -220,17 +220,17 @@
       "sv": "Integritetspolicy · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Miten Lapland.blog käsittelee tietojasi, ilmainen Suomen Lapin matkablogialusta, jota ylläpitää Lapeso Oy. GDPR:n mukainen.",
-      "de": "Wie Lapland.blog mit Ihren Daten umgeht. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland, betrieben von Lapeso Oy. DSGVO-konform.",
-      "ja": "Lapland.blogがあなたのデータをどう扱うか。Lapeso Oyが運営する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。GDPR準拠。",
-      "es": "Cómo trata tus datos Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa operada por Lapeso Oy. Conforme al RGPD.",
-      "pt-BR": "Como o Lapland.blog trata seus dados: a plataforma gratuita de blogs de viagem à Lapônia finlandesa operada pela Lapeso Oy. Em conformidade com o RGPD.",
-      "zh-CN": "Lapland.blog 如何处理你的数据。由 Lapeso Oy 运营的免费芬兰拉普兰旅行博客平台。符合 GDPR。",
-      "ko": "Lapland.blog가 귀하의 데이터를 처리하는 방식. Lapeso Oy가 운영하는 무료 핀란드 라플란드 여행 블로그 플랫폼. GDPR 준수.",
-      "fr": "Comment Lapland.blog traite vos données, la plateforme gratuite de blogs de voyage en Laponie finlandaise exploitée par Lapeso Oy. Conforme au RGPD.",
-      "it": "Come Lapland.blog tratta i Suoi dati: la piattaforma gratuita di blog di viaggio in Lapponia finlandese gestita da Lapeso Oy. Conforme al GDPR.",
-      "nl": "Hoe Lapland.blog met uw gegevens omgaat, het gratis reisblogplatform voor Fins Lapland, beheerd door Lapeso Oy. AVG-conform.",
-      "sv": "Hur Lapland.blog hanterar dina uppgifter, den gratis resebloggplattformen för finska Lappland som drivs av Lapeso Oy. GDPR-förenlig."
+      "fi": "Miten Lapland.blog käsittelee tietojasi, ilmainen Suomen Lapin matkablogialusta, jota ylläpitää LaPeso Oy. GDPR:n mukainen.",
+      "de": "Wie Lapland.blog mit Ihren Daten umgeht. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland, betrieben von LaPeso Oy. DSGVO-konform.",
+      "ja": "Lapland.blogがあなたのデータをどう扱うか。LaPeso Oyが運営する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。GDPR準拠。",
+      "es": "Cómo trata tus datos Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa operada por LaPeso Oy. Conforme al RGPD.",
+      "pt-BR": "Como o Lapland.blog trata seus dados: a plataforma gratuita de blogs de viagem à Lapônia finlandesa operada pela LaPeso Oy. Em conformidade com o RGPD.",
+      "zh-CN": "Lapland.blog 如何处理你的数据。由 LaPeso Oy 运营的免费芬兰拉普兰旅行博客平台。符合 GDPR。",
+      "ko": "Lapland.blog가 귀하의 데이터를 처리하는 방식. LaPeso Oy가 운영하는 무료 핀란드 라플란드 여행 블로그 플랫폼. GDPR 준수.",
+      "fr": "Comment Lapland.blog traite vos données, la plateforme gratuite de blogs de voyage en Laponie finlandaise exploitée par LaPeso Oy. Conforme au RGPD.",
+      "it": "Come Lapland.blog tratta i Suoi dati: la piattaforma gratuita di blog di viaggio in Lapponia finlandese gestita da LaPeso Oy. Conforme al GDPR.",
+      "nl": "Hoe Lapland.blog met uw gegevens omgaat, het gratis reisblogplatform voor Fins Lapland, beheerd door LaPeso Oy. AVG-conform.",
+      "sv": "Hur Lapland.blog hanterar dina uppgifter, den gratis resebloggplattformen för finska Lappland som drivs av LaPeso Oy. GDPR-förenlig."
     },
     "harvestFiles": [
       "src/shared/Legal/PrivacyContent.tsx"
@@ -239,7 +239,7 @@
   {
     "path": "/terms",
     "fallbackTitle": "Terms of Service · Lapland.blog",
-    "fallbackDescription": "The terms for using Lapland.blog, the free Finnish Lapland travel-blog platform where you keep and share a trip diary. Operated by Lapeso Oy.",
+    "fallbackDescription": "The terms for using Lapland.blog, the free Finnish Lapland travel-blog platform where you keep and share a trip diary. Operated by LaPeso Oy.",
     "appendSiteName": false,
     "fallbackTitleByLang": {
       "fi": "Käyttöehdot · Lapland.blog",
@@ -255,17 +255,17 @@
       "sv": "Användarvillkor · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Lapland.blogin käyttöehdot, ilmainen Suomen Lapin matkablogialusta, jolla pidät ja jaat matkapäiväkirjaa. Ylläpitäjä Lapeso Oy.",
+      "fi": "Lapland.blogin käyttöehdot, ilmainen Suomen Lapin matkablogialusta, jolla pidät ja jaat matkapäiväkirjaa. Ylläpitäjä LaPeso Oy.",
       "de": "Die Nutzungsbedingungen von Lapland.blog, der kostenlosen Reiseblog-Plattform für Finnisch-Lappland, auf der Sie ein Reisetagebuch führen und teilen.",
-      "ja": "Lapland.blogの利用規約。旅の日記を残して共有する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。運営はLapeso Oy。",
-      "es": "Las condiciones para usar Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa donde llevas y compartes un diario. Operada por Lapeso Oy.",
-      "pt-BR": "As condições para usar o Lapland.blog: a plataforma gratuita de blogs de viagem à Lapônia finlandesa onde você mantém e compartilha um diário. Operada pela Lapeso Oy.",
-      "zh-CN": "使用 Lapland.blog 的条款。这个免费的芬兰拉普兰旅行博客平台让你记录并分享旅行日记。由 Lapeso Oy 运营。",
-      "ko": "Lapland.blog 이용 조건. 여행 일기를 쓰고 공유하는 무료 핀란드 라플란드 여행 블로그 플랫폼. Lapeso Oy가 운영합니다.",
-      "fr": "Les conditions d'utilisation de Lapland.blog, la plateforme gratuite de blogs de voyage en Laponie finlandaise où vous tenez et partagez un journal. Exploitée par Lapeso Oy.",
-      "it": "Le condizioni per usare Lapland.blog: la piattaforma gratuita di blog di viaggio in Lapponia finlandese dove tiene e condivide un diario. Gestita da Lapeso Oy.",
-      "nl": "De voorwaarden voor het gebruik van Lapland.blog, het gratis reisblogplatform voor Fins Lapland waar u een reisdagboek bijhoudt en deelt. Beheerd door Lapeso Oy.",
-      "sv": "Villkoren för att använda Lapland.blog, den gratis resebloggplattformen för finska Lappland där du för och delar en resedagbok. Drivs av Lapeso Oy."
+      "ja": "Lapland.blogの利用規約。旅の日記を残して共有する、フィンランド・ラップランドの無料旅行ブログプラットフォーム。運営はLaPeso Oy。",
+      "es": "Las condiciones para usar Lapland.blog: la plataforma gratuita de blogs de viaje a la Laponia finlandesa donde llevas y compartes un diario. Operada por LaPeso Oy.",
+      "pt-BR": "As condições para usar o Lapland.blog: a plataforma gratuita de blogs de viagem à Lapônia finlandesa onde você mantém e compartilha um diário. Operada pela LaPeso Oy.",
+      "zh-CN": "使用 Lapland.blog 的条款。这个免费的芬兰拉普兰旅行博客平台让你记录并分享旅行日记。由 LaPeso Oy 运营。",
+      "ko": "Lapland.blog 이용 조건. 여행 일기를 쓰고 공유하는 무료 핀란드 라플란드 여행 블로그 플랫폼. LaPeso Oy가 운영합니다.",
+      "fr": "Les conditions d'utilisation de Lapland.blog, la plateforme gratuite de blogs de voyage en Laponie finlandaise où vous tenez et partagez un journal. Exploitée par LaPeso Oy.",
+      "it": "Le condizioni per usare Lapland.blog: la piattaforma gratuita di blog di viaggio in Lapponia finlandese dove tiene e condivide un diario. Gestita da LaPeso Oy.",
+      "nl": "De voorwaarden voor het gebruik van Lapland.blog, het gratis reisblogplatform voor Fins Lapland waar u een reisdagboek bijhoudt en deelt. Beheerd door LaPeso Oy.",
+      "sv": "Villkoren för att använda Lapland.blog, den gratis resebloggplattformen för finska Lappland där du för och delar en resedagbok. Drivs av LaPeso Oy."
     },
     "harvestFiles": [
       "src/shared/Legal/TermsContent.tsx"
@@ -274,7 +274,7 @@
   {
     "path": "/cookie-policy",
     "fallbackTitle": "Cookie Policy · Lapland.blog",
-    "fallbackDescription": "What cookies and storage Lapland.blog uses, why, and how to opt out, the free Finnish Lapland travel-blog platform by Lapeso Oy.",
+    "fallbackDescription": "What cookies and storage Lapland.blog uses, why, and how to opt out, the free Finnish Lapland travel-blog platform by LaPeso Oy.",
     "appendSiteName": false,
     "fallbackTitleByLang": {
       "fi": "Evästekäytäntö · Lapland.blog",
@@ -290,17 +290,17 @@
       "sv": "Cookiepolicy · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Mitä evästeitä ja tallennusta Lapland.blog käyttää, miksi ja miten kiellät ne, ilmainen Suomen Lapin matkablogialusta, ylläpitäjä Lapeso Oy.",
+      "fi": "Mitä evästeitä ja tallennusta Lapland.blog käyttää, miksi ja miten kiellät ne, ilmainen Suomen Lapin matkablogialusta, ylläpitäjä LaPeso Oy.",
       "de": "Welche Cookies und welchen Speicher Lapland.blog nutzt, warum, und wie Sie widersprechen. Die kostenlose Reiseblog-Plattform für Finnisch-Lappland.",
-      "ja": "Lapland.blogが使うクッキーとストレージの種類、その理由、オプトアウトの方法。Lapeso Oyによるフィンランド・ラップランドの無料旅行ブログプラットフォーム。",
-      "es": "Qué cookies y almacenamiento usa Lapland.blog, por qué y cómo rechazarlos: la plataforma gratuita de blogs de viaje a la Laponia finlandesa de Lapeso Oy.",
-      "pt-BR": "Quais cookies e armazenamento o Lapland.blog usa, por quê e como recusar: a plataforma gratuita de blogs de viagem à Lapônia finlandesa da Lapeso Oy.",
-      "zh-CN": "Lapland.blog 使用哪些 Cookie 和存储、为何使用，以及如何选择退出。由 Lapeso Oy 运营的免费芬兰拉普兰旅行博客平台。",
-      "ko": "Lapland.blog가 사용하는 쿠키와 저장소, 그 이유, 그리고 거부 방법. Lapeso Oy의 무료 핀란드 라플란드 여행 블로그 플랫폼.",
-      "fr": "Quels cookies et stockage Lapland.blog utilise, pourquoi et comment les refuser, la plateforme gratuite de blogs de voyage en Laponie finlandaise par Lapeso Oy.",
-      "it": "Quali cookie e archiviazione usa Lapland.blog, perché e come rifiutarli: la piattaforma gratuita di blog di viaggio in Lapponia finlandese di Lapeso Oy.",
-      "nl": "Welke cookies en opslag Lapland.blog gebruikt, waarom en hoe u zich afmeldt, het gratis reisblogplatform voor Fins Lapland van Lapeso Oy.",
-      "sv": "Vilka cookies och vilken lagring Lapland.blog använder, varför och hur du tackar nej, den gratis resebloggplattformen för finska Lappland från Lapeso Oy."
+      "ja": "Lapland.blogが使うクッキーとストレージの種類、その理由、オプトアウトの方法。LaPeso Oyによるフィンランド・ラップランドの無料旅行ブログプラットフォーム。",
+      "es": "Qué cookies y almacenamiento usa Lapland.blog, por qué y cómo rechazarlos: la plataforma gratuita de blogs de viaje a la Laponia finlandesa de LaPeso Oy.",
+      "pt-BR": "Quais cookies e armazenamento o Lapland.blog usa, por quê e como recusar: a plataforma gratuita de blogs de viagem à Lapônia finlandesa da LaPeso Oy.",
+      "zh-CN": "Lapland.blog 使用哪些 Cookie 和存储、为何使用，以及如何选择退出。由 LaPeso Oy 运营的免费芬兰拉普兰旅行博客平台。",
+      "ko": "Lapland.blog가 사용하는 쿠키와 저장소, 그 이유, 그리고 거부 방법. LaPeso Oy의 무료 핀란드 라플란드 여행 블로그 플랫폼.",
+      "fr": "Quels cookies et stockage Lapland.blog utilise, pourquoi et comment les refuser, la plateforme gratuite de blogs de voyage en Laponie finlandaise par LaPeso Oy.",
+      "it": "Quali cookie e archiviazione usa Lapland.blog, perché e come rifiutarli: la piattaforma gratuita di blog di viaggio in Lapponia finlandese di LaPeso Oy.",
+      "nl": "Welke cookies en opslag Lapland.blog gebruikt, waarom en hoe u zich afmeldt, het gratis reisblogplatform voor Fins Lapland van LaPeso Oy.",
+      "sv": "Vilka cookies och vilken lagring Lapland.blog använder, varför och hur du tackar nej, den gratis resebloggplattformen för finska Lappland från LaPeso Oy."
     },
     "harvestFiles": [
       "src/shared/Legal/CookieContent.tsx"

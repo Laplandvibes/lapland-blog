@@ -205,7 +205,7 @@ function buildRss(posts) {
     <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml"/>
     <description>A first-person field journal from Finnish Lapland: honest, seasonal, written by someone who actually lives here. Aurora, cabins, seasons, food, people.</description>
     <language>en</language>
-    <copyright>© ${new Date().getFullYear()} Lapeso Oy</copyright>
+    <copyright>© ${new Date().getFullYear()} LaPeso Oy</copyright>
     <managingEditor>info@laplandvibes.com (Lapland.blog)</managingEditor>
     <webMaster>info@laplandvibes.com (Lapland.blog)</webMaster>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
