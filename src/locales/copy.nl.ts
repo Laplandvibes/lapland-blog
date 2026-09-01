@@ -482,7 +482,7 @@ const nl: SectionCopy = {
     inThisStory: 'In dit verhaal',
     fieldJournalEntry: 'Veldjournaal-notitie',
     liveTripBlog: 'Voorbeeld-reisblog',
-    yoursCouldBeNext: 'De jouwe kan de volgende zijn in deze carrousel.',
+    yoursCouldBeNext: 'De uwe kan de volgende zijn in deze carrousel.',
     featuredBadge: 'Redactiekeuze',
     minRead: 'min leestijd',
     exampleBadge: 'Voorbeeld',
