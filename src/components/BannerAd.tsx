@@ -87,7 +87,7 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
       cta: '宿泊先を見る',
     },
     es: {
-      headline: 'Encuentra tu cabaña o iglú',
+      headline: 'Encuentre su cabaña o iglú',
       copy: 'Compara alojamientos en Laponia, de los iglús de cristal de Saariselkä a las cabañas de madera cerca de Levi.',
       cta: 'Ver alojamientos',
     },

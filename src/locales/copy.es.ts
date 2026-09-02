@@ -54,7 +54,7 @@ const es: SectionCopy = {
     subscribing: 'Suscribiendo…',
     subscribe: 'Suscribirme',
     successTitle: 'Ya casi.',
-    successBody: 'Confirma tu suscripción desde el correo que acabamos de enviarte.',
+    successBody: 'Confirme su suscripción desde el correo que acabamos de enviarle.',
     alreadyTitle: 'Ya está en la lista.',
     alreadyBody: 'Parece que ya está suscrito. Gracias por seguir con nosotros.',
     agreeText: 'Al suscribirse, acepta nuestra',
@@ -77,10 +77,10 @@ const es: SectionCopy = {
     heroSecondaryCta: 'Ver cómo funciona',
     heroFootnote: 'Su propio diario es gratis para usted · Hecho en Finlandia · Compártelo en Instagram',
     seasonalBadge: 'En temporada · Sol de medianoche · 6 jun → 7 jul',
-    seasonalH2: 'Un blog de viaje gratis para tu viaje a Laponia, escrito sobre la marcha.',
+    seasonalH2: 'Un blog de viaje gratis para su viaje a Laponia, escrito sobre la marcha.',
     seasonalLead:
-      'Lapland.blog convierte tu viaje en un blog sencillo y bonito: marca los lugares, añade fotos, escribe lo que pasó y comparte el enlace con tus amigos. Ahora mismo eso significa verano. Treinta y dos noches en que el sol no se pone, el bosque se tiñe de ámbar y los lagos reflejan el cielo. Empieza el diario mientras aún estás dentro de él.',
-    seasonalCta1: 'Empezar tu blog de viaje',
+      'Lapland.blog convierte su viaje en un blog sencillo y bonito: marque los lugares, añada fotos, escriba lo que pasó y comparta el enlace con sus amigos. Ahora mismo eso significa verano. Treinta y dos noches en que el sol no se pone, el bosque se tiñe de ámbar y los lagos reflejan el cielo. Empiece el diario mientras aún está dentro de él.',
+    seasonalCta1: 'Empezar su blog de viaje',
     seasonalCta2: 'Leer las entradas de verano',
     seasonalCard1Title: '24 h de hora dorada',
     seasonalCard1Body: 'El sol roza el horizonte. Los fotógrafos la llaman la hora azul más larga de la Tierra.',
@@ -161,23 +161,23 @@ const es: SectionCopy = {
     faq: [
       {
         q: '¿Cómo empiezo un blog de viaje en lapland.blog?',
-        a: 'Inicia sesión con tu cuenta de Google, dale un nombre a tu blog y escribe tu primera entrada. Cada entrada puede incluir texto, fotos, la fecha y un pin en el mapa del lugar donde estuviste. Tu blog vive en lapland.blog/by/tu-nombre y está listo para compartir en cuanto lo publicas: no hay nada que instalar ni más configuración que iniciar sesión.',
+        a: 'Inicie sesión con su cuenta de Google, dele un nombre a su blog y escriba su primera entrada. Cada entrada puede incluir texto, fotos, la fecha y un pin en el mapa del lugar donde estuvo. Su blog vive en lapland.blog/by/su-nombre y está listo para compartir en cuanto lo publica: no hay nada que instalar ni más configuración que iniciar sesión.',
       },
       {
         q: '¿Es gratis usar lapland.blog?',
-        a: 'Sí. Crear un blog, escribir entradas, añadir fotos, marcar lugares en el mapa y compartir tu blog es todo gratuito. No hace falta tarjeta para registrarte y tu blog no lleva anuncios.',
+        a: 'Sí. Crear un blog, escribir entradas, añadir fotos, marcar lugares en el mapa y compartir su blog es todo gratuito. No hace falta tarjeta para registrarse y su blog no lleva anuncios.',
       },
       {
         q: '¿Puedo compartir mi blog de Laponia en Instagram y Facebook?',
-        a: 'Sí. Cada blog tiene un enlace público que puedes publicar donde quieras, y cada entrada se puede exportar como imagen del tamaño de una historia de Instagram para compartir un solo día con un toque. Tus amigos y tu familia pueden abrir tu blog sin tener cuenta propia.',
+        a: 'Sí. Cada blog tiene un enlace público que puede publicar donde quiera, y cada entrada se puede exportar como imagen del tamaño de una historia de Instagram para compartir un solo día con un toque. Sus amigos y su familia pueden abrir su blog sin tener cuenta propia.',
       },
       {
         q: '¿Tengo que estar en Laponia para escribir un blog aquí?',
-        a: 'No. Creamos lapland.blog para quienes viajan a la Laponia finlandesa, así que el mapa y las sugerencias están pensados para viajes al norte, pero cualquiera puede llevar un blog aquí, ya estés planeando un viaje, escribiendo durante él o completándolo al volver a casa. Puedes empezar antes de volar y añadir entradas día a día.',
+        a: 'No. Creamos lapland.blog para quienes viajan a la Laponia finlandesa, así que el mapa y las sugerencias están pensados para viajes al norte, pero cualquiera puede llevar un blog aquí, ya esté planeando un viaje, escribiendo durante él o completándolo al volver a casa. Puede empezar antes de volar y añadir entradas día a día.',
       },
       {
         q: '¿Sobre qué escribo en mi diario de viaje por Laponia?',
-        a: 'Sobre lo que no quieras olvidar. Dónde te alojaste, cómo se veía la aurora, la temperatura de la mañana más fría, la comida que te sorprendió, el paseo en trineo de huskies, el silencio del bosque. Las entradas cortas con una foto y un pin de lugar funcionan bien: unas pocas líneas al día acaban formando un blog que querrás releer.',
+        a: 'Sobre lo que no quiera olvidar. Dónde se alojó, cómo se veía la aurora, la temperatura de la mañana más fría, la comida que le sorprendió, el paseo en trineo de huskies, el silencio del bosque. Las entradas cortas con una foto y un pin de lugar funcionan bien: unas pocas líneas al día acaban formando un blog que querrá releer.',
       },
     ],
   },
@@ -244,9 +244,9 @@ const es: SectionCopy = {
     intro:
       'Casi todos los blogs sobre Laponia se leen como un folleto. Casi todas las apps de diario de viaje acaban abandonadas en el carrete del móvil o se comparten en una sola publicación de Instagram que desaparece en un día. Lapland.blog es el término medio: un blog real, pausado y guiado por la imagen de su viaje, alojado bajo un nombre que ya recibe visitas y conservado todo el tiempo que quiera.',
     howHeading: 'Cómo funciona',
-    howStepPin: 'Marca la cabaña, el restaurante, el lugar de cielo oscuro. Arma tu ruta antes de volar.',
-    howStepWrite: 'Escribe sobre la marcha: desde la cabaña, el coche, la sauna. Añade fotos, la temperatura y a qué sabía la sopa.',
-    howStepShare: 'Tus entradas se convierten en un blog público en lapland.blog/by/tu-nombre. Tus amigos pueden seguirlo; cada entrada se exporta como historia de Instagram.',
+    howStepPin: 'Marque la cabaña, el restaurante, el lugar de cielo oscuro. Arme su ruta antes de volar.',
+    howStepWrite: 'Escriba sobre la marcha: desde la cabaña, el coche, la sauna. Añade fotos, la temperatura y a qué sabía la sopa.',
+    howStepShare: 'Sus entradas se convierten en un blog público en lapland.blog/by/su-nombre. Sus amigos pueden seguirlo; cada entrada se exporta como historia de Instagram.',
     howBody:
       'Inicie sesión con su correo o con Google. Reciba un rincón en lapland.blog en lapland.blog/me. Cada entrada admite una imagen principal, un marcador de lugar y el texto que quiera escribir. Guarde borradores, publique cuando esté listo, comparta el enlace con sus amigos. Cada entrada publicada queda indexada y se puede buscar, y su viaje se convierte en una pequeña pieza del archivo mayor de Laponia.',
     freeHeading: 'Qué es gratis',
@@ -463,7 +463,7 @@ const es: SectionCopy = {
     tagged: 'Etiquetado',
     exploreMore: 'Explore más en la red de LaplandVibes',
     editorialLabel: 'Una entrada de The Field Journal',
-    editorialNote: 'Una de las pocas entradas de muestra escritas por The Field Journal, la voz editorial de Lapland.blog, para mostrar cómo se lee un diario de viaje honesto. Lugares y temperaturas reales; tus propias entradas las escribes tú.',
+    editorialNote: 'Una de las pocas entradas de muestra escritas por The Field Journal, la voz editorial de Lapland.blog, para mostrar cómo se lee un diario de viaje honesto. Lugares y temperaturas reales; sus propias entradas las escribe usted.',
   },
   signIn: {
     pageTitle: 'Planee su viaje a Laponia | Lapland.blog',
@@ -532,7 +532,7 @@ const es: SectionCopy = {
     inThisStory: 'En esta historia',
     fieldJournalEntry: 'Entrada del diario de campo',
     liveTripBlog: 'Blog de viaje de ejemplo',
-    yoursCouldBeNext: 'El tuyo podría ser el próximo en este carrusel.',
+    yoursCouldBeNext: 'El suyo podría ser el próximo en este carrusel.',
     featuredBadge: 'Elección de la redacción',
     minRead: 'min de lectura',
     exampleBadge: 'Ejemplo',

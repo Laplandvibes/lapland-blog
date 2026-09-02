@@ -41,8 +41,8 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
     seoDescription: 'フィンランド・ラップランドの旅を旅行ブログに。旅しながら日記をつけ、ワンタップでSNSにシェア。無料で、数分で始められます。',
   },
   'es': {
-    seoTitle: 'Lapland.blog · Crea y comparte tu blog de viaje',
-    seoDescription: 'Convierte tu viaje a la Laponia finlandesa en un blog de viaje: lleva un diario sobre la marcha y compártelo en redes con un toque. Gratis y listo en minutos.',
+    seoTitle: 'Lapland.blog · Cree y comparta su blog de viaje',
+    seoDescription: 'Convierta su viaje a la Laponia finlandesa en un blog de viaje: lleve un diario sobre la marcha y compártalo en redes con un toque. Gratis y listo en minutos.',
   },
   'pt-BR': {
     seoTitle: 'Lapland.blog · Crie e compartilhe seu blog de viagem',
