@@ -180,7 +180,7 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
     },
     nl: {
       headline: 'Helsinki → Rovaniemi',
-      copy: 'Zoek vlucht + hotel-pakketten naar het Noordpoolgebied. Directe vluchten vanaf Helsinki, ± 75 minuten.',
+      copy: 'Zoek vlucht+hotel-pakketten naar het Noordpoolgebied. Directe vluchten vanaf Helsinki, ± 75 minuten.',
       cta: 'Vergelijk vluchten',
     },
     sv: {

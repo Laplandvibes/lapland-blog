@@ -18,7 +18,7 @@ const TITLE: Record<Lang, string> = {
   ko: '이용약관 · Lapland.blog',
   fr: "Conditions d'utilisation · Lapland.blog",
   it: 'Termini di servizio · Lapland.blog',
-  nl: 'Servicevoorwaarden · Lapland.blog',
+  nl: 'Gebruiksvoorwaarden · Lapland.blog',
   sv: 'Användarvillkor · Lapland.blog',
 };
 const DESCRIPTION: Record<Lang, string> = {

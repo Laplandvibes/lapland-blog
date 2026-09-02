@@ -26,7 +26,7 @@ const nl: SectionCopy = {
     heroPrimaryCta: 'Start uw reisblog',
     heroSecondaryCta: 'Zie hoe het werkt',
     heroFootnote: 'Uw eigen dagboek is gratis voor u · Gemaakt in Finland · Deel via Instagram',
-    seasonalBadge: 'Nu in het seizoen · Middernachtszon · 6 jun → 7 jul',
+    seasonalBadge: 'Nu in het seizoen · Middernachtzon · 6 jun → 7 jul',
     seasonalH2: 'Een gratis reisblog voor uw Lapland-reis, onderweg geschreven.',
     seasonalLead:
       'Lapland.blog maakt van uw reis een eenvoudige, mooie blog: prik de plekken vast, voeg foto’s toe, schrijf op wat er gebeurde, en deel de link met vrienden. Op dit moment betekent dat zomer. Tweeëndertig nachten waarin de zon niet ondergaat, het bos amberkleurig wordt en de meren de hemel weerspiegelen. Begin het dagboek terwijl u er nog bent.',
@@ -34,7 +34,7 @@ const nl: SectionCopy = {
     seasonalCta2: 'Lees zomerverhalen',
     seasonalCard1Title: '24 uur gouden uur',
     seasonalCard1Body: 'De zon scheert langs de horizon. Fotografen noemen het het langste blauwe uur ter aarde.',
-    seasonalCard2Title: 'Kruipbeszomer',
+    seasonalCard2Title: 'Kruipbraamseizoen',
     seasonalCard2Body: 'Eind juli kleurt het hoogveen goud. Lokale bewoners noemen het de tweede oogst.',
     seasonalCard3Title: 'Sauna, dan het meer in',
     seasonalCard3Body: 'Een meer van 14 °C om middernacht, vijf stappen verder een sauna van 90 °C. Herhaal.',
@@ -53,7 +53,7 @@ const nl: SectionCopy = {
     howStep2Kicker: 'Stap 02 · Dagboek',
     howStep2Title: 'Schrijf onderweg.',
     howStep2Body:
-      'Vanaf uw telefoon, in de hut, in de auto, in de sauna. Voeg foto’s, de temperatuur en wat de soep deed. Elke notitie haakt zichzelf aan de dag en de plek.',
+      'Vanaf uw telefoon, in de hut, in de auto, in de sauna. Voeg foto’s toe, de temperatuur, hoe de soep smaakte. Elke notitie wordt vanzelf aan de dag en de plek gekoppeld.',
     howStep3Kicker: 'Stap 03 · Delen',
     howStep3Title: 'Uw reis, goed verteld.',
     howStep3Body:
@@ -72,7 +72,7 @@ const nl: SectionCopy = {
     featuredEyebrow: 'Voorbeelddagboek van de oprichter',
     featuredEvery: 'Elke notitie →',
     featuredLead:
-      'Dit is hoe uw eigen reisblog eruit zou kunnen zien. De notities hieronder komen van The Field Journal, de redactie van Lapland.blog: een kleine kring schrijvers die het Laplandse jaar volgt, van middernachtzon tot poolnacht. Echte temperaturen, echte hutten, echte soep. Lees er één en stel zich uw eigen reis voor.',
+      'Dit is hoe uw eigen reisblog eruit zou kunnen zien. De notities hieronder komen van The Field Journal, de redactie van Lapland.blog: een kleine kring schrijvers die het Laplandse jaar volgt, van middernachtzon tot poolnacht. Echte temperaturen, echte hutten, echte soep. Lees er één en stelt u zich uw eigen reis voor.',
     featuredLoading: 'Voorbeeld laden…',
     featuredNone: 'Nog geen voorbeeldnotities.',
     featuredReadEntry: 'Lees deze notitie',
@@ -88,11 +88,11 @@ const nl: SectionCopy = {
     pillar2Kicker: 'II · Het onderdak',
     pillar2Title: 'Waar u slaapt, waar u eet',
     pillar2Body:
-      'Houten hutten, glaziglo’s, sauna’s die werken en sauna’s die niet werken. De zalmsoep van tweeënveertig euro die het uiteindelijk waard bleek. Het roggebrood dat een rugzak overleeft en de koffie die u om twee uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
+      'Houten hutten, glazen iglo’s, sauna’s die werken en sauna’s die niet werken. De zalmsoep van tweeënveertig euro die het uiteindelijk waard bleek. Het roggebrood dat een rugzak overleeft en de koffie die u om twee uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
     pillar3Kicker: 'III · De anderen',
-    pillar3Title: 'Wie er nog meer hier woont',
+    pillar3Title: 'Wie hier nog meer woont',
     pillar3Body:
-      'Rendierherders, skipatrouilles, saunameesters, de man bij het tankstation net buiten Sodankylä die vier talen sprak. Lapland is stil, maar nooit leeg. Lange stukken over de mensen die u werkelijk ontmoet.',
+      'Rendierhouders, pistewachten, saunameesters, de man bij het tankstation net buiten Sodankylä die vier talen sprak. Lapland is stil, maar nooit leeg. Lange stukken over de mensen die u werkelijk ontmoet.',
     latestEyebrow: 'Voorbeeldnotities',
     latestH2: 'Zie hoe een reisblog eruitziet.',
     latestEvery: 'Elke notitie',
@@ -111,7 +111,7 @@ const nl: SectionCopy = {
     faq: [
       {
         q: 'Hoe begin ik een reisblog op lapland.blog?',
-        a: "Log in met uw Google-account, geef uw blog een naam en schrijf uw eerste bericht. Elk bericht kan tekst, foto's, de datum en een kaartspeld voor uw locatie bevatten. Uw blog staat op lapland.blog/by/uw-naam en is klaar om te delen zodra u publiceert. Er valt niets te installeren en er is geen instelling nodig behalve inloggen.",
+        a: "Log in met uw Google-account, geef uw blog een naam en schrijf uw eerste bericht. Elk bericht kan tekst, foto's, de datum en een kaartspeld voor uw locatie bevatten. Uw blog staat op lapland.blog/by/uw-naam en is klaar om te delen zodra u publiceert. Er valt niets te installeren en behalve inloggen is er niets in te stellen.",
       },
       {
         q: 'Is lapland.blog gratis?',
@@ -135,7 +135,7 @@ const nl: SectionCopy = {
     eyebrow: 'Welkom',
     h1: 'Hallo. Drie ingangen.',
     lead:
-      'Lapland.blog is een gratis, langzame, fotogerichte reisdagboeksite voor mensen die werkelijk naar Fins Lapland gaan. Of u nu een reis plant, midden in een reis zit of thuis bent en wenste dat u alles had opgeschreven, kies uw pad.',
+      'Lapland.blog is een gratis, langzame, fotogerichte reisdagboeksite voor mensen die werkelijk naar Fins Lapland gaan. Of u nu een reis plant, midden in een reis zit of thuis bent en zou willen dat u alles had opgeschreven, kies uw pad.',
     path1Kicker: '01 · Plannen',
     path1Title: 'Ik plan een reis naar Lapland.',
     path1Body:
@@ -144,7 +144,7 @@ const nl: SectionCopy = {
     path2Kicker: '02 · Lezen',
     path2Title: 'Ik wil lezen wat anderen schreven.',
     path2Body:
-      'Zorgvuldig gekozen voorbeeldnotities, geschreven in Finland: de hut inpakken, de zalmsoepavond, het noorderlicht boven Kemi. Echte temperaturen, echte tijden, geen brochurestem.',
+      'Zorgvuldig gekozen voorbeeldnotities, geschreven in Finland: inpakken voor de hut, de zalmsoepavond, het noorderlicht boven Kemi. Echte temperaturen, echte tijden, geen brochurestem.',
     path2Cta: 'Topartikelen',
     path3Kicker: '03 · Schrijven',
     path3Title: 'Ik ben er. Ik wil een blog van mijn reis.',
@@ -154,14 +154,14 @@ const nl: SectionCopy = {
     planEyebrow: 'Plan uw reis',
     planH2: 'Het praktische deel, op de zustersites.',
     planLead:
-      'Lapland.blog is het dagboek. De boekingen gebeuren op de LaplandVibes-spaken, elk gericht op één ding dat ze goed doen.',
+      'Lapland.blog is het dagboek. De boekingen gebeuren op de LaplandVibes-zustersites, elk gericht op één ding dat ze goed doen.',
     planStay: {
       kicker: 'Verblijven',
       title: 'Hutten, iglo’s, hotels',
-      body: 'Vergelijk honderden verblijven in Lapland: glaziglo’s, blokhutten, skiresorts.',
+      body: 'Vergelijk honderden verblijven in Lapland: glazen iglo’s, blokhutten, skiresorts.',
     },
     planTransport: {
-      kicker: 'Komen',
+      kicker: 'Erheen',
       title: 'Vluchten, treinen, bussen',
       body: 'Helsinki → Rovaniemi / Kittilä / Ivalo: vluchten, nachttreinen, de praktische routes.',
     },
@@ -173,7 +173,7 @@ const nl: SectionCopy = {
     planEat: {
       kicker: 'Eten',
       title: 'Eten en drinken',
-      body: 'Waar u écht moet eten: de zalmsoep, het rogge­brood, de bars die betere decennia hebben gezien.',
+      body: 'Waar u écht moet eten: de zalmsoep, het roggebrood, de bars die betere decennia hebben gekend.',
     },
     planAllSites: 'Of bekijk alle 27 sites op laplandvibes.com',
     onlyEyebrow: 'Als u er maar één leest',
@@ -192,28 +192,28 @@ const nl: SectionCopy = {
     lead:
       'Lapland.blog is een gratis reisdagboekplatform voor bezoekers van Fins Lapland. Prik de plek vast waar u het noorderlicht zag. Fotografeer de hut. Schrijf op wat de temperatuur deed. Tegen de tijd dat u naar huis vliegt, hebt u een blog van uw reis: een die uw vrienden kunnen volgen, en een die u over vijf jaar nog wilt lezen.',
     intro:
-      'De meeste Lapland-blogs lezen als een brochure. De meeste reisdagboek-apps belanden achtergelaten in een fotorol of als één Instagram-post die binnen een dag verdwijnt. Lapland.blog is daartussenin: een echte, langzame, fotogerichte blog van uw reis, gehost onder een naam die al verkeer trekt, zo lang bewaard als u wilt.',
+      'De meeste Lapland-blogs lezen als een brochure. De meeste reisdagboek-apps eindigen vergeten in een fotorol of als één Instagram-post die binnen een dag verdwijnt. Lapland.blog is daartussenin: een echte, langzame, fotogerichte blog van uw reis, gehost onder een naam die al verkeer trekt, zo lang bewaard als u wilt.',
     howHeading: 'Hoe het werkt',
     howStepPin: 'Prik de hut, het restaurant, de donkere-hemelplek vast. Bouw uw route voordat u vertrekt.',
     howStepWrite: 'Schrijf onderweg, vanuit de hut, de auto, de sauna. Voeg foto’s toe, de temperatuur en hoe de soep smaakte.',
     howStepShare: 'Uw berichten worden een openbare blog op lapland.blog/by/uw-naam. Vrienden kunnen volgen; elk bericht exporteert u als Instagram-story.',
     howBody:
-      'Meld u aan met e-mail of Google. U krijgt uw plek op lapland.blog/me. Elke notitie heeft een hoofdbeeld, een plek op de kaart en de woorden die u wilt zeggen. Sla concepten op, publiceer wanneer het klaar is, deel de link met vrienden. Elke gepubliceerde notitie wordt geïndexeerd en is doorzoekbaar, en uw reis wordt een klein stukje van het grotere Lapland-archief.',
+      'Meld u aan met e-mail of Google. U krijgt uw plek op lapland.blog/me. Elke notitie heeft een hoofdfoto, een plek op de kaart en de woorden die u wilt zeggen. Sla concepten op, publiceer wanneer het klaar is, deel de link met vrienden. Elke gepubliceerde notitie wordt geïndexeerd en is doorzoekbaar, en uw reis wordt een klein stukje van het grotere Lapland-archief.',
     freeHeading: 'Wat gratis is',
     freeBody:
       'Notities schrijven. Uw reisblog hosten onder lapland.blog/by/uw-naam. Foto’s. De nieuwsbrief. Aan de auteurskant is er geen paywall en geen premium niveau.',
     notHeading: 'Wat u hier niet vindt',
     notBody:
-      'Gesponsorde berichten in de lezersnotities. Affiliate winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor schrijven, slecht voor lezers.',
+      'Gesponsorde berichten in de lezersnotities. Affiliate-winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor het schrijven, slecht voor de lezer.',
     seedHeading: 'De voorbeeldnotities',
     seedBody:
-      'De notities op de site zijn geschreven door The Field Journal, de redactie van Lapland.blog: vijf redactionele stemmen met naam, elk met een eigen terrein: seizoenen, paden, eten, hutten en uitrusting. Ze laten zien hoe een eerlijke, langzame, fotogerichte reisblog kan lezen: echte temperaturen, echte tijden, geen brochurestem. Lees er één en stel zich uw eigen reis voor.',
+      'De notities op de site zijn geschreven door The Field Journal, de redactie van Lapland.blog: vijf redactionele stemmen met naam, elk met een eigen terrein: seizoenen, paden, eten, hutten en uitrusting. Ze laten zien hoe een eerlijke, langzame, fotogerichte reisblog kan lezen: echte temperaturen, echte tijden, geen brochurestem. Lees er één en stelt u zich uw eigen reis voor.',
     networkHeading: 'Over het netwerk',
     networkBody:
       'Lapland.blog maakt deel uit van het LaplandVibes-ecosysteem, een netwerk van Finse sites over Lapland. De andere sites vertellen u waar u heen moet, waar u slaapt en wat u doet. Deze site is waar de reis zelf wordt opgeschreven.',
     contactHeading: 'Neem contact op',
     contactBody:
-      'Wilt u gedag zeggen, een feitelijke fout corrigeren of een foto sturen die we kunnen crediteren, mail dan naar info@laplandvibes.com. We lezen alles en proberen binnen een week te antwoorden.',
+      'Wilt u gedag zeggen, een feitelijke fout corrigeren of een foto sturen die we met naamsvermelding kunnen plaatsen, mail dan naar info@laplandvibes.com. We lezen alles en proberen binnen een week te antwoorden.',
     closing: 'Geschreven vanuit Fins Lapland, op de temperatuur en het uur waarop het werkelijk gebeurde.',
     ctaPrimary: 'Start uw eigen dagboek →',
     ctaSecondary: 'Of',
@@ -227,7 +227,7 @@ const nl: SectionCopy = {
     h1Pre: 'Acht plaatsen.',
     h1Italic: 'Eén Lapland.',
     lead:
-      'Kies een bestemming en lees de notities van daar. Lege plekken zijn de volgende om te schrijven, u kunt de eerste zijn.',
+      'Kies een bestemming en lees de notities van daar. Lege plekken zijn de volgende om over te schrijven, dus u kunt de eerste zijn.',
     beTheFirst: 'Wees de eerste',
     entrySingular: 'notitie',
     entryPlural: 'notities',
@@ -237,7 +237,7 @@ const nl: SectionCopy = {
     dontSeeEyebrow: 'Uw plek staat er niet bij?',
     plantH2: 'Plant de vlag.',
     plantLead:
-      'Gaat u ergens heen die niet in deze lijst staat? Sodankylä, Posio, Kilpisjärvi, Hetta. Schrijf van daar de eerste notitie en wij zetten hem op de kaart.',
+      'Gaat u naar een plek die niet in deze lijst staat? Sodankylä, Posio, Kilpisjärvi, Hetta. Schrijf van daar de eerste notitie en wij zetten hem op de kaart.',
     plantCta: 'Start uw blog',
     places: {
       rovaniemi: {
@@ -262,7 +262,7 @@ const nl: SectionCopy = {
       },
       muonio: {
         region: 'West-Lapland, noorderlichtgordel',
-        blurb: 'Aan de rand van het nationale park Pallas-Yllästunturi. Een van de hoogste noorderlicht-zichtwaarden van Europa.',
+        blurb: 'Aan de rand van het nationale park Pallas-Yllästunturi. Een van de hoogste noorderlichtkansen van Europa.',
       },
       yllas: {
         region: 'West-Lapland, fjäll-land',
@@ -303,11 +303,11 @@ const nl: SectionCopy = {
     seasonalEyebrow: 'Seizoenen',
     seasonalTitle: 'Wat de kou werkelijk doet.',
     seasonalSubtitle:
-      'Kaamos, de acht seizoenen van Lapland die de meeste lijsten vergeten, en het kleine bedrijf om december zonder zon door te komen.',
+      'Kaamos, de acht seizoenen van Lapland die de meeste lijsten vergeten, en de kleine kunst om december zonder zon door te komen.',
     ctaEyebrow: 'Uw reis als volgende?',
     ctaH2: 'Wees de volgende notitie op deze pagina.',
     ctaLead:
-      'De lijsten hierboven groeien als lezers schrijven. Meld u aan, schrijf een paar notities en de redactie zal de notities die het verdienen uitlichten.',
+      'De lijsten hierboven groeien als lezers schrijven. Meld u aan, schrijf een paar notities en de redactie licht de notities uit die het verdienen.',
     ctaButton: 'Start uw blog',
   },
   archive: {
@@ -317,7 +317,7 @@ const nl: SectionCopy = {
     eyebrow: 'Archief',
     h1: 'Elk verhaal.',
     lead:
-      'Geen algoritme, geen redactionele truc. Het nieuwste staat bovenaan. Gebruik het filter om in te perken, of zoek als u al weet wat u zoekt.',
+      'Geen algoritme, geen redactionele truc. Het nieuwste staat bovenaan. Gebruik het filter om de lijst in te korten, of zoek als u al weet wat u zoekt.',
     all: 'Alle',
     filterAria: 'Filter op categorie',
     searchSr: 'Verhalen zoeken',
@@ -378,10 +378,10 @@ const nl: SectionCopy = {
         name: 'Mensen',
         tagline: 'Wie u hier in het noorden ontmoet.',
         description:
-          'Rendierhoeders, pistewachten, saunameesters en vreemden in hotellobby’s. Lapland is stil, maar nooit leeg.',
+          'Rendierhouders, pistewachten, saunameesters en vreemden in hotellobby’s. Lapland is stil, maar nooit leeg.',
         metaTitle: 'De mensen van Fins Lapland · Lapland.blog',
         metaDescription:
-          'Rendierhoeders, pistewachten, saunameesters en vreemden in hotellobby’s. Fins Lapland is stil, maar nooit leeg.',
+          'Rendierhouders, pistewachten, saunameesters en vreemden in hotellobby’s. Fins Lapland is stil, maar nooit leeg.',
       },
       gear: {
         name: 'Uitrusting',
@@ -406,7 +406,7 @@ const nl: SectionCopy = {
   post: {
     allStories: 'Alle verhalen',
     by: 'Door',
-    minRead: 'min lezen',
+    minRead: 'min leestijd',
     loadingStory: 'Verhaal laden…',
     readNextEyebrow: 'Lees hierna',
     readNextH2: 'Meer uit het dagboek',
@@ -462,7 +462,7 @@ const nl: SectionCopy = {
     successBody:
       'Jammer dat u gaat. U ontvangt geen e-mails meer van Lapland.blog. Mocht u van gedachten veranderen, dan staat het aanmeldformulier op elke pagina.',
     backHome: '← Terug naar de startpagina',
-    lead: 'Voer het e-mailadres in waarmee u zich heeft aangemeld. Eén klik en u bent eruit. Geen "weet u het zeker?"-loops, geen enquête.',
+    lead: 'Voer het e-mailadres in waarmee u zich heeft aangemeld. Eén klik en u bent eruit. Geen "weet u het zeker?"-vragen, geen enquête.',
     emailPlaceholder: 'uw@email.com',
     processing: 'Bezig…',
     submit: 'Uitschrijven',
@@ -516,7 +516,7 @@ const nl: SectionCopy = {
       silence: {
         title: 'Eén boom, één meer, één uur in het blauwe uur',
         snippet:
-          'Het ijs op gelopen tot de oever verdween. Eén den. Geen wind. Ik begreep het woord stilte opeens anders.',
+          'Over het ijs gelopen tot de oever verdween. Eén den. Geen wind. Ik begreep het woord stilte opeens anders.',
       },
       food: {
         title: 'De kom zalmsoep van tweeënveertig euro, besproken',
@@ -531,10 +531,10 @@ const nl: SectionCopy = {
     tagline: 'De blog van Fins Lapland: eerlijke reisverslagen, Sami-cultuur, noorderlicht en het alledaagse arctische leven.',
     travelGuide: 'Lapland-reisgids',
     aboutEyebrow: 'Over Lapland Blog',
-    aboutBody: 'Een echte Lapland-blog: reisverslagen, Sami-cultuur, noorderlicht en het arctische dagelijks leven, geschreven door lokale auteurs.',
+    aboutBody: 'Redactionele gids voor Fins Lapland, van het noorderlicht tot de middernachtzon. Zorgvuldig gekozen routes, eerlijke verslagen en de praktische details die u nodig hebt om een Arctische reis te plannen.',
     aboutBadge: 'Onafhankelijk beheerd · bronnen vermeld',
     spottedError: { title: 'Een fout gezien?', body: 'Iets dat aangepast moet worden? Laat het ons weten, we corrigeren het meteen.', cta: 'Fout melden →' },
-    partner: { title: 'Samenwerken met ons', body: 'Adverteer of werk samen op meer dan 21 Lapland-sites.', cta: 'Neem contact op →' },
+    partner: { title: 'Samenwerken met ons', body: 'Adverteer of werk samen op 27 Lapland-sites.', cta: 'Neem contact op →' },
     press: { title: 'Pers en media', body: 'Redactionele samenwerkingen en perskits.', cta: 'Persaanvragen →' },
     copyright: '© {{year}} #LaplandVibes · Onderdeel van het #LaplandVibes-netwerk',
     websiteBy: 'Website door Yrityspaketit.fi',
@@ -558,7 +558,7 @@ const nl: SectionCopy = {
     alreadyBody: 'U staat al op de lijst. Bedankt dat u erbij blijft.',
     agreeText: 'Door u te abonneren gaat u akkoord met ons',
     privacyLink: 'privacybeleid',
-    unsubscribeNote: 'Op elk moment uit te schrijven. Uw adres wordt nooit gedeeld.',
+    unsubscribeNote: 'Op elk moment uit te schrijven.',
   },
   cookieBanner: {
     headline: 'Cookies',

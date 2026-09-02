@@ -28,7 +28,7 @@ const TITLE: Record<Lang, string> = {
   ko: '여기서 시작 · Lapland.blog 첫걸음',
   fr: 'Commencez ici · vos premiers pas sur Lapland.blog',
   it: 'Inizi qui · i Suoi primi passi su Lapland.blog',
-  nl: 'Begin hier · uw eerste stappen op Lapland.blog',
+  nl: 'Begin hier · Uw eerste stappen op Lapland.blog',
   sv: 'Börja här · dina första steg på Lapland.blog',
 };
 const DESCRIPTION: Record<Lang, string> = {

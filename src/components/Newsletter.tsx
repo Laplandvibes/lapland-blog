@@ -80,7 +80,7 @@ const CONSENT_COPY: Record<Lang, { consent: string; privacy: string }> = {
   nl: {
     consent:
       'Ja, LaplandVibes mag de nieuwsbrief met reistips, seizoensinfo en aanbiedingen naar dit e-mailadres sturen. Ik ben 18 jaar of ouder.',
-    privacy: 'Privacyverklaring',
+    privacy: 'Privacybeleid',
   },
   sv: {
     consent:
