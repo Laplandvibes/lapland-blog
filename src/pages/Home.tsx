@@ -70,7 +70,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
   'sv': {
     seoTitle: 'Lapland.blog · Starta och dela din reseblogg om Lappland',
-    seoDescription: 'Gör din resa i finska Lappland till en reseblogg: för dagbok under resan och dela den på sociala medier med en tryckning. Gratis och klart på några minuter.',
+    seoDescription: 'Gör din resa i finska Lappland till en reseblogg: för dagbok under resan och dela den på sociala medier med ett tryck. Gratis och klart på några minuter.',
   },
 };
 

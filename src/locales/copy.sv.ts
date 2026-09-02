@@ -75,7 +75,7 @@ const sv: SectionCopy = {
       'Nåla fast var du såg norrskenet. Fotografera stugan. Skriv vad temperaturen gjorde. Bygg en fin blogg om din resa, en som dina vänner faktiskt kan följa.',
     heroPrimaryCta: 'Starta din reseblogg',
     heroSecondaryCta: 'Se hur det fungerar',
-    heroFootnote: 'Din egen dagbok är gratis för dig · Gjord i Finland · Dela till Instagram',
+    heroFootnote: 'Din egen dagbok är gratis för dig · Gjord i Finland · Dela på Instagram',
     seasonalBadge: 'Aktuellt nu · Midnattssol · 6 juni → 7 juli',
     seasonalH2: 'En gratis reseblogg för din Lapplandsresa, skriven medan du är där.',
     seasonalLead:
@@ -138,7 +138,7 @@ const sv: SectionCopy = {
     pillar2Kicker: 'II · Skyddet',
     pillar2Title: 'Var du sover, var du äter',
     pillar2Body:
-      'Timrade stugor, glasiglon, bastur som fungerar och bastur som inte gör det. Laxsoppan för fyrtiotvå euro som visade sig vara värd det. Rågbrödet som överlever en ryggsäck, och kaffet du dricker klockan 2 på natten eftersom solen glömde att gå ner.',
+      'Timrade stugor, glasigloor, bastur som fungerar och bastur som inte gör det. Laxsoppan för fyrtiotvå euro som visade sig vara värd det. Rågbrödet som överlever en ryggsäck, och kaffet du dricker klockan 2 på natten eftersom solen glömde att gå ner.',
     pillar3Kicker: 'III · De andra människorna',
     pillar3Title: 'Vem mer bor häruppe',
     pillar3Body:
@@ -169,11 +169,11 @@ const sv: SectionCopy = {
       },
       {
         q: 'Kan jag dela min Lapplandsblogg på Instagram och Facebook?',
-        a: 'Ja. Varje blogg har en offentlig länk du kan lägga upp var som helst, och varje inlägg kan exporteras som en bild i Instagram-story-format så att du kan dela en enda dag med en tryckning. Vänner och familj kan öppna din blogg utan ett eget konto.',
+        a: 'Ja. Varje blogg har en offentlig länk du kan lägga upp var som helst, och varje inlägg kan exporteras som en bild i Instagram-story-format så att du kan dela en enda dag med ett tryck. Vänner och familj kan öppna din blogg utan ett eget konto.',
       },
       {
         q: 'Måste jag vara i Lappland för att skriva en blogg här?',
-        a: 'Nej. Vi byggde lapland.blog för resenärer på väg till finska Lappland, så kartan och uppmaningarna är anpassade för resor norrut, men vem som helst kan ha en blogg här, oavsett om du planerar en resa, skriver under en, eller fyller i den efter att du kommit hem. Du kan börja innan du flyger och lägga till inlägg dag för dag.',
+        a: 'Nej. Vi byggde lapland.blog för resenärer på väg till finska Lappland, så kartan och skrivtipsen är anpassade för resor norrut, men vem som helst kan ha en blogg här, oavsett om du planerar en resa, skriver under en, eller fyller i den efter att du kommit hem. Du kan börja innan du flyger och lägga till inlägg dag för dag.',
       },
       {
         q: 'Vad ska jag skriva om i min Lapplandsdagbok?',
@@ -208,7 +208,7 @@ const sv: SectionCopy = {
     planStay: {
       kicker: 'Bo',
       title: 'Stugor, iglon, hotell',
-      body: 'Jämför hundratals boenden i Lappland: glasiglon, timmerstugor, skidorter.',
+      body: 'Jämför hundratals boenden i Lappland: glasigloor, timmerstugor, skidorter.',
     },
     planTransport: {
       kicker: 'Ta dig dit',
@@ -242,7 +242,7 @@ const sv: SectionCopy = {
     lead:
       'Lapland.blog är en gratis resedagboksplattform för besökare i finska Lappland. Nåla fast var du såg norrskenet. Fotografera stugan. Skriv vad temperaturen gjorde. När du flyger hem har du en blogg om din resa: en som dina vänner faktiskt kan följa, och en du fortfarande vill läsa om fem år.',
     intro:
-      'De flesta Lapplandsbloggar läses som en broschyr. De flesta resedagboksappar antingen överges i en telefonrulle eller delas som ett enda Instagram-inlägg som försvinner på en dag. Lapland.blog är mittemellan-grejen: en riktig, långsam, bildledd blogg om din resa, publicerad under ett namn som redan får trafik, sparad så länge du vill spara den.',
+      'De flesta Lapplandsbloggar läses som en broschyr. De flesta resedagboksappar antingen överges i en telefonrulle eller delas som ett enda Instagram-inlägg som försvinner på en dag. Lapland.blog är det som ligger mittemellan: en riktig, långsam, bildledd blogg om din resa, publicerad under ett namn som redan får trafik, sparad så länge du vill spara den.',
     howHeading: 'Så fungerar det',
     howStepPin: 'Nåla fast stugan, restaurangen, den mörka platsen. Bygg din rutt innan du flyger.',
     howStepWrite: 'Skriv medan du reser, från stugan, bilen, bastun. Lägg till foton, temperaturen, hur soppan smakade.',
@@ -292,15 +292,15 @@ const sv: SectionCopy = {
     places: {
       rovaniemi: {
         region: 'Vid polcirkeln',
-        blurb: 'Lapplands huvudstad. Där de flesta flyg landar. Basläger för allt norr om här.',
+        blurb: 'Lapplands huvudstad. Där de flesta flyg landar. Basläger för allt norr härom.',
       },
       saariselka: {
         region: 'Långt norrut, fjällvärld',
-        blurb: 'Trädlös tundra, glasiglon, nationalparken Urho Kekkonen precis utanför dörren.',
+        blurb: 'Trädlös tundra, glasigloor, nationalparken Urho Kekkonen precis utanför dörren.',
       },
       levi: {
         region: 'Västra Lappland, fjällvärld',
-        blurb: 'Finlands största skidort. Direktflyg från Helsinki på vintern. Familjevänligt basläger.',
+        blurb: 'Finlands största skidort. Direktflyg från Helsingfors på vintern. Familjevänligt basläger.',
       },
       kemi: {
         region: 'Bottenvikens kust',
@@ -353,7 +353,7 @@ const sv: SectionCopy = {
     seasonalEyebrow: 'Säsong',
     seasonalTitle: 'Vad kylan faktiskt gör.',
     seasonalSubtitle:
-      'Kaamos, de åtta Lappland-årstiderna som de flesta listor glömmer, och det lilla projektet att ta sig igenom december utan solen.',
+      'Kaamos, de åtta lappländska årstiderna som de flesta listor glömmer, och det lilla projektet att ta sig igenom december utan solen.',
     ctaEyebrow: 'Din resa härnäst?',
     ctaH2: 'Bli nästa inlägg på den här sidan.',
     ctaLead:
@@ -401,10 +401,10 @@ const sv: SectionCopy = {
         name: 'Stugor',
         tagline: 'Fyra väggar, en kamin, noll wifi.',
         description:
-          'Timrade stugor, glasiglon, bastur som fungerar, bastur som inte gör det. Hur det faktiskt är att sova långt från en stad.',
+          'Timrade stugor, glasigloor, bastur som fungerar, bastur som inte gör det. Hur det faktiskt är att sova långt från en stad.',
         metaTitle: 'Stugboende i finska Lappland · Lapland.blog',
         metaDescription:
-          'Timrade stugor, glasiglon, bastur som fungerar och bastur som inte gör det. Hur det faktiskt är att sova långt från en stad i finska Lappland.',
+          'Timrade stugor, glasigloor, bastur som fungerar och bastur som inte gör det. Hur det faktiskt är att sova långt från en stad i finska Lappland.',
       },
       food: {
         name: 'Mat',
@@ -479,7 +479,7 @@ const sv: SectionCopy = {
     benefit1Body: 'Stuga, restaurang, norrskensplats: sätt nålar innan du flyger.',
     benefit2Title: 'Skriv inlägg från telefonen',
     benefit2Body: 'Från stugan, bilen, bastun. Foton, väder, berättelser.',
-    benefit3Title: 'Dela till Instagram med en tryckning',
+    benefit3Title: 'Dela på Instagram med ett tryck',
     benefit3Body: 'Varje inlägg exporteras som en vertikal story dina vänner faktiskt öppnar.',
     footnote: 'Gratis resedagböcker · Inget kreditkort · Gjord i Finland',
     sentTitle: 'Kolla din inkorg',
