@@ -98,7 +98,7 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
     },
     'zh-CN': {
       headline: '找到你的木屋或冰屋',
-      copy: '比较拉普兰住宿：从萨利色尔卡的玻璃穹顶屋到莱维郊外的原木小屋。',
+      copy: '比较拉普兰住宿：从萨利色尔卡的玻璃冰屋到莱维郊外的原木小屋。',
       cta: '浏览住宿',
     },
     ko: {
