@@ -34,7 +34,7 @@ const TITLE: Record<Lang, string> = {
 const DESCRIPTION: Record<Lang, string> = {
   en: 'New to Lapland.blog? Three ways in: read the field-journal entries, find your Finnish Lapland destination, or start your own free travel blog.',
   fi: 'Uusi Lapland.blogissa? Kolme reittiä sisään: lue kenttäpäiväkirjamerkinnät, löydä Suomen Lapin kohteesi tai aloita oma ilmainen matkablogi.',
-  de: 'Neu auf Lapland.blog? Drei Wege hinein: Feldtagebuch-Einträge lesen, Ihr Ziel in Finnisch-Lappland finden oder einen eigenen kostenlosen Reiseblog starten.',
+  de: 'Neu auf Lapland.blog? Drei Einstiege: Einträge aus The Field Journal lesen, Ihr Ziel in Finnisch-Lappland finden oder einen eigenen kostenlosen Reiseblog starten.',
   ja: 'Lapland.blogは初めて？入口は三つ。フィールド日記の記事を読む、フィンランド・ラップランドの目的地を探す、または無料で自分の旅行ブログを始める。',
   es: '¿Nuevo en Lapland.blog? Tres caminos: lea las entradas del diario de campo, encuentre su destino en la Laponia finlandesa o empiece su propio blog de viaje gratis.',
   'pt-BR': 'Novo no Lapland.blog? Três caminhos: leia as entradas do diário de campo, encontre seu destino na Lapônia finlandesa ou comece seu próprio blog de viagem grátis.',

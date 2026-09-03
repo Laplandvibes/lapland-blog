@@ -73,42 +73,42 @@ const de: SectionCopy = {
     heroLine1: 'Reise nach Lappland?',
     heroLine2: 'Starten Sie einen Blog Ihrer Reise.',
     heroLead:
-      'Markieren Sie, wo Sie die Nordlichter sahen. Fotografieren Sie die Hütte. Notieren Sie die Temperatur. Bauen Sie einen schönen Blog Ihrer Reise, einen, dem Ihre Freunde wirklich folgen können.',
+      'Markieren Sie, wo Sie die Polarlichter gesehen haben. Fotografieren Sie die Hütte. Notieren Sie die Temperatur. Erstellen Sie einen schönen Blog über Ihre Reise – einen, dem Ihre Freunde gern folgen.',
     heroPrimaryCta: 'Reiseblog starten',
     heroSecondaryCta: 'So funktioniert es',
-    heroFootnote: 'Ihr eigenes Tagebuch ist für Sie kostenlos · Aus Finnland · Auf Instagram teilen',
+    heroFootnote: 'Ihr eigenes Tagebuch – kostenlos · Aus Finnland · Auf Instagram teilen',
     seasonalBadge: 'Jetzt Saison · Mitternachtssonne · 6.6. → 7.7.',
     seasonalH2: 'Ein kostenloser Reiseblog für Ihre Lappland-Reise, unterwegs geschrieben.',
     seasonalLead:
-      'Lapland.blog macht aus Ihrer Reise einen einfachen, schönen Blog: Orte markieren, Fotos hinzufügen, festhalten, was passiert ist, und den Link mit Freunden teilen. Gerade jetzt heißt das Sommer. Zweiunddreißig Nächte, in denen die Sonne nicht untergeht, der Wald bernsteinfarben wird und die Seen den Himmel spiegeln. Beginnen Sie das Tagebuch, solange Sie noch dort sind.',
+      'Lapland.blog macht aus Ihrer Reise einen einfachen, schönen Blog: Orte markieren, Fotos hinzufügen, festhalten, was passiert ist, und den Link mit Freunden teilen. Im Moment bedeutet das: Sommer. Zweiunddreißig Nächte, in denen die Sonne nicht untergeht, der Wald bernsteinfarben wird und die Seen den Himmel spiegeln. Beginnen Sie das Tagebuch, solange Sie noch dort sind.',
     seasonalCta1: 'Reiseblog starten',
     seasonalCta2: 'Sommer-Einträge lesen',
     seasonalCard1Title: '24 Stunden goldene Stunde',
     seasonalCard1Body: 'Die Sonne streift den Horizont. Fotografen nennen es die längste blaue Stunde der Erde.',
     seasonalCard2Title: 'Moltebeeren-Saison (lakka)',
-    seasonalCard2Body: 'Ende Juli: das Moor wird golden. Einheimische sprechen von der zweiten Ernte.',
+    seasonalCard2Body: 'Ende Juli: Das Moor wird golden. Einheimische sprechen von der zweiten Ernte.',
     seasonalCard3Title: 'Sauna, dann ein Sprung ins Wasser',
     seasonalCard3Body: 'See mit 14 °C um Mitternacht, Sauna mit 90 °C fünf Schritte entfernt. Wiederholen.',
     seasonalCard4Title: 'Niemand sonst da',
-    seasonalCard4Body: 'Die Hütten, die im Winter ausgebucht sind, stehen im Juli leer. Derselbe Wald, keine Schlange.',
+    seasonalCard4Body: 'Die Hütten, die im Winter ausgebucht sind, stehen im Juli leer. Derselbe Wald, keine Warteschlange.',
     seasonalLabels: { light: '01 · Licht', forest: '02 · Wald', water: '03 · Wasser', quiet: '04 · Stille' },
     howEyebrow: 'So funktioniert es',
     howH2Pre: 'Drei Schritte. Eine Reise.',
     howH2Italic: 'Ein Blog, den man behalten will.',
     howLead:
-      'Lapland.blog ist eine kostenlose Reisetagebuch-Plattform für Besucher des finnischen Lapplands. Ihre Reise wird zu einem Blog, den Sie wirklich teilen möchten.',
+      'Lapland.blog ist eine kostenlose Reisetagebuch-Plattform für Besucher Finnisch-Lapplands. Ihre Reise wird zu einem Blog, den Sie wirklich teilen möchten.',
     howStep1Kicker: 'Schritt 01 · Planen',
     howStep1Title: 'Orte markieren.',
     howStep1Body:
-      'Setzen Sie Stecknadeln auf die Lappland-Karte für die gebuchte Hütte, das Restaurant und den dunklen Ort für die Nordlichter. Planen Sie die Route, bevor Sie fliegen.',
+      'Setzen Sie Stecknadeln auf die Lappland-Karte für die gebuchte Hütte, das Restaurant und die dunkle Stelle zum Beobachten der Polarlichter. Planen Sie die Route, bevor Sie fliegen.',
     howStep2Kicker: 'Schritt 02 · Schreiben',
     howStep2Title: 'Unterwegs schreiben.',
     howStep2Body:
-      'Vom Handy aus, in der Hütte, im Auto, in der Sauna. Fotos hinzufügen, Temperatur, wie die Suppe schmeckte. Jeder Eintrag hängt sich an Tag und Ort.',
+      'Vom Handy aus, in der Hütte, im Auto, in der Sauna. Fotos, die Temperatur, wie die Suppe geschmeckt hat. Jeder Eintrag ist mit Datum und Ort verknüpft.',
     howStep3Kicker: 'Schritt 03 · Teilen',
     howStep3Title: 'Ihre Reise, gut erzählt.',
     howStep3Body:
-      'Ihre Einträge werden zu einem öffentlichen Blog unter lapland.blog/by/ihr-name. Freunde können folgen. Jeder Beitrag wird als Instagram-Story exportiert, damit die Reise doppelt lebt.',
+      'Ihre Einträge werden zu einem öffentlichen Blog unter lapland.blog/by/ihr-name. Freunde können mitlesen. Jeder Eintrag lässt sich als Instagram-Story exportieren, damit die Reise ein zweites Leben bekommt.',
     howCta: 'Reiseblog starten',
     howFootnote: 'Kostenlos für Reisetagebücher · Keine Kreditkarte nötig · Anmeldung mit Google',
     liveEyebrow: 'Beispielblogs der Redaktion',
@@ -116,7 +116,7 @@ const de: SectionCopy = {
     liveH2Italic: 'aus.',
     liveH2Tail: 'Ihrer ist der nächste.',
     liveLead:
-      'Schwarze Pisten in Levi. Nordlicht-Nächte in Inari. 60 km mit dem Hundeschlitten in Saariselkä. The Field Journal, unsere Redaktion, hat diese Beispielblogs gebaut, um das Format zu zeigen. Ihr echter ist in unter fünf Minuten gestartet.',
+      'Schwarze Pisten in Levi. Polarlicht-Nächte in Inari. 60 km mit dem Hundeschlitten in Saariselkä. The Field Journal, unsere Redaktion, hat diese Beispielblogs gebaut, um das Format zu zeigen. Ihr eigener ist in weniger als fünf Minuten angelegt.',
     liveBrowseAll: 'Alle Blogs ansehen',
     liveCta: 'Eigenen Reiseblog starten',
     liveFootnote: 'Kostenlos · Keine Kreditkarte · 2 Minuten bis zum ersten Eintrag',
@@ -131,7 +131,7 @@ const de: SectionCopy = {
     pillarsH2Pre: 'Die Lappland-Reise,',
     pillarsH2Italic: 'in drei Strängen.',
     pillarsLead:
-      'Sehen Sie, was andere Reisende notiert haben, und wählen Sie die Stränge, über die Sie selbst schreiben. Nordlichter, Hütten, Essen, die Kälte, die Menschen, die Stille dazwischen.',
+      'Sehen Sie, was andere Reisende notiert haben, und wählen Sie die Themen, über die Sie selbst schreiben möchten. Nordlichter, Hütten, Essen, die Kälte, die Menschen, die Stille dazwischen.',
     pillar1Kicker: 'I · Die Kälte',
     pillar1Title: 'Was die Kälte wirklich macht',
     pillar1Body:
@@ -162,23 +162,23 @@ const de: SectionCopy = {
     faq: [
       {
         q: 'Wie starte ich einen Reiseblog auf lapland.blog?',
-        a: 'Melden Sie sich mit Ihrem Google-Konto an, geben Sie Ihrem Blog einen Namen und schreiben Sie Ihren ersten Eintrag. Jeder Eintrag kann Text, Fotos, das Datum und eine Kartennadel für Ihren Standort enthalten. Ihr Blog liegt unter lapland.blog/by/ihr-name und ist sofort nach dem Veröffentlichen teilbar. Es gibt nichts zu installieren und keine Einrichtung außer der Anmeldung.',
+        a: 'Melden Sie sich mit Ihrem Google-Konto an, geben Sie Ihrem Blog einen Namen und schreiben Sie Ihren ersten Eintrag. Jeder Eintrag kann Text, Fotos, das Datum und eine Stecknadel für Ihren Standort enthalten. Ihr Blog liegt unter lapland.blog/by/ihr-name und ist sofort nach dem Veröffentlichen teilbar. Es gibt nichts zu installieren und keine Einrichtung außer der Anmeldung.',
       },
       {
         q: 'Ist lapland.blog kostenlos?',
-        a: 'Ja. Einen Blog starten, Einträge schreiben, Fotos hinzufügen, Orte auf der Karte markieren und Ihren Blog teilen ist alles kostenlos. Für die Anmeldung ist keine Kreditkarte nötig, und auf Ihrem Blog gibt es keine Werbung.',
+        a: 'Ja. Einen Blog starten, Einträge schreiben, Fotos hinzufügen, Orte auf der Karte markieren, Ihren Blog teilen – all das ist kostenlos. Für die Anmeldung ist keine Kreditkarte nötig, und auf Ihrem Blog gibt es keine Werbung.',
       },
       {
         q: 'Kann ich meinen Lappland-Blog auf Instagram und Facebook teilen?',
-        a: 'Ja. Jeder Blog hat einen öffentlichen Link, den Sie überall posten können, und jeder Eintrag lässt sich als Bild im Instagram-Story-Format exportieren, sodass Sie einen einzelnen Tag mit einem Fingertipp teilen. Freunde und Familie können Ihren Blog ohne eigenes Konto öffnen.',
+        a: 'Ja. Jeder Blog hat einen öffentlichen Link, den Sie überall posten können, und jeder Eintrag lässt sich als Bild im Instagram-Story-Format exportieren, sodass Sie einen einzelnen Tag mit einem Fingertipp teilen können. Freunde und Familie können Ihren Blog ohne eigenes Konto öffnen.',
       },
       {
         q: 'Muss ich in Lappland sein, um hier einen Blog zu schreiben?',
-        a: 'Nein. Wir haben lapland.blog für Reisende nach Finnisch-Lappland gebaut, daher sind Karte und Schreibimpulse auf Reisen in den Norden abgestimmt, aber jeder kann hier einen Blog führen, ob Sie eine Reise planen, währenddessen schreiben oder ihn nach der Heimkehr füllen. Sie können vor dem Abflug beginnen und Tag für Tag Einträge hinzufügen.',
+        a: 'Nein. Wir haben lapland.blog für Reisende nach Finnisch-Lappland gebaut, daher sind Karte und Schreibimpulse auf Reisen in den Norden abgestimmt, aber jeder kann hier einen Blog führen – egal, ob Sie eine Reise planen, unterwegs schreiben oder ihn nach der Heimkehr füllen. Sie können vor dem Abflug beginnen und Tag für Tag Einträge hinzufügen.',
       },
       {
         q: 'Worüber sollte ich in meinem Lappland-Reisetagebuch schreiben?',
-        a: 'Über alles, was Sie nicht vergessen wollen. Wo Sie übernachtet haben, wie die Polarlichter aussahen, die Temperatur am kältesten Morgen, das Essen, das Sie überrascht hat, die Huskyfahrt, die Stille des Waldes. Kurze Einträge mit einem Foto und einer Ortsnadel funktionieren gut. Ein paar Zeilen am Tag ergeben einen Blog, den man gern wieder liest.',
+        a: 'Über alles, was Sie nicht vergessen wollen. Wo Sie übernachtet haben, wie die Polarlichter aussahen, die Temperatur am kältesten Morgen, das Essen, das Sie überrascht hat, die Huskyfahrt, die Stille des Waldes. Kurze Einträge mit einem Foto und einer Stecknadel auf der Karte funktionieren gut. Ein paar Zeilen am Tag ergeben einen Blog, den man gern wieder liest.',
       },
     ],
   },
@@ -501,8 +501,8 @@ const de: SectionCopy = {
     sending: 'Magic Link wird gesendet…',
     submitCta: 'Meine Reise-Seite reservieren',
     months: [
-      'Januar','Februar','März','April','Mai','Juni',
-      'Juli','August','September','Oktober','November','Dezember',
+      'Januar’,’Februar’,’März’,’April’,’Mai’,’Juni',
+      'Juli’,’August’,’September’,’Oktober’,’November’,’Dezember',
     ],
   },
   unsubscribe: {

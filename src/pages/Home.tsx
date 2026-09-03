@@ -62,7 +62,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
   'it': {
     seoTitle: 'Lapland.blog · Crei e condivida il Suo blog di viaggio',
-    seoDescription: 'Trasformi il Suo viaggio in Lapponia finlandese in un blog di viaggio: tenga un diario lungo il percorso e lo condivida sui social con un tocco. Gratis e pronto in pochi minuti.',
+    seoDescription: 'Trasformi il Suo viaggio in Lapponia finlandese in un blog di viaggio: tenga un diario strada facendo e lo condivida sui social con un tocco. Gratis e pronto in pochi minuti.',
   },
   'nl': {
     seoTitle: 'Lapland.blog · Start en deel uw Lapland-reisblog',

@@ -52,23 +52,23 @@
       "faq": [
         {
           "q": "Wie starte ich einen Reiseblog auf lapland.blog?",
-          "a": "Melden Sie sich mit Ihrem Google-Konto an, geben Sie Ihrem Blog einen Namen und schreiben Sie Ihren ersten Eintrag. Jeder Eintrag kann Text, Fotos, das Datum und eine Kartennadel für Ihren Standort enthalten. Ihr Blog liegt unter lapland.blog/by/ihr-name und ist sofort nach dem Veröffentlichen teilbar. Es gibt nichts zu installieren und keine Einrichtung außer der Anmeldung."
+          "a": "Melden Sie sich mit Ihrem Google-Konto an, geben Sie Ihrem Blog einen Namen und schreiben Sie Ihren ersten Eintrag. Jeder Eintrag kann Text, Fotos, das Datum und eine Stecknadel für Ihren Standort enthalten. Ihr Blog liegt unter lapland.blog/by/ihr-name und ist sofort nach dem Veröffentlichen teilbar. Es gibt nichts zu installieren und keine Einrichtung außer der Anmeldung."
         },
         {
           "q": "Ist lapland.blog kostenlos?",
-          "a": "Ja. Einen Blog starten, Einträge schreiben, Fotos hinzufügen, Orte auf der Karte markieren und Ihren Blog teilen ist alles kostenlos. Für die Anmeldung ist keine Kreditkarte nötig, und auf Ihrem Blog gibt es keine Werbung."
+          "a": "Ja. Einen Blog starten, Einträge schreiben, Fotos hinzufügen, Orte auf der Karte markieren, Ihren Blog teilen – all das ist kostenlos. Für die Anmeldung ist keine Kreditkarte nötig, und auf Ihrem Blog gibt es keine Werbung."
         },
         {
           "q": "Kann ich meinen Lappland-Blog auf Instagram und Facebook teilen?",
-          "a": "Ja. Jeder Blog hat einen öffentlichen Link, den Sie überall posten können, und jeder Eintrag lässt sich als Bild im Instagram-Story-Format exportieren, sodass Sie einen einzelnen Tag mit einem Fingertipp teilen. Freunde und Familie können Ihren Blog ohne eigenes Konto öffnen."
+          "a": "Ja. Jeder Blog hat einen öffentlichen Link, den Sie überall posten können, und jeder Eintrag lässt sich als Bild im Instagram-Story-Format exportieren, sodass Sie einen einzelnen Tag mit einem Fingertipp teilen können. Freunde und Familie können Ihren Blog ohne eigenes Konto öffnen."
         },
         {
           "q": "Muss ich in Lappland sein, um hier einen Blog zu schreiben?",
-          "a": "Nein. Wir haben lapland.blog für Reisende nach Finnisch-Lappland gebaut, daher sind Karte und Schreibimpulse auf Reisen in den Norden abgestimmt, aber jeder kann hier einen Blog führen, ob Sie eine Reise planen, währenddessen schreiben oder ihn nach der Heimkehr füllen. Sie können vor dem Abflug beginnen und Tag für Tag Einträge hinzufügen."
+          "a": "Nein. Wir haben lapland.blog für Reisende nach Finnisch-Lappland gebaut, daher sind Karte und Schreibimpulse auf Reisen in den Norden abgestimmt, aber jeder kann hier einen Blog führen – egal, ob Sie eine Reise planen, unterwegs schreiben oder ihn nach der Heimkehr füllen. Sie können vor dem Abflug beginnen und Tag für Tag Einträge hinzufügen."
         },
         {
           "q": "Worüber sollte ich in meinem Lappland-Reisetagebuch schreiben?",
-          "a": "Über alles, was Sie nicht vergessen wollen. Wo Sie übernachtet haben, wie die Polarlichter aussahen, die Temperatur am kältesten Morgen, das Essen, das Sie überrascht hat, die Huskyfahrt, die Stille des Waldes. Kurze Einträge mit einem Foto und einer Ortsnadel funktionieren gut. Ein paar Zeilen am Tag ergeben einen Blog, den man gern wieder liest."
+          "a": "Über alles, was Sie nicht vergessen wollen. Wo Sie übernachtet haben, wie die Polarlichter aussahen, die Temperatur am kältesten Morgen, das Essen, das Sie überrascht hat, die Huskyfahrt, die Stille des Waldes. Kurze Einträge mit einem Foto und einer Stecknadel auf der Karte funktionieren gut. Ein paar Zeilen am Tag ergeben einen Blog, den man gern wieder liest."
         }
       ]
     },
@@ -80,7 +80,7 @@
         },
         {
           "q": "lapland.blog は無料ですか？",
-          "a": "はい。ブログの開設、記事の作成、写真の追加、地図への場所のピン留め、ブログの共有はすべて無料です。登録にカードは不要で、あなたのブログに広告は表示されません。"
+          "a": "lapland.blog は無料ですか？、ブログの共有はすべて無料です。登録にクレジットカードは不要で、あなたのブログに広告は表示されません。"
         },
         {
           "q": "ラップランドのブログをInstagramやFacebookで共有できますか？",
@@ -88,11 +88,11 @@
         },
         {
           "q": "ここでブログを書くにはラップランドにいる必要がありますか？",
-          "a": "いいえ。lapland.blog はフィンランド・ラップランドへ向かう旅行者のために作られており、地図や書き込みのヒントは北の旅向けに調整されています。ただし、旅を計画中の方も、旅の最中の方も、帰宅後にまとめる方も、どなたでもブログを持てます。出発前に始めて、一日ずつ記事を追加していくこともできます。"
+          "a": "いいえ。lapland.blog はフィンランド・ラップランドへ向かう旅行者のために作られており、地図や執筆のヒントは北の旅に合わせて作られています。ただし、旅を計画中の方も、旅の最中の方も、帰宅後にまとめる方も、どなたでもブログを持てます。出発前に始めて、一日ずつ記事を追加していくこともできます。"
         },
         {
           "q": "ラップランドの旅日記には何を書けばいいですか？",
-          "a": "忘れたくないことを何でも。泊まった場所、オーロラの様子、一番寒い朝の気温、思いがけずおいしかった食事、ハスキー体験、森の静けさ。写真と場所ピンを添えた短い記事がよく合います。1日数行でも、読み返したくなるブログに育っていきます。"
+          "a": "忘れたくないことを何でも。泊まった場所、オーロラの様子、一番寒い朝の気温、思いがけずおいしかった食事、ハスキー体験、森の静けさ。写真と地図ピンを添えた短い記事がおすすめです。1日数行でも、読み返したくなるブログに育っていきます。"
         }
       ]
     },
@@ -124,7 +124,7 @@
       "faq": [
         {
           "q": "Como começo um blog de viagem no lapland.blog?",
-          "a": "Faça login com sua conta do Google, dê um nome ao seu blog e escreva a primeira entrada. Cada entrada pode ter texto, fotos, a data e um pino no mapa do lugar onde você esteve. Seu blog fica em lapland.blog/by/seu-nome e está pronto para compartilhar assim que você publica. Não há nada para instalar e nenhuma configuração além do login."
+          "a": "Faça login com sua conta do Google, dê um nome ao seu blog e escreva a primeira entrada. Cada entrada pode ter texto, fotos, a data e um marcador no mapa do lugar onde você esteve. Seu blog fica em lapland.blog/by/seu-nome e está pronto para compartilhar assim que você publica. Não há nada para instalar e nenhuma configuração além do login."
         },
         {
           "q": "O lapland.blog é gratuito?",
@@ -136,11 +136,11 @@
         },
         {
           "q": "Preciso estar na Lapônia para escrever um blog aqui?",
-          "a": "Não. Criamos o lapland.blog para quem viaja à Lapônia finlandesa, então o mapa e as sugestões são ajustados para viagens ao norte, mas qualquer pessoa pode manter um blog aqui, esteja planejando uma viagem, escrevendo durante ela ou preenchendo depois de voltar para casa. Você pode começar antes de embarcar e adicionar entradas dia a dia."
+          "a": "Não. Criamos o lapland.blog para quem viaja à Lapônia finlandesa, então o mapa e as sugestões são pensados para viagens ao norte, mas qualquer pessoa pode manter um blog aqui, esteja planejando uma viagem, escrevendo durante ela ou preenchendo depois de voltar para casa. Você pode começar antes de embarcar e adicionar entradas dia a dia."
         },
         {
           "q": "Sobre o que escrever no meu diário de viagem da Lapônia?",
-          "a": "Sobre o que você não quer esquecer. Onde se hospedou, como estava a aurora, a temperatura na manhã mais fria, a refeição que surpreendeu, o passeio de trenó com huskies, o silêncio da floresta. Entradas curtas com uma foto e um pino de lugar funcionam bem. Algumas linhas por dia formam um blog que vale a pena reler."
+          "a": "Sobre o que você não quer esquecer. Onde se hospedou, como estava a aurora, a temperatura na manhã mais fria, a refeição que surpreendeu você, o passeio de trenó com huskies, o silêncio da floresta. Entradas curtas com uma foto e um pino de lugar funcionam bem. Algumas linhas por dia formam um blog que vale a pena reler."
         }
       ]
     },

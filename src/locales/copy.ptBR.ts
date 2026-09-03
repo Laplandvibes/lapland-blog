@@ -72,22 +72,22 @@ const ptBR: SectionCopy = {
     heroLine1: 'Vai para a Lapônia?',
     heroLine2: 'Crie um blog da sua viagem.',
     heroLead:
-      'Marque no mapa onde você viu a aurora. Fotografe a cabana. Anote o que o termômetro fez. Monte um blog bonito da sua viagem, um que seus amigos possam de fato acompanhar.',
+      'Marque no mapa onde você viu a aurora. Fotografe a cabana. Anote quantos graus fazia. Monte um blog bonito da sua viagem, que seus amigos possam de fato acompanhar.',
     heroPrimaryCta: 'Criar seu blog de viagem',
     heroSecondaryCta: 'Ver como funciona',
-    heroFootnote: 'Seu próprio diário é grátis para você · Feito na Finlândia · Compartilhe no Instagram',
+    heroFootnote: 'Seu diário é grátis · Feito na Finlândia · Compartilhe no Instagram',
     seasonalBadge: 'Na temporada · Sol da meia-noite · 6 jun → 7 jul',
     seasonalH2: 'Um blog de viagem gratuito para sua viagem à Lapônia, escrito durante o trajeto.',
     seasonalLead:
-      'O Lapland.blog transforma sua viagem em um blog simples e bonito: marque os lugares, adicione fotos, escreva o que aconteceu e compartilhe o link com os amigos. Agora mesmo, isso significa verão. Trinta e duas noites em que o sol não se põe, a floresta fica âmbar e os lagos espelham o céu. Comece o diário enquanto ainda está dentro dela.',
+      'O Lapland.blog transforma sua viagem em um blog simples e bonito: marque os lugares, adicione fotos, escreva o que aconteceu e compartilhe o link com os amigos. Agora mesmo, isso significa verão. Trinta e duas noites em que o sol não se põe, a floresta fica âmbar e os lagos espelham o céu. Comece o diário enquanto o verão ainda não acabou.',
     seasonalCta1: 'Começar seu blog de viagem',
     seasonalCta2: 'Ler as entradas de verão',
     seasonalCard1Title: '24 h de hora dourada',
-    seasonalCard1Body: 'O sol roça o horizonte. Os fotógrafos a chamam de a hora azul mais longa da Terra.',
+    seasonalCard1Body: 'O sol roça o horizonte. Para os fotógrafos, é a hora azul mais longa da Terra.',
     seasonalCard2Title: 'Temporada da amora-ártica',
-    seasonalCard2Body: 'Fim de julho: o pântano fica dourado. Os locais chamam de a segunda colheita.',
+    seasonalCard2Body: 'Fim de julho: o pântano fica dourado. Os moradores chamam isso de segunda colheita.',
     seasonalCard3Title: 'Sauna e depois um mergulho',
-    seasonalCard3Body: 'Lago a 14 °C à meia-noite, sauna a 90 °C a cinco passos. E repete.',
+    seasonalCard3Body: 'Lago a 14 °C à meia-noite, sauna a 90 °C a cinco passos. Repita.',
     seasonalCard4Title: 'Mais ninguém',
     seasonalCard4Body: 'As cabanas que lotam no inverno ficam vazias em julho. A mesma floresta, sem fila.',
     seasonalLabels: { light: '01 · Luz', forest: '02 · Floresta', water: '03 · Água', quiet: '04 · Silêncio' },
@@ -95,21 +95,21 @@ const ptBR: SectionCopy = {
     howH2Pre: 'Três passos. Uma viagem.',
     howH2Italic: 'Um blog que vale a pena guardar.',
     howLead:
-      'O Lapland.blog é uma plataforma gratuita de diário de viagem feita para quem visita a Lapônia finlandesa. Sua viagem vira um blog que você de fato vai querer compartilhar.',
+      'O Lapland.blog é uma plataforma gratuita de diários de viagem feita para quem visita a Lapônia finlandesa. Sua viagem vira um blog que você de fato vai querer compartilhar.',
     howStep1Kicker: 'Passo 01 · Planeje',
     howStep1Title: 'Marque os lugares.',
     howStep1Body:
-      'Coloque marcadores no mapa da Lapônia para a cabana que reservou, o restaurante que quer experimentar e o ponto de céu escuro para a aurora. Trace sua rota antes de voar.',
+      'Coloque marcadores no mapa da Lapônia para a cabana que reservou, o restaurante que quer experimentar e o lugar de céu mais escuro para ver a aurora. Trace sua rota antes de voar.',
     howStep2Kicker: 'Passo 02 · Escreva',
     howStep2Title: 'Escreva no caminho.',
     howStep2Body:
-      'Do celular, na cabana, no carro, na sauna. Acrescente fotos, a temperatura, o gosto da sopa. Cada entrada se fixa ao dia e ao lugar.',
+      'Do celular, na cabana, no carro, na sauna. Acrescente fotos, a temperatura, o gosto da sopa. Cada entrada fica vinculada ao dia e ao lugar.',
     howStep3Kicker: 'Passo 03 · Compartilhe',
     howStep3Title: 'Sua viagem, bem contada.',
     howStep3Body:
       'Suas entradas formam um blog público em lapland.blog/by/seu-nome. Seus amigos podem acompanhar. Cada entrada é exportada como story do Instagram, então a viagem vive duas vezes.',
     howCta: 'Criar seu blog de viagem',
-    howFootnote: 'Grátis para diários de viagem · Sem cartão · Entre com o Google',
+    howFootnote: 'Grátis para diários de viagem · Sem cartão de crédito · Entre com o Google',
     liveEyebrow: 'Blogs de exemplo da redação',
     liveH2Pre: 'Um blog de viagem',
     liveH2Italic: 'é assim.',
@@ -122,7 +122,7 @@ const ptBR: SectionCopy = {
     featuredEyebrow: 'Diário de exemplo do fundador',
     featuredEvery: 'Todas as entradas →',
     featuredLead:
-      'É assim que o seu próprio blog de viagem poderia ficar. As entradas abaixo são do The Field Journal, a redação do Lapland.blog: um pequeno círculo de vozes que percorre o ano da Lapônia, do sol da meia-noite à noite polar. Temperaturas reais, cabanas reais, sopa real. Leia uma e imagine a sua.',
+      'É assim que o seu próprio blog de viagem poderia ficar. As entradas abaixo são do The Field Journal, a redação do Lapland.blog: um pequeno círculo de vozes que percorre o ano da Lapônia, do sol da meia-noite à noite polar. Temperaturas de verdade, cabanas de verdade, sopa de verdade. Leia uma e imagine a sua.',
     featuredLoading: 'Carregando exemplo…',
     featuredNone: 'Ainda não há entradas de exemplo.',
     featuredReadEntry: 'Ler esta entrada',
@@ -161,7 +161,7 @@ const ptBR: SectionCopy = {
     faq: [
       {
         q: 'Como começo um blog de viagem no lapland.blog?',
-        a: 'Faça login com sua conta do Google, dê um nome ao seu blog e escreva a primeira entrada. Cada entrada pode ter texto, fotos, a data e um pino no mapa do lugar onde você esteve. Seu blog fica em lapland.blog/by/seu-nome e está pronto para compartilhar assim que você publica. Não há nada para instalar e nenhuma configuração além do login.',
+        a: 'Faça login com sua conta do Google, dê um nome ao seu blog e escreva a primeira entrada. Cada entrada pode ter texto, fotos, a data e um marcador no mapa do lugar onde você esteve. Seu blog fica em lapland.blog/by/seu-nome e está pronto para compartilhar assim que você publica. Não há nada para instalar e nenhuma configuração além do login.',
       },
       {
         q: 'O lapland.blog é gratuito?',
@@ -173,11 +173,11 @@ const ptBR: SectionCopy = {
       },
       {
         q: 'Preciso estar na Lapônia para escrever um blog aqui?',
-        a: 'Não. Criamos o lapland.blog para quem viaja à Lapônia finlandesa, então o mapa e as sugestões são ajustados para viagens ao norte, mas qualquer pessoa pode manter um blog aqui, esteja planejando uma viagem, escrevendo durante ela ou preenchendo depois de voltar para casa. Você pode começar antes de embarcar e adicionar entradas dia a dia.',
+        a: 'Não. Criamos o lapland.blog para quem viaja à Lapônia finlandesa, então o mapa e as sugestões são pensados para viagens ao norte, mas qualquer pessoa pode manter um blog aqui, esteja planejando uma viagem, escrevendo durante ela ou preenchendo depois de voltar para casa. Você pode começar antes de embarcar e adicionar entradas dia a dia.',
       },
       {
         q: 'Sobre o que escrever no meu diário de viagem da Lapônia?',
-        a: 'Sobre o que você não quer esquecer. Onde se hospedou, como estava a aurora, a temperatura na manhã mais fria, a refeição que surpreendeu, o passeio de trenó com huskies, o silêncio da floresta. Entradas curtas com uma foto e um pino de lugar funcionam bem. Algumas linhas por dia formam um blog que vale a pena reler.',
+        a: 'Sobre o que você não quer esquecer. Onde se hospedou, como estava a aurora, a temperatura na manhã mais fria, a refeição que surpreendeu você, o passeio de trenó com huskies, o silêncio da floresta. Entradas curtas com uma foto e um pino de lugar funcionam bem. Algumas linhas por dia formam um blog que vale a pena reler.',
       },
     ],
   },
@@ -499,8 +499,8 @@ const ptBR: SectionCopy = {
     sending: 'Enviando o link mágico…',
     submitCta: 'Reservar minha página de viagem',
     months: [
-      'janeiro','fevereiro','março','abril','maio','junho',
-      'julho','agosto','setembro','outubro','novembro','dezembro',
+      'janeiro’,’fevereiro’,’março’,’abril’,’maio’,’junho',
+      'julho’,’agosto’,’setembro’,’outubro’,’novembro’,’dezembro',
     ],
   },
   unsubscribe: {
