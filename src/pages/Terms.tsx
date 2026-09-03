@@ -12,7 +12,7 @@ const TITLE: Record<Lang, string> = {
   fi: 'Käyttöehdot · Lapland.blog',
   de: 'Nutzungsbedingungen · Lapland.blog',
   ja: '利用規約 · Lapland.blog',
-  es: 'Términos del servicio · Lapland.blog',
+  es: 'Términos de uso · Lapland.blog',
   'pt-BR': 'Termos de Serviço · Lapland.blog',
   'zh-CN': '服务条款 · Lapland.blog',
   ko: '이용약관 · Lapland.blog',

@@ -48,8 +48,8 @@ const es: SectionCopy = {
   },
   newsletter: {
     eyebrow: 'El boletín #LaplandVibes',
-    h2: 'Laponia en su bandeja, directo desde Finlandia.',
-    lead: 'Cómo leer el pronóstico de auroras, cuándo se agotan de verdad las cabañas y excursiones, y notas de viaje de temporada escritas desde Finlandia. Sin spam ni relleno. Solo cuando hay algo que merezca la pena.',
+    h2: 'Laponia en su bandeja de entrada, directo desde Finlandia.',
+    lead: 'Cómo leer el pronóstico de auroras, cuándo se agotan de verdad las cabañas y excursiones, y notas de viaje de temporada escritas desde Finlandia. Sin spam ni relleno. Solo cuando hay algo que valga la pena.',
     placeholder: 'su@correo.com',
     subscribing: 'Suscribiendo…',
     subscribe: 'Suscribirme',
@@ -75,17 +75,17 @@ const es: SectionCopy = {
       'Marque en el mapa dónde vio las auroras. Fotografíe la cabaña. Anote lo que marcó el termómetro. Cree un blog precioso de su viaje, uno que sus amigos podrán seguir de verdad.',
     heroPrimaryCta: 'Crear su blog de viaje',
     heroSecondaryCta: 'Ver cómo funciona',
-    heroFootnote: 'Su propio diario es gratis para usted · Hecho en Finlandia · Compártelo en Instagram',
+    heroFootnote: 'Su propio diario, gratis · Hecho en Finlandia · Compártalo en Instagram',
     seasonalBadge: 'En temporada · Sol de medianoche · 6 jun → 7 jul',
-    seasonalH2: 'Un blog de viaje gratis para su viaje a Laponia, escrito sobre la marcha.',
+    seasonalH2: 'Un blog gratis de su viaje a Laponia, escrito sobre la marcha.',
     seasonalLead:
-      'Lapland.blog convierte su viaje en un blog sencillo y bonito: marque los lugares, añada fotos, escriba lo que pasó y comparta el enlace con sus amigos. Ahora mismo eso significa verano. Treinta y dos noches en que el sol no se pone, el bosque se tiñe de ámbar y los lagos reflejan el cielo. Empiece el diario mientras aún está dentro de él.',
+      'Lapland.blog convierte su viaje en un blog sencillo y bonito: marque los lugares, añada fotos, escriba lo que pasó y comparta el enlace con sus amigos. Ahora mismo eso significa verano. Treinta y dos noches en que el sol no se pone, el bosque se tiñe de ámbar y los lagos reflejan el cielo. Empiece el diario mientras el verano todavía dura.',
     seasonalCta1: 'Empezar su blog de viaje',
     seasonalCta2: 'Leer las entradas de verano',
     seasonalCard1Title: '24 h de hora dorada',
     seasonalCard1Body: 'El sol roza el horizonte. Los fotógrafos la llaman la hora azul más larga de la Tierra.',
     seasonalCard2Title: 'Temporada de mora ártica',
-    seasonalCard2Body: 'Finales de julio: la turbera se vuelve dorada. Los locales la llaman la segunda cosecha.',
+    seasonalCard2Body: 'Finales de julio: la turbera se vuelve dorada. Los lugareños la llaman la segunda cosecha.',
     seasonalCard3Title: 'Sauna y después un baño',
     seasonalCard3Body: 'Lago a 14 °C a medianoche, sauna a 90 °C a cinco pasos. Y repetir.',
     seasonalCard4Title: 'Nadie más',
@@ -99,11 +99,11 @@ const es: SectionCopy = {
     howStep1Kicker: 'Paso 01 · Planee',
     howStep1Title: 'Marque los lugares.',
     howStep1Body:
-      'Ponga marcadores en el mapa de Laponia para la cabaña que reservó, el restaurante que quiere probar y el rincón de cielo oscuro para las auroras. Trace su ruta antes de volar.',
+      'Marque en el mapa de Laponia la cabaña que reservó, el restaurante que quiere probar y el rincón de cielo oscuro para las auroras. Trace su ruta antes de volar.',
     howStep2Kicker: 'Paso 02 · Escriba',
     howStep2Title: 'Escriba sobre la marcha.',
     howStep2Body:
-      'Desde el móvil, en la cabaña, en el coche, en la sauna. Añada fotos, la temperatura, a qué sabía la sopa. Cada entrada se ancla al día y al lugar.',
+      'Desde el móvil, en la cabaña, en el coche, en la sauna. Añada fotos, la temperatura, a qué sabía la sopa. Cada entrada queda ligada a un día y a un lugar.',
     howStep3Kicker: 'Paso 03 · Comparta',
     howStep3Title: 'Su viaje, bien contado.',
     howStep3Body:
@@ -115,9 +115,9 @@ const es: SectionCopy = {
     liveH2Italic: 'de viaje.',
     liveH2Tail: 'El suyo es el siguiente.',
     liveLead:
-      'Las pistas negras de Levi. Noches de auroras en Inari. 60 km en trineo de huskies en Saariselkä. The Field Journal, nuestra redacción, montó estos blogs de ejemplo para mostrar el formato. El suyo de verdad se empieza en menos de cinco minutos.',
+      'Las pistas negras de Levi. Noches de auroras en Inari. 60 km en trineo de huskies en Saariselkä. The Field Journal, nuestra redacción, montó estos blogs de ejemplo para mostrar el formato. El suyo, el de verdad, se crea en menos de cinco minutos.',
     liveBrowseAll: 'Ver todos los blogs',
-    liveCta: 'Crear mi blog de viaje',
+    liveCta: 'Crear su blog de viaje',
     liveFootnote: 'Gratis · Sin tarjeta · 2 minutos hasta su primera entrada',
     featuredEyebrow: 'Diario de ejemplo del fundador',
     featuredEvery: 'Todas las entradas →',
@@ -130,7 +130,7 @@ const es: SectionCopy = {
     pillarsH2Pre: 'El viaje a Laponia,',
     pillarsH2Italic: 'en tres hilos.',
     pillarsLead:
-      'Vea lo que otros viajeros han anotado y elija los hilos sobre los que escribirá en su propio viaje. Auroras, cabañas, comida, el frío, la gente, los silencios entre medias.',
+      'Vea lo que otros viajeros han anotado y elija los hilos sobre los que escribirá en su propio viaje. Auroras, cabañas, comida, el frío, la gente, los silencios de por medio.',
     pillar1Kicker: 'I · El frío',
     pillar1Title: 'Lo que el frío de verdad hace',
     pillar1Body:
@@ -169,7 +169,7 @@ const es: SectionCopy = {
       },
       {
         q: '¿Puedo compartir mi blog de Laponia en Instagram y Facebook?',
-        a: 'Sí. Cada blog tiene un enlace público que puede publicar donde quiera, y cada entrada se puede exportar como imagen del tamaño de una historia de Instagram para compartir un solo día con un toque. Sus amigos y su familia pueden abrir su blog sin tener cuenta propia.',
+        a: 'Sí. Cada blog tiene un enlace público que puede publicar donde quiera, y cada entrada se puede exportar como imagen del tamaño de una historia de Instagram para compartir un solo día con un solo toque. Sus amigos y su familia pueden abrir su blog sin tener cuenta propia.',
       },
       {
         q: '¿Tengo que estar en Laponia para escribir un blog aquí?',
@@ -185,7 +185,7 @@ const es: SectionCopy = {
     eyebrow: 'Bienvenido',
     h1: 'Hola. Tres formas de entrar.',
     lead:
-      'Lapland.blog es un sitio de diario de viaje gratuito, pausado y guiado por la imagen, para quienes de verdad van a la Laponia finlandesa. Tanto si planea un viaje, está en mitad de uno o ya volvió a casa lamentando no haberlo anotado, elija su camino.',
+      'Lapland.blog es un sitio de diario de viaje gratuito, pausado y guiado por la imagen, para quienes de verdad van a la Laponia finlandesa. Tanto si planea un viaje como si está en mitad de uno o ya volvió a casa lamentando no haberlo anotado, elija su camino.',
     path1Kicker: '01 · Planificar',
     path1Title: 'Estoy planeando un viaje a Laponia.',
     path1Body:
@@ -392,7 +392,7 @@ const es: SectionCopy = {
         name: 'Auroras',
         tagline: 'El cielo, cuando se porta bien.',
         description:
-          'Noches bajo las auroras boreales, contadas con honestidad. Tiempo, índice Kp, espera, frío y los momentos que de verdad llegan.',
+          'Noches bajo las auroras boreales, contadas con honestidad. Clima, índice Kp, espera, frío y los momentos que de verdad llegan.',
         metaTitle: 'Auroras boreales en la Laponia finlandesa · Lapland.blog',
         metaDescription:
           'Noches de aurora boreal en la Laponia finlandesa, contadas con honestidad: tiempo, índice Kp, espera, frío y los momentos que de verdad llegan.',
@@ -479,7 +479,7 @@ const es: SectionCopy = {
     benefit1Body: 'Cabaña, restaurante, rincón de auroras: ponga los marcadores antes de volar.',
     benefit2Title: 'Escriba entradas desde el móvil',
     benefit2Body: 'Desde la cabaña, el coche, la sauna. Fotos, tiempo, historias.',
-    benefit3Title: 'Comparta en Instagram con un toque',
+    benefit3Title: 'Comparta en Instagram con un solo toque',
     benefit3Body: 'Cada entrada se exporta como historia vertical que sus amigos de verdad abren.',
     footnote: 'Diarios de viaje gratuitos · Sin tarjeta de crédito · Hecho en Finlandia',
     sentTitle: 'Revise su bandeja de entrada',

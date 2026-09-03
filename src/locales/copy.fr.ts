@@ -22,14 +22,14 @@ const fr: SectionCopy = {
     heroLine1: 'Vous partez en Laponie ?',
     heroLine2: 'Lancez un blog de votre voyage.',
     heroLead:
-      'Épinglez l’endroit où vous avez vu les aurores. Photographiez le chalet. Notez la température. Construisez un beau blog de votre voyage, un blog que vos amis peuvent vraiment suivre.',
+      'Épinglez l’endroit où vous avez vu les aurores. Photographiez le chalet. Notez la température. Faites de votre voyage un beau blog, un blog que vos amis peuvent vraiment suivre.',
     heroPrimaryCta: 'Lancer votre blog de voyage',
     heroSecondaryCta: 'Voir comment ça marche',
     heroFootnote: 'Votre carnet personnel est gratuit · Fait en Finlande · Partage Instagram',
     seasonalBadge: 'En saison · Soleil de minuit · 6 juin → 7 juillet',
     seasonalH2: 'Un blog de voyage gratuit pour votre séjour en Laponie, écrit en chemin.',
     seasonalLead:
-      'Lapland.blog transforme votre voyage en un blog simple et beau : épinglez les lieux, ajoutez des photos, racontez ce qui s’est passé et partagez le lien à vos proches. En ce moment, c’est l’été. Trente-deux nuits où le soleil ne se couche pas, où la forêt prend des reflets ambrés et où les lacs reflètent le ciel. Commencez le carnet pendant que vous y êtes encore.',
+      'Lapland.blog transforme votre voyage en un blog simple et beau : épinglez les lieux, ajoutez des photos, racontez ce qui s’est passé et partagez le lien avec vos proches. En ce moment, c’est l’été. Trente-deux nuits où le soleil ne se couche pas, où la forêt prend des reflets ambrés et où les lacs reflètent le ciel. Commencez le carnet pendant que vous y êtes encore.',
     seasonalCta1: 'Lancer votre blog de voyage',
     seasonalCta2: 'Lire les récits d’été',
     seasonalCard1Title: '24 heures d’heure dorée',
@@ -37,7 +37,7 @@ const fr: SectionCopy = {
     seasonalCard2Title: 'Saison des plaquebières',
     seasonalCard2Body: 'Fin juillet : la tourbière vire à l’or. Les habitants l’appellent la deuxième moisson.',
     seasonalCard3Title: 'Sauna, puis baignade',
-    seasonalCard3Body: 'Un lac à 14 °C à minuit, un sauna à 90 °C à cinq pas. Répétez.',
+    seasonalCard3Body: 'Un lac à 14 °C à minuit, un sauna à 90 °C à cinq pas. Et on recommence.',
     seasonalCard4Title: 'Personne d’autre',
     seasonalCard4Body: 'Les chalets pleins en hiver restent vides en juillet. Même forêt, sans file d’attente.',
     seasonalLabels: { light: '01 · Lumière', forest: '02 · Forêt', water: '03 · Eau', quiet: '04 · Silence' },
@@ -49,26 +49,26 @@ const fr: SectionCopy = {
     howStep1Kicker: 'Étape 01 · Planifier',
     howStep1Title: 'Épinglez les lieux.',
     howStep1Body:
-      'Posez des épingles sur la carte de Laponie : le chalet que vous avez réservé, le restaurant que vous voulez essayer, le coin de ciel noir pour les aurores. Construisez votre itinéraire avant l’embarquement.',
+      'Épinglez vos lieux sur la carte de Laponie : le chalet que vous avez réservé, le restaurant que vous voulez essayer, le coin de ciel noir pour les aurores. Construisez votre itinéraire avant l’embarquement.',
     howStep2Kicker: 'Étape 02 · Tenir le journal',
     howStep2Title: 'Écrivez au fil du voyage.',
     howStep2Body:
-      'Depuis votre téléphone, dans le chalet, dans la voiture, au sauna. Ajoutez photos, température, le goût de la soupe. Chaque entrée s’épingle automatiquement au jour et au lieu.',
+      'Depuis votre téléphone, dans le chalet, dans la voiture, au sauna. Ajoutez des photos, la température, le goût de la soupe. Chaque entrée est automatiquement datée et géolocalisée.',
     howStep3Kicker: 'Étape 03 · Partager',
     howStep3Title: 'Votre voyage, bien raconté.',
     howStep3Body:
-      'Vos entrées deviennent un blog public à l’adresse lapland.blog/by/votre-nom. Vos amis peuvent le suivre. Chaque article s’exporte en story Instagram, et le voyage vit deux fois.',
+      'Vos entrées deviennent un blog public à l’adresse lapland.blog/by/votre-nom. Vos amis peuvent le suivre. Chaque entrée s’exporte en story Instagram, et le voyage vit deux fois.',
     howCta: 'Lancer votre blog de voyage',
-    howFootnote: 'Gratuit pour les carnets de voyage · Sans carte · Connexion Google',
+    howFootnote: 'Gratuit pour les carnets de voyage · Sans carte bancaire · Connexion Google',
     liveEyebrow: 'Blogs-exemples de la rédaction',
     liveH2Pre: 'Voici à quoi ressemble',
     liveH2Italic: 'un blog de voyage.',
     liveH2Tail: 'Le vôtre est le prochain.',
     liveLead:
-      'Pistes noires à Levi. Nuits d’aurores à Inari. 60 km en traîneau à chiens à Saariselkä. The Field Journal, notre rédaction, a construit ces blogs-exemples pour montrer le format. Le vôtre, le vrai, se lance en moins de cinq minutes.',
+      'Pistes noires à Levi. Nuits d’aurores à Inari. 60 km en traîneau à chiens à Saariselkä. The Field Journal, notre rédaction, a rédigé ces blogs d’exemple pour montrer le format. Le vôtre, le vrai, se lance en moins de cinq minutes.',
     liveBrowseAll: 'Parcourir tous les blogs',
     liveCta: 'Lancer mon blog de voyage',
-    liveFootnote: 'Gratuit · Sans carte · Première entrée en 2 minutes',
+    liveFootnote: 'Gratuit · Sans carte bancaire · Première entrée en 2 minutes',
     featuredEyebrow: 'Journal-exemple du fondateur',
     featuredEvery: 'Toutes les entrées →',
     featuredLead:
@@ -111,11 +111,11 @@ const fr: SectionCopy = {
     faq: [
       {
         q: 'Comment démarrer un blog de voyage sur lapland.blog ?',
-        a: "Connectez-vous avec votre compte Google, donnez un nom à votre blog et écrivez votre première entrée. Chaque entrée peut contenir du texte, des photos, la date et un repère sur la carte pour l'endroit où vous étiez. Votre blog se trouve à l'adresse lapland.blog/by/votre-nom et est prêt à être partagé dès sa publication : rien à installer et aucune configuration en dehors de la connexion.",
+        a: "Connectez-vous avec votre compte Google, donnez un nom à votre blog et écrivez votre première entrée. Chaque entrée peut contenir du texte, des photos, la date et un repère sur la carte pour l’endroit où vous étiez. Votre blog se trouve à l'adresse lapland.blog/by/votre-nom et est prêt à être partagé dès sa publication : rien à installer et aucune configuration en dehors de la connexion.",
       },
       {
         q: 'lapland.blog est-il gratuit ?',
-        a: "Oui. Créer un blog, écrire des entrées, ajouter des photos, repérer des lieux sur la carte et partager votre blog, tout est gratuit. Aucune carte n'est requise pour s'inscrire et votre blog ne comporte pas de publicité.",
+        a: "Oui. Créer un blog, écrire des entrées, ajouter des photos, repérer des lieux sur la carte et partager votre blog, tout est gratuit. Aucune carte bancaire n'est requise pour s'inscrire et votre blog ne comporte pas de publicité.",
       },
       {
         q: 'Puis-je partager mon blog de Laponie sur Instagram et Facebook ?',
@@ -123,7 +123,7 @@ const fr: SectionCopy = {
       },
       {
         q: 'Dois-je être en Laponie pour écrire un blog ici ?',
-        a: "Non. Nous avons conçu lapland.blog pour les voyageurs en route vers la Laponie finlandaise, donc la carte et les suggestions sont pensées pour les voyages dans le Nord, mais chacun peut tenir un blog ici, que vous prépariez un voyage, l'écriviez en chemin ou le complétiez une fois rentré. Vous pouvez commencer avant le départ et ajouter des entrées jour après jour.",
+        a: "Non. Nous avons conçu lapland.blog pour les voyageurs en route vers la Laponie finlandaise, donc la carte et les suggestions sont pensées pour les voyages dans le Nord, mais chacun peut tenir un blog ici, que vous prépariez un voyage, le racontiez en chemin ou terminiez le récit une fois rentré. Vous pouvez commencer avant le départ et ajouter des entrées jour après jour.",
       },
       {
         q: 'Sur quoi écrire dans mon carnet de voyage en Laponie ?',
@@ -342,7 +342,7 @@ const fr: SectionCopy = {
         name: 'Aurores',
         tagline: 'Le ciel, quand il veut bien.',
         description:
-          'Des nuits sous les aurores boréales, racontées honnêtement. Météo, indice Kp, attente, froid, et les moments qui comptent vraiment.',
+          'Des nuits sous les aurores boréales, racontées honnêtement. Météo, indice Kp, attente, froid et les moments qui comptent vraiment.',
         metaTitle: 'Aurores boréales en Laponie finlandaise · Lapland.blog',
         metaDescription:
           'Nuits d’aurores boréales en Laponie finlandaise, racontées honnêtement : météo, indice Kp, attente, froid et les moments qui comptent vraiment.',

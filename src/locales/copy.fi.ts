@@ -72,14 +72,14 @@ const fi: SectionCopy = {
     heroLine1: 'Lähdössä Lappiin?',
     heroLine2: 'Tee matkastasi blogi.',
     heroLead:
-      'Merkitse paikka, jossa näit revontulet. Kuvaa mökki. Kirjoita mitä lämpötila teki. Rakenna matkastasi blogi, jota kaverit oikeasti seuraavat.',
+      'Merkitse paikka, jossa näit revontulet. Kuvaa mökki. Kirjoita, mitä lämpötila teki. Rakenna matkastasi blogi, jota kaverit oikeasti seuraavat.',
     heroPrimaryCta: 'Aloita matkablogi',
     heroSecondaryCta: 'Katso miten se toimii',
-    heroFootnote: 'Oma blogisi on sinulle ilmainen · Tehty Suomessa · Jaa Instagramiin',
+    heroFootnote: 'Oma blogi ilmaiseksi · Tehty Suomessa · Jaa Instagramiin',
     seasonalBadge: 'Juuri nyt · Keskiyön aurinko · 6.6. → 7.7.',
     seasonalH2: 'Ilmainen matkablogi Lapin-reissullesi: kirjoita matkan aikana.',
     seasonalLead:
-      'Lapland.blog tekee matkastasi yksinkertaisen ja kauniin blogin: merkitse paikat, lisää kuvat, kirjoita mitä tapahtui ja jaa linkki kavereille. Juuri nyt se tarkoittaa kesää. 32 yötä, kun aurinko ei laske, metsä muuttuu kullaksi ja järvet peilaavat taivasta. Aloita päiväkirja, kun olet vielä siellä.',
+      'Lapland.blog tekee matkastasi yksinkertaisen ja kauniin blogin: merkitse paikat, lisää kuvat, kirjoita, mitä tapahtui, ja jaa linkki kavereille. Juuri nyt on kesä. 32 yötä, kun aurinko ei laske, metsä muuttuu kullaksi ja järvet peilaavat taivasta. Aloita päiväkirja, kun olet vielä siellä.',
     seasonalCta1: 'Aloita matkablogi',
     seasonalCta2: 'Lue kesän merkinnät',
     seasonalCard1Title: '24 tunnin kultainen hetki',
@@ -89,7 +89,7 @@ const fi: SectionCopy = {
     seasonalCard3Title: 'Sauna, sitten pulahdus',
     seasonalCard3Body: '14-asteinen järvi keskiyöllä, 90-asteinen sauna viiden askeleen päässä. Toistetaan.',
     seasonalCard4Title: 'Ei ketään muuta',
-    seasonalCard4Body: 'Talvella loppuun varatut mökit ovat tyhjillään heinäkuussa. Sama metsä, ei jonoa.',
+    seasonalCard4Body: 'Talvella täyteen varatut mökit ovat tyhjillään heinäkuussa. Sama metsä, ei jonoa.',
     seasonalLabels: { light: '01 · Valo', forest: '02 · Metsä', water: '03 · Vesi', quiet: '04 · Hiljaisuus' },
     howEyebrow: 'Näin se toimii',
     howH2Pre: 'Kolme askelta. Yksi matka.',
@@ -99,30 +99,30 @@ const fi: SectionCopy = {
     howStep1Kicker: 'Askel 01 · Suunnittele',
     howStep1Title: 'Merkitse paikat.',
     howStep1Body:
-      'Pudota Lapin kartalle pinnit varatulle mökille, ravintolalle ja revontulipaikalle. Rakenna reitti ennen lentoa.',
+      'Merkitse Lapin kartalle varattu mökki, ravintola ja revontulipaikka. Rakenna reitti ennen lentoa.',
     howStep2Kicker: 'Askel 02 · Kirjoita',
     howStep2Title: 'Kirjoita matkan aikana.',
     howStep2Body:
-      'Puhelimesta, mökistä, autosta, saunasta. Liitä kuvat, lämpötila, miltä keitto maistui. Jokainen merkintä kiinnittyy päivään ja paikkaan.',
+      'Puhelimella, mökissä, autossa, saunassa. Liitä kuvat, lämpötila, miltä keitto maistui. Jokainen merkintä kiinnittyy päivään ja paikkaan.',
     howStep3Kicker: 'Askel 03 · Jaa',
     howStep3Title: 'Matkasi, hyvin kerrottuna.',
     howStep3Body:
-      'Merkinnöistäsi tulee julkinen blogi osoitteessa lapland.blog/by/oma-nimi. Kaverit voivat seurata. Jokaisen voi viedä Instagram-tarinaksi, jotta matka elää kahdesti.',
+      'Merkinnöistäsi tulee julkinen blogi osoitteessa lapland.blog/by/oma-nimi. Kaverit voivat seurata. Jokaisen merkinnän voi viedä Instagram-tarinaksi, jotta matka elää kahdesti.',
     howCta: 'Aloita matkablogi',
-    howFootnote: 'Ilmaiset matkapäiväkirjat · Ei korttia · Kirjaudu Googlella',
+    howFootnote: 'Ilmainen matkapäiväkirja · Ei maksukorttia · Kirjaudu Googlella',
     liveEyebrow: 'Toimituksen esimerkkiblogit',
     liveH2Pre: 'Tältä matkablogi',
     liveH2Italic: 'näyttää.',
     liveH2Tail: 'Seuraava on sinun.',
     liveLead:
-      'Mustia rinteitä Levillä. Revontuliöitä Inarissa. 60 km koiravaljakolla Saariselällä. The Field Journal, toimituksemme, rakensi nämä esimerkkiblogit näyttämään formaatin. Oma oikea blogisi syntyy alle viidessä minuutissa.',
+      'Mustia rinteitä Levillä. Revontuliöitä Inarissa. 60 km koiravaljakolla Saariselällä. The Field Journal, toimituksemme, rakensi nämä esimerkkiblogit havainnollistamaan formaattia. Oma oikea blogisi syntyy alle viidessä minuutissa.',
     liveBrowseAll: 'Selaa kaikkia blogeja',
     liveCta: 'Aloita oma matkablogi',
-    liveFootnote: 'Ilmainen · Ei korttia · 2 minuuttia ensimmäiseen merkintään',
+    liveFootnote: 'Ilmainen · Ei maksukorttia · 2 minuuttia ensimmäiseen merkintään',
     featuredEyebrow: 'Toimituksen esimerkkipäiväkirja',
     featuredEvery: 'Kaikki merkinnät →',
     featuredLead:
-      'Tältä oma matkablogisi voisi näyttää. Alla olevat merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus, pieni kirjoittajapiiri, joka kattaa Lapin vuoden yöttömästä yöstä kaamokseen. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele oma.',
+      'Tältä oma matkablogisi voisi näyttää. Alla olevat merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus, pieni kirjoittajapiiri, joka kattaa Lapin vuoden yöttömästä yöstä kaamokseen. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele omasi.',
     featuredLoading: 'Ladataan esimerkkiä…',
     featuredNone: 'Ei esimerkkimerkintöjä vielä.',
     featuredReadEntry: 'Lue tämä merkintä',
@@ -130,7 +130,7 @@ const fi: SectionCopy = {
     pillarsH2Pre: 'Lapin matka,',
     pillarsH2Italic: 'kolmessa juonteessa.',
     pillarsLead:
-      'Selaa mitä muut matkailijat ovat kirjanneet ja valitse juonteet, joista itse kirjoitat. Revontulet, mökit, ruoka, kylmyys, ihmiset, hiljaisuus siinä välissä.',
+      'Selaa, mitä muut matkailijat ovat kirjanneet, ja valitse aiheet, joista itse kirjoitat. Revontulet, mökit, ruoka, kylmyys, ihmiset, hiljaisuus siinä välissä.',
     pillar1Kicker: 'I · Kylmyys',
     pillar1Title: 'Mitä kylmyys oikeasti tekee',
     pillar1Body:
@@ -150,9 +150,9 @@ const fi: SectionCopy = {
     asideEyebrow: 'Miksi tämä on olemassa',
     asideH2: 'Lappi ei ole esite. Matkasikaan ei ole.',
     asideP1:
-      'Vuosittain tuhannet matkailijat saapuvat Lappiin, näkevät jotain tavatonta ja hukkaavat sen puhelimen kuvavirtaan, jota ei enää avata. Revontulet mökin yllä. Paluumatka saunalta sormet puutuneina. Se 42 euron lohikeitto, joka oli jotenkin hintansa väärtti. Poissa viikossa.',
+      'Vuosittain tuhannet matkailijat saapuvat Lappiin, näkevät jotain tavatonta ja hukkaavat sen puhelimen galleriaan, jota ei enää avata. Revontulet mökin yllä. Paluumatka saunalta sormet puutuneina. Se 42 euron lohikeitto, joka oli jotenkin hintansa väärtti. Viikon päästä poissa.',
     asideP2:
-      'Lapland.blog on pieni ilmainen työkalu sen korjaamiseen. Merkitse missä olit. Kirjoita mitä näit. Kuvaa keitto. Kun lennät kotiin, sinulla on oikea blogi matkasta: sellainen, jota kaverit voivat oikeasti seurata ja jota itse haluat lukea viiden vuoden päästä. Ei kuvapankkikuvia. Ei "taianomaista talvimaailmaa". Vain oma rehellinen versiosi paikasta.',
+      'Lapland.blog on pieni ilmainen työkalu sen korjaamiseen. Merkitse, missä olit. Kirjoita, mitä näit. Kuvaa keitto. Kun lennät kotiin, sinulla on oikea blogi matkasta: sellainen, jota kaverit voivat oikeasti seurata ja jota itse haluat lukea viiden vuoden päästä. Ei kuvapankkikuvia. Ei ”taianomaista talvimaailmaa”. Vain oma rehellinen versiosi paikasta.',
     asideCta1: 'Aloita oma',
     asideCta2: 'Tietoa lapland.blogista',
     asidePill: 'Sinun matkasi · Sinun blogisi',
@@ -165,7 +165,7 @@ const fi: SectionCopy = {
       },
       {
         q: 'Onko lapland.blog ilmainen?',
-        a: 'Kyllä. Blogin aloittaminen, merkintöjen kirjoittaminen, kuvien lisääminen, paikkojen merkitseminen kartalle ja blogin jakaminen ovat kaikki ilmaisia. Rekisteröitymiseen ei tarvita korttia, eikä blogissasi ole mainoksia.',
+        a: 'Kyllä. Blogin aloittaminen, merkintöjen kirjoittaminen, kuvien lisääminen, paikkojen merkitseminen kartalle ja blogin jakaminen ovat kaikki ilmaisia. Rekisteröitymiseen ei tarvita maksukorttia, eikä blogissasi ole mainoksia.',
       },
       {
         q: 'Voinko jakaa Lapin-blogini Instagramissa ja Facebookissa?',
@@ -177,7 +177,7 @@ const fi: SectionCopy = {
       },
       {
         q: 'Mistä kannattaa kirjoittaa Lapin-matkapäiväkirjassa?',
-        a: 'Siitä, mitä et halua unohtaa. Missä yövyit, miltä revontulet näyttivät, kylmimmän aamun lämpötila, ruoka joka yllätti, huskyajelu, metsän hiljaisuus. Lyhyet merkinnät, joissa on kuva ja paikkapinni, toimivat hyvin. Muutama rivi päivässä kasvaa blogiksi, jonka haluaa lukea uudelleen.',
+        a: 'Siitä, mitä et halua unohtaa. Missä yövyit, miltä revontulet näyttivät, kylmimmän aamun lämpötila, ruoka, joka yllätti, huskyajelu, metsän hiljaisuus. Lyhyet merkinnät, joissa on kuva ja paikkapinni, toimivat hyvin. Muutama rivi päivässä kasvaa blogiksi, jonka haluaa lukea uudelleen.',
       },
     ],
   },
@@ -393,7 +393,7 @@ const fi: SectionCopy = {
         name: 'Revontulet',
         tagline: 'Taivas, kun se suostuu.',
         description:
-          'Yöt revontulten alla, rehellisesti kerrottuna. Sää, Kp-indeksi, odotus, pakkanen ja ne hetket, jotka oikeasti osuvat.',
+          'Yöt revontulten alla, rehellisesti kerrottuna. Sää, Kp-indeksi, odotus, pakkanen ja ne hetket, jotka oikeasti osuvat kohdalle.',
         metaTitle: 'Revontulijutut Suomen Lapista · Lapland.blog',
         metaDescription:
           'Revontuliyöt Suomen Lapissa rehellisesti kerrottuna: sää, Kp-indeksi, odotus, pakkanen ja ne hetket, jotka oikeasti osuvat.',

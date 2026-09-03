@@ -75,7 +75,7 @@ const en: SectionCopy = {
       'Pin where you saw the aurora. Photograph the cabin. Write what the temperature did. Build a beautiful blog of your trip, one your friends can actually follow.',
     heroPrimaryCta: 'Start your trip blog',
     heroSecondaryCta: 'See how it works',
-    heroFootnote: 'Your own journal is free for you · Made in Finland · Share to Instagram',
+    heroFootnote: 'Your own journal is free · Made in Finland · Share to Instagram',
     seasonalBadge: 'In season now · Midnight sun · Jun 6 → Jul 7',
     seasonalH2: 'A free travel blog for your Lapland trip, written as you go.',
     seasonalLead:
@@ -169,7 +169,7 @@ const en: SectionCopy = {
       },
       {
         q: 'Can I share my Lapland blog on Instagram and Facebook?',
-        a: 'Yes. Every blog has a public link you can post anywhere, and each entry can be exported as an Instagram-story-sized image so you can share a single day in a tap. Friends and family can open your blog without an account of their own.',
+        a: 'Yes. Every blog has a public link you can post anywhere, and each entry can be exported as an Instagram-story-sized image so you can share a single day in one tap. Friends and family can open your blog without an account of their own.',
       },
       {
         q: 'Do I have to be in Lapland to write a blog here?',
@@ -395,7 +395,7 @@ const en: SectionCopy = {
           'Nights under the northern lights, the honest ones. Weather, Kp-index, waiting, cold, and the moments that actually land.',
         metaTitle: 'Aurora stories from Finnish Lapland · Lapland.blog',
         metaDescription:
-          'Northern-lights nights in Finnish Lapland, the honest ones: weather, Kp-index, waiting, cold, and the moments that actually land.',
+          'Northern-lights nights in Finnish Lapland, the honest ones: weather, Kp index, waiting, cold, and the moments that actually land.',
       },
       cabins: {
         name: 'Cabins',

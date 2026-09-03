@@ -22,10 +22,10 @@ const nl: SectionCopy = {
     heroLine1: 'Gaat u naar Lapland?',
     heroLine2: 'Start een blog van uw reis.',
     heroLead:
-      'Zet een speld op de plek waar u het noorderlicht zag. Fotografeer de hut. Schrijf op wat de temperatuur deed. Bouw een mooie blog van uw reis, een blog die uw vrienden echt kunnen volgen.',
+      'Zet een speld op de plek waar u het noorderlicht zag. Fotografeer de hut. Schrijf op wat de temperatuur deed. Maak van uw reis een mooie blog, een blog die uw vrienden echt kunnen volgen.',
     heroPrimaryCta: 'Start uw reisblog',
     heroSecondaryCta: 'Zie hoe het werkt',
-    heroFootnote: 'Uw eigen dagboek is gratis voor u · Gemaakt in Finland · Deel via Instagram',
+    heroFootnote: 'Uw eigen dagboek is gratis · Gemaakt in Finland · Deel via Instagram',
     seasonalBadge: 'Nu in het seizoen · Middernachtzon · 6 jun → 7 jul',
     seasonalH2: 'Een gratis reisblog voor uw Lapland-reis, onderweg geschreven.',
     seasonalLead:
@@ -33,7 +33,7 @@ const nl: SectionCopy = {
     seasonalCta1: 'Start uw reisblog',
     seasonalCta2: 'Lees zomerverhalen',
     seasonalCard1Title: '24 uur gouden uur',
-    seasonalCard1Body: 'De zon scheert langs de horizon. Fotografen noemen het het langste blauwe uur ter aarde.',
+    seasonalCard1Body: 'De zon scheert langs de horizon. Fotografen noemen het het langste blauwe uur op aarde.',
     seasonalCard2Title: 'Kruipbraamseizoen',
     seasonalCard2Body: 'Eind juli kleurt het hoogveen goud. Lokale bewoners noemen het de tweede oogst.',
     seasonalCard3Title: 'Sauna, dan het meer in',
@@ -49,15 +49,15 @@ const nl: SectionCopy = {
     howStep1Kicker: 'Stap 01 · Plannen',
     howStep1Title: 'Prik de plekken vast.',
     howStep1Body:
-      'Zet spelden op de Lapland-kaart voor de hut die u boekte, het restaurant dat u wilt proberen en de donkere plek voor het noorderlicht. Bouw uw route voordat u vliegt.',
+      'Zet spelden op de Lapland-kaart voor de hut die u boekte, het restaurant dat u wilt proberen en de donkere plek voor het noorderlicht. Stippel uw route uit voordat u vertrekt.',
     howStep2Kicker: 'Stap 02 · Dagboek',
     howStep2Title: 'Schrijf onderweg.',
     howStep2Body:
-      'Vanaf uw telefoon, in de hut, in de auto, in de sauna. Voeg foto’s toe, de temperatuur, hoe de soep smaakte. Elke notitie wordt vanzelf aan de dag en de plek gekoppeld.',
+      'Vanaf uw telefoon, in de hut, in de auto, in de sauna. Voeg foto’s, de temperatuur en de smaak van de soep toe. Elke notitie wordt vanzelf aan de dag en de plek gekoppeld.',
     howStep3Kicker: 'Stap 03 · Delen',
     howStep3Title: 'Uw reis, goed verteld.',
     howStep3Body:
-      'Uw notities worden een openbare blog op lapland.blog/by/uw-naam. Vrienden kunnen hem volgen. Elke post wordt geëxporteerd naar een Instagram-story, en de reis leeft tweemaal.',
+      'Uw notities worden een openbare blog op lapland.blog/by/uw-naam. Vrienden kunnen hem volgen. Elk bericht kunt u exporteren als Instagram-story, en u beleeft de reis twee keer.',
     howCta: 'Start uw reisblog',
     howFootnote: 'Gratis voor reisdagboeken · Geen creditcard nodig · Aanmelden met Google',
     liveEyebrow: 'Voorbeeldblogs van de redactie',
@@ -65,14 +65,14 @@ const nl: SectionCopy = {
     liveH2Italic: 'eruit.',
     liveH2Tail: 'De volgende is die van u.',
     liveLead:
-      'De zwarte pistes van Levi. Noorderlichtnachten in Inari. 60 km met de huskyslee in Saariselkä. The Field Journal, onze redactie, bouwde deze voorbeeldblogs om het format te laten zien. Uw echte blog start u in minder dan vijf minuten.',
+      'De zwarte pistes van Levi. Noorderlichtnachten in Inari. 60 km met de huskyslee in Saariselkä. The Field Journal, onze redactie, maakte deze voorbeeldblogs om het format te laten zien. Uw echte blog start u in minder dan vijf minuten.',
     liveBrowseAll: 'Alle blogs bekijken',
     liveCta: 'Start mijn reisblog',
-    liveFootnote: 'Gratis · Geen kaart · Eerste notitie binnen 2 minuten',
+    liveFootnote: 'Gratis · Geen creditcard nodig · Eerste notitie binnen 2 minuten',
     featuredEyebrow: 'Voorbeelddagboek van de oprichter',
     featuredEvery: 'Elke notitie →',
     featuredLead:
-      'Dit is hoe uw eigen reisblog eruit zou kunnen zien. De notities hieronder komen van The Field Journal, de redactie van Lapland.blog: een kleine kring schrijvers die het Laplandse jaar volgt, van middernachtzon tot poolnacht. Echte temperaturen, echte hutten, echte soep. Lees er één en stelt u zich uw eigen reis voor.',
+      'Zo zou uw eigen reisblog eruit kunnen zien. De notities hieronder komen van The Field Journal, de redactie van Lapland.blog: een kleine kring schrijvers die het Laplandse jaar volgt, van middernachtzon tot poolnacht. Echte temperaturen, echte hutten, echte soep. Lees er één en stel u voor hoe uw eigen reis eruit zou zien.',
     featuredLoading: 'Voorbeeld laden…',
     featuredNone: 'Nog geen voorbeeldnotities.',
     featuredReadEntry: 'Lees deze notitie',
@@ -80,7 +80,7 @@ const nl: SectionCopy = {
     pillarsH2Pre: 'De reis door Lapland,',
     pillarsH2Italic: 'in drie draden.',
     pillarsLead:
-      'Blader door wat andere reizigers vastlegden, en kies de draden waarover u zelf wilt schrijven. Noorderlicht, hutten, eten, de kou, de mensen en de stiltes ertussen.',
+      'Blader door wat andere reizigers vastlegden, en kies de thema's waarover u zelf wilt schrijven. Noorderlicht, hutten, eten, de kou, de mensen en de stiltes ertussen.',
     pillar1Kicker: 'I · De kou',
     pillar1Title: 'Wat de kou werkelijk doet',
     pillar1Body:
@@ -115,11 +115,11 @@ const nl: SectionCopy = {
       },
       {
         q: 'Is lapland.blog gratis?',
-        a: "Ja. Een blog starten, berichten schrijven, foto's toevoegen, plekken op de kaart prikken en uw blog delen is allemaal gratis. Er is geen betaalkaart nodig om u aan te melden en op uw blog staan geen advertenties.",
+        a: "Ja. Een blog starten, berichten schrijven, foto’s toevoegen, plekken op de kaart prikken en uw blog delen is allemaal gratis. Er is geen creditcard nodig om u aan te melden en op uw blog staan geen advertenties.",
       },
       {
         q: 'Kan ik mijn Lapland-blog delen op Instagram en Facebook?',
-        a: "Ja. Elke blog heeft een openbare link die u overal kunt plaatsen, en elk bericht kunt u exporteren als afbeelding op Instagram-storyformaat, zodat u één dag met een tik deelt. Vrienden en familie kunnen uw blog openen zonder eigen account.",
+        a: "Ja. Elke blog heeft een openbare link die u overal kunt plaatsen, en elk bericht kunt u exporteren als afbeelding in Instagram-storyformaat, zodat u een hele dag met één tik deelt. Vrienden en familie kunnen uw blog openen zonder eigen account.",
       },
       {
         q: 'Moet ik in Lapland zijn om hier een blog te schrijven?',
@@ -127,7 +127,7 @@ const nl: SectionCopy = {
       },
       {
         q: 'Waarover schrijf ik in mijn Lapland-reisdagboek?',
-        a: "Over alles wat u niet wilt vergeten. Waar u sliep, hoe het noorderlicht eruitzag, de temperatuur op de koudste ochtend, de maaltijd die u verraste, de huskytocht, de stilte van het bos. Korte berichten met een foto en een plaatsspeld werken goed. Een paar regels per dag groeien uit tot een blog die u opnieuw wilt lezen.",
+        a: "Over alles wat u niet wilt vergeten. Waar u sliep, hoe het noorderlicht eruitzag, de temperatuur op de koudste ochtend, de maaltijd die u verraste, de huskytocht, de stilte van het bos. Korte berichten met een foto en een speld op de kaart werken goed. Een paar regels per dag groeien uit tot een blog die u opnieuw wilt lezen.",
       },
     ],
   },

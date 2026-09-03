@@ -691,7 +691,7 @@ export default function CookieContent({
       gyg: 'GetYourGuide-Widgets, erfassen Widget-Interaktionen und ordnen Buchungen der Seite zu',
     },
     ja: {
-      consent: 'クッキー同意の選択(同意/拒否)を保存します',
+      consent: 'クッキー同意の選択（同意/拒否）を保存します',
       popup: 'ニュースレターポップアップを閉じたか登録したかを記憶し、再表示しないようにします',
       gaUser: 'Google Analytics：個別ユーザーを識別',
       gaSession: 'Google Analytics：セッション状態を管理',
@@ -715,7 +715,7 @@ export default function CookieContent({
       gyg: 'Widgets do GetYourGuide, rastreiam interações com os widgets e atribuem reservas ao site',
     },
     'zh-CN': {
-      consent: '保存您的 Cookie 同意偏好(已接受/已拒绝)',
+      consent: '保存您的 Cookie 同意偏好（已接受/已拒绝）',
       popup: '记住您是否关闭或订阅了电子简报弹窗，以避免重复显示',
       gaUser: 'Google Analytics，区分独立用户',
       gaSession: 'Google Analytics，维护会话状态',

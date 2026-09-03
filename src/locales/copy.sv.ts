@@ -79,15 +79,15 @@ const sv: SectionCopy = {
     seasonalBadge: 'Aktuellt nu · Midnattssol · 6 juni → 7 juli',
     seasonalH2: 'En gratis reseblogg för din Lapplandsresa, skriven medan du är där.',
     seasonalLead:
-      'Lapland.blog gör din resa till en enkel, fin blogg: nåla fast platserna, lägg till foton, skriv vad som hände, och dela sedan länken med vänner. Just nu betyder det sommar. Trettiotvå nätter när solen aldrig går ner, skogen blir bärnstensfärgad, sjöarna speglar himlen. Börja din dagbok medan du fortfarande är i den.',
+      'Lapland.blog gör din resa till en enkel, fin blogg: nåla fast platserna, lägg till foton, skriv vad som hände och dela sedan länken med vänner. Just nu betyder det sommar. Trettiotvå nätter när solen aldrig går ner, skogen blir bärnstensfärgad, sjöarna speglar himlen. Börja din dagbok medan du fortfarande är i den.',
     seasonalCta1: 'Starta din reseblogg',
     seasonalCta2: 'Läs sommarinlägg',
     seasonalCard1Title: '24 h gyllene timme',
     seasonalCard1Body: 'Solen snuddar vid horisonten. Fotografer kallar det jordens längsta blå timme.',
     seasonalCard2Title: 'Hjortronsäsong',
-    seasonalCard2Body: 'Sent i juli: myren blir gyllene. Lokalborna kallar det den andra skörden.',
+    seasonalCard2Body: 'Sent i juli: myren blir gyllene. Ortsborna kallar det den andra skörden.',
     seasonalCard3Title: 'Bastu, sedan ett dopp',
-    seasonalCard3Body: '14 °C i sjön vid midnatt, 90 °C bastu fem steg bort. Upprepa.',
+    seasonalCard3Body: '14 °C i sjön vid midnatt, 90 °C i bastun fem steg bort. Upprepa.',
     seasonalCard4Title: 'Ingen annan',
     seasonalCard4Body: 'Stugorna som är fullbokade på vintern står tomma i juli. Samma skog, ingen kö.',
     seasonalLabels: { light: '01 · Ljus', forest: '02 · Skog', water: '03 · Vatten', quiet: '04 · Tystnad' },
@@ -103,7 +103,7 @@ const sv: SectionCopy = {
     howStep2Kicker: 'Steg 02 · Dagbok',
     howStep2Title: 'Skriv medan du reser.',
     howStep2Body:
-      'Från telefonen, i stugan, i bilen, i bastun. Lägg till foton, temperaturen, hur soppan smakade. Varje inlägg nålar sig självt till dagen och platsen.',
+      'Från telefonen, i stugan, i bilen, i bastun. Lägg till foton, temperaturen, hur soppan smakade. Varje inlägg knyts automatiskt till dag och plats.',
     howStep3Kicker: 'Steg 03 · Dela',
     howStep3Title: 'Din resa, väl berättad.',
     howStep3Body:
@@ -115,7 +115,7 @@ const sv: SectionCopy = {
     liveH2Italic: 'ut.',
     liveH2Tail: 'Din är näst på tur.',
     liveLead:
-      'Svarta pister i Levi. Norrskensnätter i Inari. 60 km med hundspann i Saariselkä. The Field Journal, vår redaktion, byggde de här exempelbloggarna för att visa formatet. Din riktiga tar under fem minuter att starta.',
+      'Svarta pister i Levi. Norrskensnätter i Inari. 60 km med hundspann i Saariselkä. The Field Journal, vår redaktion, byggde de här exempelbloggarna för att visa formatet. Din egen är igång på under fem minuter.',
     liveBrowseAll: 'Bläddra bland alla bloggar',
     liveCta: 'Starta min reseblogg',
     liveFootnote: 'Gratis · Inget kort · 2 minuter till ditt första inlägg',
@@ -130,15 +130,15 @@ const sv: SectionCopy = {
     pillarsH2Pre: 'Lapplandsresan,',
     pillarsH2Italic: 'i tre trådar.',
     pillarsLead:
-      'Bläddra bland vad andra resenärer har antecknat, och välj sedan trådarna du vill skriva om på din egen resa. Norrsken, stugor, mat, kylan, människorna, tystnaderna däremellan.',
+      'Bläddra bland vad andra resenärer har antecknat och välj sedan trådarna du vill skriva om på din egen resa. Norrsken, stugor, mat, kylan, människorna, tystnaderna däremellan.',
     pillar1Kicker: 'I · Kylan',
     pillar1Title: 'Vad kylan faktiskt gör',
     pillar1Body:
-      'Norrskensnätter, det polära mörkret, de åtta årstider som de flesta listor glömmer. Vädret är huvudpersonen här, inte en bakgrund. Fältanteckningar om hur minus tjugotre känns klockan 03:47, och vad det gör med ett telefonbatteri, och med en människa.',
+      'Norrskensnätter, polarnatten, de åtta årstider som de flesta listor glömmer. Vädret är huvudpersonen här, inte en bakgrund. Fältanteckningar om hur minus tjugotre känns klockan 03:47, och vad det gör med ett telefonbatteri, och med en människa.',
     pillar2Kicker: 'II · Skyddet',
     pillar2Title: 'Var du sover, var du äter',
     pillar2Body:
-      'Timrade stugor, glasigloor, bastur som fungerar och bastur som inte gör det. Laxsoppan för fyrtiotvå euro som visade sig vara värd det. Rågbrödet som överlever en ryggsäck, och kaffet du dricker klockan 2 på natten eftersom solen glömde att gå ner.',
+      'Timrade stugor, glasigloor, bastur som fungerar och bastur som inte gör det. Laxsoppan för fyrtiotvå euro som visade sig vara värd det. Rågbrödet som överlever en ryggsäck, och kaffet du dricker klockan två på natten eftersom solen glömde att gå ner.',
     pillar3Kicker: 'III · De andra människorna',
     pillar3Title: 'Vem mer bor häruppe',
     pillar3Body:
@@ -161,23 +161,23 @@ const sv: SectionCopy = {
     faq: [
       {
         q: 'Hur startar jag en reseblogg på lapland.blog?',
-        a: 'Logga in med ditt Google-konto, ge din blogg ett namn och skriv ditt första inlägg. Varje inlägg kan innehålla text, foton, datumet och en kartnål för var du var. Din blogg finns på lapland.blog/by/ditt-namn och är redo att delas i samma stund du publicerar. Det finns inget att installera och ingen inställning utöver att logga in.',
+        a: 'Logga in med ditt Google-konto, ge din blogg ett namn och skriv ditt första inlägg. Varje inlägg kan innehålla text, foton, datum och en kartnål som visar var du var. Din blogg finns på lapland.blog/by/ditt-namn och är redo att delas i samma stund du publicerar. Det finns inget att installera och inget att ställa in utöver att logga in.',
       },
       {
         q: 'Är lapland.blog gratis att använda?',
-        a: 'Ja. Att starta en blogg, skriva inlägg, lägga till foton, nåla fast platser på kartan och dela din blogg är allt gratis. Det krävs inget kort för att registrera sig och det finns inga annonser på din blogg.',
+        a: 'Ja. Att starta en blogg, skriva inlägg, lägga till foton, nåla fast platser på kartan och dela din blogg är helt gratis. Det krävs inget kort för att registrera sig och det finns inga annonser på din blogg.',
       },
       {
         q: 'Kan jag dela min Lapplandsblogg på Instagram och Facebook?',
-        a: 'Ja. Varje blogg har en offentlig länk du kan lägga upp var som helst, och varje inlägg kan exporteras som en bild i Instagram-story-format så att du kan dela en enda dag med ett tryck. Vänner och familj kan öppna din blogg utan ett eget konto.',
+        a: 'Ja. Varje blogg har en offentlig länk du kan lägga upp var som helst, och varje inlägg kan exporteras som en bild i Instagram-story-format så att du kan dela en enda dag med ett tryck. Vänner och familj kan öppna din blogg utan eget konto.',
       },
       {
         q: 'Måste jag vara i Lappland för att skriva en blogg här?',
-        a: 'Nej. Vi byggde lapland.blog för resenärer på väg till finska Lappland, så kartan och skrivtipsen är anpassade för resor norrut, men vem som helst kan ha en blogg här, oavsett om du planerar en resa, skriver under en, eller fyller i den efter att du kommit hem. Du kan börja innan du flyger och lägga till inlägg dag för dag.',
+        a: 'Nej. Vi byggde lapland.blog för resenärer på väg till finska Lappland, så kartan och skrivtipsen är anpassade för resor norrut, men vem som helst kan ha en blogg här, oavsett om du planerar en resa, skriver medan du är på den eller fyller i den efter att du kommit hem. Du kan börja innan du flyger och lägga till inlägg dag för dag.',
       },
       {
         q: 'Vad ska jag skriva om i min Lapplandsdagbok?',
-        a: 'Vad du än inte vill glömma. Var du bodde, hur norrskenet såg ut, temperaturen den kallaste morgonen, måltiden som överraskade dig, hundspannsturen, skogens tystnad. Korta inlägg med ett foto och en platsnål fungerar bra. Några rader om dagen blir till slut en blogg värd att läsa om.',
+        a: 'Allt du inte vill glömma. Var du bodde, hur norrskenet såg ut, temperaturen den kallaste morgonen, måltiden som överraskade dig, hundspannsturen, skogens tystnad. Korta inlägg med ett foto och en kartnål fungerar bra. Några rader om dagen blir till slut en blogg värd att läsa om.',
       },
     ],
   },
@@ -395,7 +395,7 @@ const sv: SectionCopy = {
           'Nätter under norrskenet, de ärliga. Väder, Kp-index, väntan, kyla, och stunderna som faktiskt landar.',
         metaTitle: 'Norrskensberättelser från finska Lappland · Lapland.blog',
         metaDescription:
-          'Norrskensnätter i finska Lappland, de ärliga: väder, Kp-index, väntan, kyla, och stunderna som faktiskt landar.',
+          'Norrskensnätter i finska Lappland, de ärliga: väder, Kp-index, väntan, kyla och stunderna som faktiskt landar.',
       },
       cabins: {
         name: 'Stugor',

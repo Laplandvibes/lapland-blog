@@ -83,7 +83,7 @@ const PARTNER_COPY: Record<Partner, Record<Lang, PartnerCopy>> = {
     },
     ja: {
       headline: 'コテージかイグルーを見つける',
-      copy: 'サーリセルカのガラスイグルーからレヴィ郊外のログコテージまで、ラップランドの宿を比較。',
+      copy: 'サーリセルカのグラスイグルーからレヴィ郊外のログコテージまで、ラップランドの宿を比較。',
       cta: '宿泊先を見る',
     },
     es: {

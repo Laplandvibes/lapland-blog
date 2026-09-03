@@ -30,7 +30,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
   'fi': {
     seoTitle: 'Lapland.blog · Aloita ja jaa Lapin-matkablogisi',
-    seoDescription: 'Tee Suomen Lapin matkastasi matkablogi. Pidä päiväkirjaa matkan aikana ja jaa se someen yhdellä napautuksella. Ilmainen ja valmis minuuteissa.',
+    seoDescription: 'Tee Suomen Lapin matkastasi matkablogi. Pidä päiväkirjaa matkan aikana ja jaa se someen yhdellä napautuksella. Ilmainen ja valmis parissa minuutissa.',
   },
   'de': {
     seoTitle: 'Lapland.blog · Starten Sie Ihren Lappland-Reiseblog',
@@ -42,7 +42,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
   'es': {
     seoTitle: 'Lapland.blog · Cree y comparta su blog de viaje',
-    seoDescription: 'Convierta su viaje a la Laponia finlandesa en un blog de viaje: lleve un diario sobre la marcha y compártalo en redes con un toque. Gratis y listo en minutos.',
+    seoDescription: 'Convierta su viaje a la Laponia finlandesa en un blog de viaje: lleve un diario sobre la marcha y compártalo en redes con un solo toque. Gratis y listo en minutos.',
   },
   'pt-BR': {
     seoTitle: 'Lapland.blog · Crie e compartilhe seu blog de viagem',
@@ -53,8 +53,8 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
     seoDescription: '把你的芬兰拉普兰之旅变成旅行博客：边走边写日记，一键分享到社交媒体。免费，几分钟即可开始。',
   },
   'ko': {
-    seoTitle: 'Lapland.blog · 라플란드 여행 블로그 만들기와 공유',
-    seoDescription: '핀란드 라플란드 여행을 여행 블로그로 만들어 보세요. 여행하면서 일기를 쓰고, 한 번의 탭으로 소셜 미디어에 공유하세요. 무료이며 몇 분이면 시작할 수 있습니다.',
+    seoTitle: 'Lapland.blog · 라플란드 여행 블로그 만들기와 공유하기',
+    seoDescription: '핀란드 라플란드 여행을 나만의 여행 블로그로 만들어 보세요. 여행하면서 일기를 쓰고, 한 번의 탭으로 소셜 미디어에 공유하세요. 무료이며 몇 분이면 시작할 수 있습니다.',
   },
   'fr': {
     seoTitle: 'Lapland.blog · Créez et partagez votre blog de voyage',
