@@ -80,7 +80,7 @@ const nl: SectionCopy = {
     pillarsH2Pre: 'De reis door Lapland,',
     pillarsH2Italic: 'in drie draden.',
     pillarsLead:
-      'Blader door wat andere reizigers vastlegden, en kies de thema's waarover u zelf wilt schrijven. Noorderlicht, hutten, eten, de kou, de mensen en de stiltes ertussen.',
+      'Blader door wat andere reizigers vastlegden, en kies de thema’s waarover u zelf wilt schrijven. Noorderlicht, hutten, eten, de kou, de mensen en de stiltes ertussen.',
     pillar1Kicker: 'I · De kou',
     pillar1Title: 'Wat de kou werkelijk doet',
     pillar1Body:
