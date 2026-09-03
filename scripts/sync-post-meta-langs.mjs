@@ -61,8 +61,11 @@ for (const route of routes) {
   }
   if (!Object.keys(titles).length) continue;
 
-  route.fallbackTitleByLang = titles;
-  route.fallbackDescriptionByLang = descriptions;
+  // Merge: keep hand-written list titles for languages that have no Supabase
+  // translation (de/es/fr/it/nl/ja/ko/pt-BR/zh-CN carry "(EN)"-marked titles for
+  // the crawlable link list — see KIELIPASSIT 2026-09-03). Supabase wins per lang.
+  route.fallbackTitleByLang = { ...(route.fallbackTitleByLang || {}), ...titles };
+  route.fallbackDescriptionByLang = { ...(route.fallbackDescriptionByLang || {}), ...descriptions };
   touched++;
 }
 
