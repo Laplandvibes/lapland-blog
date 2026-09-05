@@ -1,0 +1,86 @@
+{
+  "version": "20260905",
+  "domain": "lapland.blog",
+  "brand": ".BLOG",
+  "tagline": "Start a blog of your Lapland trip",
+  "generated": "2026-09-05T21:47:03.550Z",
+  "staticFallbackSeason": "summer",
+  "seasons": {
+    "summer": {
+      "heroUrl": "https://lapland.blog/images/hero-aurora-2560.webp",
+      "heroAlt": "Lapland landscape",
+      "heroSha": "ff6e13967009b504",
+      "bytes": 188241,
+      "sha256": "434ccb90c0ec27a9975408486e3624605bf2266d26eb365ee5781bac9b0a61b5",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 14924,
+      "inkBox": [
+        380,
+        493,
+        820,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 64.2,
+      "centerSq": 55.7,
+      "photoRegion": 74.3,
+      "photoRegionRef": 74.3,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 442,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    },
+    "winter": {
+      "heroUrl": "https://lapland.blog/images/hero-aurora-winter-2560.webp",
+      "heroAlt": "Lapland landscape",
+      "heroSha": "503acafa5bfb57ae",
+      "bytes": 118469,
+      "sha256": "341a21184480cef0980654ffc3843f19d4976bd1f201a02abaed830571ddf7c7",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 14924,
+      "inkBox": [
+        380,
+        493,
+        820,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 72,
+      "centerSq": 89.7,
+      "photoRegion": 84.9,
+      "photoRegionRef": 84.9,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 442,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    }
+  }
+}
