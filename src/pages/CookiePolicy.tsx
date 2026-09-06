@@ -12,7 +12,7 @@ const TITLE: Record<Lang, string> = {
   fi: 'Evästekäytäntö · Lapland.blog',
   de: 'Cookie-Richtlinie · Lapland.blog',
   ja: 'クッキーポリシー · Lapland.blog',
-  es: 'Política de cookies · Lapland.blog',
+  es: 'Política de cookies y consentimiento · Lapland.blog',
   'pt-BR': 'Política de Cookies · Lapland.blog',
   'zh-CN': 'Cookie 政策 · Lapland.blog',
   ko: '쿠키 정책 · Lapland.blog',
