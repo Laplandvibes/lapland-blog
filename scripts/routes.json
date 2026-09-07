@@ -326,13 +326,13 @@
     },
     "fallbackDescriptionByLang": {
       "fi": "Peru Lapland.blog-uutiskirjeen tilaus. Yksi klikkaus, ei pahaa mieltä.",
-      "de": "Den Lapland.blog-Newsletter abbestellen. Ein Klick, kein böses Blut.",
-      "ja": "Lapland.blogのニュースレターを配信解除。ワンクリックで完了、引き止めません。",
+      "de": "Den Lapland.blog-Newsletter abbestellen. Ein Klick, kein böses Blut. Du kannst dich jederzeit wieder anmelden, wenn du magst.",
+      "ja": "Lapland.blogのニュースレターを配信解除。ワンクリックで完了、引き止めません。登録時のメールアドレスを入力するだけで、気が向いたらいつでも再登録できます。",
       "es": "Cancele la suscripción al boletín de Lapland.blog. Un clic, sin rencores.",
       "pt-BR": "Cancele a inscrição no boletim do Lapland.blog. Um clique, sem ressentimentos.",
-      "zh-CN": "取消订阅 Lapland.blog 新闻通讯。一键完成，绝无芥蒂。",
-      "ko": "Lapland.blog 뉴스레터를 구독 해지합니다. 한 번의 클릭, 붙잡지 않습니다.",
-      "fr": "Désabonnez-vous de la newsletter Lapland.blog. Un clic, sans rancune.",
+      "zh-CN": "取消订阅 Lapland.blog 新闻通讯。一键完成，绝无芥蒂。输入订阅时使用的邮箱地址即可立即生效，无需登录，之后随时可以用同一个邮箱重新订阅。",
+      "ko": "Lapland.blog 뉴스레터를 구독 해지합니다. 한 번의 클릭, 붙잡지 않습니다. 구독할 때 쓴 이메일 주소만 입력하면 되고, 언제든 다시 신청할 수 있습니다.",
+      "fr": "Désabonnez-vous de la newsletter Lapland.blog. Un clic, sans rancune. Vous pourrez vous réinscrire à tout moment si l’envie revient.",
       "it": "Annulli l’iscrizione alla newsletter di Lapland.blog. Un clic, nessun rancore.",
       "nl": "Schrijf u uit van de Lapland.blog-nieuwsbrief. Eén klik, zonder hard gevoel.",
       "sv": "Avsluta prenumerationen på Lapland.blogs nyhetsbrev. Ett klick, inga hårda känslor."
@@ -481,7 +481,7 @@
     "path": "/post/living-between-two-suns",
     "ogImage": "/og/living-between-two-suns.jpg",
     "appendSiteName": false,
-    "fallbackTitle": "Living between two suns: what the darkness actually feels like · Lapland.blog",
+    "fallbackTitle": "Living between two suns: what the darkness really feels like · Lapland.blog",
     "fallbackDescription": "Most of what you've read about the Finnish polar night is wrong. What kaamos really does to the body at 66.5°N, the biology, the blue hour, and the four small habits that get you through it.",
     "fallbackTitleByLang": {
       "sv": "Mellan två solar: hur mörkret faktiskt känns · Lapland.blog",

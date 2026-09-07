@@ -709,7 +709,7 @@ export const posts: Post[] = [
   // ───────────────────────────────────────────────────────────────────
   {
     slug: 'living-between-two-suns',
-    title: 'Living between two suns: what the darkness actually feels like',
+    title: 'Living between two suns: what the darkness really feels like',
     kicker: 'Rovaniemi · Seasons · Kaamos',
     excerpt:
       'Most of what you have read about the Finnish polar night is wrong. Here is what it actually feels like through a winter at 66.5°N: the biology, the blue hour, the candles, and the four small habits that get you through it.',
