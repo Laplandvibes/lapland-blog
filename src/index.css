@@ -540,7 +540,13 @@ textarea:focus-visible {
 
 /* 380ms / 14px: reads as motion but a fast mobile fling never catches
    half-faded sections (Vesa mobile QA 2026-07-11). */
+/* min-width: 0 — .reveal on usein ruudukon SUORA lapsi, jolloin kortin oma
+   overflow-hidden ei enaa suojaa rataa: gridin min-width:auto venyttaa radan
+   kortin min-content-leveyteen. Mitattu 10.9.2026 blogin etusivulla: rata
+   352 px 328 px:n laatikossa => sivu vieri sivusuunnassa 360 px:lla.
+   Animaatiokaare ei saa muuttaa asettelua. */
 .reveal {
+  min-width: 0;
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 380ms cubic-bezier(0.22, 1, 0.36, 1),
