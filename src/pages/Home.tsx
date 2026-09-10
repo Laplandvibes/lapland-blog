@@ -216,7 +216,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={2}>
-            <p className="max-w-2xl mx-auto text-slate-100 text-base sm:text-lg md:text-xl leading-relaxed hero-text-shadow-sm">
+            <p className="max-w-2xl xl:max-w-4xl mx-auto text-slate-100 text-base sm:text-lg md:text-xl leading-relaxed hero-text-shadow-sm xl:text-2xl">
               {c.heroLead}
             </p>
           </Reveal>
