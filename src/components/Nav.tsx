@@ -145,7 +145,7 @@ export default function Nav() {
             aria-label="#LaplandBlog · home"
             onClick={() => setOpen(false)}
           >
-            <span className="font-display tracking-wide text-xl md:text-2xl font-semibold uppercase leading-none flex items-baseline">
+            <span className="font-logo tracking-wide text-2xl md:text-3xl uppercase leading-none flex items-baseline">
               <span className={`${logoAccentColor} transition-colors`}>#</span>
               <span className={`${logoWordColor} transition-colors`}>LAPLAND</span>
               <span className={`${logoAccentColor} transition-colors`}>.BLOG</span>

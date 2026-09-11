@@ -432,6 +432,13 @@
   /* Canonical LV alias — used by shared/Legal/* + shared/Footer. Points at
      Manrope so those components match the rest of the site. */
   --font-heading: 'Manrope', 'Inter', system-ui, sans-serif;
+  /* Verkostosaanto (CLAUDE.md, Vesa 24.7.2026): #LAPLAND<BRAND> -sanamerkki
+     renderoityy Bebas Neuena JOKAISELLA sivustolla, myos fonttivarianteilla,
+     jotta merkki nayttaa samalta koko verkostossa. Mitattu 10.9.2026
+     lehtisolmusta: tama sivusto renderoi sen Manropena. Bebas on jo
+     itse-isannoity tassa repossa (@font-face ylla), joten tama ei lisaa
+     yhtaan latausta. */
+  --font-logo: 'Bebas Neue', 'Arial Narrow', sans-serif;
 
   /* Dark mode palette (matches laplandnightlife vibe) */
   --color-night: #0F172A;
