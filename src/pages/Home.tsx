@@ -208,7 +208,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={1}>
-            <h1 className="font-display text-[clamp(2.25rem,6.5vw,5.25rem)] leading-[1.03] tracking-tight mb-6 text-snow font-light hero-text-shadow">
+            <h1 className="font-display text-[clamp(2.25rem,6.5vw,5.25rem)] leading-[1.03] tracking-tight mb-6 text-snow font-light hero-text-shadow xl:text-[clamp(84px,1.3125vw_+_67.2px,100.8px)]">
               {c.heroLine1}
               <br />
               <span className="text-pink italic font-light">{c.heroLine2}</span>
