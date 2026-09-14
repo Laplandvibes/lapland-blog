@@ -272,7 +272,7 @@ function DestinationCard({
           {hasEntries ? (
             <Link
               to={to(`/stories?tag=${d.slug}`)}
-              className="inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
+              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
               {c.readEntries}
               <ArrowRight size={12} />
@@ -280,7 +280,7 @@ function DestinationCard({
           ) : (
             <Link
               to={to('/signin')}
-              className="inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
+              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
               {c.beFirstWrite}
               <ArrowRight size={12} />
@@ -292,7 +292,7 @@ function DestinationCard({
             href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name === 'Ylläs' ? 'Äkäslompolo' : d.name)}%2C+Finland&locale=${lang === 'fi' ? 'fi_FI' : lang === 'de' ? 'de_DE' : 'en_US'}`}
             target="_blank"
             rel="sponsored nofollow noopener"
-            className="inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
+            className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
           >
             <BedDouble size={11} />
             {c.findStayPrefix} {d.name}

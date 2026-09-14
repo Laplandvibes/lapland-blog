@@ -448,7 +448,7 @@ export default function MyEditor() {
           <p className="text-slate-500 text-sm mb-6">{loadError}</p>
           <Link
             to="/me"
-            className="inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold"
+            className="lv-tap inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold"
           >
             <ArrowLeft size={14} /> Back to your blog
           </Link>
@@ -472,7 +472,7 @@ export default function MyEditor() {
           </p>
           <Link
             to="/me"
-            className="inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold"
+            className="lv-tap inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold"
           >
             <ArrowLeft size={14} /> Back to your blog
           </Link>
@@ -492,7 +492,7 @@ export default function MyEditor() {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <Link
             to="/me"
-            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+            className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
           >
             <ArrowLeft size={14} /> Your blog
           </Link>

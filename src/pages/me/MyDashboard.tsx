@@ -179,7 +179,7 @@ export default function MyDashboard() {
                 <div className="flex items-center gap-2">
                   <a
                     href={`/by/${profile.handle}`}
-                    className="inline-flex items-center gap-1 text-aurora-blue hover:text-pink text-sm transition-colors"
+                    className="lv-tap inline-flex items-center gap-1 text-aurora-blue hover:text-pink text-sm transition-colors"
                   >
                     lapland.blog/by/{profile.handle}
                     <ExternalLink size={11} />

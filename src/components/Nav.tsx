@@ -141,7 +141,7 @@ export default function Nav() {
           <EcosystemMenu lang={lang} currentDomain="lapland.blog" variant={isEditorial ? 'light' : 'dark'} />
           <Link
             to={to('/')}
-            className="group"
+            className="group inline-flex items-center min-h-11"
             aria-label="#LaplandBlog · home"
             onClick={() => setOpen(false)}
           >

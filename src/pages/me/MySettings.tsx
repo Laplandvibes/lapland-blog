@@ -109,7 +109,7 @@ export default function MySettings() {
         <div className="max-w-3xl mx-auto">
           <Link
             to="/me"
-            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-6 transition-colors"
+            className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-6 transition-colors"
           >
             <ArrowLeft size={14} /> Back to dashboard
           </Link>
@@ -149,7 +149,7 @@ export default function MySettings() {
                     {profile && (
                       <Link
                         to={`/by/${handle}`}
-                        className="ml-2 inline-flex items-center gap-1 text-aurora-blue text-xs hover:text-pink transition-colors"
+                        className="lv-tap ml-2 inline-flex items-center gap-1 text-aurora-blue text-xs hover:text-pink transition-colors"
                       >
                         view profile <ExternalLink size={11} />
                       </Link>

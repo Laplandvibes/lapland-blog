@@ -477,7 +477,7 @@ export default function Home() {
               </div>
               <Link
                 to={to('/stories')}
-                className="group inline-flex items-center gap-1.5 text-aurora-blue hover:text-pink text-xs tracking-[0.2em] uppercase font-semibold transition-colors"
+                className="lv-tap group inline-flex items-center gap-1.5 text-aurora-blue hover:text-pink text-xs tracking-[0.2em] uppercase font-semibold transition-colors"
               >
                 {c.liveBrowseAll}
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -562,7 +562,7 @@ export default function Home() {
               <div className="mt-8 max-w-3xl mx-auto text-center">
                 <Link
                   to={to(`/post/${feature.slug}`)}
-                  className="inline-flex items-center gap-2 text-pink hover:text-aurora-blue text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                  className="lv-tap inline-flex items-center gap-2 text-pink hover:text-aurora-blue text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
                 >
                   {c.featuredReadEntry}
                   <ArrowRight size={14} />
@@ -647,7 +647,7 @@ export default function Home() {
                           <Link
                             key={link.to}
                             to={to(link.to)}
-                            className={`group/link inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-semibold ${accentColor} hover:opacity-80 transition-opacity`}
+                            className={`lv-tap group/link inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-semibold ${accentColor} hover:opacity-80 transition-opacity`}
                           >
                             {COPY[lang].category.themes[link.slug].name}
                             <ArrowRight
@@ -683,7 +683,7 @@ export default function Home() {
               </div>
               <Link
                 to={to('/stories')}
-                className="group inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-xs tracking-wider uppercase font-semibold transition-colors"
+                className="lv-tap group inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-xs tracking-wider uppercase font-semibold transition-colors"
               >
                 {c.latestEvery}{' '}
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -804,7 +804,7 @@ export default function Home() {
                           <Link
                             key={route}
                             to={to(route)}
-                            className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-300 hover:text-snow transition-colors"
+                            className="lv-tap inline-flex items-center gap-1.5 text-sm font-medium text-purple-300 hover:text-snow transition-colors"
                           >
                             {COPY[lang].nav[label]} <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                           </Link>

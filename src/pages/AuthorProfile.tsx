@@ -122,7 +122,7 @@ export default function AuthorProfile() {
         <div className="relative max-w-4xl mx-auto">
           <Link
             to={lp('/destinations')}
-            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-6 transition-colors"
+            className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-6 transition-colors"
           >
             <ArrowLeft size={14} /> Lapland.blog
           </Link>

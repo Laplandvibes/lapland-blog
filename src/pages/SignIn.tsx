@@ -175,7 +175,7 @@ export default function SignIn() {
           <div className="order-2 lg:order-1">
             <Link
               to={from}
-              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors mb-6"
+              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors mb-6"
             >
               <ArrowLeft size={14} /> {c.back}
             </Link>
