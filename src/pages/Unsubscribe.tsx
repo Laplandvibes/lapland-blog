@@ -120,8 +120,12 @@ export default function Unsubscribe() {
                 {c.lead}
               </p>
               <form onSubmit={handleUnsubscribe} className="space-y-4" noValidate>
-                <label htmlFor="unsub-email" className="sr-only">
-                  {c.emailPlaceholder}
+                {/* Näkyvä label (lomakeportti 14.9.2026); sama 12-kielinen teksti kuin kirjautumissivulla. */}
+                <label
+                  htmlFor="unsub-email"
+                  className="block text-[11px] uppercase tracking-[0.25em] text-slate-300 font-semibold"
+                >
+                  {COPY[lang].signIn.emailLabel}
                 </label>
                 <input
                   id="unsub-email"
@@ -133,12 +137,12 @@ export default function Unsubscribe() {
                   required
                   autoComplete="email"
                   disabled={status === 'loading'}
-                  className="w-full px-5 py-3.5 rounded-full bg-night/70 text-snow placeholder:text-slate-500 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
+                  className="w-full px-5 py-3.5 rounded-full bg-night/70 text-snow placeholder:text-slate-400 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
                 />
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full px-5 py-3.5 rounded-full bg-pink hover:bg-pink-dark text-white font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full px-5 py-3.5 rounded-full bg-pink-cta hover:bg-pink-dark text-white font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {status === 'loading' ? (
                     <>

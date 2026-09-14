@@ -2,7 +2,7 @@
 // category. Returns adapted `Post` objects so existing components don't change.
 
 import { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
+import { supabase, POST_LIST_COLUMNS } from '../lib/supabase';
 import type { BlogPostRow } from '../lib/supabase';
 import { rowToPost } from '../lib/postAdapter';
 import { dedupeByLang } from '../lib/pickTranslation';
@@ -37,7 +37,7 @@ export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
 
       let query = supabase
         .from('blog_posts')
-        .select('*')
+        .select(POST_LIST_COLUMNS)
         .eq('status', 'published')
         .order('published_at', { ascending: false });
 
@@ -54,7 +54,8 @@ export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
         setError(err.message);
         setPosts([]);
       } else {
-        const unique = dedupeByLang(data as BlogPostRow[], lang);
+        // Listasarakkeet ilman `content`-kenttää (POST_LIST_COLUMNS) — adapteri sietää sen.
+        const unique = dedupeByLang(data as unknown as BlogPostRow[], lang);
         setPosts((limit ? unique.slice(0, limit) : unique).map(rowToPost));
       }
       setLoading(false);

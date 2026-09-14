@@ -7,6 +7,28 @@
 //
 // All slot names match the files on disk. Do not hand-edit.
 
+import { IMAGE_VERSIONS } from './imageVersions.gen';
+
+/**
+ * Sama `?v=<sisällön tiiviste>` kuin prerenderöidyssä HTML:ssä (version-images.mjs).
+ * Mitattu 14.9.2026: ilman tätä Reactin <img srcset> pyysi tagittoman osoitteen ja
+ * preload tagillisen ⇒ hero ladattiin kahdesti joka etusivukäynnillä. Tiivisteet
+ * generoi scripts/gen-image-versions.mjs (prebuild); tuntematon tiedosto jää
+ * tagittomaksi, jotta rikkinäinen osoite ei muutu toiseksi rikkinäiseksi.
+ */
+// 🔴 version-images.mjs kirjoittaa dist-nipun merkkijonoihin `?v=` myös tämän kartan
+// AVAIMIIN ('/images/x.webp' → '/images/x.webp?v=abc'), jolloin haku paljaalla
+// polulla ei osuisi. Mitattu ensimmäisessä buildissa 14.9.2026. Siksi avaimet
+// normalisoidaan latauksessa: tagi pois avaimesta, arvo pysyy.
+const VERSIONS: Record<string, string> = Object.fromEntries(
+  Object.entries(IMAGE_VERSIONS).map(([k, v]) => [k.replace(/\?v=.*$/, ''), v]),
+);
+
+export const versioned = (p: string): string => {
+  const v = VERSIONS[p];
+  return v ? `${p}?v=${v}` : p;
+};
+
 export type HeroSlot =
   | 'hero-aurora'
   | 'hero-dusk-lake';
@@ -193,7 +215,7 @@ export function getImage(
   const largest = sorted[0];
 
   const srcSet = sorted
-    .map((w) => `/images/${base}-${w}.webp ${w}w`)
+    .map((w) => `${versioned(`/images/${base}-${w}.webp`)} ${w}w`)
     .join(', ');
 
   const defaultSizes =
@@ -202,7 +224,7 @@ export function getImage(
       : '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw';
 
   return {
-    src: `/images/${base}-${largest}.webp`,
+    src: versioned(`/images/${base}-${largest}.webp`),
     srcSet,
     sizes: sizesHint ?? defaultSizes,
     alt: altOverride ?? meta.alt,

@@ -30,6 +30,17 @@ export function isAdminEmail(email: string | null | undefined): boolean {
 }
 
 // ─── Shared row types mirroring the `blog_posts` table ───────────────────────
+/**
+ * Listanäkymien sarakkeet — kaikki paitsi `content`. Mitattu 14.9.2026: etusivu
+ * haki `select=*` eli 33 riviä kokonaisine runkoineen, 147 kB pakattuna
+ * (350 kB raakana), vaikka kortti tarvitsee otsikon, ingressin ja kuvan.
+ * Runko haetaan vain yhden artikkelin sivulla (usePost). Adapterin
+ * parseContent palauttaa puuttuvalle rungolle tyhjän listan, joten
+ * listakomponentit eivät huomaa eroa.
+ */
+export const POST_LIST_COLUMNS =
+  'id,slug,title,kicker,excerpt,category_slug,tags,hero_image,hero_alt,author_id,author_snapshot,status,published_at,featured,read_time_minutes,view_count,created_at,updated_at,visit_date,location,weather_note,stay_type,lang,translation_of,moderation_hidden,moderation_hidden_at';
+
 export interface BlogPostRow {
   id: string;
   slug: string;

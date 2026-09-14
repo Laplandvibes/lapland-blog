@@ -446,6 +446,9 @@
   --color-night-lighter: #334155;
   --color-snow: #F8FAFC;
   --color-pink: #EC4899;
+  /* Täytetyn napin tausta valkoiselle tekstille: #EC4899 on 3,53:1 (ei AA), #DB2777 on 4,63:1.
+     Sama askel pinkkirampilla kuin laplandhoteldealsilla (CLAUDE.md). Mitattu lomakeportilla 14.9.2026. */
+  --color-pink-cta: #DB2777;
   --color-pink-dark: #BE185D;
   --color-purple: #7C3AED;
   --color-purple-dark: #5B21B6;

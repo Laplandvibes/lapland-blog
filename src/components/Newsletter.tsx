@@ -241,10 +241,15 @@ export default function Newsletter() {
               className="flex flex-col gap-3 max-w-lg mx-auto"
               noValidate
             >
+              {/* Näkyvä label (lomakeportti 14.9.2026): placeholder katoaa ensimmäisestä
+                  kirjaimesta eikä ole label. Teksti on sama 12 kielellä kuin kirjautumissivulla. */}
+              <label
+                htmlFor="newsletter-email"
+                className="block text-left text-[11px] uppercase tracking-[0.25em] text-slate-300 font-semibold"
+              >
+                {COPY[lang].signIn.emailLabel}
+              </label>
               <div className="flex flex-col sm:flex-row gap-3">
-                <label htmlFor="newsletter-email" className="sr-only">
-                  {c.placeholder}
-                </label>
                 <input
                   id="newsletter-email"
                   type="email"
@@ -255,12 +260,12 @@ export default function Newsletter() {
                   required
                   autoComplete="email"
                   disabled={status === 'loading'}
-                  className="flex-1 px-5 py-4 rounded-full bg-night-light/60 backdrop-blur-sm text-snow placeholder:text-slate-500 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
+                  className="flex-1 px-5 py-4 rounded-full bg-night-light/60 backdrop-blur-sm text-snow placeholder:text-slate-400 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
                 />
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="px-7 py-4 rounded-full bg-pink text-white font-semibold hover:bg-pink-dark transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(236,72,153,0.35)]"
+                  className="px-7 py-4 rounded-full bg-pink-cta text-white font-semibold hover:bg-pink-dark transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(236,72,153,0.35)]"
                 >
                   {status === 'loading' ? (
                     <>

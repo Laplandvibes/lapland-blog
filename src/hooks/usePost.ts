@@ -1,7 +1,7 @@
 // Public hook: fetches a single published post by slug.
 
 import { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
+import { supabase, POST_LIST_COLUMNS } from '../lib/supabase';
 import type { BlogPostRow } from '../lib/supabase';
 import { rowToPost } from '../lib/postAdapter';
 import { dedupeByLang, pickForLang } from '../lib/pickTranslation';
@@ -99,7 +99,7 @@ export function useRelated(
       setLoading(true);
       const { data, error: err } = await supabase
         .from('blog_posts')
-        .select('*')
+        .select(POST_LIST_COLUMNS)
         .eq('status', 'published')
         .eq('category_slug', category as string)
         .neq('slug', slug as string)
@@ -111,7 +111,8 @@ export function useRelated(
       if (err || !data) {
         setRelated([]);
       } else {
-        const unique = dedupeByLang(data as BlogPostRow[], lang);
+        // Listasarakkeet ilman `content`-kenttää (POST_LIST_COLUMNS) — adapteri sietää sen.
+        const unique = dedupeByLang(data as unknown as BlogPostRow[], lang);
         setRelated(unique.slice(0, limit).map(rowToPost));
       }
       setLoading(false);

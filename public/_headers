@@ -11,13 +11,9 @@ https://lapland-blog.pages.dev/*
   X-Robots-Tag: noindex, nofollow
 # <<< LV-PAGESDEV-NOINDEX
 
-# >>> LV-LINK-PRELOAD (managed by apply_link_preload_headers.py)
-/
-  Link: </images/hero-aurora-2560.webp>; rel=preload; as=image; fetchpriority=high
-
-/index.html
-  Link: </images/hero-aurora-2560.webp>; rel=preload; as=image; fetchpriority=high
-# <<< LV-LINK-PRELOAD
+# LV-LINK-PRELOAD poistettu 14.9.2026: index.html kantaa responsiivisen hero-preloadin
+# (imagesrcset, vain etusivulla, ks. scripts/strip-hero-preload.mjs). Link-otsakkeen
+# 2560-kuva oli puhelimessa 238 kB:n tuplalataus 1200-kuvan rinnalla (mitattu perfprobe).
 
 # >>> LV-SECURITY (managed)
 /*

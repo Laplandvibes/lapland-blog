@@ -283,7 +283,7 @@ export default function Nav() {
               className={
                 isEditorial
                   ? 'ml-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-dark)] transition-colors'
-                  : 'ml-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-pink text-white hover:bg-pink-dark transition-colors'
+                  : 'ml-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-pink-cta text-white hover:bg-pink-dark transition-colors'
               }
             >
               {c.startYourBlog}
@@ -293,8 +293,10 @@ export default function Nav() {
 
         <div className="xl:hidden flex items-center gap-2">
             <LanguageSwitcher tone={'dark'} />
+            {/* 44×44 px kosketuskohde (iOS HIG): mitattu 14.9.2026 22×22 px, kun kuvake oli
+                napin koko sisältö. Negatiivinen marginaali pitää kuvakkeen samassa kohdassa. */}
             <button
-              className={`transition-colors ${mobileBtnCls}`}
+              className={`transition-colors w-11 h-11 -mr-2.5 inline-flex items-center justify-center rounded-full ${mobileBtnCls}`}
               onClick={() => setOpen((o) => !o)}
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
@@ -310,11 +312,13 @@ export default function Nav() {
             className="flex flex-col px-6 py-5 gap-4"
             aria-label="Mobile primary"
           >
+            {/* Rivit ≥ 44 px (iOS HIG): mitattu 14.9.2026 20 px korkeiksi 12 kielellä,
+                koska rivi oli pelkkä tekstirivi ilman pystytäytettä. */}
             {links.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className={`tracking-wider uppercase text-sm font-semibold transition-colors ${
+                className={`flex items-center min-h-11 py-2 tracking-wider uppercase text-sm font-semibold transition-colors ${
                   isEditorial
                     ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                     : 'text-slate-200 hover:text-pink'
@@ -326,15 +330,17 @@ export default function Nav() {
 
 
             {!user ? (
+              /* Sama kutsu kuin työpöydän navissa ("Aloita oma blogi"), ei eri sanaa
+                 samalle osoitteelle: mitattu 14.9.2026 puhelimessa "Kirjaudu" 12 kielellä. */
               <Link
                 to={to('/signin')}
-                className={`tracking-wider uppercase text-sm font-semibold transition-colors ${
+                className={`inline-flex items-center justify-center min-h-11 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors ${
                   isEditorial
-                    ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
-                    : 'text-slate-200 hover:text-pink'
+                    ? 'bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-dark)]'
+                    : 'bg-pink-cta text-white hover:bg-pink-dark'
                 }`}
               >
-                {c.signIn}
+                {c.startYourBlog}
               </Link>
             ) : (
               <>
@@ -384,7 +390,7 @@ export default function Nav() {
                 </div>
                 <Link
                   to="/me"
-                  className={`tracking-wider uppercase text-sm font-semibold transition-colors ${
+                  className={`flex items-center min-h-11 py-2 tracking-wider uppercase text-sm font-semibold transition-colors ${
                     isEditorial
                       ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                       : 'text-slate-200 hover:text-pink'
@@ -395,7 +401,7 @@ export default function Nav() {
                 {isAdmin && (
                   <Link
                     to="/admin"
-                    className={`tracking-wider uppercase text-sm font-semibold transition-colors ${
+                    className={`flex items-center min-h-11 py-2 tracking-wider uppercase text-sm font-semibold transition-colors ${
                       isEditorial
                         ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                         : 'text-slate-200 hover:text-pink'
@@ -407,7 +413,7 @@ export default function Nav() {
                 <button
                   type="button"
                   onClick={handleSignOut}
-                  className={`text-left tracking-wider uppercase text-sm font-semibold transition-colors cursor-pointer ${
+                  className={`flex items-center min-h-11 py-2 text-left tracking-wider uppercase text-sm font-semibold transition-colors cursor-pointer ${
                     isEditorial
                       ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                       : 'text-slate-200 hover:text-pink'
@@ -422,8 +428,8 @@ export default function Nav() {
               to={`${to('/')}#newsletter`}
               className={
                 isEditorial
-                  ? 'mt-2 text-center px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[var(--color-accent)] text-white'
-                  : 'mt-2 text-center px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-pink text-white'
+                  ? 'mt-2 inline-flex items-center justify-center min-h-11 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[var(--color-accent)] text-white'
+                  : 'mt-2 inline-flex items-center justify-center min-h-11 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-pink-cta text-white hover:bg-pink-dark transition-colors'
               }
             >
               {c.subscribe}

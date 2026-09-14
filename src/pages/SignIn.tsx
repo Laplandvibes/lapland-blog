@@ -318,31 +318,49 @@ export default function SignIn() {
 
                 {/* Travel dates */}
                 <div>
-                  <label className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-3">
+                  <span
+                    id="signin-travel-label"
+                    className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-3"
+                  >
                     <CalendarDays size={13} className="text-aurora-blue" />
                     {c.travelLabel}
-                  </label>
+                  </span>
+                  {/* Kummallakin valitsimella oma näkyvä label (lomakeportti 14.9.2026):
+                      <label> ilman htmlFor ei ole kummankaan selectin label, ja tyhjä
+                      ensimmäinen vaihtoehto katoaa heti kun valinta on tehty. */}
                   <div className={`grid grid-cols-2 gap-3 ${noDates ? 'opacity-40 pointer-events-none' : ''}`}>
-                    <select
-                      value={travelMonth ?? ''}
-                      onChange={(e) => setTravelMonth(e.target.value ? Number(e.target.value) : null)}
-                      className="w-full px-4 py-3 rounded-xl bg-night/80 text-snow border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 text-sm appearance-none"
-                    >
-                      <option value="">{c.monthLabel}</option>
-                      {MONTHS.map((m, i) => (
-                        <option key={i} value={i + 1}>{m}</option>
-                      ))}
-                    </select>
-                    <select
-                      value={travelYear ?? ''}
-                      onChange={(e) => setTravelYear(e.target.value ? Number(e.target.value) : null)}
-                      className="w-full px-4 py-3 rounded-xl bg-night/80 text-snow border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 text-sm appearance-none"
-                    >
-                      <option value="">{c.yearLabel}</option>
-                      <option value={2026}>2026</option>
-                      <option value={2027}>2027</option>
-                      <option value={2028}>2028</option>
-                    </select>
+                    <div>
+                      <label htmlFor="signin-travel-month" className="block text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-1.5">
+                        {c.monthLabel}
+                      </label>
+                      <select
+                        id="signin-travel-month"
+                        value={travelMonth ?? ''}
+                        onChange={(e) => setTravelMonth(e.target.value ? Number(e.target.value) : null)}
+                        className="w-full px-4 py-3 rounded-xl bg-night/80 text-snow border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 text-sm appearance-none"
+                      >
+                        <option value="">{c.monthLabel}</option>
+                        {MONTHS.map((m, i) => (
+                          <option key={i} value={i + 1}>{m}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="signin-travel-year" className="block text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-1.5">
+                        {c.yearLabel}
+                      </label>
+                      <select
+                        id="signin-travel-year"
+                        value={travelYear ?? ''}
+                        onChange={(e) => setTravelYear(e.target.value ? Number(e.target.value) : null)}
+                        className="w-full px-4 py-3 rounded-xl bg-night/80 text-snow border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 text-sm appearance-none"
+                      >
+                        <option value="">{c.yearLabel}</option>
+                        <option value={2026}>2026</option>
+                        <option value={2027}>2027</option>
+                        <option value={2028}>2028</option>
+                      </select>
+                    </div>
                   </div>
                   <label className="flex items-center gap-2.5 mt-3 cursor-pointer group">
                     <input
@@ -366,7 +384,7 @@ export default function SignIn() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all cursor-pointer text-base shadow-[0_8px_30px_-5px_rgba(236,72,153,0.5)]"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-pink-cta text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all cursor-pointer text-base shadow-[0_8px_30px_-5px_rgba(236,72,153,0.5)]"
                 >
                   {sending ? (
                     c.sending

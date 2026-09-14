@@ -5,6 +5,7 @@ import type { Post, PostBlock } from '../data/posts';
 import type { CategorySlug } from '../data/categories';
 import type { BlogPostRow } from './supabase';
 import { authors } from '../data/author';
+import { versioned } from './images';
 
 const VALID_CATEGORIES: readonly CategorySlug[] = [
   'aurora',
@@ -80,7 +81,8 @@ export function rowToPost(row: BlogPostRow): Post {
     tags: row.tags ?? [],
     publishedAt: row.published_at ?? row.created_at,
     readTimeMinutes: row.read_time_minutes ?? 5,
-    heroImage: row.hero_image ?? '',
+    // Sama ?v=-tagi kuin prerenderissä (images.ts); Supabase-storage-osoitteet jäävät ennalleen.
+    heroImage: versioned(row.hero_image ?? ''),
     heroAlt: row.hero_alt ?? row.title,
     // Editorial pens resolve via the author registry; anything unknown (e.g. a
     // real user's handle) falls back to the umbrella Field Journal voice.
