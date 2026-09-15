@@ -33,21 +33,21 @@ const DESTINATIONS: Destination[] = [
     name: 'Rovaniemi',
     region: 'On the Arctic Circle',
     blurb: "Lapland's capital. Where most flights land. The base camp for everything north of here.",
-    hero: '/images/category-aurora-1200.webp',
+    hero: '/images/trip-solo-trek-1200.webp',
   },
   {
     slug: 'saariselka',
     name: 'Saariselkä',
     region: 'Far north, fells country',
     blurb: 'Treeless tundra, glass igloos, the Urho Kekkonen national park out the back door.',
-    hero: '/images/trip-forest-walk-1200.webp',
+    hero: '/images/hero-aurora-winter-1200.webp',
   },
   {
     slug: 'levi',
     name: 'Levi',
     region: 'West Lapland, fell country',
     blurb: "Finland's biggest ski resort. Direct flights from Helsinki in winter. Family-friendly basecamp.",
-    hero: '/images/trip-cabin-life-1200.webp',
+    hero: '/images/category-cabins-1200.webp',
   },
   {
     slug: 'kemi',
@@ -61,7 +61,7 @@ const DESTINATIONS: Destination[] = [
     name: 'Inari',
     region: 'Sámi heartland',
     blurb: "Finland's third-largest lake. The Sámi cultural centre Siida. Where Lapland feels furthest from Europe.",
-    hero: '/images/category-seasons-1200.webp',
+    hero: '/images/trip-night-forest-1200.webp',
   },
   {
     slug: 'muonio',

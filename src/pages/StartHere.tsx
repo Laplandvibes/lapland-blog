@@ -73,7 +73,10 @@ export default function StartHere() {
     <div className="min-h-screen bg-night text-snow">
       <Nav />
 
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Hero: korkeus oli sisällön varassa (pt-32 pb-20) ja jäi matalaksi
+          (Vesa 2026-09-15: "hero osio on hyvä, liian matala tosin"). Sama
+          minimikorkeus kuin arkistosivulla, jotta kuva ehtii kantaa. */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[62vh] md:min-h-[70vh] flex items-center">
         <picture><source srcSet="/images/hero-dusk-lake-1920.avif" type="image/avif" /><source srcSet="/images/hero-dusk-lake-1920.webp" type="image/webp" /><img
           src="/images/hero-dusk-lake-1920.webp"
           alt="Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore"
