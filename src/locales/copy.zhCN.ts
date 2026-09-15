@@ -235,7 +235,7 @@ const zhCN: SectionCopy = {
     notHeading: '您不会遇到的',
     notBody:
       '读者文章里夹带的赞助贴文。硬塞进您博客的联盟购物清单。「难忘」「人生清单」「梦幻」或「冬日仙境」这些词，在编辑草稿中被禁用，也值得在您自己的文章里禁用。它们对写作有害，对读者也有害。',
-    seedHeading: '起始文章',
+    seedHeading: '这些文章从何而来',
     seedBody:
       '站上已有的文章由 Lapland.blog 编辑部 The Field Journal 撰写。它们用来展示一个诚实、缓慢、以图片为主的旅行博客可以是什么样子：地点写出名字，价格照着菜单，出处放在最后。读一篇，然后想象你自己的。',
     networkHeading: '关于这个网络',
@@ -247,7 +247,7 @@ const zhCN: SectionCopy = {
     closing: '写自芬兰拉普兰，就在事情真正发生时的那个气温与那个时刻。',
     ctaPrimary: '开始属于您的日志 →',
     ctaSecondary: '或者',
-    ctaSecondaryLink: '先读读起始文章',
+    ctaSecondaryLink: '先读文章',
   },
   destinations: {
     pageTitle: '目的地 | Lapland.blog',
@@ -300,7 +300,7 @@ const zhCN: SectionCopy = {
       },
       kemijarvi: {
         region: '东拉普兰，湖区',
-        blurb: '芬兰最北的城市。冰封的湖面，步行可达的十几座木屋。安静。',
+        blurb: '芬兰最北端的城市。一片大湖，步行可达的十几间小屋。安静。',
       },
     },
   },

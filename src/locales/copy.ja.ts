@@ -235,7 +235,7 @@ const ja: SectionCopy = {
     notHeading: '見つからないもの',
     notBody:
       '読者の記事の中の広告投稿、ブログに詰め込まれたアフィリエイトのショッピングリスト。「忘れられない」「人生のリスト」「魔法のような」「冬の楽園」といった言葉は、編集の下書きで禁止されており、あなたのブログでも避ける価値があります。執筆にも読者にも良くありません。',
-    seedHeading: 'シード記事',
+    seedHeading: 'これらの記事は誰が書いているか',
     seedBody:
       'サイトにすでにある記事は、Lapland.blogの編集部であるThe Field Journalが書いています。正直で、ゆっくりとした、写真中心の旅行ブログがどう読めるのかを示すためのものです。場所は名前で、値段はメニューから、出典は最後に。一本読んで、ご自身のブログを思い描いてみてください。',
     networkHeading: 'ネットワークについて',
@@ -247,7 +247,7 @@ const ja: SectionCopy = {
     closing: 'フィンランド・ラップランドから、その時の気温と時間で書かれています。',
     ctaPrimary: '自分のジャーナルを始める →',
     ctaSecondary: 'または',
-    ctaSecondaryLink: 'まずシード記事を読む',
+    ctaSecondaryLink: 'まず記事を読む',
   },
   destinations: {
     pageTitle: '目的地 | Lapland.blog',
@@ -300,7 +300,7 @@ const ja: SectionCopy = {
       },
       kemijarvi: {
         region: '東ラップランド、湖水地帯',
-        blurb: 'フィンランド最北の市。凍った湖、歩いて行ける十数軒のコテージ。静か。',
+        blurb: 'フィンランド最北の街。大きな湖と、歩いて行ける十数軒のコテージ。静かです。',
       },
     },
   },

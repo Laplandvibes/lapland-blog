@@ -235,7 +235,7 @@ const es: SectionCopy = {
     notHeading: 'Qué no encontrará',
     notBody:
       'Publicaciones patrocinadas dentro de las entradas de los lectores. Listas de compra de afiliados metidas a la fuerza en su blog. Las palabras «inolvidable», «lista de deseos», «mágico» o «país de las maravillas invernal» están vetadas en los borradores editoriales, y conviene vetarlas también en los suyos. Son malas para escribir y malas para quien lee.',
-    seedHeading: 'Las entradas iniciales',
+    seedHeading: 'De dónde vienen estos textos',
     seedBody:
       'Las entradas que ya están en la web las escribe The Field Journal, la redacción de Lapland.blog. Muestran cómo puede sonar un blog de viaje honesto, lento y guiado por la imagen: lugares con nombre, precios leídos de la carta, fuentes al final. Lea una e imagine la suya.',
     networkHeading: 'Sobre la red',
@@ -247,7 +247,7 @@ const es: SectionCopy = {
     closing: 'Escrito desde la Laponia finlandesa, a la temperatura y la hora en que de verdad ocurrió.',
     ctaPrimary: 'Empezar su propio diario →',
     ctaSecondary: 'O',
-    ctaSecondaryLink: 'lea primero las entradas iniciales',
+    ctaSecondaryLink: 'lea primero los textos',
   },
   destinations: {
     pageTitle: 'Destinos | Lapland.blog',
@@ -300,7 +300,7 @@ const es: SectionCopy = {
       },
       kemijarvi: {
         region: 'Laponia oriental, tierra de lagos',
-        blurb: 'La ciudad más septentrional de Finlandia. Un lago helado, una docena de cabañas a un paseo. Silencio.',
+        blurb: 'La ciudad más septentrional de Finlandia. Un lago grande y una docena de cabañas a pie. Tranquilo.',
       },
     },
   },

@@ -81,8 +81,8 @@ const DESTINATIONS: Destination[] = [
     slug: 'kemijarvi',
     name: 'Kemijärvi',
     region: 'East Lapland, lake country',
-    blurb: "Finland's northernmost city. Frozen lake, a dozen mökki within walking distance. Quiet.",
-    hero: '/images/trip-silence-1200.webp',
+    blurb: "Finland's northernmost city. A big lake and a dozen cabins within walking distance. Quiet.",
+    hero: '/images/dest-kemijarvi-1200.webp',
   },
 ];
 

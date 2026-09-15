@@ -235,7 +235,7 @@ const sv: SectionCopy = {
     notHeading: 'Vad du inte hittar',
     notBody:
       'Sponsrade inlägg inuti läsarnas inlägg. Affiliate-shoppinglistor instoppade i din blogg. Orden "oförglömlig", "bucket list", "magisk" eller "vinterland" är bannlysta från de redaktionella utkasten, och värda att bannlysa från dina också. De är dåliga för skrivandet och dåliga för läsarna.',
-    seedHeading: 'Startinläggen',
+    seedHeading: 'Varifrån texterna kommer',
     seedBody:
       'Inläggen på sidan är skrivna av The Field Journal, Lapland.blogs redaktion. De visar hur en ärlig, långsam och bilddriven reseblogg kan låta: platser vid namn, priser lästa från menyn, källor sist. Läs ett och föreställ dig ditt eget.',
     networkHeading: 'Om nätverket',
@@ -247,7 +247,7 @@ const sv: SectionCopy = {
     closing: 'Skrivet från finska Lappland, vid den temperatur och den timme det faktiskt hände.',
     ctaPrimary: 'Starta din egen dagbok →',
     ctaSecondary: 'Eller',
-    ctaSecondaryLink: 'läs startinläggen först',
+    ctaSecondaryLink: 'läs texterna först',
   },
   destinations: {
     pageTitle: 'Resmål | Lapland.blog',
@@ -300,7 +300,7 @@ const sv: SectionCopy = {
       },
       kemijarvi: {
         region: 'Östra Lappland, sjövärld',
-        blurb: 'Finlands nordligaste stad. Frusen sjö, ett dussin mökki inom gångavstånd. Tyst.',
+        blurb: 'Finlands nordligaste stad. En stor sjö och ett dussin stugor inom gångavstånd. Tyst.',
       },
     },
   },

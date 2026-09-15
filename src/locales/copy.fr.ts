@@ -185,7 +185,7 @@ const fr: SectionCopy = {
     notHeading: 'Ce que vous ne trouverez pas',
     notBody:
       'Des publications sponsorisées dans les entrées des lecteurs. Des listes d’affiliés glissées dans votre blog. Les mots « inoubliable », « bucket list », « magique », « pays des merveilles hivernal » sont bannis des brouillons éditoriaux, et tout aussi à bannir des vôtres. Mauvais pour l’écriture, mauvais pour le lecteur.',
-    seedHeading: 'Les entrées-germes',
+    seedHeading: 'D’où viennent ces textes',
     seedBody:
       'Les textes déjà en ligne sont écrits par The Field Journal, la rédaction de Lapland.blog. Ils montrent à quoi peut ressembler un blog de voyage honnête, lent et porté par l’image : des lieux nommés, des prix lus sur la carte, des sources à la fin. Lisez-en un et imaginez le vôtre.',
     networkHeading: 'À propos du réseau',
@@ -197,7 +197,7 @@ const fr: SectionCopy = {
     closing: 'Écrit depuis la Laponie finlandaise, à la température et à l’heure réelles.',
     ctaPrimary: 'Lancer votre propre carnet →',
     ctaSecondary: 'Ou',
-    ctaSecondaryLink: 'lisez d’abord les entrées-germes',
+    ctaSecondaryLink: 'lisez d’abord les textes',
   },
   destinations: {
     pageTitle: 'Destinations | Lapland.blog',
@@ -250,7 +250,7 @@ const fr: SectionCopy = {
       },
       kemijarvi: {
         region: 'Laponie de l’Est, pays des lacs',
-        blurb: 'La ville la plus septentrionale de Finlande. Un lac gelé, une dizaine de chalets à distance de marche. Le calme.',
+        blurb: 'La ville la plus septentrionale de Finlande. Un grand lac et une douzaine de chalets à pied. Calme.',
       },
     },
   },

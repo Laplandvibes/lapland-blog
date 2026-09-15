@@ -235,7 +235,7 @@ const fi: SectionCopy = {
     notHeading: 'Mitä et löydä',
     notBody:
       'Sponsoroituja juttuja lukijoiden merkinnöissä. Affiliate-ostoslistoja blogiisi tungettuina. Sanat "unohtumaton", "bucket list", "taianomainen" tai "talvimaailma" on kielletty toimituksellisissa luonnoksissa, ja kannattaa kieltää myös omissasi. Ne ovat huonoja kirjoittamiselle ja huonoja lukijoille.',
-    seedHeading: 'Siemenmerkinnät',
+    seedHeading: 'Mistä sivun jutut tulevat',
     seedBody:
       'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus. Ne näyttävät, miltä rehellinen, hidas ja kuvavetoinen matkablogi voi kuulostaa: paikat nimeltä, hinnat ruokalistalta, lähteet lopussa. Lue yksi ja kuvittele oma.',
     networkHeading: 'Verkostosta',
@@ -247,7 +247,7 @@ const fi: SectionCopy = {
     closing: 'Kirjoitettu Suomen Lapissa, siinä lämpötilassa ja sillä hetkellä, jona kaikki tapahtui.',
     ctaPrimary: 'Aloita oma päiväkirja →',
     ctaSecondary: 'Tai',
-    ctaSecondaryLink: 'lue siemenmerkinnät ensin',
+    ctaSecondaryLink: 'lue jutut ensin',
   },
   destinations: {
     pageTitle: 'Kohteet | Lapland.blog',
@@ -300,7 +300,7 @@ const fi: SectionCopy = {
       },
       kemijarvi: {
         region: 'Itä-Lappi, järvimaata',
-        blurb: 'Suomen pohjoisin kaupunki. Jäätynyt järvi, tusina mökkiä kävelymatkan päässä. Hiljaista.',
+        blurb: 'Suomen pohjoisin kaupunki. Iso järvi ja tusina mökkiä kävelymatkan päässä. Hiljaista.',
       },
     },
   },

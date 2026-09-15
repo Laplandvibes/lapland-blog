@@ -235,7 +235,7 @@ const en: SectionCopy = {
     notHeading: "What you won't find",
     notBody:
       'Sponsored posts inside reader entries. Affiliate shopping lists stuffed into your blog. The words "unforgettable", "bucket list", "magical" or "winter wonderland" are banned from the editorial drafts, and worth banning from yours too. They are bad for writing and bad for readers.',
-    seedHeading: 'The seed entries',
+    seedHeading: 'Where these entries come from',
     seedBody:
       'The entries already on the site are written by The Field Journal, the editorial desk of Lapland.blog. They are there to show what an honest, slow, photo-led trip blog can read like: places named, prices read off the menu, sources at the end. Read one and picture your own.',
     networkHeading: 'About the network',
@@ -247,7 +247,7 @@ const en: SectionCopy = {
     closing: 'Written from Finnish Lapland, at the temperature and the hour it actually happened.',
     ctaPrimary: 'Start your own journal →',
     ctaSecondary: 'Or',
-    ctaSecondaryLink: 'read the seed entries first',
+    ctaSecondaryLink: 'read the entries first',
   },
   destinations: {
     pageTitle: 'Destinations | Lapland.blog',
@@ -300,7 +300,7 @@ const en: SectionCopy = {
       },
       kemijarvi: {
         region: 'East Lapland, lake country',
-        blurb: "Finland's northernmost city. Frozen lake, a dozen mökki within walking distance. Quiet.",
+        blurb: 'Finland\'s northernmost city. A big lake and a dozen cabins within walking distance. Quiet.',
       },
     },
   },

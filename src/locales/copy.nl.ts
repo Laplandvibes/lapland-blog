@@ -185,7 +185,7 @@ const nl: SectionCopy = {
     notHeading: 'Wat u hier niet vindt',
     notBody:
       'Gesponsorde berichten in de lezersnotities. Affiliate-winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor het schrijven, slecht voor de lezer.',
-    seedHeading: 'De voorbeeldnotities',
+    seedHeading: 'Waar deze verhalen vandaan komen',
     seedBody:
       'De stukken die al op de site staan zijn geschreven door The Field Journal, de redactie van Lapland.blog. Ze laten zien hoe een eerlijke, langzame, door beeld gedragen reisblog kan klinken: plaatsen bij naam, prijzen van de kaart gelezen, bronnen aan het eind. Lees er een en stel u uw eigen blog voor.',
     networkHeading: 'Over het netwerk',
@@ -197,7 +197,7 @@ const nl: SectionCopy = {
     closing: 'Geschreven vanuit Fins Lapland, op de temperatuur en het uur waarop het werkelijk gebeurde.',
     ctaPrimary: 'Start uw eigen dagboek →',
     ctaSecondary: 'Of',
-    ctaSecondaryLink: 'lees eerst de voorbeeldnotities',
+    ctaSecondaryLink: 'lees eerst de verhalen',
   },
   destinations: {
     pageTitle: 'Bestemmingen | Lapland.blog',
@@ -250,7 +250,7 @@ const nl: SectionCopy = {
       },
       kemijarvi: {
         region: 'Oost-Lapland, merenland',
-        blurb: 'De noordelijkste stad van Finland. Een bevroren meer, een dozijn hutten op loopafstand. Stil.',
+        blurb: 'De noordelijkste stad van Finland. Een groot meer en een dozijn hutten op loopafstand. Stil.',
       },
     },
   },

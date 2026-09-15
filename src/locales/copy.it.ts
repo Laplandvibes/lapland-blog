@@ -185,7 +185,7 @@ const it: SectionCopy = {
     notHeading: 'Cosa non troverà',
     notBody:
       'Articoli sponsorizzati dentro le voci dei lettori. Liste affiliate infilate nel Suo blog. Le parole «indimenticabile», «da fare nella vita», «magico» o «paese delle meraviglie invernale» sono bandite dalle bozze editoriali e vale la pena bandirle anche dalle Sue. Fanno male alla scrittura e ai lettori.',
-    seedHeading: 'Le voci-seme',
+    seedHeading: 'Da dove vengono questi testi',
     seedBody:
       'I testi già pubblicati sono scritti da The Field Journal, la redazione di Lapland.blog. Mostrano come può suonare un blog di viaggio onesto, lento e guidato dalle immagini: luoghi chiamati per nome, prezzi letti dal menù, fonti in fondo. Ne legga uno e immagini il Suo.',
     networkHeading: 'Il network',
@@ -197,7 +197,7 @@ const it: SectionCopy = {
     closing: 'Scritto dalla Lapponia finlandese, alla temperatura e all’ora in cui è davvero accaduto.',
     ctaPrimary: 'Avvii il Suo diario →',
     ctaSecondary: 'Oppure',
-    ctaSecondaryLink: 'legga prima le voci-seme',
+    ctaSecondaryLink: 'legga prima i testi',
   },
   destinations: {
     pageTitle: 'Destinazioni | Lapland.blog',
@@ -250,7 +250,7 @@ const it: SectionCopy = {
       },
       kemijarvi: {
         region: 'Lapponia orientale, terra dei laghi',
-        blurb: 'La città più settentrionale della Finlandia. Un lago ghiacciato, una dozzina di baite raggiungibili a piedi. Silenzio.',
+        blurb: 'La città più settentrionale della Finlandia. Un grande lago e una dozzina di baite a piedi. Silenzio.',
       },
     },
   },

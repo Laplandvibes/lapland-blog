@@ -32,6 +32,7 @@ export const IMAGE_VERSIONS: Record<string, string> = {
   '/images/category-seasons-1200.webp': 'f924a901',
   '/images/category-seasons-480.webp': 'b128aef3',
   '/images/category-seasons-800.webp': '85f8e9f3',
+  '/images/dest-kemijarvi-1200.webp': '6c87639d',
   '/images/hero-aurora-1200.avif': 'd6f81bfb',
   '/images/hero-aurora-1200.webp': '7a9e9e3d',
   '/images/hero-aurora-1920.avif': '3598ef42',

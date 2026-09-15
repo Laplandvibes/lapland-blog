@@ -185,7 +185,7 @@ const ko: SectionCopy = {
     notHeading: '여기서 볼 수 없는 것',
     notBody:
       '독자 글 안의 광고성 게시물, 블로그에 끼워 넣는 제휴 쇼핑 목록. "잊을 수 없는", "버킷리스트", "환상적인", "겨울 왕국" 같은 단어는 편집 초안에서 금지하고 있으며, 여러분의 글에서도 금하실 만한 표현입니다. 글에도, 독자에게도 좋지 않습니다.',
-    seedHeading: '시드 글',
+    seedHeading: '이 글들은 누가 쓰는가',
     seedBody:
       '사이트에 이미 올라와 있는 글은 Lapland.blog 편집부인 The Field Journal이 씁니다. 솔직하고 느리며 사진이 이끄는 여행 블로그가 어떤 느낌인지 보여 주려는 것입니다. 장소는 이름으로, 가격은 메뉴판에서, 출처는 마지막에. 한 편 읽고 자신의 블로그를 그려 보세요.',
     networkHeading: '네트워크 소개',
@@ -197,7 +197,7 @@ const ko: SectionCopy = {
     closing: '라플란드에서, 실제 그 시점의 기온과 시각으로 쓰였습니다.',
     ctaPrimary: '나만의 일기 시작하기 →',
     ctaSecondary: '또는',
-    ctaSecondaryLink: '시드 글부터 먼저 읽기',
+    ctaSecondaryLink: '먼저 글을 읽기',
   },
   destinations: {
     pageTitle: '여행지 | Lapland.blog',
@@ -250,7 +250,7 @@ const ko: SectionCopy = {
       },
       kemijarvi: {
         region: '동부 라플란드, 호수 지대',
-        blurb: '핀란드 최북단의 도시. 얼어붙은 호수, 걸어서 닿는 열두어 채의 오두막. 고요합니다.',
+        blurb: '핀란드 최북단 도시. 큰 호수와 걸어서 닿는 열두어 채의 오두막. 조용합니다.',
       },
     },
   },

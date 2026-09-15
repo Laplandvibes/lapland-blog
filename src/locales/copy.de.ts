@@ -236,7 +236,7 @@ const de: SectionCopy = {
     notHeading: 'Was Sie hier nicht finden',
     notBody:
       'Gesponserte Beiträge in Leser-Einträgen. Affiliate-Einkaufslisten, in Ihren Blog gestopft. Die Wörter „unvergesslich“, „Bucket List“, „magisch“ und „Winterwunderland“ sind aus den redaktionellen Entwürfen verbannt, und in Ihren sollten sie es auch sein. Sie sind schlecht fürs Schreiben und schlecht für Leser.',
-    seedHeading: 'Die Beispiel-Einträge',
+    seedHeading: 'Woher diese Texte kommen',
     seedBody:
       'Die Einträge auf der Seite stammen von The Field Journal, der Redaktion von Lapland.blog. Sie zeigen, wie ein ehrlicher, langsamer, bildgeführter Reiseblog klingen kann: Orte beim Namen, Preise von der Karte gelesen, Quellen am Ende. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
     networkHeading: 'Über das Netzwerk',
@@ -248,7 +248,7 @@ const de: SectionCopy = {
     closing: 'Geschrieben aus dem finnischen Lappland, bei der Temperatur und zur Stunde, in der es tatsächlich passierte.',
     ctaPrimary: 'Eigenes Tagebuch starten →',
     ctaSecondary: 'Oder',
-    ctaSecondaryLink: 'zuerst die Beispiel-Einträge lesen',
+    ctaSecondaryLink: 'zuerst die Texte lesen',
   },
   destinations: {
     pageTitle: 'Reiseziele | Lapland.blog',
@@ -301,7 +301,7 @@ const de: SectionCopy = {
       },
       kemijarvi: {
         region: 'Ost-Lappland, Seenland',
-        blurb: 'Finnlands nördlichste Stadt. Zugefrorener See, ein Dutzend Hütten (mökki) in Gehweite. Still.',
+        blurb: 'Finnlands nördlichste Stadt. Ein großer See und ein Dutzend Hütten in Gehweite. Ruhig.',
       },
     },
   },
