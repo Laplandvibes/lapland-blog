@@ -284,7 +284,7 @@ export default function Home() {
           {loading ? (
             <div className="grid gap-5 md:grid-cols-3">
               {[0, 1, 2].map((i) => (
-                <div key={i} className="aspect-[4/5] rounded-2xl bg-night-light/60 animate-pulse" />
+                <div key={i} className="aspect-[4/5] sm:aspect-[3/4] rounded-2xl bg-night-light/60 animate-pulse" />
               ))}
             </div>
           ) : (
@@ -293,19 +293,26 @@ export default function Home() {
                 <Reveal key={post.slug} delay={((i % 3) + 1) as 1 | 2 | 3}>
                   <Link
                     to={to(`/post/${post.slug}`)}
-                    className="group relative block aspect-[4/5] rounded-2xl overflow-hidden border border-purple/20 hover:border-pink/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+                    className="group block h-full rounded-2xl overflow-hidden border border-purple/20 bg-night-light/40 hover:border-pink/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
                   >
-                    <img
-                      src={post.heroImage}
-                      alt={post.heroAlt}
-                      loading={i === 0 ? 'eager' : 'lazy'}
-                      decoding="async"
-                      width={1200}
-                      height={1500}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-night via-night/60 to-night/5" />
-                    <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                    {/* Kuvasuhde = lahdekuvan suhde (16:10). Pystykortti (4/5)
+                        rajasi vaakakuvasta puolet pois ja jatti puhelimelle vain
+                        0,76-0,90x tarvittavista pikseleista => pehmea kuva.
+                        Mitattu livesta 2026-09-15. */}
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img
+                        src={post.heroImage}
+                        alt={post.heroAlt}
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
+                        fetchPriority={i === 0 ? 'high' : 'auto'}
+                        width={1200}
+                        height={750}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/10 to-transparent" />
+                    </div>
+                    <div className="p-5 sm:p-6">
                       <p className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
                         {post.kicker}
                       </p>
