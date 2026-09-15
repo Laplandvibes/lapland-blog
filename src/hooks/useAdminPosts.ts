@@ -125,6 +125,9 @@ export interface PostInput {
   location: string | null;
   weather_note: string | null;
   stay_type: string | null;
+  /** Kirjoittajan valitsema lukuarkin teema (Vesa 2026-09-15). Neljä valmista
+      vaihtoehtoa; kanta rajoittaa arvot check-ehdolla. */
+  theme?: 'yo' | 'lumi' | 'ruska' | 'kaamos';
 }
 
 export async function createPost(

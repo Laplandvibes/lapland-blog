@@ -3,6 +3,7 @@
 // Block-based content model. The Post page renders each block type.
 
 import type { CategorySlug } from './categories';
+import type { PostTheme } from './postThemes';
 
 export type PostBlock =
   | { type: 'paragraph'; text: string }
@@ -41,6 +42,8 @@ export interface Post {
    * all twelve languages and would then be labelling an ad as a staff pick.
    */
   featured?: boolean;
+  /** Kirjoittajan valitsema lukuarkin teema (src/data/postThemes.ts). */
+  theme?: PostTheme;
   content: PostBlock[];
 }
 

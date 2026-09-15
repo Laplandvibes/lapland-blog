@@ -1031,3 +1031,76 @@ h1 > span, h2 > span, h3 > span, h4 > span, button > span, summary > span {
   --color-accent: #BE185D;
   --color-accent-dark: #9D174D;
 }
+
+/* ════════════════════════════════════════════
+   KIRJOITTAJAN TEEMAT — neljä valmista ilmettä artikkelin lukuarkille
+   (Vesa 2026-09-15: "että aidosti asiakas voi tehdä omannäköistä blogi
+   kirjoitusta"). Vapaata värivalitsinta ei ole tarkoituksella: se rikkoo
+   brändin ja tuottaa lukukelvottomia yhdistelmiä. Jokainen teema on mitattu
+   WCAG AA:ta vasten; luvut ovat add_themes.py:n kommentissa.
+
+   Käyttö: <article className="theme-editorial lv-paper" data-theme="ruska">.
+   Ilman attribuuttia arkki on `yo`, eli sama kuin ennen tätä muutosta.
+   ════════════════════════════════════════════ */
+
+.lv-paper[data-theme='lumi'] {
+  background-color: #FFFFFF;
+  --color-cream: #FFFFFF;
+  --color-cream-deep: #F1F5F9;
+  --color-paper-border: rgba(15, 23, 42, 0.12);
+  --color-ink: #111827;
+  --color-ink-soft: #374151;
+  --color-ink-mute: #6B7280;
+  --color-accent: #0E7490;
+  --color-accent-dark: #155E75;
+  --t-btn-bg: #0E7490;
+  --t-btn-ink: #FFFFFF;
+  color: #374151;
+}
+
+.lv-paper[data-theme='ruska'] {
+  background-color: #FBF3EA;
+  --color-cream: #FBF3EA;
+  --color-cream-deep: #F3E6D6;
+  --color-paper-border: rgba(42, 31, 23, 0.14);
+  --color-ink: #2A1F17;
+  --color-ink-soft: #4A3728;
+  --color-ink-mute: #6B5745;
+  --color-accent: #B45309;
+  --color-accent-dark: #92400E;
+  --t-btn-bg: #B45309;
+  --t-btn-ink: #FFFFFF;
+  color: #4A3728;
+}
+
+/* Kaamos on TUMMA arkki: musteet kääntyvät, ja arkin sisäiset vaaleat pinnat
+   (kortit, laatikot) tummenevat samalla — muuten ne jäisivät valkoisiksi
+   läiskiksi. Nappi ei voi olla valkoisella tekstillä (2,0:1), joten sen muste
+   on arkin oma tumma sävy (7,5:1). */
+.lv-paper[data-theme='kaamos'] {
+  background-color: #1B2340;
+  --color-cream: #232C4E;
+  --color-cream-deep: #27315A;
+  --color-paper-border: rgba(169, 180, 204, 0.22);
+  --color-ink: #F3F6FC;
+  --color-ink-soft: #E7ECF5;
+  --color-ink-mute: #95A1BD;
+  --color-accent: #C4A6FF;
+  --color-accent-dark: #D6C2FF;
+  --t-btn-bg: #C4A6FF;
+  --t-btn-ink: #141A30;
+  color: #E7ECF5;
+  border-color: rgba(169, 180, 204, 0.18);
+}
+
+/* Yö on oletus: .lv-paper itsessään. Nappiparit myös sille. */
+.lv-paper {
+  --t-btn-bg: #BE185D;
+  --t-btn-ink: #FFFFFF;
+}
+
+/* Täytetyt napit arkilla seuraavat teemaa. */
+.lv-paper .t-btn {
+  background-color: var(--t-btn-bg);
+  color: var(--t-btn-ink);
+}

@@ -2,6 +2,7 @@
 // existing components (PostCard, FeaturedPost, Post page) don't need to change.
 
 import type { Post, PostBlock } from '../data/posts';
+import { normalizeTheme } from '../data/postThemes';
 import type { CategorySlug } from '../data/categories';
 import type { BlogPostRow } from './supabase';
 import { authors } from '../data/author';
@@ -91,6 +92,7 @@ export function rowToPost(row: BlogPostRow): Post {
         ? row.author_snapshot.handle
         : 'fieldjournal',
     featured: row.featured,
+    theme: normalizeTheme(row.theme),
     content: parseContent(row.content),
   };
 }

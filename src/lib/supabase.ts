@@ -39,7 +39,7 @@ export function isAdminEmail(email: string | null | undefined): boolean {
  * listakomponentit eivät huomaa eroa.
  */
 export const POST_LIST_COLUMNS =
-  'id,slug,title,kicker,excerpt,category_slug,tags,hero_image,hero_alt,author_id,author_snapshot,status,published_at,featured,read_time_minutes,view_count,created_at,updated_at,visit_date,location,weather_note,stay_type,lang,translation_of,moderation_hidden,moderation_hidden_at';
+  'id,slug,title,kicker,excerpt,category_slug,tags,hero_image,hero_alt,author_id,author_snapshot,status,published_at,featured,read_time_minutes,view_count,created_at,updated_at,visit_date,location,weather_note,stay_type,theme,lang,translation_of,moderation_hidden,moderation_hidden_at';
 
 export interface BlogPostRow {
   id: string;
@@ -74,4 +74,5 @@ export interface BlogPostRow {
   location: string | null;
   weather_note: string | null;
   stay_type: string | null;
+  theme: string | null;
 }

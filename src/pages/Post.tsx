@@ -227,7 +227,12 @@ export default function Post() {
           ================================================================ */}
       <main className="relative px-4 sm:px-6 lg:px-8 pb-24 -mt-28 md:-mt-36">
         <div className="max-w-[72rem] mx-auto xl:grid xl:grid-cols-[minmax(0,1fr)_256px] xl:gap-10 xl:items-start">
-          <article className="theme-editorial lv-paper rounded-[1.5rem] px-5 py-9 sm:px-8 md:px-12 md:py-14">
+          {/* data-theme = kirjoittajan valinta (4 valmista, kontrastit mitattu).
+              Puuttuva tai tuntematon arvo putoaa yöhön normalizeThemessa. */}
+          <article
+            data-theme={post.theme ?? 'yo'}
+            className="theme-editorial lv-paper rounded-[1.5rem] px-5 py-9 sm:px-8 md:px-12 md:py-14"
+          >
 
               {cat && (
                 <Link

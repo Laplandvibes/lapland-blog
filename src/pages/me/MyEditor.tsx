@@ -58,6 +58,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { useSeo, canonicalUrl } from '../../lib/seo';
 import { uploadTripImage } from '../../lib/uploadImage';
 import type { PostBlock } from '../../data/posts';
+import { POST_THEMES, THEME_SWATCH, normalizeTheme, type PostTheme } from '../../data/postThemes';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
@@ -111,6 +112,16 @@ function contentToMarkdown(raw: unknown): string {
 
 // ─── Component ──────────────────────────────────────────────────────────────
 
+// Teemojen näyttönimet. Editorin käyttöliittymä on englanniksi (kuten muutkin
+// /me-näkymät), mutta nimet ovat suomalaisia sanoja koska ne ovat ilmeiden
+// nimiä, eivät käännettävää tekstiä: kaamos ja ruska eivät käänny.
+const THEME_LABELS: Record<PostTheme, string> = {
+  yo: 'Yö',
+  lumi: 'Lumi',
+  ruska: 'Ruska',
+  kaamos: 'Kaamos',
+};
+
 export default function MyEditor() {
   const { id } = useParams<{ id: string }>();
   const isNew = !id || id === 'new';
@@ -129,6 +140,7 @@ export default function MyEditor() {
   const [heroAlt, setHeroAlt] = useState('');
   const [markdown, setMarkdown] = useState('');
   const [status, setStatus] = useState<'draft' | 'published'>('draft');
+  const [theme, setTheme] = useState<PostTheme>('yo');
 
   // Trip metadata (Phase 2)
   const [visitDate, setVisitDate] = useState('');
@@ -182,6 +194,7 @@ export default function MyEditor() {
     setHeroAlt(row.hero_alt ?? '');
     setMarkdown(contentToMarkdown(row.content));
     setStatus(row.status ?? 'draft');
+    setTheme(normalizeTheme((row as { theme?: unknown }).theme));
     setVisitDate(row.visit_date ?? '');
     setLocation(row.location ?? '');
     setWeatherNote(row.weather_note ?? '');
@@ -233,6 +246,7 @@ export default function MyEditor() {
         hero_alt: heroAlt.trim(),
         content,
         status,
+        theme,
         featured: false,
         read_time_minutes: readTime,
         published_at: null,
@@ -249,7 +263,7 @@ export default function MyEditor() {
         setTimeout(() => setAutoSaved(false), 2000);
       }
     }, 3000);
-  }, [isNew, id, saving, markdown, title, excerpt, categorySlug, heroImage, heroAlt, slug, status, readTime, visitDate, location, weatherNote, stayType]);
+  }, [isNew, id, saving, markdown, title, excerpt, categorySlug, heroImage, heroAlt, slug, theme, status, readTime, visitDate, location, weatherNote, stayType]);
 
   // Trigger auto-save on any content change
   useEffect(() => {
@@ -373,6 +387,7 @@ export default function MyEditor() {
       hero_alt: heroAlt.trim(),
       content,
       status: targetStatus,
+      theme,
       featured: false,
       read_time_minutes: readTime,
       published_at: null,
@@ -737,6 +752,54 @@ export default function MyEditor() {
                     </option>
                   ))}
                 </select>
+              </div>
+
+              {/* Lukuarkin teema — neljä valmista ilmettä. Vapaata värivalitsinta
+                  ei ole tarkoituksella: kontrastit on mitattu WCAG AA:ta vasten
+                  (ks. src/index.css "KIRJOITTAJAN TEEMAT"), ja vapaa valinta
+                  tuottaisi lukukelvottomia yhdistelmiä. */}
+              <div>
+                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                  Look
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {POST_THEMES.map((name) => {
+                    const sw = THEME_SWATCH[name];
+                    const active = theme === name;
+                    return (
+                      <button
+                        key={name}
+                        type="button"
+                        onClick={() => setTheme(name)}
+                        aria-pressed={active}
+                        className={`flex items-center gap-2.5 rounded-xl border px-3 py-2.5 text-left transition-colors min-h-[44px] ${
+                          active
+                            ? 'border-pink bg-pink/10 text-snow'
+                            : 'border-purple/30 text-slate-300 hover:border-pink/50 hover:text-snow'
+                        }`}
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="relative h-7 w-7 shrink-0 rounded-md border border-white/15"
+                          style={{ background: sw.paper }}
+                        >
+                          <span
+                            className="absolute left-1 top-1.5 block h-[3px] w-4 rounded-full"
+                            style={{ background: sw.ink }}
+                          />
+                          <span
+                            className="absolute left-1 top-3.5 block h-[3px] w-2.5 rounded-full"
+                            style={{ background: sw.accent }}
+                          />
+                        </span>
+                        <span className="text-xs font-semibold capitalize">{THEME_LABELS[name]}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+                <p className="mt-2 text-[11px] leading-snug text-slate-400">
+                  Changes the colours of your entry page. Every option is tested for readability.
+                </p>
               </div>
 
               <div>
