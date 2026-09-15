@@ -100,15 +100,6 @@ const de: SectionCopy = {
       'Ihre Einträge werden zu einem öffentlichen Blog unter lapland.blog/by/ihr-name. Freunde können mitlesen. Jeder Eintrag lässt sich als Instagram-Story exportieren, damit die Reise ein zweites Leben bekommt.',
     howCta: 'Reiseblog starten',
     howFootnote: 'Kostenlos für Reisetagebücher · Keine Kreditkarte nötig · Anmeldung mit Google',
-    liveEyebrow: 'Beispielblogs der Redaktion',
-    liveH2Pre: 'So sieht ein Reiseblog',
-    liveH2Italic: 'aus.',
-    liveH2Tail: 'Ihrer ist der nächste.',
-    liveLead:
-      'Schwarze Pisten in Levi. Polarlicht-Nächte in Inari. 60 km mit dem Hundeschlitten in Saariselkä. The Field Journal, unsere Redaktion, hat diese Beispielblogs gebaut, um das Format zu zeigen. Ihr eigener ist in weniger als fünf Minuten angelegt.',
-    liveBrowseAll: 'Alle Blogs ansehen',
-    liveCta: 'Eigenen Reiseblog starten',
-    liveFootnote: 'Kostenlos · Keine Kreditkarte · 2 Minuten bis zum ersten Eintrag',
     featuredEyebrow: 'Beispiel-Tagebuch der Redaktion',
     featuredEvery: 'Alle Einträge →',
     featuredLead:
@@ -533,38 +524,6 @@ const de: SectionCopy = {
     yourTripYourBlog: 'Ihre Reise · Ihr Blog',
     startFree: 'Kostenlos. In zwei Minuten gestartet. Für immer Ihrer.',
     startMine: 'Meinen starten',
-    examples: {
-      aurora: {
-        title: 'Fünf Nächte, vier Nordlichter, ein festgefrorenes Stativ',
-        snippet:
-          'Der Kp-Index sagte 2. Der Himmel sah das anders. Lichtsäulen von 21:14 bis 23:40, fotografiert bei −27 °C.',
-      },
-      cabin: {
-        title: 'Eine Holzhütte, kein WLAN, acht Tage offline',
-        snippet:
-          'Jeden Morgen Holz gehackt. Jeden Abend Sauna. Geschlafen wie seit Jahren nicht mehr.',
-      },
-      forest: {
-        title: 'Sechs stille Morgen im Kiefernwald',
-        snippet:
-          'Jeden Tag um 07:30 aus der Hütte. Keine Musik. Kein Handy. Nur das Knirschen der Stiefel im frischen Schnee.',
-      },
-      nightforest: {
-        title: 'Wie ein Fichtenwald bei −22 °C klingt',
-        snippet:
-          'Nach nichts. Dann knackt ein einzelner Ast, hundert Meter entfernt. Das trägt. Das trägt sehr weit.',
-      },
-      silence: {
-        title: 'Ein Baum, ein See, eine Stunde zur blauen Stunde',
-        snippet:
-          'Aufs Eis hinausgegangen, bis das Ufer verschwand. Eine einzelne Kiefer. Null Wind. Ich habe das Wort Stille anders verstanden.',
-      },
-      food: {
-        title: 'Die Lachssuppe für 42 Euro, rezensiert',
-        snippet:
-          'Dazu Roggenbrot und eine Butterlocke. In acht Minuten ausgelöffelt. Ich habe eine zweite Schüssel bestellt.',
-      },
-    },
   },
 };
 

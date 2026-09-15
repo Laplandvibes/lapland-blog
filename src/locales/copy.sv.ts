@@ -99,15 +99,6 @@ const sv: SectionCopy = {
       'Dina inlägg blir en offentlig blogg på lapland.blog/by/ditt-namn. Vänner kan följa den. Varje inlägg exporteras till en Instagram-story så resan lever två gånger.',
     howCta: 'Starta din reseblogg',
     howFootnote: 'Gratis för resedagböcker · Inget kort krävs · Logga in med Google',
-    liveEyebrow: 'Redaktionella exempelbloggar',
-    liveH2Pre: 'Så här ser en reseblogg',
-    liveH2Italic: 'ut.',
-    liveH2Tail: 'Din är näst på tur.',
-    liveLead:
-      'Svarta pister i Levi. Norrskensnätter i Inari. 60 km med hundspann i Saariselkä. The Field Journal, vår redaktion, byggde de här exempelbloggarna för att visa formatet. Din egen är igång på under fem minuter.',
-    liveBrowseAll: 'Bläddra bland alla bloggar',
-    liveCta: 'Starta min reseblogg',
-    liveFootnote: 'Gratis · Inget kort · 2 minuter till ditt första inlägg',
     featuredEyebrow: 'Grundarens exempeldagbok',
     featuredEvery: 'Varje inlägg →',
     featuredLead:
@@ -531,38 +522,6 @@ const sv: SectionCopy = {
     yourTripYourBlog: 'Din resa · Din blogg',
     startFree: 'Gratis. Två minuter att starta. Din för alltid.',
     startMine: 'Starta min',
-    examples: {
-      aurora: {
-        title: 'Fem nätter, fyra norrsken, ett fruset stativ',
-        snippet:
-          'Kp-index sa 2. Himlen sa något annat. Pelare från 21:14 till 23:40, fotograferade vid minus 27.',
-      },
-      cabin: {
-        title: 'En timmerstuga, inget wifi, åtta dagar utanför nätet',
-        snippet:
-          'Högg ved varje morgon. Bastu varje kväll. Sov djupare än jag gjort på år.',
-      },
-      forest: {
-        title: 'Sex morgnar av tystnad i en tallskog',
-        snippet:
-          'Lämnade stugan 07:30 varje dag. Ingen musik. Ingen telefon. Bara knarret av kängor på nysnö.',
-      },
-      nightforest: {
-        title: 'Hur en granskog låter vid −22 °C',
-        snippet:
-          'Ingenting. Sedan en enda gren som knäcks hundra meter bort. Det bär. Det bär mycket långt.',
-      },
-      silence: {
-        title: 'Ett träd, en sjö, en timme i blå timmen',
-        snippet:
-          'Gick ut på isen tills stranden försvann. En enda tall. Noll vind. Jag förstod ordet tystnad på ett annat sätt.',
-      },
-      food: {
-        title: 'Laxsoppan för fyrtiotvå euro, recenserad',
-        snippet:
-          'Den kom med rågbröd och en klick smör. Jag åt upp den på åtta minuter. Jag beställde en andra skål.',
-      },
-    },
   },
 }
 

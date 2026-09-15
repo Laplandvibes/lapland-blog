@@ -49,15 +49,6 @@ const nl: SectionCopy = {
       'Uw notities worden een openbare blog op lapland.blog/by/uw-naam. Vrienden kunnen hem volgen. Elk bericht kunt u exporteren als Instagram-story, en u beleeft de reis twee keer.',
     howCta: 'Start uw reisblog',
     howFootnote: 'Gratis voor reisdagboeken · Geen creditcard nodig · Aanmelden met Google',
-    liveEyebrow: 'Voorbeeldblogs van de redactie',
-    liveH2Pre: 'Zo ziet een reisblog',
-    liveH2Italic: 'eruit.',
-    liveH2Tail: 'De volgende is die van u.',
-    liveLead:
-      'De zwarte pistes van Levi. Noorderlichtnachten in Inari. 60 km met de huskyslee in Saariselkä. The Field Journal, onze redactie, maakte deze voorbeeldblogs om het format te laten zien. Uw echte blog start u in minder dan vijf minuten.',
-    liveBrowseAll: 'Alle blogs bekijken',
-    liveCta: 'Start mijn reisblog',
-    liveFootnote: 'Gratis · Geen creditcard nodig · Eerste notitie binnen 2 minuten',
     featuredEyebrow: 'Voorbeelddagboek van de oprichter',
     featuredEvery: 'Elke notitie →',
     featuredLead:
@@ -481,38 +472,6 @@ const nl: SectionCopy = {
     yourTripYourBlog: 'Uw reis · Uw blog',
     startFree: 'Gratis. Twee minuten om te starten. Voor altijd van u.',
     startMine: 'Start de mijne',
-    examples: {
-      aurora: {
-        title: 'Vijf nachten, vier keer noorderlicht, één bevroren statief',
-        snippet:
-          'De Kp-index zei 2. De lucht dacht er anders over. Zuilen van 21:14 tot 23:40, gefotografeerd bij min 27.',
-      },
-      cabin: {
-        title: 'Een houten hut, geen wifi, acht dagen offline',
-        snippet:
-          'Elke ochtend hout gehakt. Elke avond sauna. Geslapen zoals ik in jaren niet heb geslapen.',
-      },
-      forest: {
-        title: 'Zes ochtenden stilte in een dennenbos',
-        snippet:
-          'Elke dag om 07:30 de hut uit. Geen muziek. Geen telefoon. Alleen het kraken van laarzen op verse sneeuw.',
-      },
-      nightforest: {
-        title: 'Hoe een sparrenbos klinkt bij −22 °C',
-        snippet:
-          'Naar niets. Dan één tak die knapt op honderd meter afstand. Het geluid draagt. Het draagt heel ver.',
-      },
-      silence: {
-        title: 'Eén boom, één meer, één uur in het blauwe uur',
-        snippet:
-          'Over het ijs gelopen tot de oever verdween. Eén den. Geen wind. Ik begreep het woord stilte opeens anders.',
-      },
-      food: {
-        title: 'De kom zalmsoep van tweeënveertig euro, besproken',
-        snippet:
-          'Hij kwam met roggebrood en een krul boter. In acht minuten leeg. Ik bestelde een tweede kom.',
-      },
-    },
   },
   footer: {
     ...en.footer,

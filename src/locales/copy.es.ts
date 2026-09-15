@@ -99,15 +99,6 @@ const es: SectionCopy = {
       'Sus entradas forman un blog público en lapland.blog/by/su-nombre. Sus amigos pueden seguirlo. Cada entrada se exporta como historia de Instagram, así el viaje vive dos veces.',
     howCta: 'Crear su blog de viaje',
     howFootnote: 'Gratis para diarios de viaje · Sin tarjeta · Inicie sesión con Google',
-    liveEyebrow: 'Blogs de ejemplo de la redacción',
-    liveH2Pre: 'Así se ve un blog',
-    liveH2Italic: 'de viaje.',
-    liveH2Tail: 'El suyo es el siguiente.',
-    liveLead:
-      'Las pistas negras de Levi. Noches de auroras en Inari. 60 km en trineo de huskies en Saariselkä. The Field Journal, nuestra redacción, montó estos blogs de ejemplo para mostrar el formato. El suyo, el de verdad, se crea en menos de cinco minutos.',
-    liveBrowseAll: 'Ver todos los blogs',
-    liveCta: 'Crear su blog de viaje',
-    liveFootnote: 'Gratis · Sin tarjeta · 2 minutos hasta su primera entrada',
     featuredEyebrow: 'Diario de ejemplo del fundador',
     featuredEvery: 'Todas las entradas →',
     featuredLead:
@@ -531,38 +522,6 @@ const es: SectionCopy = {
     yourTripYourBlog: 'Su viaje · Su blog',
     startFree: 'Gratis. Dos minutos para empezar. Suyo para siempre.',
     startMine: 'Crear el mío',
-    examples: {
-      aurora: {
-        title: 'Cinco noches, cuatro auroras, un trípode congelado',
-        snippet:
-          'El índice Kp decía 2. El cielo opinaba otra cosa. Columnas de luz de 21:14 a 23:40, fotografiadas a −27 °C.',
-      },
-      cabin: {
-        title: 'Una cabaña de madera, sin wifi, ocho días desconectado',
-        snippet:
-          'Corté leña cada mañana. Sauna cada noche. Dormí más profundo que en años.',
-      },
-      forest: {
-        title: 'Seis mañanas de silencio en un pinar',
-        snippet:
-          'Salí de la cabaña a las 07:30 cada día. Sin música. Sin móvil. Solo el crujido de las botas sobre la nieve recién caída.',
-      },
-      nightforest: {
-        title: 'A qué suena un bosque de abetos a −22 °C',
-        snippet:
-          'A nada. Luego una sola rama que se parte a cien metros. El sonido llega. Llega muy lejos.',
-      },
-      silence: {
-        title: 'Un árbol, un lago, una hora en la hora azul',
-        snippet:
-          'Caminé sobre el hielo hasta que la orilla desapareció. Un solo pino. Cero viento. Entendí la palabra silencio de otra manera.',
-      },
-      food: {
-        title: 'El plato de sopa de salmón de cuarenta y dos euros, reseñado',
-        snippet:
-          'Venía con pan de centeno y un rizo de mantequilla. Lo terminé en ocho minutos. Pedí un segundo plato.',
-      },
-    },
   },
 };
 

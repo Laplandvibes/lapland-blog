@@ -99,15 +99,6 @@ const zhCN: SectionCopy = {
       '您的文章会汇成一个公开博客，网址是 lapland.blog/by/用户名。朋友们可以关注。每篇还能导出成 Instagram 快拍，让旅程再活一次。',
     howCta: '创建您的旅行博客',
     howFootnote: '旅行日志免费 · 无需银行卡 · 用 Google 登录',
-    liveEyebrow: '编辑部示例博客',
-    liveH2Pre: '旅行博客，',
-    liveH2Italic: '就是这个样子。',
-    liveH2Tail: '下一个就是您的。',
-    liveLead:
-      '在莱维滑黑道。在伊纳里看极光的夜晚。在萨利色尔卡乘哈士奇雪橇行进 60 公里。这些示例博客由我们的编辑部 The Field Journal 制作，用来展示这种形式。您自己的博客，不到五分钟就能开始。',
-    liveBrowseAll: '浏览所有博客',
-    liveCta: '创建我的旅行博客',
-    liveFootnote: '免费 · 无需银行卡 · 2 分钟写下第一篇',
     featuredEyebrow: '创始人的示例日志',
     featuredEvery: '全部文章 →',
     featuredLead:
@@ -531,38 +522,6 @@ const zhCN: SectionCopy = {
     yourTripYourBlog: '您的旅行 · 您的博客',
     startFree: '免费。两分钟即可开始。永远属于您。',
     startMine: '创建我的博客',
-    examples: {
-      aurora: {
-        title: '五个夜晚，四场极光，一个冻住的三脚架',
-        snippet:
-          'Kp 指数说是 2。天空却不这么认为。光柱从 21:14 持续到 23:40，在零下 27 度拍下。',
-      },
-      cabin: {
-        title: '一间木屋，没有 wifi，离网八天',
-        snippet:
-          '每天早上劈柴。每天晚上蒸桑拿。睡得比这些年任何时候都沉。',
-      },
-      forest: {
-        title: '松林里六个寂静的清晨',
-        snippet:
-          '每天 07:30 走出木屋。没有音乐。没有手机。只有靴子踩在新雪上的吱嘎声。',
-      },
-      nightforest: {
-        title: '零下 22 度的云杉林是什么声音',
-        snippet:
-          '什么也没有。然后是一百米外一根树枝折断的声响。声音传得很远。传得非常远。',
-      },
-      silence: {
-        title: '一棵树，一片湖，蓝调时刻的一个小时',
-        snippet:
-          '在冰面上一直走到看不见岸。一棵孤零零的松树。一丝风也没有。我对“寂静”这个词有了新的理解。',
-      },
-      food: {
-        title: '四十二欧元一碗的三文鱼汤，测评',
-        snippet:
-          '配了黑麦面包和一卷黄油。八分钟吃完。我又点了一碗。',
-      },
-    },
   },
 };
 

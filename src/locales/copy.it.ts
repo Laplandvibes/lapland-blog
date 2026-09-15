@@ -49,15 +49,6 @@ const it: SectionCopy = {
       'Le Sue voci diventano un blog pubblico su lapland.blog/by/il-suo-nome. Gli amici possono seguirlo. Ogni voce si esporta in una storia di Instagram, e il viaggio vive due volte.',
     howCta: 'Avvii il blog di viaggio',
     howFootnote: 'Gratuito per i diari di viaggio · Nessuna carta di credito · Accesso con Google',
-    liveEyebrow: 'Blog-esempio della redazione',
-    liveH2Pre: 'Ecco come si presenta',
-    liveH2Italic: 'un blog di viaggio.',
-    liveH2Tail: 'Il prossimo è il Suo.',
-    liveLead:
-      'Piste nere a Levi. Notti di aurora a Inari. 60 km in slitta trainata da husky a Saariselkä. The Field Journal, la nostra redazione, ha creato questi blog di esempio per mostrare il formato. Il Suo, quello vero, lo avvia in meno di cinque minuti.',
-    liveBrowseAll: 'Vedere tutti i blog',
-    liveCta: 'Avviare il mio blog di viaggio',
-    liveFootnote: 'Gratuito · Senza carta · Prima voce in 2 minuti',
     featuredEyebrow: 'Diario-esempio del fondatore',
     featuredEvery: 'Tutte le voci →',
     featuredLead:
@@ -481,38 +472,6 @@ const it: SectionCopy = {
     yourTripYourBlog: 'Il Suo viaggio · Il Suo blog',
     startFree: 'Gratuito. Due minuti per iniziare. Suo per sempre.',
     startMine: 'Avviare il mio',
-    examples: {
-      aurora: {
-        title: 'Cinque notti, quattro aurore, un treppiede congelato',
-        snippet:
-          'L’indice Kp diceva 2. Il cielo la pensava diversamente. Colonne dalle 21:14 alle 23:40, fotografate a meno 27.',
-      },
-      cabin: {
-        title: 'Una baita di legno, niente wifi, otto giorni fuori dal mondo',
-        snippet:
-          'Legna spaccata ogni mattina. Sauna ogni sera. Ho dormito come non dormivo da anni.',
-      },
-      forest: {
-        title: 'Sei mattine di silenzio in una pineta',
-        snippet:
-          'Fuori dalla baita alle 07:30 ogni giorno. Niente musica. Niente telefono. Solo lo scricchiolio degli scarponi sulla neve fresca.',
-      },
-      nightforest: {
-        title: 'Che suono ha un bosco di abeti a −22 °C',
-        snippet:
-          'Nessuno. Poi un solo ramo che si spezza a cento metri. Il suono arriva. Arriva molto lontano.',
-      },
-      silence: {
-        title: 'Un albero, un lago, un’ora nell’ora blu',
-        snippet:
-          'Ho camminato sul ghiaccio finché la riva non è scomparsa. Un solo pino. Zero vento. Ho capito la parola silenzio in un altro modo.',
-      },
-      food: {
-        title: 'La zuppa di salmone da quarantadue euro, recensita',
-        snippet:
-          'Servita con pane di segale e un ricciolo di burro. Finita in otto minuti. Ne ho ordinata una seconda.',
-      },
-    },
   },
   footer: {
     ...en.footer,

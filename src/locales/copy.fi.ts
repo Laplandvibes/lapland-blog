@@ -99,15 +99,6 @@ const fi: SectionCopy = {
       'Merkinnöistäsi tulee julkinen blogi osoitteessa lapland.blog/by/oma-nimi. Kaverit voivat seurata. Jokaisen merkinnän voi viedä Instagram-tarinaksi, jotta matka elää kahdesti.',
     howCta: 'Aloita matkablogi',
     howFootnote: 'Ilmainen matkapäiväkirja · Ei maksukorttia · Kirjaudu Googlella',
-    liveEyebrow: 'Toimituksen esimerkkiblogit',
-    liveH2Pre: 'Tältä matkablogi',
-    liveH2Italic: 'näyttää.',
-    liveH2Tail: 'Seuraava on sinun.',
-    liveLead:
-      'Mustia rinteitä Levillä. Revontuliöitä Inarissa. 60 km koiravaljakolla Saariselällä. The Field Journal, toimituksemme, rakensi nämä esimerkkiblogit havainnollistamaan formaattia. Oma oikea blogisi syntyy alle viidessä minuutissa.',
-    liveBrowseAll: 'Selaa kaikkia blogeja',
-    liveCta: 'Aloita oma matkablogi',
-    liveFootnote: 'Ilmainen · Ei maksukorttia · 2 minuuttia ensimmäiseen merkintään',
     featuredEyebrow: 'Toimituksen esimerkkipäiväkirja',
     featuredEvery: 'Kaikki merkinnät →',
     featuredLead:
@@ -532,38 +523,6 @@ const fi: SectionCopy = {
     yourTripYourBlog: 'Sinun matkasi · Sinun blogisi',
     startFree: 'Ilmainen. Alkuun kahdessa minuutissa. Omasi pysyvästi.',
     startMine: 'Aloita oma',
-    examples: {
-      aurora: {
-        title: 'Viisi yötä, neljät revontulet, yksi jäätynyt jalusta',
-        snippet:
-          'Kp-indeksi lupasi kakkosta. Taivas oli toista mieltä. Pilareita 21.14–23.40, kuvattu 27 asteen pakkasessa.',
-      },
-      cabin: {
-        title: 'Hirsimökki, ei wifiä, kahdeksan päivää irti verkosta',
-        snippet:
-          'Halkoja joka aamu. Sauna joka ilta. Nukuin sikeämmin kuin vuosiin.',
-      },
-      forest: {
-        title: 'Kuusi hiljaista aamua mäntymetsässä',
-        snippet:
-          'Lähdin mökiltä 7.30 joka aamu. Ei musiikkia. Ei puhelinta. Vain saappaiden narina uudella lumella.',
-      },
-      nightforest: {
-        title: 'Miltä kuusimetsä kuulostaa −22 °C:ssa',
-        snippet:
-          'Ei miltään. Sitten yksi oksa napsahtaa sadan metrin päässä. Se kantaa. Se kantaa todella kauas.',
-      },
-      silence: {
-        title: 'Yksi puu, yksi järvi, yksi tunti sinisellä hetkellä',
-        snippet:
-          'Kävelin jäälle kunnes ranta katosi. Yksi mänty. Nolla tuulta. Ymmärsin sanan hiljaisuus uudella tavalla.',
-      },
-      food: {
-        title: 'Se 42 euron lohikeittoannos, arvosteltuna',
-        snippet:
-          'Mukana ruisleipää ja voikiehkura. Söin sen kahdeksassa minuutissa. Tilasin toisen annoksen.',
-      },
-    },
   },
 };
 

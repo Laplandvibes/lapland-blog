@@ -99,15 +99,6 @@ const en: SectionCopy = {
       'Your entries become a public blog at lapland.blog/by/your-name. Friends can follow it. Each post exports to an Instagram story so the trip lives twice.',
     howCta: 'Start your trip blog',
     howFootnote: 'Free for travel journals · No card required · Sign in with Google',
-    liveEyebrow: 'Editorial example blogs',
-    liveH2Pre: 'This is what a trip blog',
-    liveH2Italic: 'looks like.',
-    liveH2Tail: 'Yours is next.',
-    liveLead:
-      'Black runs at Levi. Aurora nights in Inari. 60 km by husky sled in Saariselkä. The Field Journal, our editorial desk, built these example blogs to show the format. Your real one takes under five minutes to start.',
-    liveBrowseAll: 'Browse all blogs',
-    liveCta: 'Start my trip blog',
-    liveFootnote: 'Free · No card · 2 minutes to your first entry',
     featuredEyebrow: "Founder's example journal",
     featuredEvery: 'Every entry →',
     featuredLead:
@@ -531,38 +522,6 @@ const en: SectionCopy = {
     yourTripYourBlog: 'Your trip · Your blog',
     startFree: 'Free. Two minutes to start. Yours forever.',
     startMine: 'Start mine',
-    examples: {
-      aurora: {
-        title: 'Five nights, four auroras, one frozen tripod',
-        snippet:
-          'Kp index said 2. The sky said otherwise. Pillars from 21:14 to 23:40, photographed at minus 27.',
-      },
-      cabin: {
-        title: 'A wood cabin, no wifi, eight days off the grid',
-        snippet:
-          'Chopped wood every morning. Sauna every night. Slept harder than I have in years.',
-      },
-      forest: {
-        title: 'Six mornings of silence in a pine forest',
-        snippet:
-          'Left the cabin at 07:30 every day. No music. No phone. Just the creak of boots on fresh snow.',
-      },
-      nightforest: {
-        title: 'What a spruce forest sounds like at -22°C',
-        snippet:
-          'Nothing. Then a single branch snapping a hundred metres away. It carries. It carries very far.',
-      },
-      silence: {
-        title: 'One tree, one lake, one hour at blue hour',
-        snippet:
-          'Walked out on the ice until the shore disappeared. A single pine. Zero wind. I understood the word silence differently.',
-      },
-      food: {
-        title: 'The forty-two-euro bowl of salmon soup, reviewed',
-        snippet:
-          'It came with rye bread and a curl of butter. I finished it in eight minutes. I ordered a second bowl.',
-      },
-    },
   },
 };
 

@@ -79,14 +79,6 @@ export type SectionCopy = {
     howStep3Body: string;
     howCta: string;
     howFootnote: string;
-    liveEyebrow: string;
-    liveH2Pre: string;
-    liveH2Italic: string;
-    liveH2Tail: string;
-    liveLead: string;
-    liveBrowseAll: string;
-    liveCta: string;
-    liveFootnote: string;
     featuredEyebrow: string;
     featuredEvery: string;
     featuredLead: string;
@@ -351,10 +343,5 @@ export type SectionCopy = {
     yourTripYourBlog: string;
     startFree: string;
     startMine: string;
-    /** Example trip-blog card content — clearly-labelled editorial examples. */
-    examples: Record<
-      'aurora' | 'cabin' | 'forest' | 'nightforest' | 'silence' | 'food',
-      { title: string; snippet: string }
-    >;
   };
 };

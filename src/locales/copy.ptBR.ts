@@ -99,15 +99,6 @@ const ptBR: SectionCopy = {
       'Suas entradas formam um blog público em lapland.blog/by/seu-nome. Seus amigos podem acompanhar. Cada entrada é exportada como story do Instagram, então a viagem vive duas vezes.',
     howCta: 'Criar seu blog de viagem',
     howFootnote: 'Grátis para diários de viagem · Sem cartão de crédito · Entre com o Google',
-    liveEyebrow: 'Blogs de exemplo da redação',
-    liveH2Pre: 'Um blog de viagem',
-    liveH2Italic: 'é assim.',
-    liveH2Tail: 'O seu é o próximo.',
-    liveLead:
-      'As pistas pretas de Levi. As noites de aurora em Inari. 60 km num trenó puxado por huskies em Saariselkä. O The Field Journal, nossa redação, montou estes blogs de exemplo para mostrar o formato. Começar o seu, de verdade, leva menos de cinco minutos.',
-    liveBrowseAll: 'Ver todos os blogs',
-    liveCta: 'Criar meu blog de viagem',
-    liveFootnote: 'Grátis · Sem cartão · 2 minutos até a sua primeira entrada',
     featuredEyebrow: 'Diário de exemplo do fundador',
     featuredEvery: 'Todas as entradas →',
     featuredLead:
@@ -531,38 +522,6 @@ const ptBR: SectionCopy = {
     yourTripYourBlog: 'Sua viagem · Seu blog',
     startFree: 'Grátis. Dois minutos para começar. Seu para sempre.',
     startMine: 'Criar o meu',
-    examples: {
-      aurora: {
-        title: 'Cinco noites, quatro auroras, um tripé congelado',
-        snippet:
-          'O índice Kp dizia 2. O céu dizia outra coisa. Pilares das 21:14 às 23:40, fotografados a vinte e sete graus negativos.',
-      },
-      cabin: {
-        title: 'Uma cabana de madeira, sem wi-fi, oito dias fora do mundo',
-        snippet:
-          'Cortei lenha toda manhã. Sauna toda noite. Dormi como não dormia há anos.',
-      },
-      forest: {
-        title: 'Seis manhãs de silêncio numa floresta de pinheiros',
-        snippet:
-          'Saía da cabana às 7:30 todos os dias. Sem música. Sem celular. Só o ranger das botas na neve fresca.',
-      },
-      nightforest: {
-        title: 'O som de uma floresta de abetos a -22 °C',
-        snippet:
-          'Nada. Depois um único galho estalando a cem metros. O som viaja. Viaja muito longe.',
-      },
-      silence: {
-        title: 'Uma árvore, um lago, uma hora na hora azul',
-        snippet:
-          'Caminhei pelo gelo até a margem desaparecer. Um único pinheiro. Vento nenhum. Entendi a palavra silêncio de outro jeito.',
-      },
-      food: {
-        title: 'A tigela de sopa de salmão de quarenta e dois euros, avaliada',
-        snippet:
-          'Veio com pão de centeio e uma lasca de manteiga. Terminei em oito minutos. Pedi uma segunda tigela.',
-      },
-    },
   },
 };
 

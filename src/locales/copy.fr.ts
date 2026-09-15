@@ -49,15 +49,6 @@ const fr: SectionCopy = {
       'Vos entrées deviennent un blog public à l’adresse lapland.blog/by/votre-nom. Vos amis peuvent le suivre. Chaque entrée s’exporte en story Instagram, et le voyage vit deux fois.',
     howCta: 'Lancer votre blog de voyage',
     howFootnote: 'Gratuit pour les carnets de voyage · Sans carte bancaire · Connexion Google',
-    liveEyebrow: 'Blogs-exemples de la rédaction',
-    liveH2Pre: 'Voici à quoi ressemble',
-    liveH2Italic: 'un blog de voyage.',
-    liveH2Tail: 'Le vôtre est le prochain.',
-    liveLead:
-      'Pistes noires à Levi. Nuits d’aurores à Inari. 60 km en traîneau à chiens à Saariselkä. The Field Journal, notre rédaction, a rédigé ces blogs d’exemple pour montrer le format. Le vôtre, le vrai, se lance en moins de cinq minutes.',
-    liveBrowseAll: 'Parcourir tous les blogs',
-    liveCta: 'Lancer mon blog de voyage',
-    liveFootnote: 'Gratuit · Sans carte bancaire · Première entrée en 2 minutes',
     featuredEyebrow: 'Journal-exemple du fondateur',
     featuredEvery: 'Toutes les entrées →',
     featuredLead:
@@ -481,38 +472,6 @@ const fr: SectionCopy = {
     yourTripYourBlog: 'Votre voyage · Votre blog',
     startFree: 'Gratuit. Deux minutes pour commencer. À vous pour toujours.',
     startMine: 'Lancer le mien',
-    examples: {
-      aurora: {
-        title: 'Cinq nuits, quatre aurores, un trépied gelé',
-        snippet:
-          'L’indice Kp annonçait 2. Le ciel en a décidé autrement. Des piliers de 21 h 14 à 23 h 40, photographiés par moins 27.',
-      },
-      cabin: {
-        title: 'Une cabane en bois, pas de wifi, huit jours hors réseau',
-        snippet:
-          'Du bois fendu chaque matin. Un sauna chaque soir. J’ai dormi comme je n’avais pas dormi depuis des années.',
-      },
-      forest: {
-        title: 'Six matins de silence dans une forêt de pins',
-        snippet:
-          'Parti du chalet à 7 h 30 chaque jour. Pas de musique. Pas de téléphone. Juste le crissement des bottes sur la neige fraîche.',
-      },
-      nightforest: {
-        title: 'Ce qu’on entend dans une forêt d’épicéas à −22 °C',
-        snippet:
-          'Rien. Puis une seule branche qui casse à cent mètres. Le son porte. Il porte très loin.',
-      },
-      silence: {
-        title: 'Un arbre, un lac, une heure à l’heure bleue',
-        snippet:
-          'Marché sur la glace jusqu’à ce que la rive disparaisse. Un seul pin. Zéro vent. J’ai compris le mot silence autrement.',
-      },
-      food: {
-        title: 'Le bol de soupe de saumon à quarante-deux euros, passé en revue',
-        snippet:
-          'Servi avec du pain de seigle et une noix de beurre. Terminé en huit minutes. J’en ai commandé un deuxième.',
-      },
-    },
   },
   footer: {
     ...en.footer,
