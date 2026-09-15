@@ -79,12 +79,6 @@ export type SectionCopy = {
     howStep3Body: string;
     howCta: string;
     howFootnote: string;
-    featuredEyebrow: string;
-    featuredEvery: string;
-    featuredLead: string;
-    featuredLoading: string;
-    featuredNone: string;
-    featuredReadEntry: string;
     pillarsEyebrow: string;
     pillarsH2Pre: string;
     pillarsH2Italic: string;
@@ -330,14 +324,10 @@ export type SectionCopy = {
     shareThisStory: string;
     inThisStory: string;
     fieldJournalEntry: string;
-    liveTripBlog: string;
-    yoursCouldBeNext: string;
     featuredBadge: string;
     minRead: string;
     /** "Example" badge on every editorial example card (honest model). */
-    exampleBadge: string;
     /** Byline under "The Field Journal" on example cards. */
-    byEditorial: string;
     entriesLabel: string;
     daysLabel: string;
     yourTripYourBlog: string;
