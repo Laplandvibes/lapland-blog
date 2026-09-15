@@ -103,7 +103,7 @@ const de: SectionCopy = {
     featuredEyebrow: 'Beispiel-Tagebuch der Redaktion',
     featuredEvery: 'Alle Einträge →',
     featuredLead:
-      'So könnte Ihr eigener Reiseblog aussehen. Die Einträge unten stammen von The Field Journal, der Redaktion von Lapland.blog, einem kleinen Kreis von Stimmen, der das Lappland-Jahr von der Mitternachtssonne bis zur Polarnacht begleitet. Echte Temperaturen, echte Hütten, echte Suppe. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
+      'So könnte Ihr eigener Reiseblog aussehen. Die Einträge unten stammen von LaplandVibes, der Redaktion von Lapland.blog, einem kleinen Kreis von Stimmen, der das Lappland-Jahr von der Mitternachtssonne bis zur Polarnacht begleitet. Echte Temperaturen, echte Hütten, echte Suppe. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
     featuredLoading: 'Beispiel wird geladen…',
     featuredNone: 'Noch keine Beispiel-Einträge.',
     featuredReadEntry: 'Diesen Eintrag lesen',
@@ -238,7 +238,7 @@ const de: SectionCopy = {
       'Gesponserte Beiträge in Leser-Einträgen. Affiliate-Einkaufslisten, in Ihren Blog gestopft. Die Wörter „unvergesslich“, „Bucket List“, „magisch“ und „Winterwunderland“ sind aus den redaktionellen Entwürfen verbannt, und in Ihren sollten sie es auch sein. Sie sind schlecht fürs Schreiben und schlecht für Leser.',
     seedHeading: 'Woher diese Texte kommen',
     seedBody:
-      'Die Einträge auf der Seite stammen von The Field Journal, der Redaktion von Lapland.blog. Sie zeigen, wie ein ehrlicher, langsamer, bildgeführter Reiseblog klingen kann: Orte beim Namen, Preise von der Karte gelesen, Quellen am Ende. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
+      'Die Einträge auf der Seite stammen von LaplandVibes, der Redaktion von Lapland.blog. Sie zeigen, wie ein ehrlicher, langsamer, bildgeführter Reiseblog klingen kann: Orte beim Namen, Preise von der Karte gelesen, Quellen am Ende. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
     networkHeading: 'Über das Netzwerk',
     networkBody:
       'Lapland.blog ist Teil des LaplandVibes-Ökosystems, eines Netzwerks finnisch geführter Seiten über Lappland. Die anderen Seiten sagen Ihnen, wohin, wo Sie übernachten und was Sie tun können. Diese ist die, in der die Reise selbst aufgeschrieben wird.',
@@ -266,7 +266,7 @@ const de: SectionCopy = {
     beFirstWrite: 'Schreiben Sie als Erste/r',
     findStayPrefix: 'Unterkunft finden in',
     dontSeeEyebrow: 'Ihren Ort nicht dabei?',
-    plantH2: 'Setzen Sie die Fahne.',
+    plantH2: 'Fehlt Ihr Ort?',
     plantLead:
       'Sie reisen woanders hin? Sodankylä, Posio, Kilpisjärvi, Hetta. Schreiben Sie den ersten Eintrag, wir setzen ihn auf die Karte.',
     plantCta: 'Eigenen Blog starten',
@@ -444,8 +444,8 @@ const de: SectionCopy = {
     readNextH2: 'Mehr aus dem Tagebuch',
     tagged: 'Schlagwörter',
     exploreMore: 'Mehr aus dem LaplandVibes-Netzwerk',
-    editorialLabel: 'Ein Field-Journal-Eintrag',
-    editorialNote: 'Einer der Texte von The Field Journal, der Redaktion von Lapland.blog, als Beispiel dafür, wie sich ein ehrliches Reisetagebuch liest. Echte Orte, echte Preise. Ihre eigenen Einträge schreiben Sie selbst.',
+    editorialLabel: 'LaplandVibes-Eintrag',
+    editorialNote: 'Einer der Texte von LaplandVibes, der Redaktion von Lapland.blog, als Beispiel dafür, wie sich ein ehrliches Reisetagebuch liest. Echte Orte, echte Preise. Ihre eigenen Einträge schreiben Sie selbst.',
   },
   signIn: {
     pageTitle: 'Planen Sie Ihre Lappland-Reise | Lapland.blog',

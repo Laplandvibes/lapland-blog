@@ -52,7 +52,7 @@ const nl: SectionCopy = {
     featuredEyebrow: 'Voorbeelddagboek van de oprichter',
     featuredEvery: 'Elke notitie →',
     featuredLead:
-      'Zo zou uw eigen reisblog eruit kunnen zien. De notities hieronder komen van The Field Journal, de redactie van Lapland.blog: een kleine kring schrijvers die het Laplandse jaar volgt, van middernachtzon tot poolnacht. Echte temperaturen, echte hutten, echte soep. Lees er één en stel u voor hoe uw eigen reis eruit zou zien.',
+      'Zo zou uw eigen reisblog eruit kunnen zien. De notities hieronder komen van LaplandVibes, de redactie van Lapland.blog: een kleine kring schrijvers die het Laplandse jaar volgt, van middernachtzon tot poolnacht. Echte temperaturen, echte hutten, echte soep. Lees er één en stel u voor hoe uw eigen reis eruit zou zien.',
     featuredLoading: 'Voorbeeld laden…',
     featuredNone: 'Nog geen voorbeeldnotities.',
     featuredReadEntry: 'Lees deze notitie',
@@ -187,7 +187,7 @@ const nl: SectionCopy = {
       'Gesponsorde berichten in de lezersnotities. Affiliate-winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor het schrijven, slecht voor de lezer.',
     seedHeading: 'Waar deze verhalen vandaan komen',
     seedBody:
-      'De stukken die al op de site staan zijn geschreven door The Field Journal, de redactie van Lapland.blog. Ze laten zien hoe een eerlijke, langzame, door beeld gedragen reisblog kan klinken: plaatsen bij naam, prijzen van de kaart gelezen, bronnen aan het eind. Lees er een en stel u uw eigen blog voor.',
+      'De stukken die al op de site staan zijn geschreven door LaplandVibes, de redactie van Lapland.blog. Ze laten zien hoe een eerlijke, langzame, door beeld gedragen reisblog kan klinken: plaatsen bij naam, prijzen van de kaart gelezen, bronnen aan het eind. Lees er een en stel u uw eigen blog voor.',
     networkHeading: 'Over het netwerk',
     networkBody:
       'Lapland.blog maakt deel uit van het LaplandVibes-ecosysteem, een netwerk van Finse sites over Lapland. De andere sites vertellen u waar u heen moet, waar u slaapt en wat u doet. Deze site is waar de reis zelf wordt opgeschreven.',
@@ -215,7 +215,7 @@ const nl: SectionCopy = {
     beFirstWrite: 'Schrijf de eerste',
     findStayPrefix: 'Vind een verblijf in',
     dontSeeEyebrow: 'Uw plek staat er niet bij?',
-    plantH2: 'Plant de vlag.',
+    plantH2: 'Ontbreekt uw plek?',
     plantLead:
       'Gaat u naar een plek die niet in deze lijst staat? Sodankylä, Posio, Kilpisjärvi, Hetta. Schrijf van daar de eerste notitie en wij zetten hem op de kaart.',
     plantCta: 'Start uw blog',
@@ -392,8 +392,8 @@ const nl: SectionCopy = {
     readNextH2: 'Meer uit het dagboek',
     tagged: 'Getagd',
     exploreMore: 'Ontdek meer in het LaplandVibes-netwerk',
-    editorialLabel: 'Een Field Journal-bericht',
-    editorialNote: 'Een van de verhalen van The Field Journal, de redactie van Lapland.blog, om te laten zien hoe een eerlijk reisdagboek leest. Echte plaatsen, echte prijzen. Uw eigen notities schrijft u zelf.',
+    editorialLabel: 'Bijdrage van LaplandVibes',
+    editorialNote: 'Een van de verhalen van LaplandVibes, de redactie van Lapland.blog, om te laten zien hoe een eerlijk reisdagboek leest. Echte plaatsen, echte prijzen. Uw eigen notities schrijft u zelf.',
   },
   signIn: {
     pageTitle: 'Plan uw Lapland-reis | Lapland.blog',

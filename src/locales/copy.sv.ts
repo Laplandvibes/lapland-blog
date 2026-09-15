@@ -102,7 +102,7 @@ const sv: SectionCopy = {
     featuredEyebrow: 'Grundarens exempeldagbok',
     featuredEvery: 'Varje inlägg →',
     featuredLead:
-      'Så här skulle din egen reseblogg kunna se ut. Inläggen nedan kommer från The Field Journal, redaktionen bakom Lapland.blog, en liten krets skribenter som täcker Lapplandsåret, från midnattssol till kaamos. Riktiga temperaturer, riktiga stugor, riktig soppa. Läs ett och föreställ dig ditt eget.',
+      'Så här skulle din egen reseblogg kunna se ut. Inläggen nedan kommer från LaplandVibes, redaktionen bakom Lapland.blog, en liten krets skribenter som täcker Lapplandsåret, från midnattssol till kaamos. Riktiga temperaturer, riktiga stugor, riktig soppa. Läs ett och föreställ dig ditt eget.',
     featuredLoading: 'Laddar exempel…',
     featuredNone: 'Inga exempelinlägg än.',
     featuredReadEntry: 'Läs det här inlägget',
@@ -237,7 +237,7 @@ const sv: SectionCopy = {
       'Sponsrade inlägg inuti läsarnas inlägg. Affiliate-shoppinglistor instoppade i din blogg. Orden "oförglömlig", "bucket list", "magisk" eller "vinterland" är bannlysta från de redaktionella utkasten, och värda att bannlysa från dina också. De är dåliga för skrivandet och dåliga för läsarna.',
     seedHeading: 'Varifrån texterna kommer',
     seedBody:
-      'Inläggen på sidan är skrivna av The Field Journal, Lapland.blogs redaktion. De visar hur en ärlig, långsam och bilddriven reseblogg kan låta: platser vid namn, priser lästa från menyn, källor sist. Läs ett och föreställ dig ditt eget.',
+      'Inläggen på sidan är skrivna av LaplandVibes, Lapland.blogs redaktion. De visar hur en ärlig, långsam och bilddriven reseblogg kan låta: platser vid namn, priser lästa från menyn, källor sist. Läs ett och föreställ dig ditt eget.',
     networkHeading: 'Om nätverket',
     networkBody:
       'Lapland.blog är en del av LaplandVibes-ekosystemet, ett nätverk av finskägda sajter om Lappland. De andra sajterna berättar vart du ska åka, var du ska bo och vad du ska göra. Den här är där själva resan skrivs ner.',
@@ -265,7 +265,7 @@ const sv: SectionCopy = {
     beFirstWrite: 'Bli först med att skriva',
     findStayPrefix: 'Hitta ett boende i',
     dontSeeEyebrow: 'Ser du inte din plats?',
-    plantH2: 'Sätt flaggan.',
+    plantH2: 'Saknas din plats?',
     plantLead:
       'Ska du någonstans som inte är på listan? Sodankylä, Posio, Kilpisjärvi, Hetta. Skriv det första inlägget därifrån så lägger vi till det på kartan.',
     plantCta: 'Starta din blogg',
@@ -442,8 +442,8 @@ const sv: SectionCopy = {
     readNextH2: 'Mer från dagboken',
     tagged: 'Taggat',
     exploreMore: 'Utforska mer från LaplandVibes-nätverket',
-    editorialLabel: 'Ett inlägg från Field Journal',
-    editorialNote: 'Ett av inläggen skrivna av The Field Journal, den redaktionella rösten på Lapland.blog, för att visa hur en ärlig resedagbok läses. Riktiga platser, riktiga priser. Dina egna inlägg skriver du själv.',
+    editorialLabel: 'Inlägg från LaplandVibes',
+    editorialNote: 'Ett av inläggen skrivna av LaplandVibes, den redaktionella rösten på Lapland.blog, för att visa hur en ärlig resedagbok läses. Riktiga platser, riktiga priser. Dina egna inlägg skriver du själv.',
   },
   signIn: {
     pageTitle: 'Planera din Lapplandsresa | Lapland.blog',

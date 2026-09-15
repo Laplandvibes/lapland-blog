@@ -52,7 +52,7 @@ const fr: SectionCopy = {
     featuredEyebrow: 'Journal-exemple du fondateur',
     featuredEvery: 'Toutes les entrées →',
     featuredLead:
-      'Voici à quoi pourrait ressembler votre propre blog de voyage. Les entrées ci-dessous sont signées The Field Journal, la rédaction de Lapland.blog : un petit cercle de plumes qui parcourt l’année lapone, du soleil de minuit à la nuit polaire. Vraies températures, vrais chalets, vraie soupe. Lisez-en une et imaginez la vôtre.',
+      'Voici à quoi pourrait ressembler votre propre blog de voyage. Les entrées ci-dessous sont signées LaplandVibes, la rédaction de Lapland.blog : un petit cercle de plumes qui parcourt l’année lapone, du soleil de minuit à la nuit polaire. Vraies températures, vrais chalets, vraie soupe. Lisez-en une et imaginez la vôtre.',
     featuredLoading: 'Chargement de l’exemple…',
     featuredNone: 'Pas encore d’entrée-exemple.',
     featuredReadEntry: 'Lire cette entrée',
@@ -187,7 +187,7 @@ const fr: SectionCopy = {
       'Des publications sponsorisées dans les entrées des lecteurs. Des listes d’affiliés glissées dans votre blog. Les mots « inoubliable », « bucket list », « magique », « pays des merveilles hivernal » sont bannis des brouillons éditoriaux, et tout aussi à bannir des vôtres. Mauvais pour l’écriture, mauvais pour le lecteur.',
     seedHeading: 'D’où viennent ces textes',
     seedBody:
-      'Les textes déjà en ligne sont écrits par The Field Journal, la rédaction de Lapland.blog. Ils montrent à quoi peut ressembler un blog de voyage honnête, lent et porté par l’image : des lieux nommés, des prix lus sur la carte, des sources à la fin. Lisez-en un et imaginez le vôtre.',
+      'Les textes déjà en ligne sont écrits par LaplandVibes, la rédaction de Lapland.blog. Ils montrent à quoi peut ressembler un blog de voyage honnête, lent et porté par l’image : des lieux nommés, des prix lus sur la carte, des sources à la fin. Lisez-en un et imaginez le vôtre.',
     networkHeading: 'À propos du réseau',
     networkBody:
       'Lapland.blog fait partie de l’écosystème LaplandVibes, un réseau de sites finlandais sur la Laponie. Les autres sites vous disent où aller, où dormir et quoi faire. Celui-ci est l’endroit où le voyage lui-même se met par écrit.',
@@ -215,7 +215,7 @@ const fr: SectionCopy = {
     beFirstWrite: 'Écrire la première',
     findStayPrefix: 'Trouver un hébergement à',
     dontSeeEyebrow: 'Votre lieu n’y est pas ?',
-    plantH2: 'Plantez le drapeau.',
+    plantH2: 'Votre lieu manque ?',
     plantLead:
       'Vous partez ailleurs ? Sodankylä, Posio, Kilpisjärvi, Hetta. Écrivez la première entrée depuis là-bas et nous l’ajouterons à la carte.',
     plantCta: 'Lancer votre blog',
@@ -392,8 +392,8 @@ const fr: SectionCopy = {
     readNextH2: 'Plus du journal',
     tagged: 'Étiqueté',
     exploreMore: 'Explorez plus du réseau LaplandVibes',
-    editorialLabel: 'Une entrée du Field Journal',
-    editorialNote: "L’un des textes écrits par The Field Journal, la rédaction de Lapland.blog, pour montrer à quoi ressemble un carnet de voyage honnête. Lieux réels, prix réels. Vos propres entrées, c’est vous qui les écrivez.",
+    editorialLabel: 'Texte de LaplandVibes',
+    editorialNote: "L’un des textes écrits par LaplandVibes, la rédaction de Lapland.blog, pour montrer à quoi ressemble un carnet de voyage honnête. Lieux réels, prix réels. Vos propres entrées, c’est vous qui les écrivez.",
   },
   signIn: {
     pageTitle: 'Planifiez votre voyage en Laponie | Lapland.blog',

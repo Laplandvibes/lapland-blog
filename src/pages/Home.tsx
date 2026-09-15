@@ -254,7 +254,7 @@ export default function Home() {
           Korvasi kesäbannerin, jonka teksti oli kovakoodattu "Keskiyön aurinko 6.6. → 7.7."
           ja joka siis mainosti mennyttä kautta joka syksy ja talvi. */}
       <section
-        className="relative py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+        className="lv-band relative py-16 md:py-24 px-4 sm:px-6 lg:px-8"
         aria-labelledby="readfirst-heading"
       >
         <div className="max-w-6xl mx-auto">
@@ -293,13 +293,13 @@ export default function Home() {
                 <Reveal key={post.slug} delay={((i % 3) + 1) as 1 | 2 | 3}>
                   <Link
                     to={to(`/post/${post.slug}`)}
-                    className="group block h-full rounded-2xl overflow-hidden border border-purple/20 bg-night-light/40 hover:border-pink/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+                    className="group block overflow-hidden rounded-2xl border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
                   >
                     {/* Kuvasuhde = lahdekuvan suhde (16:10). Pystykortti (4/5)
                         rajasi vaakakuvasta puolet pois ja jatti puhelimelle vain
                         0,76-0,90x tarvittavista pikseleista => pehmea kuva.
                         Mitattu livesta 2026-09-15. */}
-                    <div className="relative aspect-[16/10] overflow-hidden">
+                    <div className="relative aspect-[16/10] shrink-0 overflow-hidden">
                       <img
                         src={post.heroImage}
                         alt={post.heroAlt}
@@ -338,10 +338,9 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <section
         id="how-it-works"
-        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-24"
+        className="lv-band relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-24"
         aria-labelledby="how-heading"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-night via-night-light/25 to-night" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] rounded-full bg-purple/10 blur-[160px] pointer-events-none" />
 
         <div className="relative max-w-6xl mx-auto">
@@ -404,7 +403,7 @@ export default function Home() {
               return (
                 <Reveal key={step.kicker} delay={(i + 1) as 1 | 2 | 3}>
                   <article
-                    className={`h-full rounded-2xl border border-purple/40 bg-night-lighter/40 ring-1 ring-inset ring-white/5 backdrop-blur-sm p-8 shadow-[0_20px_50px_-25px_rgba(0,0,0,0.8)] transition-colors ${hoverBorder}`}
+                    className={`h-full rounded-2xl p-8 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 ${hoverBorder}`}
                   >
                     <div
                       className={`w-12 h-12 rounded-full border flex items-center justify-center mb-6 ${accentBg}`}
@@ -662,7 +661,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="faq-heading">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Reveal>
             <h2
               id="faq-heading"
@@ -671,10 +670,10 @@ export default function Home() {
               {c.faqHeading}
             </h2>
           </Reveal>
-          <dl className="space-y-6">
+          <dl className="grid gap-5 lg:grid-cols-2 lg:items-start">
             {c.faq.map((item, faqIndex) => (
               <Reveal key={item.q}>
-                <div className="rounded-2xl border border-purple/25 bg-night-light/50 backdrop-blur-sm p-6">
+                <div className="h-full rounded-2xl p-6 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45">
                   <dt className="font-display text-xl text-snow font-medium leading-snug mb-3">{item.q}</dt>
                   <dd className="text-slate-300 text-sm md:text-base leading-relaxed">
                     {item.a}

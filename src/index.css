@@ -471,6 +471,17 @@
   --color-accent: #C1543B;           /* "hot lingonberry" — 5.1:1 on cream (AA) */
   --color-accent-dark: #8F3525;      /* hover — 8.2:1 on cream */
 
+  /* ── SYVYYS (Vesa 2026-09-15) ─────────────────────────────────────────
+     Kortit olivat litteita: ei varjoa, ei erottuvaa pintaa. Kolme tasoa,
+     jotta sama syvyys toistuu joka osiossa eika jokainen kortti keksi omaansa.
+     Arvot ovat samasta sarjasta kuin hubin blogiarkki (0 26px 60px -32px). */
+  --shadow-card: 0 18px 40px -24px rgba(2, 6, 23, 0.85);
+  --shadow-card-lift: 0 30px 64px -28px rgba(2, 6, 23, 0.95);
+  --shadow-plate: 0 44px 90px -44px rgba(2, 6, 23, 0.95);
+  /* Lampimin sivyt yon paalle: tuovat valoa ilman kirkasta laiskaa. */
+  --warm-glow: radial-gradient(120% 90% at 50% 0%, rgba(201, 164, 107, 0.10) 0%, rgba(193, 84, 59, 0.06) 38%, rgba(15, 23, 42, 0) 72%);
+  --warm-band: linear-gradient(180deg, rgba(28, 24, 21, 0.55) 0%, rgba(15, 23, 42, 0) 100%);
+
   /* Canonical LV aliases — used by shared/Legal/* + shared/Footer */
   --color-deep-night: #0F172A;
   --color-vibe-pink: #EC4899;
@@ -972,4 +983,51 @@ button, summary,
    lohkossa, johon balance ei yllä — siksi myos suora span-lapsi. */
 h1 > span, h2 > span, h3 > span, h4 > span, button > span, summary > span {
   text-wrap: balance;
+}
+
+/* ════════════════════════════════════════════
+   KERROSTETTU OSIO — gridin oma tausta + kelluvat kortit.
+   .lv-band  = osion lampimin tausta (yo + hienovarainen kultainen hehku)
+   .lv-card  = kortin pinta, reunus ja varjo
+   ════════════════════════════════════════════ */
+.lv-band {
+  position: relative;
+  isolation: isolate;
+  background-color: #111A2E;
+}
+.lv-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--warm-glow);
+  pointer-events: none;
+  z-index: -1;
+}
+/* 🔴 .lv-card poistettiin 2026-09-15: layeroimattomana luokkana se sai gridin
+   laskemaan rivin korkeudeksi 202 px, kun sisalto vaati 477 px, ja teksti
+   leikkautui. A/B-mitattu samalla sivulla; samat ominaisuudet Tailwind-
+   utilityina toimivat. Älä palauta tätä luokkaa ilman gridi-testiä. */
+
+/* ════════════════════════════════════════════
+   ARTIKKELIN LUKUARKKI — sama malli kuin hubin blogissa (BLOGIN ARKKI,
+   laplandvibes/src/index.css, Vesan hyvaksyma 5.–6.9.2026): sivu ja sivupalsta
+   ovat yota, vain tekstipalsta istuu lumen varisella arkilla.
+   Kaytto: <div className="theme-editorial lv-paper">. theme-editorial antaa
+   typografian ja musteet, lv-paper pinnan — ja koska tama tulee CSS:ssa
+   myohemmin, se voittaa theme-editorialin kerman varisen taustan.
+   ════════════════════════════════════════════ */
+.lv-paper {
+  background-color: #F1F4F9;
+  color: #1F2937;
+  box-shadow: var(--shadow-plate);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  /* Arkin omat musteet: editorial-tokenit osoittavat kerman variselle pohjalle. */
+  --color-cream: #F1F4F9;
+  --color-cream-deep: #E4EAF3;
+  --color-paper-border: rgba(15, 23, 42, 0.10);
+  --color-ink: #0F172A;
+  --color-ink-soft: #1F2937;
+  --color-ink-mute: #475569;
+  --color-accent: #BE185D;
+  --color-accent-dark: #9D174D;
 }

@@ -52,7 +52,7 @@ const ko: SectionCopy = {
     featuredEyebrow: '창업자의 예시 여행기',
     featuredEvery: '모든 글 →',
     featuredLead:
-      '여러분의 여행 블로그가 어떤 모습일 수 있는지 보여 드리는 예시입니다. 아래 글은 Lapland.blog의 편집부인 The Field Journal이 쓴 것입니다. 백야부터 극야까지 라플란드의 한 해를 담아내는 작은 필진입니다. 진짜 기온, 진짜 통나무집, 진짜 수프. 한 편 읽어 보시고 여러분의 여행을 떠올려 보세요.',
+      '여러분의 여행 블로그가 어떤 모습일 수 있는지 보여 드리는 예시입니다. 아래 글은 Lapland.blog의 편집부인 LaplandVibes이 쓴 것입니다. 백야부터 극야까지 라플란드의 한 해를 담아내는 작은 필진입니다. 진짜 기온, 진짜 통나무집, 진짜 수프. 한 편 읽어 보시고 여러분의 여행을 떠올려 보세요.',
     featuredLoading: '예시를 불러오는 중…',
     featuredNone: '아직 예시 글이 없습니다.',
     featuredReadEntry: '이 글 읽기',
@@ -187,7 +187,7 @@ const ko: SectionCopy = {
       '독자 글 안의 광고성 게시물, 블로그에 끼워 넣는 제휴 쇼핑 목록. "잊을 수 없는", "버킷리스트", "환상적인", "겨울 왕국" 같은 단어는 편집 초안에서 금지하고 있으며, 여러분의 글에서도 금하실 만한 표현입니다. 글에도, 독자에게도 좋지 않습니다.',
     seedHeading: '이 글들은 누가 쓰는가',
     seedBody:
-      '사이트에 이미 올라와 있는 글은 Lapland.blog 편집부인 The Field Journal이 씁니다. 솔직하고 느리며 사진이 이끄는 여행 블로그가 어떤 느낌인지 보여 주려는 것입니다. 장소는 이름으로, 가격은 메뉴판에서, 출처는 마지막에. 한 편 읽고 자신의 블로그를 그려 보세요.',
+      '사이트에 이미 올라와 있는 글은 Lapland.blog 편집부인 LaplandVibes이 씁니다. 솔직하고 느리며 사진이 이끄는 여행 블로그가 어떤 느낌인지 보여 주려는 것입니다. 장소는 이름으로, 가격은 메뉴판에서, 출처는 마지막에. 한 편 읽고 자신의 블로그를 그려 보세요.',
     networkHeading: '네트워크 소개',
     networkBody:
       'Lapland.blog는 LaplandVibes 생태계의 일부입니다. 라플란드를 다루는 라플란드 사이트들의 네트워크입니다. 다른 사이트들은 어디로 갈지, 어디에 묵을지, 무엇을 할지를 알려 드립니다. 이 사이트는 여행 그 자체가 글로 남겨지는 곳입니다.',
@@ -215,7 +215,7 @@ const ko: SectionCopy = {
     beFirstWrite: '첫 글 쓰기',
     findStayPrefix: '이곳의 숙소 찾기:',
     dontSeeEyebrow: '찾으시는 곳이 없습니까?',
-    plantH2: '깃발을 꽂으세요.',
+    plantH2: '가려는 곳이 없나요?',
     plantLead:
       '이 목록에 없는 곳으로 가십니까? 소단퀼래, 포시오, 킬피스야르비, 헤타. 그곳의 첫 글을 작성해 주시면 지도에 추가해 드립니다.',
     plantCta: '블로그 시작하기',
@@ -392,8 +392,8 @@ const ko: SectionCopy = {
     readNextH2: '일기에서 더 보기',
     tagged: '태그',
     exploreMore: 'LaplandVibes 네트워크에서 더 둘러보기',
-    editorialLabel: 'Field Journal 글',
-    editorialNote: 'Lapland.blog 편집부인 The Field Journal이 쓴 글 중 하나로, 솔직한 여행 일기가 어떻게 읽히는지 보여 줍니다. 실제 장소, 실제 가격. 당신의 글은 당신이 씁니다.',
+    editorialLabel: 'LaplandVibes의 글',
+    editorialNote: 'Lapland.blog 편집부인 LaplandVibes이 쓴 글 중 하나로, 솔직한 여행 일기가 어떻게 읽히는지 보여 줍니다. 실제 장소, 실제 가격. 당신의 글은 당신이 씁니다.',
   },
   signIn: {
     pageTitle: '라플란드 여행을 계획하세요 | Lapland.blog',

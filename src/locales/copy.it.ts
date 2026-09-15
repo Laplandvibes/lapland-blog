@@ -52,7 +52,7 @@ const it: SectionCopy = {
     featuredEyebrow: 'Diario-esempio del fondatore',
     featuredEvery: 'Tutte le voci →',
     featuredLead:
-      'Ecco come potrebbe apparire il Suo blog di viaggio. Le voci qui sotto sono firmate da The Field Journal, la redazione di Lapland.blog: un piccolo gruppo di firme che attraversa l’anno lappone, dal sole di mezzanotte alla notte polare. Temperature vere, baite vere, zuppa vera. Ne legga una e immagini la Sua.',
+      'Ecco come potrebbe apparire il Suo blog di viaggio. Le voci qui sotto sono firmate da LaplandVibes, la redazione di Lapland.blog: un piccolo gruppo di firme che attraversa l’anno lappone, dal sole di mezzanotte alla notte polare. Temperature vere, baite vere, zuppa vera. Ne legga una e immagini la Sua.',
     featuredLoading: 'Caricamento dell’esempio…',
     featuredNone: 'Ancora nessuna voce-esempio.',
     featuredReadEntry: 'Legga questa voce',
@@ -187,7 +187,7 @@ const it: SectionCopy = {
       'Articoli sponsorizzati dentro le voci dei lettori. Liste affiliate infilate nel Suo blog. Le parole «indimenticabile», «da fare nella vita», «magico» o «paese delle meraviglie invernale» sono bandite dalle bozze editoriali e vale la pena bandirle anche dalle Sue. Fanno male alla scrittura e ai lettori.',
     seedHeading: 'Da dove vengono questi testi',
     seedBody:
-      'I testi già pubblicati sono scritti da The Field Journal, la redazione di Lapland.blog. Mostrano come può suonare un blog di viaggio onesto, lento e guidato dalle immagini: luoghi chiamati per nome, prezzi letti dal menù, fonti in fondo. Ne legga uno e immagini il Suo.',
+      'I testi già pubblicati sono scritti da LaplandVibes, la redazione di Lapland.blog. Mostrano come può suonare un blog di viaggio onesto, lento e guidato dalle immagini: luoghi chiamati per nome, prezzi letti dal menù, fonti in fondo. Ne legga uno e immagini il Suo.',
     networkHeading: 'Il network',
     networkBody:
       'Lapland.blog fa parte dell’ecosistema LaplandVibes, una rete di siti finlandesi sulla Lapponia. Gli altri siti Le dicono dove andare, dove dormire e cosa fare. Questo è il luogo dove il viaggio stesso viene messo per iscritto.',
@@ -215,7 +215,7 @@ const it: SectionCopy = {
     beFirstWrite: 'Sia il primo a scrivere',
     findStayPrefix: 'Cerchi un alloggio a',
     dontSeeEyebrow: 'Non vede il Suo luogo?',
-    plantH2: 'Pianti la bandiera.',
+    plantH2: 'Manca il Suo posto?',
     plantLead:
       'Parte per un luogo che non è in elenco? Sodankylä, Posio, Kilpisjärvi, Hetta. Scriva da lì la prima voce e la aggiungeremo alla mappa.',
     plantCta: 'Avvii il Suo blog',
@@ -392,8 +392,8 @@ const it: SectionCopy = {
     readNextH2: 'Altro dal diario',
     tagged: 'Taggato',
     exploreMore: 'Esplori altro dal network LaplandVibes',
-    editorialLabel: 'Una voce del Field Journal',
-    editorialNote: "Uno dei testi scritti da The Field Journal, la redazione di Lapland.blog, per mostrare come si legge un diario di viaggio onesto. Luoghi veri, prezzi veri. Le Sue voci le scrive Lei.",
+    editorialLabel: 'Testo di LaplandVibes',
+    editorialNote: "Uno dei testi scritti da LaplandVibes, la redazione di Lapland.blog, per mostrare come si legge un diario di viaggio onesto. Luoghi veri, prezzi veri. Le Sue voci le scrive Lei.",
   },
   signIn: {
     pageTitle: 'Pianifichi il Suo viaggio in Lapponia | Lapland.blog',

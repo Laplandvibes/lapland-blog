@@ -40,7 +40,7 @@ const DESTINATIONS: Destination[] = [
     name: 'Saariselkä',
     region: 'Far north, fells country',
     blurb: 'Treeless tundra, glass igloos, the Urho Kekkonen national park out the back door.',
-    hero: '/images/hero-aurora-winter-1200.webp',
+    hero: '/images/trip-silence-1200.webp',
   },
   {
     slug: 'levi',
@@ -116,42 +116,40 @@ export default function Destinations() {
     <div className="theme-editorial theme-night min-h-screen">
       <Nav />
 
-      {/* ================================================================
-          HERO — full-bleed image + cream title plate (matches Post/About).
-          Lifts the page out of the old dark, cold treatment into the light
-          editorial system the rest of the blog uses.
-          ================================================================ */}
+      {/* HERO — kuva + otsikko suoraan sen paalle. Aiempi versio nosti otsikon
+          erilliseen kerman variseen laatikkoon kuvan alareunan yli (Vesa 2026-09-15:
+          "miksi tuo h1 tällä sivulla on laatikossa?"); muilla sivuilla otsikko on
+          kuvan paalla, joten sivut nayttivat eri sivustoilta. */}
       <header className="relative pt-16">
-        <div className="relative h-[52vh] min-h-[380px] max-h-[560px] overflow-hidden bg-[var(--color-cream-deep)]">
+        <div className="relative min-h-[58vh] md:min-h-[64vh] flex items-center overflow-hidden">
           <picture>
-            <source srcSet="/images/hero-dusk-lake-1920.avif 1920w, /images/hero-dusk-lake-1200.avif 1200w" type="image/avif" />
-            <source srcSet="/images/hero-dusk-lake-1920.webp 1920w, /images/hero-dusk-lake-1200.webp 1200w" type="image/webp" />
+            <source srcSet="/images/hero-aurora-winter-1200.webp" type="image/webp" />
             <img
-              src="/images/hero-dusk-lake-1920.webp"
-              alt="Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore"
+              src="/images/hero-aurora-winter-1200.webp"
+              alt="Revontulikaari jäätyneen joen yllä talvisessa Lapissa"
               className="absolute inset-0 w-full h-full object-cover object-[50%_45%]"
               fetchPriority="high"
               decoding="async"
-              width={1920}
-              height={823}
+              width={1200}
+              height={509}
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30" />
-        </div>
-
-        <div className="relative px-4 sm:px-6 lg:px-8 -mt-24 md:-mt-32 mb-10">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-[var(--color-cream)] rounded-[1.25rem] shadow-[0_50px_90px_-50px_rgba(0,0,0,0.55)] border border-[var(--color-paper-border)] px-6 py-9 md:px-12 md:py-12">
-              <p className="inline-flex items-center gap-2 text-[var(--color-accent)] tracking-[0.32em] text-[11px] font-bold uppercase mb-5">
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to top, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.62) 45%, rgba(15,23,42,0.35) 100%)' }}
+          />
+          <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="inline-flex items-center gap-2 text-pink tracking-[0.32em] text-[11px] font-bold uppercase mb-5">
                 <MapPin size={13} /> {c.eyebrow}
               </p>
               <h1
-                className="text-[var(--color-ink)] leading-[1.04] tracking-[-0.015em] text-[clamp(2.25rem,5.5vw,3.75rem)] mb-5"
+                className="text-snow leading-[1.04] tracking-[-0.015em] text-[clamp(2.25rem,5.5vw,3.75rem)] mb-5 hero-text-shadow"
                 style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
               >
-                {c.h1Pre} <span className="text-[var(--color-accent)]">{c.h1Italic}</span>
+                {c.h1Pre} <span className="text-pink">{c.h1Italic}</span>
               </h1>
-              <p className="text-[var(--color-ink-soft)] text-lg md:text-xl leading-relaxed">
+              <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto hero-text-shadow-sm">
                 {c.lead}
               </p>
             </div>

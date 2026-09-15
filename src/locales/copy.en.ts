@@ -102,7 +102,7 @@ const en: SectionCopy = {
     featuredEyebrow: "Founder's example journal",
     featuredEvery: 'Every entry →',
     featuredLead:
-      'This is what your own trip blog could look like. The entries below come from The Field Journal, the editorial desk of Lapland.blog, a small circle of writers covering the Lapland year, from midnight sun to kaamos. Real temperatures, real cabins, real soup. Read one and picture your own.',
+      'This is what your own trip blog could look like. The entries below come from the LaplandVibes editorial desk a small circle of writers covering the Lapland year, from midnight sun to kaamos. Real temperatures, real cabins, real soup. Read one and picture your own.',
     featuredLoading: 'Loading example…',
     featuredNone: 'No example entries yet.',
     featuredReadEntry: 'Read this entry',
@@ -237,7 +237,7 @@ const en: SectionCopy = {
       'Sponsored posts inside reader entries. Affiliate shopping lists stuffed into your blog. The words "unforgettable", "bucket list", "magical" or "winter wonderland" are banned from the editorial drafts, and worth banning from yours too. They are bad for writing and bad for readers.',
     seedHeading: 'Where these entries come from',
     seedBody:
-      'The entries already on the site are written by The Field Journal, the editorial desk of Lapland.blog. They are there to show what an honest, slow, photo-led trip blog can read like: places named, prices read off the menu, sources at the end. Read one and picture your own.',
+      'The entries already on the site are written by the LaplandVibes editorial desk. They are there to show what an honest, slow, photo-led trip blog can read like: places named, prices read off the menu, sources at the end. Read one and picture your own.',
     networkHeading: 'About the network',
     networkBody:
       'Lapland.blog is part of the LaplandVibes ecosystem, a network of Finnish-owned sites about Lapland. The other sites tell you where to go, where to stay, and what to do. This one is where the trip itself gets written down.',
@@ -265,7 +265,7 @@ const en: SectionCopy = {
     beFirstWrite: 'Be the first to write',
     findStayPrefix: 'Find a stay in',
     dontSeeEyebrow: "Don't see your place?",
-    plantH2: 'Plant the flag.',
+    plantH2: 'Your place missing?',
     plantLead:
       'Going somewhere not on this list? Sodankylä, Posio, Kilpisjärvi, Hetta. Write the first entry from there and we will add it to the map.',
     plantCta: 'Start your blog',
@@ -442,8 +442,8 @@ const en: SectionCopy = {
     readNextH2: 'More from the journal',
     tagged: 'Tagged',
     exploreMore: 'Explore more from the LaplandVibes network',
-    editorialLabel: 'A Field Journal entry',
-    editorialNote: 'One of the entries written by The Field Journal, the editorial voice of Lapland.blog, to show what an honest trip diary reads like. Real places, real prices. Your own entries are written by you.',
+    editorialLabel: 'LaplandVibes entry',
+    editorialNote: 'One of the entries written by the LaplandVibes editorial desk to show what an honest trip diary reads like. Real places, real prices. Your own entries are written by you.',
   },
   signIn: {
     pageTitle: 'Plan your Lapland trip | Lapland.blog',

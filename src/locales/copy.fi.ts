@@ -102,7 +102,7 @@ const fi: SectionCopy = {
     featuredEyebrow: 'Toimituksen esimerkkipäiväkirja',
     featuredEvery: 'Kaikki merkinnät →',
     featuredLead:
-      'Tältä oma matkablogisi voisi näyttää. Alla olevat merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus, pieni kirjoittajapiiri, joka kattaa Lapin vuoden yöttömästä yöstä kaamokseen. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele omasi.',
+      'Tältä oma matkablogisi voisi näyttää. Alla olevat merkinnät on kirjoittanut LaplandVibesin toimitus pieni kirjoittajapiiri, joka kattaa Lapin vuoden yöttömästä yöstä kaamokseen. Oikeat lämpötilat, oikeat mökit, oikea keitto. Lue yksi ja kuvittele omasi.',
     featuredLoading: 'Ladataan esimerkkiä…',
     featuredNone: 'Ei esimerkkimerkintöjä vielä.',
     featuredReadEntry: 'Lue tämä merkintä',
@@ -237,7 +237,7 @@ const fi: SectionCopy = {
       'Sponsoroituja juttuja lukijoiden merkinnöissä. Affiliate-ostoslistoja blogiisi tungettuina. Sanat "unohtumaton", "bucket list", "taianomainen" tai "talvimaailma" on kielletty toimituksellisissa luonnoksissa, ja kannattaa kieltää myös omissasi. Ne ovat huonoja kirjoittamiselle ja huonoja lukijoille.',
     seedHeading: 'Mistä sivun jutut tulevat',
     seedBody:
-      'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus. Ne näyttävät, miltä rehellinen, hidas ja kuvavetoinen matkablogi voi kuulostaa: paikat nimeltä, hinnat ruokalistalta, lähteet lopussa. Lue yksi ja kuvittele oma.',
+      'Sivun merkinnät on kirjoittanut LaplandVibesin toimitus. Ne näyttävät, miltä rehellinen, hidas ja kuvavetoinen matkablogi voi kuulostaa: paikat nimeltä, hinnat ruokalistalta, lähteet lopussa. Lue yksi ja kuvittele oma.',
     networkHeading: 'Verkostosta',
     networkBody:
       'Lapland.blog on osa LaplandVibes-ekosysteemiä, suomalaisomisteista Lappi-sivustojen verkostoa. Muut sivustot kertovat minne mennä, missä yöpyä ja mitä tehdä. Tämä on se, johon itse matka kirjoitetaan ylös.',
@@ -265,7 +265,7 @@ const fi: SectionCopy = {
     beFirstWrite: 'Ole ensimmäinen kirjoittaja',
     findStayPrefix: 'Etsi majoitus kohteesta',
     dontSeeEyebrow: 'Etkö löydä paikkaasi?',
-    plantH2: 'Pystytä lippu.',
+    plantH2: 'Puuttuuko sinun paikkasi?',
     plantLead:
       'Menetkö paikkaan, jota ei listalla ole? Sodankylä, Posio, Kilpisjärvi, Hetta. Kirjoita ensimmäinen merkintä sieltä, niin lisäämme sen kartalle.',
     plantCta: 'Aloita oma blogi',
@@ -443,8 +443,8 @@ const fi: SectionCopy = {
     readNextH2: 'Lisää päiväkirjasta',
     tagged: 'Tagit',
     exploreMore: 'Lisää LaplandVibes-verkostossa',
-    editorialLabel: 'Field Journal -merkintä',
-    editorialNote: 'Yksi The Field Journalin, Lapland.blogin toimituksen, kirjoittamista jutuista: esimerkki siitä, miltä rehellinen matkapäiväkirja kuulostaa. Oikeat paikat, oikeat hinnat. Omat merkintäsi kirjoitat itse.',
+    editorialLabel: 'LaplandVibesin merkintä',
+    editorialNote: 'Yksi LaplandVibesin toimituksen kirjoittamista jutuista: esimerkki siitä, miltä rehellinen matkapäiväkirja kuulostaa. Oikeat paikat, oikeat hinnat. Omat merkintäsi kirjoitat itse.',
   },
   signIn: {
     pageTitle: 'Suunnittele Lapin matkasi | Lapland.blog',

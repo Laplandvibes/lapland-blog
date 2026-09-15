@@ -31,40 +31,39 @@ export default function About() {
   );
 
   return (
-    <div className="theme-editorial theme-night min-h-screen">
+    <div className="min-h-screen bg-night text-snow">
       <Nav />
 
+      {/* HERO — otsikko kuvan päälle, ei erillistä laatikkoa (sama malli kuin
+          Aloita tästä ja Kohteet). */}
       <header className="relative pt-16">
-        <div className="relative h-[58vh] min-h-[420px] max-h-[620px] overflow-hidden bg-[var(--color-cream-deep)]">
+        <div className="relative min-h-[58vh] md:min-h-[64vh] flex items-center overflow-hidden">
           <picture>
             <source srcSet="/images/aside-vesa-1200.avif" type="image/avif" />
-            <source srcSet="/images/aside-vesa-1200.webp" type="image/webp" />
             <img
               src="/images/aside-vesa-1200.webp"
-              alt="A lone figure with a headlamp standing under a vast green aurora arc over Lapland tundra"
+              alt="Yksinäinen kulkija otsalampun kanssa suuren revontulikaaren alla Lapin tunturissa"
               className="absolute inset-0 w-full h-full object-cover object-[50%_38%]"
               fetchPriority="high"
               decoding="async"
-              width={1920}
-              height={1080}
+              width={1200}
+              height={800}
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/35" />
-        </div>
-
-        <div className="relative px-4 sm:px-6 lg:px-8 -mt-28 md:-mt-36 mb-10">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-[var(--color-cream)] rounded-[1.25rem] shadow-[0_50px_90px_-50px_rgba(0,0,0,0.55)] border border-[var(--color-paper-border)] px-6 py-10 md:px-14 md:py-14">
-              <p className="text-[var(--color-accent)] text-[11px] uppercase tracking-[0.32em] font-bold mb-5">
-                {c.eyebrow}
-              </p>
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to top, rgba(15,23,42,0.94) 0%, rgba(15,23,42,0.6) 45%, rgba(15,23,42,0.3) 100%)' }}
+          />
+          <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-pink tracking-[0.32em] text-[11px] font-bold uppercase mb-5">{c.eyebrow}</p>
               <h1
-                className="text-[var(--color-ink)] leading-[1.04] tracking-[-0.015em] text-[clamp(2.25rem,6vw,4.25rem)] mb-7"
+                className="text-snow leading-[1.05] tracking-[-0.015em] text-[clamp(2.25rem,5.5vw,3.75rem)] mb-5 hero-text-shadow"
                 style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
               >
                 {c.h1}
               </h1>
-              <p className="text-[var(--color-ink-soft)] text-lg md:text-xl leading-relaxed">
+              <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto hero-text-shadow-sm">
                 {c.lead}
               </p>
             </div>
@@ -72,124 +71,101 @@ export default function About() {
         </div>
       </header>
 
-      <PageBreadcrumb editorial />
+      <PageBreadcrumb />
 
-      <main className="px-4 sm:px-6 lg:px-8 pb-12">
-        {/* Intro */}
-        <div className="prose-editorial">
-          <p>{c.intro}</p>
-        </div>
+      <main className="px-4 sm:px-6 lg:px-8 pb-8">
+        {/* 1. Mikä tämä on — yksi kappale, ei tekstiseinää */}
+        <section className="max-w-3xl mx-auto pt-14 md:pt-20">
+          <p className="text-slate-200 text-lg md:text-xl leading-relaxed">{c.intro}</p>
+        </section>
 
-        {/* How it works — three visual steps */}
-        <section className="max-w-5xl mx-auto mt-14 mb-4">
-          <h2
-            className="text-[var(--color-ink)] text-2xl md:text-3xl mb-8 text-center"
-            style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
-          >
+        {/* 2. Näin se toimii — kolme korttia samalla syvyydellä kuin etusivulla */}
+        <section className="max-w-5xl mx-auto mt-16 md:mt-20">
+          <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-10 text-center">
             {c.howHeading}
           </h2>
           <div className="grid gap-5 md:grid-cols-3">
             {[
-              { Icon: MapPin, label: '01' },
-              { Icon: PenLine, label: '02' },
-              { Icon: Share2, label: '03' },
+              { Icon: MapPin, body: c.howStepPin },
+              { Icon: PenLine, body: c.howStepWrite },
+              { Icon: Share2, body: c.howStepShare },
             ].map((step, i) => (
-              <div
-                key={step.label}
-                className="rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream)] p-6"
-              >
+              <div key={i} className="rounded-2xl p-6 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/25 flex items-center justify-center">
-                    <step.Icon size={18} className="text-[var(--color-accent)]" />
+                  <span className="w-10 h-10 rounded-full bg-pink/15 border border-pink/40 flex items-center justify-center">
+                    <step.Icon size={18} className="text-pink" />
                   </span>
-                  <span className="text-[var(--color-ink-mute)] text-xs font-bold tracking-[0.3em]">
-                    {step.label}
-                  </span>
+                  <span className="text-slate-400 text-xs font-bold tracking-[0.3em]">0{i + 1}</span>
                 </div>
-                <p className="text-[var(--color-ink-soft)] text-[0.95rem] leading-relaxed">
-                  {i === 0 ? c.howStepPin : i === 1 ? c.howStepWrite : c.howStepShare}
-                </p>
+                <p className="text-slate-300 text-[0.95rem] leading-relaxed">{step.body}</p>
               </div>
             ))}
           </div>
-          <div className="prose-editorial mt-8">
-            <p>{c.howBody}</p>
-          </div>
+          <p className="text-slate-300 text-base leading-relaxed mt-8 max-w-3xl mx-auto">{c.howBody}</p>
         </section>
 
-        {/* What's free / What you won't find — two-column contrast panel */}
-        <section className="max-w-5xl mx-auto mt-10 grid gap-5 md:grid-cols-2">
-          <div className="rounded-2xl border border-[var(--color-accent)]/20 bg-[var(--color-cream)] p-7">
+        {/* 3. Mikä on ilmaista / mitä et löydä */}
+        <section className="max-w-5xl mx-auto mt-14 grid gap-5 md:grid-cols-2">
+          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-8 h-8 rounded-full bg-[var(--color-accent)]/12 flex items-center justify-center">
-                <Check size={16} className="text-[var(--color-accent)]" />
+              <span className="w-8 h-8 rounded-full bg-pink/15 flex items-center justify-center">
+                <Check size={16} className="text-pink" />
               </span>
-              <h3
-                className="text-[var(--color-ink)] text-xl"
-                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
-              >
-                {c.freeHeading}
-              </h3>
+              <h3 className="font-display text-xl text-snow">{c.freeHeading}</h3>
             </div>
-            <p className="text-[var(--color-ink-soft)] text-[0.95rem] leading-relaxed">{c.freeBody}</p>
+            <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.freeBody}</p>
           </div>
-          <div className="rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] p-7">
+          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-8 h-8 rounded-full bg-[var(--color-ink-mute)]/15 flex items-center justify-center">
-                <X size={16} className="text-[var(--color-ink-mute)]" />
+              <span className="w-8 h-8 rounded-full bg-slate-600/40 flex items-center justify-center">
+                <X size={16} className="text-slate-300" />
               </span>
-              <h3
-                className="text-[var(--color-ink)] text-xl"
-                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
-              >
-                {c.notHeading}
-              </h3>
+              <h3 className="font-display text-xl text-snow">{c.notHeading}</h3>
             </div>
-            <p className="text-[var(--color-ink-soft)] text-[0.95rem] leading-relaxed">{c.notBody}</p>
+            <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.notBody}</p>
           </div>
         </section>
 
-        {/* The seed entries — highlighted editorial callout */}
-        <section className="max-w-3xl mx-auto mt-10">
-          <div className="rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-cream-deep)] px-6 py-7 md:px-8">
-            <p className="text-[var(--color-accent)] text-[10px] uppercase tracking-[0.32em] font-bold mb-3">
-              {c.seedHeading}
-            </p>
-            <p className="text-[var(--color-ink-soft)] text-[1.05rem] leading-relaxed">{c.seedBody}</p>
+        {/* 4. Mistä sivun jutut tulevat */}
+        <section className="max-w-3xl mx-auto mt-14">
+          <div className="rounded-2xl border-l-2 border-pink pl-6 py-2">
+            <p className="text-pink text-[10px] uppercase tracking-[0.32em] font-bold mb-3">{c.seedHeading}</p>
+            <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.seedBody}</p>
           </div>
         </section>
 
-        {/* Network + contact — back to prose */}
-        <div className="prose-editorial mt-12">
-          <h2>{c.networkHeading}</h2>
-          <p>{c.networkBody}</p>
-          <h2>{c.contactHeading}</h2>
-          <p>{c.contactBody}</p>
-          <hr />
-          <p>{c.closing}</p>
-        </div>
+        {/* 5. Verkosto ja yhteystiedot rinnakkain */}
+        <section className="max-w-5xl mx-auto mt-14 grid gap-5 md:grid-cols-2">
+          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
+            <h3 className="font-display text-xl text-snow mb-3">{c.networkHeading}</h3>
+            <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.networkBody}</p>
+          </div>
+          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
+            <h3 className="font-display text-xl text-snow mb-3">{c.contactHeading}</h3>
+            <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.contactBody}</p>
+          </div>
+        </section>
 
-        <div className="max-w-[65ch] mx-auto text-center mt-12">
+        {/* 6. Lopetus + CTA */}
+        <section className="max-w-3xl mx-auto mt-14 text-center">
+          <p className="text-slate-400 text-base italic leading-relaxed mb-8">{c.closing}</p>
           <Link
             to={to('/signin')}
             className="inline-block px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-wider text-xs hover:bg-pink transition-colors"
           >
             {c.ctaPrimary}
           </Link>
-          <p className="text-[var(--color-ink-mute)] text-sm mt-4">
+          <p className="text-slate-400 text-sm mt-5">
             {c.ctaSecondary}{' '}
-            <Link to={to('/stories')} className="text-[var(--color-accent)] underline">
+            <Link to={to('/stories')} className="text-pink-300 hover:text-snow underline underline-offset-4 transition-colors">
               {c.ctaSecondaryLink}
             </Link>
-            .
           </p>
-        </div>
+        </section>
       </main>
 
-      <div className="bg-night text-snow">
-        <Newsletter />
-        <Footer />
-      </div>
+      <Newsletter />
+      <Footer />
     </div>
   );
 }

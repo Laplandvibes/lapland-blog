@@ -77,9 +77,14 @@ export default function StartHere() {
           (Vesa 2026-09-15: "hero osio on hyvä, liian matala tosin"). Sama
           minimikorkeus kuin arkistosivulla, jotta kuva ehtii kantaa. */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[62vh] md:min-h-[70vh] flex items-center">
-        <picture><source srcSet="/images/hero-dusk-lake-1920.avif" type="image/avif" /><source srcSet="/images/hero-dusk-lake-1920.webp" type="image/webp" /><img
-          src="/images/hero-dusk-lake-1920.webp"
-          alt="Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore"
+        {/* Oma valokuva: Sallan tunturin laelta elokuussa 2026, EXIF klo 21:59.
+            Kolme sivua kaytti aiemmin samaa hero-dusk-lake-kuvaa (Vesa 15.9.:
+            "eikö kohteet sivun kuva ole lähes sama kuin aloita tästä"). */}
+        <picture><source srcSet="/images/hero-salla-ilta-1920.webp 1920w, /images/hero-salla-ilta-1200.webp 1200w" type="image/webp" /><img
+          src="/images/hero-salla-ilta-1920.webp"
+          alt="Iltataivas tunturin laelta Sallassa: aurinko pilvien raosta, tunturihorisontti"
+          srcSet="/images/hero-salla-ilta-1920.webp 1920w, /images/hero-salla-ilta-1200.webp 1200w"
+          sizes="100vw"
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
           decoding="async"
@@ -246,7 +251,7 @@ export default function StartHere() {
 
       {intro && (
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <Reveal>
               <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
                 {c.onlyEyebrow}
@@ -257,7 +262,35 @@ export default function StartHere() {
               <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-2xl">
                 {c.onlyLead}
               </p>
-              <PostCard post={intro} variant="dark" />
+              <Link
+                to={to(`/post/${intro.slug}`)}
+                className="group grid overflow-hidden rounded-2xl md:grid-cols-[1.05fr_1fr] border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+              >
+                <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[240px] overflow-hidden">
+                  <img
+                    src={intro.heroImage}
+                    alt={intro.heroAlt}
+                    loading="lazy"
+                    decoding="async"
+                    width={1200}
+                    height={750}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-6 md:p-8">
+                  <p className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
+                    {intro.kicker}
+                  </p>
+                  <h3 className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
+                    {intro.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed line-clamp-3">{intro.excerpt}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-snow/90">
+                    {COPY[lang].home.readFirstRead}
+                    <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </Link>
             </Reveal>
           </div>
         </section>
@@ -364,28 +397,38 @@ function PlanCard({ kicker, title, body, href, cta, Icon, img, gradient = 'from-
       href={href}
       target="_blank"
       rel="noopener"
-      className="group relative block h-full min-h-[280px] overflow-hidden rounded-2xl border border-purple/25 bg-night-light/50 bg-cover bg-center transition-all duration-300 hover:-translate-y-1 hover:border-pink/55 hover:shadow-[0_24px_60px_-30px_rgba(0,0,0,0.9)]"
-      style={img ? { backgroundImage: `url(${img})` } : undefined}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
     >
-      {/* A missing background-image simply shows the category gradient below — no
-          broken-image icon, so the section looks intentional before/without photos. */}
-      {/* Category-tinted gradient scrim: legible text + on-brand even with no photo. */}
-      <div className={`absolute inset-0 bg-gradient-to-b ${gradient}`} />
-      <div className="absolute inset-0 bg-gradient-to-t from-night via-night/50 to-transparent" />
+      {/* Kuva omalla alueellaan. Aiemmin kuva oli kortin taustana ja teksti sen
+          paalla, jolloin teksti peitti aiheen ja tarvitsi neljä drop-shadowia
+          pysyakseen luettavana. Ilman kuvaa kategoriagradientti tayttaa alueen. */}
+      <div className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-b ${gradient}`}>
+        {img && (
+          <img
+            src={img}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/10 to-transparent" />
+      </div>
 
-      {/* Content, bottom-anchored over the image. */}
-      <div className="relative flex h-full flex-col justify-end p-6">
-        <div className="flex items-center gap-2 mb-2">
-          <Icon size={18} className="text-pink drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]" />
-          <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">{kicker}</p>
+      <div className="flex flex-1 flex-col p-6">
+        <div className="mb-2 flex items-center gap-2">
+          <Icon size={16} className="text-pink" />
+          <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase">{kicker}</p>
         </div>
-        <h3 className="font-display text-xl text-snow mb-2 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{title}</h3>
-        <p className="text-slate-200 text-sm leading-relaxed mb-4 drop-shadow-[0_1px_6px_rgba(0,0,0,0.95)]">{body}</p>
-        <span className="inline-flex items-center gap-1.5 text-pink group-hover:text-snow text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors">
+        <h3 className="font-display text-xl text-snow mb-2 leading-tight">{title}</h3>
+        <p className="text-slate-300 text-sm leading-relaxed mb-4">{body}</p>
+        <span className="mt-auto inline-flex items-center gap-1.5 text-pink group-hover:text-snow text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors">
           {cta}
           <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
         </span>
       </div>
     </a>
   );
+
 }

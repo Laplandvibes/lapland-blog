@@ -163,7 +163,7 @@ export default function Post() {
   // Loading state — don't flash 404 while Supabase is still fetching.
   if (loading) {
     return (
-      <div className="theme-editorial min-h-screen">
+      <div className="min-h-screen bg-night text-snow">
         <Nav />
         <div className="pt-40 pb-40 px-4 text-center">
           <div className="inline-block w-6 h-6 border-2 border-[var(--color-accent)] border-t-transparent rounded-full animate-spin" />
@@ -184,7 +184,7 @@ export default function Post() {
   const voice = authors[post.author] ?? vesa;
 
   return (
-    <div className="theme-editorial min-h-screen">
+    <div className="min-h-screen bg-night text-snow">
       <Nav />
       <ReadingProgress />
 
@@ -195,7 +195,7 @@ export default function Post() {
           so the eyebrow + back-link stay legible on any photo.
           ================================================================ */}
       <header className="relative pt-16">
-        <div className="relative h-[64vh] min-h-[440px] max-h-[720px] overflow-hidden bg-[var(--color-cream-deep)]">
+        <div className="relative h-[64vh] min-h-[440px] max-h-[720px] overflow-hidden bg-night-light">
           <img
             src={post.heroImage}
             alt={post.heroAlt}
@@ -218,10 +218,17 @@ export default function Post() {
           </div>
         </div>
 
-        {/* Title plate — overlaps the hero image, centred reading column. */}
-        <div className="relative px-4 sm:px-6 lg:px-8 -mt-28 md:-mt-36 mb-10">
-          <div className="max-w-[52rem] mx-auto">
-            <div className="bg-[var(--color-cream)] rounded-[1.25rem] shadow-[0_50px_90px_-50px_rgba(0,0,0,0.55)] border border-[var(--color-paper-border)] px-6 py-10 md:px-14 md:py-14">
+      </header>
+
+      {/* ================================================================
+          LUKUARKKI — otsikko ja runko yhdellä lumen värisellä arkilla, joka
+          kelluu yön päällä ja limittyy heroon. Sivupalsta (sisällys + mainos)
+          jää arkin ULKOPUOLELLE tummana, kuten hubin blogissa.
+          ================================================================ */}
+      <main className="relative px-4 sm:px-6 lg:px-8 pb-24 -mt-28 md:-mt-36">
+        <div className="max-w-[72rem] mx-auto xl:grid xl:grid-cols-[minmax(0,1fr)_256px] xl:gap-10 xl:items-start">
+          <article className="theme-editorial lv-paper rounded-[1.5rem] px-5 py-9 sm:px-8 md:px-12 md:py-14">
+
               {cat && (
                 <Link
                   to={to(`/category/${cat.slug}`)}
@@ -273,18 +280,7 @@ export default function Post() {
                   {post.readTimeMinutes} {c.minRead}
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-      </header>
 
-      {/* ================================================================
-          ARTICLE BODY with sticky TOC + ad rail.
-          The body is a centred ~65ch measure; the rail floats to its right on
-          xl. Full-bleed figures inside the prose break the measure for impact.
-          ================================================================ */}
-      <main className="px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="max-w-[72rem] mx-auto">
           {/* Editorial framing — transparent attribution (honest model). */}
           <div className="max-w-[65ch] mx-auto mb-10 flex items-start gap-3 rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-5 py-4">
             <PenLine size={16} className="text-[var(--color-accent)] shrink-0 mt-0.5" />
@@ -294,17 +290,12 @@ export default function Post() {
             </p>
           </div>
 
-          <div className="xl:grid xl:grid-cols-[minmax(0,1fr)_256px] xl:gap-14">
-            <div id="post-body" className="prose-editorial">
+            <div id="post-body" className="prose-editorial mt-10">
               {post.content.map((block, i) => (
                 <Block key={i} block={block} index={i} />
               ))}
             </div>
-            <aside className="hidden xl:flex xl:flex-col xl:gap-8 xl:sticky xl:top-24 xl:self-start">
-              <TableOfContents blocks={post.content} />
-              <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Rovaniemi" />
-            </aside>
-          </div>
+
           <HighlightShare
             containerSelector="#post-body"
             url={canonicalUrl(`/post/${post.slug}`)}
@@ -376,21 +367,29 @@ export default function Post() {
           )}
 
           <AuthorBio variant="editorial" author={post.author} />
+          </article>
+
+          {/* Sivupalsta on arkin ULKOPUOLELLA yon paalla, joten se tarvitsee
+              tummat musteet: theme-night kaantaa editorial-tokenit. */}
+          <aside className="theme-night hidden xl:flex xl:flex-col xl:gap-8 xl:sticky xl:top-24 xl:self-start">
+            <TableOfContents blocks={post.content} />
+            <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Rovaniemi" />
+          </aside>
         </div>
       </main>
 
       {/* ================================================================
-          READ NEXT — bridge: cream cards on cream bg
+          READ NEXT — tummat kortit yön päällä, arkki päättyy tähän
           ================================================================ */}
       {related.length > 0 && (
-        <section className="px-4 sm:px-6 lg:px-8 pb-24 bg-[var(--color-cream-deep)] py-20">
+        <section className="px-4 sm:px-6 lg:px-8 pb-24 py-20">
           <div className="max-w-[68rem] mx-auto">
             <Reveal>
-              <p className="text-[var(--color-accent)] text-[10px] uppercase tracking-[0.35em] font-bold mb-3">
+              <p className="text-pink text-[10px] uppercase tracking-[0.35em] font-bold mb-3">
                 {c.readNextEyebrow}
               </p>
               <h2
-                className="text-[var(--color-ink)] text-3xl md:text-4xl font-normal mb-10"
+                className="text-snow text-3xl md:text-4xl font-normal mb-10"
                 style={{ fontFamily: 'var(--font-editorial)' }}
               >
                 {c.readNextH2}
@@ -399,7 +398,7 @@ export default function Post() {
             <div className="grid gap-6 md:grid-cols-2">
               {related.map((p, i) => (
                 <Reveal key={p.slug} delay={(i + 1) as 1 | 2}>
-                  <PostCard post={p} variant="editorial" />
+                  <PostCard post={p} />
                 </Reveal>
               ))}
             </div>
@@ -407,11 +406,8 @@ export default function Post() {
         </section>
       )}
 
-      {/* Dark newsletter + footer, switching out of editorial theme */}
-      <div className="bg-night text-snow">
-        <Newsletter />
-        <Footer />
-      </div>
+      <Newsletter />
+      <Footer />
     </div>
   );
 }

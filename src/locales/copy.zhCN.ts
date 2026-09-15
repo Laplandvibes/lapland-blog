@@ -102,7 +102,7 @@ const zhCN: SectionCopy = {
     featuredEyebrow: '创始人的示例日志',
     featuredEvery: '全部文章 →',
     featuredLead:
-      '这就是您自己的旅行博客可能呈现的样子。下面的文章出自 Lapland.blog 的编辑部 The Field Journal——一个小小的写作圈子，从极昼写到极夜，记录拉普兰的一年。真实的气温、真实的木屋、真实的汤。读一篇，想象属于您的那一篇。',
+      '这就是您自己的旅行博客可能呈现的样子。下面的文章出自 Lapland.blog 的编辑部 LaplandVibes——一个小小的写作圈子，从极昼写到极夜，记录拉普兰的一年。真实的气温、真实的木屋、真实的汤。读一篇，想象属于您的那一篇。',
     featuredLoading: '正在加载示例…',
     featuredNone: '暂无示例文章。',
     featuredReadEntry: '阅读这篇文章',
@@ -237,7 +237,7 @@ const zhCN: SectionCopy = {
       '读者文章里夹带的赞助贴文。硬塞进您博客的联盟购物清单。「难忘」「人生清单」「梦幻」或「冬日仙境」这些词，在编辑草稿中被禁用，也值得在您自己的文章里禁用。它们对写作有害，对读者也有害。',
     seedHeading: '这些文章从何而来',
     seedBody:
-      '站上已有的文章由 Lapland.blog 编辑部 The Field Journal 撰写。它们用来展示一个诚实、缓慢、以图片为主的旅行博客可以是什么样子：地点写出名字，价格照着菜单，出处放在最后。读一篇，然后想象你自己的。',
+      '站上已有的文章由 Lapland.blog 编辑部 LaplandVibes 撰写。它们用来展示一个诚实、缓慢、以图片为主的旅行博客可以是什么样子：地点写出名字，价格照着菜单，出处放在最后。读一篇，然后想象你自己的。',
     networkHeading: '关于这个网络',
     networkBody:
       'Lapland.blog 是 LaplandVibes 生态系统的一部分，一个由芬兰人拥有、以拉普兰为主题的网站网络。其他网站告诉您去哪儿、住哪儿、做什么。而这个网站，是把旅程本身写下来的地方。',
@@ -265,7 +265,7 @@ const zhCN: SectionCopy = {
     beFirstWrite: '成为第一个动笔的人',
     findStayPrefix: '寻找住宿：',
     dontSeeEyebrow: '没看到您要去的地方？',
-    plantH2: '插上旗帜。',
+    plantH2: '没有你要去的地方？',
     plantLead:
       '要去的地方不在这份名单上？索丹屈莱、波西奥、基尔皮斯耶尔维、海塔，从那里写下第一篇，我们就把它加到地图上。',
     plantCta: '创建您的博客',
@@ -442,8 +442,8 @@ const zhCN: SectionCopy = {
     readNextH2: '更多来自日志',
     tagged: '标签',
     exploreMore: '在 LaplandVibes 网络中探索更多',
-    editorialLabel: 'Field Journal 文章',
-    editorialNote: '由 Lapland.blog 编辑部 The Field Journal 撰写的文章之一，用来展示一份诚实的旅行日记读起来是什么样。真实的地点，真实的价格。你自己的记录由你来写。',
+    editorialLabel: 'LaplandVibes 的文章',
+    editorialNote: '由 Lapland.blog 编辑部 LaplandVibes 撰写的文章之一，用来展示一份诚实的旅行日记读起来是什么样。真实的地点，真实的价格。你自己的记录由你来写。',
   },
   signIn: {
     pageTitle: '规划您的拉普兰之旅 | Lapland.blog',

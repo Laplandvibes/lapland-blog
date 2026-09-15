@@ -224,7 +224,7 @@ export default function AuthorProfile() {
             </h2>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-7 max-w-xl mx-auto">
               The editor's picks, the destinations, and the seed entries from
-              The Field Journal. All curated.
+              LaplandVibes. All curated.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
