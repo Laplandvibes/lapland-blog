@@ -124,7 +124,7 @@ const nl: SectionCopy = {
     path2Kicker: '02 · Lezen',
     path2Title: 'Ik wil lezen wat anderen schreven.',
     path2Body:
-      'Zorgvuldig gekozen voorbeeldnotities, geschreven in Finland: inpakken voor de hut, de zalmsoepavond, het noorderlicht boven Kemi. Echte temperaturen, echte tijden, geen brochurestem.',
+      'Met de hand gekozen verhalen uit Finland: wat je meeneemt naar een hut, waar je zalmsoep krijgt en wat die kost, hoe je in Kemi noorderlicht kijkt. Echte prijzen, echte tijden, geen brochuretoon.',
     path2Cta: 'Topartikelen',
     path3Kicker: '03 · Schrijven',
     path3Title: 'Ik ben er. Ik wil een blog van mijn reis.',
@@ -393,7 +393,7 @@ const nl: SectionCopy = {
     tagged: 'Getagd',
     exploreMore: 'Ontdek meer in het LaplandVibes-netwerk',
     editorialLabel: 'Een Field Journal-bericht',
-    editorialNote: 'Een van de paar voorbeeldberichten geschreven door The Field Journal, de redactionele stem van Lapland.blog, om te laten zien hoe een eerlijk reisdagboek leest. Echte plekken, echte temperaturen. Uw eigen berichten schrijft u zelf.',
+    editorialNote: 'Een van de verhalen van The Field Journal, de redactie van Lapland.blog, om te laten zien hoe een eerlijk reisdagboek leest. Echte plaatsen, echte prijzen. Uw eigen notities schrijft u zelf.',
   },
   signIn: {
     pageTitle: 'Plan uw Lapland-reis | Lapland.blog',

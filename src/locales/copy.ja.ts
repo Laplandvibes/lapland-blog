@@ -174,7 +174,7 @@ const ja: SectionCopy = {
     path2Kicker: '02 · 読む',
     path2Title: '他の人が書いたものを読みたい。',
     path2Body:
-      'フィンランド国内から書かれた厳選シード記事：コテージのパッキング、サーモンスープの夜、ケミの上のオーロラ。本物の気温、本物の時間、パンフレット調なし。',
+      'フィンランドから選んだ記事：コテージへの持ち物、サーモンスープはどこでいくらか、ケミでのオーロラの見方。実際の値段、実際の時刻、パンフレットの口調はなし。',
     path2Cta: 'おすすめ記事',
     path3Kicker: '03 · 書く',
     path3Title: 'いまラップランドにいて、自分の旅行ブログがほしい。',
@@ -443,7 +443,7 @@ const ja: SectionCopy = {
     tagged: 'タグ',
     exploreMore: 'LaplandVibesネットワークでさらに探す',
     editorialLabel: 'フィールドジャーナルの記事',
-    editorialNote: '正直な旅日記がどんなものかを示すために、Lapland.blogの編集の声「The Field Journal」が書いた数本のサンプル記事のひとつです。場所も気温も本物。あなた自身の記事は、あなたが書きます。',
+    editorialNote: 'Lapland.blogの編集部であるThe Field Journalが書いた記事のひとつ。正直な旅日記がどう読めるかを示すためのものです。実在の場所、実際の値段。あなたの記事はあなたが書きます。',
   },
   signIn: {
     pageTitle: 'ラップランドの旅を計画 | Lapland.blog',

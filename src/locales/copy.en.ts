@@ -174,7 +174,7 @@ const en: SectionCopy = {
     path2Kicker: '02 · Reading',
     path2Title: 'I want to read what others wrote.',
     path2Body:
-      'Curated seed entries from inside Finland: cabin packing, the salmon-soup night, the aurora over Kemi. Real temperatures, real time of day, no brochure voice.',
+      'Hand-picked entries from inside Finland: what to pack for a cabin, where to get salmon soup and what it costs, how to watch the aurora in Kemi. Real prices, real times of day, no brochure voice.',
     path2Cta: 'Top reads',
     path3Kicker: '03 · Writing',
     path3Title: "I'm here. I want a blog of my trip.",
@@ -443,7 +443,7 @@ const en: SectionCopy = {
     tagged: 'Tagged',
     exploreMore: 'Explore more from the LaplandVibes network',
     editorialLabel: 'A Field Journal entry',
-    editorialNote: 'One of a handful of seed entries written by The Field Journal, the editorial voice of Lapland.blog, to show what an honest trip diary reads like. Real places, real temperatures. Your own entries are written by you.',
+    editorialNote: 'One of the entries written by The Field Journal, the editorial voice of Lapland.blog, to show what an honest trip diary reads like. Real places, real prices. Your own entries are written by you.',
   },
   signIn: {
     pageTitle: 'Plan your Lapland trip | Lapland.blog',

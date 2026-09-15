@@ -124,7 +124,7 @@ const ko: SectionCopy = {
     path2Kicker: '02 · 읽기',
     path2Title: '다른 사람들이 쓴 글을 읽고 싶습니다.',
     path2Body:
-      '라플란드 현지에서 작성된 엄선된 시드 글: 통나무집 짐 싸기, 연어 수프의 밤, 케미 위의 오로라. 진짜 기온, 진짜 시각, 안내 책자식 어투 없음.',
+      '핀란드에서 직접 고른 글: 오두막에 무엇을 챙기는지, 연어 수프는 어디서 얼마인지, 케미에서 오로라를 어떻게 보는지. 실제 가격, 실제 시각, 홍보 문구는 없음.',
     path2Cta: '추천 글',
     path3Kicker: '03 · 쓰기',
     path3Title: '지금 와 있습니다. 제 여행 블로그가 갖고 싶습니다.',
@@ -393,7 +393,7 @@ const ko: SectionCopy = {
     tagged: '태그',
     exploreMore: 'LaplandVibes 네트워크에서 더 둘러보기',
     editorialLabel: 'Field Journal 글',
-    editorialNote: '정직한 여행 일기가 어떤 모습인지 보여 주기 위해 Lapland.blog의 편집 목소리 The Field Journal이 쓴 몇 편의 샘플 글 중 하나입니다. 장소와 기온은 모두 실제이며, 여러분의 글은 여러분이 직접 씁니다.',
+    editorialNote: 'Lapland.blog 편집부인 The Field Journal이 쓴 글 중 하나로, 솔직한 여행 일기가 어떻게 읽히는지 보여 줍니다. 실제 장소, 실제 가격. 당신의 글은 당신이 씁니다.',
   },
   signIn: {
     pageTitle: '라플란드 여행을 계획하세요 | Lapland.blog',

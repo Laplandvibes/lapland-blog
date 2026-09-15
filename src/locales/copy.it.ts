@@ -124,7 +124,7 @@ const it: SectionCopy = {
     path2Kicker: '02 · Lettura',
     path2Title: 'Voglio leggere cosa hanno scritto altri.',
     path2Body:
-      'Voci-seme curate, scritte dalla Finlandia: il bagaglio in baita, la sera della zuppa di salmone, l’aurora sopra Kemi. Temperature reali, orari reali, niente voce da brochure.',
+      'Testi scelti a mano dalla Finlandia: cosa mettere in valigia per la baita, dove trovare la zuppa di salmone e quanto costa, come guardare l’aurora a Kemi. Prezzi veri, orari veri, nessun tono da brochure.',
     path2Cta: 'Letture top',
     path3Kicker: '03 · Scrittura',
     path3Title: 'Sono qui. Voglio un blog del mio viaggio.',
@@ -393,7 +393,7 @@ const it: SectionCopy = {
     tagged: 'Taggato',
     exploreMore: 'Esplori altro dal network LaplandVibes',
     editorialLabel: 'Una voce del Field Journal',
-    editorialNote: "Una delle poche voci di esempio scritte da The Field Journal, la voce editoriale di Lapland.blog, per mostrare come si legge un diario di viaggio onesto. Luoghi e temperature reali; le Sue voci le scrive Lei.",
+    editorialNote: "Uno dei testi scritti da The Field Journal, la redazione di Lapland.blog, per mostrare come si legge un diario di viaggio onesto. Luoghi veri, prezzi veri. Le Sue voci le scrive Lei.",
   },
   signIn: {
     pageTitle: 'Pianifichi il Suo viaggio in Lapponia | Lapland.blog',

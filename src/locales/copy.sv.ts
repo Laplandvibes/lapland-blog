@@ -174,7 +174,7 @@ const sv: SectionCopy = {
     path2Kicker: '02 · Läsa',
     path2Title: 'Jag vill läsa vad andra skrev.',
     path2Body:
-      'Utvalda startinlägg inifrån Finland: packning till stugan, laxsoppekvällen, norrskenet över Kemi. Riktiga temperaturer, riktig tid på dygnet, ingen broschyrröst.',
+      'Handplockade texter inifrån Finland: vad du packar till stugan, var du får laxsoppa och vad den kostar, hur du tittar på norrsken i Kemi. Riktiga priser, riktiga klockslag, ingen broschyrröst.',
     path2Cta: 'Mest lästa',
     path3Kicker: '03 · Skriva',
     path3Title: 'Jag är här. Jag vill ha en blogg om min resa.',
@@ -443,7 +443,7 @@ const sv: SectionCopy = {
     tagged: 'Taggat',
     exploreMore: 'Utforska mer från LaplandVibes-nätverket',
     editorialLabel: 'Ett inlägg från Field Journal',
-    editorialNote: 'Ett av en handfull startinlägg skrivna av The Field Journal, den redaktionella rösten på Lapland.blog, för att visa hur en ärlig resedagbok läses. Riktiga platser, riktiga temperaturer. Dina egna inlägg skrivs av dig.',
+    editorialNote: 'Ett av inläggen skrivna av The Field Journal, den redaktionella rösten på Lapland.blog, för att visa hur en ärlig resedagbok läses. Riktiga platser, riktiga priser. Dina egna inlägg skriver du själv.',
   },
   signIn: {
     pageTitle: 'Planera din Lapplandsresa | Lapland.blog',

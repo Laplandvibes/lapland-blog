@@ -174,7 +174,7 @@ const es: SectionCopy = {
     path2Kicker: '02 · Leer',
     path2Title: 'Quiero leer lo que escribieron otros.',
     path2Body:
-      'Entradas iniciales seleccionadas desde dentro de Finlandia: hacer la maleta para la cabaña, la noche de la sopa de salmón, la aurora sobre Kemi. Temperaturas reales, hora real del día, sin voz de folleto.',
+      'Textos escogidos a mano desde Finlandia: qué llevar a la cabaña, dónde tomar sopa de salmón y cuánto cuesta, cómo ver auroras en Kemi. Precios reales, horas reales, sin tono de folleto.',
     path2Cta: 'Lo más leído',
     path3Kicker: '03 · Escribir',
     path3Title: 'Estoy aquí. Quiero un blog de mi viaje.',
@@ -443,7 +443,7 @@ const es: SectionCopy = {
     tagged: 'Etiquetado',
     exploreMore: 'Explore más en la red de LaplandVibes',
     editorialLabel: 'Una entrada de The Field Journal',
-    editorialNote: 'Una de las pocas entradas de muestra escritas por The Field Journal, la voz editorial de Lapland.blog, para mostrar cómo se lee un diario de viaje honesto. Lugares y temperaturas reales; sus propias entradas las escribe usted.',
+    editorialNote: 'Uno de los textos escritos por The Field Journal, la redacción de Lapland.blog, para mostrar cómo se lee un diario de viaje honesto. Lugares reales, precios reales. Sus entradas las escribe usted.',
   },
   signIn: {
     pageTitle: 'Planee su viaje a Laponia | Lapland.blog',

@@ -175,7 +175,7 @@ const de: SectionCopy = {
     path2Kicker: '02 · Lesen',
     path2Title: 'Ich möchte lesen, was andere geschrieben haben.',
     path2Body:
-      'Sorgfältig ausgewählte Einträge aus Finnland: Hütten-Packliste, die Lachssuppen-Nacht, Nordlichter über Kemi. Echte Temperaturen, echte Uhrzeit, kein Broschüren-Ton.',
+      'Handverlesene Texte aus Finnland: was in die Hütte gehört, wo es Lachssuppe gibt und was sie kostet, wie man in Kemi Polarlichter beobachtet. Echte Preise, echte Uhrzeiten, kein Prospektton.',
     path2Cta: 'Beliebt',
     path3Kicker: '03 · Schreiben',
     path3Title: 'Ich bin hier. Ich will einen Blog von meiner Reise.',
@@ -445,7 +445,7 @@ const de: SectionCopy = {
     tagged: 'Schlagwörter',
     exploreMore: 'Mehr aus dem LaplandVibes-Netzwerk',
     editorialLabel: 'Ein Field-Journal-Eintrag',
-    editorialNote: 'Einer von wenigen Beispiel-Einträgen, geschrieben von The Field Journal, der redaktionellen Stimme von Lapland.blog, um zu zeigen, wie ein ehrliches Reisetagebuch klingt. Echte Orte, echte Temperaturen. Ihre eigenen Einträge schreiben Sie selbst.',
+    editorialNote: 'Einer der Texte von The Field Journal, der Redaktion von Lapland.blog, als Beispiel dafür, wie sich ein ehrliches Reisetagebuch liest. Echte Orte, echte Preise. Ihre eigenen Einträge schreiben Sie selbst.',
   },
   signIn: {
     pageTitle: 'Planen Sie Ihre Lappland-Reise | Lapland.blog',

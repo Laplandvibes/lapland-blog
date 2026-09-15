@@ -174,7 +174,7 @@ const zhCN: SectionCopy = {
     path2Kicker: '02 · 阅读',
     path2Title: '我想读读别人写了什么。',
     path2Body:
-      '来自芬兰本地、精心挑选的起始文章：为木屋打包行李、三文鱼汤之夜、凯米上空的极光。真实的气温、真实的时刻，没有宣传册的腔调。',
+      '从芬兰精选的文章：去小屋该带什么、三文鱼汤在哪里喝、多少钱，以及在凯米怎么看极光。真实价格、真实时间，没有宣传腔。',
     path2Cta: '热门阅读',
     path3Kicker: '03 · 书写',
     path3Title: '我已经在这里了。我想要一个记录旅程的博客。',
@@ -443,7 +443,7 @@ const zhCN: SectionCopy = {
     tagged: '标签',
     exploreMore: '在 LaplandVibes 网络中探索更多',
     editorialLabel: 'Field Journal 文章',
-    editorialNote: '这是 Lapland.blog 的编辑之声 The Field Journal 撰写的少量示例文章之一，用来展示一篇真诚的旅行日记是什么样子。地点和气温都真实可考，你自己的文章则由你来写。',
+    editorialNote: '由 Lapland.blog 编辑部 The Field Journal 撰写的文章之一，用来展示一份诚实的旅行日记读起来是什么样。真实的地点，真实的价格。你自己的记录由你来写。',
   },
   signIn: {
     pageTitle: '规划您的拉普兰之旅 | Lapland.blog',

@@ -124,7 +124,7 @@ const fr: SectionCopy = {
     path2Kicker: '02 · Lecture',
     path2Title: 'Je veux lire ce que d’autres ont écrit.',
     path2Body:
-      'Entrées-germes triées sur le volet, écrites depuis la Finlande : le paquetage du chalet, la soirée soupe de saumon, l’aurore au-dessus de Kemi. Vraies températures, vraies heures, sans voix de brochure.',
+      'Des textes choisis à la main, écrits en Finlande : quoi emporter au chalet, où trouver la soupe de saumon et à quel prix, comment observer les aurores à Kemi. Vrais prix, vraies heures, aucun ton de brochure.',
     path2Cta: 'À lire en priorité',
     path3Kicker: '03 · Écriture',
     path3Title: 'Je suis sur place. Je veux un blog de mon voyage.',
@@ -393,7 +393,7 @@ const fr: SectionCopy = {
     tagged: 'Étiqueté',
     exploreMore: 'Explorez plus du réseau LaplandVibes',
     editorialLabel: 'Une entrée du Field Journal',
-    editorialNote: "L'une des quelques entrées d'exemple écrites par The Field Journal, la voix éditoriale de Lapland.blog, pour montrer à quoi ressemble un carnet de voyage honnête. Lieux et températures réels ; vos propres entrées, c'est vous qui les écrivez.",
+    editorialNote: "L’un des textes écrits par The Field Journal, la rédaction de Lapland.blog, pour montrer à quoi ressemble un carnet de voyage honnête. Lieux réels, prix réels. Vos propres entrées, c’est vous qui les écrivez.",
   },
   signIn: {
     pageTitle: 'Planifiez votre voyage en Laponie | Lapland.blog',

@@ -48,6 +48,7 @@ export const IMAGE_VERSIONS: Record<string, string> = {
   '/images/hero-dusk-lake-1920.webp': '0b79e28b',
   '/images/hero-dusk-lake-2560.avif': '73a5e70d',
   '/images/hero-dusk-lake-2560.webp': 'd62374ce',
+  '/images/news-boardwalk-1200.webp': '1061e267',
   '/images/pillar-cold-1200.avif': '7601f626',
   '/images/pillar-cold-1200.webp': '5f093530',
   '/images/pillar-cold-480.avif': '1ebe01bb',

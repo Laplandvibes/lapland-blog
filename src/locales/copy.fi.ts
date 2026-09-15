@@ -174,7 +174,7 @@ const fi: SectionCopy = {
     path2Kicker: '02 · Lukeminen',
     path2Title: 'Haluan lukea mitä muut kirjoittivat.',
     path2Body:
-      'Käsin valittuja siemenmerkintöjä Suomesta: mökin pakkaaminen, lohikeittoilta, Kemin revontulet. Oikeat lämpötilat, oikea kellonaika, ei esiteääntä.',
+      'Käsin valittuja juttuja Suomesta: mitä mökille pakataan, mistä lohikeiton saa ja mitä se maksaa, miten revontulia katsotaan Kemissä. Oikeat hinnat, oikeat kellonajat, ei esiteääntä.',
     path2Cta: 'Suosituimmat',
     path3Kicker: '03 · Kirjoittaminen',
     path3Title: 'Olen täällä. Haluan blogin matkastani.',
@@ -444,7 +444,7 @@ const fi: SectionCopy = {
     tagged: 'Tagit',
     exploreMore: 'Lisää LaplandVibes-verkostossa',
     editorialLabel: 'Field Journal -merkintä',
-    editorialNote: 'Yksi The Field Journalin, Lapland.blogin toimituksellisen äänen, kirjoittamista muutamista näytemerkinnöistä: esimerkki siitä, miltä rehellinen matkapäiväkirja kuulostaa. Paikat ja lämpötilat ovat aitoja, ja omat merkintäsi kirjoitat itse.',
+    editorialNote: 'Yksi The Field Journalin, Lapland.blogin toimituksen, kirjoittamista jutuista: esimerkki siitä, miltä rehellinen matkapäiväkirja kuulostaa. Oikeat paikat, oikeat hinnat. Omat merkintäsi kirjoitat itse.',
   },
   signIn: {
     pageTitle: 'Suunnittele Lapin matkasi | Lapland.blog',
