@@ -113,7 +113,7 @@ export default function Destinations() {
   );
 
   return (
-    <div className="theme-editorial min-h-screen">
+    <div className="theme-editorial theme-night min-h-screen">
       <Nav />
 
       {/* ================================================================
@@ -195,7 +195,7 @@ export default function Destinations() {
               </p>
               <Link
                 to={to('/signin')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[var(--color-accent)] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[var(--color-accent-dark)] transition-colors"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink transition-colors"
               >
                 {c.plantCta}
                 <ArrowRight size={14} />

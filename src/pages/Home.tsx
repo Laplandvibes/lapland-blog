@@ -1,7 +1,6 @@
 // Home — narrative editorial landing page.
-// Top-to-bottom: cinematic hero, seasonal band, three-step "how it works",
-// live trip blogs carousel, founder's example journal, three editorial pillars,
-// latest stories grid, personal aside, newsletter, footer.
+// Top-to-bottom: cinematic hero, three real stories, three-step "how it works",
+// three editorial pillars, latest stories grid, personal aside, FAQ, newsletter.
 
 import { Link } from 'react-router-dom';
 import { ArrowRight, Snowflake, PenLine, MapPin, BookOpen, Share2 } from 'lucide-react';
@@ -9,9 +8,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
 import Newsletter from '../components/Newsletter';
-import FeaturedPost from '../components/FeaturedPost';
 import PostCard from '../components/PostCard';
-import TripBlogsCarousel from '../components/TripBlogsCarousel';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, publisherSchema, faqPageSchema } from '../lib/jsonld';
 import { usePosts } from '../hooks/usePosts';
@@ -135,10 +132,9 @@ export default function Home() {
   const to = useLocalePath();
   const c = COPY[lang].home;
   const { posts: allPosts, loading } = usePosts({ limit: 12 });
-  const feature = allPosts.find((p) => p.featured) ?? allPosts[0];
-  const recent = allPosts
-    .filter((p) => !feature || p.slug !== feature.slug)
-    .slice(0, 6);
+  // Kolme nostoa heti heron alle, loput uusimpiin — sama juttu ei esiinny kahdesti.
+  const leadPosts = allPosts.slice(0, 3);
+  const recent = allPosts.slice(3, 9);
 
   const m = META[lang];
   useSeo({
@@ -253,84 +249,82 @@ export default function Home() {
           Tumma pinta — istuu sivun bg-night-taustaan. */}
       <MainPartnerBanner config={AD_SLOTS} locale={lang} />
 
-      {/* SEASONAL BAND */}
+      {/* READ THESE FIRST — kolme oikeaa juttua heti heron alle (Vesa 2026-09-15:
+          "eikö tässä pitäisi heti tulla muutama esimerkki? sellaista vauhdin hurmaa").
+          Korvasi kesäbannerin, jonka teksti oli kovakoodattu "Keskiyön aurinko 6.6. → 7.7."
+          ja joka siis mainosti mennyttä kautta joka syksy ja talvi. */}
       <section
-        aria-labelledby="seasonal-heading"
-        className="relative overflow-hidden bg-gradient-to-br from-[#FAF7F2] via-[#FCE9D2] to-[#F4B36A] text-[#1A1815]"
+        className="relative py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+        aria-labelledby="readfirst-heading"
       >
-        <div className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-[#F8C770]/55 blur-[140px] pointer-events-none" />
-        <div className="absolute -bottom-40 -right-32 w-[640px] h-[640px] rounded-full bg-[#E97C46]/30 blur-[160px] pointer-events-none" />
-
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-center">
-            <Reveal>
-              <div>
-                <div className="flex flex-wrap items-center gap-1.5 mb-6">
-                  {c.seasonalBadge.split('·').map((part, i) => (
-                    <span
-                      key={i}
-                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/65 backdrop-blur-sm border border-[#C1543B]/35 tracking-[0.3em] text-[10px] font-bold uppercase text-[#8F3525] whitespace-nowrap"
-                    >
-                      {i === 0 && <span className="w-1.5 h-1.5 rounded-full bg-[#E97C46] animate-pulse" />}
-                      {part.trim()}
-                    </span>
-                  ))}
-                </div>
-                <h2
-                  id="seasonal-heading"
-                  className="font-display font-normal text-4xl md:text-5xl leading-[1.04] tracking-[-0.02em] text-[#1A1815] mb-6"
-                  style={{ fontFamily: 'var(--font-editorial)' }}
-                >
-                  {c.seasonalH2}
-                </h2>
-                <p className="text-[#3B3935] text-base md:text-lg leading-relaxed mb-7 max-w-[55ch]">
-                  {c.seasonalLead}
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+            <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-5 mb-10">
+              <div className="max-w-2xl">
+                <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
+                  {c.readFirstEyebrow}
                 </p>
-                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
-                  <Link
-                    to={to('/signin')}
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1A1815] text-white font-semibold uppercase tracking-[0.18em] text-xs whitespace-nowrap hover:bg-[#3B3935] transition-colors"
-                  >
-                    {c.seasonalCta1}
-                    <ArrowRight size={14} />
-                  </Link>
-                  <Link
-                    to={to('/category/seasons')}
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#8F3525] font-semibold uppercase tracking-[0.18em] text-xs whitespace-nowrap border border-[#C1543B]/35 transition-colors"
-                  >
-                    {c.seasonalCta2}
-                  </Link>
-                </div>
+                <h2
+                  id="readfirst-heading"
+                  className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight leading-[1.05]"
+                >
+                  {c.readFirstH2}
+                </h2>
               </div>
-            </Reveal>
+              <Link
+                to={to('/stories')}
+                className="lv-tap inline-flex items-center gap-2 text-sm font-semibold text-pink-300 hover:text-snow transition-colors"
+              >
+                {c.readFirstCta}
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </Reveal>
 
-            <Reveal delay={1}>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { label: c.seasonalLabels.light, title: c.seasonalCard1Title, body: c.seasonalCard1Body, offset: '' },
-                  { label: c.seasonalLabels.forest, title: c.seasonalCard2Title, body: c.seasonalCard2Body, offset: 'mt-8' },
-                  { label: c.seasonalLabels.water, title: c.seasonalCard3Title, body: c.seasonalCard3Body, offset: '' },
-                  { label: c.seasonalLabels.quiet, title: c.seasonalCard4Title, body: c.seasonalCard4Body, offset: 'mt-8' },
-                ].map((card) => (
-                  <div
-                    key={card.label}
-                    className={`rounded-2xl bg-white/65 backdrop-blur-sm border border-white/80 p-5 shadow-[0_30px_60px_-30px_rgba(143,53,37,0.25)] ${card.offset}`}
+          {loading ? (
+            <div className="grid gap-5 md:grid-cols-3">
+              {[0, 1, 2].map((i) => (
+                <div key={i} className="aspect-[4/5] rounded-2xl bg-night-light/60 animate-pulse" />
+              ))}
+            </div>
+          ) : (
+            <div className="grid gap-5 md:grid-cols-3">
+              {leadPosts.map((post, i) => (
+                <Reveal key={post.slug} delay={((i % 3) + 1) as 1 | 2 | 3}>
+                  <Link
+                    to={to(`/post/${post.slug}`)}
+                    className="group relative block aspect-[4/5] rounded-2xl overflow-hidden border border-purple/20 hover:border-pink/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
                   >
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-[#8F3525] font-bold mb-2">
-                      {card.label}
-                    </p>
-                    <p
-                      className="text-[#1A1815] text-lg leading-snug"
-                      style={{ fontFamily: 'var(--font-editorial)' }}
-                    >
-                      {card.title}
-                    </p>
-                    <p className="text-sm text-[#3B3935] mt-2 leading-relaxed">{card.body}</p>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
+                    <img
+                      src={post.heroImage}
+                      alt={post.heroAlt}
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      width={1200}
+                      height={1500}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-night via-night/60 to-night/5" />
+                    <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                      <p className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
+                        {post.kicker}
+                      </p>
+                      <h3 className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
+                        {post.title}
+                      </h3>
+                      <p className="text-slate-300 text-sm leading-relaxed line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-snow/90">
+                        {c.readFirstRead}
+                        <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -443,74 +437,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
-
-      {/* LIVE TRIP BLOGS CAROUSEL */}
-      <section
-        id="live-blogs"
-        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
-        aria-labelledby="live-blogs-heading"
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-night via-night-light/15 to-night pointer-events-none" />
-        <div className="absolute top-1/3 left-0 w-[700px] h-[400px] rounded-full bg-pink/8 blur-[160px] pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-[600px] h-[400px] rounded-full bg-aurora-blue/8 blur-[160px] pointer-events-none" />
-
-        <div className="relative max-w-7xl mx-auto">
-          <Reveal>
-            <div className="flex items-end justify-between mb-10 flex-wrap gap-4 px-2">
-              <div>
-                <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/40">
-                  <span className="w-1.5 h-1.5 rounded-full bg-pink animate-pulse" />
-                  <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
-                    {c.liveEyebrow}
-                  </p>
-                </div>
-                <h2
-                  id="live-blogs-heading"
-                  className="font-display text-4xl md:text-5xl lg:text-6xl text-snow font-light tracking-tight leading-[1.05]"
-                >
-                  {c.liveH2Pre}{' '}
-                  <span className="text-pink italic">{c.liveH2Italic}</span>
-                  <br />
-                  {c.liveH2Tail}
-                </h2>
-              </div>
-              <Link
-                to={to('/stories')}
-                className="group inline-flex items-center gap-1.5 text-aurora-blue hover:text-pink text-xs tracking-[0.2em] uppercase font-semibold transition-colors"
-              >
-                {c.liveBrowseAll}
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-            <p className="text-slate-300 text-base md:text-lg max-w-2xl mb-12 leading-relaxed px-2">
-              {c.liveLead}
-            </p>
-          </Reveal>
-
-          <Reveal delay={1}>
-            <TripBlogsCarousel />
-          </Reveal>
-
-          <Reveal delay={2}>
-            <div className="mt-14 text-center">
-              <Link
-                to={to('/signin')}
-                className="inline-flex items-center gap-2 px-10 py-4 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night text-base"
-              >
-                {c.liveCta}
-                <ArrowRight size={18} />
-              </Link>
-              <p className="mt-4 text-[10px] tracking-[0.3em] uppercase text-slate-400">
-                {c.liveFootnote}
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* LV Media -kumppaniosio heti ensimmäisen sisältöosion (live trip blogs)
-          jälkeen: kakkospääkumppani + 6 kohdepaikkaa (house-adit kun tyhjänä). */}
       <HomeAdSlots config={AD_SLOTS} locale={lang} />
 
       {/* The app announcement — same fixed block as every other site in the
@@ -524,58 +450,6 @@ export default function Home() {
       <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
 
       {/* FEATURED */}
-      <section id="featured" className="relative py-24 px-4 sm:px-6 lg:px-8 scroll-mt-24">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-2 h-2 rounded-full bg-pink animate-pulse" />
-              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
-                {c.featuredEyebrow}
-              </p>
-              <div className="flex-1 h-px bg-gradient-to-r from-pink/30 to-transparent" />
-              <Link
-                to={to('/stories')}
-                className="text-slate-400 hover:text-pink text-[10px] tracking-[0.3em] uppercase font-semibold transition-colors"
-              >
-                {c.featuredEvery}
-              </Link>
-            </div>
-            <p className="text-slate-300 text-sm md:text-base max-w-2xl mb-10 leading-relaxed">
-              {c.featuredLead}
-            </p>
-          </Reveal>
-
-          <Reveal delay={1}>
-            {feature ? (
-              <FeaturedPost post={feature} />
-            ) : (
-              <div className="min-h-[520px] rounded-3xl border border-purple/25 flex items-center justify-center">
-                <p className="text-slate-400 text-sm">
-                  {loading ? c.featuredLoading : c.featuredNone}
-                </p>
-              </div>
-            )}
-          </Reveal>
-
-          {feature && (
-            <Reveal delay={2}>
-              <div className="mt-8 max-w-3xl mx-auto text-center">
-                <Link
-                  to={to(`/post/${feature.slug}`)}
-                  className="inline-flex items-center gap-2 text-pink hover:text-aurora-blue text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
-                >
-                  {c.featuredReadEntry}
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            </Reveal>
-          )}
-        </div>
-      </section>
-
-      <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
-
-      {/* PILLARS */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="pillars-heading">
         <div className="max-w-6xl mx-auto">
           <Reveal>
@@ -712,13 +586,13 @@ export default function Home() {
 
       {/* PERSONAL ASIDE */}
       <section
-        className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#FAF7F2] text-[#1A1815]"
+        className="relative py-24 px-4 sm:px-6 lg:px-8"
         aria-labelledby="aside-heading"
       >
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[260px_1fr] gap-10 md:gap-14 items-center">
             <Reveal>
-              <div className="relative aspect-[3/2] md:aspect-[4/5] rounded-2xl overflow-hidden border border-[#E8E2D6] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
+              <div className="relative aspect-[3/2] md:aspect-[4/5] rounded-2xl overflow-hidden border border-purple/25 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]">
                 <img
                   src={asideImage.src}
                   srcSet={asideImage.srcSet}
@@ -741,33 +615,32 @@ export default function Home() {
             <Reveal delay={1}>
               <div>
                 <div className="inline-flex items-center gap-2 mb-5">
-                  <PenLine size={16} className="text-[#C1543B]" />
-                  <p className="text-[#C1543B] tracking-[0.35em] text-[10px] font-bold uppercase">
+                  <PenLine size={16} className="text-pink" />
+                  <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
                     {c.asideEyebrow}
                   </p>
                 </div>
                 <h2
                   id="aside-heading"
-                  className="font-display font-normal text-3xl md:text-4xl leading-[1.12] tracking-[-0.02em] mb-6 text-[#1A1815]"
-                  style={{ fontFamily: 'var(--font-editorial)' }}
+                  className="font-display font-light text-3xl md:text-4xl leading-[1.12] tracking-tight mb-6 text-snow"
                 >
                   {c.asideH2}
                 </h2>
-                <div className="space-y-5 text-[#3B3935] text-base md:text-lg leading-relaxed">
+                <div className="space-y-5 text-slate-300 text-base md:text-lg leading-relaxed">
                   <p>{c.asideP1}</p>
                   <p>{c.asideP2}</p>
                 </div>
                 <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
                   <Link
                     to={to('/signin')}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C1543B] text-white font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#8F3525] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C1543B]/40"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#8F3525] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C1543B]/40"
                   >
                     {c.asideCta1}
                     <ArrowRight size={14} />
                   </Link>
                   <Link
                     to={to('/about')}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#C1543B]/40 text-[#C1543B] font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#C1543B]/10 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-pink/40 text-pink-300 font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#C1543B]/10 transition-colors"
                   >
                     {c.asideCta2}
                   </Link>

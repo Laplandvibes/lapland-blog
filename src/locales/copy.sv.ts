@@ -76,21 +76,10 @@ const sv: SectionCopy = {
     heroPrimaryCta: 'Starta din reseblogg',
     heroSecondaryCta: 'Se hur det fungerar',
     heroFootnote: 'Din egen dagbok är gratis för dig · Gjord i Finland · Dela på Instagram',
-    seasonalBadge: 'Aktuellt nu · Midnattssol · 6 juni → 7 juli',
-    seasonalH2: 'En gratis reseblogg för din Lapplandsresa, skriven medan du är där.',
-    seasonalLead:
-      'Lapland.blog gör din resa till en enkel, fin blogg: nåla fast platserna, lägg till foton, skriv vad som hände och dela sedan länken med vänner. Just nu betyder det sommar. Trettiotvå nätter när solen aldrig går ner, skogen blir bärnstensfärgad, sjöarna speglar himlen. Börja din dagbok medan du fortfarande är i den.',
-    seasonalCta1: 'Starta din reseblogg',
-    seasonalCta2: 'Läs sommarinlägg',
-    seasonalCard1Title: '24 h gyllene timme',
-    seasonalCard1Body: 'Solen snuddar vid horisonten. Fotografer kallar det jordens längsta blå timme.',
-    seasonalCard2Title: 'Hjortronsäsong',
-    seasonalCard2Body: 'Sent i juli: myren blir gyllene. Ortsborna kallar det den andra skörden.',
-    seasonalCard3Title: 'Bastu, sedan ett dopp',
-    seasonalCard3Body: '14 °C i sjön vid midnatt, 90 °C i bastun fem steg bort. Upprepa.',
-    seasonalCard4Title: 'Ingen annan',
-    seasonalCard4Body: 'Stugorna som är fullbokade på vintern står tomma i juli. Samma skog, ingen kö.',
-    seasonalLabels: { light: '01 · Ljus', forest: '02 · Skog', water: '03 · Vatten', quiet: '04 · Tystnad' },
+    readFirstEyebrow: 'Från fältet',
+    readFirstH2: 'Tre texter innan du packar.',
+    readFirstCta: 'Alla texter',
+    readFirstRead: 'Läs',
     howEyebrow: 'Så fungerar det',
     howH2Pre: 'Tre steg. En resa.',
     howH2Italic: 'En blogg värd att spara.',
@@ -134,11 +123,11 @@ const sv: SectionCopy = {
     pillar1Kicker: 'I · Kylan',
     pillar1Title: 'Vad kylan faktiskt gör',
     pillar1Body:
-      'Norrskensnätter, polarnatten, de åtta årstider som de flesta listor glömmer. Vädret är huvudpersonen här, inte en bakgrund. Fältanteckningar om hur minus tjugotre känns klockan 03:47, och vad det gör med ett telefonbatteri, och med en människa.',
+      'Norrskensnätter, polarnatten och den korta blå stunden mitt på dagen. Här är vädret huvudpersonen, inte kulissen. Fältanteckningar om vad mörkret gör med en människa och vad det kräver av ett telefonbatteri.',
     pillar2Kicker: 'II · Skyddet',
     pillar2Title: 'Var du sover, var du äter',
     pillar2Body:
-      'Timrade stugor, glasigloor, bastur som fungerar och bastur som inte gör det. Laxsoppan för fyrtiotvå euro som visade sig vara värd det. Rågbrödet som överlever en ryggsäck, och kaffet du dricker klockan två på natten eftersom solen glömde att gå ner.',
+      'Timmerstugor, glasiglor, bastur som fungerar och bastur som inte gör det. Laxsoppa till priset på menyn. Rågbrödet som överlever en ryggsäck, och kaffet du dricker klockan två på natten för att solen glömde gå ner.',
     pillar3Kicker: 'III · De andra människorna',
     pillar3Title: 'Vem mer bor häruppe',
     pillar3Body:
@@ -150,7 +139,7 @@ const sv: SectionCopy = {
     asideEyebrow: 'Varför det här finns',
     asideH2: 'Lappland är ingen broschyr. Din resa borde inte heller vara det.',
     asideP1:
-      'Varje år kommer tusentals besökare till Lappland, ser något utöver det vanliga, och tappar bort det i en telefonrulle de aldrig tittar på igen. Norrskenet över stugan. Den fingertoppsdomnade promenaden tillbaka från bastun. Laxsoppan som på något sätt var värd 42 €. Borta på en vecka.',
+      'Varje år kommer tusentals besökare till Lappland, ser något utöver det vanliga, och tappar bort det i en telefonrulle de aldrig tittar på igen. Norrskenet över stugan. Den fingertoppsdomnade vägen tillbaka från bastun. Laxsoppan som var värd sitt pris. Borta på en vecka.',
     asideP2:
       'Lapland.blog är ett litet gratis verktyg för att lösa det. Nåla fast var du var. Skriv vad du såg. Fotografera soppan. När du flyger hem har du en riktig blogg om din resa: en som dina vänner faktiskt kan följa, en du fortfarande vill läsa om fem år. Inga stockfoton. Inget "magiskt vinterland". Bara din egen ärliga version av platsen.',
     asideCta1: 'Starta din egen',
@@ -257,7 +246,7 @@ const sv: SectionCopy = {
       'Sponsrade inlägg inuti läsarnas inlägg. Affiliate-shoppinglistor instoppade i din blogg. Orden "oförglömlig", "bucket list", "magisk" eller "vinterland" är bannlysta från de redaktionella utkasten, och värda att bannlysa från dina också. De är dåliga för skrivandet och dåliga för läsarna.',
     seedHeading: 'Startinläggen',
     seedBody:
-      'Inläggen som redan finns på sajten är skrivna av The Field Journal, redaktionen bakom Lapland.blog, fem namngivna redaktionella röster, var och en med sitt eget område: årstider, leder, mat, stugor och utrustning. De finns där för att visa hur en ärlig, långsam, bildledd reseblogg kan läsas: riktiga temperaturer, riktiga tider på dygnet, ingen broschyrröst. Läs ett och föreställ dig ditt eget.',
+      'Inläggen på sidan är skrivna av The Field Journal, Lapland.blogs redaktion. De visar hur en ärlig, långsam och bilddriven reseblogg kan låta: platser vid namn, priser lästa från menyn, källor sist. Läs ett och föreställ dig ditt eget.',
     networkHeading: 'Om nätverket',
     networkBody:
       'Lapland.blog är en del av LaplandVibes-ekosystemet, ett nätverk av finskägda sajter om Lappland. De andra sajterna berättar vart du ska åka, var du ska bo och vad du ska göra. Den här är där själva resan skrivs ner.',
@@ -334,22 +323,22 @@ const sv: SectionCopy = {
     onlyEyebrow: 'Om du bara läser en',
     onlyH2: 'Redaktörens nr 1.',
     onlyLead:
-      'Norrsken över Bottenviken, minus tjugotre klockan 03:47, och fotot ingen av oss fick. Texten som definierar rösten på Lapland.blog.',
+      'Hur du läser Kp-talet, var du tittar i Kemi och varför större delen av en norrskensnatt är väntan. Texten som visar Lapland.blogs röst.',
     firstTimersEyebrow: 'För förstagångsbesökare',
     firstTimersTitle: 'Bästa tre att läsa innan du åker.',
     firstTimersSubtitle:
-      'Varför folk tänker fel om norrsken, vad du ska packa till en stuga, och varför det polära mörkret faktiskt är helt okej. Läs dessa så anländer du mindre överraskad.',
+      'Vad juli faktiskt kräver att du packar, varför en sommarvandring börjar vid midnatt och vad som ändras på 154 rastplatser nästa vinter. Läs dem, så blir du mindre överraskad.',
     auroraEyebrow: 'Norrskenstexter',
     auroraTitle: 'Inläggen om natthimlen.',
     auroraSubtitle: 'Om att jaga det, fotografera det, och nätterna det dyker upp ändå.',
     cabinsEyebrow: 'Stugorna',
     cabinsTitle: 'Mökki-inlägg.',
     cabinsSubtitle:
-      'Hur det faktiskt är i en finsk skogsstuga: eld, bastu, tystnad, det där ingen nämner om utedasset vid minus trettio.',
+      'Hur det faktiskt är i en finsk skogsstuga: eld, bastu, tystnad, och det där som ingen nämner om utedasset i sträng kyla.',
     foodEyebrow: 'Mat + dryck',
     foodTitle: 'Kökstexterna.',
     foodSubtitle:
-      'Laxsoppa för fyrtiotvå euro, rågbröd som överlever en ryggsäck, och kaffet du dricker klockan 2 på natten eftersom solen glömde att gå ner.',
+      'Laxsoppa till priset på menyn, rågbröd som överlever en ryggsäck, och kaffet du dricker klockan två på natten för att solen glömde gå ner.',
     seasonalEyebrow: 'Säsong',
     seasonalTitle: 'Vad kylan faktiskt gör.',
     seasonalSubtitle:

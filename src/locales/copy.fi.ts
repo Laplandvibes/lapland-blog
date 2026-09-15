@@ -76,21 +76,10 @@ const fi: SectionCopy = {
     heroPrimaryCta: 'Aloita matkablogi',
     heroSecondaryCta: 'Katso miten se toimii',
     heroFootnote: 'Oma blogi ilmaiseksi · Tehty Suomessa · Jaa Instagramiin',
-    seasonalBadge: 'Juuri nyt · Keskiyön aurinko · 6.6. → 7.7.',
-    seasonalH2: 'Ilmainen matkablogi Lapin-reissullesi: kirjoita matkan aikana.',
-    seasonalLead:
-      'Lapland.blog tekee matkastasi yksinkertaisen ja kauniin blogin: merkitse paikat, lisää kuvat, kirjoita, mitä tapahtui, ja jaa linkki kavereille. Juuri nyt on kesä. 32 yötä, kun aurinko ei laske, metsä muuttuu kullaksi ja järvet peilaavat taivasta. Aloita päiväkirja, kun olet vielä siellä.',
-    seasonalCta1: 'Aloita matkablogi',
-    seasonalCta2: 'Lue kesän merkinnät',
-    seasonalCard1Title: '24 tunnin kultainen hetki',
-    seasonalCard1Body: 'Aurinko hipoo horisonttia. Valokuvaajat kutsuvat sitä maapallon pisimmäksi siniseksi hetkeksi.',
-    seasonalCard2Title: 'Lakkasesonki',
-    seasonalCard2Body: 'Heinäkuun loppu: suo muuttuu kullaksi. Paikalliset kutsuvat sitä toiseksi sadoksi.',
-    seasonalCard3Title: 'Sauna, sitten pulahdus',
-    seasonalCard3Body: '14-asteinen järvi keskiyöllä, 90-asteinen sauna viiden askeleen päässä. Toistetaan.',
-    seasonalCard4Title: 'Ei ketään muuta',
-    seasonalCard4Body: 'Talvella täyteen varatut mökit ovat tyhjillään heinäkuussa. Sama metsä, ei jonoa.',
-    seasonalLabels: { light: '01 · Valo', forest: '02 · Metsä', water: '03 · Vesi', quiet: '04 · Hiljaisuus' },
+    readFirstEyebrow: 'Kentältä',
+    readFirstH2: 'Kolme juttua ennen kuin pakkaat.',
+    readFirstCta: 'Kaikki jutut',
+    readFirstRead: 'Lue juttu',
     howEyebrow: 'Näin se toimii',
     howH2Pre: 'Kolme askelta. Yksi matka.',
     howH2Italic: 'Blogi, jota kannattaa säilyttää.',
@@ -134,11 +123,11 @@ const fi: SectionCopy = {
     pillar1Kicker: 'I · Kylmyys',
     pillar1Title: 'Mitä kylmyys oikeasti tekee',
     pillar1Body:
-      'Revontuliyöt, kaamos, ne kahdeksan vuodenaikaa, jotka useimmat listat unohtavat. Sää on täällä päähenkilö, ei tausta. Kenttämuistiinpanoja siitä, miltä −23 astetta tuntuu kello 03.47 ja mitä se tekee puhelimen akulle ja ihmiselle.',
+      'Revontuliyöt, kaamos ja se lyhyt sininen hetki keskipäivällä. Sää on täällä päähenkilö, ei tausta. Kenttämuistiinpanoja siitä, mitä pimeä tekee ihmiselle ja mitä se vaatii puhelimen akulta.',
     pillar2Kicker: 'II · Suoja',
     pillar2Title: 'Missä nukut, missä syöt',
     pillar2Body:
-      'Hirsimökit, lasi-iglut, saunat, jotka toimivat, ja saunat, jotka eivät. 42 euron lohikeitto, joka osoittautui hintansa arvoiseksi. Reissunkestävä ruisleipä ja se kahvi, jonka juot kello kahdelta yöllä, kun aurinko unohti laskea.',
+      'Hirsimökit, lasi-iglut, saunat jotka toimivat ja saunat jotka eivät. Lohikeitto ruokalistan hinnalla. Reissunkestävä ruisleipä ja se kahvi, jonka juot kello kahdelta yöllä, kun aurinko unohti laskea.',
     pillar3Kicker: 'III · Toiset ihmiset',
     pillar3Title: 'Ketä muita täällä asuu',
     pillar3Body:
@@ -150,7 +139,7 @@ const fi: SectionCopy = {
     asideEyebrow: 'Miksi tämä on olemassa',
     asideH2: 'Lappi ei ole esite. Matkasikaan ei ole.',
     asideP1:
-      'Vuosittain tuhannet matkailijat saapuvat Lappiin, näkevät jotain tavatonta ja hukkaavat sen puhelimen galleriaan, jota ei enää avata. Revontulet mökin yllä. Paluumatka saunalta sormet puutuneina. Se 42 euron lohikeitto, joka oli jotenkin hintansa väärtti. Viikon päästä poissa.',
+      'Vuosittain tuhannet matkailijat saapuvat Lappiin, näkevät jotain tavatonta ja hukkaavat sen puhelimen galleriaan, jota ei enää avata. Revontulet mökin yllä. Paluumatka saunalta sormet puutuneina. Se lohikeitto, joka oli hintansa väärtti. Viikon päästä poissa.',
     asideP2:
       'Lapland.blog on pieni ilmainen työkalu sen korjaamiseen. Merkitse, missä olit. Kirjoita, mitä näit. Kuvaa keitto. Kun lennät kotiin, sinulla on oikea blogi matkasta: sellainen, jota kaverit voivat oikeasti seurata ja jota itse haluat lukea viiden vuoden päästä. Ei kuvapankkikuvia. Ei ”taianomaista talvimaailmaa”. Vain oma rehellinen versiosi paikasta.',
     asideCta1: 'Aloita oma',
@@ -257,7 +246,7 @@ const fi: SectionCopy = {
       'Sponsoroituja juttuja lukijoiden merkinnöissä. Affiliate-ostoslistoja blogiisi tungettuina. Sanat "unohtumaton", "bucket list", "taianomainen" tai "talvimaailma" on kielletty toimituksellisissa luonnoksissa, ja kannattaa kieltää myös omissasi. Ne ovat huonoja kirjoittamiselle ja huonoja lukijoille.',
     seedHeading: 'Siemenmerkinnät',
     seedBody:
-      'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus, viisi nimettyä toimituksellista ääntä, joilla jokaisella on oma aihepiirinsä: vuodenajat, reitit, ruoka, mökit ja varusteet. Ne näyttävät, miltä rehellinen, hidas, kuvavetoinen matkablogi voi kuulostaa: oikeat lämpötilat, oikea kellonaika, ei esiteääntä. Lue yksi ja kuvittele oma.',
+      'Sivun merkinnät on kirjoittanut The Field Journal, Lapland.blogin toimitus. Ne näyttävät, miltä rehellinen, hidas ja kuvavetoinen matkablogi voi kuulostaa: paikat nimeltä, hinnat ruokalistalta, lähteet lopussa. Lue yksi ja kuvittele oma.',
     networkHeading: 'Verkostosta',
     networkBody:
       'Lapland.blog on osa LaplandVibes-ekosysteemiä, suomalaisomisteista Lappi-sivustojen verkostoa. Muut sivustot kertovat minne mennä, missä yöpyä ja mitä tehdä. Tämä on se, johon itse matka kirjoitetaan ylös.',
@@ -335,22 +324,22 @@ const fi: SectionCopy = {
     onlyEyebrow: 'Jos luet vain yhden',
     onlyH2: 'Toimituksen ykkönen.',
     onlyLead:
-      'Revontulet Perämeren yllä, −23 astetta kello 3.47, ja se kuva jota kukaan ei saanut. Juttu joka määrittää Lapland.blogin äänen.',
+      'Miten Kp-luku luetaan, mistä Kemissä katsotaan ja miksi suurin osa revontuliyöstä on odottamista. Juttu joka näyttää Lapland.blogin äänen.',
     firstTimersEyebrow: 'Ensikertalaisille',
     firstTimersTitle: 'Kolme parasta luettavaa ennen lähtöä.',
     firstTimersSubtitle:
-      'Miksi revontulet ymmärretään yleensä väärin, mitä mökille kannattaa pakata ja miksi kaamos on itse asiassa ihan ok. Lue nämä ja saavut vähemmän yllättyneenä.',
+      'Mitä heinäkuu oikeasti vaatii pakkaamaan, miksi kesävaellus alkaa keskiyöllä ja mikä muuttuu 154 taukopaikalla ensi talvena. Lue nämä, niin saavut vähemmän yllättyneenä.',
     auroraEyebrow: 'Revontulijuttuja',
     auroraTitle: 'Yötaivasmerkinnät.',
     auroraSubtitle: 'Niiden jahtaamisesta, kuvaamisesta ja niistä öistä, jolloin ne tulevat silti.',
     cabinsEyebrow: 'Mökit',
     cabinsTitle: 'Mökkimerkinnät.',
     cabinsSubtitle:
-      'Millaista suomalaisessa metsämökissä oikeasti on: tuli, sauna, hiljaisuus ja se pieni juttu ulkohuussista −30 asteessa, jota kukaan ei mainitse.',
+      'Millaista suomalaisessa metsämökissä oikeasti on: tuli, sauna, hiljaisuus ja se pieni juttu ulkohuussista kovalla pakkasella, jota kukaan ei mainitse.',
     foodEyebrow: 'Ruoka ja juoma',
     foodTitle: 'Keittiömerkinnät.',
     foodSubtitle:
-      '42 euron lohikeitto, reissunkestävä ruisleipä ja se kahvi, jonka juot kello kahdelta yöllä kun aurinko unohti laskea.',
+      'Lohikeitto ruokalistan hinnalla, reissunkestävä ruisleipä ja se kahvi, jonka juot kello kahdelta yöllä, kun aurinko unohti laskea.',
     seasonalEyebrow: 'Sesonki',
     seasonalTitle: 'Mitä kylmyys oikeasti tekee.',
     seasonalSubtitle:

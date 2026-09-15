@@ -77,21 +77,10 @@ const de: SectionCopy = {
     heroPrimaryCta: 'Reiseblog starten',
     heroSecondaryCta: 'So funktioniert es',
     heroFootnote: 'Ihr eigenes Tagebuch – kostenlos · Aus Finnland · Auf Instagram teilen',
-    seasonalBadge: 'Jetzt Saison · Mitternachtssonne · 6.6. → 7.7.',
-    seasonalH2: 'Ein kostenloser Reiseblog für Ihre Lappland-Reise, unterwegs geschrieben.',
-    seasonalLead:
-      'Lapland.blog macht aus Ihrer Reise einen einfachen, schönen Blog: Orte markieren, Fotos hinzufügen, festhalten, was passiert ist, und den Link mit Freunden teilen. Im Moment bedeutet das: Sommer. Zweiunddreißig Nächte, in denen die Sonne nicht untergeht, der Wald bernsteinfarben wird und die Seen den Himmel spiegeln. Beginnen Sie das Tagebuch, solange Sie noch dort sind.',
-    seasonalCta1: 'Reiseblog starten',
-    seasonalCta2: 'Sommer-Einträge lesen',
-    seasonalCard1Title: '24 Stunden goldene Stunde',
-    seasonalCard1Body: 'Die Sonne streift den Horizont. Fotografen nennen es die längste blaue Stunde der Erde.',
-    seasonalCard2Title: 'Moltebeeren-Saison (lakka)',
-    seasonalCard2Body: 'Ende Juli: Das Moor wird golden. Einheimische sprechen von der zweiten Ernte.',
-    seasonalCard3Title: 'Sauna, dann ein Sprung ins Wasser',
-    seasonalCard3Body: 'See mit 14 °C um Mitternacht, Sauna mit 90 °C fünf Schritte entfernt. Wiederholen.',
-    seasonalCard4Title: 'Niemand sonst da',
-    seasonalCard4Body: 'Die Hütten, die im Winter ausgebucht sind, stehen im Juli leer. Derselbe Wald, keine Warteschlange.',
-    seasonalLabels: { light: '01 · Licht', forest: '02 · Wald', water: '03 · Wasser', quiet: '04 · Stille' },
+    readFirstEyebrow: 'Aus dem Feld',
+    readFirstH2: 'Drei Texte, bevor Sie packen.',
+    readFirstCta: 'Alle Texte',
+    readFirstRead: 'Lesen',
     howEyebrow: 'So funktioniert es',
     howH2Pre: 'Drei Schritte. Eine Reise.',
     howH2Italic: 'Ein Blog, den man behalten will.',
@@ -135,11 +124,11 @@ const de: SectionCopy = {
     pillar1Kicker: 'I · Die Kälte',
     pillar1Title: 'Was die Kälte wirklich macht',
     pillar1Body:
-      'Nordlicht-Nächte, die Polarnacht (kaamos), die acht Jahreszeiten, die die meisten Listen vergessen. Das Wetter ist hier die Hauptfigur, nicht die Kulisse. Feldnotizen darüber, wie sich −23 °C um 03:47 Uhr anfühlen, und was sie mit einem Handy-Akku und mit einem Menschen anstellen.',
+      'Polarlichtnächte, die Polarnacht und die kurze blaue Stunde am Mittag. Das Wetter ist hier die Hauptfigur, nicht die Kulisse. Feldnotizen darüber, was die Dunkelheit mit einem Menschen macht und was sie einem Handyakku abverlangt.',
     pillar2Kicker: 'II · Das Obdach',
     pillar2Title: 'Wo Sie schlafen, wo Sie essen',
     pillar2Body:
-      'Holzhütten, Glasiglus, Saunen, die funktionieren, und solche, die es nicht tun. Die 42-Euro-Lachssuppe, die ihren Preis wert war. Das Roggenbrot, das einen Rucksack überlebt, und der Kaffee um 2 Uhr morgens, weil die Sonne vergessen hat unterzugehen.',
+      'Holzhütten, Glasiglus, Saunen, die funktionieren, und Saunen, die es nicht tun. Lachssuppe zum Preis auf der Karte. Das Roggenbrot, das einen Rucksack übersteht, und der Kaffee um zwei Uhr nachts, weil die Sonne vergessen hat unterzugehen.',
     pillar3Kicker: 'III · Die anderen Menschen',
     pillar3Title: 'Wer hier sonst lebt',
     pillar3Body:
@@ -151,7 +140,7 @@ const de: SectionCopy = {
     asideEyebrow: 'Warum es das gibt',
     asideH2: 'Lappland ist keine Broschüre. Ihre Reise sollte es auch nicht sein.',
     asideP1:
-      'Jedes Jahr kommen Tausende Besucher nach Lappland, sehen etwas Außergewöhnliches und verlieren es an eine Handy-Galerie, die sie nie wieder öffnen. Die Nordlichter über der Hütte. Der Rückweg von der Sauna mit tauben Fingern. Die Schale Lachssuppe, die irgendwie 42 € wert war. Weg in einer Woche.',
+      'Jedes Jahr kommen Tausende Besucher nach Lappland, sehen etwas Außergewöhnliches und verlieren es an eine Handy-Galerie, die sie nie wieder öffnen. Das Nordlicht über der Hütte. Der Rückweg von der Sauna mit tauben Fingern. Die Schale Lachssuppe, die ihren Preis wert war. Nach einer Woche weg.',
     asideP2:
       'Lapland.blog ist ein kleines kostenloses Werkzeug, um das zu beheben. Markieren Sie, wo Sie waren. Schreiben Sie auf, was Sie sahen. Fotografieren Sie die Suppe. Wenn Sie nach Hause fliegen, haben Sie einen echten Blog Ihrer Reise: einen, dem Ihre Freunde wirklich folgen können und den Sie in fünf Jahren noch lesen wollen. Keine Stockfotos. Kein „magisches Winterwunderland“. Nur Ihre eigene ehrliche Version des Ortes.',
     asideCta1: 'Eigenen starten',
@@ -258,7 +247,7 @@ const de: SectionCopy = {
       'Gesponserte Beiträge in Leser-Einträgen. Affiliate-Einkaufslisten, in Ihren Blog gestopft. Die Wörter „unvergesslich“, „Bucket List“, „magisch“ und „Winterwunderland“ sind aus den redaktionellen Entwürfen verbannt, und in Ihren sollten sie es auch sein. Sie sind schlecht fürs Schreiben und schlecht für Leser.',
     seedHeading: 'Die Beispiel-Einträge',
     seedBody:
-      'Die Einträge auf der Website schreibt The Field Journal, die Redaktion von Lapland.blog, fünf benannte redaktionelle Stimmen, jede mit eigenem Themenfeld: Jahreszeiten, Wege, Essen, Hütten und Ausrüstung. Sie zeigen, wie sich ein ehrlicher, ruhiger, bildgetragener Reiseblog lesen kann: echte Temperaturen, echte Uhrzeiten, kein Broschüren-Ton. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
+      'Die Einträge auf der Seite stammen von The Field Journal, der Redaktion von Lapland.blog. Sie zeigen, wie ein ehrlicher, langsamer, bildgeführter Reiseblog klingen kann: Orte beim Namen, Preise von der Karte gelesen, Quellen am Ende. Lesen Sie einen und stellen Sie sich Ihren eigenen vor.',
     networkHeading: 'Über das Netzwerk',
     networkBody:
       'Lapland.blog ist Teil des LaplandVibes-Ökosystems, eines Netzwerks finnisch geführter Seiten über Lappland. Die anderen Seiten sagen Ihnen, wohin, wo Sie übernachten und was Sie tun können. Diese ist die, in der die Reise selbst aufgeschrieben wird.',
@@ -336,22 +325,22 @@ const de: SectionCopy = {
     onlyEyebrow: 'Wenn Sie nur einen lesen',
     onlyH2: 'Die Nummer 1 der Redaktion.',
     onlyLead:
-      'Nordlichter über dem Bottnischen Meerbusen, −23 °C um 3:47 Uhr, und das Foto, das niemand bekam. Das Stück, das die Stimme von Lapland.blog definiert.',
+      'Wie man den Kp-Wert liest, von wo aus man in Kemi schaut und warum eine Polarlichtnacht vor allem Warten ist. Der Text, der die Stimme von Lapland.blog zeigt.',
     firstTimersEyebrow: 'Für Erstbesucher',
     firstTimersTitle: 'Drei Einträge, die Sie vor der Reise lesen sollten.',
     firstTimersSubtitle:
-      'Warum man Nordlichter meist falsch versteht, was in den Hüttenrucksack gehört und warum die Polarnacht eigentlich in Ordnung ist. Lesen Sie diese und Sie kommen weniger überrascht an.',
+      'Was der Juli wirklich in den Rucksack verlangt, warum eine Sommerwanderung um Mitternacht beginnt und was sich im nächsten Winter an 154 Rastplätzen ändert. Lesen Sie das, und Sie kommen weniger überrascht an.',
     auroraEyebrow: 'Nordlicht-Stücke',
     auroraTitle: 'Die Nachthimmel-Einträge.',
     auroraSubtitle: 'Über die Jagd, die Fotografie und die Nächte, in denen sie trotzdem kommen.',
     cabinsEyebrow: 'Die Hütten',
     cabinsTitle: 'Mökki-Einträge.',
     cabinsSubtitle:
-      'Wie es in einer finnischen Waldhütte (mökki) wirklich ist: Feuer, Sauna, Stille, und das, was niemand über das Plumpsklo bei −30 °C erwähnt.',
+      'Wie es in einer finnischen Waldhütte wirklich ist: Feuer, Sauna, Stille, und das, was niemand über das Plumpsklo bei strengem Frost erwähnt.',
     foodEyebrow: 'Essen & Trinken',
     foodTitle: 'Die Küchen-Stücke.',
     foodSubtitle:
-      '42-Euro-Lachssuppe, Roggenbrot, das einen Rucksack übersteht, und der Kaffee um 2 Uhr morgens, weil die Sonne vergaß unterzugehen.',
+      'Lachssuppe zum Preis auf der Karte, Roggenbrot, das einen Rucksack übersteht, und der Kaffee um zwei Uhr nachts, weil die Sonne vergessen hat unterzugehen.',
     seasonalEyebrow: 'Saisonal',
     seasonalTitle: 'Was die Kälte wirklich macht.',
     seasonalSubtitle:

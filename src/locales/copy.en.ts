@@ -76,21 +76,10 @@ const en: SectionCopy = {
     heroPrimaryCta: 'Start your trip blog',
     heroSecondaryCta: 'See how it works',
     heroFootnote: 'Your own journal is free · Made in Finland · Share to Instagram',
-    seasonalBadge: 'In season now · Midnight sun · Jun 6 → Jul 7',
-    seasonalH2: 'A free travel blog for your Lapland trip, written as you go.',
-    seasonalLead:
-      'Lapland.blog turns your trip into a simple, beautiful blog: pin the places, add photos, write what happened, then share the link with friends. Right now that means summer. Thirty-two nights when the sun never sets, the forest goes amber, the lakes mirror the sky. Start your journal while you are still in it.',
-    seasonalCta1: 'Start your trip blog',
-    seasonalCta2: 'Read summer entries',
-    seasonalCard1Title: '24 h golden hour',
-    seasonalCard1Body: 'The sun grazes the horizon. Photographers call it the longest blue hour on earth.',
-    seasonalCard2Title: 'Cloudberry season',
-    seasonalCard2Body: 'Late July: the bog turns gold. Locals call it the second harvest.',
-    seasonalCard3Title: 'Sauna, then a swim',
-    seasonalCard3Body: '14°C lake at midnight, 90°C sauna five steps away. Repeat.',
-    seasonalCard4Title: 'No-one else',
-    seasonalCard4Body: 'The cabins that book out in winter sit empty in July. Same forest, no queue.',
-    seasonalLabels: { light: '01 · Light', forest: '02 · Forest', water: '03 · Water', quiet: '04 · Quiet' },
+    readFirstEyebrow: 'From the field',
+    readFirstH2: 'Three stories before you pack.',
+    readFirstCta: 'All stories',
+    readFirstRead: 'Read',
     howEyebrow: 'How it works',
     howH2Pre: 'Three steps. One trip.',
     howH2Italic: 'A blog worth keeping.',
@@ -134,11 +123,11 @@ const en: SectionCopy = {
     pillar1Kicker: 'I · The cold',
     pillar1Title: 'What the cold actually does',
     pillar1Body:
-      'Aurora nights, the polar dark, the eight seasons most lists forget. The weather is the main character here, not a backdrop. Field notes on what minus twenty-three feels like at 03:47, and what it does to a phone battery, and to a person.',
+      'Aurora nights, the polar night, and the short blue hour at midday. Here the weather is the main character, not the backdrop. Field notes on what the dark does to a person and what it asks of a phone battery.',
     pillar2Kicker: 'II · The shelter',
     pillar2Title: 'Where you sleep, where you eat',
     pillar2Body:
-      'Wooden cabins, glass igloos, saunas that work and saunas that do not. The forty-two-euro bowl of salmon soup that turned out to be worth it. The rye bread that survives a backpack, and the coffee you drink at 2 AM because the sun forgot to set.',
+      'Wooden cabins, glass igloos, saunas that work and saunas that do not. Salmon soup at the price printed on the menu. The rye bread that survives a backpack, and the coffee you drink at 2 AM because the sun forgot to set.',
     pillar3Kicker: 'III · The other people',
     pillar3Title: 'Who else lives up here',
     pillar3Body:
@@ -150,7 +139,7 @@ const en: SectionCopy = {
     asideEyebrow: 'Why this exists',
     asideH2: "Lapland is not a brochure. Your trip shouldn't be either.",
     asideP1:
-      'Every year, thousands of visitors arrive in Lapland, see something extraordinary, and lose it to a phone roll they never look at again. The aurora over the cabin. The fingertip-numb walk back from the sauna. The bowl of salmon soup that was somehow worth €42. Gone in a week.',
+      'Every year, thousands of visitors arrive in Lapland, see something extraordinary, and lose it to a phone roll they never look at again. The aurora over the cabin. The fingertip-numb walk back from the sauna. The bowl of salmon soup that was worth it. Gone in a week.',
     asideP2:
       'Lapland.blog is a small free tool to fix that. Pin where you were. Write what you saw. Photograph the soup. By the time you fly home, you have a real blog of your trip: one your friends can actually follow, one you will still want to read in five years. No stock photos. No "magical winter wonderland." Just your own honest version of the place.',
     asideCta1: 'Start your own',
@@ -257,7 +246,7 @@ const en: SectionCopy = {
       'Sponsored posts inside reader entries. Affiliate shopping lists stuffed into your blog. The words "unforgettable", "bucket list", "magical" or "winter wonderland" are banned from the editorial drafts, and worth banning from yours too. They are bad for writing and bad for readers.',
     seedHeading: 'The seed entries',
     seedBody:
-      'The entries already on the site are written by The Field Journal, the editorial desk of Lapland.blog, five named editorial voices, each with their own beat: seasons, trails, food, cabins and gear. They are there to show what an honest, slow, photo-led trip blog can read like: real temperatures, real times of day, no brochure voice. Read one and picture your own.',
+      'The entries already on the site are written by The Field Journal, the editorial desk of Lapland.blog. They are there to show what an honest, slow, photo-led trip blog can read like: places named, prices read off the menu, sources at the end. Read one and picture your own.',
     networkHeading: 'About the network',
     networkBody:
       'Lapland.blog is part of the LaplandVibes ecosystem, a network of Finnish-owned sites about Lapland. The other sites tell you where to go, where to stay, and what to do. This one is where the trip itself gets written down.',
@@ -334,22 +323,22 @@ const en: SectionCopy = {
     onlyEyebrow: 'If you only read one',
     onlyH2: "The editor's #1.",
     onlyLead:
-      'Aurora over the Bay of Bothnia, minus twenty-three at 3:47 AM, and the photo none of us got. The piece that defines the Lapland.blog voice.',
+      'How to read the Kp number, where to watch from in Kemi, and why most of an aurora night is waiting. The piece that shows the Lapland.blog voice.',
     firstTimersEyebrow: 'For first-timers',
     firstTimersTitle: 'Best three to read before you go.',
     firstTimersSubtitle:
-      'Why people get aurora wrong, what to pack for a cabin, and why the polar dark is fine actually. Read these and you will arrive less surprised.',
+      'What July actually asks you to pack, why a summer hike starts at midnight, and what changes at 154 rest areas next winter. Read these and you arrive less surprised.',
     auroraEyebrow: 'Aurora pieces',
     auroraTitle: 'The night-sky entries.',
     auroraSubtitle: 'On chasing it, photographing it, and the nights it shows up anyway.',
     cabinsEyebrow: 'The cabins',
     cabinsTitle: 'Mökki entries.',
     cabinsSubtitle:
-      'What it is actually like in a Finnish forest cabin: fire, sauna, silence, the bit nobody mentions about the outhouse at minus thirty.',
+      'What it is actually like in a Finnish forest cabin: fire, sauna, silence, and the bit nobody mentions about the outhouse in hard frost.',
     foodEyebrow: 'Food + drink',
     foodTitle: 'The kitchen pieces.',
     foodSubtitle:
-      'Forty-two-euro salmon soup, rye bread that survives a backpack, and the coffee you drink at 2 AM because the sun forgot to set.',
+      'Salmon soup at the price on the menu, rye bread that survives a backpack, and the coffee you drink at 2 AM because the sun forgot to set.',
     seasonalEyebrow: 'Seasonal',
     seasonalTitle: 'What the cold actually does.',
     seasonalSubtitle:

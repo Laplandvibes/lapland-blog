@@ -645,6 +645,28 @@ textarea:focus-visible {
    Wrap with <div className="theme-editorial"> on Post / About.
    ================================================================ */
 
+/* ================================================================
+   NIGHT EDITORIAL — samat editorial-rakenteet, tumma pohja.
+   Vesa 2026-09-15: "KOKO TEEMA MUUTTUU YHTÄKKIÄ" — navigaatiosivut
+   (Kohteet, Tietoa) eivät saa heittää lukijaa vaalean ja tumman
+   maailman väliin. Artikkelisivun vaalea lukuarkki jää ennalleen.
+   Käyttö: <div className="theme-editorial theme-night">.
+   Kontrastit tummalla #0F172A: ink 16,1:1 · ink-soft 10,4:1 ·
+   ink-mute 5,6:1 · accent (tekstinä) 7,6:1. Täytetyt napit eivät käytä
+   accentia taustana vaan --color-pink-cta:ta (4,63:1 valkoisella).
+   ================================================================ */
+
+.theme-night {
+  --color-cream: #0F172A;
+  --color-cream-deep: #1E293B;
+  --color-paper-border: rgba(148, 163, 184, 0.22);
+  --color-ink: #F8FAFC;
+  --color-ink-soft: #CBD5E1;
+  --color-ink-mute: #94A3B8;
+  --color-accent: #F472B6;
+  --color-accent-dark: #F9A8D4;
+}
+
 .theme-editorial {
   background-color: var(--color-cream);
   color: var(--color-ink);

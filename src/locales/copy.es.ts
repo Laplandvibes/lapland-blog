@@ -76,21 +76,10 @@ const es: SectionCopy = {
     heroPrimaryCta: 'Crear su blog de viaje',
     heroSecondaryCta: 'Ver cómo funciona',
     heroFootnote: 'Su propio diario, gratis · Hecho en Finlandia · Compártalo en Instagram',
-    seasonalBadge: 'En temporada · Sol de medianoche · 6 jun → 7 jul',
-    seasonalH2: 'Un blog gratis de su viaje a Laponia, escrito sobre la marcha.',
-    seasonalLead:
-      'Lapland.blog convierte su viaje en un blog sencillo y bonito: marque los lugares, añada fotos, escriba lo que pasó y comparta el enlace con sus amigos. Ahora mismo eso significa verano. Treinta y dos noches en que el sol no se pone, el bosque se tiñe de ámbar y los lagos reflejan el cielo. Empiece el diario mientras el verano todavía dura.',
-    seasonalCta1: 'Empezar su blog de viaje',
-    seasonalCta2: 'Leer las entradas de verano',
-    seasonalCard1Title: '24 h de hora dorada',
-    seasonalCard1Body: 'El sol roza el horizonte. Los fotógrafos la llaman la hora azul más larga de la Tierra.',
-    seasonalCard2Title: 'Temporada de mora ártica',
-    seasonalCard2Body: 'Finales de julio: la turbera se vuelve dorada. Los lugareños la llaman la segunda cosecha.',
-    seasonalCard3Title: 'Sauna y después un baño',
-    seasonalCard3Body: 'Lago a 14 °C a medianoche, sauna a 90 °C a cinco pasos. Y repetir.',
-    seasonalCard4Title: 'Nadie más',
-    seasonalCard4Body: 'Las cabañas que en invierno se agotan están vacías en julio. El mismo bosque, sin colas.',
-    seasonalLabels: { light: '01 · Luz', forest: '02 · Bosque', water: '03 · Agua', quiet: '04 · Silencio' },
+    readFirstEyebrow: 'Desde el terreno',
+    readFirstH2: 'Tres artículos antes de hacer la maleta.',
+    readFirstCta: 'Todos los artículos',
+    readFirstRead: 'Leer',
     howEyebrow: 'Cómo funciona',
     howH2Pre: 'Tres pasos. Un viaje.',
     howH2Italic: 'Un blog que vale la pena conservar.',
@@ -134,11 +123,11 @@ const es: SectionCopy = {
     pillar1Kicker: 'I · El frío',
     pillar1Title: 'Lo que el frío de verdad hace',
     pillar1Body:
-      'Noches de auroras, la oscuridad polar, las ocho estaciones que casi todas las listas olvidan. Aquí el clima es el protagonista, no el telón de fondo. Notas de campo sobre cómo se sienten los veintitrés bajo cero a las 03:47, y lo que le hacen a la batería de un móvil, y a una persona.',
+      'Noches de auroras, la noche polar y esa hora azul tan corta al mediodía. Aquí el tiempo es el personaje principal, no el decorado. Notas de campo sobre lo que hace la oscuridad a una persona y lo que le exige a la batería del móvil.',
     pillar2Kicker: 'II · El refugio',
     pillar2Title: 'Dónde duerme, dónde come',
     pillar2Body:
-      'Cabañas de madera, iglús de cristal, saunas que funcionan y saunas que no. El plato de sopa de salmón de cuarenta y dos euros que al final valió la pena. El pan de centeno que sobrevive a una mochila y el café que toma a las 2 de la madrugada porque el sol se olvidó de ponerse.',
+      'Cabañas de madera, iglús de cristal, saunas que funcionan y saunas que no. Sopa de salmón al precio de la carta. El pan de centeno que sobrevive a una mochila, y el café que se toma a las 2 de la madrugada porque el sol se olvidó de ponerse.',
     pillar3Kicker: 'III · La otra gente',
     pillar3Title: 'Quién más vive aquí arriba',
     pillar3Body:
@@ -150,7 +139,7 @@ const es: SectionCopy = {
     asideEyebrow: 'Por qué existe esto',
     asideH2: 'Laponia no es un folleto. Su viaje tampoco debería serlo.',
     asideP1:
-      'Cada año, miles de viajeros llegan a Laponia, ven algo fuera de lo común y lo pierden en un carrete de fotos que nunca vuelven a mirar. La aurora sobre la cabaña. La vuelta de la sauna con los dedos entumecidos. El plato de sopa de salmón que de algún modo valió 42 €. Desaparecido en una semana.',
+      'Cada año, miles de viajeros llegan a Laponia, ven algo fuera de lo común y lo pierden en un carrete de fotos que nunca vuelven a mirar. La aurora sobre la cabaña. La vuelta de la sauna con los dedos entumecidos. El plato de sopa de salmón que valió lo que costó. En una semana, desaparecido.',
     asideP2:
       'Lapland.blog es una pequeña herramienta gratuita para remediarlo. Marque dónde estuvo. Escriba lo que vio. Fotografíe la sopa. Cuando regrese a casa tendrá un blog real de su viaje: uno que sus amigos podrán seguir de verdad y que aún querrá releer dentro de cinco años. Sin fotos de banco de imágenes. Sin «país de las maravillas invernal». Solo su propia versión honesta del lugar.',
     asideCta1: 'Empezar el suyo',
@@ -257,7 +246,7 @@ const es: SectionCopy = {
       'Publicaciones patrocinadas dentro de las entradas de los lectores. Listas de compra de afiliados metidas a la fuerza en su blog. Las palabras «inolvidable», «lista de deseos», «mágico» o «país de las maravillas invernal» están vetadas en los borradores editoriales, y conviene vetarlas también en los suyos. Son malas para escribir y malas para quien lee.',
     seedHeading: 'Las entradas iniciales',
     seedBody:
-      'Las entradas del sitio las escribe The Field Journal, la redacción de Lapland.blog: cinco voces editoriales con nombre propio, cada una con su tema: estaciones, senderos, comida, cabañas y equipo. Están ahí para mostrar cómo puede leerse un blog de viaje honesto, pausado y guiado por la imagen: temperaturas reales, horas reales del día, sin voz de folleto. Lea una e imagine la suya.',
+      'Las entradas que ya están en la web las escribe The Field Journal, la redacción de Lapland.blog. Muestran cómo puede sonar un blog de viaje honesto, lento y guiado por la imagen: lugares con nombre, precios leídos de la carta, fuentes al final. Lea una e imagine la suya.',
     networkHeading: 'Sobre la red',
     networkBody:
       'Lapland.blog forma parte del ecosistema LaplandVibes, una red de sitios sobre Laponia de propiedad finlandesa. Los demás sitios le dicen adónde ir, dónde dormir y qué hacer. Este es donde se pone por escrito el viaje en sí.',
@@ -334,22 +323,22 @@ const es: SectionCopy = {
     onlyEyebrow: 'Si solo lee uno',
     onlyH2: 'El n.º 1 de la redacción.',
     onlyLead:
-      'Auroras sobre el golfo de Botnia, veintitrés bajo cero a las 3:47, y la foto que ninguno de nosotros consiguió. El texto que define la voz de Lapland.blog.',
+      'Cómo se lee el índice Kp, desde dónde mirar en Kemi y por qué una noche de auroras es sobre todo esperar. El texto que muestra la voz de Lapland.blog.',
     firstTimersEyebrow: 'Para primerizos',
     firstTimersTitle: 'Los tres mejores para leer antes de ir.',
     firstTimersSubtitle:
-      'Por qué la gente se equivoca con las auroras, qué llevar a una cabaña y por qué la oscuridad polar en realidad se lleva bien. Léalos y llegará menos sorprendido.',
+      'Qué exige julio de verdad en la maleta, por qué una ruta de verano empieza a medianoche y qué cambia en 154 áreas de descanso el próximo invierno. Léalos y llegará menos sorprendido.',
     auroraEyebrow: 'Textos sobre auroras',
     auroraTitle: 'Las entradas del cielo nocturno.',
     auroraSubtitle: 'Sobre perseguirlas, fotografiarlas y las noches en que aparecen igualmente.',
     cabinsEyebrow: 'Las cabañas',
     cabinsTitle: 'Entradas de mökki.',
     cabinsSubtitle:
-      'Cómo es de verdad una cabaña en el bosque finlandés: el fuego, la sauna, el silencio, y ese detalle del retrete exterior a treinta bajo cero que nadie menciona.',
+      'Cómo es de verdad una cabaña en el bosque finlandés: fuego, sauna, silencio y eso que nadie cuenta sobre la letrina con helada fuerte.',
     foodEyebrow: 'Comida y bebida',
     foodTitle: 'Los textos de cocina.',
     foodSubtitle:
-      'Sopa de salmón de cuarenta y dos euros, pan de centeno que sobrevive a una mochila y el café que toma a las 2 de la madrugada porque el sol se olvidó de ponerse.',
+      'Sopa de salmón al precio de la carta, pan de centeno que sobrevive a una mochila y el café que se toma a las 2 de la madrugada porque el sol se olvidó de ponerse.',
     seasonalEyebrow: 'De temporada',
     seasonalTitle: 'Lo que el frío de verdad hace.',
     seasonalSubtitle:

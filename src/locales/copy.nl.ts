@@ -26,21 +26,10 @@ const nl: SectionCopy = {
     heroPrimaryCta: 'Start uw reisblog',
     heroSecondaryCta: 'Zie hoe het werkt',
     heroFootnote: 'Uw eigen dagboek is gratis · Gemaakt in Finland · Deel via Instagram',
-    seasonalBadge: 'Nu in het seizoen · Middernachtzon · 6 jun → 7 jul',
-    seasonalH2: 'Een gratis reisblog voor uw Lapland-reis, onderweg geschreven.',
-    seasonalLead:
-      'Lapland.blog maakt van uw reis een eenvoudige, mooie blog: prik de plekken vast, voeg foto’s toe, schrijf op wat er gebeurde, en deel de link met vrienden. Op dit moment betekent dat zomer. Tweeëndertig nachten waarin de zon niet ondergaat, het bos amberkleurig wordt en de meren de hemel weerspiegelen. Begin het dagboek terwijl u er nog bent.',
-    seasonalCta1: 'Start uw reisblog',
-    seasonalCta2: 'Lees zomerverhalen',
-    seasonalCard1Title: '24 uur gouden uur',
-    seasonalCard1Body: 'De zon scheert langs de horizon. Fotografen noemen het het langste blauwe uur op aarde.',
-    seasonalCard2Title: 'Kruipbraamseizoen',
-    seasonalCard2Body: 'Eind juli kleurt het hoogveen goud. Lokale bewoners noemen het de tweede oogst.',
-    seasonalCard3Title: 'Sauna, dan het meer in',
-    seasonalCard3Body: 'Een meer van 14 °C om middernacht, vijf stappen verder een sauna van 90 °C. Herhaal.',
-    seasonalCard4Title: 'Niemand anders',
-    seasonalCard4Body: 'De hutten die in de winter volgeboekt zijn, staan in juli leeg. Hetzelfde bos, geen wachtrij.',
-    seasonalLabels: { light: '01 · Licht', forest: '02 · Bos', water: '03 · Water', quiet: '04 · Stilte' },
+    readFirstEyebrow: 'Uit het veld',
+    readFirstH2: 'Drie verhalen voordat u inpakt.',
+    readFirstCta: 'Alle verhalen',
+    readFirstRead: 'Lezen',
     howEyebrow: 'Hoe het werkt',
     howH2Pre: 'Drie stappen. Eén reis.',
     howH2Italic: 'Een blog die u wilt bewaren.',
@@ -84,11 +73,11 @@ const nl: SectionCopy = {
     pillar1Kicker: 'I · De kou',
     pillar1Title: 'Wat de kou werkelijk doet',
     pillar1Body:
-      'Noorderlichtnachten, de poolduisternis, de acht seizoenen die de meeste lijstjes vergeten. Het weer is hier de hoofdpersoon, geen achtergrond. Veldnotities over hoe min drieëntwintig om 03:47 voelt, wat het doet met een telefoonbatterij en met een mens.',
+      'Noorderlichtnachten, de poolnacht en dat korte blauwe uur midden op de dag. Hier is het weer de hoofdpersoon, niet het decor. Veldnotities over wat het donker met een mens doet en wat het van een telefoonbatterij vraagt.',
     pillar2Kicker: 'II · Het onderdak',
     pillar2Title: 'Waar u slaapt, waar u eet',
     pillar2Body:
-      'Houten hutten, glazen iglo’s, sauna’s die werken en sauna’s die niet werken. De zalmsoep van tweeënveertig euro die het uiteindelijk waard bleek. Het roggebrood dat een rugzak overleeft en de koffie die u om twee uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
+      'Houten hutten, glazen iglo’s, sauna’s die werken en sauna’s die dat niet doen. Zalmsoep voor de prijs die op de kaart staat. Het roggebrood dat een rugzak overleeft, en de koffie die u om 2 uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
     pillar3Kicker: 'III · De anderen',
     pillar3Title: 'Wie hier nog meer woont',
     pillar3Body:
@@ -100,7 +89,7 @@ const nl: SectionCopy = {
     asideEyebrow: 'Waarom dit bestaat',
     asideH2: 'Lapland is geen brochure. Uw reis hoeft dat ook niet te zijn.',
     asideP1:
-      'Elk jaar komen duizenden bezoekers in Lapland aan, zien iets buitengewoons en verliezen het in een fotorol die ze nooit meer openen. Het noorderlicht boven de hut. De wandeling met verdoofde vingertoppen terug van de sauna. De kom zalmsoep die op een of andere manier 42 euro waard was. Binnen een week verdwenen.',
+      'Elk jaar komen duizenden bezoekers in Lapland aan, zien iets buitengewoons en verliezen het in een fotorol die ze nooit meer openen. Het noorderlicht boven de hut. De wandeling terug van de sauna met verdoofde vingers. De kom zalmsoep die haar prijs waard was. Na een week weg.',
     asideP2:
       'Lapland.blog is een klein, gratis hulpmiddel om dat op te lossen. Prik vast waar u was. Schrijf op wat u zag. Fotografeer de soep. Tegen de tijd dat u naar huis vliegt heeft u een echte blog van uw reis: een die uw vrienden kunnen volgen, een die u over vijf jaar nog wilt lezen. Geen stockfoto’s. Geen "magisch winterwonderland". Alleen uw eigen eerlijke versie van de plek.',
     asideCta1: 'Start uw eigen',
@@ -207,7 +196,7 @@ const nl: SectionCopy = {
       'Gesponsorde berichten in de lezersnotities. Affiliate-winkellijsten in uw blog. De woorden "onvergetelijk", "bucketlist", "magisch" of "winterwonderland" zijn verbannen uit de redactieconcepten, en het overwegen waard om ook uit de uwe te bannen. Slecht voor het schrijven, slecht voor de lezer.',
     seedHeading: 'De voorbeeldnotities',
     seedBody:
-      'De notities op de site zijn geschreven door The Field Journal, de redactie van Lapland.blog: vijf redactionele stemmen met naam, elk met een eigen terrein: seizoenen, paden, eten, hutten en uitrusting. Ze laten zien hoe een eerlijke, langzame, fotogerichte reisblog kan lezen: echte temperaturen, echte tijden, geen brochurestem. Lees er één en stelt u zich uw eigen reis voor.',
+      'De stukken die al op de site staan zijn geschreven door The Field Journal, de redactie van Lapland.blog. Ze laten zien hoe een eerlijke, langzame, door beeld gedragen reisblog kan klinken: plaatsen bij naam, prijzen van de kaart gelezen, bronnen aan het eind. Lees er een en stel u uw eigen blog voor.',
     networkHeading: 'Over het netwerk',
     networkBody:
       'Lapland.blog maakt deel uit van het LaplandVibes-ecosysteem, een netwerk van Finse sites over Lapland. De andere sites vertellen u waar u heen moet, waar u slaapt en wat u doet. Deze site is waar de reis zelf wordt opgeschreven.',
@@ -284,22 +273,22 @@ const nl: SectionCopy = {
     onlyEyebrow: 'Als u er maar één leest',
     onlyH2: 'De nummer één van de redactie.',
     onlyLead:
-      'Noorderlicht boven de Botnische Golf, –23 om 03:47, en de foto die geen van ons maakte. Het stuk dat de stem van Lapland.blog bepaalt.',
+      'Hoe u het Kp-getal leest, waarvandaan u in Kemi kijkt en waarom een noorderlichtnacht vooral wachten is. Het stuk dat de stem van Lapland.blog laat horen.',
     firstTimersEyebrow: 'Voor de eerste keer',
     firstTimersTitle: 'Drie stukken om voor vertrek te lezen.',
     firstTimersSubtitle:
-      'Waarom veel mensen het noorderlicht verkeerd zien, wat in te pakken voor een hut en waarom de poolduisternis eigenlijk meevalt. Lees deze en u komt minder verbaasd aan.',
+      'Wat juli echt van uw rugzak vraagt, waarom een zomertocht om middernacht begint en wat er volgende winter verandert op 154 rustplaatsen. Lees ze en u komt minder verrast aan.',
     auroraEyebrow: 'Noorderlichtstukken',
     auroraTitle: 'De nachthemelnotities.',
     auroraSubtitle: 'Over het najagen, het fotograferen en de nachten waarop het toch verschijnt.',
     cabinsEyebrow: 'De hutten',
     cabinsTitle: 'Mökki-notities.',
     cabinsSubtitle:
-      'Hoe een Finse boshut werkelijk is: vuur, sauna, stilte, en wat niemand zegt over het buitentoilet bij –30.',
+      'Hoe het echt is in een Finse boshut: vuur, sauna, stilte, en dat wat niemand vertelt over het buitentoilet bij strenge vorst.',
     foodEyebrow: 'Eten + drinken',
     foodTitle: 'De keukenstukken.',
     foodSubtitle:
-      'Zalmsoep van tweeënveertig euro, roggebrood dat een rugzak overleeft en de koffie die u om twee uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
+      'Zalmsoep voor de prijs op de kaart, roggebrood dat een rugzak overleeft, en de koffie die u om 2 uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
     seasonalEyebrow: 'Seizoenen',
     seasonalTitle: 'Wat de kou werkelijk doet.',
     seasonalSubtitle:

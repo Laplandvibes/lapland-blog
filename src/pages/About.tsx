@@ -31,7 +31,7 @@ export default function About() {
   );
 
   return (
-    <div className="theme-editorial min-h-screen">
+    <div className="theme-editorial theme-night min-h-screen">
       <Nav />
 
       <header className="relative pt-16">
@@ -172,7 +172,7 @@ export default function About() {
         <div className="max-w-[65ch] mx-auto text-center mt-12">
           <Link
             to={to('/signin')}
-            className="inline-block px-7 py-3.5 rounded-full bg-[var(--color-accent)] text-white font-semibold uppercase tracking-wider text-xs hover:bg-[var(--color-accent-dark)] transition-colors"
+            className="inline-block px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-wider text-xs hover:bg-pink transition-colors"
           >
             {c.ctaPrimary}
           </Link>

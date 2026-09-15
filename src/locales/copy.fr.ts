@@ -26,21 +26,10 @@ const fr: SectionCopy = {
     heroPrimaryCta: 'Lancer votre blog de voyage',
     heroSecondaryCta: 'Voir comment ça marche',
     heroFootnote: 'Votre carnet personnel est gratuit · Fait en Finlande · Partage Instagram',
-    seasonalBadge: 'En saison · Soleil de minuit · 6 juin → 7 juillet',
-    seasonalH2: 'Un blog de voyage gratuit pour votre séjour en Laponie, écrit en chemin.',
-    seasonalLead:
-      'Lapland.blog transforme votre voyage en un blog simple et beau : épinglez les lieux, ajoutez des photos, racontez ce qui s’est passé et partagez le lien avec vos proches. En ce moment, c’est l’été. Trente-deux nuits où le soleil ne se couche pas, où la forêt prend des reflets ambrés et où les lacs reflètent le ciel. Commencez le carnet pendant que vous y êtes encore.',
-    seasonalCta1: 'Lancer votre blog de voyage',
-    seasonalCta2: 'Lire les récits d’été',
-    seasonalCard1Title: '24 heures d’heure dorée',
-    seasonalCard1Body: 'Le soleil effleure l’horizon. Les photographes l’appellent la plus longue heure bleue de la planète.',
-    seasonalCard2Title: 'Saison des plaquebières',
-    seasonalCard2Body: 'Fin juillet : la tourbière vire à l’or. Les habitants l’appellent la deuxième moisson.',
-    seasonalCard3Title: 'Sauna, puis baignade',
-    seasonalCard3Body: 'Un lac à 14 °C à minuit, un sauna à 90 °C à cinq pas. Et on recommence.',
-    seasonalCard4Title: 'Personne d’autre',
-    seasonalCard4Body: 'Les chalets pleins en hiver restent vides en juillet. Même forêt, sans file d’attente.',
-    seasonalLabels: { light: '01 · Lumière', forest: '02 · Forêt', water: '03 · Eau', quiet: '04 · Silence' },
+    readFirstEyebrow: 'Du terrain',
+    readFirstH2: 'Trois articles avant de faire vos valises.',
+    readFirstCta: 'Tous les articles',
+    readFirstRead: 'Lire',
     howEyebrow: 'Comment ça marche',
     howH2Pre: 'Trois étapes. Un voyage.',
     howH2Italic: 'Un blog qui mérite d’être conservé.',
@@ -84,11 +73,11 @@ const fr: SectionCopy = {
     pillar1Kicker: 'I · Le froid',
     pillar1Title: 'Ce que le froid fait vraiment',
     pillar1Body:
-      'Nuits aurorales, nuit polaire, les huit saisons que la plupart des listes oublient. Ici la météo est un personnage principal, pas un décor. Notes de terrain sur l’effet que fait –23 à 3 h 47, sur ce que ça fait à une batterie de téléphone, et à une personne.',
+      'Les nuits d’aurores, la nuit polaire et la courte heure bleue de midi. Ici la météo est le personnage principal, pas le décor. Des notes de terrain sur ce que fait l’obscurité à une personne et sur ce qu’elle exige d’une batterie de téléphone.',
     pillar2Kicker: 'II · Le refuge',
     pillar2Title: 'Où vous dormez, où vous mangez',
     pillar2Body:
-      'Chalets en bois, igloos de verre, saunas qui marchent et saunas qui ne marchent pas. La soupe de saumon à 42 € qui méritait finalement son prix. Le pain de seigle qui survit à un sac à dos, et le café que l’on boit à 2 h du matin parce que le soleil a oublié de se coucher.',
+      'Chalets en bois, igloos de verre, saunas qui marchent et saunas qui ne marchent pas. La soupe de saumon au prix affiché sur la carte. Le pain de seigle qui survit à un sac à dos, et le café que l’on boit à 2 h du matin parce que le soleil a oublié de se coucher.',
     pillar3Kicker: 'III · Les autres',
     pillar3Title: 'Qui vit aussi là-haut',
     pillar3Body:
@@ -100,7 +89,7 @@ const fr: SectionCopy = {
     asideEyebrow: 'Pourquoi ce site existe',
     asideH2: 'La Laponie n’est pas une brochure. Votre voyage non plus.',
     asideP1:
-      'Chaque année, des milliers de visiteurs arrivent en Laponie, voient quelque chose d’extraordinaire et le perdent dans un rouleau photo qu’ils ne rouvriront jamais. L’aurore au-dessus du chalet. Le retour du sauna, les doigts engourdis. Le bol de soupe de saumon qui valait, va savoir comment, 42 €. Disparu en une semaine.',
+      'Chaque année, des milliers de visiteurs arrivent en Laponie, voient quelque chose d’extraordinaire et le perdent dans un rouleau photo qu’ils ne rouvriront jamais. L’aurore au-dessus du chalet. Le retour du sauna, les doigts engourdis. Le bol de soupe de saumon qui valait son prix. Disparu en une semaine.',
     asideP2:
       'Lapland.blog est un petit outil gratuit pour y remédier. Épinglez où vous étiez. Écrivez ce que vous avez vu. Photographiez la soupe. Avant d’avoir repris l’avion, vous tenez un vrai blog de votre voyage : un blog que vos amis peuvent vraiment suivre, un blog que vous aurez encore envie de relire dans cinq ans. Pas de photos d’archive. Pas de « pays des merveilles hivernal ». Juste votre version honnête du lieu.',
     asideCta1: 'Lancer le vôtre',
@@ -207,7 +196,7 @@ const fr: SectionCopy = {
       'Des publications sponsorisées dans les entrées des lecteurs. Des listes d’affiliés glissées dans votre blog. Les mots « inoubliable », « bucket list », « magique », « pays des merveilles hivernal » sont bannis des brouillons éditoriaux, et tout aussi à bannir des vôtres. Mauvais pour l’écriture, mauvais pour le lecteur.',
     seedHeading: 'Les entrées-germes',
     seedBody:
-      'Les entrées du site sont écrites par The Field Journal, la rédaction de Lapland.blog : cinq plumes éditoriales nommées, chacune avec son domaine : saisons, sentiers, cuisine, chalets et équipement. Elles sont là pour montrer ce que peut être un blog de voyage honnête, lent, porté par la photo : vraies températures, vraies heures, sans voix de brochure. Lisez-en une et imaginez la vôtre.',
+      'Les textes déjà en ligne sont écrits par The Field Journal, la rédaction de Lapland.blog. Ils montrent à quoi peut ressembler un blog de voyage honnête, lent et porté par l’image : des lieux nommés, des prix lus sur la carte, des sources à la fin. Lisez-en un et imaginez le vôtre.',
     networkHeading: 'À propos du réseau',
     networkBody:
       'Lapland.blog fait partie de l’écosystème LaplandVibes, un réseau de sites finlandais sur la Laponie. Les autres sites vous disent où aller, où dormir et quoi faire. Celui-ci est l’endroit où le voyage lui-même se met par écrit.',
@@ -284,22 +273,22 @@ const fr: SectionCopy = {
     onlyEyebrow: 'Si vous n’en lisez qu’une',
     onlyH2: 'Le n° 1 de la rédaction.',
     onlyLead:
-      'L’aurore au-dessus du golfe de Botnie, –23 à 3 h 47, et la photo qu’aucun de nous n’a réussi à prendre. Le texte qui définit la voix de Lapland.blog.',
+      'Comment lire l’indice Kp, d’où regarder à Kemi et pourquoi une nuit d’aurores, c’est surtout de l’attente. Le texte qui montre la voix de Lapland.blog.',
     firstTimersEyebrow: 'Pour les premiers voyages',
     firstTimersTitle: 'Trois lectures à faire avant de partir.',
     firstTimersSubtitle:
-      'Pourquoi tant de gens se trompent sur les aurores, quoi emporter dans un chalet, et pourquoi la nuit polaire est en fait supportable. Lisez-les et vous arriverez moins surpris.',
+      'Ce que juillet exige vraiment dans le sac, pourquoi une randonnée d’été commence à minuit et ce qui change sur 154 aires de repos l’hiver prochain. Lisez-les et vous arriverez moins surpris.',
     auroraEyebrow: 'Aurores boréales',
     auroraTitle: 'Les entrées du ciel nocturne.',
     auroraSubtitle: 'Sur la traque, la photo, et les nuits où elles apparaissent quand même.',
     cabinsEyebrow: 'Les chalets',
     cabinsTitle: 'Entrées mökki.',
     cabinsSubtitle:
-      'Ce qu’est vraiment un chalet de forêt finlandais : le feu, le sauna, le silence, et ce que personne ne dit jamais sur les toilettes extérieures à –30.',
+      'Ce que c’est vraiment, un chalet forestier finlandais : le feu, le sauna, le silence, et ce que personne ne dit sur les toilettes sèches par grand froid.',
     foodEyebrow: 'Cuisine + boissons',
     foodTitle: 'Les entrées cuisine.',
     foodSubtitle:
-      'Soupe de saumon à 42 €, pain de seigle qui survit à un sac à dos, et le café que l’on boit à 2 h du matin parce que le soleil a oublié de se coucher.',
+      'Soupe de saumon au prix de la carte, pain de seigle qui survit à un sac à dos, et le café que l’on boit à 2 h du matin parce que le soleil a oublié de se coucher.',
     seasonalEyebrow: 'Saisonnier',
     seasonalTitle: 'Ce que le froid fait vraiment.',
     seasonalSubtitle:

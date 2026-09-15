@@ -51,15 +51,33 @@ export default function TopReads() {
   );
 
   // Curated picks — mapped by slug. As more posts ship, these lists grow.
+  //
+  // 🔴 Jokainen juttu esiintyy sivulla VAIN KERRAN (Vesa 2026-09-15: "suosituimmat
+  // jutut ja sitten on yksi juttu tossa, eihän tätä ole mietitty yhtään"). Mitattu
+  // ennen korjausta: 13 korttipaikkaa mutta 9 uniikkia juttua, ja revontuliosio
+  // koostui kokonaan jutuista jotka lukija oli nähnyt kahta osiota ylempänä.
+  // `take()` kuluttaa listan ylhäältä alas, joten osioiden JÄRJESTYS ratkaisee
+  // kenelle juttu kuuluu. "Ensikertalaisille" saa tarkoituksella ne kolme juttua,
+  // joita mikään aiheosio ei kata (varusteet + retki + uutinen) — muuten ne
+  // eivät näkyisi tällä sivulla lainkaan.
   const bySlug = (slug: string) => posts.find((p) => p.slug === slug);
   const editorsTop = bySlug('the-night-the-sky-broke-open-over-kemi') ?? posts[0];
-  const firstTimer = ['why-i-stopped-chasing-the-aurora-with-an-app', 'five-nights-in-a-forest-cabin', 'living-between-two-suns']
-    .map(bySlug)
-    .filter((p): p is Post => Boolean(p));
-  const aurora = posts.filter((p) => p.tags.includes('aurora'));
-  const food = posts.filter((p) => p.category === 'food' || p.tags.includes('food'));
-  const seasonal = posts.filter((p) => p.category === 'seasons' || p.tags.includes('seasons') || p.tags.includes('kaamos') || p.tags.includes('polar-night'));
-  const cabins = posts.filter((p) => p.category === 'cabins' || p.tags.includes('cabins') || p.tags.includes('mokki'));
+  const used = new Set<string>();
+  if (editorsTop) used.add(editorsTop.slug);
+  const take = (list: Post[]) => {
+    const picked = list.filter((p) => !used.has(p.slug));
+    picked.forEach((p) => used.add(p.slug));
+    return picked;
+  };
+  const firstTimer = take(
+    ['what-july-in-lapland-actually-asks-you-to-pack', 'twelve-kilometres-at-one-in-the-morning', 'wilderness-hut-firewood-ends-2026']
+      .map(bySlug)
+      .filter((p): p is Post => Boolean(p))
+  );
+  const aurora = take(posts.filter((p) => p.tags.includes('aurora')));
+  const cabins = take(posts.filter((p) => p.category === 'cabins' || p.tags.includes('cabins') || p.tags.includes('mokki')));
+  const food = take(posts.filter((p) => p.category === 'food' || p.tags.includes('food')));
+  const seasonal = take(posts.filter((p) => p.category === 'seasons' || p.tags.includes('seasons') || p.tags.includes('kaamos') || p.tags.includes('polar-night')));
 
   // Build the list-section model so we can also render a "contents" rail.
   const sections: { id: string; eyebrow: string; title: string; subtitle: string; posts: Post[]; Icon: IconType }[] = [
