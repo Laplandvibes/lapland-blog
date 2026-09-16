@@ -463,6 +463,7 @@ const es: SectionCopy = {
     tagged: 'Etiquetado',
     exploreMore: 'Explore más en la red de LaplandVibes',
     editorialLabel: 'Redacción de LaplandVibes',
+    sourcesLabel: 'Fuentes y método',
     editorialNote: 'Escrito por nuestra redacción; no es el diario de viaje de un lector.',
     readerLabel: 'Diario de viaje de un lector',
     readerNote: 'Escrito por un lector de LaplandVibes sobre su propio viaje.',

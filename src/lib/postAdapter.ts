@@ -51,6 +51,12 @@ function parseContent(raw: unknown): PostBlock[] {
       });
     } else if (type === 'markdown' && typeof b.text === 'string') {
       blocks.push({ type: 'markdown', text: b.text });
+    } else if (type === 'sources' && typeof b.text === 'string') {
+      // 🔴 Tämä lista on SALLITTUJEN lista: tuntematon tyyppi pudotetaan
+      // hiljaa, ilman virhettä. Kun 'sources' lisättiin kantaan 16.9.2026,
+      // jokaisen jutun lähderivi katosi näkyvistä kokonaan, kunnes tämä
+      // haara lisättiin — mitattu renderöidystä sivusta, ei lähteestä.
+      blocks.push({ type: 'sources', text: b.text });
     } else if (
       type === 'image' &&
       typeof b.src === 'string' &&

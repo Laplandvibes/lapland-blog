@@ -463,6 +463,7 @@ const ja: SectionCopy = {
     tagged: 'タグ',
     exploreMore: 'LaplandVibesネットワークでさらに探す',
     editorialLabel: 'LaplandVibes編集部',
+    sourcesLabel: '出典と調べ方',
     editorialNote: '編集部が書いた記事です。読者の旅日記ではありません。',
     readerLabel: '読者の旅日記',
     readerNote: 'LaplandVibesの読者が自分の旅について書いた記事です。',

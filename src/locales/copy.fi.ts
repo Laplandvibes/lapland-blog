@@ -464,6 +464,7 @@ const fi: SectionCopy = {
     tagged: 'Tagit',
     exploreMore: 'Lisää LaplandVibes-verkostossa',
     editorialLabel: 'LaplandVibesin toimitus',
+    sourcesLabel: 'Lähteet ja menetelmä',
     editorialNote: 'Toimituksemme kirjoittama, ei lukijan matkapäiväkirja.',
     readerLabel: 'Lukijan matkapäiväkirja',
     readerNote: 'Kirjoittanut LaplandVibesin lukija omalta matkaltaan.',

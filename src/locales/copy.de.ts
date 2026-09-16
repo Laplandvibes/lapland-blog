@@ -465,6 +465,7 @@ const de: SectionCopy = {
     tagged: 'Schlagwörter',
     exploreMore: 'Mehr aus dem LaplandVibes-Netzwerk',
     editorialLabel: 'LaplandVibes-Redaktion',
+    sourcesLabel: 'Quellen und Methode',
     editorialNote: 'Von unserer Redaktion geschrieben, kein Reisetagebuch aus der Leserschaft.',
     readerLabel: 'Reisetagebuch aus der Leserschaft',
     readerNote: 'Geschrieben von einer Leserin oder einem Leser über die eigene Reise.',

@@ -413,6 +413,7 @@ const nl: SectionCopy = {
     tagged: 'Getagd',
     exploreMore: 'Ontdek meer in het LaplandVibes-netwerk',
     editorialLabel: 'Redactie van LaplandVibes',
+    sourcesLabel: 'Bronnen en methode',
     editorialNote: 'Geschreven door onze redactie, geen reisdagboek van een lezer.',
     readerLabel: 'Reisdagboek van een lezer',
     readerNote: 'Geschreven door een lezer van LaplandVibes over de eigen reis.',

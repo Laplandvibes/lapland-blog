@@ -35,7 +35,7 @@ import { formatPostDate } from '../lib/dates';
  * Render a single content block. H2s receive anchor ids derived from index
  * so the TableOfContents can link to them.
  */
-function Block({ block, index }: { block: PostBlock; index: number }) {
+function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number; sourcesLabel: string }) {
   switch (block.type) {
     case 'paragraph':
       return <p>{block.text}</p>;
@@ -71,6 +71,20 @@ function Block({ block, index }: { block: PostBlock; index: number }) {
           <img src={block.src} alt={block.alt} loading="lazy" decoding="async" />
           {block.caption && <figcaption>{block.caption}</figcaption>}
         </figure>
+      );
+    case 'sources':
+      // Lähteet erottuvat muusta tekstistä: oma laatikko, oma otsikko ja
+      // klikattavat linkit. Sisältö on sama teksti joka ennen oli jutun
+      // viimeinen kappale — se ei vain näyttänyt lähteeltä.
+      return (
+        <aside className="post-sources markdown-block mt-12 rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-5 py-4 md:px-6 md:py-5">
+          <p className="text-[var(--color-ink-mute)] tracking-[0.28em] text-[10px] font-bold uppercase mb-2">
+            {sourcesLabel}
+          </p>
+          <div className="text-[0.88rem] leading-relaxed text-[var(--color-ink-soft)]">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{block.text}</ReactMarkdown>
+          </div>
+        </aside>
       );
     case 'markdown':
       return (
@@ -304,7 +318,7 @@ export default function Post() {
 
             <div id="post-body" className="prose-editorial mt-10">
               {post.content.map((block, i) => (
-                <Block key={i} block={block} index={i} />
+                <Block key={i} block={block} index={i} sourcesLabel={c.sourcesLabel} />
               ))}
             </div>
 

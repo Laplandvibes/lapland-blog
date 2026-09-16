@@ -12,6 +12,15 @@ export type PostBlock =
   | { type: 'divider' }
   | { type: 'list'; ordered?: boolean; items: string[] }
   | { type: 'markdown'; text: string }
+  /**
+   * Jutun lopun lähde- ja menetelmärivi omana lohkonaan.
+   *
+   * Tämä oli ennen tavallinen `paragraph` jutun lopussa, eikä lukija
+   * erottanut sitä muusta tekstistä (Vesa 2026-09-16: "artikkelissa ei ole
+   * lähteitä?" — niitä oli, mutta ne eivät näyttäneet lähteiltä). Sisältö
+   * on markdownia, joten lähteen voi linkittää.
+   */
+  | { type: 'sources'; text: string }
   // In-article image. `src` is a /public path (the registry slots in
   // src/lib/images.ts). `full` renders edge-to-edge (full-bleed) between
   // sections; otherwise it sits within the text measure. `caption` is shown

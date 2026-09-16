@@ -463,6 +463,7 @@ const en: SectionCopy = {
     tagged: 'Tagged',
     exploreMore: 'Explore more from the LaplandVibes network',
     editorialLabel: 'From the LaplandVibes desk',
+    sourcesLabel: 'Sources and method',
     editorialNote: 'Written by our editorial team, not a reader’s travel diary.',
     readerLabel: 'A reader’s travel diary',
     readerNote: 'Written by a LaplandVibes reader about their own trip.',

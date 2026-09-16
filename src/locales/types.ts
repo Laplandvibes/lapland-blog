@@ -290,6 +290,7 @@ export type SectionCopy = {
     tagged: string;
     exploreMore: string;
     editorialLabel: string;
+    sourcesLabel: string;
     editorialNote: string;
     readerLabel: string;
     readerNote: string;

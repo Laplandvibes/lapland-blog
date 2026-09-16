@@ -463,6 +463,7 @@ const ptBR: SectionCopy = {
     tagged: 'Marcado com',
     exploreMore: 'Explore mais na rede LaplandVibes',
     editorialLabel: 'Redação do LaplandVibes',
+    sourcesLabel: 'Fontes e método',
     editorialNote: 'Escrito pela nossa redação; não é o diário de viagem de um leitor.',
     readerLabel: 'Diário de viagem de um leitor',
     readerNote: 'Escrito por um leitor do LaplandVibes sobre a própria viagem.',

@@ -463,6 +463,7 @@ const sv: SectionCopy = {
     tagged: 'Taggat',
     exploreMore: 'Utforska mer från LaplandVibes-nätverket',
     editorialLabel: 'LaplandVibes redaktion',
+    sourcesLabel: 'Källor och metod',
     editorialNote: 'Skriven av vår redaktion, inte en läsares resedagbok.',
     readerLabel: 'En läsares resedagbok',
     readerNote: 'Skriven av en läsare om den egna resan.',

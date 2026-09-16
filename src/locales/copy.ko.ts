@@ -413,6 +413,7 @@ const ko: SectionCopy = {
     tagged: '태그',
     exploreMore: 'LaplandVibes 네트워크에서 더 둘러보기',
     editorialLabel: 'LaplandVibes 편집부',
+    sourcesLabel: '출처와 방법',
     editorialNote: '편집팀이 쓴 글이며, 독자의 여행 일기가 아닙니다.',
     readerLabel: '독자의 여행 일기',
     readerNote: 'LaplandVibes 독자가 자신의 여행에 대해 쓴 글입니다.',

@@ -463,6 +463,7 @@ const zhCN: SectionCopy = {
     tagged: '标签',
     exploreMore: '在 LaplandVibes 网络中探索更多',
     editorialLabel: 'LaplandVibes 编辑部',
+    sourcesLabel: '来源与方法',
     editorialNote: '由我们的编辑部撜写，不是读者的旅行日记。',
     readerLabel: '读者的旅行日记',
     readerNote: '由 LaplandVibes 读者记录自己的旅行。',
