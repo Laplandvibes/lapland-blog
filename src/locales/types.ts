@@ -1,3 +1,5 @@
+import type { CrossSiteKey } from '../lib/crossSiteLinks';
+
 export type SectionCopy = {
   nav: {
     startHere: string;
@@ -289,6 +291,21 @@ export type SectionCopy = {
     readNextH2: string;
     tagged: string;
     exploreMore: string;
+    /**
+     * Labels for the network cards under an article. Keyed by CrossSiteKey,
+     * so adding a site to NETWORK_SITES fails the build until all 12
+     * languages carry copy for it.
+     *
+     * 🔴 The second field is , not , on purpose. The 11
+     * post routes carry copyKey "post", and scripts/_prerender_routes.mjs
+     * reads that block out of this file with a REGEX: the first 
+     * inside it becomes the page meta description, and a block that yields a
+     * description but no title resolves the title to null. Measured 2026-09-16:
+     * a  here emptied <title> and the crawlable <h1> on all 11
+     * English post pages, while fi/sv/de… stayed correct because they have a
+     * fallbackTitleByLang entry in routes.json and English does not.
+     */
+    networkCards: Record<CrossSiteKey, { label: string; blurb: string }>;
     editorialLabel: string;
     sourcesLabel: string;
     editorialNote: string;
