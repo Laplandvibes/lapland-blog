@@ -31,6 +31,7 @@ const About = lazy(() => import('./pages/About'));
 const StartHere = lazy(() => import('./pages/StartHere'));
 const TopReads = lazy(() => import('./pages/TopReads'));
 const Destinations = lazy(() => import('./pages/Destinations'));
+const Destination = lazy(() => import('./pages/Destination'));
 const AuthorProfile = lazy(() => import('./pages/AuthorProfile'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Terms = lazy(() => import('./pages/Terms'));
@@ -118,8 +119,11 @@ export default function App() {
           <Route path="/de/top-reads" element={<TopReads />} />
 
           <Route path="/destinations" element={<Destinations />} />
+          <Route path="/destinations/:slug" element={<Destination />} />
           <Route path="/fi/destinations" element={<Destinations />} />
+          <Route path="/fi/destinations/:slug" element={<Destination />} />
           <Route path="/de/destinations" element={<Destinations />} />
+          <Route path="/de/destinations/:slug" element={<Destination />} />
 
           <Route path="/by/:handle" element={<AuthorProfile />} />
           <Route path="/fi/by/:handle" element={<AuthorProfile />} />
@@ -165,6 +169,7 @@ export default function App() {
           <Route path="/ja/start-here" element={<StartHere />} />
           <Route path="/ja/top-reads" element={<TopReads />} />
           <Route path="/ja/destinations" element={<Destinations />} />
+          <Route path="/ja/destinations/:slug" element={<Destination />} />
           <Route path="/ja/by/:handle" element={<AuthorProfile />} />
           <Route path="/ja/stories" element={<Archive />} />
           <Route path="/ja/category/:slug" element={<Category />} />
@@ -181,6 +186,7 @@ export default function App() {
           <Route path="/es/start-here" element={<StartHere />} />
           <Route path="/es/top-reads" element={<TopReads />} />
           <Route path="/es/destinations" element={<Destinations />} />
+          <Route path="/es/destinations/:slug" element={<Destination />} />
           <Route path="/es/by/:handle" element={<AuthorProfile />} />
           <Route path="/es/stories" element={<Archive />} />
           <Route path="/es/category/:slug" element={<Category />} />
@@ -197,6 +203,7 @@ export default function App() {
           <Route path="/br/start-here" element={<StartHere />} />
           <Route path="/br/top-reads" element={<TopReads />} />
           <Route path="/br/destinations" element={<Destinations />} />
+          <Route path="/br/destinations/:slug" element={<Destination />} />
           <Route path="/br/by/:handle" element={<AuthorProfile />} />
           <Route path="/br/stories" element={<Archive />} />
           <Route path="/br/category/:slug" element={<Category />} />
@@ -213,6 +220,7 @@ export default function App() {
           <Route path="/cn/start-here" element={<StartHere />} />
           <Route path="/cn/top-reads" element={<TopReads />} />
           <Route path="/cn/destinations" element={<Destinations />} />
+          <Route path="/cn/destinations/:slug" element={<Destination />} />
           <Route path="/cn/by/:handle" element={<AuthorProfile />} />
           <Route path="/cn/stories" element={<Archive />} />
           <Route path="/cn/category/:slug" element={<Category />} />
@@ -229,6 +237,7 @@ export default function App() {
           <Route path="/kr/start-here" element={<StartHere />} />
           <Route path="/kr/top-reads" element={<TopReads />} />
           <Route path="/kr/destinations" element={<Destinations />} />
+          <Route path="/kr/destinations/:slug" element={<Destination />} />
           <Route path="/kr/by/:handle" element={<AuthorProfile />} />
           <Route path="/kr/stories" element={<Archive />} />
           <Route path="/kr/category/:slug" element={<Category />} />
@@ -245,6 +254,7 @@ export default function App() {
           <Route path="/fr/start-here" element={<StartHere />} />
           <Route path="/fr/top-reads" element={<TopReads />} />
           <Route path="/fr/destinations" element={<Destinations />} />
+          <Route path="/fr/destinations/:slug" element={<Destination />} />
           <Route path="/fr/by/:handle" element={<AuthorProfile />} />
           <Route path="/fr/stories" element={<Archive />} />
           <Route path="/fr/category/:slug" element={<Category />} />
@@ -261,6 +271,7 @@ export default function App() {
           <Route path="/it/start-here" element={<StartHere />} />
           <Route path="/it/top-reads" element={<TopReads />} />
           <Route path="/it/destinations" element={<Destinations />} />
+          <Route path="/it/destinations/:slug" element={<Destination />} />
           <Route path="/it/by/:handle" element={<AuthorProfile />} />
           <Route path="/it/stories" element={<Archive />} />
           <Route path="/it/category/:slug" element={<Category />} />
@@ -277,6 +288,7 @@ export default function App() {
           <Route path="/nl/start-here" element={<StartHere />} />
           <Route path="/nl/top-reads" element={<TopReads />} />
           <Route path="/nl/destinations" element={<Destinations />} />
+          <Route path="/nl/destinations/:slug" element={<Destination />} />
           <Route path="/nl/by/:handle" element={<AuthorProfile />} />
           <Route path="/nl/stories" element={<Archive />} />
           <Route path="/nl/category/:slug" element={<Category />} />
@@ -293,6 +305,7 @@ export default function App() {
           <Route path="/sv/start-here" element={<StartHere />} />
           <Route path="/sv/top-reads" element={<TopReads />} />
           <Route path="/sv/destinations" element={<Destinations />} />
+          <Route path="/sv/destinations/:slug" element={<Destination />} />
           <Route path="/sv/by/:handle" element={<AuthorProfile />} />
           <Route path="/sv/stories" element={<Archive />} />
           <Route path="/sv/category/:slug" element={<Category />} />

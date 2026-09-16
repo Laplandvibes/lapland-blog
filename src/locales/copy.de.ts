@@ -243,6 +243,31 @@ const de: SectionCopy = {
     ctaSecondary: 'Oder',
     ctaSecondaryLink: 'zuerst die Texte lesen',
   },
+  destination: {
+    metaSuffix: 'Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.',
+    backToAll: 'Alle Reiseziele',
+    networkEyebrow: 'Anderswo im Netzwerk',
+    networkH2: 'Mehr über dieses Reiseziel',
+    networkLead: 'Derselbe Ort, ausführlicher: Unterkunft, Essen und Aktivitäten — jeweils auf einer eigenen Seite.',
+    siteLabels: {
+      vibes: 'Reiseziel-Guide',
+      stays: 'Unterkünfte',
+      activities: 'Aktivitäten',
+      skiresorts: 'Skigebiet',
+      dining: 'Restaurants',
+      bars: 'Bars',
+      nightlife: 'Nachtleben',
+    },
+    entriesH2: 'Einträge von hier',
+    allEntriesLink: 'Alle Einträge',
+    loading: 'Wird geladen…',
+    emptyH3: 'Noch keine Einträge von hier',
+    emptyLead: 'Über diesen Ort hat noch niemand geschrieben. Wenn Sie hinfahren, können Sie die oder der Erste sein.',
+    emptyCta: 'Eigenen Blog starten',
+    stayH3: 'Unterkunft finden',
+    stayNote: 'Partnerlink',
+    stayCta: 'Ansehen',
+  },
   destinations: {
     pageTitle: 'Reiseziele | Lapland.blog',
     pageDescription:
@@ -336,6 +361,8 @@ const de: SectionCopy = {
     ctaButton: 'Eigenen Blog starten',
   },
   archive: {
+    placesLabel: 'Ort',
+    allPlaces: 'Alle Orte',
     pageTitle: 'Alle Geschichten | Lapland.blog',
     pageDescription:
       'Jede Geschichte auf Lapland.blog. Nordlichter, Hütten, Essen, Jahreszeiten, Menschen, Ausrüstung und lange Stücke aus dem finnischen Lappland.',

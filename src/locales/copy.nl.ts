@@ -192,6 +192,31 @@ const nl: SectionCopy = {
     ctaSecondary: 'Of',
     ctaSecondaryLink: 'lees eerst de verhalen',
   },
+  destination: {
+    metaSuffix: 'Reisdagboeken en bestemmingsgidsen uit het netwerk.',
+    backToAll: 'Alle bestemmingen',
+    networkEyebrow: 'Elders in het netwerk',
+    networkH2: 'Meer over deze bestemming',
+    networkLead: 'Dezelfde plek, uitgebreider: waar je slaapt, waar je eet en wat je doet — elk op een eigen site.',
+    siteLabels: {
+      vibes: 'Bestemmingsgids',
+      stays: 'Overnachten',
+      activities: 'Wat te doen',
+      skiresorts: 'Skigebied',
+      dining: 'Restaurants',
+      bars: 'Bars',
+      nightlife: 'Nachtleven',
+    },
+    entriesH2: 'Dagboeken van hier',
+    allEntriesLink: 'Alle dagboeken',
+    loading: 'Laden…',
+    emptyH3: 'Nog geen dagboeken van hier',
+    emptyLead: 'Niemand heeft nog over deze plek geschreven. Ga je erheen, dan kun jij de eerste zijn.',
+    emptyCta: 'Start je eigen blog',
+    stayH3: 'Zoek een overnachting',
+    stayNote: 'Partnerlink',
+    stayCta: 'Bekijken',
+  },
   destinations: {
     pageTitle: 'Bestemmingen | Lapland.blog',
     pageDescription:
@@ -284,6 +309,8 @@ const nl: SectionCopy = {
     ctaButton: 'Start uw blog',
   },
   archive: {
+    placesLabel: 'Plaats',
+    allPlaces: 'Alle plaatsen',
     pageTitle: 'Alle verhalen | Lapland.blog',
     pageDescription:
       'Elk verhaal op Lapland.blog. Noorderlicht, hutten, eten, seizoenen, mensen, uitrusting en lange leesstukken uit Fins Lapland.',

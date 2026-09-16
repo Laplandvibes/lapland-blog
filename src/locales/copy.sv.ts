@@ -242,6 +242,31 @@ const sv: SectionCopy = {
     ctaSecondary: 'Eller',
     ctaSecondaryLink: 'läs texterna först',
   },
+  destination: {
+    metaSuffix: 'Resedagboksinlägg och destinationsguider från nätverket.',
+    backToAll: 'Alla destinationer',
+    networkEyebrow: 'På andra sajter i nätverket',
+    networkH2: 'Läs mer om den här destinationen',
+    networkLead: 'Samma plats, mer på djupet: var du bor, var du äter och vad du gör — var sak på sin egen sajt.',
+    siteLabels: {
+      vibes: 'Destinationsguide',
+      stays: 'Boende',
+      activities: 'Att göra',
+      skiresorts: 'Skidort',
+      dining: 'Restauranger',
+      bars: 'Barer',
+      nightlife: 'Nattliv',
+    },
+    entriesH2: 'Inlägg härifrån',
+    allEntriesLink: 'Alla inlägg',
+    loading: 'Laddar…',
+    emptyH3: 'Inga inlägg härifrån än',
+    emptyLead: 'Ingen har skrivit om den här platsen än. Ska du dit kan du bli först.',
+    emptyCta: 'Starta egen blogg',
+    stayH3: 'Hitta boende',
+    stayNote: 'Partnerlänk',
+    stayCta: 'Bläddra',
+  },
   destinations: {
     pageTitle: 'Resmål | Lapland.blog',
     pageDescription:
@@ -334,6 +359,8 @@ const sv: SectionCopy = {
     ctaButton: 'Starta din blogg',
   },
   archive: {
+    placesLabel: 'Plats',
+    allPlaces: 'Alla platser',
     pageTitle: 'Alla berättelser | Lapland.blog',
     pageDescription:
       'Varje berättelse på Lapland.blog. Norrsken, stugor, mat, årstider, människor, utrustning och längre läsning från finska Lappland.',

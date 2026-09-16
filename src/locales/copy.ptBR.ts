@@ -242,6 +242,31 @@ const ptBR: SectionCopy = {
     ctaSecondary: 'Ou',
     ctaSecondaryLink: 'leia primeiro os textos',
   },
+  destination: {
+    metaSuffix: 'Diários de viagem e guias de destino da rede.',
+    backToAll: 'Todos os destinos',
+    networkEyebrow: 'Em outros sites da rede',
+    networkH2: 'Saiba mais sobre este destino',
+    networkLead: 'O mesmo lugar, com mais profundidade: onde dormir, onde comer e o que fazer, cada um no seu próprio site.',
+    siteLabels: {
+      vibes: 'Guia do destino',
+      stays: 'Onde ficar',
+      activities: 'O que fazer',
+      skiresorts: 'Estação de esqui',
+      dining: 'Restaurantes',
+      bars: 'Bares',
+      nightlife: 'Vida noturna',
+    },
+    entriesH2: 'Diários escritos aqui',
+    allEntriesLink: 'Todos os diários',
+    loading: 'Carregando…',
+    emptyH3: 'Ainda não há diários daqui',
+    emptyLead: 'Ninguém escreveu sobre este lugar ainda. Se você vai para lá, pode ser a primeira pessoa.',
+    emptyCta: 'Comece seu próprio blog',
+    stayH3: 'Encontrar hospedagem',
+    stayNote: 'Link de parceiro',
+    stayCta: 'Ver',
+  },
   destinations: {
     pageTitle: 'Destinos | Lapland.blog',
     pageDescription:
@@ -334,6 +359,8 @@ const ptBR: SectionCopy = {
     ctaButton: 'Criar seu blog',
   },
   archive: {
+    placesLabel: 'Lugar',
+    allPlaces: 'Todos os lugares',
     pageTitle: 'Todas as histórias | Lapland.blog',
     pageDescription:
       'Todas as histórias do Lapland.blog. Auroras, cabanas, comida, estações, pessoas, equipamentos e leituras longas da Lapônia finlandesa.',
