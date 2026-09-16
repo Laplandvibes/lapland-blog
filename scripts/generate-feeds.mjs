@@ -64,6 +64,11 @@ const fmtRfc822 = (d) => {
 // ───── categories (mirror src/data/categories.ts) ─────
 const CATEGORY_SLUGS = ['aurora', 'cabins', 'food', 'seasons', 'people', 'gear', 'stories'];
 
+// Kohdesivut /destinations/:slug (2026-09-16). Peilaa src/data/destinations.ts:aa
+// — tama on Node-skripti eika voi importata TS-lahdetta, joten lista on kasin
+// pidettava synkassa. Jos lisaat kohteen, lisaa se molempiin.
+const DESTINATION_SLUGS = ['rovaniemi', 'saariselka', 'levi', 'kemi', 'inari', 'muonio', 'yllas', 'kemijarvi'];
+
 // ───── sitemap ─────
 // 12-locale hreflang rollout (2026-05-22; sv added 2026-07-13). Tier-3 locales kr/fr/it/nl/sv served.
 const LOCALES = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
@@ -114,6 +119,13 @@ function buildSitemap(posts) {
     // page, no search value: keep it out of the sitemap.
   ];
 
+  const destinationPages = DESTINATION_SLUGS.map((slug) => ({
+    loc: `/destinations/${slug}`,
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: today,
+  }));
+
   const categoryPages = CATEGORY_SLUGS.map((slug) => ({
     loc: `/category/${slug}`,
     changefreq: 'weekly',
@@ -131,7 +143,7 @@ function buildSitemap(posts) {
     lastmod: today,
   }));
 
-  const all = [...staticPages, ...categoryPages, ...postPages];
+  const all = [...staticPages, ...destinationPages, ...categoryPages, ...postPages];
 
   // A route flagged `canonicalLocale` in routes.json serves ONE language on every
   // locale URL, and its HTML says so: canonical → that locale, hreflang en +
