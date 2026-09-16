@@ -269,6 +269,31 @@ const en: SectionCopy = {
     ctaSecondary: 'Or',
     ctaSecondaryLink: 'read the seed entries first',
   },
+  destination: {
+    metaSuffix: 'Field-journal entries and destination guides from across the network.',
+    backToAll: 'All destinations',
+    networkEyebrow: 'Elsewhere in the network',
+    networkH2: 'More about this destination',
+    networkLead: 'The same place, in more depth: where to stay, where to eat and what to do — each on its own site.',
+    siteLabels: {
+      vibes: 'Destination guide',
+      stays: 'Where to stay',
+      activities: 'Things to do',
+      skiresorts: 'Ski resort',
+      dining: 'Restaurants',
+      bars: 'Bars',
+      nightlife: 'Nightlife',
+    },
+    entriesH2: 'Entries from here',
+    allEntriesLink: 'All entries',
+    loading: 'Loading…',
+    emptyH3: 'No entries from here yet',
+    emptyLead: 'Nobody has written about this place yet. If you are heading there, you can be the first.',
+    emptyCta: 'Start your own blog',
+    stayH3: 'Find a place to stay',
+    stayNote: 'Partner link',
+    stayCta: 'Browse',
+  },
   destinations: {
     pageTitle: 'Destinations | Lapland.blog',
     pageDescription:
@@ -361,6 +386,8 @@ const en: SectionCopy = {
     ctaButton: 'Start your blog',
   },
   archive: {
+    placesLabel: 'Place',
+    allPlaces: 'All places',
     pageTitle: 'All stories | Lapland.blog',
     pageDescription:
       'Every story on Lapland.blog. Aurora, cabins, food, seasons, people, gear and long-form reads from Finnish Lapland.',

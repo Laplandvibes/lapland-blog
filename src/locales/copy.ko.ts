@@ -219,6 +219,31 @@ const ko: SectionCopy = {
     ctaSecondary: '또는',
     ctaSecondaryLink: '시드 글부터 먼저 읽기',
   },
+  destination: {
+    metaSuffix: '여행 기록과 네트워크의 여행지 가이드.',
+    backToAll: '모든 여행지',
+    networkEyebrow: '네트워크의 다른 사이트',
+    networkH2: '이 여행지 더 알아보기',
+    networkLead: '같은 곳을 더 깊게. 숙소, 식당, 즐길 거리를 각각의 전문 사이트에서.',
+    siteLabels: {
+      vibes: '여행지 가이드',
+      stays: '숙소',
+      activities: '즐길 거리',
+      skiresorts: '스키장',
+      dining: '레스토랑',
+      bars: '바',
+      nightlife: '나이트라이프',
+    },
+    entriesH2: '이곳에서 쓴 기록',
+    allEntriesLink: '모든 기록',
+    loading: '불러오는 중…',
+    emptyH3: '아직 이곳의 기록이 없습니다',
+    emptyLead: '이 장소에 대해 아직 아무도 쓰지 않았습니다. 가신다면 첫 번째가 될 수 있습니다.',
+    emptyCta: '내 블로그 시작하기',
+    stayH3: '숙소 찾기',
+    stayNote: '파트너 링크',
+    stayCta: '보기',
+  },
   destinations: {
     pageTitle: '여행지 | Lapland.blog',
     pageDescription:
@@ -311,6 +336,8 @@ const ko: SectionCopy = {
     ctaButton: '블로그 시작하기',
   },
   archive: {
+    placesLabel: '장소',
+    allPlaces: '모든 장소',
     pageTitle: '모든 글 | Lapland.blog',
     pageDescription:
       'Lapland.blog의 모든 글. 오로라, 통나무집, 음식, 계절, 사람, 장비, 그리고 라플란드에서 보내 드리는 장문의 글.',

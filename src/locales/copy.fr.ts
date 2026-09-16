@@ -219,6 +219,31 @@ const fr: SectionCopy = {
     ctaSecondary: 'Ou',
     ctaSecondaryLink: 'lisez d’abord les entrées-germes',
   },
+  destination: {
+    metaSuffix: 'Carnets de voyage et guides de destination du réseau.',
+    backToAll: 'Toutes les destinations',
+    networkEyebrow: 'Ailleurs dans le réseau',
+    networkH2: 'En savoir plus sur cette destination',
+    networkLead: 'Le même endroit, plus en détail : où dormir, où manger et quoi faire — chacun sur son propre site.',
+    siteLabels: {
+      vibes: 'Guide de destination',
+      stays: 'Hébergement',
+      activities: 'Activités',
+      skiresorts: 'Station de ski',
+      dining: 'Restaurants',
+      bars: 'Bars',
+      nightlife: 'Vie nocturne',
+    },
+    entriesH2: 'Carnets écrits ici',
+    allEntriesLink: 'Tous les carnets',
+    loading: 'Chargement…',
+    emptyH3: 'Aucun carnet d’ici pour l’instant',
+    emptyLead: 'Personne n’a encore écrit sur cet endroit. Si vous y allez, vous pouvez être la première personne à le faire.',
+    emptyCta: 'Créer votre blog',
+    stayH3: 'Trouver un hébergement',
+    stayNote: 'Lien partenaire',
+    stayCta: 'Parcourir',
+  },
   destinations: {
     pageTitle: 'Destinations | Lapland.blog',
     pageDescription:
@@ -311,6 +336,8 @@ const fr: SectionCopy = {
     ctaButton: 'Lancer votre blog',
   },
   archive: {
+    placesLabel: 'Lieu',
+    allPlaces: 'Tous les lieux',
     pageTitle: 'Toutes les entrées | Lapland.blog',
     pageDescription:
       'Tous les récits de Lapland.blog. Aurores, chalets, cuisine, saisons, gens, équipement et lectures longues depuis la Laponie finlandaise.',

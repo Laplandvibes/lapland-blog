@@ -269,6 +269,31 @@ const zhCN: SectionCopy = {
     ctaSecondary: '或者',
     ctaSecondaryLink: '先读读起始文章',
   },
+  destination: {
+    metaSuffix: '旅行记录与网络中的目的地指南。',
+    backToAll: '全部目的地',
+    networkEyebrow: '网络中的其他站点',
+    networkH2: '了解更多关于这个目的地',
+    networkLead: '同一个地方，更深入：住哪里、吃什么、玩什么，各有专门的站点。',
+    siteLabels: {
+      vibes: '目的地指南',
+      stays: '住宿',
+      activities: '玩什么',
+      skiresorts: '滑雪场',
+      dining: '餐厅',
+      bars: '酒吧',
+      nightlife: '夜生活',
+    },
+    entriesH2: '来自这里的记录',
+    allEntriesLink: '全部记录',
+    loading: '加载中…',
+    emptyH3: '这里还没有记录',
+    emptyLead: '还没有人写过这个地方。如果你要去，可以成为第一个。',
+    emptyCta: '开始你的博客',
+    stayH3: '查找住宿',
+    stayNote: '合作伙伴链接',
+    stayCta: '查看',
+  },
   destinations: {
     pageTitle: '目的地 | Lapland.blog',
     pageDescription:
@@ -361,6 +386,8 @@ const zhCN: SectionCopy = {
     ctaButton: '创建您的博客',
   },
   archive: {
+    placesLabel: '地点',
+    allPlaces: '全部地点',
     pageTitle: '全部文章 | Lapland.blog',
     pageDescription:
       'Lapland.blog 的全部文章。极光、木屋、美食、季节、人物、装备，以及来自芬兰拉普兰的长篇阅读。',

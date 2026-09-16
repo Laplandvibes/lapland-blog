@@ -269,6 +269,31 @@ const ja: SectionCopy = {
     ctaSecondary: 'または',
     ctaSecondaryLink: 'まずシード記事を読む',
   },
+  destination: {
+    metaSuffix: '旅の記録とネットワークの目的地ガイド。',
+    backToAll: 'すべての目的地',
+    networkEyebrow: 'ネットワークの他のサイト',
+    networkH2: 'この目的地をもっと詳しく',
+    networkLead: '同じ場所をさらに詳しく。宿、食事、アクティビティをそれぞれの専門サイトで。',
+    siteLabels: {
+      vibes: '目的地ガイド',
+      stays: '宿泊',
+      activities: 'アクティビティ',
+      skiresorts: 'スキー場',
+      dining: 'レストラン',
+      bars: 'バー',
+      nightlife: 'ナイトライフ',
+    },
+    entriesH2: 'ここで書かれた記録',
+    allEntriesLink: 'すべての記録',
+    loading: '読み込み中…',
+    emptyH3: 'ここからの記録はまだありません',
+    emptyLead: 'この場所について書いた人はまだいません。訪れるなら、最初の一人になれます。',
+    emptyCta: '自分のブログを始める',
+    stayH3: '宿を探す',
+    stayNote: 'パートナーリンク',
+    stayCta: '見る',
+  },
   destinations: {
     pageTitle: '目的地 | Lapland.blog',
     pageDescription:
@@ -361,6 +386,8 @@ const ja: SectionCopy = {
     ctaButton: 'ブログを始める',
   },
   archive: {
+    placesLabel: '場所',
+    allPlaces: 'すべての場所',
     pageTitle: 'すべての記事 | Lapland.blog',
     pageDescription:
       'Lapland.blog のすべての記事。オーロラ、コテージ、食事、季節、人、装備、フィンランド・ラップランドからの長文記事。',

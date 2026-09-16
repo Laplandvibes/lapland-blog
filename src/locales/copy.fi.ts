@@ -269,6 +269,31 @@ const fi: SectionCopy = {
     ctaSecondary: 'Tai',
     ctaSecondaryLink: 'lue siemenmerkinnät ensin',
   },
+  destination: {
+    metaSuffix: 'Merkinnät ja verkoston kohdeoppaat.',
+    backToAll: 'Kaikki kohteet',
+    networkEyebrow: 'Muualla verkostossa',
+    networkH2: 'Lue lisää tästä kohteesta',
+    networkLead: 'Sama paikka syvemmin: missä yöpyä, missä syödä ja mitä tehdä — kukin omalla sivustollaan.',
+    siteLabels: {
+      vibes: 'Kohdeopas',
+      stays: 'Majoitus',
+      activities: 'Tekemistä',
+      skiresorts: 'Hiihtokeskus',
+      dining: 'Ravintolat',
+      bars: 'Baarit',
+      nightlife: 'Yöelämä',
+    },
+    entriesH2: 'Merkinnät täältä',
+    allEntriesLink: 'Kaikki merkinnät',
+    loading: 'Ladataan…',
+    emptyH3: 'Täältä ei ole vielä merkintöjä',
+    emptyLead: 'Kukaan ei ole vielä kirjoittanut tästä paikasta. Jos olet menossa, voit olla ensimmäinen.',
+    emptyCta: 'Aloita oma blogi',
+    stayH3: 'Etsi majoitus',
+    stayNote: 'Kumppanilinkki',
+    stayCta: 'Selaa',
+  },
   destinations: {
     pageTitle: 'Kohteet | Lapland.blog',
     pageDescription:
@@ -362,6 +387,8 @@ const fi: SectionCopy = {
     ctaButton: 'Aloita oma blogi',
   },
   archive: {
+    placesLabel: 'Paikka',
+    allPlaces: 'Kaikki paikat',
     pageTitle: 'Kaikki jutut | Lapland.blog',
     pageDescription:
       'Kaikki Lapland.blogin jutut. Revontulet, mökit, ruoka, vuodenajat, ihmiset, varustus ja pidemmät luettavat Suomen Lapista.',

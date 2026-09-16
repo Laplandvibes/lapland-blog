@@ -189,6 +189,31 @@ export type SectionCopy = {
     ctaSecondary: string;
     ctaSecondaryLink: string;
   };
+  destination: {
+    metaSuffix: string;
+    backToAll: string;
+    networkEyebrow: string;
+    networkH2: string;
+    networkLead: string;
+    siteLabels: {
+      vibes: string;
+      stays: string;
+      activities: string;
+      skiresorts: string;
+      dining: string;
+      bars: string;
+      nightlife: string;
+    };
+    entriesH2: string;
+    allEntriesLink: string;
+    loading: string;
+    emptyH3: string;
+    emptyLead: string;
+    emptyCta: string;
+    stayH3: string;
+    stayNote: string;
+    stayCta: string;
+  };
   destinations: {
     pageTitle: string;
     pageDescription: string;
@@ -242,6 +267,8 @@ export type SectionCopy = {
     ctaButton: string;
   };
   archive: {
+    placesLabel: string;
+    allPlaces: string;
     pageTitle: string;
     pageDescription: string;
     eyebrow: string;

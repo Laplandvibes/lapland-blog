@@ -134,6 +134,278 @@
     "copyKey": "destinations"
   },
   {
+    "path": "/destinations/rovaniemi",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Rovaniemi · Lapland.blog",
+    "fallbackDescription": "Lapland's capital. Where most flights land. The base camp for everything north of here. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Rovaniemi · Lapland.blog",
+      "de": "Rovaniemi · Lapland.blog",
+      "ja": "Rovaniemi · Lapland.blog",
+      "es": "Rovaniemi · Lapland.blog",
+      "pt-BR": "Rovaniemi · Lapland.blog",
+      "zh-CN": "Rovaniemi · Lapland.blog",
+      "ko": "Rovaniemi · Lapland.blog",
+      "fr": "Rovaniemi · Lapland.blog",
+      "it": "Rovaniemi · Lapland.blog",
+      "nl": "Rovaniemi · Lapland.blog",
+      "sv": "Rovaniemi · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Lapin pääkaupunki. Tänne useimmat lennot laskeutuvat. Tukikohta kaikelle tästä pohjoiseen. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Lapplands Hauptstadt. Hier landen die meisten Flüge. Das Basislager für alles nördlich von hier. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "ラップランドの州都。ほとんどのフライトが降り立つ場所。ここより北のすべてへのベースキャンプ。 旅の記録とネットワークの目的地ガイド。",
+      "es": "La capital de Laponia. Donde aterrizan la mayoría de los vuelos. El campamento base para todo lo que queda al norte. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "A capital da Lapônia. Onde a maioria dos voos aterrissa. O acampamento-base para tudo que fica ao norte daqui. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "拉普兰的首府，大多数航班在此降落。此地以北一切行程的大本营。 旅行记录与网络中的目的地指南。",
+      "ko": "라플란드의 수도. 대부분의 항공편이 내리는 곳. 여기서 북쪽으로 향하는 모든 여정의 베이스캠프입니다. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "La capitale de la Laponie. Là où atterrissent la plupart des vols. Le camp de base pour tout ce qui se trouve plus au nord. Carnets de voyage et guides de destination du réseau.",
+      "it": "La capitale della Lapponia. Dove atterra la maggior parte dei voli. Il campo base per tutto ciò che sta più a nord. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "De hoofdstad van Lapland. Waar de meeste vluchten landen. Het basiskamp voor alles ten noorden van hier. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Lapplands huvudstad. Där de flesta flyg landar. Basläger för allt norr härom. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
+    "path": "/destinations/saariselka",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Saariselkä · Lapland.blog",
+    "fallbackDescription": "Treeless tundra, glass igloos, the Urho Kekkonen national park out the back door. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Saariselkä · Lapland.blog",
+      "de": "Saariselkä · Lapland.blog",
+      "ja": "Saariselkä · Lapland.blog",
+      "es": "Saariselkä · Lapland.blog",
+      "pt-BR": "Saariselkä · Lapland.blog",
+      "zh-CN": "Saariselkä · Lapland.blog",
+      "ko": "Saariselkä · Lapland.blog",
+      "fr": "Saariselkä · Lapland.blog",
+      "it": "Saariselkä · Lapland.blog",
+      "nl": "Saariselkä · Lapland.blog",
+      "sv": "Saariselkä · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Puutonta tunturiylänköä, lasi-igluja ja Urho Kekkosen kansallispuisto takaovella. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Baumlose Tundra, Glas-Iglus, der Urho-Kekkonen-Nationalpark direkt vor der Hintertür. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "木のないツンドラ、グラスイグルー、そして裏口の先にはウルホ・ケッコネン国立公園。 旅の記録とネットワークの目的地ガイド。",
+      "es": "Tundra sin árboles, iglús de cristal y el parque nacional Urho Kekkonen en la puerta de atrás. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "Tundra sem árvores, iglus de vidro e o parque nacional Urho Kekkonen na porta dos fundos. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "无树的苔原、玻璃冰屋，乌尔霍·凯科宁国家公园就在后门外。 旅行记录与网络中的目的地指南。",
+      "ko": "나무 없는 툰드라, 유리 이글루, 그리고 뒷문 바로 너머의 우르호 케코넨 국립공원. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "Toundra sans arbres, igloos de verre, le parc national Urho Kekkonen juste derrière la porte. Carnets de voyage et guides de destination du réseau.",
+      "it": "Tundra senza alberi, igloo di vetro, il parco nazionale Urho Kekkonen appena fuori dalla porta. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "Boomloze toendra, glazen iglo’s, het nationale park Urho Kekkonen achter de deur. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Trädlös tundra, glasigloor, nationalparken Urho Kekkonen precis utanför dörren. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
+    "path": "/destinations/levi",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Levi · Lapland.blog",
+    "fallbackDescription": "Finland's biggest ski resort. Direct flights from Helsinki in winter. Family-friendly basecamp. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Levi · Lapland.blog",
+      "de": "Levi · Lapland.blog",
+      "ja": "Levi · Lapland.blog",
+      "es": "Levi · Lapland.blog",
+      "pt-BR": "Levi · Lapland.blog",
+      "zh-CN": "Levi · Lapland.blog",
+      "ko": "Levi · Lapland.blog",
+      "fr": "Levi · Lapland.blog",
+      "it": "Levi · Lapland.blog",
+      "nl": "Levi · Lapland.blog",
+      "sv": "Levi · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Suomen suurin hiihtokeskus. Suorat lennot Helsingistä talvella. Perheystävällinen tukikohta. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Finnlands größtes Skizentrum. Im Winter Direktflüge aus Helsinki. Familienfreundliches Basislager. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "フィンランド最大のスキーリゾート。冬はヘルシンキから直行便。家族連れに優しいベースキャンプ。 旅の記録とネットワークの目的地ガイド。",
+      "es": "La mayor estación de esquí de Finlandia. Vuelos directos desde Helsinki en invierno. Campamento base para familias. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "A maior estação de esqui da Finlândia. Voos diretos de Helsinque no inverno. Acampamento-base para toda a família. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "芬兰最大的滑雪度假地。冬季有赫尔辛基直飞航班。适合全家的大本营。 旅行记录与网络中的目的地指南。",
+      "ko": "핀란드 최대의 스키 리조트. 겨울에는 헬싱키발 직항이 있습니다. 가족 여행에 알맞은 베이스캠프. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "La plus grande station de ski de Finlande. Vols directs depuis Helsinki en hiver. Camp de base familial. Carnets de voyage et guides de destination du réseau.",
+      "it": "La più grande stazione sciistica della Finlandia. Voli diretti da Helsinki in inverno. Campo base a misura di famiglia. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "Het grootste skigebied van Finland. In de winter directe vluchten vanuit Helsinki. Gezinsvriendelijk basiskamp. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Finlands största skidort. Direktflyg från Helsingfors på vintern. Familjevänligt basläger. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
+    "path": "/destinations/kemi",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Kemi · Lapland.blog",
+    "fallbackDescription": "Snow castle, ice-breaker tours, and the southernmost Lapland coast. Flatter ground, salt air, sea aurora. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Kemi · Lapland.blog",
+      "de": "Kemi · Lapland.blog",
+      "ja": "Kemi · Lapland.blog",
+      "es": "Kemi · Lapland.blog",
+      "pt-BR": "Kemi · Lapland.blog",
+      "zh-CN": "Kemi · Lapland.blog",
+      "ko": "Kemi · Lapland.blog",
+      "fr": "Kemi · Lapland.blog",
+      "it": "Kemi · Lapland.blog",
+      "nl": "Kemi · Lapland.blog",
+      "sv": "Kemi · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Lumilinna, jäänmurtajaristeilyt ja Lapin eteläisin rannikko. Tasaisempaa maata, meri-ilmaa, revontulia meren yllä. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Schneeschloss, Eisbrecher-Touren und die südlichste Küste Lapplands. Flacheres Land, Salzluft, Nordlichter über dem Meer. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "スノーキャッスル、砕氷船ツアー、そしてラップランド最南の海岸。平らな土地、潮の香り、海の上のオーロラ。 旅の記録とネットワークの目的地ガイド。",
+      "es": "Castillo de nieve, travesías en rompehielos y la costa más meridional de Laponia. Terreno más llano, aire salado, auroras sobre el mar. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "Castelo de neve, passeios de navio quebra-gelo e a costa mais ao sul da Lapônia. Terreno mais plano, ar salgado, aurora sobre o mar. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "雪堡、破冰船之旅，以及拉普兰最南端的海岸。地势更平坦，空气带着咸味，极光映在海上。 旅行记录与网络中的目的地指南。",
+      "ko": "눈의 성, 쇄빙선 투어, 그리고 라플란드 최남단의 해안. 더 평탄한 땅, 바다 내음, 바다 위의 오로라. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "Château de neige, sorties en brise-glace et la côte la plus méridionale de Laponie. Terrain plus plat, air salin, aurores sur la mer. Carnets de voyage et guides de destination du réseau.",
+      "it": "Il castello di neve, le escursioni in rompighiaccio e la costa più meridionale della Lapponia. Terreno più piatto, aria salmastra, aurora sul mare. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "Sneeuwkasteel, ijsbrekertochten en de zuidelijkste kust van Lapland. Vlakker terrein, zilte lucht, noorderlicht boven zee. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Snöslott, isbrytarturer och Lapplands sydligaste kust. Flackare mark, salt luft, havsnorrsken. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
+    "path": "/destinations/inari",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Inari · Lapland.blog",
+    "fallbackDescription": "Finland's third-largest lake. The Sámi cultural centre Siida. Where Lapland feels furthest from Europe. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Inari · Lapland.blog",
+      "de": "Inari · Lapland.blog",
+      "ja": "Inari · Lapland.blog",
+      "es": "Inari · Lapland.blog",
+      "pt-BR": "Inari · Lapland.blog",
+      "zh-CN": "Inari · Lapland.blog",
+      "ko": "Inari · Lapland.blog",
+      "fr": "Inari · Lapland.blog",
+      "it": "Inari · Lapland.blog",
+      "nl": "Inari · Lapland.blog",
+      "sv": "Inari · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Suomen kolmanneksi suurin järvi. Saamelaiskulttuurikeskus Siida. Täällä Lappi tuntuu olevan kauimpana Euroopasta. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Finnlands drittgrößter See. Das samische Kulturzentrum Siida. Hier fühlt sich Lappland am weitesten von Europa entfernt an. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "フィンランドで3番目に大きな湖。サーミ文化センター「シーダ」。ラップランドがヨーロッパから最も遠く感じられる場所。 旅の記録とネットワークの目的地ガイド。",
+      "es": "El tercer lago más grande de Finlandia. El centro cultural sami Siida. Donde Laponia se siente más lejos de Europa. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "O terceiro maior lago da Finlândia. O centro cultural sámi Siida. Onde a Lapônia parece mais distante da Europa. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "芬兰第三大湖。萨米文化中心 Siida。在这里，拉普兰离欧洲最遥远。 旅行记录与网络中的目的地指南。",
+      "ko": "핀란드에서 세 번째로 큰 호수. 사미 문화센터 시다(Siida). 라플란드가 유럽에서 가장 멀게 느껴지는 곳. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "Le troisième lac de Finlande. Le centre culturel sami Siida. Là où la Laponie semble la plus éloignée de l’Europe. Carnets de voyage et guides de destination du réseau.",
+      "it": "Il terzo lago della Finlandia. Il centro culturale sami Siida. Dove la Lapponia sembra più lontana dall’Europa. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "Het op twee na grootste meer van Finland. Het Sámi-cultuurcentrum Siida. Waar Lapland het verst van Europa voelt. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Finlands tredje största sjö. Det samiska kulturcentret Siida. Där Lappland känns längst från Europa. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
+    "path": "/destinations/muonio",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Muonio · Lapland.blog",
+    "fallbackDescription": "Pallas-Yllästunturi national park edge. Among the highest aurora-visibility readings in Europe. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Muonio · Lapland.blog",
+      "de": "Muonio · Lapland.blog",
+      "ja": "Muonio · Lapland.blog",
+      "es": "Muonio · Lapland.blog",
+      "pt-BR": "Muonio · Lapland.blog",
+      "zh-CN": "Muonio · Lapland.blog",
+      "ko": "Muonio · Lapland.blog",
+      "fr": "Muonio · Lapland.blog",
+      "it": "Muonio · Lapland.blog",
+      "nl": "Muonio · Lapland.blog",
+      "sv": "Muonio · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Pallas-Yllästunturin kansallispuiston laita. Euroopan parhaita revontulien näkyvyyslukemia. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Am Rand des Pallas-Yllästunturi-Nationalparks. Hier zählen die Nordlicht-Sichtbarkeitswerte zu den höchsten Europas. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "パラス・ユッラストゥントゥリ国立公園の縁。オーロラの観測条件はヨーロッパでも指折り。 旅の記録とネットワークの目的地ガイド。",
+      "es": "El borde del parque nacional de Pallas-Yllästunturi. Entre los mejores registros de visibilidad de auroras de Europa. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "Na borda do parque nacional de Pallas-Yllästunturi. Entre os índices de visibilidade de aurora mais altos da Europa. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "Pallas-Yllästunturi 国家公园的边缘。极光可见度在欧洲名列前茅。 旅行记录与网络中的目的地指南。",
+      "ko": "팔라스-윌래스툰투리 국립공원의 가장자리. 유럽에서 오로라 관측 확률이 가장 높은 축에 듭니다. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "En bordure du parc national de Pallas-Yllästunturi. Parmi les meilleurs taux de visibilité des aurores en Europe. Carnets de voyage et guides de destination du réseau.",
+      "it": "Al margine del parco nazionale di Pallas-Yllästunturi. Tra i valori di visibilità dell’aurora più alti d’Europa. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "Aan de rand van het nationale park Pallas-Yllästunturi. Een van de hoogste noorderlichtkansen van Europa. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Kanten av nationalparken Pallas-Yllästunturi. Bland de högsta norrskensvärdena i Europa. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
+    "path": "/destinations/yllas",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Ylläs · Lapland.blog",
+    "fallbackDescription": "Quieter sister to Levi. Wider trails, slower pace, the fell that owns its own seasons. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Ylläs · Lapland.blog",
+      "de": "Ylläs · Lapland.blog",
+      "ja": "Ylläs · Lapland.blog",
+      "es": "Ylläs · Lapland.blog",
+      "pt-BR": "Ylläs · Lapland.blog",
+      "zh-CN": "Ylläs · Lapland.blog",
+      "ko": "Ylläs · Lapland.blog",
+      "fr": "Ylläs · Lapland.blog",
+      "it": "Ylläs · Lapland.blog",
+      "nl": "Ylläs · Lapland.blog",
+      "sv": "Ylläs · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Levin hiljaisempi sisar. Leveämmät ladut, rauhallisempi tahti, tunturi jolla on omat vuodenaikansa. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Die ruhigere Schwester von Levi. Breitere Loipen, langsameres Tempo, ein Fjell mit eigenen Jahreszeiten. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "レヴィの静かな姉妹。より広いトレイル、よりゆっくりした時間、独自の季節を持つ山。 旅の記録とネットワークの目的地ガイド。",
+      "es": "La hermana tranquila de Levi. Pistas más anchas, ritmo más lento, la montaña que tiene sus propias estaciones. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "A irmã mais tranquila de Levi. Trilhas mais largas, ritmo mais lento, o monte que tem estações próprias. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "莱维安静的姐妹。雪道更宽，节奏更慢，一座有着自己季节的山。 旅行记录与网络中的目的地指南。",
+      "ko": "레비의 조용한 자매. 더 넓은 슬로프, 더 느린 속도, 자기만의 계절을 지닌 산. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "La sœur plus discrète de Levi. Pistes plus larges, rythme plus lent, le fjäll qui vit ses propres saisons. Carnets de voyage et guides de destination du réseau.",
+      "it": "La sorella più tranquilla di Levi. Piste più ampie, ritmo più lento, il fjäll che vive le proprie stagioni. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "De rustigere zus van Levi. Bredere pistes, trager tempo, de fjäll met zijn eigen seizoenen. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Levis lugnare systerort. Bredare leder, långsammare tempo, fjället som äger sina egna årstider. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
+    "path": "/destinations/kemijarvi",
+    "ogImage": "/og/page-destinations.jpg",
+    "fallbackTitle": "Kemijärvi · Lapland.blog",
+    "fallbackDescription": "Finland's northernmost city. Frozen lake, a dozen mökki within walking distance. Quiet. Field-journal entries and destination guides from across the network.",
+    "appendSiteName": false,
+    "fallbackTitleByLang": {
+      "fi": "Kemijärvi · Lapland.blog",
+      "de": "Kemijärvi · Lapland.blog",
+      "ja": "Kemijärvi · Lapland.blog",
+      "es": "Kemijärvi · Lapland.blog",
+      "pt-BR": "Kemijärvi · Lapland.blog",
+      "zh-CN": "Kemijärvi · Lapland.blog",
+      "ko": "Kemijärvi · Lapland.blog",
+      "fr": "Kemijärvi · Lapland.blog",
+      "it": "Kemijärvi · Lapland.blog",
+      "nl": "Kemijärvi · Lapland.blog",
+      "sv": "Kemijärvi · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Suomen pohjoisin kaupunki. Jäätynyt järvi, tusina mökkiä kävelymatkan päässä. Hiljaista. Merkinnät ja verkoston kohdeoppaat.",
+      "de": "Finnlands nördlichste Stadt. Zugefrorener See, ein Dutzend Hütten (mökki) in Gehweite. Still. Reisetagebuch-Einträge und Reiseziel-Guides aus dem Netzwerk.",
+      "ja": "フィンランド最北の市。凍った湖、歩いて行ける十数軒のコテージ。静か。 旅の記録とネットワークの目的地ガイド。",
+      "es": "La ciudad más septentrional de Finlandia. Un lago helado, una docena de cabañas a un paseo. Silencio. Diarios de viaje y guías de destino de la red.",
+      "pt-BR": "A cidade mais ao norte da Finlândia. Lago congelado, uma dúzia de cabanas a poucos passos. Silêncio. Diários de viagem e guias de destino da rede.",
+      "zh-CN": "芬兰最北的城市。冰封的湖面，步行可达的十几座木屋。安静。 旅行记录与网络中的目的地指南。",
+      "ko": "핀란드 최북단의 도시. 얼어붙은 호수, 걸어서 닿는 열두어 채의 오두막. 고요합니다. 여행 기록과 네트워크의 여행지 가이드.",
+      "fr": "La ville la plus septentrionale de Finlande. Un lac gelé, une dizaine de chalets à distance de marche. Le calme. Carnets de voyage et guides de destination du réseau.",
+      "it": "La città più settentrionale della Finlandia. Un lago ghiacciato, una dozzina di baite raggiungibili a piedi. Silenzio. Diari di viaggio e guide alle destinazioni dal network.",
+      "nl": "De noordelijkste stad van Finland. Een bevroren meer, een dozijn hutten op loopafstand. Stil. Reisdagboeken en bestemmingsgidsen uit het netwerk.",
+      "sv": "Finlands nordligaste stad. Frusen sjö, ett dussin mökki inom gångavstånd. Tyst. Resedagboksinlägg och destinationsguider från nätverket."
+    },
+    "copyKey": null
+  },
+  {
     "path": "/stories",
     "ogImage": "/og/page-stories.jpg",
     "fallbackTitle": "All stories · Lapland.blog",
@@ -380,8 +652,8 @@
     "fallbackTitle": "The night the sky broke open over Kemi · Lapland.blog",
     "fallbackDescription": "−23°C, 03:47, and four hours of waiting on a frozen bay near Kemi before the aurora finally tore across the sky. A Field Journal entry on the night the photos couldn't catch.",
     "fallbackTitleByLang": {
-      "sv": "Natten då himlen sprack upp över Kemi · Lapland.blog",
-      "fi": "Yö jona taivas repesi Kemin yllä · Lapland.blog",
+      "sv": "Norrsken i Kemi: var du tittar och vad Kp-talet betyder · Lapland.blog",
+      "fi": "Revontulet Kemissä: missä katsoa ja mitä Kp-luku tarkoittaa · Lapland.blog",
       "de": "Die Nacht, in der der Himmel über Kemi aufriss (auf Englisch) · Lapland.blog",
       "es": "La noche en que el cielo se abrió sobre Kemi (en inglés) · Lapland.blog",
       "fr": "La nuit où le ciel s’est déchiré au-dessus de Kemi (en anglais) · Lapland.blog",
@@ -393,8 +665,8 @@
       "zh-CN": "凯米上空天幕裂开的那一夜（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Det var tjugotre grader kallt och klockan var tre och fyrtiosju på natten, och jag grät en liten stund, kanske en minut, och ingen av bilderna jag tog den natten är den jag minns.",
-      "fi": "Oli miinus kaksikymmentäkolme astetta ja kello kolme neljäkymmentäseitsemän aamuyöllä, ja itkin hetken, ehkä minuutin, eikä yksikään sinä yönä ottamani kuva ole se, jonka muistan."
+      "sv": "Kemi ligger söder om polcirkeln, så norrskenet kräver en starkare natt där än i Enare. Så läser du prognosen, väljer plats och klarar kylan.",
+      "fi": "Kemi on napapiirin eteläpuolella, joten revontulet vaativat siellä vahvemman yön kuin Inarissa. Näin luet ennustetta, valitset paikan ja kestät pakkasen."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -406,8 +678,8 @@
     "fallbackTitle": "Why I stopped chasing the aurora with an app · Lapland.blog",
     "fallbackDescription": "Two winters of watching a phone instead of the sky. The small, boring practice that replaced it, plus three real dark-sky spots in central Lapland, and why it works for visitors.",
     "fallbackTitleByLang": {
-      "sv": "Varför jag slutade jaga norrsken med en app · Lapland.blog",
-      "fi": "Miksi lopetin revontulten jahtaamisen sovelluksella · Lapland.blog",
+      "sv": "Norrskensappen ser inga moln: så läser du prognosen rätt · Lapland.blog",
+      "fi": "Revontulisovellus ei näe pilviä: näin luet ennustetta oikein · Lapland.blog",
       "de": "Warum ich aufgehört habe, Polarlichter per App zu jagen (auf Englisch) · Lapland.blog",
       "es": "Por qué dejé de perseguir auroras con una app (en inglés) · Lapland.blog",
       "fr": "Pourquoi j’ai arrêté de traquer les aurores avec une appli (en anglais) · Lapland.blog",
@@ -419,8 +691,8 @@
       "zh-CN": "我为什么不再用 App 追极光（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Jag tittade på telefonen i stället för på himlen i två vintrar. Här är den lilla, tråkiga vana som ersatte den, och varför den fungerar bättre för nästan alla som inte bor här.",
-      "fi": "Katsoin kaksi talvea puhelinta enkä taivasta. Tässä on se pieni ja tylsä käytäntö, joka korvasi sen, ja syy siihen, miksi se toimii paremmin melkein kaikilla, jotka eivät asu täällä."
+      "sv": "En norrskensapp larmar om Kp-talet, men moln och stadens ljus avgör om du ser något. Använd prognosen en gång om dagen och gå sedan ut.",
+      "fi": "Revontulisovellus hälyttää Kp-luvusta, mutta pilvet ja kaupungin valot ratkaisevat, näetkö mitään. Näin käytät ennustetta kerran päivässä ja menet sitten ulos."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -432,8 +704,8 @@
     "fallbackTitle": "Five nights in a forest cabin: what I packed, what I forgot · Lapland.blog",
     "fallbackDescription": "A day-by-day field diary from a week at a mökki outside Kemijärvi, the gear that saved the trip, the one thing forgotten that nearly ended it, and the three items never to leave the city without.",
     "fallbackTitleByLang": {
-      "sv": "Fem nätter i en skogsstuga: vad jag packade, vad jag glömde · Lapland.blog",
-      "fi": "Viisi yötä metsämökissä: mitä pakkasin, mitä unohdin · Lapland.blog",
+      "sv": "Vinterstugvecka: vad du packar för en skogsstuga i Lappland · Lapland.blog",
+      "fi": "Mökkiviikko talvella: mitä pakata Lapin metsämökkiin · Lapland.blog",
       "de": "Fünf Nächte in einer Waldhütte: was ich einpackte, was ich vergaß (auf Englisch) · Lapland.blog",
       "es": "Cinco noches en una cabaña en el bosque: qué llevé y qué olvidé (en inglés) · Lapland.blog",
       "fr": "Cinq nuits dans un chalet en forêt : ce que j’ai emporté, ce que j’ai oublié (en anglais) · Lapland.blog",
@@ -445,8 +717,8 @@
       "zh-CN": "森林小屋五夜：带了什么，忘了什么（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "sv": "En fältdagbok dag för dag från en vecka i Tuulias stuga. Utrustningen som räddade mig, den enda glömska som nästan avslutade resan, och de tre sakerna jag aldrig mer lämnar kvar i stan.",
-      "fi": "Päiväkohtainen kenttäpäiväkirja viikolta Tuulian mökillä. Varusteet, jotka pelastivat minut, se yksi unohdus, joka melkein päätti reissun, ja kolme esinettä, joita en enää koskaan jätä kaupunkiin."
+      "sv": "Vedspis, brunn och ingen täckning: en vecka i en vinterstuga nära Kemijärvi fungerar när väskan innehåller rätt saker. Vad du behöver och vad du glömmer.",
+      "fi": "Puuhella, kaivo ja ei kenttää: viikko talvimökissä Kemijärven takana onnistuu, kun kassissa on oikeat asiat. Lista siitä, mitä tarvitset ja mitä unohdat."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -458,8 +730,8 @@
     "fallbackTitle": "A bowl of salmon soup that cost more than the flight · Lapland.blog",
     "fallbackDescription": "€42 for one bowl of lohikeitto in Rovaniemi, more than the flight up. Juniper smoke, thyme from the garden, and the chef who sat down to explain why the price was, in the end, correct.",
     "fallbackTitleByLang": {
-      "sv": "En skål laxsoppa som kostade mer än flyget · Lapland.blog",
-      "fi": "Kulhollinen lohikeittoa, joka maksoi enemmän kuin lento · Lapland.blog",
+      "sv": "Laxsoppa i Rovaniemi: var du får den och vad den kostar · Lapland.blog",
+      "fi": "Lohikeitto Rovaniemellä: missä sitä saa ja mitä se maksaa · Lapland.blog",
       "de": "Eine Lachssuppe, die mehr kostete als der Flug (auf Englisch) · Lapland.blog",
       "es": "Un plato de sopa de salmón que costó más que el vuelo (en inglés) · Lapland.blog",
       "fr": "Une soupe de saumon qui a coûté plus cher que le vol (en anglais) · Lapland.blog",
@@ -471,8 +743,8 @@
       "zh-CN": "一碗比机票还贵的三文鱼汤（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Fyrtiotvå euro. Enrök. Timjan från köksträdgården. Snön föll utanför fönstret, kocken kom ut och satte sig, och jag bestämde mig för att priset var rätt.",
-      "fi": "Neljäkymmentäkaksi euroa. Katajansavua. Timjamia keittiöpuutarhasta. Lumi satoi ikkunan ohi, keittiömestari tuli ulos ja istuutui, ja päätin että hinta oli oikea."
+      "sv": "Tre restauranger i Rovaniemi serverar laxsoppa för 12–19 euro, och flera kända ställen har den inte alls. Priserna lästa på menyerna den 14 september 2026.",
+      "fi": "Kolme Rovaniemen ravintolaa tarjoaa lohikeittoa 12–19 eurolla, ja moni tunnettu paikka ei tarjoa sitä lainkaan. Hinnat luettu ruokalistoilta 14.9.2026."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -484,8 +756,8 @@
     "fallbackTitle": "Living between two suns: what the darkness really feels like · Lapland.blog",
     "fallbackDescription": "Most of what you've read about the Finnish polar night is wrong. What kaamos really does to the body at 66.5°N, the biology, the blue hour, and the four small habits that get you through it.",
     "fallbackTitleByLang": {
-      "sv": "Mellan två solar: hur mörkret faktiskt känns · Lapland.blog",
-      "fi": "Kahden auringon välissä: millaista pimeä oikeasti on · Lapland.blog",
+      "sv": "Polarnatt i Rovaniemi: vad mörkret är och vad som hjälper · Lapland.blog",
+      "fi": "Kaamos Rovaniemellä: mitä pimeä oikeasti on ja mikä auttaa · Lapland.blog",
       "de": "Leben zwischen zwei Sonnen: wie sich die Dunkelheit wirklich anfühlt (auf Englisch) · Lapland.blog",
       "es": "Vivir entre dos soles: cómo se siente realmente la oscuridad (en inglés) · Lapland.blog",
       "fr": "Vivre entre deux soleils : ce que l’obscurité fait vraiment ressentir (en anglais) · Lapland.blog",
@@ -497,8 +769,8 @@
       "zh-CN": "生活在两个太阳之间：极夜的黑暗到底是什么感觉（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Det mesta du läst om den finska polarnatten är fel. Så här känns mörkret faktiskt genom en vinter på 66,5 grader nord — biologin, den blå timmen, ljusen och de fyra små vanor som bär en igenom.",
-      "fi": "Suurin osa siitä mitä kaamoksesta kirjoitetaan on väärin. Tässä on se, miltä pimeä oikeasti tuntuu talven ajan 66,5:n pohjoisella leveydellä: biologia, sininen hetki, kynttilät ja ne neljä pientä tapaa, jotka kantavat läpi."
+      "sv": "I Rovaniemi är polarnatten inte totalt mörker utan veckor av blå skymning. Vad den gör med kroppen, och fyra vanor som bär dig från november till februari.",
+      "fi": "Rovaniemellä kaamos ei ole täyttä pimeää vaan viikkoja sinistä hämärää. Mitä se tekee keholle, ja neljä keinoa, jotka kantavat marraskuusta helmikuuhun."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -510,8 +782,8 @@
     "fallbackTitle": "The sun did not set; it just circled the house · Lapland.blog",
     "fallbackDescription": "A week above the Arctic Circle in June, in which the sun goes around the cabin like a slow moth around a lamp, the birds refuse to stop singing, and sleep becomes a matter of opinion.",
     "fallbackTitleByLang": {
-      "fi": "Aurinko ei laskenut, se vain kiersi talon ympäri · Lapland.blog",
-      "sv": "Solen gick inte ner, den cirklade bara runt huset · Lapland.blog",
+      "fi": "Yötön yö Sodankylässä: kun aurinko ei laske ja miten nukut · Lapland.blog",
+      "sv": "Midnattssol i Sodankylä: när den lyser och hur du sover · Lapland.blog",
       "de": "Die Sonne ging nicht unter, sie umkreiste nur das Haus (auf Englisch) · Lapland.blog",
       "es": "El sol no se puso; solo dio la vuelta a la casa (en inglés) · Lapland.blog",
       "fr": "Le soleil ne s’est pas couché, il a juste tourné autour de la maison (en anglais) · Lapland.blog",
@@ -523,8 +795,8 @@
       "zh-CN": "太阳没有落下，只是绕着房子转了一圈（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Viikko napapiirin pohjoispuolella kesäkuussa, jonka aikana aurinko kiertää mökkiä kuin hidas yöperhonen lampun ympäri, linnut kieltäytyvät lopettamasta laulamista ja unesta tulee mielipidekysymys.",
-      "sv": "En vecka norr om polcirkeln i juni, där solen går runt stugan som en långsam nattfjäril kring en lampa, fåglarna vägrar sluta sjunga och sömnen blir en åsiktsfråga."
+      "fi": "Sodankylässä aurinko pysyy horisontin yllä toukokuun lopusta heinäkuun puoliväliin. Näin valo käyttäytyy, mihin aikaan se on kaunein ja miten saat nukuttua.",
+      "sv": "I Sodankylä stannar solen ovanför horisonten från slutet av maj till mitten av juli. Så beter sig ljuset, när det är som vackrast och hur du faktiskt får sova."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -536,8 +808,8 @@
     "fallbackTitle": "Twelve kilometres at one in the morning · Lapland.blog",
     "fallbackDescription": "A night hike on the marked trails above Kiilopää, in which the sun refuses to leave, the reindeer hold a meeting on the path, and the mosquitoes stay in the valley where they belong.",
     "fallbackTitleByLang": {
-      "sv": "Tolv kilometer klockan ett på natten · Lapland.blog",
-      "fi": "Kaksitoista kilometriä kello yksi yöllä · Lapland.blog",
+      "sv": "Nattvandring på Kiilopää: i juli startar du vid midnatt · Lapland.blog",
+      "fi": "Yövaellus Kiilopäällä: heinäkuussa lähdetään keskiyöllä · Lapland.blog",
       "de": "Zwölf Kilometer um ein Uhr nachts (auf Englisch) · Lapland.blog",
       "es": "Doce kilómetros a la una de la madrugada (en inglés) · Lapland.blog",
       "fr": "Douze kilomètres à une heure du matin (en anglais) · Lapland.blog",
@@ -549,8 +821,8 @@
       "zh-CN": "凌晨一点的十二公里（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "sv": "En nattvandring på de markerade lederna ovanför Kiilopää, där solen vägrar ge sig av, renarna håller möte på stigen och myggen stannar kvar i dalen där de hör hemma.",
-      "fi": "Yövaellus merkityillä reiteillä Kiilopään yläpuolella, jonka aikana aurinko kieltäytyy lähtemästä, porot pitävät kokouksen polulla ja hyttyset pysyvät laaksossa, jonne ne kuuluvatkin."
+      "sv": "I juli är det klokast att vandra på Kiilopääs fjäll om natten: lågt gyllene ljus, sval luft, och myggen stannar nere i björkskogen. Så gör du en nattvandring.",
+      "fi": "Heinäkuussa Kiilopään tunturissa on viisainta vaeltaa yöllä: valo on matalaa ja kultaista, ilma viileää ja hyttyset jäävät koivikkoon. Näin yövaellus tehdään."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -562,8 +834,8 @@
     "fallbackTitle": "Strawberry hour at the Rovaniemi market · Lapland.blog",
     "fallbackDescription": "The first Finnish strawberries reach the Rovaniemi market in early July, and for a few weeks the whole town organises itself around a wooden crate. A field report on berries, new potatoes, and fried vendace eaten standing up.",
     "fallbackTitleByLang": {
-      "fi": "Mansikkatunti Rovaniemen torilla · Lapland.blog",
-      "sv": "Jordgubbstimmen på torget i Rovaniemi · Lapland.blog",
+      "fi": "Rovaniemen tori kesällä: mansikat, uudet perunat ja muikut · Lapland.blog",
+      "sv": "Rovaniemi torg på sommaren: jordgubbar, potatis, siklöja · Lapland.blog",
       "de": "Erdbeerstunde auf dem Markt von Rovaniemi (auf Englisch) · Lapland.blog",
       "es": "La hora de las fresas en el mercado de Rovaniemi (en inglés) · Lapland.blog",
       "fr": "L’heure des fraises au marché de Rovaniemi (en anglais) · Lapland.blog",
@@ -575,8 +847,8 @@
       "zh-CN": "罗瓦涅米集市的草莓时光（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Ensimmäiset kotimaiset mansikat saapuvat Rovaniemen torille heinäkuun alussa, ja muutaman viikon ajan koko kaupunki järjestäytyy puisen laatikon ympärille. Kenttäraportti marjoista, uusista perunoista ja seisaaltaan syödyistä muikuista.",
-      "sv": "De första finska jordgubbarna når torget i Rovaniemi i början av juli, och i några veckor organiserar sig hela staden kring en trälåda. En fältrapport om bär, färskpotatis och stekt siklöja äten stående."
+      "fi": "Suomalaiset mansikat tulevat Rovaniemen torille heinäkuun alussa. Näin tori toimii: milloin mennä, mitä ostaa ja miten uudet perunat ja muikut syödään.",
+      "sv": "De finska jordgubbarna når Rovaniemi torg i början av juli. Så fungerar torget: när du ska gå, vad du ska köpa och hur färskpotatis och stekt siklöja äts."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -588,8 +860,8 @@
     "fallbackTitle": "The sauna thermometer said eighty-two · Lapland.blog",
     "fallbackDescription": "One July evening at a lakeside cabin, told in sauna rounds: the two-hour fire, the birch whisk, the walk down the dock, and the exact temperature of a Lapland lake at midnight.",
     "fallbackTitleByLang": {
-      "fi": "Saunan mittari näytti kahdeksaakymmentäkahta · Lapland.blog",
-      "sv": "Bastutermometern visade åttiotvå · Lapland.blog",
+      "fi": "Lapin rantasauna: näin puukiuas lämmitetään oikein · Lapland.blog",
+      "sv": "Strandbastu i Lappland: så eldar du bastun rätt · Lapland.blog",
       "de": "Das Saunathermometer zeigte zweiundachtzig (auf Englisch) · Lapland.blog",
       "es": "El termómetro de la sauna marcaba ochenta y dos (en inglés) · Lapland.blog",
       "fr": "Le thermomètre du sauna indiquait quatre-vingt-deux (en anglais) · Lapland.blog",
@@ -601,8 +873,8 @@
       "zh-CN": "桑拿温度计指着八十二度（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Yksi heinäkuun ilta järven rannalla mökillä, kerrottuna löylyissä: kahden tunnin lämmitys, vasta, kävely laiturille ja lappilaisen järven tarkka lämpötila keskiyöllä.",
-      "sv": "En julikväll vid en stuga invid sjön, berättad i bastuvarv: den två timmar långa eldningen, björkkvasten, promenaden ut på bryggan och den exakta temperaturen i en lappländsk sjö vid midnatt."
+      "fi": "Puukiuas lämpiää kahdessa tunnissa, ja siinä ajassa ehtii klapit, vastan ja laiturin. Näin mökkivieras lämmittää Lapin rantasaunan ensimmäistä kertaa.",
+      "sv": "En vedeldad bastu tar två timmar att värma, och det är precis den tid som går åt till veden, kvasten och bryggan. Så eldar en stuggäst en lappländsk sjöbastu."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -614,8 +886,8 @@
     "fallbackTitle": "What July in Lapland actually asks you to pack · Lapland.blog",
     "fallbackDescription": "Ten days in the north with one duffel bag: what earned its place, what failed in the field, and the three cheap items that outperformed everything with a logo. A packing report from the warm end of the Lapland year.",
     "fallbackTitleByLang": {
-      "sv": "Vad juli i Lappland faktiskt kräver av din väska · Lapland.blog",
-      "fi": "Mitä heinäkuun Lappi oikeasti vaatii laukkuusi · Lapland.blog",
+      "sv": "Packlista för Lappland i juli: det du faktiskt behöver · Lapland.blog",
+      "fi": "Heinäkuun pakkauslista Lappiin: mitä oikeasti tarvitset · Lapland.blog",
       "de": "Was man im Juli wirklich für Lappland einpacken sollte (auf Englisch) · Lapland.blog",
       "es": "Lo que julio en Laponia realmente exige llevar en la maleta (en inglés) · Lapland.blog",
       "fr": "Ce que juillet en Laponie vous demande vraiment d’emporter (en anglais) · Lapland.blog",
@@ -627,8 +899,8 @@
       "zh-CN": "拉普兰的七月，真正需要打包的东西（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Tio dagar i norr med en enda bag: vad som förtjänade sin plats, vad som fallerade i fält och de tre billiga sakerna som slog allt med logga. En packningsrapport från det lappländska årets varma ände.",
-      "fi": "Kymmenen päivää pohjoisessa yhdellä kassilla: mikä ansaitsi paikkansa, mikä petti maastossa ja ne kolme halpaa esinettä, jotka päihittivät kaiken logollisen. Pakkausraportti Lapin vuoden lämpimästä päästä."
+      "sv": "Samma julidag kan bjuda på värmebölja på eftermiddagen och blåst och kyla på fjället om natten. Så packar du tio dagar i en väska utan onödig vikt.",
+      "fi": "Sama heinäkuun päivä voi olla iltapäivällä hellettä ja yöllä tunturissa tuulinen ja kylmä. Näin pakkaat kymmeneksi päiväksi yhteen kassiin ilman turhaa painoa."
     },
     "copyKey": "post",
     "canonicalLocale": "en"
@@ -639,8 +911,8 @@
     "fallbackTitle": "154 Lapland rest areas lose their firewood service · Lapland.blog",
     "fallbackDescription": "Finland's park agency is ending firewood and toilet servicing at 154 rest areas. Here is what it means for a hiker in Lapland, which sites are on the list, and why the saving lands in the wrong place.",
     "fallbackTitleByLang": {
-      "fi": "Autiotuvan puuvaja voi olla tyhjä ensi talvena: 154 taukopaikkaa jää ilman huoltoa · Lapland.blog",
-      "sv": "Vedboden kan vara tom nästa vinter — 154 rastplatser faller utanför underhållet · Lapland.blog",
+      "fi": "154 taukopaikkaa jää ilman polttopuita ensi talvena · Lapland.blog",
+      "sv": "154 rastplatser blir utan ved nästa vinter · Lapland.blog",
       "de": "154 Rastplätze in Lappland verlieren ihren Brennholzservice (auf Englisch) · Lapland.blog",
       "es": "154 áreas de descanso de Laponia se quedan sin servicio de leña (en inglés) · Lapland.blog",
       "fr": "154 aires de repos de Laponie perdent leur service de bois de chauffage (en anglais) · Lapland.blog",
@@ -652,8 +924,8 @@
       "zh-CN": "拉普兰 154 处休息点停止供应柴火（英文） · Lapland.blog"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Kerromme, mitä se tarkoittaa Lapin retkeilijälle, mitkä kohteet ovat listalla ja miksi säästö osuu väärään kohtaan.",
-      "sv": "Forststyrelsen avslutar ved- och toalettunderhållet på 154 rastplatser. Vi går igenom vad det betyder för vandraren i Lappland, vilka mål som finns på listan och varför besparingen träffar fel."
+      "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Mitä se merkitsee retkeilijälle ja mitkä Lapin kohteet ovat listalla.",
+      "sv": "Forststyrelsen slutar med ved- och toalettservice på 154 rastplatser. Vad det betyder för vandraren och vilka platser i Lappland som finns på listan."
     },
     "copyKey": "post",
     "canonicalLocale": "en"

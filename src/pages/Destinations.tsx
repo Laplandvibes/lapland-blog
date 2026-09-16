@@ -11,80 +11,13 @@ import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import { usePosts } from '../hooks/usePosts';
+import { DESTINATIONS, stayUrl, type Destination } from '../data/destinations';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import type { Post } from '../data/posts';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
-interface Destination {
-  slug: string;            // matches the lower-case tag
-  name: string;
-  region: string;          // e.g. "South Lapland", "Far North"
-  blurb: string;
-  hero: string;            // local /images/* webp
-}
-
-// 8 destinations — match the LV ecosystem geography. Empty ones become
-// "be the first to write" prompts.
-const DESTINATIONS: Destination[] = [
-  {
-    slug: 'rovaniemi',
-    name: 'Rovaniemi',
-    region: 'On the Arctic Circle',
-    blurb: "Lapland's capital. Where most flights land. The base camp for everything north of here.",
-    hero: '/images/category-aurora-1200.webp',
-  },
-  {
-    slug: 'saariselka',
-    name: 'Saariselkä',
-    region: 'Far north, fells country',
-    blurb: 'Treeless tundra, glass igloos, the Urho Kekkonen national park out the back door.',
-    hero: '/images/trip-forest-walk-1200.webp',
-  },
-  {
-    slug: 'levi',
-    name: 'Levi',
-    region: 'West Lapland, fell country',
-    blurb: "Finland's biggest ski resort. Direct flights from Helsinki in winter. Family-friendly basecamp.",
-    hero: '/images/trip-cabin-life-1200.webp',
-  },
-  {
-    slug: 'kemi',
-    name: 'Kemi',
-    region: 'Bay of Bothnia coast',
-    blurb: 'Snow castle, ice-breaker tours, and the southernmost Lapland coast. Flatter ground, salt air, sea aurora.',
-    hero: '/images/trip-aurora-chase-1200.webp',
-  },
-  {
-    slug: 'inari',
-    name: 'Inari',
-    region: 'Sámi heartland',
-    blurb: "Finland's third-largest lake. The Sámi cultural centre Siida. Where Lapland feels furthest from Europe.",
-    hero: '/images/category-seasons-1200.webp',
-  },
-  {
-    slug: 'muonio',
-    name: 'Muonio',
-    region: 'West Lapland, northern lights belt',
-    blurb: 'Pallas-Yllästunturi national park edge. Among the highest aurora-visibility readings in Europe.',
-    hero: '/images/pillar-cold-1200.webp',
-  },
-  {
-    slug: 'yllas',
-    name: 'Ylläs',
-    region: 'West Lapland, fell country',
-    blurb: 'Quieter sister to Levi. Wider trails, slower pace, the fell that owns its own seasons.',
-    hero: '/images/pillar-shelter-1200.webp',
-  },
-  {
-    slug: 'kemijarvi',
-    name: 'Kemijärvi',
-    region: 'East Lapland, lake country',
-    blurb: "Finland's northernmost city. Frozen lake, a dozen mökki within walking distance. Quiet.",
-    hero: '/images/trip-silence-1200.webp',
-  },
-];
 
 function countMatching(posts: Post[], slug: string): number {
   return posts.filter((p) => p.tags.some((t) => t.toLowerCase() === slug)).length;
@@ -271,7 +204,7 @@ function DestinationCard({
         <div className="space-y-3 mt-auto pt-4 border-t border-[var(--color-paper-border)]">
           {hasEntries ? (
             <Link
-              to={to(`/stories?tag=${d.slug}`)}
+              to={to(`/destinations/${d.slug}`)}
               className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
               {c.readEntries}
@@ -279,7 +212,7 @@ function DestinationCard({
             </Link>
           ) : (
             <Link
-              to={to('/signin')}
+              to={to(`/destinations/${d.slug}`)}
               className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
               {c.beFirstWrite}
@@ -289,7 +222,7 @@ function DestinationCard({
 
           {/* Sales CTA — every destination card gets a lodging hook */}
           <a
-            href={`https://go.laplandvibes.com/go/hotels?sid=destinations_${d.slug}&ss=${encodeURIComponent(d.name === 'Ylläs' ? 'Äkäslompolo' : d.name)}%2C+Finland&locale=${lang === 'fi' ? 'fi_FI' : lang === 'de' ? 'de_DE' : 'en_US'}`}
+            href={stayUrl(d, `destinations_${d.slug}`, lang)}
             target="_blank"
             rel="sponsored nofollow noopener"
             className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"

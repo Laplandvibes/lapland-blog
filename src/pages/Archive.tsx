@@ -11,6 +11,7 @@ import { categories } from '../data/categories';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { usePosts } from '../hooks/usePosts';
+import { DESTINATIONS } from '../data/destinations';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
@@ -23,14 +24,22 @@ export default function Archive() {
   const themes = COPY[lang].category.themes;
   const [filter, setFilter] = useState<Filter>('all');
   const [query, setQuery] = useState('');
+  const [place, setPlace] = useState<string | null>(null);
   const [searchParams] = useSearchParams();
   const tagParam = searchParams.get('tag')?.toLowerCase() ?? null;
+  const placeParam = searchParams.get('place')?.toLowerCase() ?? null;
   const { posts, loading } = usePosts();
 
-  // Pre-fill the search box from ?tag= so /destinations links filter Archive.
+  // ?place=X valitsee paikkanapin. Vanha ?tag=X tekee saman jos se on kohde,
+  // muuten se menee hakuun kuten ennen — vanhat linkit eivät saa rikkoutua.
   useEffect(() => {
+    const kohde = placeParam ?? tagParam;
+    if (kohde && DESTINATIONS.some((d) => d.slug === kohde)) {
+      setPlace(kohde);
+      return;
+    }
     if (tagParam) setQuery(tagParam);
-  }, [tagParam]);
+  }, [tagParam, placeParam]);
 
   useSeo({
     title: c.pageTitle,
@@ -47,6 +56,13 @@ export default function Archive() {
     ])
   );
 
+  // Vain ne paikat joista on kirjoitettu: nappi joka antaa nolla tulosta on
+  // lukijalle pettymys, ja tyhjA kohde lOytyy silti /destinations-sivulta.
+  const paikat = useMemo(() => {
+    const on = new Set(posts.flatMap((p) => p.tags.map((t) => t.toLowerCase())));
+    return DESTINATIONS.filter((d) => on.has(d.slug));
+  }, [posts]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return [...posts]
@@ -55,6 +71,7 @@ export default function Archive() {
           new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
       )
       .filter((p) => (filter === 'all' ? true : p.category === filter))
+      .filter((p) => (place ? p.tags.some((t) => t.toLowerCase() === place) : true))
       .filter((p) => {
         if (!q) return true;
         return (
@@ -63,7 +80,7 @@ export default function Archive() {
           p.tags.some((t) => t.toLowerCase().includes(q))
         );
       });
-  }, [filter, query, posts]);
+  }, [filter, place, query, posts]);
 
   return (
     <div className="min-h-screen bg-night text-snow">
@@ -155,6 +172,45 @@ export default function Archive() {
               />
             </div>
           </div>
+          {/* Paikkakunnat — Vesa 16.9.2026: hakukenttä ei ole navigaatiota.
+              Näkyvä nappi kertoo että paikan mukaan VOI selata; hakukenttä
+              edellyttää että lukija arvaa sen itse. */}
+          {paikat.length > 0 && (
+            <div className="mt-5 pt-5 border-t border-purple/15">
+              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-3">
+                {c.placesLabel}
+              </p>
+              <div className="flex flex-wrap gap-2" role="group" aria-label={c.placesLabel}>
+                <button
+                  type="button"
+                  onClick={() => setPlace(null)}
+                  aria-pressed={place === null}
+                  className={`lv-tap min-h-[44px] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
+                    place === null
+                      ? 'bg-pink text-white'
+                      : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
+                  }`}
+                >
+                  {c.allPlaces}
+                </button>
+                {paikat.map((d) => (
+                  <button
+                    type="button"
+                    key={d.slug}
+                    onClick={() => setPlace(d.slug)}
+                    aria-pressed={place === d.slug}
+                    className={`lv-tap min-h-[44px] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
+                      place === d.slug
+                        ? 'bg-pink text-white'
+                        : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
+                    }`}
+                  >
+                    {d.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
