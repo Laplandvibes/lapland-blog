@@ -286,12 +286,19 @@ export default function Post() {
                 </span>
               </div>
 
-          {/* Editorial framing — transparent attribution (honest model). */}
+          {/* Kuka tämän kirjoitti — toimitus vai lukija?
+              🔴 Vesa 16.9.2026: laatikko lupasi "lähteet lopussa" (mitattu:
+              lähdeosio 0/11 jutussa) ja myi oman blogin aloittamista keskellä
+              artikkelia. Lisäksi sillä ei ollut ehtoa, joten lukijan omassa
+              matkablogissa olisi lukenut "LaplandVibesin toimitus". Laatikko
+              kertoo nyt vain sen mitä se voi pitää: kumman juttu tämä on. */}
           <div className="max-w-[65ch] mx-auto mb-10 flex items-start gap-3 rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-5 py-4">
             <PenLine size={16} className="text-[var(--color-accent)] shrink-0 mt-0.5" />
             <p className="text-[var(--color-ink-soft)] text-[0.9rem] leading-relaxed">
-              <span className="font-semibold text-[var(--color-ink)]">{c.editorialLabel}.</span>{' '}
-              {c.editorialNote}
+              <span className="font-semibold text-[var(--color-ink)]">
+                {post.byReader ? c.readerLabel : c.editorialLabel}.
+              </span>{' '}
+              {post.byReader ? c.readerNote : c.editorialNote}
             </p>
           </div>
 

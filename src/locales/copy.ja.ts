@@ -463,7 +463,9 @@ const ja: SectionCopy = {
     tagged: 'タグ',
     exploreMore: 'LaplandVibesネットワークでさらに探す',
     editorialLabel: 'LaplandVibes編集部',
-    editorialNote: '場所は名前で、値段はメニューから、出典は最後に。あなた自身の記事も同じ道具で書けます。',
+    editorialNote: '編集部が書いた記事です。読者の旅日記ではありません。',
+    readerLabel: '読者の旅日記',
+    readerNote: 'LaplandVibesの読者が自分の旅について書いた記事です。',
   },
   signIn: {
     pageTitle: 'ラップランドの旅を計画 | Lapland.blog',

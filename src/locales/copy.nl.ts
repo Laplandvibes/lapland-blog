@@ -413,7 +413,9 @@ const nl: SectionCopy = {
     tagged: 'Getagd',
     exploreMore: 'Ontdek meer in het LaplandVibes-netwerk',
     editorialLabel: 'Redactie van LaplandVibes',
-    editorialNote: 'Plaatsen bij naam, prijzen van de kaart gelezen, bronnen aan het eind. Uw eigen verhalen schrijft u met hetzelfde gereedschap.',
+    editorialNote: 'Geschreven door onze redactie, geen reisdagboek van een lezer.',
+    readerLabel: 'Reisdagboek van een lezer',
+    readerNote: 'Geschreven door een lezer van LaplandVibes over de eigen reis.',
   },
   signIn: {
     pageTitle: 'Plan uw Lapland-reis | Lapland.blog',

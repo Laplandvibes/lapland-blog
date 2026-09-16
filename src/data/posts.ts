@@ -32,6 +32,15 @@ export interface Post {
   /** Author registry key (src/data/author.ts) — 'vesa'/'fieldjournal' or a pen handle. */
   author: string;
   /**
+   * Onko tämä LUKIJAN oma matkapäiväkirja vai toimituksen juttu.
+   *
+   * 🔴 `author` ei kerro tätä: adapteri pudottaa tuntemattoman handlen
+   * 'fieldjournal'-ääneen ("umbrella voice"), joten lukijan juttu näyttää
+   * siltä kuin toimitus olisi sen kirjoittanut. Lukijan pitää voida erottaa
+   * nämä kaksi, joten ero luetaan kannasta erikseen (author_id).
+   */
+  byReader?: boolean;
+  /**
    * Editorial — marks the post that leads the front page (see featuredPost()).
    * Nothing is paid for it: adSlots.ts carries `sponsors: [null, null]`.
    *

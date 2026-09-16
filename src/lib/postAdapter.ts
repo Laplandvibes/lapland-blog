@@ -91,6 +91,9 @@ export function rowToPost(row: BlogPostRow): Post {
       row.author_snapshot?.handle && authors[row.author_snapshot.handle]
         ? row.author_snapshot.handle
         : 'fieldjournal',
+    // Kirjautuneen kayttajan juttu saa author_id:n; toimituksen siemenjutuilla
+    // se on null. Tama on ainoa kentta joka sailyttaa eron.
+    byReader: Boolean(row.author_id),
     featured: row.featured,
     theme: normalizeTheme(row.theme),
     content: parseContent(row.content),

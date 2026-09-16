@@ -413,7 +413,9 @@ const fr: SectionCopy = {
     tagged: 'Étiqueté',
     exploreMore: 'Explorez plus du réseau LaplandVibes',
     editorialLabel: 'La rédaction de LaplandVibes',
-    editorialNote: 'Des lieux nommés, des prix lus sur la carte, des sources à la fin. Vos propres textes, vous les écrivez avec le même outil.',
+    editorialNote: 'Écrit par notre rédaction : ce n’est pas le carnet de voyage d’un lecteur.',
+    readerLabel: 'Carnet de voyage d’un lecteur',
+    readerNote: 'Écrit par une lectrice ou un lecteur de LaplandVibes sur son propre voyage.',
   },
   signIn: {
     pageTitle: 'Planifiez votre voyage en Laponie | Lapland.blog',

@@ -291,6 +291,8 @@ export type SectionCopy = {
     exploreMore: string;
     editorialLabel: string;
     editorialNote: string;
+    readerLabel: string;
+    readerNote: string;
   };
   signIn: {
     pageTitle: string;

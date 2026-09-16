@@ -464,7 +464,9 @@ const fi: SectionCopy = {
     tagged: 'Tagit',
     exploreMore: 'Lisää LaplandVibes-verkostossa',
     editorialLabel: 'LaplandVibesin toimitus',
-    editorialNote: 'Paikat nimeltä, hinnat ruokalistalta ja lähteet lopussa. Omat merkintäsi kirjoitat samalla työkalulla.',
+    editorialNote: 'Toimituksemme kirjoittama, ei lukijan matkapäiväkirja.',
+    readerLabel: 'Lukijan matkapäiväkirja',
+    readerNote: 'Kirjoittanut LaplandVibesin lukija omalta matkaltaan.',
   },
   signIn: {
     pageTitle: 'Suunnittele Lapin matkasi | Lapland.blog',

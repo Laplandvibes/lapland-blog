@@ -463,7 +463,9 @@ const sv: SectionCopy = {
     tagged: 'Taggat',
     exploreMore: 'Utforska mer från LaplandVibes-nätverket',
     editorialLabel: 'LaplandVibes redaktion',
-    editorialNote: 'Platser vid namn, priser lästa från menyn, källor sist. Dina egna inlägg skriver du med samma verktyg.',
+    editorialNote: 'Skriven av vår redaktion, inte en läsares resedagbok.',
+    readerLabel: 'En läsares resedagbok',
+    readerNote: 'Skriven av en läsare om den egna resan.',
   },
   signIn: {
     pageTitle: 'Planera din Lapplandsresa | Lapland.blog',

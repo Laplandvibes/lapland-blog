@@ -463,7 +463,9 @@ const en: SectionCopy = {
     tagged: 'Tagged',
     exploreMore: 'Explore more from the LaplandVibes network',
     editorialLabel: 'From the LaplandVibes desk',
-    editorialNote: 'Places named, prices read off the menu, sources at the end. You write your own entries with the same tool.',
+    editorialNote: 'Written by our editorial team, not a reader’s travel diary.',
+    readerLabel: 'A reader’s travel diary',
+    readerNote: 'Written by a LaplandVibes reader about their own trip.',
   },
   signIn: {
     pageTitle: 'Plan your Lapland trip | Lapland.blog',

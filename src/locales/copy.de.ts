@@ -465,7 +465,9 @@ const de: SectionCopy = {
     tagged: 'Schlagwörter',
     exploreMore: 'Mehr aus dem LaplandVibes-Netzwerk',
     editorialLabel: 'LaplandVibes-Redaktion',
-    editorialNote: 'Orte beim Namen, Preise von der Karte gelesen, Quellen am Ende. Ihre eigenen Einträge schreiben Sie mit demselben Werkzeug.',
+    editorialNote: 'Von unserer Redaktion geschrieben, kein Reisetagebuch aus der Leserschaft.',
+    readerLabel: 'Reisetagebuch aus der Leserschaft',
+    readerNote: 'Geschrieben von einer Leserin oder einem Leser über die eigene Reise.',
   },
   signIn: {
     pageTitle: 'Planen Sie Ihre Lappland-Reise | Lapland.blog',

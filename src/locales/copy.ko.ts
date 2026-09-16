@@ -413,7 +413,9 @@ const ko: SectionCopy = {
     tagged: '태그',
     exploreMore: 'LaplandVibes 네트워크에서 더 둘러보기',
     editorialLabel: 'LaplandVibes 편집부',
-    editorialNote: '장소는 이름으로, 가격은 메뉴판에서, 출처는 마지막에. 당신의 글도 같은 도구로 씁니다.',
+    editorialNote: '편집팀이 쓴 글이며, 독자의 여행 일기가 아닙니다.',
+    readerLabel: '독자의 여행 일기',
+    readerNote: 'LaplandVibes 독자가 자신의 여행에 대해 쓴 글입니다.',
   },
   signIn: {
     pageTitle: '라플란드 여행을 계획하세요 | Lapland.blog',
