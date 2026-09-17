@@ -127,7 +127,7 @@ const row = {
   tags: ['seasons', 'light', 'autumn', 'ruska', 'august', 'september'],
   hero_image: HERO,
   hero_alt: HERO_ALT,
-  author_snapshot: { handle: 'aino', display_name: 'Aino Karvonen', avatar_url: null },
+  author_snapshot: { handle: 'fieldjournal', display_name: 'LaplandVibes', avatar_url: null },
   status: 'draft',
   published_at: '2026-08-28',
   featured: false,
@@ -138,7 +138,7 @@ const q = (s) => `'${String(s).replace(/'/g, "''")}'`;
 const arr = (a) => `ARRAY[${a.map(q).join(',')}]::text[]`;
 const json = (o) => `${q(JSON.stringify(o))}::jsonb`;
 
-const sql = `-- Field Journal pen: Aino Karvonen (Seasons & Light desk). Autumn 2026 batch.
+const sql = `-- Toimitus: LaplandVibes (handle fieldjournal; kynanimet poistettu 15.9.2026, ks. src/data/author.ts). Autumn 2026 batch.
 -- 🔴 DRAFT — status = 'draft'. Running this inserts the row but publishes nothing:
 -- every public query filters status = 'published'. Review it in /admin and flip
 -- the status there (or re-run with status changed) to publish.
