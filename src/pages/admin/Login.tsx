@@ -75,7 +75,7 @@ export default function Login() {
       <div className="absolute top-6 left-6">
         <Link
           to="/"
-          className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+          className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
         >
           <ArrowLeft size={14} /> Back to site
         </Link>

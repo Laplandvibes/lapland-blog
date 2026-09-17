@@ -67,7 +67,7 @@ export default function Category() {
           <Reveal>
             <Link
               to={to('/stories')}
-              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-8 transition-colors"
+              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-8 transition-colors"
             >
               <ArrowLeft size={14} /> {c.allStoriesBack}
             </Link>
@@ -99,7 +99,7 @@ export default function Category() {
               <p className="text-sm mb-6">{c.emptyBody}</p>
               <Link
                 to={to('/stories')}
-                className="inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold uppercase tracking-wider transition-colors"
+                className="lv-tap inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold uppercase tracking-wider transition-colors"
               >
                 {c.emptyLink}
               </Link>

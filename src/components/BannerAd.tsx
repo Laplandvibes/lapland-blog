@@ -324,7 +324,7 @@ export default function BannerAd({
           href={href}
           target="_blank"
           rel="sponsored nofollow noopener"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] transition-colors"
+          className="lv-tap inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] transition-colors"
         >
           {defaults.cta}
           <ArrowUpRight size={14} />
@@ -355,7 +355,7 @@ export default function BannerAd({
         href={href}
         target="_blank"
         rel="sponsored nofollow noopener"
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-pink-300 hover:text-pink-200 transition-colors"
+        className="lv-tap inline-flex items-center gap-1.5 text-sm font-semibold text-pink-300 hover:text-pink-200 transition-colors"
       >
         {defaults.cta}
         <ArrowUpRight size={14} />

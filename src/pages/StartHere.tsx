@@ -240,7 +240,7 @@ export default function StartHere() {
               href="https://laplandvibes.com"
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center gap-2 text-pink hover:text-snow text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+              className="lv-tap inline-flex items-center gap-2 text-pink hover:text-snow text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
             >
               {c.planAllSites}
               <ArrowRight size={14} />
@@ -317,7 +317,7 @@ export default function StartHere() {
             <div className="mt-12 text-center">
               <Link
                 to={to('/stories')}
-                className="inline-flex items-center gap-2 text-pink hover:text-snow text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="lv-tap inline-flex items-center gap-2 text-pink hover:text-snow text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
               >
                 {c.everyEntry}
                 <ArrowRight size={14} />

@@ -223,7 +223,7 @@ export default function Post() {
             <div className="max-w-[72rem] mx-auto">
               <Link
                 to={to('/stories')}
-                className="inline-flex items-center gap-1.5 text-white/90 hover:text-white text-xs uppercase tracking-[0.25em] font-semibold transition-colors hero-text-shadow-sm"
+                className="lv-tap inline-flex items-center gap-1.5 text-white/90 hover:text-white text-xs uppercase tracking-[0.25em] font-semibold transition-colors hero-text-shadow-sm"
               >
                 <ArrowLeft size={14} /> {c.allStories}
               </Link>
@@ -250,7 +250,7 @@ export default function Post() {
               {cat && (
                 <Link
                   to={to(`/category/${cat.slug}`)}
-                  className="inline-flex items-center gap-2 text-[var(--color-accent)] text-[11px] uppercase tracking-[0.32em] font-bold mb-5 hover:text-[var(--color-accent-dark)] transition-colors"
+                  className="lv-tap inline-flex items-center gap-2 text-[var(--color-accent)] text-[11px] uppercase tracking-[0.32em] font-bold mb-5 hover:text-[var(--color-accent-dark)] transition-colors"
                 >
                   <span className="w-6 h-px bg-[var(--color-accent)]/50" />
                   {catName} · {post.kicker}

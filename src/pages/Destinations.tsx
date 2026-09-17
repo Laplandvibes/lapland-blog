@@ -203,7 +203,7 @@ function DestinationCard({
           {hasEntries ? (
             <Link
               to={to(`/destinations/${d.slug}`)}
-              className="inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
+              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
               {c.readEntries}
               <ArrowRight size={12} />
@@ -211,7 +211,7 @@ function DestinationCard({
           ) : (
             <Link
               to={to(`/destinations/${d.slug}`)}
-              className="inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
+              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
             >
               {c.beFirstWrite}
               <ArrowRight size={12} />
@@ -223,7 +223,7 @@ function DestinationCard({
             href={stayUrl(d, `destinations_${d.slug}`, lang)}
             target="_blank"
             rel="sponsored nofollow noopener"
-            className="inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
+            className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
           >
             <BedDouble size={11} />
             {c.findStayPrefix} {d.name}
