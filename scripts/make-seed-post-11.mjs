@@ -11,13 +11,25 @@
 //
 // 🔴 Every daylight figure in the piece was COMPUTED with the NOAA solar-position
 // algorithm for 2026 (sun's centre above -0.833°, i.e. upper limb clearing the
-// horizon with refraction), not taken from a travel page:
+// horizon with refraction), not taken from a travel page. Recomputed
+// independently 17.9.2026 (Rovaniemi 66.504 N 25.729 E, Utsjoki church village
+// 69.908 N 27.028 E, Helsinki 60.170 N 24.938 E, EET/EEST):
 //   Rovaniemi  1 Aug 18h53 · 28 Aug 15h22 · 22 Sep 12h21 · 31 Oct 7h37
-//   Utsjoki    1 Aug 21h00 · 28 Aug 16h04 · 22 Sep 12h24 · 31 Oct 6h38
+//   Utsjoki    1 Aug 21h08 · 28 Aug 16h03 · 22 Sep 12h24 · 31 Oct 6h38
 //   Helsinki   1 Aug 16h52 · 28 Aug 14h32 · 22 Sep 12h16 · 31 Oct 8h46
-//   Rate of loss late Aug – mid Oct: Rovaniemi ~7.5 min/day, Utsjoki ~9,
-//   Helsinki ~5.5.
-// Recompute before changing any of them; they are the whole point of the column.
+//   Daily change on 28 Aug: Rovaniemi sunrise +3.4 min, sunset −4.0 min, total
+//   −7.4; Utsjoki −9.3; Helsinki −5.4 (the prose rounds to 7.5 / 9 / 5.5).
+//   The 28.8. draft said Utsjoki 21h00 on 1 Aug; at the grazing sun angle of
+//   Utsjoki in early August the value moves ~4 min per 0.05° of latitude, so the
+//   church-village coordinate above is the one now used. Recompute before
+//   changing any of them; they are the whole point of the column.
+//
+// 🔴 Hero (17.9.2026): Wikimedia Commons "Autumn landscape at lake Äkäslompolo,
+// Kolari, Lapland, Finland, 2023 September" by Simo Räsänen (Ximonic),
+// CC BY-SA 4.0, 6600×3604, taken 2023-09-14, GPS 67.612 N 24.141 E. Resized to
+// 1200 px only, no crop. Price 0 €. The credit is printed in the inline image
+// caption, which is the same photograph. The AI hero path the routine planned
+// ('/images/autumn-light-lake-1200.webp') never existed as a file.
 //
 // Usage: node scripts/make-seed-post-11.mjs   (writes the .sql, runs nothing)
 
@@ -28,9 +40,9 @@ import { fileURLToPath } from 'node:url';
 const HERE = dirname(fileURLToPath(import.meta.url));
 
 const SLUG = 'seven-and-a-half-minutes-a-day';
-const HERO = '/images/autumn-light-lake-1200.webp';
+const HERO = '/images/autumn-light-akaslompolo-1200.webp';
 const HERO_ALT =
-  'A still forest lake at dusk in Finnish Lapland in early September, mountain birch turning gold along the far shore and a dead standing pine at the water edge';
+  'Lake Äkäslompolo in Kolari in mid-September, a lone birch turned gold on the shore, more gold birch along the far bank and the Ylläs fells behind under a broken sky';
 
 const content = [
   {
@@ -54,7 +66,7 @@ const content = [
     type: 'list',
     items: [
       'Rovaniemi, 1 August: 18 h 53 min. 28 August: 15 h 22 min. 22 September: 12 h 21 min. 31 October: 7 h 37 min.',
-      'Utsjoki, 1 August: 21 h 00 min. 28 August: 16 h 04 min. 22 September: 12 h 24 min. 31 October: 6 h 38 min.',
+      'Utsjoki, 1 August: 21 h 08 min. 28 August: 16 h 03 min. 22 September: 12 h 24 min. 31 October: 6 h 38 min.',
       'Helsinki, for comparison, 1 August: 16 h 52 min. 31 October: 8 h 46 min.',
       'Rate of loss through late August and September: about 7.5 minutes a day in Rovaniemi, about 9 in Utsjoki, about 5.5 in Helsinki.',
     ],
@@ -77,7 +89,7 @@ const content = [
     src: HERO,
     alt: HERO_ALT,
     caption:
-      'Early September, and the last hour of light now happens at a civilised time again. In June this same view was on offer at two in the morning, which sounds wonderful and ruins a week of sleep.',
+      'Mid-September at Äkäslompolo in Kolari: the birches have turned, and the afternoon light already sits lower than the midnight light did in June, which sounds like a loss and is the reason the sky is worth watching again. Photo: Simo Räsänen (Ximonic), Wikimedia Commons, CC BY-SA 4.0.',
     full: true,
   },
   { type: 'heading', level: 2, text: 'What you get back' },

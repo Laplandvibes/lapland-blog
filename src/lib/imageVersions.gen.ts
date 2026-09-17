@@ -10,6 +10,7 @@ export const IMAGE_VERSIONS: Record<string, string> = {
   '/images/aside-vesa-480.webp': '0ada4c8b',
   '/images/aside-vesa-800.avif': '756304da',
   '/images/aside-vesa-800.webp': 'ba95121d',
+  '/images/autumn-light-akaslompolo-1200.webp': 'de349bba',
   '/images/category-aurora-1200.avif': '5ce5a13b',
   '/images/category-aurora-1200.webp': '17cee344',
   '/images/category-aurora-480.avif': 'dcaa71b8',

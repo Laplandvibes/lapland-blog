@@ -929,5 +929,31 @@
     },
     "copyKey": "post",
     "canonicalLocale": "en"
+  },
+  {
+    "path": "/post/seven-and-a-half-minutes-a-day",
+    "ogImage": "/images/autumn-light-akaslompolo-1200.webp",
+    "appendSiteName": false,
+    "fallbackTitle": "Seven and a half minutes a day: how fast Lapland loses its light · Lapland.blog",
+    "fallbackDescription": "Nobody announces the end of the summer light. Rovaniemi loses about seven and a half minutes of daylight a day in late August, Utsjoki nine, and one evening you cannot see the path to the woodshed.",
+    "fallbackTitleByLang": {
+      "fi": "Seitsemän ja puoli minuuttia päivässä · Lapland.blog",
+      "sv": "Sju och en halv minut om dagen · Lapland.blog",
+      "de": "Siebeneinhalb Minuten am Tag: wie schnell Lappland sein Licht verliert (auf Englisch) · Lapland.blog",
+      "es": "Siete minutos y medio al día: lo rápido que Laponia pierde la luz (en inglés) · Lapland.blog",
+      "fr": "Sept minutes et demie par jour : à quelle vitesse la Laponie perd sa lumière (en anglais) · Lapland.blog",
+      "it": "Sette minuti e mezzo al giorno: quanto in fretta la Lapponia perde la luce (in inglese) · Lapland.blog",
+      "nl": "Zeven en een halve minuut per dag: hoe snel Lapland zijn licht verliest (Engels) · Lapland.blog",
+      "ja": "一日に七分半ずつ：ラップランドの光はどれほど速く失われるか（英語） · Lapland.blog",
+      "ko": "하루에 7분 30초씩: 라플란드의 빛은 얼마나 빨리 사라지나 (영문) · Lapland.blog",
+      "pt-BR": "Sete minutos e meio por dia: a velocidade com que a Lapônia perde a luz (em inglês) · Lapland.blog",
+      "zh-CN": "每天七分半钟：拉普兰的光消失得有多快（英文） · Lapland.blog"
+    },
+    "fallbackDescriptionByLang": {
+      "fi": "Kesän valon loppua ei kukaan ilmoita. Se vain vähenee, Rovaniemellä seitsemän ja puoli minuuttia päivässä ja Utsjoella yhdeksän, kunnes eräänä elokuun lopun iltana et enää näe polkua puuvajalle.",
+      "sv": "Ingen meddelar när sommarljuset tar slut. Det bara försvinner, sju och en halv minut om dagen i Rovaniemi och nio i Utsjoki, tills du en kväll i slutet av augusti inte längre ser stigen till vedboden."
+    },
+    "copyKey": "post",
+    "canonicalLocale": "en"
   }
 ]
