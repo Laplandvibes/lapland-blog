@@ -72,11 +72,14 @@ function exportMap(file) {
   return map;
 }
 
-/** Ratkaise merkkijonovakion arvo tunnisteelle, importtien lapi. */
+/** Ratkaise merkkijonovakion arvo tunnisteelle, importtien lapi.
+ *  🔴 18.9.2026: vakio voi olla pilkkulistan keskella (`var a=...,f=`https://...``), kun
+ *  rolldown yhdistaa useamman moduulin samaan chunkkiin. Vain `var f=` -muoto tunnistettuna
+ *  portti kaatui vaikka uutiskirje oli kytketty. */
 function resolveConst(file, ident, depth = 0) {
   if (!src.has(file) || depth > 6) return null;
   const local = new RegExp(
-    String.raw`(?:var|let|const)\s+${ident.replace(/\$/g, '\$')}\s*=\s*[` + '`' + String.raw`"']([^` + '`' + String.raw`"']*)[` + '`' + String.raw`"']`
+    String.raw`(?:(?:var|let|const)\s+|,)${ident.replace(/\$/g, '\$')}\s*=\s*[` + '`' + String.raw`"']([^` + '`' + String.raw`"']*)[` + '`' + String.raw`"']`
   ).exec(src.get(file));
   if (local) return local[1];
   const imported = importMap(file).get(ident);

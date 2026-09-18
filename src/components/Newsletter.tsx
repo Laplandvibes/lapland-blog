@@ -297,7 +297,7 @@ export default function Newsletter() {
                 <span>
                   {cc.consent}{' '}
                   <a
-                    href={to('/privacy')}
+                    href={to('/privacy/')}
                     target="_blank"
                     rel="noopener"
                     className="text-slate-300 hover:text-pink underline"
@@ -320,7 +320,7 @@ export default function Newsletter() {
 
             <p className="text-slate-500 text-xs mt-6">
               {c.agreeText}{' '}
-              <a href={to('/privacy')} className="text-slate-300 hover:text-pink underline">
+              <a href={to('/privacy/')} className="text-slate-300 hover:text-pink underline">
                 {c.privacyLink}
               </a>
               . {c.unsubscribeNote}

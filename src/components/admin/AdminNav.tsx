@@ -4,6 +4,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { LogOut, PenLine, LayoutDashboard, ExternalLink } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
+/** Sama sivu loppukauttaviivasta riippumatta: sisääntulo on `/x/`, linkki voi olla `/x` (18.9.2026). */
+const samePath = (a: string, b: string) => a.replace(/\/+$/, '') === b.replace(/\/+$/, '');
+
 export default function AdminNav() {
   const { user, signOut } = useAuth();
   const { pathname } = useLocation();
@@ -22,7 +25,7 @@ export default function AdminNav() {
             <Link
               to="/admin"
               className={`lv-tap inline-flex items-center gap-1.5 transition-colors ${
-                pathname === '/admin'
+                samePath(pathname, '/admin')
                   ? 'text-pink'
                   : 'text-slate-300 hover:text-snow'
               }`}
@@ -33,7 +36,7 @@ export default function AdminNav() {
             <Link
               to="/admin/posts/new"
               className={`lv-tap inline-flex items-center gap-1.5 transition-colors ${
-                pathname === '/admin/posts/new'
+                samePath(pathname, '/admin/posts/new')
                   ? 'text-pink'
                   : 'text-slate-300 hover:text-snow'
               }`}

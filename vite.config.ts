@@ -5,8 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 import compression from 'vite-plugin-compression2'
 
 // https://vite.dev/config/
+import { trailingSlashLinks } from "./src/shared/router/trailingSlashPlugin";
 export default defineConfig({
-  plugins: [react(), tailwindcss(), compression({ algorithms: ['brotliCompress'], threshold: 1024 })],
+  plugins: [trailingSlashLinks(), react(), tailwindcss(), compression({ algorithms: ['brotliCompress'], threshold: 1024 })],
   resolve: {
     // Critical: shared/ lives outside this project. Without dedupe, two React
     // instances ship in the bundle and useContext returns null on shared
