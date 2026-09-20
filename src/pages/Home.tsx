@@ -221,14 +221,22 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
               <Link
                 to={to('/signin')}
-                className="group cursor-pointer px-8 py-3.5 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
+                // 🔴 bg-pink-cta, ei bg-pink. Sivuston oma teemaohje (index.css) sanoo jo
+                // etta taytetyt napit kayttavat --color-pink-cta:ta (#DB2777, 4,63:1
+                // valkoisella) eivatka accenttia — tama nappi oli jaanyt vanhaan.
+                // Korttiteksti-portti mittasi 3,53:1, 100 % pikseleista rajan alle.
+                className="group cursor-pointer px-8 py-3.5 bg-pink-cta text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
               >
                 {c.heroPrimaryCta}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="#how-it-works"
-                className="cursor-pointer px-8 py-3.5 border border-aurora-blue/60 text-aurora-blue hover:bg-aurora-blue/10 hover:border-aurora-blue rounded-full transition-colors duration-200 tracking-wide font-semibold focus:outline-none focus:ring-2 focus:ring-aurora-blue/40 focus:ring-offset-2 focus:ring-offset-night"
+                // 🔴 #F9A8D4: --color-aurora-blue on tassa teemassa sama #EC4899 kuin
+                // pinkki, ja 16 px:n tekstina revontulikuvan paalla se mitattiin
+                // 3,97:1 pahimmillaan (28 % pikseleista rajan 4,5:1 alle). Reunus ja
+                // hover jaavat ennalleen, vain muste vaalenee.
+                className="cursor-pointer px-8 py-3.5 border border-aurora-blue/60 text-[#F9A8D4] hover:bg-aurora-blue/10 hover:border-aurora-blue rounded-full transition-colors duration-200 tracking-wide font-semibold focus:outline-none focus:ring-2 focus:ring-aurora-blue/40 focus:ring-offset-2 focus:ring-offset-night"
               >
                 {c.heroSecondaryCta}
               </a>

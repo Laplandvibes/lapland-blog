@@ -168,7 +168,11 @@ export default function Nav() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `relative whitespace-nowrap tracking-wider uppercase text-xs font-semibold transition-colors py-1 ${
+                // 🔴 min-h-11 (44 px): text-xs + py-1 tekee linkin laatikosta ~24 px,
+                // ja navi-portti vaatii vahintaan 32 px (kosketusalue). Sama 44 px kuin
+                // sanamerkilla tassa samassa palkissa. Mitattu verkostossa 20.9.2026,
+                // jolloin laplandtours sai samasta syysta 144 loydosta.
+                `relative whitespace-nowrap tracking-wider uppercase text-xs font-semibold transition-colors py-1 inline-flex items-center min-h-11 ${
                   isActive ? linkActive : linkBase
                 }`
               }
