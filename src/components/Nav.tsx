@@ -143,7 +143,15 @@ export default function Nav() {
             to={to('/')}
             className="group inline-flex items-center min-h-11"
             aria-label="#LaplandBlog · home"
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              setOpen(false)
+              // 🔴 Verkostovika, mitattu 20.9.2026 seitsemällä sivustolla seitsemästä:
+              // ScrollToTop kuuntelee pathnamea, joka ei muutu kun ollaan jo
+              // etusivulla, joten logon klikkaus ei tehnyt siellä mitään.
+              if (window.location.pathname.replace(/\/$/, '') === to('/').replace(/\/$/, '')) {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }
+            }}
           >
             <span className="font-logo tracking-wide text-2xl md:text-3xl uppercase leading-none flex items-baseline">
               <span className={`${logoAccentColor} transition-colors`}>#</span>
