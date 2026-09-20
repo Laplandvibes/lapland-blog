@@ -142,7 +142,7 @@ export default function Unsubscribe() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full px-5 py-3.5 rounded-full bg-pink-cta hover:bg-pink-dark text-white font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full px-5 py-3.5 rounded-full bg-pink-cta hover:bg-[#BE185D] text-white font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {status === 'loading' ? (
                     <>

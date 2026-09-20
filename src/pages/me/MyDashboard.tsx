@@ -258,7 +258,7 @@ export default function MyDashboard() {
             {(loading || posts.length > 0) && (
               <Link
                 to="/me/new"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all"
               >
                 <Plus size={16} />
                 Write new post
@@ -316,7 +316,7 @@ export default function MyDashboard() {
               </p>
               <Link
                 to="/me/new"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-pink text-white font-semibold rounded-full text-base hover:bg-pink-dark hover:-translate-y-0.5 transition-all shadow-[0_12px_36px_-8px_rgba(236,72,153,0.65)]"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#DB2777] text-white font-semibold rounded-full text-base hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all shadow-[0_12px_36px_-8px_rgba(236,72,153,0.65)]"
               >
                 <Plus size={18} /> Write your first post
               </Link>

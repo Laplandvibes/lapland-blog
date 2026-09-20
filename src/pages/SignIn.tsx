@@ -384,7 +384,7 @@ export default function SignIn() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-pink-cta text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all cursor-pointer text-base shadow-[0_8px_30px_-5px_rgba(236,72,153,0.5)]"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-pink-cta text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all cursor-pointer text-base shadow-[0_8px_30px_-5px_rgba(236,72,153,0.5)]"
                 >
                   {sending ? (
                     c.sending

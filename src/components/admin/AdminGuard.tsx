@@ -48,7 +48,7 @@ export default function AdminGuard({ children }: Props) {
             onClick={() => {
               void signOut();
             }}
-            className="px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark transition-colors"
+            className="px-6 py-3 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] transition-colors"
           >
             Sign out
           </button>

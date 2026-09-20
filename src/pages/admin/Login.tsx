@@ -158,7 +158,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={sending}
-              className="w-full px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer"
+              className="w-full px-6 py-3 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer"
             >
               {sending ? 'Sending link…' : 'Send magic link'}
             </button>

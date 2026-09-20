@@ -132,7 +132,7 @@ export default function Archive() {
                 onClick={() => setFilter('all')}
                 className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
                   filter === 'all'
-                    ? 'bg-pink text-white'
+                    ? 'bg-[#DB2777] text-white'
                     : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
                 }`}
               >
@@ -145,7 +145,7 @@ export default function Archive() {
                   onClick={() => setFilter(cat.slug)}
                   className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
                     filter === cat.slug
-                      ? 'bg-pink text-white'
+                      ? 'bg-[#DB2777] text-white'
                       : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
                   }`}
                 >
@@ -187,7 +187,7 @@ export default function Archive() {
                   aria-pressed={place === null}
                   className={`lv-tap min-h-[44px] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
                     place === null
-                      ? 'bg-pink text-white'
+                      ? 'bg-[#DB2777] text-white'
                       : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
                   }`}
                 >
@@ -201,7 +201,7 @@ export default function Archive() {
                     aria-pressed={place === d.slug}
                     className={`lv-tap min-h-[44px] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
                       place === d.slug
-                        ? 'bg-pink text-white'
+                        ? 'bg-[#DB2777] text-white'
                         : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
                     }`}
                   >

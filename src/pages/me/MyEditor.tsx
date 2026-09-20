@@ -538,7 +538,7 @@ export default function MyEditor() {
                 void handleSave('published');
               }}
               disabled={saving}
-              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-pink text-white hover:bg-pink-dark text-xs font-semibold tracking-wider uppercase transition-colors disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#DB2777] text-white hover:bg-[#BE185D] text-xs font-semibold tracking-wider uppercase transition-colors disabled:opacity-50"
             >
               <Globe size={14} />
               {status === 'published' ? 'Update live' : 'Publish'}
@@ -974,7 +974,7 @@ export default function MyEditor() {
                 void handleSave(status);
               }}
               disabled={saving}
-              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark disabled:opacity-60 transition-colors"
+              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] disabled:opacity-60 transition-colors"
             >
               <Save size={16} />
               {saving ? 'Saving…' : 'Save changes'}

@@ -265,7 +265,7 @@ export default function Newsletter() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="px-7 py-4 rounded-full bg-pink-cta text-white font-semibold hover:bg-pink-dark transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(236,72,153,0.35)]"
+                  className="px-7 py-4 rounded-full bg-pink-cta text-white font-semibold hover:bg-[#BE185D] transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(236,72,153,0.35)]"
                 >
                   {status === 'loading' ? (
                     <>

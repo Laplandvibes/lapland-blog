@@ -202,7 +202,7 @@ export default function AuthorProfile() {
               </p>
               <Link
                 to={lp('/signin')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink-dark transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] transition-colors"
               >
                 Start your own
                 <ArrowRight size={14} />
@@ -229,7 +229,7 @@ export default function AuthorProfile() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to={lp('/top-reads')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink-dark transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] transition-colors"
               >
                 Top reads
                 <ArrowRight size={14} />

@@ -73,7 +73,7 @@ export default function Dashboard() {
 
           <Link
             to="/admin/posts/new"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] transition-colors"
           >
             <Plus size={16} />
             New post
@@ -105,7 +105,7 @@ export default function Dashboard() {
             <p className="text-slate-500 text-sm mb-6">Write the first one.</p>
             <Link
               to="/admin/posts/new"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-pink text-white font-semibold rounded-full text-sm hover:bg-pink-dark transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#DB2777] text-white font-semibold rounded-full text-sm hover:bg-[#BE185D] transition-colors"
             >
               <Plus size={14} /> New post
             </Link>

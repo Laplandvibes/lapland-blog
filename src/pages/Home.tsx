@@ -225,7 +225,7 @@ export default function Home() {
                 // etta taytetyt napit kayttavat --color-pink-cta:ta (#DB2777, 4,63:1
                 // valkoisella) eivatka accenttia — tama nappi oli jaanyt vanhaan.
                 // Korttiteksti-portti mittasi 3,53:1, 100 % pikseleista rajan alle.
-                className="group cursor-pointer px-8 py-3.5 bg-pink-cta text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
+                className="group cursor-pointer px-8 py-3.5 bg-pink-cta text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
               >
                 {c.heroPrimaryCta}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -438,7 +438,7 @@ export default function Home() {
             <div className="mt-14 text-center">
               <Link
                 to={to('/signin')}
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-pink text-white font-semibold rounded-full tracking-wide hover:bg-pink-dark hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
               >
                 {c.howCta}
                 <ArrowRight size={18} />

@@ -220,7 +220,7 @@ export default function TopReads() {
                 </p>
                 <Link
                   to={to('/signin')}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-pink text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink-dark hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all duration-300"
                 >
                   {c.ctaButton}
                   <ArrowRight size={14} />
