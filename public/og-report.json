@@ -3,11 +3,11 @@
   "domain": "lapland.blog",
   "brand": ".BLOG",
   "tagline": "Start a blog of your Lapland trip",
-  "generated": "2026-09-05T21:47:03.550Z",
+  "generated": "2026-09-21T08:31:06.305Z",
   "staticFallbackSeason": "summer",
   "seasons": {
     "summer": {
-      "heroUrl": "https://lapland.blog/images/hero-aurora-2560.webp",
+      "heroUrl": "https://lapland.blog/images/hero-aurora-2560.webp?v=ff6e1396",
       "heroAlt": "Lapland landscape",
       "heroSha": "ff6e13967009b504",
       "bytes": 188241,
@@ -45,7 +45,7 @@
       "errors": []
     },
     "winter": {
-      "heroUrl": "https://lapland.blog/images/hero-aurora-winter-2560.webp",
+      "heroUrl": "https://lapland.blog/images/hero-aurora-winter-2560.webp?v=503acafa",
       "heroAlt": "Lapland landscape",
       "heroSha": "503acafa5bfb57ae",
       "bytes": 118469,
