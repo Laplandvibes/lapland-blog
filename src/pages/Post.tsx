@@ -140,7 +140,7 @@ export default function Post() {
       : post.heroImage
     : undefined;
   useSeo({
-    title: post ? `${post.title} · Lapland.blog` : 'Loading · Lapland.blog',
+    title: post ? `${post.title}` : 'Loading',
     description: post?.excerpt ?? 'Story on Lapland.blog',
     image: ogImage,
     canonical: post ? canonicalUrl(`/post/${post.slug}`) : canonicalUrl('/'),

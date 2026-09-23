@@ -208,7 +208,7 @@ const de: SectionCopy = {
     everyEntry: 'Alle Einträge',
   },
   about: {
-    pageTitle: 'Über uns | Lapland.blog',
+    pageTitle: 'Über uns',
     pageDescription:
       'Lapland.blog ist eine kostenlose Reisetagebuch-Plattform für Besucher des finnischen Lapplands. Orte markieren, Einträge schreiben, mit Freunden teilen.',
     eyebrow: 'Über die Plattform',
@@ -269,7 +269,7 @@ const de: SectionCopy = {
     stayCta: 'Ansehen',
   },
   destinations: {
-    pageTitle: 'Reiseziele | Lapland.blog',
+    pageTitle: 'Reiseziele',
     pageDescription:
       'Die acht wichtigsten Ziele im finnischen Lappland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lesen Sie die Einträge.',
     eyebrow: 'Wohin gehen',
@@ -324,7 +324,7 @@ const de: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'Beliebt | Lapland.blog',
+    pageTitle: 'Beliebt',
     pageDescription:
       'Wo Sie auf Lapland.blog anfangen sollten. Kuratierte Listen: beste Einträge für Erstbesucher, beste Nordlicht-Stücke, beste Essen-Einträge, die saisonalen.',
     eyebrow: 'Auswahl der Redaktion',
@@ -363,7 +363,7 @@ const de: SectionCopy = {
   archive: {
     placesLabel: 'Ort',
     allPlaces: 'Alle Orte',
-    pageTitle: 'Alle Geschichten | Lapland.blog',
+    pageTitle: 'Alle Geschichten',
     pageDescription:
       'Jede Geschichte auf Lapland.blog. Nordlichter, Hütten, Essen, Jahreszeiten, Menschen, Ausrüstung und lange Stücke aus dem finnischen Lappland.',
     eyebrow: 'Archiv',
@@ -395,7 +395,7 @@ const de: SectionCopy = {
         tagline: 'Der Himmel, wenn er mitspielt.',
         description:
           'Nächte unter Nordlichtern, ehrlich erzählt. Wetter, Kp-Index, Warten, Kälte und die Momente, die wirklich hängen bleiben.',
-        metaTitle: 'Polarlicht-Geschichten aus Finnisch-Lappland · Lapland.blog',
+        metaTitle: 'Polarlicht-Geschichten aus Finnisch-Lappland',
         metaDescription:
           'Nordlicht-Nächte in Finnisch-Lappland, ehrlich erzählt: Wetter, Kp-Index, Warten, Kälte und die Momente, die wirklich hängen bleiben.',
       },
@@ -404,7 +404,7 @@ const de: SectionCopy = {
         tagline: 'Vier Wände, ein Ofen, kein WLAN.',
         description:
           'Holzhütten, Glasiglus, Saunen, die funktionieren, und Saunen, die es nicht tun. Wie es sich wirklich anfühlt, weit weg von einer Stadt zu schlafen.',
-        metaTitle: 'Hüttennächte in Finnisch-Lappland · Lapland.blog',
+        metaTitle: 'Hüttennächte in Finnisch-Lappland',
         metaDescription:
           'Holzhütten, Glasiglus, Saunen, die funktionieren, und solche, die es nicht tun. Wie es ist, in Finnisch-Lappland weit weg von einer Stadt zu schlafen.',
       },
@@ -413,7 +413,7 @@ const de: SectionCopy = {
         tagline: 'Wonach Lappland im Winter schmeckt.',
         description:
           'Lachssuppe, Roggenbrot, Rentier auf drei Arten und der Kaffee, den man um 2 Uhr nachts trinkt, weil die Sonne vergessen hat unterzugehen.',
-        metaTitle: 'Essen in Finnisch-Lappland · Lapland.blog',
+        metaTitle: 'Essen in Finnisch-Lappland',
         metaDescription:
           'Lachssuppe, Roggenbrot, Rentier auf drei Arten und der Kaffee um 2 Uhr nachts, weil die Sonne vergessen hat unterzugehen. Essen in Finnisch-Lappland.',
       },
@@ -422,7 +422,7 @@ const de: SectionCopy = {
         tagline: 'Acht, nicht vier.',
         description:
           'Polarnacht im Dezember. Mitternachtssonne im Juni. Ruska im September. Acht eigene Jahreszeiten, nicht vier. Keine davon ein Gag.',
-        metaTitle: 'Die acht Jahreszeiten Finnisch-Lapplands · Lapland.blog',
+        metaTitle: 'Die acht Jahreszeiten Finnisch-Lapplands',
         metaDescription:
           'Polarnacht im Dezember, Mitternachtssonne im Juni, Ruska im September. Finnisch-Lappland hat acht eigene Jahreszeiten, nicht vier. Keine davon ein Gag.',
       },
@@ -431,7 +431,7 @@ const de: SectionCopy = {
         tagline: 'Wen man hier oben trifft.',
         description:
           'Rentierhirten, Pistenretter, Saunameister und Fremde in Hotellobbys. Lappland ist still, aber nie leer.',
-        metaTitle: 'Menschen in Finnisch-Lappland · Lapland.blog',
+        metaTitle: 'Menschen in Finnisch-Lappland',
         metaDescription:
           'Rentierhirten, Pistenretter, Saunameister und Fremde in Hotellobbys. Finnisch-Lappland ist still, aber nie leer.',
       },
@@ -440,7 +440,7 @@ const de: SectionCopy = {
         tagline: 'Was −25 °C übersteht.',
         description:
           'Stiefel, Handschuhe, Schichten, Akkus, Kamerafragen. Was bei −25 °C wirklich funktioniert und was ich weggeworfen habe.',
-        metaTitle: 'Ausrüstung für Finnisch-Lappland · Lapland.blog',
+        metaTitle: 'Ausrüstung für Finnisch-Lappland',
         metaDescription:
           'Stiefel, Handschuhe, Schichten, Akkus und Kamerafragen für Finnisch-Lappland. Was bei −25 °C wirklich funktioniert und was ich weggeworfen habe.',
       },
@@ -449,7 +449,7 @@ const de: SectionCopy = {
         tagline: 'Der lange Weg.',
         description:
           'Längere Texte. Einzelne Reisen, einzelne Nächte, einzelne seltsame Nachmittage. Wenn ein Beitrag mehr als 800 Wörter braucht.',
-        metaTitle: 'Lange Texte aus Finnisch-Lappland · Lapland.blog',
+        metaTitle: 'Lange Texte aus Finnisch-Lappland',
         metaDescription:
           'Längere Texte aus Finnisch-Lappland: einzelne Reisen, Nächte und seltsame Nachmittage. Für Beiträge, die mehr als 800 Wörter brauchen.',
       },
@@ -480,7 +480,7 @@ const de: SectionCopy = {
     readerNote: 'Geschrieben von einer Leserin oder einem Leser über die eigene Reise.',
   },
   signIn: {
-    pageTitle: 'Planen Sie Ihre Lappland-Reise | Lapland.blog',
+    pageTitle: 'Planen Sie Ihre Lappland-Reise',
     pageDescription:
       'Eine kostenlose Reise-Seite, persönliche Tipps und die besten Angebote für Ihre Lappland-Reise. Sagen Sie uns, wann Sie kommen, und wir helfen.',
     back: 'Zurück',
@@ -518,7 +518,7 @@ const de: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: 'Abbestellen | Lapland.blog',
+    pageTitle: 'Abbestellen',
     pageDescription: 'Den Lapland.blog-Newsletter abbestellen. Ein Klick, kein böses Blut.',
     eyebrow: 'Newsletter',
     h1: 'Abbestellen',
@@ -532,7 +532,7 @@ const de: SectionCopy = {
     submit: 'Abbestellen',
   },
   notFound: {
-    pageTitle: 'Nicht gefunden | Lapland.blog',
+    pageTitle: 'Nicht gefunden',
     pageDescription: 'Diese Seite gibt es nicht. Vielleicht verschoben, umbenannt oder im Schnee verloren.',
     eyebrow: 'Nicht gefunden · 404',
     h1: 'Im Schnee verloren.',

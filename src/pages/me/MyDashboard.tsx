@@ -56,7 +56,7 @@ export default function MyDashboard() {
   const handleInputRef = useRef<HTMLInputElement>(null);
 
   useSeo({
-    title: 'Your trip blog · Lapland.blog',
+    title: 'Your trip blog',
     description: 'Your drafts, published stories and entries at a glance.',
     canonical: canonicalUrl('/me'),
   });

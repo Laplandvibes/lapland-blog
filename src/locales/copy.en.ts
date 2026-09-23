@@ -207,7 +207,7 @@ const en: SectionCopy = {
     everyEntry: 'Every entry',
   },
   about: {
-    pageTitle: 'About | Lapland.blog',
+    pageTitle: 'About',
     pageDescription:
       'Lapland.blog is a free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to friends. Your trip, told well.',
     eyebrow: 'About the platform',
@@ -268,7 +268,7 @@ const en: SectionCopy = {
     stayCta: 'Browse',
   },
   destinations: {
-    pageTitle: 'Destinations | Lapland.blog',
+    pageTitle: 'Destinations',
     pageDescription:
       'The eight main Finnish Lapland destinations: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Read the field-journal entries from each, or be the first to write one.',
     eyebrow: 'Where to go',
@@ -323,7 +323,7 @@ const en: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'Top reads | Lapland.blog',
+    pageTitle: 'Top reads',
     pageDescription:
       'Where to start on Lapland.blog. Curated lists: best entries for first-timers, best aurora pieces, best food entries, the seasonal ones. Picked by the editor.',
     eyebrow: "Editor's picks",
@@ -361,7 +361,7 @@ const en: SectionCopy = {
   archive: {
     placesLabel: 'Place',
     allPlaces: 'All places',
-    pageTitle: 'All stories | Lapland.blog',
+    pageTitle: 'All stories',
     pageDescription:
       'Every story on Lapland.blog. Aurora, cabins, food, seasons, people, gear and long-form reads from Finnish Lapland.',
     eyebrow: 'Archive',
@@ -393,7 +393,7 @@ const en: SectionCopy = {
         tagline: 'The sky, when it behaves.',
         description:
           'Nights under the northern lights, the honest ones. Weather, Kp-index, waiting, cold, and the moments that actually land.',
-        metaTitle: 'Aurora stories from Finnish Lapland · Lapland.blog',
+        metaTitle: 'Aurora stories from Finnish Lapland',
         metaDescription:
           'Northern-lights nights in Finnish Lapland, the honest ones: weather, Kp index, waiting, cold, and the moments that actually land.',
       },
@@ -402,7 +402,7 @@ const en: SectionCopy = {
         tagline: 'Four walls, one stove, zero wifi.',
         description:
           "Wooden cabins, glass igloos, saunas that work, saunas that don't. What it's actually like to sleep far from a city.",
-        metaTitle: 'Cabin stays in Finnish Lapland · Lapland.blog',
+        metaTitle: 'Cabin stays in Finnish Lapland',
         metaDescription:
           "Wooden cabins, glass igloos, saunas that work and saunas that don't. What it's actually like to sleep far from a city in Finnish Lapland.",
       },
@@ -411,7 +411,7 @@ const en: SectionCopy = {
         tagline: 'What Lapland tastes like in winter.',
         description:
           'Salmon soup, rye bread, reindeer done three ways, and the coffee you drink at 2am because the sun forgot to set.',
-        metaTitle: 'Food in Finnish Lapland · Lapland.blog',
+        metaTitle: 'Food in Finnish Lapland',
         metaDescription:
           'Salmon soup, rye bread, reindeer done three ways, and the coffee you drink at 2am because the sun forgot to set. Eating in Finnish Lapland.',
       },
@@ -420,7 +420,7 @@ const en: SectionCopy = {
         tagline: 'Eight, not four.',
         description:
           'Polar night in December. Midnight sun in June. Ruska in September. Eight distinct seasons, not four. None of them a gimmick.',
-        metaTitle: 'The eight seasons of Finnish Lapland · Lapland.blog',
+        metaTitle: 'The eight seasons of Finnish Lapland',
         metaDescription:
           'Polar night in December, midnight sun in June, ruska in September. Finnish Lapland has eight distinct seasons, not four. None of them a gimmick.',
       },
@@ -429,7 +429,7 @@ const en: SectionCopy = {
         tagline: 'Who you meet up here.',
         description:
           'The reindeer herders, ski patrollers, sauna masters and strangers in hotel lobbies. Lapland is quiet, but never empty.',
-        metaTitle: 'People of Finnish Lapland · Lapland.blog',
+        metaTitle: 'People of Finnish Lapland',
         metaDescription:
           'Reindeer herders, ski patrollers, sauna masters and strangers in hotel lobbies. Finnish Lapland is quiet, but never empty.',
       },
@@ -438,7 +438,7 @@ const en: SectionCopy = {
         tagline: 'What survives -25°C.',
         description:
           "Boots, gloves, layers, batteries, camera choices. What actually works at -25°C, and what I've thrown away.",
-        metaTitle: 'Gear that works in Finnish Lapland · Lapland.blog',
+        metaTitle: 'Gear that works in Finnish Lapland',
         metaDescription:
           "Boots, gloves, layers, batteries and camera choices for Finnish Lapland. What actually works at -25°C, and what I've thrown away.",
       },
@@ -447,7 +447,7 @@ const en: SectionCopy = {
         tagline: 'The long way round.',
         description:
           'Longer reads. Single trips, single nights, single strange afternoons. When a post wants more than 800 words.',
-        metaTitle: 'Long reads from Finnish Lapland · Lapland.blog',
+        metaTitle: 'Long reads from Finnish Lapland',
         metaDescription:
           'Longer reads from Finnish Lapland: single trips, single nights, single strange afternoons. For when a post wants more than 800 words.',
       },
@@ -478,7 +478,7 @@ const en: SectionCopy = {
     readerNote: 'Written by a LaplandVibes reader about their own trip.',
   },
   signIn: {
-    pageTitle: 'Plan your Lapland trip | Lapland.blog',
+    pageTitle: 'Plan your Lapland trip',
     pageDescription:
       'Get a free trip page, personalised tips, and the best deals for your Lapland journey. Tell us when you are visiting and we will help plan every step.',
     back: 'Back',
@@ -516,7 +516,7 @@ const en: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: 'Unsubscribe | Lapland.blog',
+    pageTitle: 'Unsubscribe',
     pageDescription: 'Unsubscribe from the Lapland.blog newsletter. One click, no hard feelings.',
     eyebrow: 'Newsletter',
     h1: 'Unsubscribe',
@@ -530,7 +530,7 @@ const en: SectionCopy = {
     submit: 'Unsubscribe',
   },
   notFound: {
-    pageTitle: 'Not found | Lapland.blog',
+    pageTitle: 'Not found',
     pageDescription: "This page doesn't exist. It might have been moved, renamed, or lost in the snow.",
     eyebrow: 'Not found · 404',
     h1: 'Lost in the snow.',

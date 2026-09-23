@@ -8,8 +8,8 @@ import { useLang, type Lang } from '../i18n/useLang';
 // (/privacy fallbackTitleByLang) so the client-side document.title matches
 // the prerendered <title> on /fi, /de, … instead of staying English.
 const TITLE: Record<Lang, string> = {
-  en: 'Privacy Policy · Lapland.blog',
-  fi: 'Tietosuojaseloste · Lapland.blog',
+  en: 'Privacy Policy',
+  fi: 'Tietosuojaseloste',
   de: 'Datenschutzerklärung · Lapland.blog',
   ja: 'プライバシーポリシー · Lapland.blog',
   es: 'Política de privacidad · Lapland.blog',

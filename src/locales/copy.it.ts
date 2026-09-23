@@ -218,7 +218,7 @@ const it: SectionCopy = {
     stayCta: 'Sfoglia',
   },
   destinations: {
-    pageTitle: 'Destinazioni | Lapland.blog',
+    pageTitle: 'Destinazioni',
     pageDescription:
       'Le otto principali destinazioni della Lapponia finlandese: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Legga le voci di ciascuna.',
     eyebrow: 'Dove andare',
@@ -273,7 +273,7 @@ const it: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'Letture top | Lapland.blog',
+    pageTitle: 'Letture top',
     pageDescription:
       'Da dove cominciare su Lapland.blog. Liste curate: migliori voci per chi arriva la prima volta, migliori pezzi sull’aurora, voci sul cibo, voci stagionali.',
     eyebrow: 'Scelte della redazione',
@@ -311,7 +311,7 @@ const it: SectionCopy = {
   archive: {
     placesLabel: 'Luogo',
     allPlaces: 'Tutti i luoghi',
-    pageTitle: 'Tutte le voci | Lapland.blog',
+    pageTitle: 'Tutte le voci',
     pageDescription:
       'Tutti i racconti di Lapland.blog. Aurore, baite, cibo, stagioni, persone, attrezzatura e letture lunghe dalla Lapponia finlandese.',
     eyebrow: 'Archivio',
@@ -343,7 +343,7 @@ const it: SectionCopy = {
         tagline: 'Il cielo, quando collabora.',
         description:
           'Notti sotto l’aurora boreale, raccontate con onestà. Meteo, indice Kp, attesa, freddo e i momenti che restano davvero.',
-        metaTitle: 'Aurore boreali in Lapponia finlandese · Lapland.blog',
+        metaTitle: 'Aurore boreali in Lapponia finlandese',
         metaDescription:
           'Notti di aurora boreale in Lapponia finlandese, raccontate con onestà: meteo, indice Kp, attesa, freddo e i momenti che restano davvero.',
       },
@@ -352,7 +352,7 @@ const it: SectionCopy = {
         tagline: 'Quattro pareti, una stufa, zero wifi.',
         description:
           'Baite di legno, igloo di vetro, saune che funzionano e saune che no. Com’è davvero dormire lontano da una città.',
-        metaTitle: 'Baite in Lapponia finlandese · Lapland.blog',
+        metaTitle: 'Baite in Lapponia finlandese',
         metaDescription:
           'Baite di legno, igloo di vetro, saune che funzionano e saune che no. Com’è davvero dormire lontano da una città in Lapponia finlandese.',
       },
@@ -361,7 +361,7 @@ const it: SectionCopy = {
         tagline: 'Il sapore della Lapponia d’inverno.',
         description:
           'Zuppa di salmone, pane di segale, renna in tre modi e il caffè che si beve alle 2 di notte perché il sole ha dimenticato di tramontare.',
-        metaTitle: 'Il cibo in Lapponia finlandese · Lapland.blog',
+        metaTitle: 'Il cibo in Lapponia finlandese',
         metaDescription:
           'Zuppa di salmone, pane di segale, renna in tre modi e il caffè delle 2 di notte perché il sole ha dimenticato di tramontare. Mangiare in Lapponia finlandese.',
       },
@@ -370,7 +370,7 @@ const it: SectionCopy = {
         tagline: 'Otto, non quattro.',
         description:
           'Notte polare a dicembre. Sole di mezzanotte a giugno. Ruska a settembre. Otto stagioni distinte, non quattro. Nessuna è una trovata.',
-        metaTitle: 'Le otto stagioni della Lapponia finlandese · Lapland.blog',
+        metaTitle: 'Le otto stagioni della Lapponia finlandese',
         metaDescription:
           'Notte polare a dicembre, sole di mezzanotte a giugno, ruska a settembre. La Lapponia finlandese ha otto stagioni distinte, non quattro.',
       },
@@ -379,7 +379,7 @@ const it: SectionCopy = {
         tagline: 'Chi si incontra quassù.',
         description:
           'Allevatori di renne, soccorritori delle piste, maestri di sauna e sconosciuti nelle hall degli hotel. La Lapponia è silenziosa, ma mai vuota.',
-        metaTitle: 'Le persone della Lapponia finlandese · Lapland.blog',
+        metaTitle: 'Le persone della Lapponia finlandese',
         metaDescription:
           'Allevatori di renne, soccorritori delle piste, maestri di sauna e sconosciuti nelle hall degli hotel. La Lapponia è silenziosa, ma mai vuota.',
       },
@@ -388,7 +388,7 @@ const it: SectionCopy = {
         tagline: 'Cosa sopravvive a −25 °C.',
         description:
           'Scarponi, guanti, strati, batterie, scelte di fotocamera. Cosa funziona davvero a −25 °C e cosa ho buttato via.',
-        metaTitle: 'Attrezzatura che funziona in Lapponia finlandese · Lapland.blog',
+        metaTitle: 'Attrezzatura che funziona in Lapponia finlandese',
         metaDescription:
           'Scarponi, guanti, strati, batterie e scelte di fotocamera per la Lapponia finlandese. Cosa funziona davvero a −25 °C e cosa ho buttato via.',
       },
@@ -397,7 +397,7 @@ const it: SectionCopy = {
         tagline: 'La strada più lunga.',
         description:
           'Letture più lunghe. Singoli viaggi, singole notti, singoli strani pomeriggi. Quando un post chiede più di 800 parole.',
-        metaTitle: 'Racconti lunghi dalla Lapponia finlandese · Lapland.blog',
+        metaTitle: 'Racconti lunghi dalla Lapponia finlandese',
         metaDescription:
           'Letture lunghe dalla Lapponia finlandese: singoli viaggi, singole notti, strani pomeriggi. Per quando un post chiede più di 800 parole.',
       },
@@ -428,7 +428,7 @@ const it: SectionCopy = {
     readerNote: 'Scritto da un lettore di LaplandVibes sul proprio viaggio.',
   },
   signIn: {
-    pageTitle: 'Pianifichi il Suo viaggio in Lapponia | Lapland.blog',
+    pageTitle: 'Pianifichi il Suo viaggio in Lapponia',
     pageDescription:
       'Una pagina viaggio gratuita, consigli personalizzati e le migliori offerte per il Suo soggiorno in Lapponia. Ci dica quando viene e La aiutiamo.',
     back: 'Indietro',
@@ -466,7 +466,7 @@ const it: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: 'Cancellazione dell’iscrizione | Lapland.blog',
+    pageTitle: 'Cancellazione dell’iscrizione',
     pageDescription: 'Annulli l’iscrizione alla newsletter di Lapland.blog. Un clic, nessun rancore.',
     eyebrow: 'Newsletter',
     h1: 'Cancellazione dell’iscrizione',
@@ -480,7 +480,7 @@ const it: SectionCopy = {
     submit: 'Annulli l’iscrizione',
   },
   notFound: {
-    pageTitle: 'Pagina non trovata | Lapland.blog',
+    pageTitle: 'Pagina non trovata',
     pageDescription: 'Questa pagina non esiste. Potrebbe essere stata spostata, rinominata o persa nella neve.',
     eyebrow: 'Non trovata · 404',
     h1: 'Persi nella neve.',

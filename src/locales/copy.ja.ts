@@ -207,7 +207,7 @@ const ja: SectionCopy = {
     everyEntry: 'すべての記事',
   },
   about: {
-    pageTitle: '当サイトについて | Lapland.blog',
+    pageTitle: '当サイトについて',
     pageDescription:
       'Lapland.blogは、フィンランド・ラップランドを訪れる人のための無料の旅行記プラットフォームです。場所にピンを立て、記事を書き、友人と共有。よく語られたあなたの旅。',
     eyebrow: 'プラットフォームについて',
@@ -268,7 +268,7 @@ const ja: SectionCopy = {
     stayCta: '見る',
   },
   destinations: {
-    pageTitle: '目的地 | Lapland.blog',
+    pageTitle: '目的地',
     pageDescription:
       'フィンランド・ラップランドの主要8つの目的地：ロヴァニエミ、サーリセルカ、レヴィ、ケミ、イナリ、ムオニオ、ユッラス、ケミヤルヴィ。各地のフィールドジャーナル記事を読むか、最初の記事を書いてください。',
     eyebrow: 'どこへ行くか',
@@ -323,7 +323,7 @@ const ja: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'おすすめ記事 | Lapland.blog',
+    pageTitle: 'おすすめ記事',
     pageDescription:
       'Lapland.blogでの読み始めに。編集者の厳選リスト：初めての方向けのベスト記事、オーロラ記事、食事記事、季節記事。クリック数ではなく編集者の選定。',
     eyebrow: '編集部の厳選',
@@ -361,7 +361,7 @@ const ja: SectionCopy = {
   archive: {
     placesLabel: '場所',
     allPlaces: 'すべての場所',
-    pageTitle: 'すべての記事 | Lapland.blog',
+    pageTitle: 'すべての記事',
     pageDescription:
       'Lapland.blog のすべての記事。オーロラ、コテージ、食事、季節、人、装備、フィンランド・ラップランドからの長文記事。',
     eyebrow: 'アーカイブ',
@@ -393,7 +393,7 @@ const ja: SectionCopy = {
         tagline: '機嫌のいい夜の空。',
         description:
           'オーロラの下で過ごした夜を、正直に。天気、Kp指数、待ち時間、寒さ、そして本当に心に残る瞬間。',
-        metaTitle: 'フィンランド・ラップランドのオーロラ記事 · Lapland.blog',
+        metaTitle: 'フィンランド・ラップランドのオーロラ記事',
         metaDescription:
           'フィンランド・ラップランドのオーロラの夜を正直に。天気、Kp指数、待ち時間、寒さ、そして本当に心に残る瞬間。',
       },
@@ -402,7 +402,7 @@ const ja: SectionCopy = {
         tagline: '四つの壁、ストーブ一台、Wi-Fiゼロ。',
         description:
           '木のコテージ、グラスイグルー、使えるサウナと使えないサウナ。街から遠く離れて眠るのは実際どんな感じか。',
-        metaTitle: 'フィンランド・ラップランドのコテージ滞在 · Lapland.blog',
+        metaTitle: 'フィンランド・ラップランドのコテージ滞在',
         metaDescription:
           '木のコテージ、グラスイグルー、使えるサウナと使えないサウナ。フィンランド・ラップランドで街から遠く離れて眠る実際のところ。',
       },
@@ -411,7 +411,7 @@ const ja: SectionCopy = {
         tagline: '冬のラップランドの味。',
         description:
           'サーモンスープ、ライ麦パン、3通りのトナカイ料理、そして太陽が沈み忘れたせいで午前2時に飲むコーヒー。',
-        metaTitle: 'フィンランド・ラップランドの食 · Lapland.blog',
+        metaTitle: 'フィンランド・ラップランドの食',
         metaDescription:
           'サーモンスープ、ライ麦パン、3通りのトナカイ料理、そして太陽が沈み忘れた午前2時のコーヒー。ラップランドで食べるということ。',
       },
@@ -420,7 +420,7 @@ const ja: SectionCopy = {
         tagline: '四季ではなく八季。',
         description:
           '12月の極夜。6月の白夜。9月のルスカ。ラップランドの季節は4つではなく8つ。どれも演出ではない。',
-        metaTitle: 'フィンランド・ラップランドの八つの季節 · Lapland.blog',
+        metaTitle: 'フィンランド・ラップランドの八つの季節',
         metaDescription:
           '12月の極夜、6月の白夜、9月のルスカ。フィンランド・ラップランドには4つではなく8つの季節がある。どれも演出ではない。',
       },
@@ -429,7 +429,7 @@ const ja: SectionCopy = {
         tagline: 'この北で出会う人たち。',
         description:
           'トナカイ飼い、スキーパトロール、サウナ職人、ホテルのロビーで出会う見知らぬ人。ラップランドは静かだが、決して無人ではない。',
-        metaTitle: 'フィンランド・ラップランドの人々 · Lapland.blog',
+        metaTitle: 'フィンランド・ラップランドの人々',
         metaDescription:
           'トナカイ飼い、スキーパトロール、サウナ職人、ホテルのロビーの見知らぬ人。ラップランドは静かだが、決して無人ではない。',
       },
@@ -438,7 +438,7 @@ const ja: SectionCopy = {
         tagline: '−25°Cを生き延びるもの。',
         description:
           'ブーツ、手袋、レイヤリング、バッテリー、カメラ選び。−25°Cで本当に使えるものと、捨てたもの。',
-        metaTitle: 'フィンランド・ラップランドで使える装備 · Lapland.blog',
+        metaTitle: 'フィンランド・ラップランドで使える装備',
         metaDescription:
           'ブーツ、手袋、レイヤリング、バッテリー、カメラ選び。−25°Cで本当に使えるものと、私が捨てたもの。',
       },
@@ -447,7 +447,7 @@ const ja: SectionCopy = {
         tagline: '遠回りの物語。',
         description:
           '長めの読みもの。ひとつの旅、ひとつの夜、ひとつの不思議な午後。800語を超えたくなった記事たち。',
-        metaTitle: 'フィンランド・ラップランドの長編読みもの · Lapland.blog',
+        metaTitle: 'フィンランド・ラップランドの長編読みもの',
         metaDescription:
           'フィンランド・ラップランドからの長めの読みもの。ひとつの旅、ひとつの夜、ひとつの不思議な午後。800語を超えたくなった記事。',
       },
@@ -478,7 +478,7 @@ const ja: SectionCopy = {
     readerNote: 'LaplandVibesの読者が自分の旅について書いた記事です。',
   },
   signIn: {
-    pageTitle: 'ラップランドの旅を計画 | Lapland.blog',
+    pageTitle: 'ラップランドの旅を計画',
     pageDescription:
       '無料の旅行ページ、あなただけのおすすめ、ラップランド旅行のお得情報をお届け。いつ訪れるかをお知らせいただければ、行程のすべてをお手伝いします。',
     back: '戻る',
@@ -516,7 +516,7 @@ const ja: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: '配信解除 | Lapland.blog',
+    pageTitle: '配信解除',
     pageDescription: 'Lapland.blogのニュースレターを配信解除。ワンクリックで完了、引き止めません。',
     eyebrow: 'ニュースレター',
     h1: '配信解除',
@@ -530,7 +530,7 @@ const ja: SectionCopy = {
     submit: '配信解除',
   },
   notFound: {
-    pageTitle: 'ページが見つかりません | Lapland.blog',
+    pageTitle: 'ページが見つかりません',
     pageDescription: 'このページは存在しません。移動、改名、または雪の中に紛れた可能性があります。',
     eyebrow: 'ページが見つかりません · 404',
     h1: '雪の中で迷子になりました。',

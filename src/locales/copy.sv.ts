@@ -207,7 +207,7 @@ const sv: SectionCopy = {
     everyEntry: 'Varje inlägg',
   },
   about: {
-    pageTitle: 'Om | Lapland.blog',
+    pageTitle: 'Om',
     pageDescription:
       'Lapland.blog är en gratis resedagboksplattform för besökare i finska Lappland. Nåla fast platser, skriv inlägg, dela med vänner. Din resa, väl berättad.',
     eyebrow: 'Om plattformen',
@@ -268,7 +268,7 @@ const sv: SectionCopy = {
     stayCta: 'Bläddra',
   },
   destinations: {
-    pageTitle: 'Resmål | Lapland.blog',
+    pageTitle: 'Resmål',
     pageDescription:
       'Finska Lapplands åtta främsta resmål: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Läs fältdagboksinläggen från varje, eller bli först med att skriva ett.',
     eyebrow: 'Vart du ska åka',
@@ -323,7 +323,7 @@ const sv: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'Mest lästa | Lapland.blog',
+    pageTitle: 'Mest lästa',
     pageDescription:
       'Var du börjar på Lapland.blog. Utvalda listor: bästa inläggen för förstagångsbesökare, bästa norrskenstexterna, bästa matinläggen, de säsongsbetonade. Valda av redaktören.',
     eyebrow: 'Redaktörens val',
@@ -361,7 +361,7 @@ const sv: SectionCopy = {
   archive: {
     placesLabel: 'Plats',
     allPlaces: 'Alla platser',
-    pageTitle: 'Alla berättelser | Lapland.blog',
+    pageTitle: 'Alla berättelser',
     pageDescription:
       'Varje berättelse på Lapland.blog. Norrsken, stugor, mat, årstider, människor, utrustning och längre läsning från finska Lappland.',
     eyebrow: 'Arkiv',
@@ -393,7 +393,7 @@ const sv: SectionCopy = {
         tagline: 'Himlen, när den sköter sig.',
         description:
           'Nätter under norrskenet, de ärliga. Väder, Kp-index, väntan, kyla, och stunderna som faktiskt landar.',
-        metaTitle: 'Norrskensberättelser från finska Lappland · Lapland.blog',
+        metaTitle: 'Norrskensberättelser från finska Lappland',
         metaDescription:
           'Norrskensnätter i finska Lappland, de ärliga: väder, Kp-index, väntan, kyla och stunderna som faktiskt landar.',
       },
@@ -402,7 +402,7 @@ const sv: SectionCopy = {
         tagline: 'Fyra väggar, en kamin, noll wifi.',
         description:
           'Timrade stugor, glasigloor, bastur som fungerar, bastur som inte gör det. Hur det faktiskt är att sova långt från en stad.',
-        metaTitle: 'Stugboende i finska Lappland · Lapland.blog',
+        metaTitle: 'Stugboende i finska Lappland',
         metaDescription:
           'Timrade stugor, glasigloor, bastur som fungerar och bastur som inte gör det. Hur det faktiskt är att sova långt från en stad i finska Lappland.',
       },
@@ -411,7 +411,7 @@ const sv: SectionCopy = {
         tagline: 'Vad Lappland smakar på vintern.',
         description:
           'Laxsoppa, rågbröd, ren på tre sätt, och kaffet du dricker klockan 2 på natten eftersom solen glömde att gå ner.',
-        metaTitle: 'Mat i finska Lappland · Lapland.blog',
+        metaTitle: 'Mat i finska Lappland',
         metaDescription:
           'Laxsoppa, rågbröd, ren på tre sätt, och kaffet du dricker klockan 2 på natten eftersom solen glömde att gå ner. Att äta i finska Lappland.',
       },
@@ -420,7 +420,7 @@ const sv: SectionCopy = {
         tagline: 'Åtta, inte fyra.',
         description:
           'Polarnatt i december. Midnattssol i juni. Ruska i september. Åtta tydliga årstider, inte fyra. Ingen av dem ett trick.',
-        metaTitle: 'Finska Lapplands åtta årstider · Lapland.blog',
+        metaTitle: 'Finska Lapplands åtta årstider',
         metaDescription:
           'Polarnatt i december, midnattssol i juni, ruska i september. Finska Lappland har åtta tydliga årstider, inte fyra. Ingen av dem ett trick.',
       },
@@ -429,7 +429,7 @@ const sv: SectionCopy = {
         tagline: 'Vem du möter häruppe.',
         description:
           'Renskötarna, pistvakterna, bastumästarna och främlingarna i hotellobbyer. Lappland är tyst, men aldrig tomt.',
-        metaTitle: 'Människor i finska Lappland · Lapland.blog',
+        metaTitle: 'Människor i finska Lappland',
         metaDescription:
           'Renskötare, pistvakter, bastumästare och främlingar i hotellobbyer. Finska Lappland är tyst, men aldrig tomt.',
       },
@@ -438,7 +438,7 @@ const sv: SectionCopy = {
         tagline: 'Vad som klarar −25 °C.',
         description:
           'Kängor, handskar, lager, batterier, kameraval. Vad som faktiskt fungerar vid −25 °C, och vad jag har slängt.',
-        metaTitle: 'Utrustning som fungerar i finska Lappland · Lapland.blog',
+        metaTitle: 'Utrustning som fungerar i finska Lappland',
         metaDescription:
           'Kängor, handskar, lager, batterier och kameraval för finska Lappland. Vad som faktiskt fungerar vid −25 °C, och vad jag har slängt.',
       },
@@ -447,7 +447,7 @@ const sv: SectionCopy = {
         tagline: 'Den långa vägen runt.',
         description:
           'Längre läsning. Enskilda resor, enskilda nätter, enskilda märkliga eftermiddagar. När ett inlägg vill ha mer än 800 ord.',
-        metaTitle: 'Långläsning från finska Lappland · Lapland.blog',
+        metaTitle: 'Långläsning från finska Lappland',
         metaDescription:
           'Längre läsning från finska Lappland: enskilda resor, enskilda nätter, enskilda märkliga eftermiddagar. För när ett inlägg vill ha mer än 800 ord.',
       },
@@ -478,7 +478,7 @@ const sv: SectionCopy = {
     readerNote: 'Skriven av en läsare om den egna resan.',
   },
   signIn: {
-    pageTitle: 'Planera din Lapplandsresa | Lapland.blog',
+    pageTitle: 'Planera din Lapplandsresa',
     pageDescription:
       'Få en gratis resesida, personliga tips och de bästa erbjudandena för din Lapplandsresa. Berätta när du kommer så hjälper vi dig planera varje steg.',
     back: 'Tillbaka',
@@ -516,7 +516,7 @@ const sv: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: 'Avsluta prenumeration | Lapland.blog',
+    pageTitle: 'Avsluta prenumeration',
     pageDescription: 'Avsluta prenumerationen på Lapland.blogs nyhetsbrev. Ett klick, inga hårda känslor.',
     eyebrow: 'Nyhetsbrev',
     h1: 'Avsluta prenumeration',
@@ -530,7 +530,7 @@ const sv: SectionCopy = {
     submit: 'Avsluta prenumeration',
   },
   notFound: {
-    pageTitle: 'Hittades inte | Lapland.blog',
+    pageTitle: 'Hittades inte',
     pageDescription: 'Den här sidan finns inte. Den kan ha flyttats, döpts om eller tappats bort i snön.',
     eyebrow: 'Hittades inte · 404',
     h1: 'Vilse i snön.',

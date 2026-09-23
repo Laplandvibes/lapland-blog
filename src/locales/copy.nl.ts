@@ -157,7 +157,7 @@ const nl: SectionCopy = {
     everyEntry: 'Elke notitie',
   },
   about: {
-    pageTitle: 'Over ons | Lapland.blog',
+    pageTitle: 'Over ons',
     pageDescription:
       'Lapland.blog is een gratis reisdagboekplatform voor bezoekers van Fins Lapland. Prik plekken vast, schrijf notities, deel met vrienden. Uw reis, goed verteld.',
     eyebrow: 'Over het platform',
@@ -218,7 +218,7 @@ const nl: SectionCopy = {
     stayCta: 'Bekijken',
   },
   destinations: {
-    pageTitle: 'Bestemmingen | Lapland.blog',
+    pageTitle: 'Bestemmingen',
     pageDescription:
       'De acht belangrijkste bestemmingen in Fins Lapland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lees de veldnotities van elk.',
     eyebrow: 'Waar naartoe',
@@ -273,7 +273,7 @@ const nl: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'Topartikelen | Lapland.blog',
+    pageTitle: 'Topartikelen',
     pageDescription:
       'Waar te beginnen op Lapland.blog. Lijsten van de redactie: beste notities voor de eerste reis, beste noorderlichtstukken, beste eetnotities, seizoenen.',
     eyebrow: 'Keuze van de redactie',
@@ -311,7 +311,7 @@ const nl: SectionCopy = {
   archive: {
     placesLabel: 'Plaats',
     allPlaces: 'Alle plaatsen',
-    pageTitle: 'Alle verhalen | Lapland.blog',
+    pageTitle: 'Alle verhalen',
     pageDescription:
       'Elk verhaal op Lapland.blog. Noorderlicht, hutten, eten, seizoenen, mensen, uitrusting en lange leesstukken uit Fins Lapland.',
     eyebrow: 'Archief',
@@ -343,7 +343,7 @@ const nl: SectionCopy = {
         tagline: 'De hemel, als hij meewerkt.',
         description:
           'Nachten onder het noorderlicht, eerlijk verteld. Weer, Kp-index, wachten, kou en de momenten die echt raken.',
-        metaTitle: 'Noorderlichtverhalen uit Fins Lapland · Lapland.blog',
+        metaTitle: 'Noorderlichtverhalen uit Fins Lapland',
         metaDescription:
           'Noorderlichtnachten in Fins Lapland, eerlijk verteld: weer, Kp-index, wachten, kou en de momenten die echt raken.',
       },
@@ -352,7 +352,7 @@ const nl: SectionCopy = {
         tagline: 'Vier muren, één kachel, nul wifi.',
         description:
           'Houten hutten, glazen iglo’s, sauna’s die werken en sauna’s die het niet doen. Hoe het echt is om ver van een stad te slapen.',
-        metaTitle: 'Hutten in Fins Lapland · Lapland.blog',
+        metaTitle: 'Hutten in Fins Lapland',
         metaDescription:
           'Houten hutten, glazen iglo’s, sauna’s die werken en sauna’s die het niet doen. Hoe het echt is om in Fins Lapland ver van een stad te slapen.',
       },
@@ -361,7 +361,7 @@ const nl: SectionCopy = {
         tagline: 'Hoe Lapland in de winter smaakt.',
         description:
           'Zalmsoep, roggebrood, rendier op drie manieren en de koffie die u om 2 uur ’s nachts drinkt omdat de zon vergat onder te gaan.',
-        metaTitle: 'Eten in Fins Lapland · Lapland.blog',
+        metaTitle: 'Eten in Fins Lapland',
         metaDescription:
           'Zalmsoep, roggebrood, rendier op drie manieren en de koffie van 2 uur ’s nachts omdat de zon vergat onder te gaan. Eten in Fins Lapland.',
       },
@@ -370,7 +370,7 @@ const nl: SectionCopy = {
         tagline: 'Acht, geen vier.',
         description:
           'Poolnacht in december. Middernachtzon in juni. Ruska in september. Acht aparte seizoenen, geen vier. Geen enkele is een truc.',
-        metaTitle: 'De acht seizoenen van Fins Lapland · Lapland.blog',
+        metaTitle: 'De acht seizoenen van Fins Lapland',
         metaDescription:
           'Poolnacht in december, middernachtzon in juni, ruska in september. Fins Lapland heeft acht aparte seizoenen, geen vier. Geen enkele is een truc.',
       },
@@ -379,7 +379,7 @@ const nl: SectionCopy = {
         tagline: 'Wie u hier in het noorden ontmoet.',
         description:
           'Rendierhouders, pistewachten, saunameesters en vreemden in hotellobby’s. Lapland is stil, maar nooit leeg.',
-        metaTitle: 'De mensen van Fins Lapland · Lapland.blog',
+        metaTitle: 'De mensen van Fins Lapland',
         metaDescription:
           'Rendierhouders, pistewachten, saunameesters en vreemden in hotellobby’s. Fins Lapland is stil, maar nooit leeg.',
       },
@@ -388,7 +388,7 @@ const nl: SectionCopy = {
         tagline: 'Wat −25 °C overleeft.',
         description:
           'Laarzen, handschoenen, laagjes, batterijen, camerakeuzes. Wat echt werkt bij −25 °C en wat ik heb weggegooid.',
-        metaTitle: 'Uitrusting die werkt in Fins Lapland · Lapland.blog',
+        metaTitle: 'Uitrusting die werkt in Fins Lapland',
         metaDescription:
           'Laarzen, handschoenen, laagjes, batterijen en camerakeuzes voor Fins Lapland. Wat echt werkt bij −25 °C en wat ik heb weggegooid.',
       },
@@ -397,7 +397,7 @@ const nl: SectionCopy = {
         tagline: 'De lange weg.',
         description:
           'Langere leesstukken. Losse reizen, losse nachten, losse vreemde middagen. Wanneer een stuk meer dan 800 woorden wil.',
-        metaTitle: 'Lange leesstukken uit Fins Lapland · Lapland.blog',
+        metaTitle: 'Lange leesstukken uit Fins Lapland',
         metaDescription:
           'Lange leesstukken uit Fins Lapland: losse reizen, losse nachten, vreemde middagen. Voor wanneer een stuk meer dan 800 woorden wil.',
       },
@@ -428,7 +428,7 @@ const nl: SectionCopy = {
     readerNote: 'Geschreven door een lezer van LaplandVibes over de eigen reis.',
   },
   signIn: {
-    pageTitle: 'Plan uw Lapland-reis | Lapland.blog',
+    pageTitle: 'Plan uw Lapland-reis',
     pageDescription:
       'Een gratis reispagina, persoonlijke tips en de beste deals voor uw Lapland-reis. Vertel ons wanneer u komt en we helpen u bij elke stap.',
     back: 'Terug',
@@ -466,7 +466,7 @@ const nl: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: 'Uitschrijven | Lapland.blog',
+    pageTitle: 'Uitschrijven',
     pageDescription: 'Schrijf u uit van de Lapland.blog-nieuwsbrief. Eén klik, zonder hard gevoel.',
     eyebrow: 'Nieuwsbrief',
     h1: 'Uitschrijven',
@@ -480,7 +480,7 @@ const nl: SectionCopy = {
     submit: 'Uitschrijven',
   },
   notFound: {
-    pageTitle: 'Niet gevonden | Lapland.blog',
+    pageTitle: 'Niet gevonden',
     pageDescription: 'Deze pagina bestaat niet. Mogelijk is hij verplaatst, hernoemd of verloren in de sneeuw.',
     eyebrow: 'Niet gevonden · 404',
     h1: 'Verdwaald in de sneeuw.',

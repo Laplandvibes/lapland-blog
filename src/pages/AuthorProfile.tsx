@@ -90,8 +90,8 @@ export default function AuthorProfile() {
 
   useSeo({
     title: profile
-      ? `${profile.display_name} (@${profile.handle}) · Lapland.blog`
-      : 'Author · Lapland.blog',
+      ? `${profile.display_name} (@${profile.handle})`
+      : 'Author',
     description: profile?.bio
       ? `${profile.display_name} on Lapland.blog. ${profile.bio.slice(0, 130)}`
       : `${profile?.display_name ?? 'An author'} on Lapland.blog. Trip-blog entries from Finnish Lapland.`,

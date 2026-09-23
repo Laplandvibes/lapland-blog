@@ -168,8 +168,8 @@ export default function MyEditor() {
 
   useSeo({
     title: isNew
-      ? 'Write a new post · Lapland.blog'
-      : 'Edit post · Lapland.blog',
+      ? 'Write a new post'
+      : 'Edit post',
     description: 'Write your Lapland trip story.',
     canonical: canonicalUrl(isNew ? '/me/new' : `/me/${id ?? ''}`),
   });

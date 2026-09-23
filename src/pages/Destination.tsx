@@ -48,7 +48,7 @@ export default function Destination() {
   const verkosto = d ? networkLinksFor(d.slug) : [];
 
   useSeo({
-    title: d ? `${d.name} | Lapland.blog` : 'Lapland.blog',
+    title: d ? `${d.name}` : 'Lapland.blog',
     description: d ? `${kuvaus} ${c.metaSuffix}` : '',
     image: 'https://lapland.blog/og/page-destinations.jpg',
     canonical: canonicalUrl(d ? `/destinations/${d.slug}` : '/destinations'),

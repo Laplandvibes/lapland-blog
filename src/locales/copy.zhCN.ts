@@ -207,7 +207,7 @@ const zhCN: SectionCopy = {
     everyEntry: '全部文章',
   },
   about: {
-    pageTitle: '关于 | Lapland.blog',
+    pageTitle: '关于',
     pageDescription:
       'Lapland.blog 是一个免费的旅行日志平台，为前往芬兰拉普兰的游客而设。标记地点、撰写文章、分享给朋友。您的旅程，讲得精彩。',
     eyebrow: '关于这个平台',
@@ -268,7 +268,7 @@ const zhCN: SectionCopy = {
     stayCta: '查看',
   },
   destinations: {
-    pageTitle: '目的地 | Lapland.blog',
+    pageTitle: '目的地',
     pageDescription:
       '芬兰拉普兰的八大目的地：罗瓦涅米、萨利色尔卡、莱维、凯米、伊纳里、穆奥尼奥、于拉斯、凯米耶尔维。阅读每个地方的田野日志文章，或成为第一个动笔的人。',
     eyebrow: '去哪儿',
@@ -323,7 +323,7 @@ const zhCN: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: '热门阅读 | Lapland.blog',
+    pageTitle: '热门阅读',
     pageDescription:
       '在 Lapland.blog 从何读起。精选清单：最适合初次到访者的文章、最佳极光篇、最佳美食篇，以及当季之选。由编辑挑选。',
     eyebrow: '编辑精选',
@@ -361,7 +361,7 @@ const zhCN: SectionCopy = {
   archive: {
     placesLabel: '地点',
     allPlaces: '全部地点',
-    pageTitle: '全部文章 | Lapland.blog',
+    pageTitle: '全部文章',
     pageDescription:
       'Lapland.blog 的全部文章。极光、木屋、美食、季节、人物、装备，以及来自芬兰拉普兰的长篇阅读。',
     eyebrow: '存档',
@@ -393,7 +393,7 @@ const zhCN: SectionCopy = {
         tagline: '天空愿意配合的那些夜晚。',
         description:
           '极光下的夜晚，如实记录。天气、Kp 指数、等待、严寒，以及那些真正打动人的瞬间。',
-        metaTitle: '芬兰拉普兰的极光记事 · Lapland.blog',
+        metaTitle: '芬兰拉普兰的极光记事',
         metaDescription:
           '芬兰拉普兰的极光之夜，如实记录：天气、Kp 指数、等待、严寒，以及那些真正打动人的瞬间。',
       },
@@ -402,7 +402,7 @@ const zhCN: SectionCopy = {
         tagline: '四面墙、一个火炉、没有 Wi-Fi。',
         description:
           '木屋、玻璃冰屋、好用的桑拿和不好用的桑拿。远离城市过夜到底是什么感觉。',
-        metaTitle: '芬兰拉普兰的木屋住宿 · Lapland.blog',
+        metaTitle: '芬兰拉普兰的木屋住宿',
         metaDescription:
           '木屋、玻璃冰屋、好用的桑拿和不好用的桑拿。在芬兰拉普兰远离城市过夜到底是什么感觉。',
       },
@@ -411,7 +411,7 @@ const zhCN: SectionCopy = {
         tagline: '冬天的拉普兰是什么味道。',
         description:
           '三文鱼汤、黑麦面包、三种做法的驯鹿肉，还有凌晨两点喝的咖啡，因为太阳忘了落山。',
-        metaTitle: '芬兰拉普兰的美食 · Lapland.blog',
+        metaTitle: '芬兰拉普兰的美食',
         metaDescription:
           '三文鱼汤、黑麦面包、三种做法的驯鹿肉，还有因为太阳忘了落山而在凌晨两点喝的咖啡。在芬兰拉普兰吃什么。',
       },
@@ -420,7 +420,7 @@ const zhCN: SectionCopy = {
         tagline: '八季，而非四季。',
         description:
           '十二月的极夜。六月的午夜阳光。九月的秋色 ruska。八个各自分明的季节，而不是四个。没有一个是噱头。',
-        metaTitle: '芬兰拉普兰的八个季节 · Lapland.blog',
+        metaTitle: '芬兰拉普兰的八个季节',
         metaDescription:
           '十二月的极夜、六月的午夜阳光、九月的秋色 ruska。芬兰拉普兰有八个分明的季节，而不是四个，没有一个是噱头。',
       },
@@ -429,7 +429,7 @@ const zhCN: SectionCopy = {
         tagline: '在北方遇见的人。',
         description:
           '驯鹿牧民、滑雪巡逻员、桑拿师傅，还有酒店大堂里的陌生人。拉普兰安静，却从不空旷。',
-        metaTitle: '芬兰拉普兰的人们 · Lapland.blog',
+        metaTitle: '芬兰拉普兰的人们',
         metaDescription:
           '驯鹿牧民、滑雪巡逻员、桑拿师傅，还有酒店大堂里的陌生人。拉普兰安静，却从不空旷。',
       },
@@ -438,7 +438,7 @@ const zhCN: SectionCopy = {
         tagline: '经得住零下 25°C 的东西。',
         description:
           '靴子、手套、分层穿搭、电池、相机选择。零下 25°C 下真正管用的，以及我扔掉的。',
-        metaTitle: '在芬兰拉普兰管用的装备 · Lapland.blog',
+        metaTitle: '在芬兰拉普兰管用的装备',
         metaDescription:
           '靴子、手套、分层穿搭、电池和相机选择。零下 25°C 下真正管用的东西，以及我扔掉的东西。',
       },
@@ -447,7 +447,7 @@ const zhCN: SectionCopy = {
         tagline: '绕远路的故事。',
         description:
           '更长的阅读。一次旅程、一个夜晚、一个奇怪的下午。当一篇文章想要超过 800 字时。',
-        metaTitle: '来自芬兰拉普兰的长文 · Lapland.blog',
+        metaTitle: '来自芬兰拉普兰的长文',
         metaDescription:
           '来自芬兰拉普兰的长篇阅读：一次旅程、一个夜晚、一个奇怪的下午。写给想超过 800 字的文章。',
       },
@@ -478,7 +478,7 @@ const zhCN: SectionCopy = {
     readerNote: '由 LaplandVibes 读者记录自己的旅行。',
   },
   signIn: {
-    pageTitle: '规划您的拉普兰之旅 | Lapland.blog',
+    pageTitle: '规划您的拉普兰之旅',
     pageDescription:
       '获得一个免费的行程页面、个性化建议，以及最适合您拉普兰之旅的优惠。告诉我们您何时到访，我们会帮您规划每一步。',
     back: '返回',
@@ -516,7 +516,7 @@ const zhCN: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: '取消订阅 | Lapland.blog',
+    pageTitle: '取消订阅',
     pageDescription: '取消订阅 Lapland.blog 新闻通讯。一键完成，绝无芥蒂。',
     eyebrow: '新闻通讯',
     h1: '取消订阅',
@@ -530,7 +530,7 @@ const zhCN: SectionCopy = {
     submit: '取消订阅',
   },
   notFound: {
-    pageTitle: '未找到 | Lapland.blog',
+    pageTitle: '未找到',
     pageDescription: '这个页面不存在。它可能已被移动、重命名，或迷失在雪中。',
     eyebrow: '未找到 · 404',
     h1: '迷失在雪中。',

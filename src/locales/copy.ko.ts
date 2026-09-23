@@ -157,7 +157,7 @@ const ko: SectionCopy = {
     everyEntry: '모든 글',
   },
   about: {
-    pageTitle: '소개 | Lapland.blog',
+    pageTitle: '소개',
     pageDescription:
       'Lapland.blog는 라플란드를 찾는 분들을 위한 무료 여행 일기 플랫폼입니다. 장소에 핀을 꽂고, 글을 쓰고, 친구들과 공유하세요. 잘 쓰인 여러분의 여행입니다.',
     eyebrow: '플랫폼 소개',
@@ -218,7 +218,7 @@ const ko: SectionCopy = {
     stayCta: '보기',
   },
   destinations: {
-    pageTitle: '여행지 | Lapland.blog',
+    pageTitle: '여행지',
     pageDescription:
       '라플란드의 주요 여덟 곳: 로바니에미, 사리셀카, 레비, 케미, 이나리, 무오니오, 윌래스, 케미야르비. 각 지역의 현장 일기를 읽거나, 최초의 글을 작성하세요.',
     eyebrow: '어디로 갈까',
@@ -273,7 +273,7 @@ const ko: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: '인기 글 | Lapland.blog',
+    pageTitle: '인기 글',
     pageDescription:
       'Lapland.blog에서 어디부터 읽기 시작할지. 편집자의 큐레이션 목록: 초심자용 베스트, 오로라 글, 음식 글, 계절 글. 클릭수가 아닌 편집자의 안목으로 골랐습니다.',
     eyebrow: '편집자 추천',
@@ -311,7 +311,7 @@ const ko: SectionCopy = {
   archive: {
     placesLabel: '장소',
     allPlaces: '모든 장소',
-    pageTitle: '모든 글 | Lapland.blog',
+    pageTitle: '모든 글',
     pageDescription:
       'Lapland.blog의 모든 글. 오로라, 통나무집, 음식, 계절, 사람, 장비, 그리고 라플란드에서 보내 드리는 장문의 글.',
     eyebrow: '아카이브',
@@ -343,7 +343,7 @@ const ko: SectionCopy = {
         tagline: '하늘이 협조하는 밤.',
         description:
           '오로라 아래에서 보낸 밤들, 있는 그대로. 날씨, Kp 지수, 기다림, 추위, 그리고 정말로 마음에 남는 순간들.',
-        metaTitle: '핀란드 라플란드의 오로라 이야기 · Lapland.blog',
+        metaTitle: '핀란드 라플란드의 오로라 이야기',
         metaDescription:
           '핀란드 라플란드의 오로라 밤을 있는 그대로: 날씨, Kp 지수, 기다림, 추위, 그리고 정말로 마음에 남는 순간들.',
       },
@@ -352,7 +352,7 @@ const ko: SectionCopy = {
         tagline: '벽 네 개, 난로 하나, 와이파이 제로.',
         description:
           '통나무집, 유리 이글루, 잘 되는 사우나와 안 되는 사우나. 도시에서 멀리 떨어져 잠드는 건 실제로 어떤 느낌인지.',
-        metaTitle: '핀란드 라플란드의 통나무집 숙박 · Lapland.blog',
+        metaTitle: '핀란드 라플란드의 통나무집 숙박',
         metaDescription:
           '통나무집, 유리 이글루, 잘 되는 사우나와 안 되는 사우나. 핀란드 라플란드에서 도시와 멀리 떨어져 잠드는 실제 느낌.',
       },
@@ -361,7 +361,7 @@ const ko: SectionCopy = {
         tagline: '겨울 라플란드의 맛.',
         description:
           '연어 수프, 호밀빵, 세 가지 방식의 순록 요리, 그리고 해가 지는 걸 잊어서 새벽 2시에 마시는 커피.',
-        metaTitle: '핀란드 라플란드의 음식 · Lapland.blog',
+        metaTitle: '핀란드 라플란드의 음식',
         metaDescription:
           '연어 수프, 호밀빵, 세 가지 방식의 순록 요리, 그리고 해가 지는 걸 잊은 새벽 2시의 커피. 라플란드에서 먹는다는 것.',
       },
@@ -370,7 +370,7 @@ const ko: SectionCopy = {
         tagline: '넷이 아니라 여덟.',
         description:
           '12월의 극야. 6월의 백야. 9월의 루스카. 네 개가 아닌 여덟 개의 뚜렷한 계절. 어느 것도 겉치레가 아닙니다.',
-        metaTitle: '핀란드 라플란드의 여덟 계절 · Lapland.blog',
+        metaTitle: '핀란드 라플란드의 여덟 계절',
         metaDescription:
           '12월의 극야, 6월의 백야, 9월의 루스카. 핀란드 라플란드에는 네 개가 아닌 여덟 개의 뚜렷한 계절이 있습니다.',
       },
@@ -379,7 +379,7 @@ const ko: SectionCopy = {
         tagline: '이 북쪽에서 만나는 사람들.',
         description:
           '순록 목축민, 스키 패트롤, 사우나 장인, 호텔 로비의 낯선 사람들. 라플란드는 조용하지만 결코 비어 있지 않습니다.',
-        metaTitle: '핀란드 라플란드의 사람들 · Lapland.blog',
+        metaTitle: '핀란드 라플란드의 사람들',
         metaDescription:
           '순록 목축민, 스키 패트롤, 사우나 장인, 호텔 로비의 낯선 사람들. 라플란드는 조용하지만 결코 비어 있지 않습니다.',
       },
@@ -388,7 +388,7 @@ const ko: SectionCopy = {
         tagline: '영하 25도를 견디는 것들.',
         description:
           '부츠, 장갑, 레이어링, 배터리, 카메라 선택. 영하 25도에서 정말로 쓸 만한 것과 내가 버린 것.',
-        metaTitle: '핀란드 라플란드에서 통하는 장비 · Lapland.blog',
+        metaTitle: '핀란드 라플란드에서 통하는 장비',
         metaDescription:
           '부츠, 장갑, 레이어링, 배터리, 카메라 선택. 영하 25도에서 정말로 쓸 만한 것과 내가 버린 것.',
       },
@@ -397,7 +397,7 @@ const ko: SectionCopy = {
         tagline: '먼 길을 돌아가는 이야기.',
         description:
           '긴 글. 하나의 여행, 하나의 밤, 하나의 이상한 오후. 글이 800단어를 넘고 싶어질 때.',
-        metaTitle: '핀란드 라플란드의 긴 글 · Lapland.blog',
+        metaTitle: '핀란드 라플란드의 긴 글',
         metaDescription:
           '핀란드 라플란드에서 온 긴 글: 하나의 여행, 하나의 밤, 하나의 이상한 오후. 800단어를 넘고 싶어지는 글을 위해.',
       },
@@ -428,7 +428,7 @@ const ko: SectionCopy = {
     readerNote: 'LaplandVibes 독자가 자신의 여행에 대해 쓴 글입니다.',
   },
   signIn: {
-    pageTitle: '라플란드 여행을 계획하세요 | Lapland.blog',
+    pageTitle: '라플란드 여행을 계획하세요',
     pageDescription:
       '무료 여행 페이지, 맞춤 팁, 라플란드 여정에 맞는 최적의 혜택을 받아 보세요. 언제 방문하시는지 알려 주시면 모든 단계를 함께 계획해 드립니다.',
     back: '뒤로',
@@ -466,7 +466,7 @@ const ko: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: '구독 해지 | Lapland.blog',
+    pageTitle: '구독 해지',
     pageDescription: 'Lapland.blog 뉴스레터를 구독 해지합니다. 한 번의 클릭, 붙잡지 않습니다.',
     eyebrow: '뉴스레터',
     h1: '구독 해지',
@@ -480,7 +480,7 @@ const ko: SectionCopy = {
     submit: '구독 해지',
   },
   notFound: {
-    pageTitle: '페이지를 찾을 수 없음 | Lapland.blog',
+    pageTitle: '페이지를 찾을 수 없음',
     pageDescription: '이 페이지는 존재하지 않습니다. 이동, 이름 변경, 또는 눈 속에 잃어버렸을 수 있습니다.',
     eyebrow: '페이지 없음 · 404',
     h1: '눈 속에서 길을 잃었습니다.',

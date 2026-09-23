@@ -207,7 +207,7 @@ const fi: SectionCopy = {
     everyEntry: 'Kaikki merkinnät',
   },
   about: {
-    pageTitle: 'Tietoa | Lapland.blog',
+    pageTitle: 'Tietoa',
     pageDescription:
       'Lapland.blog on ilmainen matkapäiväkirja Suomen Lappiin matkustaville. Merkitse paikat, kirjoita merkinnät, jaa kavereille. Matkasi, hyvin kerrottuna.',
     eyebrow: 'Tietoa alustasta',
@@ -268,7 +268,7 @@ const fi: SectionCopy = {
     stayCta: 'Selaa',
   },
   destinations: {
-    pageTitle: 'Kohteet | Lapland.blog',
+    pageTitle: 'Kohteet',
     pageDescription:
       'Suomen Lapin kahdeksan pääkohdetta: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lue merkinnät kustakin.',
     eyebrow: 'Mihin mennä',
@@ -323,7 +323,7 @@ const fi: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'Suosituimmat | Lapland.blog',
+    pageTitle: 'Suosituimmat',
     pageDescription:
       'Mistä aloittaa Lapland.blogissa. Käsin valitut listat: parhaat ensikertalaisille, parhaat revontulijutut, parhaat ruokamerkinnät, sesonkijutut.',
     eyebrow: 'Toimituksen valinnat',
@@ -362,7 +362,7 @@ const fi: SectionCopy = {
   archive: {
     placesLabel: 'Paikka',
     allPlaces: 'Kaikki paikat',
-    pageTitle: 'Kaikki jutut | Lapland.blog',
+    pageTitle: 'Kaikki jutut',
     pageDescription:
       'Kaikki Lapland.blogin jutut. Revontulet, mökit, ruoka, vuodenajat, ihmiset, varustus ja pidemmät luettavat Suomen Lapista.',
     eyebrow: 'Arkisto',
@@ -394,7 +394,7 @@ const fi: SectionCopy = {
         tagline: 'Taivas, kun se suostuu.',
         description:
           'Yöt revontulten alla, rehellisesti kerrottuna. Sää, Kp-indeksi, odotus, pakkanen ja ne hetket, jotka oikeasti osuvat kohdalle.',
-        metaTitle: 'Revontulijutut Suomen Lapista · Lapland.blog',
+        metaTitle: 'Revontulijutut Suomen Lapista',
         metaDescription:
           'Revontuliyöt Suomen Lapissa rehellisesti kerrottuna: sää, Kp-indeksi, odotus, pakkanen ja ne hetket, jotka oikeasti osuvat.',
       },
@@ -403,7 +403,7 @@ const fi: SectionCopy = {
         tagline: 'Neljä seinää, yksi kamiina, nolla wifiä.',
         description:
           'Hirsimökit, lasi-iglut, saunat, jotka toimivat, ja saunat, jotka eivät. Millaista on oikeasti nukkua kaukana kaupungista.',
-        metaTitle: 'Mökkiyöt Suomen Lapissa · Lapland.blog',
+        metaTitle: 'Mökkiyöt Suomen Lapissa',
         metaDescription:
           'Hirsimökit, lasi-iglut, saunat, jotka toimivat, ja saunat, jotka eivät. Millaista on oikeasti nukkua kaukana kaupungista Suomen Lapissa.',
       },
@@ -412,7 +412,7 @@ const fi: SectionCopy = {
         tagline: 'Miltä Lappi maistuu talvella.',
         description:
           'Lohikeittoa, ruisleipää, poroa kolmella tavalla ja kahvi, jonka juot kello 2 yöllä, koska aurinko unohti laskea.',
-        metaTitle: 'Ruoka Suomen Lapissa · Lapland.blog',
+        metaTitle: 'Ruoka Suomen Lapissa',
         metaDescription:
           'Lohikeittoa, ruisleipää, poroa kolmella tavalla ja kahvi, jonka juot kello 2 yöllä, koska aurinko unohti laskea. Syömässä Suomen Lapissa.',
       },
@@ -421,7 +421,7 @@ const fi: SectionCopy = {
         tagline: 'Kahdeksan, ei neljä.',
         description:
           'Kaamos joulukuussa. Yötön yö kesäkuussa. Ruska syyskuussa. Kahdeksan erillistä vuodenaikaa, ei neljä. Yksikään ei ole kikka.',
-        metaTitle: 'Suomen Lapin kahdeksan vuodenaikaa · Lapland.blog',
+        metaTitle: 'Suomen Lapin kahdeksan vuodenaikaa',
         metaDescription:
           'Kaamos joulukuussa, yötön yö kesäkuussa, ruska syyskuussa. Suomen Lapissa on kahdeksan erillistä vuodenaikaa, ei neljä. Yksikään ei ole kikka.',
       },
@@ -430,7 +430,7 @@ const fi: SectionCopy = {
         tagline: 'Keitä täällä pohjoisessa tapaa.',
         description:
           'Poronhoitajat, rinnepäivystäjät, saunamajurit ja tuntemattomat hotellien auloissa. Lappi on hiljainen, mutta ei koskaan tyhjä.',
-        metaTitle: 'Suomen Lapin ihmiset · Lapland.blog',
+        metaTitle: 'Suomen Lapin ihmiset',
         metaDescription:
           'Poronhoitajat, rinnepäivystäjät, saunamajurit ja tuntemattomat hotellien auloissa. Lappi on hiljainen, mutta ei koskaan tyhjä.',
       },
@@ -439,7 +439,7 @@ const fi: SectionCopy = {
         tagline: 'Mikä kestää −25 °C.',
         description:
           'Kengät, hanskat, kerrospukeutuminen, akut, kameravalinnat. Mikä oikeasti toimii −25 °C:ssa ja mitä olen heittänyt pois.',
-        metaTitle: 'Varusteet, jotka toimivat Lapissa · Lapland.blog',
+        metaTitle: 'Varusteet, jotka toimivat Lapissa',
         metaDescription:
           'Kengät, hanskat, kerrospukeutuminen, akut ja kameravalinnat Suomen Lappiin. Mikä oikeasti toimii −25 °C:ssa ja mitä olen heittänyt pois.',
       },
@@ -448,7 +448,7 @@ const fi: SectionCopy = {
         tagline: 'Pitkä tie perille.',
         description:
           'Pidemmät luettavat. Yksittäiset matkat, yksittäiset yöt, yksittäiset oudot iltapäivät. Kun juttu vaatii yli 800 sanaa.',
-        metaTitle: 'Pitkät jutut Suomen Lapista · Lapland.blog',
+        metaTitle: 'Pitkät jutut Suomen Lapista',
         metaDescription:
           'Pidemmät luettavat Suomen Lapista: yksittäiset matkat, yöt ja oudot iltapäivät. Silloin kun juttu vaatii yli 800 sanaa.',
       },
@@ -479,7 +479,7 @@ const fi: SectionCopy = {
     readerNote: 'Kirjoittanut LaplandVibesin lukija omalta matkaltaan.',
   },
   signIn: {
-    pageTitle: 'Suunnittele Lapin matkasi | Lapland.blog',
+    pageTitle: 'Suunnittele Lapin matkasi',
     pageDescription:
       'Saat ilmaisen matkasivun, henkilökohtaisia vinkkejä ja parhaat tarjoukset matkallesi. Kerro, milloin tulet, niin autamme suunnittelussa.',
     back: 'Takaisin',
@@ -517,7 +517,7 @@ const fi: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: 'Peru tilaus | Lapland.blog',
+    pageTitle: 'Peru tilaus',
     pageDescription: 'Peru Lapland.blog-uutiskirjeen tilaus. Yksi klikkaus, ei pahaa mieltä.',
     eyebrow: 'Uutiskirje',
     h1: 'Peru tilaus',
@@ -531,7 +531,7 @@ const fi: SectionCopy = {
     submit: 'Peru tilaus',
   },
   notFound: {
-    pageTitle: 'Ei löytynyt | Lapland.blog',
+    pageTitle: 'Ei löytynyt',
     pageDescription: 'Tätä sivua ei ole olemassa. Se on ehkä siirretty, nimetty uudelleen tai kadonnut hankeen.',
     eyebrow: 'Ei löytynyt · 404',
     h1: 'Eksyitkö hankeen.',

@@ -157,7 +157,7 @@ const fr: SectionCopy = {
     everyEntry: 'Toutes les entrées',
   },
   about: {
-    pageTitle: 'À propos | Lapland.blog',
+    pageTitle: 'À propos',
     pageDescription:
       'Lapland.blog est une plateforme gratuite de carnet de voyage pour les visiteurs de la Laponie finlandaise. Épinglez des lieux, écrivez des entrées, partagez.',
     eyebrow: 'À propos de la plateforme',
@@ -218,7 +218,7 @@ const fr: SectionCopy = {
     stayCta: 'Parcourir',
   },
   destinations: {
-    pageTitle: 'Destinations | Lapland.blog',
+    pageTitle: 'Destinations',
     pageDescription:
       'Les huit principales destinations de Laponie finlandaise : Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lisez les entrées de chacune.',
     eyebrow: 'Où aller',
@@ -273,7 +273,7 @@ const fr: SectionCopy = {
     },
   },
   topReads: {
-    pageTitle: 'À lire en priorité | Lapland.blog',
+    pageTitle: 'À lire en priorité',
     pageDescription:
       'Par où commencer sur Lapland.blog. Listes de la rédaction : première visite, aurores, cuisine et saisonnières.',
     eyebrow: 'Choix de la rédaction',
@@ -311,7 +311,7 @@ const fr: SectionCopy = {
   archive: {
     placesLabel: 'Lieu',
     allPlaces: 'Tous les lieux',
-    pageTitle: 'Toutes les entrées | Lapland.blog',
+    pageTitle: 'Toutes les entrées',
     pageDescription:
       'Tous les récits de Lapland.blog. Aurores, chalets, cuisine, saisons, gens, équipement et lectures longues depuis la Laponie finlandaise.',
     eyebrow: 'Archives',
@@ -343,7 +343,7 @@ const fr: SectionCopy = {
         tagline: 'Le ciel, quand il veut bien.',
         description:
           'Des nuits sous les aurores boréales, racontées honnêtement. Météo, indice Kp, attente, froid et les moments qui comptent vraiment.',
-        metaTitle: 'Aurores boréales en Laponie finlandaise · Lapland.blog',
+        metaTitle: 'Aurores boréales en Laponie finlandaise',
         metaDescription:
           'Nuits d’aurores boréales en Laponie finlandaise, racontées honnêtement : météo, indice Kp, attente, froid et les moments qui comptent vraiment.',
       },
@@ -352,7 +352,7 @@ const fr: SectionCopy = {
         tagline: 'Quatre murs, un poêle, zéro wifi.',
         description:
           'Chalets en bois, igloos de verre, saunas qui marchent, saunas qui ne marchent pas. Ce que ça fait vraiment de dormir loin d’une ville.',
-        metaTitle: 'Chalets en Laponie finlandaise · Lapland.blog',
+        metaTitle: 'Chalets en Laponie finlandaise',
         metaDescription:
           'Chalets en bois, igloos de verre, saunas qui marchent et saunas qui ne marchent pas. Dormir loin d’une ville en Laponie finlandaise, pour de vrai.',
       },
@@ -361,7 +361,7 @@ const fr: SectionCopy = {
         tagline: 'Le goût de la Laponie en hiver.',
         description:
           'Soupe de saumon, pain de seigle, renne de trois façons, et le café que l’on boit à 2 h du matin parce que le soleil a oublié de se coucher.',
-        metaTitle: 'La cuisine en Laponie finlandaise · Lapland.blog',
+        metaTitle: 'La cuisine en Laponie finlandaise',
         metaDescription:
           'Soupe de saumon, pain de seigle, renne de trois façons et le café de 2 h du matin parce que le soleil a oublié de se coucher. Manger en Laponie finlandaise.',
       },
@@ -370,7 +370,7 @@ const fr: SectionCopy = {
         tagline: 'Huit, pas quatre.',
         description:
           'Nuit polaire en décembre. Soleil de minuit en juin. Ruska en septembre. Huit saisons distinctes, pas quatre. Aucune n’est un gadget.',
-        metaTitle: 'Les huit saisons de la Laponie finlandaise · Lapland.blog',
+        metaTitle: 'Les huit saisons de la Laponie finlandaise',
         metaDescription:
           'Nuit polaire en décembre, soleil de minuit en juin, ruska en septembre. La Laponie finlandaise compte huit saisons distinctes, pas quatre.',
       },
@@ -379,7 +379,7 @@ const fr: SectionCopy = {
         tagline: 'Qui l’on rencontre là-haut.',
         description:
           'Éleveurs de rennes, pisteurs, maîtres de sauna et inconnus dans les halls d’hôtel. La Laponie est silencieuse, mais jamais vide.',
-        metaTitle: 'Les gens de la Laponie finlandaise · Lapland.blog',
+        metaTitle: 'Les gens de la Laponie finlandaise',
         metaDescription:
           'Éleveurs de rennes, pisteurs, maîtres de sauna et inconnus dans les halls d’hôtel. La Laponie est silencieuse, mais jamais vide.',
       },
@@ -388,7 +388,7 @@ const fr: SectionCopy = {
         tagline: 'Ce qui survit à −25 °C.',
         description:
           'Bottes, gants, couches, batteries, choix d’appareil photo. Ce qui marche vraiment à −25 °C, et ce que j’ai jeté.',
-        metaTitle: 'L’équipement qui marche en Laponie finlandaise · Lapland.blog',
+        metaTitle: 'L’équipement qui marche en Laponie finlandaise',
         metaDescription:
           'Bottes, gants, couches, batteries et choix d’appareil photo pour la Laponie finlandaise. Ce qui marche vraiment à −25 °C, et ce que j’ai jeté.',
       },
@@ -397,7 +397,7 @@ const fr: SectionCopy = {
         tagline: 'Le chemin le plus long.',
         description:
           'Des lectures plus longues. Un voyage, une nuit, un après-midi étrange. Quand un billet demande plus de 800 mots.',
-        metaTitle: 'Récits longs de Laponie finlandaise · Lapland.blog',
+        metaTitle: 'Récits longs de Laponie finlandaise',
         metaDescription:
           'Lectures longues depuis la Laponie finlandaise : un voyage, une nuit, un après-midi étrange. Quand un billet demande plus de 800 mots.',
       },
@@ -428,7 +428,7 @@ const fr: SectionCopy = {
     readerNote: 'Écrit par une lectrice ou un lecteur de LaplandVibes sur son propre voyage.',
   },
   signIn: {
-    pageTitle: 'Planifiez votre voyage en Laponie | Lapland.blog',
+    pageTitle: 'Planifiez votre voyage en Laponie',
     pageDescription:
       'Une page voyage gratuite, des conseils personnalisés et les meilleures offres pour votre séjour en Laponie. Dites-nous quand vous venez.',
     back: 'Retour',
@@ -466,7 +466,7 @@ const fr: SectionCopy = {
     ],
   },
   unsubscribe: {
-    pageTitle: 'Désabonnement | Lapland.blog',
+    pageTitle: 'Désabonnement',
     pageDescription: 'Désabonnez-vous de la newsletter Lapland.blog. Un clic, sans rancune.',
     eyebrow: 'Newsletter',
     h1: 'Désabonnement',
@@ -480,7 +480,7 @@ const fr: SectionCopy = {
     submit: 'Se désabonner',
   },
   notFound: {
-    pageTitle: 'Introuvable | Lapland.blog',
+    pageTitle: 'Introuvable',
     pageDescription: 'Cette page n’existe pas. Elle a peut-être été déplacée, renommée ou perdue dans la neige.',
     eyebrow: 'Introuvable · 404',
     h1: 'Perdu dans la neige.',

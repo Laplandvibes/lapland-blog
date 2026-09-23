@@ -8,8 +8,8 @@ import { useLang, type Lang } from '../i18n/useLang';
 // (/cookie-policy fallbackTitleByLang) so the client-side document.title matches
 // the prerendered <title> on /fi, /de, … instead of staying English.
 const TITLE: Record<Lang, string> = {
-  en: 'Cookie Policy · Lapland.blog',
-  fi: 'Evästekäytäntö · Lapland.blog',
+  en: 'Cookie Policy',
+  fi: 'Evästekäytäntö',
   de: 'Cookie-Richtlinie · Lapland.blog',
   ja: 'クッキーポリシー · Lapland.blog',
   es: 'Política de cookies y consentimiento · Lapland.blog',

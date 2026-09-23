@@ -27,7 +27,7 @@ export default function Category() {
 
   // Hooks before any early return.
   useSeo({
-    title: theme ? theme.metaTitle : 'Category · Lapland.blog',
+    title: theme ? theme.metaTitle : 'Category',
     description: theme?.metaDescription ?? 'Browse Lapland.blog stories by theme.',
     canonical: category ? canonicalUrl(`/category/${category.slug}`) : canonicalUrl('/stories'),
   });

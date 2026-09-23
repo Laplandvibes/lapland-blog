@@ -40,7 +40,7 @@ export default function MySettings() {
   const [postCount, setPostCount] = useState<number>(0);
 
   useSeo({
-    title: 'Account settings · Lapland.blog',
+    title: 'Account settings',
     description: 'Your Lapland.blog account: email, account deletion and data export.',
     canonical: canonicalUrl('/me/settings'),
   });
