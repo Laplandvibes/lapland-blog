@@ -17,7 +17,9 @@ const ROUTES = new URL('./routes.json', import.meta.url);
 // anywhere .env was absent - which is every clean-clone CI build.
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-const SITE_SUFFIX = ' · Lapland.blog';
+// Ei sivustonimen päätettä otsikossa 23.9.2026 alkaen (Vesa 22.9.: "turhaa toistoa kun
+// domainissa lukee se"). Tämä skripti lisäsi ' · Lapland.blog' jokaiseen fi/sv-otsikkoon
+// jokaisessa buildissa, joten routes.jsonin käsin siivottu otsikko palasi päätteelliseksi.
 
 const { data, error } = await supabase
   .from('blog_posts')
@@ -55,7 +57,7 @@ for (const route of routes) {
   const descriptions = {};
   for (const [lang, row] of Object.entries(translations)) {
     if (!row.title) continue;
-    titles[lang] = row.title + SITE_SUFFIX;
+    titles[lang] = row.title;
     if (row.excerpt) descriptions[lang] = row.excerpt;
     langsSeen.add(lang);
   }
