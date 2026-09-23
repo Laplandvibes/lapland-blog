@@ -157,7 +157,7 @@ const it: SectionCopy = {
     everyEntry: 'Tutte le voci',
   },
   about: {
-    pageTitle: 'Chi siamo | Lapland.blog',
+    pageTitle: 'Chi siamo',
     pageDescription:
       'Lapland.blog è una piattaforma gratuita di diario di viaggio per chi visita la Lapponia finlandese. Segni luoghi, scriva voci, condivida con gli amici.',
     eyebrow: 'La piattaforma',
