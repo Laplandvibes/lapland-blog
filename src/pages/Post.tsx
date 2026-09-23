@@ -81,7 +81,9 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
           <p className="text-[var(--color-ink-mute)] tracking-[0.28em] text-[10px] font-bold uppercase mb-2">
             {sourcesLabel}
           </p>
-          <div className="text-[0.88rem] leading-relaxed text-[var(--color-ink-soft)]">
+          {/* Lähderivi on virkkeitä ⇒ leipätekstiä, 16 px eikä 14 (§33, Vesa 20.9.2026): lähde ei saa
+              olla jutun vaikein rivi lukea. SOURCES-otsake yllä on silmäotsikko ja saa olla pieni. */}
+          <div className="text-base leading-relaxed text-[var(--color-ink-soft)]">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{block.text}</ReactMarkdown>
           </div>
         </aside>

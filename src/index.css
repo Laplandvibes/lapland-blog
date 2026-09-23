@@ -856,8 +856,10 @@ textarea:focus-visible {
   display: block;
   box-shadow: 0 30px 60px -36px rgba(26, 24, 21, 0.45);
 }
+/* Kuvateksti on virke ("Mid-September at Äkäslompolo in Kolari: the birches have
+   turned…") ⇒ leipätekstiä, 16 px eikä 14 (§33, Vesa 20.9.2026). */
 .prose-editorial figcaption {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-ink-mute);
   text-align: center;
   margin-top: 0.85em;
