@@ -47,9 +47,14 @@ export default function Destination() {
   const omat = d ? posts.filter((p) => p.tags.some((t) => t.toLowerCase() === d.slug)) : [];
   const verkosto = d ? networkLinksFor(d.slug) : [];
 
+  // ja/zh eivät välistä virkkeitä: täysleveän 。！？ jälkeen ei välilyöntiä.
+  // Korea ja latinalaiset kielet välistävät. Sama sääntö kuin routes.json:n
+  // prerender-kuvauksissa ja kanonisen prerenderin [LV-CJK-JOIN]-liitoksessa.
+  const liitos = /^(ja|zh)/.test(lang) && /[。！？]$/.test(kuvaus) ? '' : ' ';
+
   useSeo({
     title: d ? `${d.name}` : 'Lapland.blog',
-    description: d ? `${kuvaus} ${c.metaSuffix}` : '',
+    description: d ? `${kuvaus}${liitos}${c.metaSuffix}` : '',
     image: 'https://lapland.blog/og/page-destinations.jpg',
     canonical: canonicalUrl(d ? `/destinations/${d.slug}` : '/destinations'),
   });
