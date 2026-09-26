@@ -215,7 +215,7 @@ const fi: SectionCopy = {
     lead:
       'Lapland.blog on ilmainen matkapäiväkirja-alusta Suomen Lappiin matkustaville. Merkitse paikka, jossa näit revontulet. Kuvaa mökki. Kirjoita mitä lämpötila teki. Kun lennät kotiin, sinulla on blogi matkasta: sellainen, jota kaverit voivat oikeasti seurata ja jota itse haluat lukea viiden vuoden päästä.',
     intro:
-      'Useimmat Lappi-blogit kuulostavat esitteeltä. Useimmat matkapäiväkirjasovellukset jäävät puhelimen kuvavirtaan tai päätyvät yhdeksi Instagram-postaukseksi, joka katoaa päivässä. Lapland.blog on välimuoto: oikea, hidas, kuvavetoinen blogi matkastasi, hostattu nimellä joka jo saa kävijöitä, säilytettynä niin kauan kuin haluat.',
+      'Lapland.blog on oikea, hidas, kuvavetoinen blogi matkastasi, hostattu nimellä, joka jo saa kävijöitä, ja säilytettynä niin kauan kuin haluat.',
     howHeading: 'Näin se toimii',
     howStepPin: 'Merkitse mökki, ravintola ja pimeän taivaan paikka. Rakenna reittisi jo ennen lähtöä.',
     howStepWrite: 'Kirjoita matkan aikana, mökiltä, autosta, saunasta. Lisää kuvat, lämpötila ja miltä keitto maistui.',
@@ -344,7 +344,7 @@ const fi: SectionCopy = {
     cabinsEyebrow: 'Mökit',
     cabinsTitle: 'Mökkimerkinnät.',
     cabinsSubtitle:
-      'Millaista suomalaisessa metsämökissä oikeasti on: tuli, sauna, hiljaisuus ja se pieni juttu ulkohuussista kovalla pakkasella, jota kukaan ei mainitse.',
+      'Millaista suomalaisessa metsämökissä oikeasti on: tuli, sauna, hiljaisuus ja ulkohuussi kovalla pakkasella.',
     foodEyebrow: 'Ruoka ja juoma',
     foodTitle: 'Keittiömerkinnät.',
     foodSubtitle:
@@ -352,7 +352,7 @@ const fi: SectionCopy = {
     seasonalEyebrow: 'Sesonki',
     seasonalTitle: 'Mitä kylmyys oikeasti tekee.',
     seasonalSubtitle:
-      'Kaamos, ne kahdeksan Lapin vuodenaikaa, jotka useimmat listat unohtavat, ja se pieni tehtävä päästä joulukuun läpi ilman aurinkoa.',
+      'Kaamos, Lapin kahdeksan vuodenaikaa ja se pieni tehtävä päästä joulukuun läpi ilman aurinkoa.',
     ctaEyebrow: 'Sinun matkasi seuraavaksi?',
     ctaH2: 'Ole seuraava merkintä tällä sivulla.',
     ctaLead:

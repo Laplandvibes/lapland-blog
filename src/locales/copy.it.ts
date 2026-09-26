@@ -165,7 +165,7 @@ const it: SectionCopy = {
     lead:
       'Lapland.blog è una piattaforma gratuita di diario di viaggio per chi visita la Lapponia finlandese. Segni dove ha visto l’aurora. Fotografi la baita. Annoti che cosa faceva la temperatura. Al rientro, avrà un blog del Suo viaggio: uno che gli amici possono davvero seguire e che fra cinque anni avrà ancora voglia di rileggere.',
     intro:
-      'La maggior parte dei blog sulla Lapponia si leggono come una brochure. La maggior parte delle app di diario di viaggio finiscono abbandonate in un rullino o condivise come un singolo post Instagram che sparisce in un giorno. Lapland.blog è la via di mezzo: un vero blog di viaggio lento, centrato sulle foto, ospitato su un dominio già con traffico e conservato finché lo vorrà.',
+      'Lapland.blog è un vero blog di viaggio lento, centrato sulle foto, ospitato su un dominio già con traffico e conservato finché lo vorrà.',
     howHeading: 'Come funziona',
     howStepPin: 'Segni la baita, il ristorante, il punto di cielo buio. Costruisca il Suo itinerario prima di partire.',
     howStepWrite: 'Scriva lungo il percorso, dalla baita, dall’auto, dalla sauna. Aggiunga foto, la temperatura e il sapore della zuppa.',
@@ -293,7 +293,7 @@ const it: SectionCopy = {
     cabinsEyebrow: 'Le baite',
     cabinsTitle: 'Voci mökki.',
     cabinsSubtitle:
-      'Com’è davvero una baita nel bosco finlandese: il fuoco, la sauna, il silenzio e quella cosa che nessuno dice sul bagno esterno con il gelo forte.',
+      'Com’è davvero una baita nel bosco finlandese: il fuoco, la sauna, il silenzio e il bagno esterno con il gelo forte.',
     foodEyebrow: 'Cibo + bevande',
     foodTitle: 'Le voci di cucina.',
     foodSubtitle:
@@ -301,7 +301,7 @@ const it: SectionCopy = {
     seasonalEyebrow: 'Stagionali',
     seasonalTitle: 'Cosa fa davvero il freddo.',
     seasonalSubtitle:
-      'Kaamos, le otto stagioni della Lapponia che molti elenchi dimenticano e il piccolo mestiere di attraversare dicembre senza sole.',
+      'Kaamos, le otto stagioni della Lapponia e il piccolo mestiere di attraversare dicembre senza sole.',
     ctaEyebrow: 'Il prossimo viaggio è il Suo?',
     ctaH2: 'Sia la prossima voce di questa pagina.',
     ctaLead:

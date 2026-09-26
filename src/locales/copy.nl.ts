@@ -165,7 +165,7 @@ const nl: SectionCopy = {
     lead:
       'Lapland.blog is een gratis reisdagboekplatform voor bezoekers van Fins Lapland. Prik de plek vast waar u het noorderlicht zag. Fotografeer de hut. Schrijf op wat de temperatuur deed. Tegen de tijd dat u naar huis vliegt, hebt u een blog van uw reis: een die uw vrienden kunnen volgen, en een die u over vijf jaar nog wilt lezen.',
     intro:
-      'De meeste Lapland-blogs lezen als een brochure. De meeste reisdagboek-apps eindigen vergeten in een fotorol of als één Instagram-post die binnen een dag verdwijnt. Lapland.blog is daartussenin: een echte, langzame, fotogerichte blog van uw reis, gehost onder een naam die al verkeer trekt, zo lang bewaard als u wilt.',
+      'Lapland.blog is een echte, langzame, fotogerichte blog van uw reis, gehost onder een naam die al verkeer trekt, zo lang bewaard als u wilt.',
     howHeading: 'Hoe het werkt',
     howStepPin: 'Prik de hut, het restaurant, de donkere-hemelplek vast. Bouw uw route voordat u vertrekt.',
     howStepWrite: 'Schrijf onderweg, vanuit de hut, de auto, de sauna. Voeg foto’s toe, de temperatuur en hoe de soep smaakte.',
@@ -293,7 +293,7 @@ const nl: SectionCopy = {
     cabinsEyebrow: 'De hutten',
     cabinsTitle: 'Mökki-notities.',
     cabinsSubtitle:
-      'Hoe het echt is in een Finse boshut: vuur, sauna, stilte, en dat wat niemand vertelt over het buitentoilet bij strenge vorst.',
+      'Hoe het echt is in een Finse boshut: vuur, sauna, stilte en het buitentoilet bij strenge vorst.',
     foodEyebrow: 'Eten + drinken',
     foodTitle: 'De keukenstukken.',
     foodSubtitle:
@@ -301,7 +301,7 @@ const nl: SectionCopy = {
     seasonalEyebrow: 'Seizoenen',
     seasonalTitle: 'Wat de kou werkelijk doet.',
     seasonalSubtitle:
-      'Kaamos, de acht seizoenen van Lapland die de meeste lijsten vergeten, en de kleine kunst om december zonder zon door te komen.',
+      'Kaamos, de acht seizoenen van Lapland en de kleine kunst om december zonder zon door te komen.',
     ctaEyebrow: 'Uw reis als volgende?',
     ctaH2: 'Wees de volgende notitie op deze pagina.',
     ctaLead:

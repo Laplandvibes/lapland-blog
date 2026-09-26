@@ -2,7 +2,7 @@
 // Avain = polku /images/-juuresta, arvo = sisällön sha256:n 8 ensimmäistä merkkiä,
 // sama tiiviste jonka version-images.mjs kirjoittaa prerenderöityyn HTML:ään.
 export const IMAGE_VERSIONS: Record<string, string> = {
-  '/images/app-qr.svg': 'af20f59d',
+  '/images/app-qr.svg': 'fd83cc0e',
   '/images/app-screenshot.webp': '04d59cfb',
   '/images/aside-vesa-1200.avif': '95adc29c',
   '/images/aside-vesa-1200.webp': '6ca7a624',

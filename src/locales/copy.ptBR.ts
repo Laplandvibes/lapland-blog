@@ -215,7 +215,7 @@ const ptBR: SectionCopy = {
     lead:
       'O Lapland.blog é uma plataforma gratuita de diário de viagem para quem visita a Lapônia finlandesa. Marque onde você viu a aurora. Fotografe a cabana. Anote o que o termômetro fez. Quando voltar para casa, você terá um blog da sua viagem: um que seus amigos possam de fato acompanhar e que você ainda vai querer reler daqui a cinco anos.',
     intro:
-      'Quase todo blog sobre a Lapônia se lê como um folheto. Quase todo app de diário de viagem ou é abandonado no rolo de fotos ou é compartilhado num único post de Instagram que some em um dia. O Lapland.blog é o meio-termo: um blog real, sem pressa e guiado pelas imagens da sua viagem, hospedado sob um nome que já recebe visitas e mantido pelo tempo que você quiser.',
+      'O Lapland.blog é um blog real, sem pressa e guiado pelas imagens da sua viagem, hospedado sob um nome que já recebe visitas e mantido pelo tempo que você quiser.',
     howHeading: 'Como funciona',
     howStepPin: 'Marque a cabana, o restaurante, o ponto de céu escuro. Monte seu roteiro antes de embarcar.',
     howStepWrite: 'Escreva durante a viagem, da cabana, do carro, da sauna. Adicione fotos, a temperatura e o sabor da sopa.',
@@ -343,7 +343,7 @@ const ptBR: SectionCopy = {
     cabinsEyebrow: 'As cabanas',
     cabinsTitle: 'Entradas de mökki.',
     cabinsSubtitle:
-      'Como é de verdade uma cabana na floresta finlandesa: fogo, sauna, silêncio e aquilo que ninguém conta sobre a latrina externa no frio forte.',
+      'Como é de verdade uma cabana na floresta finlandesa: fogo, sauna, silêncio e a latrina externa no frio forte.',
     foodEyebrow: 'Comida e bebida',
     foodTitle: 'Os textos de cozinha.',
     foodSubtitle:
@@ -351,7 +351,7 @@ const ptBR: SectionCopy = {
     seasonalEyebrow: 'De temporada',
     seasonalTitle: 'O que o frio de fato faz.',
     seasonalSubtitle:
-      'O kaamos, as oito estações da Lapônia que quase toda lista esquece, e o pequeno ofício de atravessar dezembro sem sol.',
+      'O kaamos, as oito estações da Lapônia e o pequeno ofício de atravessar dezembro sem sol.',
     ctaEyebrow: 'Sua viagem a seguir?',
     ctaH2: 'Seja a próxima entrada desta página.',
     ctaLead:

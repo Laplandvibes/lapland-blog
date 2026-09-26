@@ -216,7 +216,7 @@ const de: SectionCopy = {
     lead:
       'Lapland.blog ist eine kostenlose Reisetagebuch-Plattform für Besucher des finnischen Lapplands. Markieren Sie, wo Sie die Nordlichter sahen. Fotografieren Sie die Hütte. Notieren Sie, was die Temperatur tat. Wenn Sie nach Hause fliegen, haben Sie einen Blog Ihrer Reise: einen, dem Ihre Freunde wirklich folgen können und den Sie in fünf Jahren noch lesen wollen.',
     intro:
-      'Die meisten Lappland-Blogs lesen sich wie eine Broschüre. Die meisten Reisetagebuch-Apps werden entweder in der Handy-Galerie aufgegeben oder als einzelner Instagram-Post geteilt, der nach einem Tag verschwindet. Lapland.blog ist das Dazwischen: ein echter, ruhiger, bildgetragener Blog Ihrer Reise, gehostet unter einem Namen, der bereits Besucher anzieht, und so lange aufbewahrt, wie Sie es wünschen.',
+      'Lapland.blog ist ein echter, ruhiger, bildgetragener Blog Ihrer Reise, gehostet unter einem Namen, der bereits Besucher anzieht, und so lange aufbewahrt, wie Sie es wünschen.',
     howHeading: 'So funktioniert es',
     howStepPin: 'Markieren Sie die Hütte, das Restaurant, den Dark-Sky-Spot. Bauen Sie Ihre Route schon vor dem Abflug.',
     howStepWrite: 'Schreiben Sie unterwegs, aus der Hütte, dem Auto, der Sauna. Fügen Sie Fotos, die Temperatur und den Geschmack der Suppe hinzu.',
@@ -345,7 +345,7 @@ const de: SectionCopy = {
     cabinsEyebrow: 'Die Hütten',
     cabinsTitle: 'Mökki-Einträge.',
     cabinsSubtitle:
-      'Wie es in einer finnischen Waldhütte wirklich ist: Feuer, Sauna, Stille, und das, was niemand über das Plumpsklo bei strengem Frost erwähnt.',
+      'Wie es in einer finnischen Waldhütte wirklich ist: Feuer, Sauna, Stille und das Plumpsklo bei strengem Frost.',
     foodEyebrow: 'Essen & Trinken',
     foodTitle: 'Die Küchen-Stücke.',
     foodSubtitle:
@@ -353,7 +353,7 @@ const de: SectionCopy = {
     seasonalEyebrow: 'Saisonal',
     seasonalTitle: 'Was die Kälte wirklich macht.',
     seasonalSubtitle:
-      'Kaamos (Polarnacht), die acht Lappland-Jahreszeiten, die die meisten Listen vergessen, und die kleine Aufgabe, ohne Sonne durch den Dezember zu kommen.',
+      'Kaamos (Polarnacht), die acht Lappland-Jahreszeiten und die kleine Aufgabe, ohne Sonne durch den Dezember zu kommen.',
     ctaEyebrow: 'Als Nächstes Ihre Reise?',
     ctaH2: 'Werden Sie der nächste Eintrag auf dieser Seite.',
     ctaLead:

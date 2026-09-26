@@ -165,7 +165,7 @@ const fr: SectionCopy = {
     lead:
       'Lapland.blog est une plateforme gratuite de carnet de voyage pour les visiteurs de la Laponie finlandaise. Épinglez l’endroit où vous avez vu les aurores. Photographiez le chalet. Notez ce que la température faisait. Au moment de rentrer, vous avez un blog de votre voyage : que vos amis peuvent vraiment suivre, et que vous aurez encore envie de relire dans cinq ans.',
     intro:
-      'La plupart des blogs sur la Laponie se lisent comme une brochure. La plupart des applis de carnet de voyage finissent abandonnées dans un rouleau photo ou partagées en un seul post Instagram qui disparaît en une journée. Lapland.blog est l’entre-deux : un vrai blog de voyage, lent, porté par la photo, hébergé sous un nom qui reçoit déjà du trafic, conservé aussi longtemps que vous le voulez.',
+      'Lapland.blog est un vrai blog de voyage, lent, porté par la photo, hébergé sous un nom qui reçoit déjà du trafic, conservé aussi longtemps que vous le voulez.',
     howHeading: 'Comment ça marche',
     howStepPin: 'Épinglez le chalet, le restaurant, le spot de ciel noir. Construisez votre itinéraire avant de partir.',
     howStepWrite: 'Écrivez en chemin, depuis le chalet, la voiture, le sauna. Ajoutez des photos, la température et le goût de la soupe.',
@@ -293,7 +293,7 @@ const fr: SectionCopy = {
     cabinsEyebrow: 'Les chalets',
     cabinsTitle: 'Entrées mökki.',
     cabinsSubtitle:
-      'Ce que c’est vraiment, un chalet forestier finlandais : le feu, le sauna, le silence, et ce que personne ne dit sur les toilettes sèches par grand froid.',
+      'Ce que c’est vraiment, un chalet forestier finlandais : le feu, le sauna, le silence et les toilettes sèches par grand froid.',
     foodEyebrow: 'Cuisine + boissons',
     foodTitle: 'Les entrées cuisine.',
     foodSubtitle:
@@ -301,7 +301,7 @@ const fr: SectionCopy = {
     seasonalEyebrow: 'Saisonnier',
     seasonalTitle: 'Ce que le froid fait vraiment.',
     seasonalSubtitle:
-      'Kaamos, les huit saisons que la plupart des listes oublient, et le petit ouvrage que représente traverser décembre sans soleil.',
+      'Kaamos, les huit saisons de Laponie et le petit ouvrage que représente traverser décembre sans soleil.',
     ctaEyebrow: 'Votre voyage, le prochain ?',
     ctaH2: 'Soyez la prochaine entrée sur cette page.',
     ctaLead:

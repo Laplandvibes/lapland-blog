@@ -215,7 +215,7 @@ const zhCN: SectionCopy = {
     lead:
       'Lapland.blog 是一个免费的旅行日志平台，为前往芬兰拉普兰的游客而设。标出您看到极光的地方。拍下木屋。记下气温的变化。等您飞回家时，就拥有了一个记录旅程的博客：一个朋友们真的能跟着看的博客，一个五年后您仍想重读的博客。',
     intro:
-      '大多数拉普兰博客读起来都像宣传册。大多数旅行日志应用，要么被遗忘在手机相册里，要么以一条转眼就消失的 Instagram 帖子收场。Lapland.blog 介于两者之间：一个真实、不赶时间、以图片为主的旅程博客，托管在一个本就有流量的域名下，您想留多久就留多久。',
+      'Lapland.blog 是一个真实、不赶时间、以图片为主的旅程博客，托管在一个本就有流量的域名下，您想留多久就留多久。',
     howHeading: '它如何运作',
     howStepPin: '标记木屋、餐厅和暗空观测点。出发前就把路线规划好。',
     howStepWrite: '边走边写，在木屋里、车上、桑拿房。配上照片、气温，以及那碗汤的味道。',
@@ -343,7 +343,7 @@ const zhCN: SectionCopy = {
     cabinsEyebrow: '木屋',
     cabinsTitle: 'mökki（芬兰小木屋）文章。',
     cabinsSubtitle:
-      '芬兰森林小屋真实的样子：火、桑拿、寂静，以及严寒里那个户外厕所——没人会提的那部分。',
+      '芬兰森林小屋真实的样子：火、桑拿、寂静，以及严寒里的户外厕所。',
     foodEyebrow: '美食与饮品',
     foodTitle: '厨房文章。',
     foodSubtitle:
@@ -351,7 +351,7 @@ const zhCN: SectionCopy = {
     seasonalEyebrow: '当季',
     seasonalTitle: '寒冷究竟做了什么。',
     seasonalSubtitle:
-      '极夜(kaamos)、大多数清单都遗忘的拉普兰八季，以及在没有太阳的情况下熬过十二月这桩小小的功课。',
+      '极夜(kaamos)、拉普兰八季，以及在没有太阳的情况下熬过十二月这桩小小的功课。',
     ctaEyebrow: '下一个轮到您的旅程？',
     ctaH2: '成为这一页上的下一篇。',
     ctaLead:

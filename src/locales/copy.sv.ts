@@ -215,7 +215,7 @@ const sv: SectionCopy = {
     lead:
       'Lapland.blog är en gratis resedagboksplattform för besökare i finska Lappland. Nåla fast var du såg norrskenet. Fotografera stugan. Skriv vad temperaturen gjorde. När du flyger hem har du en blogg om din resa: en som dina vänner faktiskt kan följa, och en du fortfarande vill läsa om fem år.',
     intro:
-      'De flesta Lapplandsbloggar läses som en broschyr. De flesta resedagboksappar antingen överges i en telefonrulle eller delas som ett enda Instagram-inlägg som försvinner på en dag. Lapland.blog är det som ligger mittemellan: en riktig, långsam, bildledd blogg om din resa, publicerad under ett namn som redan får trafik, sparad så länge du vill spara den.',
+      'Lapland.blog är en riktig, långsam, bildledd blogg om din resa, publicerad under ett namn som redan får trafik, sparad så länge du vill spara den.',
     howHeading: 'Så fungerar det',
     howStepPin: 'Nåla fast stugan, restaurangen, den mörka platsen. Bygg din rutt innan du flyger.',
     howStepWrite: 'Skriv medan du reser, från stugan, bilen, bastun. Lägg till foton, temperaturen, hur soppan smakade.',
@@ -343,7 +343,7 @@ const sv: SectionCopy = {
     cabinsEyebrow: 'Stugorna',
     cabinsTitle: 'Mökki-inlägg.',
     cabinsSubtitle:
-      'Hur det faktiskt är i en finsk skogsstuga: eld, bastu, tystnad, och det där som ingen nämner om utedasset i sträng kyla.',
+      'Hur det faktiskt är i en finsk skogsstuga: eld, bastu, tystnad och utedasset i sträng kyla.',
     foodEyebrow: 'Mat + dryck',
     foodTitle: 'Kökstexterna.',
     foodSubtitle:
@@ -351,7 +351,7 @@ const sv: SectionCopy = {
     seasonalEyebrow: 'Säsong',
     seasonalTitle: 'Vad kylan faktiskt gör.',
     seasonalSubtitle:
-      'Kaamos, de åtta lappländska årstiderna som de flesta listor glömmer, och det lilla projektet att ta sig igenom december utan solen.',
+      'Kaamos, de åtta lappländska årstiderna och det lilla projektet att ta sig igenom december utan solen.',
     ctaEyebrow: 'Din resa härnäst?',
     ctaH2: 'Bli nästa inlägg på den här sidan.',
     ctaLead:

@@ -215,7 +215,7 @@ const en: SectionCopy = {
     lead:
       'Lapland.blog is a free travel-journal platform for visitors to Finnish Lapland. Pin where you saw the aurora. Photograph the cabin. Write what the temperature did. By the time you fly home you have a blog of your trip: one your friends can actually follow, and one you will still want to read in five years.',
     intro:
-      'Most Lapland blogs read like a brochure. Most travel-journal apps either get abandoned in a phone roll or get shared as a single Instagram post that disappears in a day. Lapland.blog is the in-between thing: a real, slow, photo-led blog of your trip, hosted under a name that already gets traffic, kept for as long as you want it kept.',
+      'Lapland.blog is a real, slow, photo-led blog of your trip, hosted under a name that already gets traffic, kept for as long as you want it kept.',
     howHeading: 'How it works',
     howStepPin: 'Pin the cabin, the restaurant, the dark-sky spot. Build your route before you fly.',
     howStepWrite: 'Write as you go, from the cabin, the car, the sauna. Add photos, the temperature, what the soup tasted like.',
@@ -343,7 +343,7 @@ const en: SectionCopy = {
     cabinsEyebrow: 'The cabins',
     cabinsTitle: 'Mökki entries.',
     cabinsSubtitle:
-      'What it is actually like in a Finnish forest cabin: fire, sauna, silence, and the bit nobody mentions about the outhouse in hard frost.',
+      'What it is actually like in a Finnish forest cabin: fire, sauna, silence, and the outhouse in hard frost.',
     foodEyebrow: 'Food + drink',
     foodTitle: 'The kitchen pieces.',
     foodSubtitle:
@@ -351,7 +351,7 @@ const en: SectionCopy = {
     seasonalEyebrow: 'Seasonal',
     seasonalTitle: 'What the cold actually does.',
     seasonalSubtitle:
-      'Kaamos, the eight Lapland seasons most lists forget, and the small business of getting through December without the sun.',
+      'Kaamos, the eight Lapland seasons, and the small business of getting through December without the sun.',
     ctaEyebrow: 'Your trip next?',
     ctaH2: 'Be the next entry on this page.',
     ctaLead:
