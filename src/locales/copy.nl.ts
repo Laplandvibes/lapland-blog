@@ -509,7 +509,7 @@ const nl: SectionCopy = {
     aboutEyebrow: 'Over Lapland Blog',
     aboutBody: 'Redactionele gids voor Fins Lapland, van het noorderlicht tot de middernachtzon. Zorgvuldig gekozen routes, eerlijke verslagen en de praktische details die u nodig hebt om een Arctische reis te plannen.',
     aboutBadge: 'Onafhankelijk beheerd · bronnen vermeld',
-    spottedError: { title: 'Een fout gezien?', body: 'Iets dat aangepast moet worden? Laat het ons weten, we corrigeren het meteen.', cta: 'Fout melden →' },
+    spottedError: { title: 'Een fout gezien?', body: 'Iets dat aangepast moet worden? Laat het ons weten en we corrigeren het meteen.', cta: 'Fout melden →' },
     partner: { title: 'Samenwerken met ons', body: 'Adverteer of werk samen op 27 Lapland-sites.', cta: 'Neem contact op →' },
     press: { title: 'Pers en media', body: 'Redactionele samenwerkingen en perskits.', cta: 'Persaanvragen →' },
     copyright: '© {{year}} #LaplandVibes · Onderdeel van het #LaplandVibes-netwerk',
