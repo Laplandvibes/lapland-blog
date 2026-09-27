@@ -17,7 +17,22 @@ interface SeoOptions {
 }
 
 const SITE = 'https://lapland.blog';
-const DEFAULT_IMAGE = `${SITE}/og-default.jpg`;
+// Site share card, the same URL the prerenderer writes. ?v= is the content hash of
+// public/og-summer.jpg + og-winter.jpg; lv-ops scripts/og/install.mjs rewrites it
+// here whenever the card changes.
+const DEFAULT_IMAGE = 'https://lapland.blog/og.jpg?v=4dfad215';
+
+// Share image the prerenderer wrote for the URL the visitor landed on. Read once at
+// module load, before any effect runs: on that URL it is kept, so crawlers that run
+// JavaScript see the same og:image and twitter:image as crawlers that read the
+// static HTML. After a client-side navigation the `image` option is used.
+const LANDED =
+  typeof document === 'undefined'
+    ? null
+    : {
+        path: window.location.pathname,
+        og: document.head.querySelector('meta[property="og:image"]')?.getAttribute('content') || null,
+      };
 
 const SUPPORTED: Lang[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 const URL_PREFIX_OF: Record<Lang, string> = {
@@ -99,7 +114,8 @@ export function useSeo(opts: SeoOptions) {
 
     setMeta('property', 'og:title', title);
     setMeta('property', 'og:description', description);
-    setMeta('property', 'og:image', image);
+    const ogImage = LANDED?.og && LANDED.path === window.location.pathname ? LANDED.og : image;
+    setMeta('property', 'og:image', ogImage);
     setMeta('property', 'og:type', type);
     setMeta('property', 'og:site_name', 'Lapland.blog');
     setMeta('property', 'og:locale', OG_LOCALE[lang]);
@@ -118,7 +134,7 @@ export function useSeo(opts: SeoOptions) {
     setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', title);
     setMeta('name', 'twitter:description', description);
-    setMeta('name', 'twitter:image', image);
+    setMeta('name', 'twitter:image', ogImage);
 
     if (type === 'article') {
       if (publishedAt) setMeta('property', 'article:published_time', publishedAt);
