@@ -4,6 +4,8 @@ import { COPY } from '../locales/copy';
 
 interface Props {
   blocks: PostBlock[];
+  /** Language of the post's headings when it differs from the page (postTextLang). */
+  textLang?: string;
 }
 
 /**
@@ -12,7 +14,7 @@ interface Props {
  * Hidden on small screens — reading long-form on mobile shouldn't fight a
  * sidebar for space.
  */
-export default function TableOfContents({ blocks }: Props) {
+export default function TableOfContents({ blocks, textLang }: Props) {
   const c = COPY[useLang()].chrome;
   const headings = blocks
     .map((b, i) => ({ block: b, index: i }))
@@ -28,7 +30,7 @@ export default function TableOfContents({ blocks }: Props) {
       <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-4 font-semibold">
         {c.inThisStory}
       </p>
-      <ul className="space-y-2.5 border-l border-[var(--color-paper-border)]">
+      <ul lang={textLang} className="space-y-2.5 border-l border-[var(--color-paper-border)]">
         {headings.map(({ block, index }) => {
           const id = `h-${index}`;
           return (

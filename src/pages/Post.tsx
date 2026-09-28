@@ -30,6 +30,7 @@ import { usePost, useRelated } from '../hooks/usePost';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { formatPostDate } from '../lib/dates';
+import { postTextLang } from '../lib/postLang';
 
 /**
  * Render a single content block. H2s receive anchor ids derived from index
@@ -197,6 +198,9 @@ export default function Post() {
   // Editorial pen for the byline + bio card; unknown handles fall back to the
   // umbrella Field Journal voice.
   const voice = authors[post.author] ?? vesa;
+  // The post's own text keeps its own language: a German page shows the English
+  // original, the page chrome around it stays German.
+  const textLang = postTextLang(post, lang);
 
   return (
     <div className="min-h-screen bg-night text-snow">
@@ -214,6 +218,7 @@ export default function Post() {
           <img
             src={post.heroImage}
             alt={post.heroAlt}
+            lang={textLang}
             className="absolute inset-0 w-full h-full object-cover object-[50%_42%]"
             fetchPriority="high"
             decoding="async"
@@ -255,18 +260,19 @@ export default function Post() {
                   className="lv-tap inline-flex items-center gap-2 text-[var(--color-accent)] text-[11px] uppercase tracking-[0.32em] font-bold mb-5 hover:text-[var(--color-accent-dark)] transition-colors"
                 >
                   <span className="w-6 h-px bg-[var(--color-accent)]/50" />
-                  {catName} · {post.kicker}
+                  {catName} · <span lang={textLang}>{post.kicker}</span>
                 </Link>
               )}
 
               <h1
+                lang={textLang}
                 className="text-[var(--color-ink)] leading-[1.06] tracking-[-0.015em] text-[clamp(2.1rem,5.5vw,3.75rem)]"
                 style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
               >
                 {post.title}
               </h1>
 
-              <p className="mt-6 text-[var(--color-ink-soft)] text-lg md:text-[1.3rem] leading-relaxed">
+              <p lang={textLang} className="mt-6 text-[var(--color-ink-soft)] text-lg md:text-[1.3rem] leading-relaxed">
                 {post.excerpt}
               </p>
 
@@ -317,7 +323,7 @@ export default function Post() {
             </p>
           </div>
 
-            <div id="post-body" className="prose-editorial mt-10">
+            <div id="post-body" lang={textLang} className="prose-editorial mt-10">
               {post.content.map((block, i) => (
                 <Block key={i} block={block} index={i} sourcesLabel={c.sourcesLabel} />
               ))}
@@ -380,7 +386,7 @@ export default function Post() {
               <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-3 font-semibold">
                 {c.tagged}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div lang={textLang} className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
@@ -399,7 +405,7 @@ export default function Post() {
           {/* Sivupalsta on arkin ULKOPUOLELLA yon paalla, joten se tarvitsee
               tummat musteet: theme-night kaantaa editorial-tokenit. */}
           <aside className="theme-night hidden xl:flex xl:flex-col xl:gap-8 xl:sticky xl:top-24 xl:self-start">
-            <TableOfContents blocks={post.content} />
+            <TableOfContents blocks={post.content} textLang={textLang} />
             <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Rovaniemi" />
           </aside>
         </div>

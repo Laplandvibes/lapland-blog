@@ -50,6 +50,12 @@ export interface Post {
    */
   byReader?: boolean;
   /**
+   * Language of the row this post was built from (`blog_posts.lang`). A list
+   * shows the reader's language where a translation exists and the English
+   * original elsewhere (pickTranslation), so the same page can mix both.
+   */
+  lang?: string;
+  /**
    * Editorial — marks the post that leads the front page (see featuredPost()).
    * Nothing is paid for it: adSlots.ts carries `sponsors: [null, null]`.
    *
