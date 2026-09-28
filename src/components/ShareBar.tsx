@@ -73,8 +73,8 @@ function WhatsAppIcon({ size = 17 }: IconProps) {
 }
 
 interface ShareTarget {
-  network: ShareNetwork;
-  label: string;
+  // Accessible name comes from COPY (chrome.shareAria), in the page language.
+  network: Exclude<ShareNetwork, 'copy'>;
   Icon: (p: IconProps) => ReactElement;
   href: (url: string, title: string, excerpt: string, hashtags: string) => string;
 }
@@ -82,7 +82,6 @@ interface ShareTarget {
 const TARGETS: ShareTarget[] = [
   {
     network: 'twitter',
-    label: 'Share on X',
     Icon: XIcon,
     href: (url, title, _excerpt, hashtags) =>
       `https://twitter.com/intent/tweet?url=${encodeURIComponent(
@@ -91,14 +90,12 @@ const TARGETS: ShareTarget[] = [
   },
   {
     network: 'facebook',
-    label: 'Share on Facebook',
     Icon: FacebookIcon,
     href: (url) =>
       `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
   },
   {
     network: 'linkedin',
-    label: 'Share on LinkedIn',
     Icon: LinkedInIcon,
     href: (url) =>
       `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
@@ -107,14 +104,12 @@ const TARGETS: ShareTarget[] = [
   },
   {
     network: 'whatsapp',
-    label: 'Share on WhatsApp',
     Icon: WhatsAppIcon,
     href: (url, title, _excerpt, hashtags) =>
       `https://api.whatsapp.com/send?text=${encodeURIComponent(`${title}\n${hashtags}\n${url}`)}`,
   },
   {
     network: 'email',
-    label: 'Share via email',
     Icon: ({ size = 17 }: IconProps) => <Mail size={size} aria-hidden="true" />,
     href: (url, title, excerpt, hashtags) =>
       `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(
@@ -165,7 +160,7 @@ export default function ShareBar({ slug, title, excerpt = '', hashtags = '' }: S
         {c.shareThisStory}
       </p>
       <div className="flex flex-wrap gap-2">
-        {TARGETS.map(({ network, label, Icon, href }) => {
+        {TARGETS.map(({ network, Icon, href }) => {
           const isMail = network === 'email';
           return (
             <a
@@ -174,7 +169,7 @@ export default function ShareBar({ slug, title, excerpt = '', hashtags = '' }: S
               target={isMail ? undefined : '_blank'}
               rel={isMail ? undefined : 'noopener noreferrer'}
               onClick={() => handleShare(network)}
-              aria-label={label}
+              aria-label={c.shareAria[network]}
               className="group inline-flex items-center justify-center w-11 h-11 rounded-full border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] text-[var(--color-ink-soft)] hover:bg-[var(--color-accent)] hover:text-white hover:border-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-cream)] transition-colors cursor-pointer"
             >
               <Icon size={17} />
@@ -185,18 +180,17 @@ export default function ShareBar({ slug, title, excerpt = '', hashtags = '' }: S
         <button
           type="button"
           onClick={handleCopy}
-          aria-label={copied ? 'Link copied to clipboard' : 'Copy link to clipboard'}
           className="group inline-flex items-center gap-2 px-4 h-11 rounded-full border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] text-[var(--color-ink-soft)] hover:bg-[var(--color-accent)] hover:text-white hover:border-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-cream)] transition-colors cursor-pointer text-xs font-semibold uppercase tracking-[0.15em]"
         >
           {copied ? (
             <>
               <Check size={15} aria-hidden="true" />
-              Copied
+              {c.copiedLabel}
             </>
           ) : (
             <>
               <Link2 size={15} aria-hidden="true" />
-              Copy link
+              {c.copyLinkLabel}
             </>
           )}
         </button>

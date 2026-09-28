@@ -14,6 +14,11 @@ const ja: SectionCopy = {
     adminDashboard: '管理画面',
     signOut: 'サインアウト',
     signedInAs: 'サインイン中：',
+    homeAria: 'Lapland.blog ホーム',
+    primaryAria: 'メインメニュー',
+    openMenuAria: 'メニューを開く',
+    closeMenuAria: 'メニューを閉じる',
+    accountMenuAria: 'アカウントメニュー',
   },
   footer: {
     networkBadge: 'フィンランド・ラップランドネットワーク',
@@ -205,6 +210,7 @@ const ja: SectionCopy = {
     thenEyebrow: '次にこちらも',
     thenH2: 'フィールドからのその他の記事。',
     everyEntry: 'すべての記事',
+    pathsSrLabel: '入口',
   },
   about: {
     pageTitle: '当サイトについて',
@@ -515,6 +521,9 @@ const ja: SectionCopy = {
       '1月’,’2月’,’3月’,’4月’,’5月’,’6月',
       '7月’,’8月’,’9月’,’10月’,’11月’,’12月',
     ],
+    googleAria: 'Googleでサインイン',
+    facebookAria: 'Facebookでサインイン',
+    openingLabel: '開いています…',
   },
   unsubscribe: {
     pageTitle: '配信解除',
@@ -553,6 +562,21 @@ const ja: SectionCopy = {
     startMine: '自分のを始める',
     readPostAria: '「{title}」を読む',
     readEditorsPickAria: '編集者の一押し「{title}」を読む',
+    copyLinkLabel: 'リンクをコピー',
+    copyLabel: 'コピー',
+    copiedLabel: 'コピーしました',
+    shareAria: {
+      twitter: 'Xでシェア',
+      facebook: 'Facebookでシェア',
+      linkedin: 'LinkedInでシェア',
+      whatsapp: 'WhatsAppでシェア',
+      email: 'メールでシェア',
+    },
+    quoteToolbarAria: '選択したテキストをシェア',
+    shareQuoteLabel: '引用をシェア',
+    copyQuoteAria: '引用をリンク付きでコピー',
+    aboutAuthorAria: '著者について',
+    aboutBlogLink: 'Lapland.blogについて →',
   },
 };
 

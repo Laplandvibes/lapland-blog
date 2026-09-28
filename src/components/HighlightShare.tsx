@@ -8,6 +8,8 @@
 import { useEffect, useState } from 'react';
 import { Quote, Copy, Check } from 'lucide-react';
 import { trackShare } from '../lib/analytics';
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 interface HighlightShareProps {
   /** Selector for the element whose selections trigger the pill. */
@@ -30,6 +32,7 @@ const MIN_CHARS = 12; // ignore tiny accidental selections
 export default function HighlightShare({ containerSelector, url, slug }: HighlightShareProps) {
   const [pill, setPill] = useState<PillState>({ visible: false, top: 0, left: 0, text: '' });
   const [copied, setCopied] = useState(false);
+  const c = COPY[useLang()].chrome;
 
   useEffect(() => {
     function compute() {
@@ -91,7 +94,7 @@ export default function HighlightShare({ containerSelector, url, slug }: Highlig
   return (
     <div
       role="toolbar"
-      aria-label="Share selected text"
+      aria-label={c.quoteToolbarAria}
       className="fixed z-[60] -translate-x-1/2 flex items-center gap-1 rounded-full bg-[#1A1815] text-white shadow-xl px-1 py-1 text-xs animate-in fade-in zoom-in"
       style={{ top: `${pill.top}px`, left: `${pill.left}px` }}
     >
@@ -102,21 +105,21 @@ export default function HighlightShare({ containerSelector, url, slug }: Highlig
         onClick={() => trackShare('twitter', slug)}
         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors font-semibold uppercase tracking-wider"
       >
-        <Quote size={12} /> Share quote
+        <Quote size={12} /> {c.shareQuoteLabel}
       </a>
       <button
         type="button"
         onClick={handleCopy}
         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors font-semibold uppercase tracking-wider"
-        aria-label="Copy quote with link"
+        aria-label={c.copyQuoteAria}
       >
         {copied ? (
           <>
-            <Check size={12} /> Copied
+            <Check size={12} /> {c.copiedLabel}
           </>
         ) : (
           <>
-            <Copy size={12} /> Copy
+            <Copy size={12} /> {c.copyLabel}
           </>
         )}
       </button>

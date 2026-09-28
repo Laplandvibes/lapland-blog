@@ -419,7 +419,7 @@ export default function SignIn() {
                         onClick={() => handleOAuth('google')}
                         disabled={oauthBusy !== null}
                         className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white text-night font-semibold text-sm hover:bg-slate-100 disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer"
-                        aria-label="Sign in with Google"
+                        aria-label={c.googleAria}
                       >
                         <svg
                           width="16"
@@ -444,7 +444,7 @@ export default function SignIn() {
                             d="M12 5.38c1.62 0 3.06.56 4.21 1.65l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38Z"
                           />
                         </svg>
-                        {oauthBusy === 'google' ? 'Opening…' : 'Google'}
+                        {oauthBusy === 'google' ? c.openingLabel : 'Google'}
                       </button>
                      )}
 
@@ -454,7 +454,7 @@ export default function SignIn() {
                         onClick={() => handleOAuth('facebook')}
                         disabled={oauthBusy !== null}
                         className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#1877F2] text-white font-semibold text-sm hover:bg-[#166FE5] disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer"
-                        aria-label="Sign in with Facebook"
+                        aria-label={c.facebookAria}
                       >
                         <svg
                           width="16"
@@ -465,7 +465,7 @@ export default function SignIn() {
                         >
                           <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.19 2.24.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12Z" />
                         </svg>
-                        {oauthBusy === 'facebook' ? 'Opening…' : 'Facebook'}
+                        {oauthBusy === 'facebook' ? c.openingLabel : 'Facebook'}
                       </button>
                      )}
                     </div>

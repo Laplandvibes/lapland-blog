@@ -142,7 +142,7 @@ export default function Nav() {
           <Link
             to={to('/')}
             className="group inline-flex items-center min-h-11"
-            aria-label="#LaplandBlog · home"
+            aria-label={c.homeAria}
             onClick={() => {
               setOpen(false)
               // 🔴 Verkostovika, mitattu 20.9.2026 seitsemällä sivustolla seitsemästä:
@@ -162,7 +162,7 @@ export default function Nav() {
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden xl:flex items-center gap-4 text-sm" aria-label="Primary">
+        <nav className="hidden xl:flex items-center gap-4 text-sm" aria-label={c.primaryAria}>
           {links.map((link) => (
             <NavLink
               key={link.to}
@@ -193,7 +193,7 @@ export default function Nav() {
                 onClick={() => setAccountOpen((v) => !v)}
                 aria-haspopup="menu"
                 aria-expanded={accountOpen}
-                aria-label="Account menu"
+                aria-label={c.accountMenuAria}
                 className={`flex items-center justify-center w-9 h-9 rounded-full overflow-hidden border-2 transition-colors cursor-pointer ${
                   isEditorial
                     ? 'border-[var(--color-paper-border)] hover:border-[var(--color-accent)]'
@@ -310,7 +310,7 @@ export default function Nav() {
             <button
               className={`transition-colors w-11 h-11 -mr-2.5 inline-flex items-center justify-center rounded-full ${mobileBtnCls}`}
               onClick={() => setOpen((o) => !o)}
-              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-label={open ? c.closeMenuAria : c.openMenuAria}
               aria-expanded={open}
             >
               {open ? <X size={22} /> : <Menu size={22} />}
@@ -322,7 +322,7 @@ export default function Nav() {
         <div className={`xl:hidden ${mobileDrawerCls}`}>
           <nav
             className="flex flex-col px-6 py-5 gap-4"
-            aria-label="Mobile primary"
+            aria-label={c.primaryAria}
           >
             {/* Rivit ≥ 44 px (iOS HIG): mitattu 14.9.2026 20 px korkeiksi 12 kielellä,
                 koska rivi oli pelkkä tekstirivi ilman pystytäytettä. */}

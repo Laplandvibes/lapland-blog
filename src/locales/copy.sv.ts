@@ -14,6 +14,11 @@ const sv: SectionCopy = {
     adminDashboard: 'Admin-panel',
     signOut: 'Logga ut',
     signedInAs: 'Inloggad som',
+    homeAria: 'Startsidan för Lapland.blog',
+    primaryAria: 'Huvudmeny',
+    openMenuAria: 'Öppna menyn',
+    closeMenuAria: 'Stäng menyn',
+    accountMenuAria: 'Kontomeny',
   },
   footer: {
     networkBadge: 'Nätverket för finska Lappland',
@@ -205,6 +210,7 @@ const sv: SectionCopy = {
     thenEyebrow: 'Sedan dessa',
     thenH2: 'Mer från fältet.',
     everyEntry: 'Varje inlägg',
+    pathsSrLabel: 'Vägar in',
   },
   about: {
     pageTitle: 'Om',
@@ -515,6 +521,9 @@ const sv: SectionCopy = {
       'januari','februari','mars','april','maj','juni',
       'juli','augusti','september','oktober','november','december',
     ],
+    googleAria: 'Logga in med Google',
+    facebookAria: 'Logga in med Facebook',
+    openingLabel: 'Öppnar…',
   },
   unsubscribe: {
     pageTitle: 'Avsluta prenumeration',
@@ -553,6 +562,21 @@ const sv: SectionCopy = {
     startMine: 'Starta min',
     readPostAria: 'Läs: {title}',
     readEditorsPickAria: 'Läs redaktionens val: {title}',
+    copyLinkLabel: 'Kopiera länk',
+    copyLabel: 'Kopiera',
+    copiedLabel: 'Kopierat',
+    shareAria: {
+      twitter: 'Dela på X',
+      facebook: 'Dela på Facebook',
+      linkedin: 'Dela på LinkedIn',
+      whatsapp: 'Dela via WhatsApp',
+      email: 'Dela via e-post',
+    },
+    quoteToolbarAria: 'Dela markerad text',
+    shareQuoteLabel: 'Dela citat',
+    copyQuoteAria: 'Kopiera citatet med länk',
+    aboutAuthorAria: 'Om skribenten',
+    aboutBlogLink: 'Om Lapland.blog →',
   },
 }
 

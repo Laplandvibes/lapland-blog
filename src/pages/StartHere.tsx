@@ -121,7 +121,7 @@ export default function StartHere() {
       <PageBreadcrumb />
 
       <section className="px-4 sm:px-6 lg:px-8 pb-20" aria-labelledby="paths-heading">
-        <h2 id="paths-heading" className="sr-only">Paths</h2>
+        <h2 id="paths-heading" className="sr-only">{c.pathsSrLabel}</h2>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
           <Reveal>
             <PathCard

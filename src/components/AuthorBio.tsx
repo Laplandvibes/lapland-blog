@@ -27,7 +27,7 @@ export default function AuthorBio({ variant = 'editorial', author }: Props) {
           ? 'mx-auto max-w-[65ch] mt-16 mb-10 p-8 rounded-xl bg-[var(--color-cream-deep)] border border-[var(--color-paper-border)]'
           : 'mx-auto max-w-2xl mt-16 mb-10 p-8 rounded-xl bg-night-light/60 border border-purple/25'
       }
-      aria-label="About the author"
+      aria-label={c.aboutAuthorAria}
     >
       <div className="flex items-start gap-5">
         {/* Initials badge — no photo, per spec */}
@@ -80,7 +80,7 @@ export default function AuthorBio({ variant = 'editorial', author }: Props) {
                 : 'inline-flex items-center gap-1.5 text-pink hover:text-pink-dark text-sm font-semibold uppercase tracking-wider transition-colors'
             }
           >
-            About Lapland.blog →
+            {c.aboutBlogLink}
           </Link>
         </div>
       </div>

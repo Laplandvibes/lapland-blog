@@ -14,6 +14,11 @@ const es: SectionCopy = {
     adminDashboard: 'Panel de administración',
     signOut: 'Cerrar sesión',
     signedInAs: 'Sesión iniciada como',
+    homeAria: 'Inicio de Lapland.blog',
+    primaryAria: 'Menú principal',
+    openMenuAria: 'Abrir menú',
+    closeMenuAria: 'Cerrar menú',
+    accountMenuAria: 'Menú de la cuenta',
   },
   footer: {
     networkBadge: 'Red de la Laponia finlandesa',
@@ -205,6 +210,7 @@ const es: SectionCopy = {
     thenEyebrow: 'Luego estos',
     thenH2: 'Más desde el terreno.',
     everyEntry: 'Todas las entradas',
+    pathsSrLabel: 'Caminos',
   },
   about: {
     pageTitle: 'Sobre',
@@ -515,6 +521,9 @@ const es: SectionCopy = {
       'enero','febrero','marzo','abril','mayo','junio',
       'julio','agosto','septiembre','octubre','noviembre','diciembre',
     ],
+    googleAria: 'Iniciar sesión con Google',
+    facebookAria: 'Iniciar sesión con Facebook',
+    openingLabel: 'Abriendo…',
   },
   unsubscribe: {
     pageTitle: 'Cancelar suscripción',
@@ -553,6 +562,21 @@ const es: SectionCopy = {
     startMine: 'Crear el mío',
     readPostAria: 'Leer: {title}',
     readEditorsPickAria: 'Leer la recomendación de la redacción: {title}',
+    copyLinkLabel: 'Copiar enlace',
+    copyLabel: 'Copiar',
+    copiedLabel: 'Copiado',
+    shareAria: {
+      twitter: 'Compartir en X',
+      facebook: 'Compartir en Facebook',
+      linkedin: 'Compartir en LinkedIn',
+      whatsapp: 'Compartir por WhatsApp',
+      email: 'Compartir por correo electrónico',
+    },
+    quoteToolbarAria: 'Compartir el texto seleccionado',
+    shareQuoteLabel: 'Compartir cita',
+    copyQuoteAria: 'Copiar la cita con el enlace',
+    aboutAuthorAria: 'Sobre el autor',
+    aboutBlogLink: 'Sobre Lapland.blog →',
   },
 };
 

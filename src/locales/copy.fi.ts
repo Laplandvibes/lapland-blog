@@ -14,6 +14,11 @@ const fi: SectionCopy = {
     adminDashboard: 'Ylläpito',
     signOut: 'Kirjaudu ulos',
     signedInAs: 'Kirjautuneena',
+    homeAria: 'Lapland.blogin etusivu',
+    primaryAria: 'Päävalikko',
+    openMenuAria: 'Avaa valikko',
+    closeMenuAria: 'Sulje valikko',
+    accountMenuAria: 'Tilivalikko',
   },
   footer: {
     networkBadge: 'Suomen Lapin verkosto',
@@ -205,6 +210,7 @@ const fi: SectionCopy = {
     thenEyebrow: 'Sen jälkeen nämä',
     thenH2: 'Lisää kentältä.',
     everyEntry: 'Kaikki merkinnät',
+    pathsSrLabel: 'Polut',
   },
   about: {
     pageTitle: 'Tietoa',
@@ -516,6 +522,9 @@ const fi: SectionCopy = {
       'tammikuu','helmikuu','maaliskuu','huhtikuu','toukokuu','kesäkuu',
       'heinäkuu','elokuu','syyskuu','lokakuu','marraskuu','joulukuu',
     ],
+    googleAria: 'Kirjaudu Google-tilillä',
+    facebookAria: 'Kirjaudu Facebook-tilillä',
+    openingLabel: 'Avataan…',
   },
   unsubscribe: {
     pageTitle: 'Peru tilaus',
@@ -554,6 +563,21 @@ const fi: SectionCopy = {
     startMine: 'Aloita oma',
     readPostAria: 'Lue juttu: {title}',
     readEditorsPickAria: 'Lue toimituksen poiminta: {title}',
+    copyLinkLabel: 'Kopioi linkki',
+    copyLabel: 'Kopioi',
+    copiedLabel: 'Kopioitu',
+    shareAria: {
+      twitter: 'Jaa X:ssä',
+      facebook: 'Jaa Facebookissa',
+      linkedin: 'Jaa LinkedInissä',
+      whatsapp: 'Jaa WhatsAppissa',
+      email: 'Jaa sähköpostilla',
+    },
+    quoteToolbarAria: 'Jaa valittu teksti',
+    shareQuoteLabel: 'Jaa lainaus',
+    copyQuoteAria: 'Kopioi lainaus ja linkki',
+    aboutAuthorAria: 'Tietoa kirjoittajasta',
+    aboutBlogLink: 'Tietoa Lapland.blogista →',
   },
 };
 

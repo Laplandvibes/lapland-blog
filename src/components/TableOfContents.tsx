@@ -26,7 +26,7 @@ export default function TableOfContents({ blocks, textLang }: Props) {
   if (headings.length < 2) return null;
 
   return (
-    <nav aria-label="Table of contents">
+    <nav aria-label={c.inThisStory}>
       <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-4 font-semibold">
         {c.inThisStory}
       </p>

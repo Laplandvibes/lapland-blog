@@ -14,6 +14,11 @@ const zhCN: SectionCopy = {
     adminDashboard: '管理后台',
     signOut: '退出登录',
     signedInAs: '当前登录',
+    homeAria: 'Lapland.blog 首页',
+    primaryAria: '主菜单',
+    openMenuAria: '打开菜单',
+    closeMenuAria: '关闭菜单',
+    accountMenuAria: '账户菜单',
   },
   footer: {
     networkBadge: '芬兰拉普兰网络',
@@ -205,6 +210,7 @@ const zhCN: SectionCopy = {
     thenEyebrow: '然后是这些',
     thenH2: '更多来自田野。',
     everyEntry: '全部文章',
+    pathsSrLabel: '入门方式',
   },
   about: {
     pageTitle: '关于',
@@ -515,6 +521,9 @@ const zhCN: SectionCopy = {
       '一月','二月','三月','四月','五月','六月',
       '七月','八月','九月','十月','十一月','十二月',
     ],
+    googleAria: '使用 Google 登录',
+    facebookAria: '使用 Facebook 登录',
+    openingLabel: '正在打开…',
   },
   unsubscribe: {
     pageTitle: '取消订阅',
@@ -553,6 +562,21 @@ const zhCN: SectionCopy = {
     startMine: '创建我的博客',
     readPostAria: '阅读《{title}》',
     readEditorsPickAria: '阅读编辑首选《{title}》',
+    copyLinkLabel: '复制链接',
+    copyLabel: '复制',
+    copiedLabel: '已复制',
+    shareAria: {
+      twitter: '分享到 X',
+      facebook: '分享到 Facebook',
+      linkedin: '分享到 LinkedIn',
+      whatsapp: '通过 WhatsApp 分享',
+      email: '通过电子邮件分享',
+    },
+    quoteToolbarAria: '分享所选文字',
+    shareQuoteLabel: '分享引文',
+    copyQuoteAria: '复制引文及链接',
+    aboutAuthorAria: '关于作者',
+    aboutBlogLink: '关于 Lapland.blog →',
   },
 };
 

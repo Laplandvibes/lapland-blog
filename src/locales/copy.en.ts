@@ -14,6 +14,11 @@ const en: SectionCopy = {
     adminDashboard: 'Admin dashboard',
     signOut: 'Sign out',
     signedInAs: 'Signed in as',
+    homeAria: 'Lapland.blog home',
+    primaryAria: 'Primary',
+    openMenuAria: 'Open menu',
+    closeMenuAria: 'Close menu',
+    accountMenuAria: 'Account menu',
   },
   footer: {
     networkBadge: 'Finnish Lapland Network',
@@ -205,6 +210,7 @@ const en: SectionCopy = {
     thenEyebrow: 'Then these',
     thenH2: 'More from the field.',
     everyEntry: 'Every entry',
+    pathsSrLabel: 'Paths',
   },
   about: {
     pageTitle: 'About',
@@ -515,6 +521,9 @@ const en: SectionCopy = {
       'January','February','March','April','May','June',
       'July','August','September','October','November','December',
     ],
+    googleAria: 'Sign in with Google',
+    facebookAria: 'Sign in with Facebook',
+    openingLabel: 'Opening…',
   },
   unsubscribe: {
     pageTitle: 'Unsubscribe',
@@ -553,6 +562,21 @@ const en: SectionCopy = {
     startMine: 'Start mine',
     readPostAria: 'Read: {title}',
     readEditorsPickAria: "Read the editor's pick: {title}",
+    copyLinkLabel: 'Copy link',
+    copyLabel: 'Copy',
+    copiedLabel: 'Copied',
+    shareAria: {
+      twitter: 'Share on X',
+      facebook: 'Share on Facebook',
+      linkedin: 'Share on LinkedIn',
+      whatsapp: 'Share on WhatsApp',
+      email: 'Share via email',
+    },
+    quoteToolbarAria: 'Share selected text',
+    shareQuoteLabel: 'Share quote',
+    copyQuoteAria: 'Copy quote with link',
+    aboutAuthorAria: 'About the author',
+    aboutBlogLink: 'About Lapland.blog →',
   },
 };
 

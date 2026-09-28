@@ -94,7 +94,7 @@ export default function Destinations() {
 
       {/* Grid */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 md:py-16" aria-labelledby="dest-grid">
-        <h2 id="dest-grid" className="sr-only">All destinations</h2>
+        <h2 id="dest-grid" className="sr-only">{COPY[lang].destination.backToAll}</h2>
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {DESTINATIONS.map((d, i) => {
             const count = countMatching(posts, d.slug);

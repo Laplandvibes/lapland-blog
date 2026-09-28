@@ -14,6 +14,13 @@ export type SectionCopy = {
     adminDashboard: string;
     signOut: string;
     signedInAs: string;
+    /** Accessible name of the #LAPLAND.BLOG logo link (contains the visible "Lapland.blog"). */
+    homeAria: string;
+    /** Name of the main navigation (desktop bar and mobile drawer; only one is shown at a time). */
+    primaryAria: string;
+    openMenuAria: string;
+    closeMenuAria: string;
+    accountMenuAria: string;
   };
   footer: {
     networkBadge: string;
@@ -139,6 +146,8 @@ export type SectionCopy = {
     thenEyebrow: string;
     thenH2: string;
     everyEntry: string;
+    /** Screen-reader-only heading above the three path cards. */
+    pathsSrLabel: string;
   };
   about: {
     pageTitle: string;
@@ -345,6 +354,11 @@ export type SectionCopy = {
     sending: string;
     submitCta: string;
     months: string[];
+    /** Accessible names of the OAuth buttons; the visible text is the provider name. */
+    googleAria: string;
+    facebookAria: string;
+    /** Button text while the OAuth window is opening. */
+    openingLabel: string;
   };
   unsubscribe: {
     pageTitle: string;
@@ -386,5 +400,16 @@ export type SectionCopy = {
     readPostAria: string;
     /** Same for the editor's #1 card on /top-reads. */
     readEditorsPickAria: string;
+    /** Share bar and the text-selection pill under a post. */
+    copyLinkLabel: string;
+    copyLabel: string;
+    copiedLabel: string;
+    shareAria: { twitter: string; facebook: string; linkedin: string; whatsapp: string; email: string };
+    quoteToolbarAria: string;
+    shareQuoteLabel: string;
+    copyQuoteAria: string;
+    /** Author card at the end of a post. */
+    aboutAuthorAria: string;
+    aboutBlogLink: string;
   };
 };
