@@ -357,6 +357,7 @@ const en: SectionCopy = {
     ctaLead:
       'The lists above grow when readers write. Sign in, write a few entries, and the editor will feature the ones that earn it.',
     ctaButton: 'Start your blog',
+    contentsAria: 'On this page',
   },
   archive: {
     placesLabel: 'Place',
@@ -550,6 +551,8 @@ const en: SectionCopy = {
     yourTripYourBlog: 'Your trip · Your blog',
     startFree: 'Free. Two minutes to start. Yours forever.',
     startMine: 'Start mine',
+    readPostAria: 'Read: {title}',
+    readEditorsPickAria: "Read the editor's pick: {title}",
   },
 };
 

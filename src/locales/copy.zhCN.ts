@@ -357,6 +357,7 @@ const zhCN: SectionCopy = {
     ctaLead:
       '上面的清单，随着读者书写而扩充。登录、写下几篇文章，编辑会把够格的那些选入推荐。',
     ctaButton: '创建您的博客',
+    contentsAria: '本页内容',
   },
   archive: {
     placesLabel: '地点',
@@ -550,6 +551,8 @@ const zhCN: SectionCopy = {
     yourTripYourBlog: '您的旅行 · 您的博客',
     startFree: '免费。两分钟即可开始。永远属于您。',
     startMine: '创建我的博客',
+    readPostAria: '阅读《{title}》',
+    readEditorsPickAria: '阅读编辑首选《{title}》',
   },
 };
 

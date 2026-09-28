@@ -358,6 +358,7 @@ const fi: SectionCopy = {
     ctaLead:
       'Listat kasvavat kun lukijat kirjoittavat. Kirjaudu, kirjoita muutama merkintä, ja toimitus nostaa esiin ne, jotka sen ansaitsevat.',
     ctaButton: 'Aloita oma blogi',
+    contentsAria: 'Tällä sivulla',
   },
   archive: {
     placesLabel: 'Paikka',
@@ -551,6 +552,8 @@ const fi: SectionCopy = {
     yourTripYourBlog: 'Sinun matkasi · Sinun blogisi',
     startFree: 'Ilmainen. Alkuun kahdessa minuutissa. Omasi pysyvästi.',
     startMine: 'Aloita oma',
+    readPostAria: 'Lue juttu: {title}',
+    readEditorsPickAria: 'Lue toimituksen poiminta: {title}',
   },
 };
 

@@ -357,6 +357,7 @@ const sv: SectionCopy = {
     ctaLead:
       'Listorna ovan växer när läsare skriver. Logga in, skriv några inlägg, och redaktören lyfter fram de som förtjänar det.',
     ctaButton: 'Starta din blogg',
+    contentsAria: 'På den här sidan',
   },
   archive: {
     placesLabel: 'Plats',
@@ -550,6 +551,8 @@ const sv: SectionCopy = {
     yourTripYourBlog: 'Din resa · Din blogg',
     startFree: 'Gratis. Två minuter att starta. Din för alltid.',
     startMine: 'Starta min',
+    readPostAria: 'Läs: {title}',
+    readEditorsPickAria: 'Läs redaktionens val: {title}',
   },
 }
 

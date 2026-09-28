@@ -6,6 +6,7 @@ import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { formatPostDate } from '../lib/dates';
 import { postTextLang } from '../lib/postLang';
+import { fillCopy } from '../lib/copyTemplate';
 
 interface Props {
   post: Post;
@@ -41,7 +42,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
       <Link
         to={lp(`/post/${post.slug}`)}
         className="block focus:outline-none"
-        aria-label={`Read: ${post.title}`}
+        aria-label={fillCopy(c.readPostAria, { title: post.title })}
       >
         <div className="relative aspect-[16/10] overflow-hidden">
           <img

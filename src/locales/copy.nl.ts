@@ -307,6 +307,7 @@ const nl: SectionCopy = {
     ctaLead:
       'De lijsten hierboven groeien als lezers schrijven. Meld u aan, schrijf een paar notities en de redactie licht de notities uit die het verdienen.',
     ctaButton: 'Start uw blog',
+    contentsAria: 'Op deze pagina',
   },
   archive: {
     placesLabel: 'Plaats',
@@ -500,6 +501,8 @@ const nl: SectionCopy = {
     yourTripYourBlog: 'Uw reis · Uw blog',
     startFree: 'Gratis. Twee minuten om te starten. Voor altijd van u.',
     startMine: 'Start de mijne',
+    readPostAria: 'Lezen: {title}',
+    readEditorsPickAria: 'Redactiekeuze lezen: {title}',
   },
   footer: {
     ...en.footer,

@@ -307,6 +307,7 @@ const ko: SectionCopy = {
     ctaLead:
       '위 목록들은 독자가 쓰실 때 함께 자랍니다. 로그인하셔서 몇 편을 작성하시면, 편집자가 어울리는 글을 골라 소개합니다.',
     ctaButton: '블로그 시작하기',
+    contentsAria: '이 페이지의 내용',
   },
   archive: {
     placesLabel: '장소',
@@ -500,6 +501,8 @@ const ko: SectionCopy = {
     yourTripYourBlog: '여러분의 여행 · 여러분의 블로그',
     startFree: '무료. 시작까지 2분. 영원히 여러분의 것입니다.',
     startMine: '내 블로그 시작',
+    readPostAria: '{title} 읽기',
+    readEditorsPickAria: '편집부 추천: {title} 읽기',
   },
   footer: {
     ...en.footer,

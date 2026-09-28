@@ -357,6 +357,7 @@ const ja: SectionCopy = {
     ctaLead:
       '上のリストは、読者が書くことで育ちます。サインインしていくつか記事を書けば、編集者がふさわしいものを取り上げます。',
     ctaButton: 'ブログを始める',
+    contentsAria: 'このページの内容',
   },
   archive: {
     placesLabel: '場所',
@@ -550,6 +551,8 @@ const ja: SectionCopy = {
     yourTripYourBlog: 'あなたの旅 · あなたのブログ',
     startFree: '無料。2分で始められて、ずっとあなたのもの。',
     startMine: '自分のを始める',
+    readPostAria: '「{title}」を読む',
+    readEditorsPickAria: '編集者の一押し「{title}」を読む',
   },
 };
 

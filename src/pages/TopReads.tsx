@@ -26,6 +26,7 @@ import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { formatPostDate } from '../lib/dates';
 import { postTextLang } from '../lib/postLang';
+import { fillCopy } from '../lib/copyTemplate';
 
 type IconType = ComponentType<{ size?: number; className?: string }>;
 
@@ -127,7 +128,7 @@ export default function TopReads() {
               issue" feel and immediate orientation instead of an endless scroll. */}
           {sections.length > 0 && (
             <Reveal delay={3}>
-              <nav aria-label="On this page" className="mt-9 flex flex-wrap items-center gap-2.5">
+              <nav aria-label={c.contentsAria} className="mt-9 flex flex-wrap items-center gap-2.5">
                 <span className="inline-flex items-center gap-2 text-slate-400 text-[11px] uppercase tracking-[0.25em] font-semibold mr-1">
                   <span className="w-6 h-px bg-pink/50" />
                   <span className="text-pink-200 tabular-nums">{totalReads}</span>
@@ -252,7 +253,7 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
     <Link
       to={to(`/post/${post.slug}`)}
       className="group block relative overflow-hidden rounded-3xl border border-purple/30 bg-night-light/40 shadow-[0_40px_100px_-50px_rgba(0,0,0,0.7)] transition-all duration-300 hover:border-pink/55 hover:-translate-y-1 hover:shadow-[0_50px_110px_-50px_rgba(236,72,153,0.4)]"
-      aria-label={`Read the editor's pick: ${post.title}`}
+      aria-label={fillCopy(COPY[lang].chrome.readEditorsPickAria, { title: post.title })}
     >
       <div className="grid md:grid-cols-2">
         <div className="relative aspect-[16/11] md:aspect-auto md:min-h-[360px] overflow-hidden">
@@ -295,8 +296,9 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
             <span className="inline-flex items-center gap-1.5">
               <Clock size={12} /> {post.readTimeMinutes} {minRead}
             </span>
+            {/* Same label as the Read link on the front-page cards (home.readFirstRead). */}
             <span className="ml-auto inline-flex items-center gap-1 text-pink-300 font-semibold uppercase tracking-[0.2em] text-[11px] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
-              Read <ArrowUpRight size={13} />
+              {COPY[lang].home.readFirstRead} <ArrowUpRight size={13} />
             </span>
           </div>
         </div>
@@ -373,7 +375,7 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
     <Link
       to={to(`/post/${post.slug}`)}
       className="group relative flex items-stretch gap-4 sm:gap-6 rounded-2xl border border-purple/25 bg-night-light/45 overflow-hidden transition-all duration-300 hover:border-pink/55 hover:bg-night-light/70 hover:-translate-y-0.5 hover:shadow-[0_24px_50px_-30px_rgba(236,72,153,0.45)]"
-      aria-label={`Read: ${post.title}`}
+      aria-label={fillCopy(COPY[lang].chrome.readPostAria, { title: post.title })}
     >
       {/* Accent rail — lights up on hover */}
       <span className="absolute left-0 top-0 bottom-0 w-1 bg-pink/0 group-hover:bg-gradient-to-b group-hover:from-pink group-hover:to-pink-600 transition-colors" />

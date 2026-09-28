@@ -307,6 +307,7 @@ const fr: SectionCopy = {
     ctaLead:
       'Ces listes grandissent quand les lecteurs écrivent. Connectez-vous, écrivez quelques entrées, et la rédaction mettra en avant celles qui le méritent.',
     ctaButton: 'Lancer votre blog',
+    contentsAria: 'Sur cette page',
   },
   archive: {
     placesLabel: 'Lieu',
@@ -500,6 +501,8 @@ const fr: SectionCopy = {
     yourTripYourBlog: 'Votre voyage · Votre blog',
     startFree: 'Gratuit. Deux minutes pour commencer. À vous pour toujours.',
     startMine: 'Lancer le mien',
+    readPostAria: 'Lire : {title}',
+    readEditorsPickAria: 'Lire le choix de la rédaction : {title}',
   },
   footer: {
     ...en.footer,

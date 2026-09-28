@@ -357,6 +357,7 @@ const es: SectionCopy = {
     ctaLead:
       'Las listas de arriba crecen cuando escriben los lectores. Inicie sesión, escriba unas cuantas entradas y la redacción destacará las que se lo ganen.',
     ctaButton: 'Crear su blog',
+    contentsAria: 'En esta página',
   },
   archive: {
     placesLabel: 'Lugar',
@@ -550,6 +551,8 @@ const es: SectionCopy = {
     yourTripYourBlog: 'Su viaje · Su blog',
     startFree: 'Gratis. Dos minutos para empezar. Suyo para siempre.',
     startMine: 'Crear el mío',
+    readPostAria: 'Leer: {title}',
+    readEditorsPickAria: 'Leer la recomendación de la redacción: {title}',
   },
 };
 

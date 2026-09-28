@@ -359,6 +359,7 @@ const de: SectionCopy = {
     ctaLead:
       'Die Listen oben wachsen, wenn Leser schreiben. Anmelden, ein paar Einträge schreiben, und die Redaktion hebt die hervor, die es verdienen.',
     ctaButton: 'Eigenen Blog starten',
+    contentsAria: 'Auf dieser Seite',
   },
   archive: {
     placesLabel: 'Ort',
@@ -552,6 +553,8 @@ const de: SectionCopy = {
     yourTripYourBlog: 'Ihre Reise · Ihr Blog',
     startFree: 'Kostenlos. In zwei Minuten gestartet. Für immer Ihrer.',
     startMine: 'Meinen starten',
+    readPostAria: 'Lesen: {title}',
+    readEditorsPickAria: 'Redaktionsempfehlung lesen: {title}',
   },
 };
 

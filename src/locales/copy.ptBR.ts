@@ -357,6 +357,7 @@ const ptBR: SectionCopy = {
     ctaLead:
       'As listas acima crescem quando os leitores escrevem. Entre, escreva algumas entradas e a redação destacará as que merecerem.',
     ctaButton: 'Criar seu blog',
+    contentsAria: 'Nesta página',
   },
   archive: {
     placesLabel: 'Lugar',
@@ -550,6 +551,8 @@ const ptBR: SectionCopy = {
     yourTripYourBlog: 'Sua viagem · Seu blog',
     startFree: 'Grátis. Dois minutos para começar. Seu para sempre.',
     startMine: 'Criar o meu',
+    readPostAria: 'Ler: {title}',
+    readEditorsPickAria: 'Ler a escolha da redação: {title}',
   },
 };
 

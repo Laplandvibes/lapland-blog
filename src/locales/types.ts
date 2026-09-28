@@ -243,6 +243,8 @@ export type SectionCopy = {
     ctaH2: string;
     ctaLead: string;
     ctaButton: string;
+    /** Name of the jump-link navigation under the hero. */
+    contentsAria: string;
   };
   archive: {
     placesLabel: string;
@@ -380,5 +382,9 @@ export type SectionCopy = {
     yourTripYourBlog: string;
     startFree: string;
     startMine: string;
+    /** Accessible name of a post card link; `{title}` = the post title as shown. */
+    readPostAria: string;
+    /** Same for the editor's #1 card on /top-reads. */
+    readEditorsPickAria: string;
   };
 };
