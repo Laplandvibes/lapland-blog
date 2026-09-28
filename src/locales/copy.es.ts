@@ -327,6 +327,7 @@ const es: SectionCopy = {
         blurb: 'La ciudad más septentrional de Finlandia. Un lago grande y una docena de cabañas a pie. Tranquilo.',
       },
     },
+    placeImageAlt: '{place}, Laponia finlandesa',
   },
   topReads: {
     pageTitle: 'Lo más leído',
@@ -577,6 +578,16 @@ const es: SectionCopy = {
     copyQuoteAria: 'Copiar la cita con el enlace',
     aboutAuthorAria: 'Sobre el autor',
     aboutBlogLink: 'Sobre Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: 'Cabañas de madera rojas y un muelle en la orilla boscosa de un lago, con la luz dorada del atardecer',
+    auroraRiverAlt: 'Aurora boreal sobre un río sinuoso en un bosque nevado, con huellas en la nieve en primer plano',
+    headlampAuroraAlt: 'Una figura solitaria con linterna frontal sobre la nieve abierta, bajo un amplio arco de aurora boreal, con colinas en el horizonte',
+    duskLakeAlt: 'Un lago de aguas aún sin congelar en la hora azul, con pinos nevados en la orilla',
+    sallaEveningAlt: 'Cielo del atardecer desde la cima de una colina en Salla: el sol asoma entre las nubes sobre las colinas',
+    benchAlt: 'Una banca cubierta de nieve bajo la ventana iluminada de un departamento, en una noche helada',
+    cabinSmokeAlt: 'Una cabaña de troncos nevada junto al agua sin congelar, con humo saliendo de la chimenea y un sol bajo entre los abetos',
+    mugHandsAlt: 'Manos curtidas sostienen una taza esmaltada humeante junto a un río nevado',
   },
 };
 

@@ -29,6 +29,7 @@ import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { fillCopy } from '../lib/copyTemplate';
 
 export default function Destination() {
   const lang = useLang();
@@ -81,7 +82,7 @@ export default function Destination() {
         <div className="relative h-[42vh] min-h-[280px] md:h-[52vh] overflow-hidden">
           <img
             src={d.hero}
-            alt={`${d.name}, Finnish Lapland`}
+            alt={fillCopy(COPY[lang].destinations.placeImageAlt, { place: d.name })}
             className="w-full h-full object-cover"
             fetchPriority="high"
             decoding="async"

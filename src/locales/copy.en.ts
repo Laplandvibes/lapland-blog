@@ -327,6 +327,7 @@ const en: SectionCopy = {
         blurb: 'Finland\'s northernmost city. A big lake and a dozen cabins within walking distance. Quiet.',
       },
     },
+    placeImageAlt: '{place}, Finnish Lapland',
   },
   topReads: {
     pageTitle: 'Top reads',
@@ -577,6 +578,16 @@ const en: SectionCopy = {
     copyQuoteAria: 'Copy quote with link',
     aboutAuthorAria: 'About the author',
     aboutBlogLink: 'About Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: 'Red wooden cabins and a jetty on a wooded lakeshore in golden evening light',
+    auroraRiverAlt: 'Northern lights over a winding river in a snowy forest, with footprints in the snow in the foreground',
+    headlampAuroraAlt: 'A lone walker with a headlamp on open snow under a wide aurora arc, with fells on the horizon',
+    duskLakeAlt: 'A lake with open water at blue-hour dusk, with snow-covered pines along the shore',
+    sallaEveningAlt: 'Evening sky from a fell top in Salla: the sun shines through a gap in the clouds above the fells',
+    benchAlt: 'A snow-covered bench below a lit apartment window on a freezing night',
+    cabinSmokeAlt: 'A snow-covered log cabin by open water, with smoke rising from the chimney and a low sun through the spruces',
+    mugHandsAlt: 'Weathered hands holding a steaming enamel mug by a snowy river',
   },
 };
 

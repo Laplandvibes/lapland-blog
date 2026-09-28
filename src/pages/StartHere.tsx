@@ -83,7 +83,7 @@ export default function StartHere() {
             "eikö kohteet sivun kuva ole lähes sama kuin aloita tästä"). */}
         <picture><source srcSet="/images/hero-salla-ilta-1920.webp 1920w, /images/hero-salla-ilta-1200.webp 1200w" type="image/webp" /><img
           src="/images/hero-salla-ilta-1920.webp"
-          alt="Iltataivas tunturin laelta Sallassa: aurinko pilvien raosta, tunturihorisontti"
+          alt={COPY[lang].images.sallaEveningAlt}
           srcSet="/images/hero-salla-ilta-1920.webp 1920w, /images/hero-salla-ilta-1200.webp 1200w"
           sizes="100vw"
           className="absolute inset-0 w-full h-full object-cover"

@@ -327,6 +327,7 @@ const fi: SectionCopy = {
         blurb: 'Suomen pohjoisin kaupunki. Iso järvi ja tusina mökkiä kävelymatkan päässä. Hiljaista.',
       },
     },
+    placeImageAlt: '{place}, Suomen Lappi',
   },
   topReads: {
     pageTitle: 'Suosituimmat',
@@ -578,6 +579,16 @@ const fi: SectionCopy = {
     copyQuoteAria: 'Kopioi lainaus ja linkki',
     aboutAuthorAria: 'Tietoa kirjoittajasta',
     aboutBlogLink: 'Tietoa Lapland.blogista →',
+  },
+  images: {
+    heroSummerAlt: 'Punaisia puumökkejä ja laituri metsäisellä järvenrannalla kultaisessa iltavalossa',
+    auroraRiverAlt: 'Revontulet mutkittelevan joen yllä lumisessa metsässä, etualalla jalanjälkiä hangessa',
+    headlampAuroraAlt: 'Yksinäinen kulkija otsalampun kanssa lumisella aukealla leveän revontulikaaren alla, taivaanrannassa tuntureita',
+    duskLakeAlt: 'Sula järvi sinisen hetken hämärässä, rannalla lumisia mäntyjä',
+    sallaEveningAlt: 'Iltataivas tunturin laelta Sallassa: aurinko paistaa pilvien raosta tunturien yllä',
+    benchAlt: 'Luminen penkki valaistun kerrostaloikkunan alla pakkasyönä',
+    cabinSmokeAlt: 'Luminen hirsimökki sulan veden rannalla, piipusta nousee savua ja matala aurinko paistaa kuusten välistä',
+    mugHandsAlt: 'Ahavoituneet kädet pitelevät höyryävää emalimukia lumisen joen rannalla',
   },
 };
 

@@ -12,7 +12,7 @@ import PostCard from '../components/PostCard';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, publisherSchema, faqPageSchema } from '../lib/jsonld';
 import { usePosts } from '../hooks/usePosts';
-import { getImage } from '../lib/images';
+import { getImage, isSummerSeason } from '../lib/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { postTextLang } from '../lib/postLang';
@@ -72,19 +72,18 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
 };
 
-const heroImage = getImage('hero-aurora', '100vw', 'Lapland landscape');
+// Alt texts come from COPY[lang].images at render time (hero: by season, like the file).
+const heroImage = getImage('hero-aurora', '100vw');
 
-const asideImage = getImage(
-  'aside-vesa',
-  '(max-width: 768px) 100vw, 260px',
-  'Solitary figure with a headlamp standing under a giant aurora arc over Lapland tundra'
-);
+const asideImage = getImage('aside-vesa', '(max-width: 768px) 100vw, 260px');
 
 type AccentColor = 'pink' | 'green' | 'blue';
 
 interface PillarMeta {
   accent: AccentColor;
   image: ReturnType<typeof getImage>;
+  /** Image description in COPY[lang].images. */
+  altKey: 'benchAlt' | 'cabinSmokeAlt' | 'mugHandsAlt';
   /** Category slugs — labels resolve from COPY[lang].category.themes so the
       link chips localize like everything else. */
   links: { slug: CategorySlug; to: string }[];
@@ -94,6 +93,7 @@ const PILLAR_META: PillarMeta[] = [
   {
     accent: 'green',
     image: getImage('pillar-cold', '(max-width: 768px) 100vw, 33vw'),
+    altKey: 'benchAlt',
     links: [
       { slug: 'aurora', to: '/category/aurora' },
       { slug: 'seasons', to: '/category/seasons' },
@@ -102,6 +102,7 @@ const PILLAR_META: PillarMeta[] = [
   {
     accent: 'pink',
     image: getImage('pillar-shelter', '(max-width: 768px) 100vw, 33vw'),
+    altKey: 'cabinSmokeAlt',
     links: [
       { slug: 'cabins', to: '/category/cabins' },
       { slug: 'food', to: '/category/food' },
@@ -110,6 +111,7 @@ const PILLAR_META: PillarMeta[] = [
   {
     accent: 'blue',
     image: getImage('pillar-people', '(max-width: 768px) 100vw, 33vw'),
+    altKey: 'mugHandsAlt',
     links: [
       { slug: 'people', to: '/category/people' },
       { slug: 'stories', to: '/category/stories' },
@@ -165,7 +167,7 @@ export default function Home() {
           src={heroImage.src}
           srcSet={heroImage.srcSet}
           sizes={heroImage.sizes}
-          alt={heroImage.alt}
+          alt={isSummerSeason() ? COPY[lang].images.heroSummerAlt : COPY[lang].images.auroraRiverAlt}
           className="absolute inset-0 w-full h-full object-cover animate-kenburns"
           fetchPriority="high"
           decoding="async"
@@ -512,7 +514,7 @@ export default function Home() {
                         src={pillar.image.src}
                         srcSet={pillar.image.srcSet}
                         sizes={pillar.image.sizes}
-                        alt={pillar.image.alt}
+                        alt={COPY[lang].images[pillar.altKey]}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"
                         decoding="async"
@@ -613,7 +615,7 @@ export default function Home() {
                   src={asideImage.src}
                   srcSet={asideImage.srcSet}
                   sizes={asideImage.sizes}
-                  alt={asideImage.alt}
+                  alt={COPY[lang].images.headlampAuroraAlt}
                   className="w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"

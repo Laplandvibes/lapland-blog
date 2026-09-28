@@ -90,7 +90,7 @@ export default function Archive() {
       <section className="relative px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[56vh] md:min-h-[62vh] flex items-center pt-16">
         <picture><source srcSet="/images/hero-dusk-lake-1920.avif" type="image/avif" /><source srcSet="/images/hero-dusk-lake-1920.webp" type="image/webp" /><img
           src="/images/hero-dusk-lake-1920.webp"
-          alt="Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore"
+          alt={COPY[lang].images.duskLakeAlt}
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
           decoding="async"

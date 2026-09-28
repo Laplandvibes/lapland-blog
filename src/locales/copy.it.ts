@@ -277,6 +277,7 @@ const it: SectionCopy = {
         blurb: 'La città più settentrionale della Finlandia. Un grande lago e una dozzina di baite a piedi. Silenzio.',
       },
     },
+    placeImageAlt: '{place}, Lapponia finlandese',
   },
   topReads: {
     pageTitle: 'Letture top',
@@ -527,6 +528,16 @@ const it: SectionCopy = {
     copyQuoteAria: 'Copia la citazione con il link',
     aboutAuthorAria: 'Informazioni sull’autore',
     aboutBlogLink: 'Informazioni su Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: 'Casette di legno rosse e un pontile sulla riva boscosa di un lago, nella luce dorata della sera',
+    auroraRiverAlt: 'Aurora boreale sopra un fiume sinuoso in un bosco innevato, con impronte nella neve in primo piano',
+    headlampAuroraAlt: 'Una figura solitaria con la lampada frontale sulla neve aperta, sotto un ampio arco di aurora boreale, con i fjäll all’orizzonte',
+    duskLakeAlt: 'Un lago ancora libero dai ghiacci nell’ora blu, con pini innevati lungo la riva',
+    sallaEveningAlt: 'Cielo serale dalla cima di un fjäll a Salla: il sole filtra da uno squarcio tra le nuvole sopra i fjäll',
+    benchAlt: 'Una panchina coperta di neve sotto la finestra illuminata di un appartamento, in una notte gelida',
+    cabinSmokeAlt: 'Una baita di tronchi innevata in riva all’acqua libera dai ghiacci, con il fumo che sale dal camino e un sole basso tra gli abeti',
+    mugHandsAlt: 'Mani segnate dal tempo stringono una tazza smaltata fumante sulla riva di un fiume innevato',
   },
   footer: {
     ...en.footer,

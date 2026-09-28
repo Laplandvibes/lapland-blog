@@ -218,6 +218,8 @@ export type SectionCopy = {
     plantH2: string;
     plantLead: string;
     plantCta: string;
+    /** Alt of a destination photo; {place} = the destination name as shown on the card. */
+    placeImageAlt: string;
     /** Localized region + blurb per destination card (names stay as proper nouns). */
     places: Record<
       'rovaniemi' | 'saariselka' | 'levi' | 'kemi' | 'inari' | 'muonio' | 'yllas' | 'kemijarvi',
@@ -411,5 +413,16 @@ export type SectionCopy = {
     /** Author card at the end of a post. */
     aboutAuthorAria: string;
     aboutBlogLink: string;
+  };
+  /** Descriptions of the site photos (hero, cards), checked against the images. */
+  images: {
+    heroSummerAlt: string;
+    auroraRiverAlt: string;
+    headlampAuroraAlt: string;
+    duskLakeAlt: string;
+    sallaEveningAlt: string;
+    benchAlt: string;
+    cabinSmokeAlt: string;
+    mugHandsAlt: string;
   };
 };

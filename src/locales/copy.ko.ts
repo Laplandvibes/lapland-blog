@@ -277,6 +277,7 @@ const ko: SectionCopy = {
         blurb: '핀란드 최북단 도시. 큰 호수와 걸어서 닿는 열두어 채의 오두막. 조용합니다.',
       },
     },
+    placeImageAlt: '{place}, 핀란드 라플란드',
   },
   topReads: {
     pageTitle: '인기 글',
@@ -527,6 +528,16 @@ const ko: SectionCopy = {
     copyQuoteAria: '인용문과 링크 복사',
     aboutAuthorAria: '작성자 소개',
     aboutBlogLink: 'Lapland.blog 소개 →',
+  },
+  images: {
+    heroSummerAlt: '황금빛 저녁 햇살 속, 숲이 우거진 호숫가의 빨간 목조 오두막과 선착장',
+    auroraRiverAlt: '눈 덮인 숲 사이로 굽이치는 강 위의 오로라, 앞쪽 눈밭에 찍힌 발자국',
+    headlampAuroraAlt: '탁 트인 눈밭에서 헤드랜턴을 켠 채 넓은 오로라 호 아래 홀로 선 사람, 지평선의 낮은 산들',
+    duskLakeAlt: '블루 아워의 호수, 아직 얼지 않은 물과 기슭의 눈 덮인 소나무',
+    sallaEveningAlt: '살라의 산 정상에서 본 저녁 하늘, 산등성이 위 구름 사이로 비치는 해',
+    benchAlt: '추운 밤, 불 켜진 아파트 창문 아래 눈 덮인 벤치',
+    cabinSmokeAlt: '얼지 않은 물가의 눈 덮인 통나무 오두막, 굴뚝에서 피어오르는 연기와 가문비나무 사이로 비치는 낮은 해',
+    mugHandsAlt: '눈 덮인 강가에서 김이 나는 법랑 머그잔을 감싼 거친 손',
   },
   footer: {
     ...en.footer,

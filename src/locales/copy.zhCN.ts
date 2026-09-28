@@ -327,6 +327,7 @@ const zhCN: SectionCopy = {
         blurb: '芬兰最北端的城市。一片大湖，步行可达的十几间小屋。安静。',
       },
     },
+    placeImageAlt: '{place}，芬兰拉普兰',
   },
   topReads: {
     pageTitle: '热门阅读',
@@ -577,6 +578,16 @@ const zhCN: SectionCopy = {
     copyQuoteAria: '复制引文及链接',
     aboutAuthorAria: '关于作者',
     aboutBlogLink: '关于 Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: '森林环绕的湖畔，红色木屋和栈桥沐浴在金色的傍晚阳光中',
+    auroraRiverAlt: '积雪森林中蜿蜒的河流上空的北极光，前景的雪地上留有脚印',
+    headlampAuroraAlt: '一个戴着头灯的孤独身影站在开阔的雪地上，头顶是一道宽阔的北极光弧，地平线上是低缓的丘陵',
+    duskLakeAlt: '蓝调时刻的湖泊，湖水尚未封冻，岸边是积雪的松树',
+    sallaEveningAlt: '从萨拉的丘陵顶上眺望傍晚的天空：阳光从云缝中洒向群山',
+    benchAlt: '严寒的夜晚，亮着灯的公寓窗下一张积雪的长椅',
+    cabinSmokeAlt: '未封冻的水边一座积雪的原木小屋，烟囱里冒着烟，低垂的太阳从云杉间照进来',
+    mugHandsAlt: '积雪的河边，一双饱经风霜的手捧着冒热气的搪瓷杯',
   },
 };
 

@@ -327,6 +327,7 @@ const ptBR: SectionCopy = {
         blurb: 'A cidade mais ao norte da Finlândia. Um lago grande e uma dúzia de cabanas a pé. Silêncio.',
       },
     },
+    placeImageAlt: '{place}, Lapônia finlandesa',
   },
   topReads: {
     pageTitle: 'Mais lidos',
@@ -577,6 +578,16 @@ const ptBR: SectionCopy = {
     copyQuoteAria: 'Copiar a citação com o link',
     aboutAuthorAria: 'Sobre o autor',
     aboutBlogLink: 'Sobre o Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: 'Cabanas de madeira vermelhas e um píer na margem arborizada de um lago, na luz dourada do fim de tarde',
+    auroraRiverAlt: 'Aurora boreal sobre um rio sinuoso em uma floresta nevada, com pegadas na neve em primeiro plano',
+    headlampAuroraAlt: 'Uma figura solitária com lanterna de cabeça sobre a neve aberta, sob um amplo arco de aurora boreal, com montes no horizonte',
+    duskLakeAlt: 'Um lago ainda sem gelo na hora azul, com pinheiros cobertos de neve na margem',
+    sallaEveningAlt: 'Céu de fim de tarde do alto de um monte em Salla: o sol aparece por uma fresta nas nuvens sobre os montes',
+    benchAlt: 'Um banco coberto de neve sob a janela iluminada de um apartamento, em uma noite gelada',
+    cabinSmokeAlt: 'Uma cabana de toras coberta de neve à beira da água sem gelo, com fumaça saindo da chaminé e o sol baixo entre os abetos',
+    mugHandsAlt: 'Mãos calejadas segurando uma caneca esmaltada fumegante à beira de um rio coberto de neve',
   },
 };
 

@@ -277,6 +277,7 @@ const fr: SectionCopy = {
         blurb: 'La ville la plus septentrionale de Finlande. Un grand lac et une douzaine de chalets à pied. Calme.',
       },
     },
+    placeImageAlt: '{place}, Laponie finlandaise',
   },
   topReads: {
     pageTitle: 'À lire en priorité',
@@ -527,6 +528,16 @@ const fr: SectionCopy = {
     copyQuoteAria: 'Copier la citation avec le lien',
     aboutAuthorAria: 'À propos de l’auteur',
     aboutBlogLink: 'À propos de Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: 'Chalets en bois rouges et ponton sur une rive boisée de lac, dans la lumière dorée du soir',
+    auroraRiverAlt: 'Aurores boréales au-dessus d’une rivière sinueuse dans une forêt enneigée, avec des traces de pas dans la neige au premier plan',
+    headlampAuroraAlt: 'Une silhouette solitaire à la lampe frontale sur une étendue enneigée, sous un large arc d’aurore boréale, avec des fjälls à l’horizon',
+    duskLakeAlt: 'Un lac aux eaux libres à l’heure bleue, avec des pins enneigés le long de la rive',
+    sallaEveningAlt: 'Ciel du soir depuis le sommet d’un fjäll à Salla : le soleil perce entre les nuages au-dessus des fjälls',
+    benchAlt: 'Un banc couvert de neige sous une fenêtre d’appartement éclairée, par une nuit glaciale',
+    cabinSmokeAlt: 'Une cabane en rondins enneigée au bord d’une eau libre, de la fumée qui s’élève de la cheminée et un soleil bas entre les épicéas',
+    mugHandsAlt: 'Des mains burinées tenant un gobelet émaillé fumant au bord d’une rivière enneigée',
   },
   footer: {
     ...en.footer,

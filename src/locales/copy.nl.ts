@@ -277,6 +277,7 @@ const nl: SectionCopy = {
         blurb: 'De noordelijkste stad van Finland. Een groot meer en een dozijn hutten op loopafstand. Stil.',
       },
     },
+    placeImageAlt: '{place}, Fins Lapland',
   },
   topReads: {
     pageTitle: 'Topartikelen',
@@ -527,6 +528,16 @@ const nl: SectionCopy = {
     copyQuoteAria: 'Citaat met link kopiëren',
     aboutAuthorAria: 'Over de auteur',
     aboutBlogLink: 'Over Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: 'Rode houten huisjes en een steiger aan een beboste meeroever in goudkleurig avondlicht',
+    auroraRiverAlt: 'Noorderlicht boven een kronkelende rivier in een besneeuwd bos, met voetsporen in de sneeuw op de voorgrond',
+    headlampAuroraAlt: 'Een eenzame gestalte met een hoofdlamp op open sneeuw onder een brede boog van noorderlicht, met fjälls aan de horizon',
+    duskLakeAlt: 'Een meer met open water in het blauwe uur, met besneeuwde dennen langs de oever',
+    sallaEveningAlt: 'Avondlucht vanaf een fjälltop in Salla: de zon schijnt door een opening in de wolken boven de fjälls',
+    benchAlt: 'Een besneeuwd bankje onder een verlicht flatraam in een ijskoude nacht',
+    cabinSmokeAlt: 'Een besneeuwde blokhut aan open water, met rook uit de schoorsteen en een laagstaande zon tussen de sparren',
+    mugHandsAlt: 'Verweerde handen houden een dampende emaillen mok vast bij een besneeuwde rivier',
   },
   footer: {
     ...en.footer,

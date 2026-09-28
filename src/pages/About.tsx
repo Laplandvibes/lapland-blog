@@ -42,7 +42,7 @@ export default function About() {
             <source srcSet="/images/aside-vesa-1200.avif" type="image/avif" />
             <img
               src="/images/aside-vesa-1200.webp"
-              alt="Yksinäinen kulkija otsalampun kanssa suuren revontulikaaren alla Lapin tunturissa"
+              alt={COPY[lang].images.headlampAuroraAlt}
               className="absolute inset-0 w-full h-full object-cover object-[50%_38%]"
               fetchPriority="high"
               decoding="async"

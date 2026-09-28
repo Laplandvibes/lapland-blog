@@ -17,6 +17,7 @@ import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import type { Post } from '../data/posts';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { fillCopy } from '../lib/copyTemplate';
 
 
 function countMatching(posts: Post[], slug: string): number {
@@ -59,7 +60,7 @@ export default function Destinations() {
             <source srcSet="/images/hero-aurora-winter-1200.webp" type="image/webp" />
             <img
               src="/images/hero-aurora-winter-1200.webp"
-              alt="Revontulikaari jäätyneen joen yllä talvisessa Lapissa"
+              alt={COPY[lang].images.auroraRiverAlt}
               className="absolute inset-0 w-full h-full object-cover object-[50%_45%]"
               fetchPriority="high"
               decoding="async"
@@ -164,7 +165,7 @@ function DestinationCard({
       <div className="aspect-[3/2] overflow-hidden relative">
         <img
           src={d.hero}
-          alt={`${d.name}, Finnish Lapland`}
+          alt={fillCopy(c.placeImageAlt, { place: d.name })}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
           decoding="async"

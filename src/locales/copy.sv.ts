@@ -327,6 +327,7 @@ const sv: SectionCopy = {
         blurb: 'Finlands nordligaste stad. En stor sjö och ett dussin stugor inom gångavstånd. Tyst.',
       },
     },
+    placeImageAlt: '{place}, finska Lappland',
   },
   topReads: {
     pageTitle: 'Mest lästa',
@@ -577,6 +578,16 @@ const sv: SectionCopy = {
     copyQuoteAria: 'Kopiera citatet med länk',
     aboutAuthorAria: 'Om skribenten',
     aboutBlogLink: 'Om Lapland.blog →',
+  },
+  images: {
+    heroSummerAlt: 'Röda trästugor och en brygga vid en skogsklädd sjöstrand i gyllene kvällsljus',
+    auroraRiverAlt: 'Norrsken över en slingrande älv i en snöig skog, med fotspår i snön i förgrunden',
+    headlampAuroraAlt: 'En ensam vandrare med pannlampa på öppen snö under en bred norrskensbåge, med fjäll vid horisonten',
+    duskLakeAlt: 'En sjö med öppet vatten i blå timmens skymning, med snötäckta tallar längs stranden',
+    sallaEveningAlt: 'Kvällshimmel från en fjälltopp i Salla: solen lyser genom en glipa i molnen över fjällen',
+    benchAlt: 'En snötäckt bänk nedanför ett upplyst lägenhetsfönster en iskall natt',
+    cabinSmokeAlt: 'En snötäckt timmerstuga vid öppet vatten, med rök ur skorstenen och en låg sol mellan granarna',
+    mugHandsAlt: 'Väderbitna händer som håller en rykande emaljmugg vid en snöig älv',
   },
 }
 

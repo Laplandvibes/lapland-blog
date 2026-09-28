@@ -327,6 +327,7 @@ const ja: SectionCopy = {
         blurb: 'フィンランド最北の街。大きな湖と、歩いて行ける十数軒のコテージ。静かです。',
       },
     },
+    placeImageAlt: '{place}（フィンランド・ラップランド）',
   },
   topReads: {
     pageTitle: 'おすすめ記事',
@@ -577,6 +578,16 @@ const ja: SectionCopy = {
     copyQuoteAria: '引用をリンク付きでコピー',
     aboutAuthorAria: '著者について',
     aboutBlogLink: 'Lapland.blogについて →',
+  },
+  images: {
+    heroSummerAlt: '夕方の金色の光に包まれた、森に囲まれた湖畔の赤い木造コテージと桟橋',
+    auroraRiverAlt: '雪の森を蛇行する川の上に広がるオーロラ。手前の雪には足跡',
+    headlampAuroraAlt: '雪原に立つヘッドランプをつけた人影と、頭上に大きく弧を描くオーロラ。地平線にはなだらかな丘陵',
+    duskLakeAlt: 'ブルーアワーの湖。まだ凍っていない水面と、岸辺の雪をかぶった松',
+    sallaEveningAlt: 'サッラの丘の頂から見た夕空。丘陵の上で、雲の切れ間から太陽がのぞく',
+    benchAlt: '凍える夜、明かりのともるアパートの窓の下にある雪をかぶったベンチ',
+    cabinSmokeAlt: '凍っていない水辺に建つ雪をかぶったログキャビン。煙突から煙が上がり、低い太陽がトウヒの間から差し込む',
+    mugHandsAlt: '雪の川辺で、湯気の立つホーローのマグを包む年季の入った手',
   },
 };
 

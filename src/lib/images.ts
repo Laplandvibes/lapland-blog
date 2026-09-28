@@ -74,7 +74,7 @@ type ImageMeta = {
  * Runs at module load (client + prerender), so the served hero matches
  * the season the page is built/visited in.
  */
-const isSummerSeason = (): boolean => {
+export const isSummerSeason = (): boolean => {
   const m = new Date().getMonth() + 1; // 1–12
   return m >= 5 && m <= 9;
 };
@@ -102,7 +102,7 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'hero-dusk-lake': {
     sizes: [2560, 1920, 1200],
     ratio: '21:9',
-    alt: 'Frozen lake in Lapland at blue-hour dusk, snow-covered pines along the shore',
+    alt: 'A lake with open water at blue-hour dusk, with snow-covered pines along the shore',
   },
 
   'trip-aurora-chase': {
@@ -144,17 +144,17 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'pillar-cold': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'A snow-covered city bench under a lit apartment window on a frozen night',
+    alt: 'A snow-covered bench below a lit apartment window on a freezing night',
   },
   'pillar-shelter': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Log cabin by a frozen lake at sunrise with smoke rising from its chimney',
+    alt: 'A snow-covered log cabin by open water, with smoke rising from the chimney and a low sun through the spruces',
   },
   'pillar-people': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Weathered hands cradling a steaming enamel mug by a frozen river',
+    alt: 'Weathered hands holding a steaming enamel mug by a snowy river',
   },
 
   'category-aurora': {
@@ -181,7 +181,7 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'aside-vesa': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'A tiny figure with a headlamp standing under a giant aurora arc over Lapland tundra',
+    alt: 'A lone walker with a headlamp on open snow under a wide aurora arc, with fells on the horizon',
   },
 };
 
