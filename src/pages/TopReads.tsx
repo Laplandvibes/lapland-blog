@@ -25,6 +25,7 @@ import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { formatPostDate } from '../lib/dates';
+import { postTextLang } from '../lib/postLang';
 
 type IconType = ComponentType<{ size?: number; className?: string }>;
 
@@ -246,6 +247,7 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
   const cat = categoryBySlug(post.category);
   const lang = useLang();
   const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
+  const textLang = postTextLang(post, lang);
   return (
     <Link
       to={to(`/post/${post.slug}`)}
@@ -257,6 +259,7 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
           <img
             src={post.heroImage}
             alt={post.heroAlt}
+            lang={textLang}
             loading="eager"
             fetchPriority="high"
             decoding="async"
@@ -278,10 +281,10 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
               {catName}
             </span>
           )}
-          <h3 className="font-display text-2xl md:text-[2rem] leading-[1.08] tracking-tight text-snow group-hover:text-pink transition-colors mb-4">
+          <h3 lang={textLang} className="font-display text-2xl md:text-[2rem] leading-[1.08] tracking-tight text-snow group-hover:text-pink transition-colors mb-4">
             {post.title}
           </h3>
-          <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6 line-clamp-3">
+          <p lang={textLang} className="text-slate-300 text-sm md:text-base leading-relaxed mb-6 line-clamp-3">
             {post.excerpt}
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-400">
@@ -365,6 +368,7 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
   const cat = categoryBySlug(post.category);
   const lang = useLang();
   const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
+  const textLang = postTextLang(post, lang);
   return (
     <Link
       to={to(`/post/${post.slug}`)}
@@ -379,6 +383,7 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
         <img
           src={post.heroImage}
           alt={post.heroAlt}
+          lang={textLang}
           loading="lazy"
           decoding="async"
           width={640}
@@ -407,10 +412,10 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
             {formatPostDate(post.publishedAt, lang, { day: 'numeric', month: 'short', year: 'numeric' })}
           </time>
         </div>
-        <h3 className="font-display text-lg sm:text-xl md:text-2xl leading-snug tracking-tight text-snow group-hover:text-pink transition-colors line-clamp-2">
+        <h3 lang={textLang} className="font-display text-lg sm:text-xl md:text-2xl leading-snug tracking-tight text-snow group-hover:text-pink transition-colors line-clamp-2">
           {post.title}
         </h3>
-        <p className="hidden sm:block text-slate-300 text-sm leading-relaxed mt-2 line-clamp-2">
+        <p lang={textLang} className="hidden sm:block text-slate-300 text-sm leading-relaxed mt-2 line-clamp-2">
           {post.excerpt}
         </p>
       </div>

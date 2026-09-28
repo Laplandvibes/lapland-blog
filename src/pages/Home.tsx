@@ -15,6 +15,7 @@ import { usePosts } from '../hooks/usePosts';
 import { getImage } from '../lib/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { postTextLang } from '../lib/postLang';
 import type { CategorySlug } from '../data/categories';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AppPromoHero } from '../components/AppPromo';
@@ -311,6 +312,7 @@ export default function Home() {
                       <img
                         src={post.heroImage}
                         alt={post.heroAlt}
+                        lang={postTextLang(post, lang)}
                         loading={i === 0 ? 'eager' : 'lazy'}
                         decoding="async"
                         fetchPriority={i === 0 ? 'high' : 'auto'}
@@ -321,13 +323,13 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/10 to-transparent" />
                     </div>
                     <div className="p-5 sm:p-6">
-                      <p className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
+                      <p lang={postTextLang(post, lang)} className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
                         {post.kicker}
                       </p>
-                      <h3 className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
+                      <h3 lang={postTextLang(post, lang)} className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
                         {post.title}
                       </h3>
-                      <p className="text-slate-300 text-sm leading-relaxed line-clamp-3">
+                      <p lang={postTextLang(post, lang)} className="text-slate-300 text-sm leading-relaxed line-clamp-3">
                         {post.excerpt}
                       </p>
                       <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-snow/90">

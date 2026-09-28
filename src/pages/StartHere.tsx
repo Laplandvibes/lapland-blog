@@ -13,6 +13,7 @@ import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { postTextLang } from '../lib/postLang';
 
 // Localized title/description — kept in sync with scripts/routes.json
 // (/start-here fallbackTitleByLang) so the client-side document.title matches
@@ -270,6 +271,7 @@ export default function StartHere() {
                   <img
                     src={intro.heroImage}
                     alt={intro.heroAlt}
+                    lang={postTextLang(intro, lang)}
                     loading="lazy"
                     decoding="async"
                     width={1200}
@@ -278,13 +280,13 @@ export default function StartHere() {
                   />
                 </div>
                 <div className="flex flex-col justify-center p-6 md:p-8">
-                  <p className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
+                  <p lang={postTextLang(intro, lang)} className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
                     {intro.kicker}
                   </p>
-                  <h3 className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
+                  <h3 lang={postTextLang(intro, lang)} className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
                     {intro.title}
                   </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed line-clamp-3">{intro.excerpt}</p>
+                  <p lang={postTextLang(intro, lang)} className="text-slate-300 text-sm leading-relaxed line-clamp-3">{intro.excerpt}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-snow/90">
                     {COPY[lang].home.readFirstRead}
                     <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />

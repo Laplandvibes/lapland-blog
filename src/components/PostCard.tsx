@@ -5,6 +5,7 @@ import { categoryBySlug } from '../data/categories';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { formatPostDate } from '../lib/dates';
+import { postTextLang } from '../lib/postLang';
 
 interface Props {
   post: Post;
@@ -25,6 +26,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
   const c = COPY[lang].chrome;
   // Localized category label — categories.ts names are EN-only data.
   const catName = cat ? COPY[lang].category.themes[cat.slug].name : null;
+  const textLang = postTextLang(post, lang);
 
   const isEditorial = variant === 'editorial';
 
@@ -45,6 +47,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
           <img
             src={post.heroImage}
             alt={post.heroAlt}
+            lang={textLang}
             loading={priority ? 'eager' : 'lazy'}
             decoding="async"
             fetchPriority={priority ? 'high' : 'auto'}
@@ -75,6 +78,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
 
         <div className="p-6">
           <p
+            lang={textLang}
             className={
               isEditorial
                 ? 'text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-3'
@@ -85,6 +89,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
           </p>
 
           <h3
+            lang={textLang}
             className={
               isEditorial
                 ? 'font-editorial text-2xl leading-tight text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors mb-3'
@@ -96,6 +101,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
           </h3>
 
           <p
+            lang={textLang}
             className={
               isEditorial
                 ? 'text-[var(--color-ink-soft)] text-sm leading-relaxed mb-4 line-clamp-3'
