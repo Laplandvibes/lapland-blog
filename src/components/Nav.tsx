@@ -12,6 +12,11 @@ import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import EcosystemMenu from '../shared/EcosystemMenu';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
+import type { CSSProperties } from 'react';
+
+// Sanamerkin leveys 1 px:n fontilla (Bebas Neue + tracking-wide). Puhelin- ja tablettinavissa koko lasketaan
+// tästä ja vapaasta tilasta (index.css LV-NAV-SANAMERKKI): 24 px (tabletilla 30 px), pienempi vain kun ei mahdu.
+const WM_STYLE = { '--lv-wm-k': 5.19, '--lv-wm-max-md': '30px' } as CSSProperties;
 
 
 /**
@@ -136,29 +141,31 @@ export default function Nav() {
     <header
       className={`fixed top-0 inset-x-0 z-50 backdrop-blur-xl transition-colors duration-300 ${wrapCls}`}
     >
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3 sm:gap-5 shrink-0">
+      <div className="lv-navrivi max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+        <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="lapland.blog" variant={isEditorial ? 'light' : 'dark'} />
-          <Link
-            to={to('/')}
-            className="group inline-flex items-center min-h-11"
-            aria-label={c.homeAria}
-            onClick={() => {
-              setOpen(false)
-              // 🔴 Verkostovika, mitattu 20.9.2026 seitsemällä sivustolla seitsemästä:
-              // ScrollToTop kuuntelee pathnamea, joka ei muutu kun ollaan jo
-              // etusivulla, joten logon klikkaus ei tehnyt siellä mitään.
-              if (window.location.pathname.replace(/\/$/, '') === to('/').replace(/\/$/, '')) {
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-              }
-            }}
-          >
-            <span className="font-logo tracking-wide text-2xl md:text-3xl uppercase leading-none flex items-baseline">
-              <span className={`${logoAccentColor} transition-colors`}>#</span>
-              <span className={`${logoWordColor} transition-colors`}>LAPLAND</span>
-              <span className={`${logoAccentColor} transition-colors`}>.BLOG</span>
-            </span>
-          </Link>
+          <div className="lv-wm-paikka">
+            <Link
+              to={to('/')}
+              className="group inline-flex items-center min-h-11"
+              aria-label={c.homeAria}
+              onClick={() => {
+                setOpen(false)
+                // 🔴 Verkostovika, mitattu 20.9.2026 seitsemällä sivustolla seitsemästä:
+                // ScrollToTop kuuntelee pathnamea, joka ei muutu kun ollaan jo
+                // etusivulla, joten logon klikkaus ei tehnyt siellä mitään.
+                if (window.location.pathname.replace(/\/$/, '') === to('/').replace(/\/$/, '')) {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+              }}
+            >
+              <span className="lv-wm font-logo tracking-wide text-2xl md:text-3xl uppercase leading-none flex items-baseline" data-lv-sanamerkki="" style={WM_STYLE}>
+                <span className={`${logoAccentColor} transition-colors`}>#</span>
+                <span className={`${logoWordColor} transition-colors`}>LAPLAND</span>
+                <span className={`${logoAccentColor} transition-colors`}>.BLOG</span>
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* Desktop nav */}
