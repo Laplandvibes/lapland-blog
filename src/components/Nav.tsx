@@ -179,7 +179,7 @@ export default function Nav() {
                 // ja navi-portti vaatii vahintaan 32 px (kosketusalue). Sama 44 px kuin
                 // sanamerkilla tassa samassa palkissa. Mitattu verkostossa 20.9.2026,
                 // jolloin laplandtours sai samasta syysta 144 loydosta.
-                `relative whitespace-nowrap tracking-wider uppercase text-xs font-semibold transition-colors py-1 inline-flex items-center min-h-11 ${
+                `relative whitespace-nowrap text-sm font-medium transition-colors py-1 inline-flex items-center min-h-11 ${
                   isActive ? linkActive : linkBase
                 }`
               }
@@ -301,8 +301,8 @@ export default function Nav() {
               to={to('/signin')}
               className={
                 isEditorial
-                  ? 'ml-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-dark)] transition-colors'
-                  : 'ml-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-pink-cta text-white hover:bg-pink-dark transition-colors'
+                  ? 'ml-2 px-4 py-2 rounded-full text-sm font-semibold bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-dark)] transition-colors'
+                  : 'ml-2 px-4 py-2 rounded-full text-sm font-semibold bg-pink-cta text-white hover:bg-pink-dark transition-colors'
               }
             >
               {c.startYourBlog}
@@ -337,7 +337,7 @@ export default function Nav() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`flex items-center min-h-11 py-2 tracking-wider uppercase text-sm font-semibold transition-colors ${
+                className={`flex items-center min-h-11 py-2 text-sm font-medium transition-colors ${
                   isEditorial
                     ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                     : 'text-slate-200 hover:text-pink'
@@ -353,7 +353,7 @@ export default function Nav() {
                  samalle osoitteelle: mitattu 14.9.2026 puhelimessa "Kirjaudu" 12 kielellä. */
               <Link
                 to={to('/signin')}
-                className={`inline-flex items-center justify-center min-h-11 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors ${
+                className={`inline-flex items-center justify-center min-h-11 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors ${
                   isEditorial
                     ? 'bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-dark)]'
                     : 'bg-pink-cta text-white hover:bg-pink-dark'
@@ -409,7 +409,7 @@ export default function Nav() {
                 </div>
                 <Link
                   to="/me"
-                  className={`flex items-center min-h-11 py-2 tracking-wider uppercase text-sm font-semibold transition-colors ${
+                  className={`flex items-center min-h-11 py-2 text-sm font-medium transition-colors ${
                     isEditorial
                       ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                       : 'text-slate-200 hover:text-pink'
@@ -420,7 +420,7 @@ export default function Nav() {
                 {isAdmin && (
                   <Link
                     to="/admin"
-                    className={`flex items-center min-h-11 py-2 tracking-wider uppercase text-sm font-semibold transition-colors ${
+                    className={`flex items-center min-h-11 py-2 text-sm font-medium transition-colors ${
                       isEditorial
                         ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                         : 'text-slate-200 hover:text-pink'
@@ -432,7 +432,7 @@ export default function Nav() {
                 <button
                   type="button"
                   onClick={handleSignOut}
-                  className={`flex items-center min-h-11 py-2 text-left tracking-wider uppercase text-sm font-semibold transition-colors cursor-pointer ${
+                  className={`flex items-center min-h-11 py-2 text-left text-sm font-medium transition-colors cursor-pointer ${
                     isEditorial
                       ? 'text-[var(--color-ink)] hover:text-[var(--color-accent)]'
                       : 'text-slate-200 hover:text-pink'
@@ -447,8 +447,8 @@ export default function Nav() {
               to={`${to('/')}#newsletter`}
               className={
                 isEditorial
-                  ? 'mt-2 inline-flex items-center justify-center min-h-11 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[var(--color-accent)] text-white'
-                  : 'mt-2 inline-flex items-center justify-center min-h-11 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-pink-cta text-white hover:bg-pink-dark transition-colors'
+                  ? 'mt-2 inline-flex items-center justify-center min-h-11 px-4 py-2.5 rounded-full text-sm font-semibold bg-[var(--color-accent)] text-white'
+                  : 'mt-2 inline-flex items-center justify-center min-h-11 px-4 py-2.5 rounded-full text-sm font-semibold bg-pink-cta text-white hover:bg-pink-dark transition-colors'
               }
             >
               {c.subscribe}
