@@ -20,6 +20,7 @@ import type { CategorySlug } from '../data/categories';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AppPromoHero } from '../components/AppPromo';
 import { AD_SLOTS } from '../data/adSlots';
+import { Fraasit, ilmanValeja, lauseet, manropeEm } from '../lib/otsikkoRivit';
 
 const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   'en': {
@@ -138,6 +139,9 @@ export default function Home() {
   // Kolme nostoa heti heron alle, loput uusimpiin — sama juttu ei esiinny kahdesti.
   const leadPosts = allPosts.slice(0, 3);
   const recent = allPosts.slice(3, 9);
+  // Heron otsikko = kaksi lausetta, kaksi riviä. Koko sovitetaan pidempään (ks. lib/otsikkoRivit).
+  const h1Em = Math.max(manropeEm(c.heroLine1), manropeEm(c.heroLine2));
+  const cjkVali = ilmanValeja(lang);
 
   const m = META[lang];
   useSeo({
@@ -191,7 +195,9 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-5xl">
+        {/* @container: otsikon koko lasketaan palstan leveydestä (100cqi), siksi w-full (kutistuva flex-lapsi ei kelpaa
+            kyselysäiliöksi). lg+ palsta 1152 px ja 2xl 1280 px: 992 px:ssä saksan toinen lause (14,2 em) jäi 70 px:iin. */}
+        <div className="@container relative z-10 text-center px-4 w-full max-w-5xl lg:max-w-6xl 2xl:max-w-7xl">
           <Reveal>
             <div className="flex flex-wrap items-center justify-center gap-1.5 mb-6">
               {c.heroEyebrow.split('·').map((part, i) => (
@@ -207,10 +213,15 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={1}>
-            <h1 className="font-display text-[clamp(2.25rem,6.5vw,5.25rem)] leading-[1.03] tracking-tight mb-6 text-snow font-light hero-text-shadow xl:text-[clamp(84px,1.3125vw_+_67.2px,100.8px)]">
-              {c.heroLine1}
+            {/* Puhelin pitää suunnitellun koon (ja/zh: katko vain fraasien välissä, ei "始めま / しょう。");
+                sm+ = pienempi kahdesta, suunniteltu --h1-max tai koko jolla pidempi lause mahtuu riville. */}
+            <h1
+              className={`font-display text-[clamp(2.25rem,6.5vw,5.25rem)] sm:[--h1-max:clamp(2.25rem,6.5vw,5.25rem)] xl:[--h1-max:clamp(84px,1.3125vw_+_67.2px,100.8px)] sm:[font-size:min(var(--h1-max),calc(100cqi/var(--h1-em)))] leading-[1.03] tracking-tight mb-6 text-snow font-light hero-text-shadow${cjkVali ? ' [word-break:keep-all] [overflow-wrap:anywhere]' : ''}`}
+              style={{ ['--h1-em' as string]: h1Em.toFixed(2) }}
+            >
+              <Fraasit text={c.heroLine1} lang={lang} />
               <br />
-              <span className="text-pink italic font-light">{c.heroLine2}</span>
+              <span className="text-pink italic font-light"><Fraasit text={c.heroLine2} lang={lang} /></span>
             </h1>
           </Reveal>
 
@@ -631,18 +642,24 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={1}>
-              <div>
+              <div className="@container">
                 <div className="inline-flex items-center gap-2 mb-5">
                   <PenLine size={16} className="text-pink" />
                   <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
                     {c.asideEyebrow}
                   </p>
                 </div>
+                {/* ja/zh: kaksi lausetta ilman välilyöntejä katkesi 708 px:n palstassa kesken sanan kolmelle riville
+                    ("パンフレットで / はありません。あなたの旅も、そ / うであるべき…"). lg+: kumpikin lause omalle
+                    rivilleen ja koko pisimmän lauseen mukaan (36 → ~33 px). Muut kielet rivittyvät sanoista kahdelle. */}
                 <h2
                   id="aside-heading"
-                  className="font-display font-light text-3xl md:text-4xl leading-[1.12] tracking-tight mb-6 text-snow"
+                  className={`font-display font-light text-3xl md:text-4xl leading-[1.12] tracking-tight mb-6 text-snow${cjkVali ? ' lg:[font-size:min(2.25rem,calc(100cqi/var(--h2-em)))] [word-break:keep-all] [overflow-wrap:anywhere]' : ''}`}
+                  style={cjkVali ? { ['--h2-em' as string]: Math.max(...lauseet(c.asideH2).map(manropeEm)).toFixed(2) } : undefined}
                 >
-                  {c.asideH2}
+                  {cjkVali
+                    ? lauseet(c.asideH2).map((l) => <span key={l} className="lg:inline-block"><Fraasit text={l} lang={lang} /></span>)
+                    : c.asideH2}
                 </h2>
                 <div className="space-y-5 text-slate-300 text-base md:text-lg leading-relaxed">
                   <p>{c.asideP1}</p>

@@ -203,9 +203,11 @@ export default function Newsletter() {
           </p>
         </div>
 
+        {/* lg+: otsikko 672 px:n palstaa leveämpänä (+2 × 112 px), balance tasaa rivit. 672 px:ssä espanjan
+            "Laponia en su bandeja de entrada, directo desde Finlandia." oli kolmella rivillä (Vesa 3.10.2026). */}
         <h2
           id="newsletter-heading"
-          className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight mb-5"
+          className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight mb-5 text-balance lg:-mx-28"
         >
           {c.h2}
         </h2>
