@@ -23,6 +23,9 @@ import type { Post } from '../data/posts';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
+import { fillCopy } from '../lib/copyTemplate';
+import { formatPostDate } from '../lib/dates';
 
 interface Profile {
   id: string;
@@ -42,6 +45,7 @@ export default function AuthorProfile() {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const lp = useLocalePath();
+  const c = COPY[lang].authorPage;
 
   useEffect(() => {
     if (!handle) return;
@@ -91,10 +95,10 @@ export default function AuthorProfile() {
   useSeo({
     title: profile
       ? `${profile.display_name} (@${profile.handle})`
-      : 'Author',
+      : c.seoTitleFallback,
     description: profile?.bio
-      ? `${profile.display_name} on Lapland.blog. ${profile.bio.slice(0, 130)}`
-      : `${profile?.display_name ?? 'An author'} on Lapland.blog. Trip-blog entries from Finnish Lapland.`,
+      ? fillCopy(c.seoDescriptionBio, { name: profile.display_name, bio: profile.bio.slice(0, 130) })
+      : fillCopy(c.seoDescription, { name: profile?.display_name ?? c.seoTitleFallback }),
     canonical: profile ? canonicalUrl(`/by/${profile.handle}`) : undefined,
   });
 
@@ -102,8 +106,9 @@ export default function AuthorProfile() {
     'author-breadcrumb',
     profile
       ? breadcrumbSchema([
-          { name: 'Home', url: canonicalUrl('/') },
-          { name: 'Authors', url: canonicalUrl('/destinations') },
+          { name: c.homeLabel, url: canonicalUrl('/') },
+          // The middle crumb links to /destinations, so it carries that page's name.
+          { name: COPY[lang].nav.destinations, url: canonicalUrl('/destinations') },
           { name: profile.display_name, url: canonicalUrl(`/by/${profile.handle}`) },
         ])
       : { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [] }
@@ -160,7 +165,7 @@ export default function AuthorProfile() {
                   )}
                   <p className="mt-3 inline-flex items-center gap-1.5 text-slate-400 text-xs">
                     <Calendar size={12} />
-                    Writing since {new Date(profile.created_at).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}
+                    {fillCopy(c.writingSince, { date: formatPostDate(profile.created_at, lang, { month: 'long', year: 'numeric' }) })}
                   </p>
                 </div>
               </div>
@@ -179,10 +184,10 @@ export default function AuthorProfile() {
             className="font-display text-2xl md:text-3xl font-light tracking-tight text-snow mb-8"
           >
             {posts.length === 0
-              ? 'No published entries yet.'
+              ? c.entriesNone
               : posts.length === 1
-                ? '1 entry'
-                : `${posts.length} entries`}
+                ? c.entriesOne
+                : fillCopy(c.entriesMany, { n: String(posts.length) })}
           </h2>
 
           {posts.length > 0 ? (
@@ -196,15 +201,13 @@ export default function AuthorProfile() {
           ) : (
             <div className="rounded-2xl border border-purple/20 bg-night-light/30 p-10 text-center max-w-2xl mx-auto">
               <p className="text-slate-300 text-base leading-relaxed mb-6">
-                {profile?.display_name ?? 'This author'} hasn't published an entry
-                yet. The drafts are probably in a forest cabin somewhere with no
-                wifi.
+                {fillCopy(c.emptyBody, { name: profile?.display_name ?? c.emptyNameFallback })}
               </p>
               <Link
                 to={lp('/signin')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] transition-colors"
               >
-                Start your own
+                {COPY[lang].home.asideCta1}
                 <ArrowRight size={14} />
               </Link>
             </div>
@@ -217,28 +220,27 @@ export default function AuthorProfile() {
         <div className="max-w-3xl mx-auto text-center">
           <Reveal>
             <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
-              While you're here
+              {c.crossEyebrow}
             </p>
             <h2 className="font-display text-2xl md:text-3xl font-light tracking-tight text-snow mb-3">
-              Read what others wrote.
+              {c.crossH2}
             </h2>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-7 max-w-xl mx-auto">
-              The editor's picks, the destinations, and the seed entries from
-              LaplandVibes. All curated.
+              {c.crossBody}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to={lp('/top-reads')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] transition-colors"
               >
-                Top reads
+                {COPY[lang].nav.topReads}
                 <ArrowRight size={14} />
               </Link>
               <Link
                 to={lp('/destinations')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-night-light/60 border border-aurora-blue/40 text-pink-300 font-semibold uppercase tracking-[0.18em] text-xs hover:bg-night-light/80 hover:text-pink-200 transition-colors"
               >
-                Destinations
+                {COPY[lang].nav.destinations}
               </Link>
             </div>
           </Reveal>

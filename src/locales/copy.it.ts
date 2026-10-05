@@ -489,6 +489,7 @@ const it: SectionCopy = {
     emailPlaceholder: 'sua@email.com',
     processing: 'Elaborazione…',
     submit: 'Annulli l’iscrizione',
+    errorGeneric: 'La cancellazione dell’iscrizione non è andata a buon fine. Riprovi tra un momento.',
   },
   notFound: {
     pageTitle: 'Pagina non trovata',
@@ -528,6 +529,22 @@ const it: SectionCopy = {
     copyQuoteAria: 'Copia la citazione con il link',
     aboutAuthorAria: 'Informazioni sull’autore',
     aboutBlogLink: 'Informazioni su Lapland.blog →',
+    editorialBio: 'Appunti dalla Lapponia finlandese: il meteo, le baite, la luce e il lungo silenzio che sta nel mezzo.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Autore',
+    seoDescription: '{name} su Lapland.blog. Voci di un blog di viaggio dalla Lapponia finlandese.',
+    seoDescriptionBio: '{name} su Lapland.blog. {bio}',
+    homeLabel: 'Home',
+    writingSince: 'Scrive da {date}',
+    entriesNone: 'Ancora nessuna voce pubblicata.',
+    entriesOne: '1 voce',
+    entriesMany: '{n} voci',
+    emptyBody: '{name} non ha ancora pubblicato nessuna voce. Le bozze sono probabilmente in una baita nel bosco, senza wifi.',
+    emptyNameFallback: 'Questo autore',
+    crossEyebrow: 'Già che è qui',
+    crossH2: 'Legga cosa hanno scritto gli altri.',
+    crossBody: 'Le scelte della redazione, le destinazioni e le storie della redazione di LaplandVibes.',
   },
   images: {
     heroSummerAlt: 'Casette di legno rosse e un pontile sulla riva boscosa di un lago, nella luce dorata della sera',
@@ -573,6 +590,7 @@ const it: SectionCopy = {
     agreeText: 'Iscrivendosi accetta la nostra',
     privacyLink: 'privacy policy',
     unsubscribeNote: 'Può annullare l’iscrizione quando vuole. Il Suo indirizzo non viene condiviso.',
+    errorGeneric: 'L’iscrizione non è andata a buon fine. Riprovi tra un momento.',
   },
   cookieBanner: {
     headline: 'Cookie',

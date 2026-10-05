@@ -65,6 +65,7 @@ const zhCN: SectionCopy = {
     agreeText: '订阅即表示您同意我们的',
     privacyLink: '隐私政策',
     unsubscribeNote: '可随时取消订阅。',
+    errorGeneric: '订阅未成功，请稍后再试。',
   },
   cookieBanner: {
     headline: '关于 Cookie 的简要说明',
@@ -539,6 +540,7 @@ const zhCN: SectionCopy = {
     emailPlaceholder: 'your@email.com',
     processing: '处理中…',
     submit: '取消订阅',
+    errorGeneric: '退订未成功，请稍后再试。',
   },
   notFound: {
     pageTitle: '未找到',
@@ -578,6 +580,22 @@ const zhCN: SectionCopy = {
     copyQuoteAria: '复制引文及链接',
     aboutAuthorAria: '关于作者',
     aboutBlogLink: '关于 Lapland.blog →',
+    editorialBio: '来自芬兰拉普兰的田野笔记：天气、小木屋、光线，以及其间漫长的宁静。',
+  },
+  authorPage: {
+    seoTitleFallback: '作者',
+    seoDescription: '{name}在 Lapland.blog 上的芬兰拉普兰旅行博客。',
+    seoDescriptionBio: '{name}在 Lapland.blog 上的旅行博客。{bio}',
+    homeLabel: '首页',
+    writingSince: '自{date}起写作',
+    entriesNone: '暂无已发布的文章。',
+    entriesOne: '1 篇文章',
+    entriesMany: '{n} 篇文章',
+    emptyBody: '{name}还没有发布任何文章。草稿大概还在某个没有 Wi-Fi 的林间小屋里。',
+    emptyNameFallback: '这位作者',
+    crossEyebrow: '既然来了',
+    crossH2: '看看其他人写了什么。',
+    crossBody: '编辑精选、目的地，以及 LaplandVibes 编辑部的文章。',
   },
   images: {
     heroSummerAlt: '森林环绕的湖畔，红色木屋和栈桥沐浴在金色的傍晚阳光中',

@@ -65,6 +65,7 @@ const en: SectionCopy = {
     agreeText: 'By subscribing you agree to our',
     privacyLink: 'Privacy Policy',
     unsubscribeNote: 'Unsubscribe anytime.',
+    errorGeneric: 'The subscription did not go through. Please try again in a moment.',
   },
   cookieBanner: {
     headline: 'A short note on cookies',
@@ -253,7 +254,7 @@ const en: SectionCopy = {
     backToAll: 'All destinations',
     networkEyebrow: 'Elsewhere in the network',
     networkH2: 'More about this destination',
-    networkLead: 'The same place, in more depth: where to stay, where to eat and what to do — each on its own site.',
+    networkLead: 'The same place, in more depth: where to stay, where to eat and what to do, each on its own site.',
     siteLabels: {
       vibes: 'Destination guide',
       stays: 'Where to stay',
@@ -539,6 +540,7 @@ const en: SectionCopy = {
     emailPlaceholder: 'your@email.com',
     processing: 'Processing…',
     submit: 'Unsubscribe',
+    errorGeneric: 'Unsubscribing did not go through. Please try again in a moment.',
   },
   notFound: {
     pageTitle: 'Not found',
@@ -578,6 +580,22 @@ const en: SectionCopy = {
     copyQuoteAria: 'Copy quote with link',
     aboutAuthorAria: 'About the author',
     aboutBlogLink: 'About Lapland.blog →',
+    editorialBio: 'Field notes from Finnish Lapland: weather, cabins, light, and the long quiet between.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Author',
+    seoDescription: '{name} on Lapland.blog. Trip-blog entries from Finnish Lapland.',
+    seoDescriptionBio: '{name} on Lapland.blog. {bio}',
+    homeLabel: 'Home',
+    writingSince: 'Writing since {date}',
+    entriesNone: 'No published entries yet.',
+    entriesOne: '1 entry',
+    entriesMany: '{n} entries',
+    emptyBody: "{name} hasn't published an entry yet. The drafts are probably in a forest cabin somewhere with no wifi.",
+    emptyNameFallback: 'This author',
+    crossEyebrow: "While you're here",
+    crossH2: 'Read what others wrote.',
+    crossBody: "The editor's picks, the destinations and the stories from the LaplandVibes editorial desk.",
   },
   images: {
     heroSummerAlt: 'Red wooden cabins and a jetty on a wooded lakeshore in golden evening light',

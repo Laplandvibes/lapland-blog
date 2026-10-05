@@ -176,9 +176,8 @@ export default function Newsletter() {
     } catch (err) {
       console.error('Newsletter signup error:', err);
       setStatus('error');
-      setErrorMessage(
-        err instanceof Error ? err.message : 'Failed to subscribe. Please try again.'
-      );
+      // The server and network messages are English and technical: the reader gets one in their language.
+      setErrorMessage(c.errorGeneric);
       track('nl_error', funnelData);
     }
   };

@@ -65,6 +65,7 @@ const ja: SectionCopy = {
     agreeText: '購読することで以下に同意したものとみなされます：',
     privacyLink: 'プライバシーポリシー',
     unsubscribeNote: 'いつでも解除可能です。',
+    errorGeneric: '登録できませんでした。しばらくしてからもう一度お試しください。',
   },
   cookieBanner: {
     headline: 'クッキーについて',
@@ -539,6 +540,7 @@ const ja: SectionCopy = {
     emailPlaceholder: 'your@email.com',
     processing: '処理中…',
     submit: '配信解除',
+    errorGeneric: '登録を解除できませんでした。しばらくしてからもう一度お試しください。',
   },
   notFound: {
     pageTitle: 'ページが見つかりません',
@@ -578,6 +580,22 @@ const ja: SectionCopy = {
     copyQuoteAria: '引用をリンク付きでコピー',
     aboutAuthorAria: '著者について',
     aboutBlogLink: 'Lapland.blogについて →',
+    editorialBio: 'フィンランド・ラップランドからのフィールドノート。天気、小屋、光、そしてその間に流れる長い静けさ。',
+  },
+  authorPage: {
+    seoTitleFallback: '著者',
+    seoDescription: 'Lapland.blogの{name}。フィンランド・ラップランドの旅行ブログ。',
+    seoDescriptionBio: 'Lapland.blogの{name}。{bio}',
+    homeLabel: 'ホーム',
+    writingSince: '{date}から執筆',
+    entriesNone: 'まだ公開された記事はありません。',
+    entriesOne: '記事 1件',
+    entriesMany: '記事 {n}件',
+    emptyBody: '{name}の記事はまだ公開されていません。下書きはきっと、Wi-Fiのない森の小屋のどこかにあるのでしょう。',
+    emptyNameFallback: 'この著者',
+    crossEyebrow: 'せっかくなので',
+    crossH2: 'ほかの人が書いた記事を読む。',
+    crossBody: '編集部のおすすめ、目的地、そしてLaplandVibes編集部の記事。',
   },
   images: {
     heroSummerAlt: '夕方の金色の光に包まれた、森に囲まれた湖畔の赤い木造コテージと桟橋',

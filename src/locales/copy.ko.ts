@@ -489,6 +489,7 @@ const ko: SectionCopy = {
     emailPlaceholder: 'your@email.com',
     processing: '처리 중…',
     submit: '구독 해지',
+    errorGeneric: '구독 취소가 완료되지 않았습니다. 잠시 후 다시 시도해 주세요.',
   },
   notFound: {
     pageTitle: '페이지를 찾을 수 없음',
@@ -528,6 +529,22 @@ const ko: SectionCopy = {
     copyQuoteAria: '인용문과 링크 복사',
     aboutAuthorAria: '작성자 소개',
     aboutBlogLink: 'Lapland.blog 소개 →',
+    editorialBio: '핀란드 라플란드에서 쓴 현장 기록. 날씨, 오두막, 빛, 그리고 그 사이의 긴 고요.',
+  },
+  authorPage: {
+    seoTitleFallback: '작성자',
+    seoDescription: 'Lapland.blog의 {name}. 핀란드 라플란드 여행 블로그.',
+    seoDescriptionBio: 'Lapland.blog의 {name}. {bio}',
+    homeLabel: '홈',
+    writingSince: '{date}부터 작성',
+    entriesNone: '아직 게시된 글이 없습니다.',
+    entriesOne: '글 1편',
+    entriesMany: '글 {n}편',
+    emptyBody: '아직 {name}의 글이 게시되지 않았습니다. 초안은 아마 와이파이가 없는 숲속 오두막 어딘가에 있을 겁니다.',
+    emptyNameFallback: '이 작성자',
+    crossEyebrow: '여기까지 오셨다면',
+    crossH2: '다른 사람들이 쓴 글을 읽어 보세요.',
+    crossBody: '편집부 추천 글, 여행지, 그리고 LaplandVibes 편집부의 이야기.',
   },
   images: {
     heroSummerAlt: '황금빛 저녁 햇살 속, 숲이 우거진 호숫가의 빨간 목조 오두막과 선착장',
@@ -573,6 +590,7 @@ const ko: SectionCopy = {
     agreeText: '구독함으로써 다음에 동의하신 것으로 간주됩니다',
     privacyLink: '개인정보처리방침',
     unsubscribeNote: '언제든지 구독을 해지하실 수 있습니다. 이메일은 외부에 공유되지 않습니다.',
+    errorGeneric: '구독이 완료되지 않았습니다. 잠시 후 다시 시도해 주세요.',
   },
   cookieBanner: {
     headline: '쿠키 사용 안내',

@@ -65,6 +65,7 @@ const es: SectionCopy = {
     agreeText: 'Al suscribirse, acepta nuestra',
     privacyLink: 'Política de privacidad',
     unsubscribeNote: 'Cancele la suscripción cuando quiera.',
+    errorGeneric: 'La suscripción no se completó. Inténtelo de nuevo en un momento.',
   },
   cookieBanner: {
     headline: 'Una nota corta sobre las cookies',
@@ -539,6 +540,7 @@ const es: SectionCopy = {
     emailPlaceholder: 'su@correo.com',
     processing: 'Procesando…',
     submit: 'Cancelar suscripción',
+    errorGeneric: 'No se pudo cancelar la suscripción. Inténtelo de nuevo en un momento.',
   },
   notFound: {
     pageTitle: 'No encontrado',
@@ -578,6 +580,22 @@ const es: SectionCopy = {
     copyQuoteAria: 'Copiar la cita con el enlace',
     aboutAuthorAria: 'Sobre el autor',
     aboutBlogLink: 'Sobre Lapland.blog →',
+    editorialBio: 'Notas de campo desde la Laponia finlandesa: el clima, las cabañas, la luz y el largo silencio entre todo ello.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Autor',
+    seoDescription: '{name} en Lapland.blog. Entradas de un blog de viaje por la Laponia finlandesa.',
+    seoDescriptionBio: '{name} en Lapland.blog. {bio}',
+    homeLabel: 'Inicio',
+    writingSince: 'Escribe desde {date}',
+    entriesNone: 'Todavía no hay entradas publicadas.',
+    entriesOne: '1 entrada',
+    entriesMany: '{n} entradas',
+    emptyBody: '{name} todavía no ha publicado ninguna entrada. Los borradores seguramente están en alguna cabaña del bosque sin wifi.',
+    emptyNameFallback: 'Este autor',
+    crossEyebrow: 'Ya que está aquí',
+    crossH2: 'Lea lo que otros han escrito.',
+    crossBody: 'La selección de la redacción, los destinos y las historias de la redacción de LaplandVibes.',
   },
   images: {
     heroSummerAlt: 'Cabañas de madera rojas y un muelle en la orilla boscosa de un lago, con la luz dorada del atardecer',

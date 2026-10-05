@@ -66,6 +66,7 @@ const de: SectionCopy = {
     agreeText: 'Mit dem Abonnement akzeptieren Sie unsere',
     privacyLink: 'Datenschutzerklärung',
     unsubscribeNote: 'Jederzeit abbestellbar.',
+    errorGeneric: 'Die Anmeldung hat nicht geklappt. Bitte versuchen Sie es gleich noch einmal.',
   },
   cookieBanner: {
     headline: 'Kurze Notiz zu Cookies',
@@ -254,7 +255,7 @@ const de: SectionCopy = {
     backToAll: 'Alle Reiseziele',
     networkEyebrow: 'Anderswo im Netzwerk',
     networkH2: 'Mehr über dieses Reiseziel',
-    networkLead: 'Derselbe Ort, ausführlicher: Unterkunft, Essen und Aktivitäten — jeweils auf einer eigenen Seite.',
+    networkLead: 'Derselbe Ort, ausführlicher: Unterkunft, Essen und Aktivitäten, jeweils auf einer eigenen Seite.',
     siteLabels: {
       vibes: 'Reiseziel-Guide',
       stays: 'Unterkünfte',
@@ -541,6 +542,7 @@ const de: SectionCopy = {
     emailPlaceholder: 'ihre@email.de',
     processing: 'Wird verarbeitet…',
     submit: 'Abbestellen',
+    errorGeneric: 'Die Abmeldung hat nicht geklappt. Bitte versuchen Sie es gleich noch einmal.',
   },
   notFound: {
     pageTitle: 'Nicht gefunden',
@@ -580,6 +582,22 @@ const de: SectionCopy = {
     copyQuoteAria: 'Zitat mit Link kopieren',
     aboutAuthorAria: 'Über den Autor',
     aboutBlogLink: 'Über Lapland.blog →',
+    editorialBio: 'Notizen aus Finnisch-Lappland: Wetter, Hütten, Licht und die lange Stille dazwischen.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Autor',
+    seoDescription: '{name} auf Lapland.blog. Reiseblog-Einträge aus Finnisch-Lappland.',
+    seoDescriptionBio: '{name} auf Lapland.blog. {bio}',
+    homeLabel: 'Startseite',
+    writingSince: 'Schreibt seit {date}',
+    entriesNone: 'Noch keine veröffentlichten Einträge.',
+    entriesOne: '1 Eintrag',
+    entriesMany: '{n} Einträge',
+    emptyBody: '{name} hat noch keinen Eintrag veröffentlicht. Die Entwürfe liegen wohl in einer Waldhütte ohne WLAN.',
+    emptyNameFallback: 'Dieser Autor',
+    crossEyebrow: 'Wenn Sie schon hier sind',
+    crossH2: 'Lesen Sie, was andere geschrieben haben.',
+    crossBody: 'Die Auswahl der Redaktion, die Reiseziele und die Geschichten der LaplandVibes-Redaktion.',
   },
   images: {
     heroSummerAlt: 'Rote Holzhütten und ein Steg an einem bewaldeten Seeufer im goldenen Abendlicht',

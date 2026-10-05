@@ -70,7 +70,7 @@ export default function AuthorBio({ variant = 'editorial', author }: Props) {
                 : 'text-slate-300 leading-relaxed text-[0.95rem] mb-4'
             }
           >
-            {voice.bio}
+            {voice.id === vesa.id ? c.editorialBio : voice.bio}
           </p>
           <Link
             to={lp('/about')}

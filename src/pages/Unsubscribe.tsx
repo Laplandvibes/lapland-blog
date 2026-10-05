@@ -74,9 +74,8 @@ export default function Unsubscribe() {
     } catch (err) {
       console.error('Unsubscribe error:', err);
       setStatus('error');
-      setErrorMessage(
-        err instanceof Error ? err.message : 'Something went wrong. Please try again.'
-      );
+      // The server and network messages are English and technical: the reader gets one in their language.
+      setErrorMessage(c.errorGeneric);
       track('unsub_error', funnelData);
     }
   };

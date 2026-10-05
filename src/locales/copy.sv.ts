@@ -65,6 +65,7 @@ const sv: SectionCopy = {
     agreeText: 'Genom att prenumerera godkänner du vår',
     privacyLink: 'integritetspolicy',
     unsubscribeNote: 'Avsluta när du vill.',
+    errorGeneric: 'Prenumerationen gick inte igenom. Försök igen om en stund.',
   },
   cookieBanner: {
     headline: 'En kort not om cookies',
@@ -253,7 +254,7 @@ const sv: SectionCopy = {
     backToAll: 'Alla destinationer',
     networkEyebrow: 'På andra sajter i nätverket',
     networkH2: 'Läs mer om den här destinationen',
-    networkLead: 'Samma plats, mer på djupet: var du bor, var du äter och vad du gör — var sak på sin egen sajt.',
+    networkLead: 'Samma plats, mer på djupet: var du bor, var du äter och vad du gör, var sak på sin egen sajt.',
     siteLabels: {
       vibes: 'Destinationsguide',
       stays: 'Boende',
@@ -539,6 +540,7 @@ const sv: SectionCopy = {
     emailPlaceholder: 'din@epost.se',
     processing: 'Bearbetar…',
     submit: 'Avsluta prenumeration',
+    errorGeneric: 'Det gick inte att avsluta prenumerationen. Försök igen om en stund.',
   },
   notFound: {
     pageTitle: 'Hittades inte',
@@ -578,6 +580,22 @@ const sv: SectionCopy = {
     copyQuoteAria: 'Kopiera citatet med länk',
     aboutAuthorAria: 'Om skribenten',
     aboutBlogLink: 'Om Lapland.blog →',
+    editorialBio: 'Anteckningar från finska Lappland: väder, stugor, ljus och den långa tystnaden emellan.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Skribent',
+    seoDescription: '{name} på Lapland.blog. Resebloggsinlägg från finska Lappland.',
+    seoDescriptionBio: '{name} på Lapland.blog. {bio}',
+    homeLabel: 'Startsida',
+    writingSince: 'Skriver sedan {date}',
+    entriesNone: 'Inga publicerade inlägg ännu.',
+    entriesOne: '1 inlägg',
+    entriesMany: '{n} inlägg',
+    emptyBody: '{name} har inte publicerat något inlägg ännu. Utkasten ligger nog i en skogsstuga någonstans utan wifi.',
+    emptyNameFallback: 'Den här skribenten',
+    crossEyebrow: 'När du ändå är här',
+    crossH2: 'Läs vad andra har skrivit.',
+    crossBody: 'Redaktionens val, resmålen och berättelserna från LaplandVibes redaktion.',
   },
   images: {
     heroSummerAlt: 'Röda trästugor och en brygga vid en skogsklädd sjöstrand i gyllene kvällsljus',

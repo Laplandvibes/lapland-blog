@@ -65,6 +65,7 @@ const fi: SectionCopy = {
     agreeText: 'Tilaamalla hyväksyt',
     privacyLink: 'tietosuojakäytäntömme',
     unsubscribeNote: 'Voit perua tilauksen milloin tahansa.',
+    errorGeneric: 'Tilaus ei onnistunut. Yritä hetken päästä uudelleen.',
   },
   cookieBanner: {
     headline: 'Lyhyt huomautus evästeistä',
@@ -253,7 +254,7 @@ const fi: SectionCopy = {
     backToAll: 'Kaikki kohteet',
     networkEyebrow: 'Muualla verkostossa',
     networkH2: 'Lue lisää tästä kohteesta',
-    networkLead: 'Sama paikka syvemmin: missä yöpyä, missä syödä ja mitä tehdä — kukin omalla sivustollaan.',
+    networkLead: 'Sama paikka syvemmin: missä yöpyä, missä syödä ja mitä tehdä, kukin omalla sivustollaan.',
     siteLabels: {
       vibes: 'Kohdeopas',
       stays: 'Majoitus',
@@ -540,6 +541,7 @@ const fi: SectionCopy = {
     emailPlaceholder: 'sahkoposti@esimerkki.fi',
     processing: 'Käsitellään…',
     submit: 'Peru tilaus',
+    errorGeneric: 'Tilauksen peruminen ei onnistunut. Yritä hetken päästä uudelleen.',
   },
   notFound: {
     pageTitle: 'Ei löytynyt',
@@ -579,6 +581,22 @@ const fi: SectionCopy = {
     copyQuoteAria: 'Kopioi lainaus ja linkki',
     aboutAuthorAria: 'Tietoa kirjoittajasta',
     aboutBlogLink: 'Tietoa Lapland.blogista →',
+    editorialBio: 'Muistiinpanoja Suomen Lapista: sää, mökit, valo ja pitkä hiljaisuus niiden välissä.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Kirjoittaja',
+    seoDescription: '{name} Lapland.blogissa. Matkablogin merkintöjä Suomen Lapista.',
+    seoDescriptionBio: '{name} Lapland.blogissa. {bio}',
+    homeLabel: 'Etusivu',
+    writingSince: 'Blogi aloitettu: {date}',
+    entriesNone: 'Ei vielä julkaistuja merkintöjä.',
+    entriesOne: '1 merkintä',
+    entriesMany: '{n} merkintää',
+    emptyBody: '{name} ei ole vielä julkaissut yhtään merkintää. Luonnokset ovat luultavasti jossain metsämökissä ilman nettiä.',
+    emptyNameFallback: 'Tämä kirjoittaja',
+    crossEyebrow: 'Kun olet täällä',
+    crossH2: 'Lue, mitä muut ovat kirjoittaneet.',
+    crossBody: 'Toimituksen valinnat, kohteet ja LaplandVibesin toimituksen jutut.',
   },
   images: {
     heroSummerAlt: 'Punaisia puumökkejä ja laituri metsäisellä järvenrannalla kultaisessa iltavalossa',

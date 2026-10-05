@@ -203,7 +203,7 @@ const nl: SectionCopy = {
     backToAll: 'Alle bestemmingen',
     networkEyebrow: 'Elders in het netwerk',
     networkH2: 'Meer over deze bestemming',
-    networkLead: 'Dezelfde plek, uitgebreider: waar je slaapt, waar je eet en wat je doet — elk op een eigen site.',
+    networkLead: 'Dezelfde plek, uitgebreider: waar je slaapt, waar je eet en wat je doet, elk op een eigen site.',
     siteLabels: {
       vibes: 'Bestemmingsgids',
       stays: 'Overnachten',
@@ -489,6 +489,7 @@ const nl: SectionCopy = {
     emailPlaceholder: 'uw@email.com',
     processing: 'Bezig…',
     submit: 'Uitschrijven',
+    errorGeneric: 'Het afmelden is niet gelukt. Probeer het zo meteen opnieuw.',
   },
   notFound: {
     pageTitle: 'Niet gevonden',
@@ -528,6 +529,22 @@ const nl: SectionCopy = {
     copyQuoteAria: 'Citaat met link kopiëren',
     aboutAuthorAria: 'Over de auteur',
     aboutBlogLink: 'Over Lapland.blog →',
+    editorialBio: 'Notities uit Fins Lapland: het weer, de hutten, het licht en de lange stilte daartussen.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Auteur',
+    seoDescription: '{name} op Lapland.blog. Reisblognotities uit Fins Lapland.',
+    seoDescriptionBio: '{name} op Lapland.blog. {bio}',
+    homeLabel: 'Home',
+    writingSince: 'Schrijft sinds {date}',
+    entriesNone: 'Nog geen gepubliceerde notities.',
+    entriesOne: '1 notitie',
+    entriesMany: '{n} notities',
+    emptyBody: '{name} heeft nog geen notitie gepubliceerd. De concepten liggen vast ergens in een boshut zonder wifi.',
+    emptyNameFallback: 'Deze auteur',
+    crossEyebrow: 'Nu u hier toch bent',
+    crossH2: 'Lees wat anderen hebben geschreven.',
+    crossBody: 'De keuze van de redactie, de bestemmingen en de verhalen van de LaplandVibes-redactie.',
   },
   images: {
     heroSummerAlt: 'Rode houten huisjes en een steiger aan een beboste meeroever in goudkleurig avondlicht',
@@ -573,6 +590,7 @@ const nl: SectionCopy = {
     agreeText: 'Door u te abonneren gaat u akkoord met ons',
     privacyLink: 'privacybeleid',
     unsubscribeNote: 'Op elk moment uit te schrijven.',
+    errorGeneric: 'De aanmelding is niet gelukt. Probeer het zo meteen opnieuw.',
   },
   cookieBanner: {
     headline: 'Cookies',

@@ -203,7 +203,7 @@ const fr: SectionCopy = {
     backToAll: 'Toutes les destinations',
     networkEyebrow: 'Ailleurs dans le réseau',
     networkH2: 'En savoir plus sur cette destination',
-    networkLead: 'Le même endroit, plus en détail : où dormir, où manger et quoi faire — chacun sur son propre site.',
+    networkLead: 'Le même endroit, plus en détail : où dormir, où manger et quoi faire, chacun sur son propre site.',
     siteLabels: {
       vibes: 'Guide de destination',
       stays: 'Hébergement',
@@ -489,6 +489,7 @@ const fr: SectionCopy = {
     emailPlaceholder: 'votre@email.com',
     processing: 'Traitement…',
     submit: 'Se désabonner',
+    errorGeneric: 'La désinscription n’a pas abouti. Veuillez réessayer dans un instant.',
   },
   notFound: {
     pageTitle: 'Introuvable',
@@ -528,6 +529,22 @@ const fr: SectionCopy = {
     copyQuoteAria: 'Copier la citation avec le lien',
     aboutAuthorAria: 'À propos de l’auteur',
     aboutBlogLink: 'À propos de Lapland.blog →',
+    editorialBio: 'Notes de terrain de Laponie finlandaise : la météo, les chalets, la lumière et le long silence qui les sépare.',
+  },
+  authorPage: {
+    seoTitleFallback: 'Auteur',
+    seoDescription: '{name} sur Lapland.blog. Des entrées de carnet de voyage en Laponie finlandaise.',
+    seoDescriptionBio: '{name} sur Lapland.blog. {bio}',
+    homeLabel: 'Accueil',
+    writingSince: 'Écrit depuis {date}',
+    entriesNone: 'Aucune entrée publiée pour l’instant.',
+    entriesOne: '1 entrée',
+    entriesMany: '{n} entrées',
+    emptyBody: '{name} n’a encore publié aucune entrée. Les brouillons dorment sans doute dans une cabane en forêt, sans wifi.',
+    emptyNameFallback: 'Cet auteur',
+    crossEyebrow: 'Pendant que vous êtes là',
+    crossH2: 'Lisez ce que d’autres ont écrit.',
+    crossBody: 'Les choix de la rédaction, les destinations et les récits de la rédaction de LaplandVibes.',
   },
   images: {
     heroSummerAlt: 'Chalets en bois rouges et ponton sur une rive boisée de lac, dans la lumière dorée du soir',
@@ -573,6 +590,7 @@ const fr: SectionCopy = {
     agreeText: 'En vous abonnant, vous acceptez notre',
     privacyLink: 'politique de confidentialité',
     unsubscribeNote: "Désabonnement possible à tout moment. Votre adresse n'est jamais partagée.",
+    errorGeneric: 'L’inscription n’a pas abouti. Veuillez réessayer dans un instant.',
   },
   cookieBanner: {
     headline: 'Cookies',

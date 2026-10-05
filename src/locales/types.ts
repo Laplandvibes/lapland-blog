@@ -54,6 +54,8 @@ export type SectionCopy = {
     agreeText: string;
     privacyLink: string;
     unsubscribeNote: string;
+    /** Shown for any failed signup; the server and network errors are English and technical. */
+    errorGeneric: string;
   };
   cookieBanner: {
     headline: string;
@@ -374,6 +376,7 @@ export type SectionCopy = {
     emailPlaceholder: string;
     processing: string;
     submit: string;
+    errorGeneric: string;
   };
   notFound: {
     pageTitle: string;
@@ -413,6 +416,8 @@ export type SectionCopy = {
     /** Author card at the end of a post. */
     aboutAuthorAria: string;
     aboutBlogLink: string;
+    /** Short bio of the editorial voice (author.ts holds the English original). */
+    editorialBio: string;
   };
   /** Descriptions of the site photos (hero, cards), checked against the images. */
   images: {
@@ -424,5 +429,21 @@ export type SectionCopy = {
     benchAlt: string;
     cabinSmokeAlt: string;
     mugHandsAlt: string;
+  };
+  /** /by/:handle reader profile page. {name}, {bio}, {date}, {n} are filled with fillCopy. */
+  authorPage: {
+    seoTitleFallback: string;
+    seoDescription: string;
+    seoDescriptionBio: string;
+    homeLabel: string;
+    writingSince: string;
+    entriesNone: string;
+    entriesOne: string;
+    entriesMany: string;
+    emptyBody: string;
+    emptyNameFallback: string;
+    crossEyebrow: string;
+    crossH2: string;
+    crossBody: string;
   };
 };
