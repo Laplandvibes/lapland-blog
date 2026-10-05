@@ -11,7 +11,7 @@ import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import { usePosts } from '../hooks/usePosts';
-import { DESTINATIONS, stayUrl, type Destination } from '../data/destinations';
+import { DESTINATIONS, placeName, stayUrl, type Destination } from '../data/destinations';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import type { Post } from '../data/posts';
@@ -165,7 +165,7 @@ function DestinationCard({
       <div className="aspect-[3/2] overflow-hidden relative">
         <img
           src={d.hero}
-          alt={fillCopy(c.placeImageAlt, { place: d.name })}
+          alt={fillCopy(c.placeImageAlt, { place: placeName(d, lang) })}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
           decoding="async"
@@ -194,7 +194,7 @@ function DestinationCard({
           className="text-2xl text-[var(--color-ink)] mb-2 leading-tight"
           style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
         >
-          {d.name}
+          {placeName(d, lang)}
         </h3>
         <p className="text-[var(--color-ink-soft)] text-sm leading-relaxed mb-5">
           {c.places[d.slug as keyof DestCopy['places']]?.blurb ?? d.blurb}
@@ -227,7 +227,7 @@ function DestinationCard({
             className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
           >
             <BedDouble size={11} />
-            {c.findStayPrefix} {d.name}
+            {c.findStayPrefix} {placeName(d, lang)}
             <ArrowRight size={11} />
           </a>
         </div>

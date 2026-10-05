@@ -11,7 +11,7 @@ import { categories } from '../data/categories';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { usePosts } from '../hooks/usePosts';
-import { DESTINATIONS } from '../data/destinations';
+import { DESTINATIONS, placeName } from '../data/destinations';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
@@ -205,7 +205,7 @@ export default function Archive() {
                         : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
                     }`}
                   >
-                    {d.name}
+                    {placeName(d, lang)}
                   </button>
                 ))}
               </div>

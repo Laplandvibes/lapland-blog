@@ -22,7 +22,7 @@ import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
 import PostCard from '../components/PostCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
-import { destinationBySlug, stayUrl } from '../data/destinations';
+import { destinationBySlug, placeName, stayUrl } from '../data/destinations';
 import { networkLinksFor } from '../data/destinationLinks';
 import { usePosts } from '../hooks/usePosts';
 import { useSeo, canonicalUrl } from '../lib/seo';
@@ -54,7 +54,7 @@ export default function Destination() {
   const liitos = /^(ja|zh)/.test(lang) && /[。！？]$/.test(kuvaus) ? '' : ' ';
 
   useSeo({
-    title: d ? `${d.name}` : 'Lapland.blog',
+    title: d ? placeName(d, lang) : 'Lapland.blog',
     description: d ? `${kuvaus}${liitos}${c.metaSuffix}` : '',
     image: 'https://lapland.blog/og/page-destinations.jpg',
     canonical: canonicalUrl(d ? `/destinations/${d.slug}` : '/destinations'),
@@ -66,7 +66,7 @@ export default function Destination() {
       ? breadcrumbSchema([
           { name: 'Home', url: canonicalUrl('/') },
           { name: 'Destinations', url: canonicalUrl('/destinations') },
-          { name: d.name, url: canonicalUrl(`/destinations/${d.slug}`) },
+          { name: placeName(d, lang), url: canonicalUrl(`/destinations/${d.slug}`) },
         ])
       : null
   );
@@ -82,7 +82,7 @@ export default function Destination() {
         <div className="relative h-[42vh] min-h-[280px] md:h-[52vh] overflow-hidden">
           <img
             src={d.hero}
-            alt={fillCopy(COPY[lang].destinations.placeImageAlt, { place: d.name })}
+            alt={fillCopy(COPY[lang].destinations.placeImageAlt, { place: placeName(d, lang) })}
             className="w-full h-full object-cover"
             fetchPriority="high"
             decoding="async"
@@ -108,7 +108,7 @@ export default function Destination() {
               className="text-[var(--color-ink)] text-4xl sm:text-5xl md:text-6xl leading-[1.05] mb-4"
               style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
             >
-              {d.name}
+              {placeName(d, lang)}
             </h1>
             <p className="text-[var(--color-ink-soft)] text-lg md:text-xl leading-relaxed">{kuvaus}</p>
           </div>
@@ -246,7 +246,7 @@ export default function Destination() {
                     {c.stayH3}
                   </span>
                   <span className="block text-[var(--color-ink-mute)] text-xs mt-0.5">
-                    {d.name} · {c.stayNote}
+                    {placeName(d, lang)} · {c.stayNote}
                   </span>
                 </span>
               </span>
