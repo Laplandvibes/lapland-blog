@@ -42,8 +42,8 @@ export default function Archive() {
   }, [tagParam, placeParam]);
 
   useSeo({
-    title: c.pageTitle,
-    description: c.pageDescription,
+    title: c.metaTitle,
+    description: c.metaDescription,
     image: 'https://lapland.blog/og/page-stories.jpg',
     canonical: canonicalUrl('/stories'),
   });

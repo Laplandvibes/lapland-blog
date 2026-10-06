@@ -74,6 +74,9 @@ const en: SectionCopy = {
     decline: 'Decline',
   },
   home: {
+    metaTitle: 'Lapland.blog · Start & Share Your Lapland Travel Blog',
+    metaDescription:
+      'Pin where you saw the aurora. Photograph the cabin. Write what the temperature did. Build a beautiful blog of your trip, one your friends can actually follow.',
     heroEyebrow: 'Travel journal · Map · Share',
     heroLine1: 'Going to Lapland?',
     heroLine2: 'Start a blog of your trip.',
@@ -214,8 +217,8 @@ const en: SectionCopy = {
     pathsSrLabel: 'Paths',
   },
   about: {
-    pageTitle: 'About',
-    pageDescription:
+    metaTitle: 'About',
+    metaDescription:
       'Lapland.blog is a free travel-journal platform for visitors to Finnish Lapland. Pin places, write entries, share to friends. Your trip, told well.',
     eyebrow: 'About the platform',
     h1: 'A travel journal worth keeping.',
@@ -275,9 +278,9 @@ const en: SectionCopy = {
     stayCta: 'Browse',
   },
   destinations: {
-    pageTitle: 'Destinations',
-    pageDescription:
-      'The eight main Finnish Lapland destinations: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Read the field-journal entries from each, or be the first to write one.',
+    metaTitle: 'Destinations',
+    metaDescription:
+      'The eight main Finnish Lapland destinations: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi.',
     eyebrow: 'Where to go',
     h1Pre: 'Eight places.',
     h1Italic: 'One Lapland.',
@@ -331,8 +334,8 @@ const en: SectionCopy = {
     placeImageAlt: '{place}, Finnish Lapland',
   },
   topReads: {
-    pageTitle: 'Top reads',
-    pageDescription:
+    metaTitle: 'Top reads',
+    metaDescription:
       'Where to start on Lapland.blog. Curated lists: best entries for first-timers, best aurora pieces, best food entries, the seasonal ones. Picked by the editor.',
     eyebrow: "Editor's picks",
     h1: 'Top reads.',
@@ -370,8 +373,8 @@ const en: SectionCopy = {
   archive: {
     placesLabel: 'Place',
     allPlaces: 'All places',
-    pageTitle: 'All stories',
-    pageDescription:
+    metaTitle: 'All stories',
+    metaDescription:
       'Every story on Lapland.blog. Aurora, cabins, food, seasons, people, gear and long-form reads from Finnish Lapland.',
     eyebrow: 'Archive',
     h1: 'Every story.',

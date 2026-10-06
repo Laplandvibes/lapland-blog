@@ -23,6 +23,9 @@ const it: SectionCopy = {
     accountMenuAria: 'Menu account',
   },
   home: {
+    metaTitle: 'Lapland.blog · Crei e condivida il Suo blog di viaggio',
+    metaDescription:
+      'Trasformi il Suo viaggio in Lapponia finlandese in un blog di viaggio: tenga un diario strada facendo e lo condivida sui social con un tocco.',
     heroEyebrow: 'Diario di viaggio · Mappa · Condivisione',
     heroLine1: 'Parte per la Lapponia?',
     heroLine2: 'Avvii un blog del Suo viaggio.',
@@ -163,8 +166,8 @@ const it: SectionCopy = {
     pathsSrLabel: 'Percorsi',
   },
   about: {
-    pageTitle: 'Chi siamo',
-    pageDescription:
+    metaTitle: 'Chi siamo',
+    metaDescription:
       'Lapland.blog è una piattaforma gratuita di diario di viaggio per chi visita la Lapponia finlandese. Segni luoghi, scriva voci, condivida con gli amici.',
     eyebrow: 'La piattaforma',
     h1: 'Un diario di viaggio che vale la pena conservare.',
@@ -224,8 +227,8 @@ const it: SectionCopy = {
     stayCta: 'Sfoglia',
   },
   destinations: {
-    pageTitle: 'Destinazioni',
-    pageDescription:
+    metaTitle: 'Destinazioni',
+    metaDescription:
       'Le otto principali destinazioni della Lapponia finlandese: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Legga le voci di ciascuna.',
     eyebrow: 'Dove andare',
     h1Pre: 'Otto luoghi.',
@@ -280,9 +283,9 @@ const it: SectionCopy = {
     placeImageAlt: '{place}, Lapponia finlandese',
   },
   topReads: {
-    pageTitle: 'Letture top',
-    pageDescription:
-      'Da dove cominciare su Lapland.blog. Liste curate: migliori voci per chi arriva la prima volta, migliori pezzi sull’aurora, voci sul cibo, voci stagionali.',
+    metaTitle: 'I più letti',
+    metaDescription:
+      "Da dove cominciare su Lapland.blog. Liste curate: migliori voci per chi arriva la prima volta, migliori pezzi sull'aurora, voci sul cibo, voci stagionali.",
     eyebrow: 'Scelte della redazione',
     h1: 'Letture top.',
     lead: 'Da dove cominciare. Scelte dalla redazione, non dai clic. Man mano che escono nuove voci dal campo, queste liste si arricchiscono.',
@@ -319,8 +322,8 @@ const it: SectionCopy = {
   archive: {
     placesLabel: 'Luogo',
     allPlaces: 'Tutti i luoghi',
-    pageTitle: 'Tutte le voci',
-    pageDescription:
+    metaTitle: 'Tutte le voci',
+    metaDescription:
       'Tutti i racconti di Lapland.blog. Aurore, baite, cibo, stagioni, persone, attrezzatura e letture lunghe dalla Lapponia finlandese.',
     eyebrow: 'Archivio',
     h1: 'Tutte le voci.',

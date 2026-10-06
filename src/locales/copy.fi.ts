@@ -74,6 +74,9 @@ const fi: SectionCopy = {
     decline: 'Hylkää',
   },
   home: {
+    metaTitle: 'Lapland.blog · Aloita ja jaa Lapin-matkablogisi',
+    metaDescription:
+      'Tee Suomen Lapin matkastasi matkablogi, pidä päiväkirjaa matkan aikana ja jaa se someen yhdellä napautuksella. Ilmainen ja valmis parissa minuutissa.',
     heroEyebrow: 'Matkapäiväkirja · Kartta · Jaa',
     heroLine1: 'Lähdössä Lappiin?',
     heroLine2: 'Tee matkastasi blogi.',
@@ -214,8 +217,8 @@ const fi: SectionCopy = {
     pathsSrLabel: 'Polut',
   },
   about: {
-    pageTitle: 'Tietoa',
-    pageDescription:
+    metaTitle: 'Tietoa',
+    metaDescription:
       'Lapland.blog on ilmainen matkapäiväkirja Suomen Lappiin matkustaville. Merkitse paikat, kirjoita merkinnät, jaa kavereille. Matkasi, hyvin kerrottuna.',
     eyebrow: 'Tietoa alustasta',
     h1: 'Matkapäiväkirja, jota kannattaa säilyttää.',
@@ -275,9 +278,9 @@ const fi: SectionCopy = {
     stayCta: 'Selaa',
   },
   destinations: {
-    pageTitle: 'Kohteet',
-    pageDescription:
-      'Suomen Lapin kahdeksan pääkohdetta: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lue merkinnät kustakin.',
+    metaTitle: 'Kohteet',
+    metaDescription:
+      'Suomen Lapin kahdeksan pääkohdetta: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lue merkinnät kustakin tai kirjoita ensimmäinen.',
     eyebrow: 'Mihin mennä',
     h1Pre: 'Kahdeksan paikkaa.',
     h1Italic: 'Yksi Lappi.',
@@ -331,8 +334,8 @@ const fi: SectionCopy = {
     placeImageAlt: '{place}, Suomen Lappi',
   },
   topReads: {
-    pageTitle: 'Suosituimmat',
-    pageDescription:
+    metaTitle: 'Suosituimmat',
+    metaDescription:
       'Mistä aloittaa Lapland.blogissa. Käsin valitut listat: parhaat ensikertalaisille, parhaat revontulijutut, parhaat ruokamerkinnät, sesonkijutut.',
     eyebrow: 'Toimituksen valinnat',
     h1: 'Suosituimmat jutut.',
@@ -371,8 +374,8 @@ const fi: SectionCopy = {
   archive: {
     placesLabel: 'Paikka',
     allPlaces: 'Kaikki paikat',
-    pageTitle: 'Kaikki jutut',
-    pageDescription:
+    metaTitle: 'Kaikki jutut',
+    metaDescription:
       'Kaikki Lapland.blogin jutut. Revontulet, mökit, ruoka, vuodenajat, ihmiset, varustus ja pidemmät luettavat Suomen Lapista.',
     eyebrow: 'Arkisto',
     h1: 'Jokainen juttu.',

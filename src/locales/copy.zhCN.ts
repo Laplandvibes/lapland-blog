@@ -74,6 +74,9 @@ const zhCN: SectionCopy = {
     decline: '拒绝',
   },
   home: {
+    metaTitle: 'Lapland.blog · 创建并分享你的拉普兰旅行博客',
+    metaDescription:
+      '把你的芬兰拉普兰之旅变成旅行博客：边走边写日记，一键分享到社交媒体。免费，几分钟即可开始。如何在 lapland.blog 上开始一个旅行博客？',
     heroEyebrow: '旅行日记 · 地图 · 分享',
     heroLine1: '要去拉普兰？',
     heroLine2: '为您的旅行创建一个博客。',
@@ -214,8 +217,8 @@ const zhCN: SectionCopy = {
     pathsSrLabel: '入门方式',
   },
   about: {
-    pageTitle: '关于',
-    pageDescription:
+    metaTitle: '关于',
+    metaDescription:
       'Lapland.blog 是一个免费的旅行日志平台，为前往芬兰拉普兰的游客而设。标记地点、撰写文章、分享给朋友。您的旅程，讲得精彩。',
     eyebrow: '关于这个平台',
     h1: '一个值得留存的旅行日志。',
@@ -275,8 +278,8 @@ const zhCN: SectionCopy = {
     stayCta: '查看',
   },
   destinations: {
-    pageTitle: '目的地',
-    pageDescription:
+    metaTitle: '拉普兰目的地',
+    metaDescription:
       '芬兰拉普兰的八大目的地：罗瓦涅米、萨利色尔卡、莱维、凯米、伊纳里、穆奥尼奥、于拉斯、凯米耶尔维。阅读每个地方的田野日志文章，或成为第一个动笔的人。',
     eyebrow: '去哪儿',
     h1Pre: '八个地方。',
@@ -331,8 +334,8 @@ const zhCN: SectionCopy = {
     placeImageAlt: '{place}，芬兰拉普兰',
   },
   topReads: {
-    pageTitle: '热门阅读',
-    pageDescription:
+    metaTitle: '热门阅读',
+    metaDescription:
       '在 Lapland.blog 从何读起。精选清单：最适合初次到访者的文章、最佳极光篇、最佳美食篇，以及当季之选。由编辑挑选。',
     eyebrow: '编辑精选',
     h1: '热门阅读。',
@@ -370,9 +373,9 @@ const zhCN: SectionCopy = {
   archive: {
     placesLabel: '地点',
     allPlaces: '全部地点',
-    pageTitle: '全部文章',
-    pageDescription:
-      'Lapland.blog 的全部文章。极光、木屋、美食、季节、人物、装备，以及来自芬兰拉普兰的长篇阅读。',
+    metaTitle: '全部文章',
+    metaDescription:
+      'Lapland.blog 的全部文章。极光、木屋、美食、季节、人物、装备，以及来自芬兰拉普兰的长篇阅读。没有算法，没有筛选花招。',
     eyebrow: '存档',
     h1: '每一篇文章。',
     lead:
@@ -404,7 +407,7 @@ const zhCN: SectionCopy = {
           '极光下的夜晚，如实记录。天气、Kp 指数、等待、严寒，以及那些真正打动人的瞬间。',
         metaTitle: '芬兰拉普兰的极光记事',
         metaDescription:
-          '芬兰拉普兰的极光之夜，如实记录：天气、Kp 指数、等待、严寒，以及那些真正打动人的瞬间。',
+          '在芬兰拉普兰追极光的夜晚，如实记录：天气、Kp 指数、漫长的等待、刺骨的严寒，以及那些真正打动人的瞬间。',
       },
       cabins: {
         name: '木屋',
@@ -413,7 +416,7 @@ const zhCN: SectionCopy = {
           '木屋、玻璃冰屋、好用的桑拿和不好用的桑拿。远离城市过夜到底是什么感觉。',
         metaTitle: '芬兰拉普兰的木屋住宿',
         metaDescription:
-          '木屋、玻璃冰屋、好用的桑拿和不好用的桑拿。在芬兰拉普兰远离城市过夜到底是什么感觉。',
+          '木屋、玻璃冰屋、好用的桑拿和不好用的桑拿。在芬兰拉普兰远离城市过夜到底是什么感觉。四面墙、一个火炉、没有 Wi-Fi。',
       },
       food: {
         name: '美食',
@@ -449,7 +452,7 @@ const zhCN: SectionCopy = {
           '靴子、手套、分层穿搭、电池、相机选择。零下 25°C 下真正管用的，以及我扔掉的。',
         metaTitle: '在芬兰拉普兰管用的装备',
         metaDescription:
-          '靴子、手套、分层穿搭、电池和相机选择。零下 25°C 下真正管用的东西，以及我扔掉的东西。',
+          '芬兰拉普兰用得上的靴子、手套、分层穿搭、电池和相机选择。零下 25°C 下真正管用的东西，以及我扔掉的东西。',
       },
       stories: {
         name: '长文',
@@ -458,7 +461,7 @@ const zhCN: SectionCopy = {
           '更长的阅读。一次旅程、一个夜晚、一个奇怪的下午。当一篇文章想要超过 800 字时。',
         metaTitle: '来自芬兰拉普兰的长文',
         metaDescription:
-          '来自芬兰拉普兰的长篇阅读：一次旅程、一个夜晚、一个奇怪的下午。写给想超过 800 字的文章。',
+          '来自芬兰拉普兰的长篇阅读：一次旅程、一个夜晚、一个奇怪的下午。当一篇文章需要超过 800 字来讲完时，就放在这里。',
       },
     },
   },

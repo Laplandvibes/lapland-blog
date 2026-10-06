@@ -23,6 +23,9 @@ const nl: SectionCopy = {
     accountMenuAria: 'Accountmenu',
   },
   home: {
+    metaTitle: 'Lapland.blog · Start en deel uw Lapland-reisblog',
+    metaDescription:
+      'Maak van uw reis door Fins Lapland een reisblog: houd onderweg een dagboek bij en deel het met één tik op social media. Gratis en in enkele minuten klaar.',
     heroEyebrow: 'Reisdagboek · Kaart · Delen',
     heroLine1: 'Gaat u naar Lapland?',
     heroLine2: 'Start een blog van uw reis.',
@@ -163,8 +166,8 @@ const nl: SectionCopy = {
     pathsSrLabel: 'Ingangen',
   },
   about: {
-    pageTitle: 'Over ons',
-    pageDescription:
+    metaTitle: 'Over ons',
+    metaDescription:
       'Lapland.blog is een gratis reisdagboekplatform voor bezoekers van Fins Lapland. Prik plekken vast, schrijf notities, deel met vrienden. Uw reis, goed verteld.',
     eyebrow: 'Over het platform',
     h1: 'Een reisdagboek dat u wilt bewaren.',
@@ -224,8 +227,8 @@ const nl: SectionCopy = {
     stayCta: 'Bekijken',
   },
   destinations: {
-    pageTitle: 'Bestemmingen',
-    pageDescription:
+    metaTitle: 'Bestemmingen',
+    metaDescription:
       'De acht belangrijkste bestemmingen in Fins Lapland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lees de veldnotities van elk.',
     eyebrow: 'Waar naartoe',
     h1Pre: 'Acht plaatsen.',
@@ -280,8 +283,8 @@ const nl: SectionCopy = {
     placeImageAlt: '{place}, Fins Lapland',
   },
   topReads: {
-    pageTitle: 'Topartikelen',
-    pageDescription:
+    metaTitle: 'Topartikelen',
+    metaDescription:
       'Waar te beginnen op Lapland.blog. Lijsten van de redactie: beste notities voor de eerste reis, beste noorderlichtstukken, beste eetnotities, seizoenen.',
     eyebrow: 'Keuze van de redactie',
     h1: 'Topartikelen.',
@@ -319,8 +322,8 @@ const nl: SectionCopy = {
   archive: {
     placesLabel: 'Plaats',
     allPlaces: 'Alle plaatsen',
-    pageTitle: 'Alle verhalen',
-    pageDescription:
+    metaTitle: 'Alle verhalen',
+    metaDescription:
       'Elk verhaal op Lapland.blog. Noorderlicht, hutten, eten, seizoenen, mensen, uitrusting en lange leesstukken uit Fins Lapland.',
     eyebrow: 'Archief',
     h1: 'Elk verhaal.',

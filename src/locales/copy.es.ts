@@ -74,6 +74,9 @@ const es: SectionCopy = {
     decline: 'Rechazar',
   },
   home: {
+    metaTitle: 'Lapland.blog · Cree y comparta su blog de viaje',
+    metaDescription:
+      'Convierta su viaje a la Laponia finlandesa en un blog de viaje: lleve un diario sobre la marcha y compártalo en redes con un solo toque.',
     heroEyebrow: 'Diario de viaje · Mapa · Compartir',
     heroLine1: '¿Va a Laponia?',
     heroLine2: 'Cree un blog de su viaje.',
@@ -214,8 +217,8 @@ const es: SectionCopy = {
     pathsSrLabel: 'Caminos',
   },
   about: {
-    pageTitle: 'Sobre',
-    pageDescription:
+    metaTitle: 'Acerca de',
+    metaDescription:
       'Lapland.blog es una plataforma gratuita de diario de viaje para quienes visitan la Laponia finlandesa. Marque lugares, escriba entradas, compártalas.',
     eyebrow: 'Sobre la plataforma',
     h1: 'Un diario de viaje que vale la pena conservar.',
@@ -275,8 +278,8 @@ const es: SectionCopy = {
     stayCta: 'Ver',
   },
   destinations: {
-    pageTitle: 'Destinos',
-    pageDescription:
+    metaTitle: 'Destinos en Laponia',
+    metaDescription:
       'Los ocho destinos principales de la Laponia finlandesa: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lea las entradas de cada uno.',
     eyebrow: 'Adónde ir',
     h1Pre: 'Ocho lugares.',
@@ -331,8 +334,8 @@ const es: SectionCopy = {
     placeImageAlt: '{place}, Laponia finlandesa',
   },
   topReads: {
-    pageTitle: 'Lo más leído',
-    pageDescription:
+    metaTitle: 'Lo más leído',
+    metaDescription:
       'Por dónde empezar en Lapland.blog. Listas de la redacción: las mejores entradas para primerizos, sobre auroras, sobre comida y de cada temporada.',
     eyebrow: 'Selección de la redacción',
     h1: 'Lo más leído.',
@@ -370,8 +373,8 @@ const es: SectionCopy = {
   archive: {
     placesLabel: 'Lugar',
     allPlaces: 'Todos los lugares',
-    pageTitle: 'Todas las historias',
-    pageDescription:
+    metaTitle: 'Todas las historias',
+    metaDescription:
       'Todas las historias de Lapland.blog. Auroras, cabañas, comida, estaciones, gente, equipo y lecturas largas de la Laponia finlandesa.',
     eyebrow: 'Archivo',
     h1: 'Todas las historias.',

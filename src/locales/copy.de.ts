@@ -75,6 +75,9 @@ const de: SectionCopy = {
     decline: 'Ablehnen',
   },
   home: {
+    metaTitle: 'Lapland.blog · Starten Sie Ihren Lappland-Reiseblog',
+    metaDescription:
+      'Machen Sie aus Ihrer Finnisch-Lappland-Reise einen Reiseblog. Unterwegs Tagebuch führen, mit einem Fingertipp teilen. Kostenlos, in Minuten fertig.',
     heroEyebrow: 'Reisetagebuch · Karte · Teilen',
     heroLine1: 'Reise nach Lappland?',
     heroLine2: 'Starten Sie einen Blog Ihrer Reise.',
@@ -215,9 +218,9 @@ const de: SectionCopy = {
     pathsSrLabel: 'Einstiege',
   },
   about: {
-    pageTitle: 'Über uns',
-    pageDescription:
-      'Lapland.blog ist eine kostenlose Reisetagebuch-Plattform für Besucher des finnischen Lapplands. Orte markieren, Einträge schreiben, mit Freunden teilen.',
+    metaTitle: 'Über uns',
+    metaDescription:
+      'Lapland.blog ist eine kostenlose Reisetagebuch-Plattform für Besucher Finnisch-Lapplands. Orte markieren, Einträge schreiben, mit Freunden teilen.',
     eyebrow: 'Über die Plattform',
     h1: 'Ein Reisetagebuch, das man behalten möchte.',
     lead:
@@ -276,8 +279,8 @@ const de: SectionCopy = {
     stayCta: 'Ansehen',
   },
   destinations: {
-    pageTitle: 'Reiseziele',
-    pageDescription:
+    metaTitle: 'Reiseziele',
+    metaDescription:
       'Die acht wichtigsten Ziele im finnischen Lappland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lesen Sie die Einträge.',
     eyebrow: 'Wohin gehen',
     h1Pre: 'Acht Orte.',
@@ -332,8 +335,8 @@ const de: SectionCopy = {
     placeImageAlt: '{place}, Finnisch-Lappland',
   },
   topReads: {
-    pageTitle: 'Beliebt',
-    pageDescription:
+    metaTitle: 'Beliebt',
+    metaDescription:
       'Wo Sie auf Lapland.blog anfangen sollten. Kuratierte Listen: beste Einträge für Erstbesucher, beste Nordlicht-Stücke, beste Essen-Einträge, die saisonalen.',
     eyebrow: 'Auswahl der Redaktion',
     h1: 'Meistgelesene.',
@@ -372,8 +375,8 @@ const de: SectionCopy = {
   archive: {
     placesLabel: 'Ort',
     allPlaces: 'Alle Orte',
-    pageTitle: 'Alle Geschichten',
-    pageDescription:
+    metaTitle: 'Alle Geschichten',
+    metaDescription:
       'Jede Geschichte auf Lapland.blog. Nordlichter, Hütten, Essen, Jahreszeiten, Menschen, Ausrüstung und lange Stücke aus dem finnischen Lappland.',
     eyebrow: 'Archiv',
     h1: 'Jede Geschichte.',

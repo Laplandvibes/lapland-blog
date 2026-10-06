@@ -31,8 +31,8 @@ export default function Destinations() {
   const { posts } = usePosts();
 
   useSeo({
-    title: c.pageTitle,
-    description: c.pageDescription,
+    title: c.metaTitle,
+    description: c.metaDescription,
     image: 'https://lapland.blog/og/page-destinations.jpg',
     canonical: canonicalUrl('/destinations'),
   });

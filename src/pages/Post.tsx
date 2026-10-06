@@ -18,6 +18,7 @@ import type { PostBlock } from '../data/posts';
 import { authors, vesa } from '../data/author';
 import { categoryBySlug } from '../data/categories';
 import { useSeo, canonicalUrl } from '../lib/seo';
+import { POST_META } from '../lib/postMeta.gen';
 import {
   useJsonLd,
   blogPostingSchema,
@@ -142,11 +143,20 @@ export default function Post() {
       ? `https://lapland.blog/og/${post.slug}.jpg`
       : post.heroImage
     : undefined;
+  // <title>, kuvaus ja canonical samasta kentästä kuin esirenderöidyssä HTML:ssä (scripts/routes.json →
+  // src/lib/postMeta.gen.ts): englannin hakuotsikko voi erota jutun otsikosta, joka on h1 ja tulee
+  // kannasta. Puuttuva kieli = englanti, kuten esirenderöinnissä. Esirenderöidyn jutun slug luetaan
+  // osoitteesta, joten arvot ovat oikein jo ennen kuin kanta vastaa (latauksen ajan canonical osoitti
+  // ennen etusivulle). Reitittömällä (uudella) jutulla ei ole esirenderöityä sivua, joten sille kannan
+  // otsikko ja ingressi, kun juttu on latautunut.
+  const urlSlug = slug && Object.hasOwn(POST_META, slug) ? slug : undefined;
+  const seoSlug = post?.slug ?? urlSlug;
+  const seoMeta = seoSlug && Object.hasOwn(POST_META, seoSlug) ? POST_META[seoSlug] : undefined;
   useSeo({
-    title: post ? `${post.title}` : 'Loading',
-    description: post?.excerpt ?? 'Story on Lapland.blog',
+    title: (seoMeta && (seoMeta.title[lang] ?? seoMeta.title.en)) ?? post?.title ?? 'Loading',
+    description: (seoMeta && (seoMeta.description[lang] ?? seoMeta.description.en)) ?? post?.excerpt ?? 'Story on Lapland.blog',
     image: ogImage,
-    canonical: post ? canonicalUrl(`/post/${post.slug}`) : canonicalUrl('/'),
+    canonical: seoSlug ? canonicalUrl(`/post/${seoSlug}`) : canonicalUrl('/'),
     type: post ? 'article' : 'website',
     publishedAt: post?.publishedAt,
     modifiedAt: post?.publishedAt,

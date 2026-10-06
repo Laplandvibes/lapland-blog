@@ -1,6 +1,7 @@
 // 2026-05-21: locale-aware — hreflang × 11 + og:locale + JSON-LD inLanguage.
 import { useEffect } from 'react';
 import { useLang, type Lang } from '../i18n/useLang';
+import { CANONICAL_LOCALE } from './canonicalLocale.gen';
 
 interface SeoOptions {
   title: string;
@@ -106,8 +107,15 @@ export function useSeo(opts: SeoOptions) {
     // Trailing-slash form matches the prerendered static HTML (Cloudflare Pages
     // serves /path/index.html at /path/ with 200; the no-slash form 308-redirects).
     const cleanPath = canonical ? stripLocalePrefix(toPath(canonical)) : undefined;
+    // A route flagged canonicalLocale in scripts/routes.json (the English articles) serves one
+    // language on every locale URL: the prerendered HTML canonicalises each of them to that
+    // locale and lists only it in hreflang, and the sitemap carries only that URL. Until
+    // 2026-10-05 this hook pointed the canonical of /fi/post/x/ etc. back at itself and added
+    // twelve alternates, so a crawler that runs JavaScript got the opposite answer (132 pages).
+    const onlyLocale = cleanPath ? CANONICAL_LOCALE[cleanPath.replace(/\/+$/, '') || '/'] : undefined;
+    const canonicalLang = onlyLocale ?? lang;
     const currentUrl = cleanPath
-      ? (SITE + URL_PREFIX_OF[lang] + (cleanPath === '/' ? '' : cleanPath)).replace(/\/?$/, '/')
+      ? (SITE + URL_PREFIX_OF[canonicalLang] + (cleanPath === '/' ? '' : cleanPath)).replace(/\/?$/, '/')
       : undefined;
 
     setMeta('name', 'description', description);
@@ -167,9 +175,12 @@ export function useSeo(opts: SeoOptions) {
       link.setAttribute('href', currentUrl);
 
       // hreflang × 11 + x-default — SHORT codes (en, fi, pt-BR, …), must match
-      // the prerenderer (_prerender_routes.mjs) and sitemap.xml exactly.
-      document.head.querySelectorAll('link[rel="alternate"][data-seo-hreflang]').forEach((el) => el.remove());
-      SUPPORTED.forEach((l) => {
+      // the prerenderer (_prerender_routes.mjs) and sitemap.xml exactly. A canonicalLocale
+      // route lists only its one locale, as the prerendered HTML does. The prerendered
+      // alternates go too: they describe the URL the visitor landed on, and after a client-side
+      // navigation they would sit next to this page's own set.
+      document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+      (onlyLocale ? [onlyLocale] : SUPPORTED).forEach((l) => {
         const lnk = document.createElement('link');
         lnk.setAttribute('rel', 'alternate');
         lnk.setAttribute('hreflang', l);

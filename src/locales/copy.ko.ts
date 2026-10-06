@@ -23,6 +23,9 @@ const ko: SectionCopy = {
     accountMenuAria: '계정 메뉴',
   },
   home: {
+    metaTitle: 'Lapland.blog · 라플란드 여행 블로그 만들기와 공유하기',
+    metaDescription:
+      '핀란드 라플란드 여행을 나만의 여행 블로그로 만들어 보세요. 여행하면서 일기를 쓰고, 한 번의 탭으로 소셜 미디어에 공유하세요. 무료이며 몇 분이면 시작할 수 있습니다.',
     heroEyebrow: '여행 일기 · 지도 · 공유',
     heroLine1: '라플란드로 가십니까?',
     heroLine2: '여행 블로그를 시작하세요.',
@@ -163,8 +166,8 @@ const ko: SectionCopy = {
     pathsSrLabel: '시작하는 방법',
   },
   about: {
-    pageTitle: '소개',
-    pageDescription:
+    metaTitle: '소개',
+    metaDescription:
       'Lapland.blog는 라플란드를 찾는 분들을 위한 무료 여행 일기 플랫폼입니다. 장소에 핀을 꽂고, 글을 쓰고, 친구들과 공유하세요. 잘 쓰인 여러분의 여행입니다.',
     eyebrow: '플랫폼 소개',
     h1: '간직할 만한 여행 일기.',
@@ -224,8 +227,8 @@ const ko: SectionCopy = {
     stayCta: '보기',
   },
   destinations: {
-    pageTitle: '여행지',
-    pageDescription:
+    metaTitle: '여행지',
+    metaDescription:
       '라플란드의 주요 여덟 곳: 로바니에미, 사리셀카, 레비, 케미, 이나리, 무오니오, 윌래스, 케미야르비. 각 지역의 현장 일기를 읽거나, 최초의 글을 작성하세요.',
     eyebrow: '어디로 갈까',
     h1Pre: '여덟 곳.',
@@ -280,8 +283,8 @@ const ko: SectionCopy = {
     placeImageAlt: '{place}, 핀란드 라플란드',
   },
   topReads: {
-    pageTitle: '인기 글',
-    pageDescription:
+    metaTitle: '인기 글',
+    metaDescription:
       'Lapland.blog에서 어디부터 읽기 시작할지. 편집자의 큐레이션 목록: 초심자용 베스트, 오로라 글, 음식 글, 계절 글. 클릭수가 아닌 편집자의 안목으로 골랐습니다.',
     eyebrow: '편집자 추천',
     h1: '인기 글.',
@@ -319,8 +322,8 @@ const ko: SectionCopy = {
   archive: {
     placesLabel: '장소',
     allPlaces: '모든 장소',
-    pageTitle: '모든 글',
-    pageDescription:
+    metaTitle: '모든 글',
+    metaDescription:
       'Lapland.blog의 모든 글. 오로라, 통나무집, 음식, 계절, 사람, 장비, 그리고 라플란드에서 보내 드리는 장문의 글.',
     eyebrow: '아카이브',
     h1: '모든 글.',

@@ -15,36 +15,23 @@ import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { postTextLang } from '../lib/postLang';
 
-// Localized title/description — kept in sync with scripts/routes.json
-// (/start-here fallbackTitleByLang) so the client-side document.title matches
-// the prerendered <title> on /fi, /de, … instead of staying English.
-const TITLE: Record<Lang, string> = {
-  en: 'Start Here · Your First Steps on Lapland.blog',
-  fi: 'Aloita tästä · ensiaskeleet Lapland.blogissa',
-  de: 'Hier starten · Ihre ersten Schritte auf Lapland.blog',
-  ja: 'はじめに · Lapland.blogの歩き方',
-  es: 'Empiece aquí · sus primeros pasos en Lapland.blog',
-  'pt-BR': 'Comece aqui · seus primeiros passos no Lapland.blog',
-  'zh-CN': '从这里开始 · Lapland.blog 新手指引',
-  ko: '여기서 시작 · Lapland.blog 첫걸음',
-  fr: 'Commencez ici · vos premiers pas sur Lapland.blog',
-  it: 'Inizi qui · i Suoi primi passi su Lapland.blog',
-  nl: 'Begin hier · Uw eerste stappen op Lapland.blog',
-  sv: 'Börja här · dina första steg på Lapland.blog',
-};
-const DESCRIPTION: Record<Lang, string> = {
-  en: 'New to Lapland.blog? Three ways in: read the field-journal entries, find your Finnish Lapland destination, or start your own free travel blog.',
-  fi: 'Uusi Lapland.blogissa? Kolme reittiä sisään: lue kenttäpäiväkirjamerkinnät, löydä Suomen Lapin kohteesi tai aloita oma ilmainen matkablogi.',
-  de: 'Neu auf Lapland.blog? Drei Einstiege: Einträge aus The Field Journal lesen, Ihr Ziel in Finnisch-Lappland finden oder einen eigenen kostenlosen Reiseblog starten.',
-  ja: 'Lapland.blogは初めて？入口は三つ。フィールド日記の記事を読む、フィンランド・ラップランドの目的地を探す、または無料で自分の旅行ブログを始める。',
-  es: '¿Nuevo en Lapland.blog? Tres caminos: lea las entradas del diario de campo, encuentre su destino en la Laponia finlandesa o empiece su propio blog de viaje gratis.',
-  'pt-BR': 'Novo no Lapland.blog? Três caminhos: leia as entradas do diário de campo, encontre seu destino na Lapônia finlandesa ou comece seu próprio blog de viagem grátis.',
-  'zh-CN': '初到 Lapland.blog？三种入门方式：读田野日志文章、找到你的芬兰拉普兰目的地，或免费开始你自己的旅行博客。',
-  ko: 'Lapland.blog가 처음이신가요? 들어가는 세 가지 길: 현장 일기 글 읽기, 핀란드 라플란드 여행지 찾기, 또는 나만의 무료 여행 블로그 시작하기.',
-  fr: 'Nouveau sur Lapland.blog ? Trois entrées : lisez les entrées du carnet de terrain, trouvez votre destination en Laponie finlandaise ou lancez votre blog de voyage gratuit.',
-  it: 'Nuovo su Lapland.blog? Tre vie d\'accesso: legga le voci del diario di campo, trovi la Sua destinazione in Lapponia finlandese o avvii il Suo blog di viaggio gratuito.',
-  nl: 'Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind uw bestemming in Fins Lapland of start uw eigen gratis reisblog.',
-  sv: 'Ny på Lapland.blog? Tre vägar in: läs inläggen i fältdagboken, hitta ditt resmål i finska Lappland eller starta din egen gratis reseblogg.',
+// <title> and description per locale. The prerender reads these same `const <locale>` blocks
+// (scripts/routes.json "pageFile": seoTitle / seoDescription), so the static HTML and the browser
+// show one text: change it only here.
+const en = { seoTitle: 'Start Here · Your First Steps on Lapland.blog', seoDescription: 'New to Lapland.blog? Three ways in: read the field-journal entries, find your Finnish Lapland destination, or start your own free travel blog.' };
+const fi = { seoTitle: 'Aloita tästä · Ensiaskeleet Lapland.blogissa', seoDescription: 'Ensimmäistä kertaa täällä? Kolme tapaa aloittaa: lue kenttäpäiväkirjat, löydä Lapin kohteesi tai aloita oma ilmainen matkablogi.' };
+const de = { seoTitle: 'Hier starten · Ihre ersten Schritte auf Lapland.blog', seoDescription: 'Neu auf Lapland.blog? Drei Einstiege: Reisetagebuch-Einträge lesen, Ihr Ziel in Finnisch-Lappland finden oder einen eigenen kostenlosen Reiseblog starten.' };
+const ja = { seoTitle: 'ここから始める · Lapland.blogの最初の一歩', seoDescription: 'Lapland.blogは初めて？入口は三つ。フィールド日記の記事を読む、フィンランド・ラップランドの目的地を探す、または無料で自分の旅行ブログを始める。' };
+const es = { seoTitle: 'Empiece aquí · Sus primeros pasos en Lapland.blog', seoDescription: '¿Nuevo aquí? Tres caminos: leer los diarios de campo, encontrar su destino en Laponia o crear su blog de viaje gratuito.' };
+const ptBR = { seoTitle: 'Comece aqui · Seus primeiros passos no Lapland.blog', seoDescription: 'Novo por aqui? Três caminhos: ler os diários de campo, encontrar seu destino na Lapônia ou criar seu blog de viagem gratuito.' };
+const zhCN = { seoTitle: '从这里开始 · Lapland.blog 入门', seoDescription: '初到 Lapland.blog？三种入门方式：读田野日志文章、找到你的芬兰拉普兰目的地，或免费开始你自己的旅行博客。' };
+const ko = { seoTitle: '여기서 시작 · Lapland.blog 첫걸음', seoDescription: 'Lapland.blog가 처음이신가요? 들어가는 세 가지 길: 현장 일기 글 읽기, 핀란드 라플란드 여행지 찾기, 또는 나만의 무료 여행 블로그 시작하기.' };
+const fr = { seoTitle: 'Commencer ici · Vos premiers pas sur Lapland.blog', seoDescription: 'Nouveau ici ? Trois portes d’entrée : lire les carnets de terrain, trouver votre destination en Laponie ou créer votre blog de voyage gratuit.' };
+const it = { seoTitle: 'Inizi qui · I Suoi primi passi su Lapland.blog', seoDescription: 'Prima volta qui? Tre strade: leggere i diari sul campo, trovare la Sua destinazione in Lapponia o creare il Suo blog di viaggio gratuito.' };
+const nl = { seoTitle: 'Begin hier · Uw eerste stappen op Lapland.blog', seoDescription: 'Nieuw op Lapland.blog? Drie manieren om te beginnen: lees de veldnotities, vind uw bestemming in Fins Lapland of start uw eigen gratis reisblog.' };
+const sv = { seoTitle: 'Börja här · Dina första steg på Lapland.blog', seoDescription: 'Ny här? Tre vägar in: läs fältdagböckerna, hitta ditt Lapplandsresmål eller starta din egen kostnadsfria reseblogg.' };
+const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
+  en, fi, de, ja, es, 'pt-BR': ptBR, 'zh-CN': zhCN, ko, fr, it, nl, sv,
 };
 
 export default function StartHere() {
@@ -56,8 +43,8 @@ export default function StartHere() {
   const more = posts.slice(1, 4);
 
   useSeo({
-    title: TITLE[lang],
-    description: DESCRIPTION[lang],
+    title: META[lang].seoTitle,
+    description: META[lang].seoDescription,
     canonical: canonicalUrl('/start-here'),
   });
 

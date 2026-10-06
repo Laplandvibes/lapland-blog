@@ -23,6 +23,7 @@ import Reveal from '../components/Reveal';
 import PostCard from '../components/PostCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import { destinationBySlug, placeName, stayUrl } from '../data/destinations';
+import { destinationDescription } from '../data/destinationMeta.mjs';
 import { networkLinksFor } from '../data/destinationLinks';
 import { usePosts } from '../hooks/usePosts';
 import { useSeo, canonicalUrl } from '../lib/seo';
@@ -48,14 +49,11 @@ export default function Destination() {
   const omat = d ? posts.filter((p) => p.tags.some((t) => t.toLowerCase() === d.slug)) : [];
   const verkosto = d ? networkLinksFor(d.slug) : [];
 
-  // ja/zh eivät välistä virkkeitä: täysleveän 。！？ jälkeen ei välilyöntiä.
-  // Korea ja latinalaiset kielet välistävät. Sama sääntö kuin routes.json:n
-  // prerender-kuvauksissa ja kanonisen prerenderin [LV-CJK-JOIN]-liitoksessa.
-  const liitos = /^(ja|zh)/.test(lang) && /[。！？]$/.test(kuvaus) ? '' : ' ';
-
   useSeo({
+    // Otsikko ja kuvaus samoilla funktioilla kuin esirenderöidyssä HTML:ssä: scripts/gen-page-meta.mjs
+    // kirjoittaa placeName()- ja destinationDescription()-tuloksen scripts/prerender-meta.json:iin.
     title: d ? placeName(d, lang) : 'Lapland.blog',
-    description: d ? `${kuvaus}${liitos}${c.metaSuffix}` : '',
+    description: d ? destinationDescription(kuvaus, c.metaSuffix, lang) : '',
     image: 'https://lapland.blog/og/page-destinations.jpg',
     canonical: canonicalUrl(d ? `/destinations/${d.slug}` : '/destinations'),
   });

@@ -1,188 +1,18 @@
-[
-  {
-    "path": "/",
-    "ogImage": "/og.jpg?v=4dfad215",
-    "appendSiteName": false,
-    "copyKey": "home"
-  },
-  {
-    "path": "/start-here",
-    "pageFile": "src/pages/StartHere.tsx",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/top-reads",
-    "appendSiteName": false,
-    "copyKey": "topReads"
-  },
-  {
-    "path": "/destinations",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": "destinations"
-  },
-  {
-    "path": "/destinations/rovaniemi",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/destinations/saariselka",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/destinations/levi",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/destinations/kemi",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/destinations/inari",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/destinations/muonio",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/destinations/yllas",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/destinations/kemijarvi",
-    "ogImage": "/og/page-destinations.jpg",
-    "appendSiteName": false,
-    "copyKey": null
-  },
-  {
-    "path": "/stories",
-    "ogImage": "/og/page-stories.jpg",
-    "appendSiteName": false,
-    "copyKey": "archive"
-  },
-  {
-    "path": "/about",
-    "ogImage": "/og/page-about.jpg",
-    "appendSiteName": false,
-    "copyKey": "about"
-  },
-  {
-    "path": "/privacy",
-    "pageFile": "src/pages/PrivacyPolicy.tsx",
-    "fallbackTitle": "Privacy Policy",
-    "appendSiteName": false,
-    "harvestFiles": [
-      "src/shared/Legal/PrivacyContent.tsx"
-    ]
-  },
-  {
-    "path": "/terms",
-    "pageFile": "src/pages/Terms.tsx",
-    "fallbackTitle": "Terms of Service",
-    "appendSiteName": false,
-    "harvestFiles": [
-      "src/shared/Legal/TermsContent.tsx"
-    ]
-  },
-  {
-    "path": "/cookie-policy",
-    "pageFile": "src/pages/CookiePolicy.tsx",
-    "fallbackTitle": "Cookie Policy",
-    "appendSiteName": false,
-    "harvestFiles": [
-      "src/shared/Legal/CookieContent.tsx"
-    ]
-  },
-  {
-    "path": "/unsubscribe",
-    "fallbackTitle": "Unsubscribe",
-    "fallbackDescription": "Unsubscribe from the Lapland.blog newsletter. One click, no hard feelings.",
-    "appendSiteName": false,
-    "fallbackTitleByLang": {
-      "fi": "Peru tilaus",
-      "de": "Abbestellen",
-      "ja": "配信解除",
-      "es": "Cancelar suscripción",
-      "pt-BR": "Cancelar inscrição",
-      "zh-CN": "取消订阅",
-      "ko": "구독 해지",
-      "fr": "Désabonnement",
-      "it": "Cancellazione dell’iscrizione",
-      "nl": "Uitschrijven",
-      "sv": "Avsluta prenumeration"
-    },
-    "fallbackDescriptionByLang": {
-      "fi": "Peru Lapland.blog-uutiskirjeen tilaus. Yksi klikkaus, ei pahaa mieltä.",
-      "de": "Den Lapland.blog-Newsletter abbestellen. Ein Klick, kein böses Blut. Du kannst dich jederzeit wieder anmelden, wenn du magst.",
-      "ja": "Lapland.blogのニュースレターを配信解除。ワンクリックで完了、引き止めません。登録時のメールアドレスを入力するだけで、気が向いたらいつでも再登録できます。",
-      "es": "Cancele la suscripción al boletín de Lapland.blog. Un clic, sin rencores.",
-      "pt-BR": "Cancele a inscrição no boletim do Lapland.blog. Um clique, sem ressentimentos.",
-      "zh-CN": "取消订阅 Lapland.blog 新闻通讯。一键完成，绝无芥蒂。输入订阅时使用的邮箱地址即可立即生效，无需登录，之后随时可以用同一个邮箱重新订阅。",
-      "ko": "Lapland.blog 뉴스레터를 구독 해지합니다. 한 번의 클릭, 붙잡지 않습니다. 구독할 때 쓴 이메일 주소만 입력하면 되고, 언제든 다시 신청할 수 있습니다.",
-      "fr": "Désabonnez-vous de la newsletter Lapland.blog. Un clic, sans rancune. Vous pourrez vous réinscrire à tout moment si l’envie revient.",
-      "it": "Annulli l’iscrizione alla newsletter di Lapland.blog. Un clic, nessun rancore.",
-      "nl": "Schrijf u uit van de Lapland.blog-nieuwsbrief. Eén klik, zonder hard gevoel.",
-      "sv": "Avsluta prenumerationen på Lapland.blogs nyhetsbrev. Ett klick, inga hårda känslor."
-    }
-  },
-  {
-    "path": "/category/aurora",
-    "copyKey": "category.themes.aurora",
-    "appendSiteName": false
-  },
-  {
-    "path": "/category/cabins",
-    "copyKey": "category.themes.cabins",
-    "appendSiteName": false
-  },
-  {
-    "path": "/category/food",
-    "copyKey": "category.themes.food",
-    "appendSiteName": false
-  },
-  {
-    "path": "/category/seasons",
-    "copyKey": "category.themes.seasons",
-    "appendSiteName": false
-  },
-  {
-    "path": "/category/people",
-    "copyKey": "category.themes.people",
-    "appendSiteName": false
-  },
-  {
-    "path": "/category/gear",
-    "copyKey": "category.themes.gear",
-    "appendSiteName": false
-  },
-  {
-    "path": "/category/stories",
-    "copyKey": "category.themes.stories",
-    "appendSiteName": false
-  },
-  {
-    "path": "/post/the-night-the-sky-broke-open-over-kemi",
-    "ogImage": "/og/the-night-the-sky-broke-open-over-kemi.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Northern lights in Kemi: where to watch and what Kp means",
-    "fallbackDescription": "Kemi lies south of the Arctic Circle, so the aurora needs a stronger night there than in Inari. How to read the forecast, choose a spot and survive the cold.",
-    "fallbackTitleByLang": {
+// GENEROITU — älä muokkaa käsin. Lähde: scripts/routes.json (/post/-reitit), scripts/gen-page-meta.mjs (prebuild).
+// Jutun <title> ja kuvaus kielittäin samasta kentästä kuin esirenderöidyssä HTML:ssä: fi/sv tulevat kannasta
+// (sync-post-meta-langs.mjs), englanti ja muiden kielten listaotsikot on kirjoitettu routes.jsoniin.
+// Puuttuva kieli = englanti, sama sääntö kuin esirenderöinnissä. Jutun h1 tulee yhä kannasta.
+import type { Lang } from '../i18n/useLang';
+
+export interface PostMeta {
+  title: Partial<Record<Lang, string>>;
+  description: Partial<Record<Lang, string>>;
+}
+
+export const POST_META: Record<string, PostMeta> = {
+  "the-night-the-sky-broke-open-over-kemi": {
+    "title": {
+      "en": "Northern lights in Kemi: where to watch and what Kp means",
       "sv": "Norrsken i Kemi: var du tittar och vad Kp-talet betyder",
       "fi": "Revontulet Kemissä: missä katsoa ja mitä Kp-luku tarkoittaa",
       "de": "Nordlichter in Kemi: wo man schaut und was der Kp-Wert bedeutet (auf Englisch)",
@@ -195,20 +25,15 @@
       "pt-BR": "Aurora boreal em Kemi: onde observar e o que significa o Kp (em inglês)",
       "zh-CN": "凯米看极光：在哪里看，Kp 指数是什么意思（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "Kemi lies south of the Arctic Circle, so the aurora needs a stronger night there than in Inari. How to read the forecast, choose a spot and survive the cold.",
       "sv": "Kemi ligger söder om polcirkeln, så norrskenet kräver en starkare natt där än i Enare. Så läser du prognosen, väljer plats och klarar kylan.",
       "fi": "Kemi on napapiirin eteläpuolella, joten revontulet vaativat siellä vahvemman yön kuin Inarissa. Näin luet ennustetta, valitset paikan ja kestät pakkasen."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/why-i-stopped-chasing-the-aurora-with-an-app",
-    "ogImage": "/og/why-i-stopped-chasing-the-aurora-with-an-app.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Your aurora app can't see clouds: how to read the forecast",
-    "fallbackDescription": "An aurora app alerts you about the Kp number, but clouds and town lights decide whether you see anything. Use the forecast once a day, then go outside.",
-    "fallbackTitleByLang": {
+  "why-i-stopped-chasing-the-aurora-with-an-app": {
+    "title": {
+      "en": "Your aurora app can't see clouds: how to read the forecast",
       "sv": "Norrskensappen ser inga moln: så läser du prognosen rätt",
       "fi": "Revontulisovellus ei näe pilviä: näin luet ennustetta oikein",
       "de": "Die Aurora-App sieht keine Wolken: so liest man die Vorhersage (auf Englisch)",
@@ -221,20 +46,15 @@
       "pt-BR": "Seu app de aurora não vê nuvens: como ler a previsão (em inglês)",
       "zh-CN": "极光 App 看不见云：怎样正确读预报（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "An aurora app alerts you about the Kp number, but clouds and town lights decide whether you see anything. Use the forecast once a day, then go outside.",
       "sv": "En norrskensapp larmar om Kp-talet, men moln och stadens ljus avgör om du ser något. Använd prognosen en gång om dagen och gå sedan ut.",
       "fi": "Revontulisovellus hälyttää Kp-luvusta, mutta pilvet ja kaupungin valot ratkaisevat, näetkö mitään. Näin käytät ennustetta kerran päivässä ja menet sitten ulos."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/five-nights-in-a-forest-cabin",
-    "ogImage": "/og/five-nights-in-a-forest-cabin.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Winter cabin week: what to pack for a Lapland forest cabin",
-    "fallbackDescription": "Wood stove, a well and no signal: a week in a winter cabin near Kemijärvi works when the bag holds the right things. What you need, and what you'll forget.",
-    "fallbackTitleByLang": {
+  "five-nights-in-a-forest-cabin": {
+    "title": {
+      "en": "Winter cabin week: what to pack for a Lapland forest cabin",
       "sv": "Vinterstugvecka: vad du packar för en skogsstuga i Lappland",
       "fi": "Mökkiviikko talvella: mitä pakata Lapin metsämökkiin",
       "de": "Winterwoche in der Hütte: Packliste für eine Waldhütte in Lappland (auf Englisch)",
@@ -247,20 +67,15 @@
       "pt-BR": "Semana de inverno na cabana: o que levar para uma cabana na floresta da Lapônia (em inglês)",
       "zh-CN": "冬季林中小屋一周：去拉普兰森林小屋该带什么（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "Wood stove, a well and no signal: a week in a winter cabin near Kemijärvi works when the bag holds the right things. What you need, and what you'll forget.",
       "sv": "Vedspis, brunn och ingen täckning: en vecka i en vinterstuga nära Kemijärvi fungerar när väskan innehåller rätt saker. Vad du behöver och vad du glömmer.",
       "fi": "Puuhella, kaivo ja ei kenttää: viikko talvimökissä Kemijärven takana onnistuu, kun kassissa on oikeat asiat. Lista siitä, mitä tarvitset ja mitä unohdat."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/a-bowl-of-salmon-soup-that-cost-more-than-the-flight",
-    "ogImage": "/og/a-bowl-of-salmon-soup-that-cost-more-than-the-flight.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Salmon soup in Rovaniemi: where to get it and what it costs",
-    "fallbackDescription": "Three Rovaniemi restaurants serve salmon soup at 12–19 euros; several well-known places don't have it. Prices read from the menus on 14 September 2026.",
-    "fallbackTitleByLang": {
+  "a-bowl-of-salmon-soup-that-cost-more-than-the-flight": {
+    "title": {
+      "en": "Salmon soup in Rovaniemi: where to get it and what it costs",
       "sv": "Laxsoppa i Rovaniemi: var du får den och vad den kostar",
       "fi": "Lohikeitto Rovaniemellä: missä sitä saa ja mitä se maksaa",
       "de": "Lachssuppe in Rovaniemi: wo es sie gibt und was sie kostet (auf Englisch)",
@@ -273,20 +88,15 @@
       "pt-BR": "Sopa de salmão em Rovaniemi: onde comer e quanto custa (em inglês)",
       "zh-CN": "罗瓦涅米的三文鱼汤：哪里能喝到、多少钱（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "Three Rovaniemi restaurants serve salmon soup at 12–19 euros; several well-known places don't have it. Prices read from the menus on 14 September 2026.",
       "sv": "Tre restauranger i Rovaniemi serverar laxsoppa för 12–19 euro, och flera kända ställen har den inte alls. Priserna lästa på menyerna den 14 september 2026.",
       "fi": "Kolme Rovaniemen ravintolaa tarjoaa lohikeittoa 12–19 eurolla, ja moni tunnettu paikka ei tarjoa sitä lainkaan. Hinnat luettu ruokalistoilta 14.9.2026."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/living-between-two-suns",
-    "ogImage": "/og/living-between-two-suns.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Polar night in Rovaniemi: what the dark is and what helps",
-    "fallbackDescription": "In Rovaniemi the polar night isn't total darkness but weeks of blue twilight. What it does to your body, and four habits that carry you to February.",
-    "fallbackTitleByLang": {
+  "living-between-two-suns": {
+    "title": {
+      "en": "Polar night in Rovaniemi: what the dark is and what helps",
       "sv": "Polarnatt i Rovaniemi: vad mörkret är och vad som hjälper",
       "fi": "Kaamos Rovaniemellä: mitä pimeä oikeasti on ja mikä auttaa",
       "de": "Polarnacht in Rovaniemi: was die Dunkelheit ist und was hilft (auf Englisch)",
@@ -299,20 +109,15 @@
       "pt-BR": "Noite polar em Rovaniemi: o que é a escuridão e o que ajuda (em inglês)",
       "zh-CN": "罗瓦涅米的极夜：黑暗究竟是什么，什么能帮上忙（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "In Rovaniemi the polar night isn't total darkness but weeks of blue twilight. What it does to your body, and four habits that carry you to February.",
       "sv": "I Rovaniemi är polarnatten inte totalt mörker utan veckor av blå skymning. Vad den gör med kroppen, och fyra vanor som bär dig från november till februari.",
       "fi": "Rovaniemellä kaamos ei ole täyttä pimeää vaan viikkoja sinistä hämärää. Mitä se tekee keholle, ja neljä keinoa, jotka kantavat marraskuusta helmikuuhun."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/the-sun-did-not-set-it-just-circled-the-house",
-    "ogImage": "/og/the-sun-did-not-set-it-just-circled-the-house.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Sodankylä's midnight sun: when it shines and how to sleep",
-    "fallbackDescription": "In Sodankylä the sun stays above the horizon from late May to mid-July. Here's how the light behaves, when it's at its best, and how to actually sleep.",
-    "fallbackTitleByLang": {
+  "the-sun-did-not-set-it-just-circled-the-house": {
+    "title": {
+      "en": "Sodankylä's midnight sun: when it shines and how to sleep",
       "fi": "Yötön yö Sodankylässä: kun aurinko ei laske ja miten nukut",
       "sv": "Midnattssol i Sodankylä: när den lyser och hur du sover",
       "de": "Mitternachtssonne in Sodankylä: wann sie scheint und wie man schläft (auf Englisch)",
@@ -325,20 +130,15 @@
       "pt-BR": "Sol da meia-noite em Sodankylä: quando brilha e como dormir (em inglês)",
       "zh-CN": "索丹屈莱的午夜太阳：什么时候照耀，怎么睡觉（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "In Sodankylä the sun stays above the horizon from late May to mid-July. Here's how the light behaves, when it's at its best, and how to actually sleep.",
       "fi": "Sodankylässä aurinko pysyy horisontin yllä toukokuun lopusta heinäkuun puoliväliin. Näin valo käyttäytyy, mihin aikaan se on kaunein ja miten saat nukuttua.",
       "sv": "I Sodankylä stannar solen ovanför horisonten från slutet av maj till mitten av juli. Så beter sig ljuset, när det är som vackrast och hur du faktiskt får sova."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/twelve-kilometres-at-one-in-the-morning",
-    "ogImage": "/og/twelve-kilometres-at-one-in-the-morning.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Night hiking at Kiilopää: in July you start at midnight",
-    "fallbackDescription": "In July the smartest time to hike the Kiilopää fells is at night: low golden light, cool air, and the mosquitoes stay in the birch. How a night hike works.",
-    "fallbackTitleByLang": {
+  "twelve-kilometres-at-one-in-the-morning": {
+    "title": {
+      "en": "Night hiking at Kiilopää: in July you start at midnight",
       "sv": "Nattvandring på Kiilopää: i juli startar du vid midnatt",
       "fi": "Yövaellus Kiilopäällä: heinäkuussa lähdetään keskiyöllä",
       "de": "Nachtwanderung am Kiilopää: im Juli geht es um Mitternacht los (auf Englisch)",
@@ -351,20 +151,15 @@
       "pt-BR": "Trilha noturna em Kiilopää: em julho a saída é à meia-noite (em inglês)",
       "zh-CN": "基洛帕夜间徒步：7月要在午夜出发（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "In July the smartest time to hike the Kiilopää fells is at night: low golden light, cool air, and the mosquitoes stay in the birch. How a night hike works.",
       "sv": "I juli är det klokast att vandra på Kiilopääs fjäll om natten: lågt gyllene ljus, sval luft, och myggen stannar nere i björkskogen. Så gör du en nattvandring.",
       "fi": "Heinäkuussa Kiilopään tunturissa on viisainta vaeltaa yöllä: valo on matalaa ja kultaista, ilma viileää ja hyttyset jäävät koivikkoon. Näin yövaellus tehdään."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/strawberry-hour-at-the-rovaniemi-market",
-    "ogImage": "/og/strawberry-hour-at-the-rovaniemi-market.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Rovaniemi market in summer: strawberries, potatoes, vendace",
-    "fallbackDescription": "Finnish strawberries reach the Rovaniemi market in early July. How the market works: when to go, what to buy, and how new potatoes and fried vendace are eaten.",
-    "fallbackTitleByLang": {
+  "strawberry-hour-at-the-rovaniemi-market": {
+    "title": {
+      "en": "Rovaniemi market in summer: strawberries, potatoes, vendace",
       "fi": "Rovaniemen tori kesällä: mansikat, uudet perunat ja muikut",
       "sv": "Rovaniemi torg på sommaren: jordgubbar, potatis, siklöja",
       "de": "Rovaniemis Markt im Sommer: Erdbeeren, Kartoffeln, Maränen (auf Englisch)",
@@ -377,20 +172,15 @@
       "pt-BR": "O mercado de Rovaniemi no verão: morangos, batatas e peixe muikku (em inglês)",
       "zh-CN": "夏天的罗瓦涅米集市：草莓、土豆和小白鲑（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "Finnish strawberries reach the Rovaniemi market in early July. How the market works: when to go, what to buy, and how new potatoes and fried vendace are eaten.",
       "fi": "Suomalaiset mansikat tulevat Rovaniemen torille heinäkuun alussa. Näin tori toimii: milloin mennä, mitä ostaa ja miten uudet perunat ja muikut syödään.",
       "sv": "De finska jordgubbarna når Rovaniemi torg i början av juli. Så fungerar torget: när du ska gå, vad du ska köpa och hur färskpotatis och stekt siklöja äts."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/the-sauna-thermometer-said-eighty-two",
-    "ogImage": "/og/the-sauna-thermometer-said-eighty-two.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "Lapland lake sauna: two hours, four rounds, one damper",
-    "fallbackDescription": "A wood-fired sauna takes two hours to heat: time enough for the firewood, the whisk and the jetty. How a cabin guest runs a Lapland lake sauna, step by step.",
-    "fallbackTitleByLang": {
+  "the-sauna-thermometer-said-eighty-two": {
+    "title": {
+      "en": "Lapland lake sauna: two hours, four rounds, one damper",
       "fi": "Lapin rantasauna: näin puukiuas lämmitetään oikein",
       "sv": "Strandbastu i Lappland: så eldar du bastun rätt",
       "de": "Seesauna in Lappland: zwei Stunden, vier Saunagänge, eine Ofenklappe (auf Englisch)",
@@ -403,20 +193,15 @@
       "pt-BR": "Sauna à beira do lago na Lapônia: duas horas, quatro rodadas, um registro (em inglês)",
       "zh-CN": "拉普兰湖畔桑拿：两小时、四轮蒸汽、一个风门（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "A wood-fired sauna takes two hours to heat: time enough for the firewood, the whisk and the jetty. How a cabin guest runs a Lapland lake sauna, step by step.",
       "fi": "Puukiuas lämpiää kahdessa tunnissa, ja siinä ajassa ehtii klapit, vastan ja laiturin. Näin mökkivieras lämmittää Lapin rantasaunan ensimmäistä kertaa.",
       "sv": "En vedeldad bastu tar två timmar att värma, och det är precis den tid som går åt till veden, kvasten och bryggan. Så eldar en stuggäst en lappländsk sjöbastu."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/what-july-in-lapland-actually-asks-you-to-pack",
-    "ogImage": "/og/what-july-in-lapland-actually-asks-you-to-pack.jpg",
-    "appendSiteName": false,
-    "fallbackTitle": "July packing list for Lapland: what you actually need",
-    "fallbackDescription": "The same July day can be a heatwave in the afternoon and windy and cold on the fell at night. How to pack ten days into one bag without carrying dead weight.",
-    "fallbackTitleByLang": {
+  "what-july-in-lapland-actually-asks-you-to-pack": {
+    "title": {
+      "en": "July packing list for Lapland: what you actually need",
       "sv": "Packlista för Lappland i juli: det du faktiskt behöver",
       "fi": "Heinäkuun pakkauslista Lappiin: mitä oikeasti tarvitset",
       "de": "Packliste für Lappland im Juli: was man wirklich braucht (auf Englisch)",
@@ -429,19 +214,15 @@
       "pt-BR": "Lista para a Lapônia em julho: o que você realmente precisa (em inglês)",
       "zh-CN": "7月拉普兰行李清单：真正需要带的东西（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "The same July day can be a heatwave in the afternoon and windy and cold on the fell at night. How to pack ten days into one bag without carrying dead weight.",
       "sv": "Samma julidag kan bjuda på värmebölja på eftermiddagen och blåst och kyla på fjället om natten. Så packar du tio dagar i en väska utan onödig vikt.",
       "fi": "Sama heinäkuun päivä voi olla iltapäivällä hellettä ja yöllä tunturissa tuulinen ja kylmä. Näin pakkaat kymmeneksi päiväksi yhteen kassiin ilman turhaa painoa."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/wilderness-hut-firewood-ends-2026",
-    "appendSiteName": false,
-    "fallbackTitle": "154 Lapland rest areas lose their firewood service",
-    "fallbackDescription": "Metsähallitus is ending firewood and toilet servicing at 154 rest areas. What it means for hikers, which Lapland sites are listed, and why the saving misses.",
-    "fallbackTitleByLang": {
+  "wilderness-hut-firewood-ends-2026": {
+    "title": {
+      "en": "154 Lapland rest areas lose their firewood service",
       "fi": "154 taukopaikkaa jää ilman polttopuita ensi talvena",
       "sv": "154 rastplatser blir utan ved nästa vinter",
       "de": "154 Rastplätze in Lappland verlieren ihren Brennholzservice (auf Englisch)",
@@ -454,20 +235,15 @@
       "pt-BR": "154 áreas de descanso da Lapônia perdem o serviço de lenha (em inglês)",
       "zh-CN": "拉普兰 154 处休息点将停止供应柴火（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "Metsähallitus is ending firewood and toilet servicing at 154 rest areas. What it means for hikers, which Lapland sites are listed, and why the saving misses.",
       "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Mitä se merkitsee retkeilijälle ja mitkä Lapin kohteet ovat listalla.",
       "sv": "Forststyrelsen slutar med ved- och toalettservice på 154 rastplatser. Vad det betyder för vandraren och vilka platser i Lappland som finns på listan."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   },
-  {
-    "path": "/post/seven-and-a-half-minutes-a-day",
-    "ogImage": "/images/autumn-light-akaslompolo-1200.webp",
-    "appendSiteName": false,
-    "fallbackTitle": "Seven and a half minutes a day: how fast Lapland loses its light",
-    "fallbackDescription": "Nobody announces the end of the summer light. In late August Rovaniemi loses about seven and a half minutes of daylight a day, and Utsjoki loses nine.",
-    "fallbackTitleByLang": {
+  "seven-and-a-half-minutes-a-day": {
+    "title": {
+      "en": "Seven and a half minutes a day: how fast Lapland loses its light",
       "fi": "Seitsemän ja puoli minuuttia päivässä",
       "sv": "Sju och en halv minut om dagen",
       "de": "Siebeneinhalb Minuten am Tag: wie schnell Lappland sein Licht verliert (auf Englisch)",
@@ -480,11 +256,10 @@
       "pt-BR": "Sete minutos e meio por dia: a velocidade com que a Lapônia perde a luz (em inglês)",
       "zh-CN": "每天七分半钟：拉普兰的光消失得有多快（英文）"
     },
-    "fallbackDescriptionByLang": {
+    "description": {
+      "en": "Nobody announces the end of the summer light. In late August Rovaniemi loses about seven and a half minutes of daylight a day, and Utsjoki loses nine.",
       "fi": "Kesän valon loppua ei kukaan ilmoita. Se vain vähenee, Rovaniemellä seitsemän ja puoli minuuttia päivässä ja Utsjoella yhdeksän, kunnes eräänä elokuun lopun iltana et enää näe polkua puuvajalle.",
       "sv": "Ingen meddelar när sommarljuset tar slut. Det bara försvinner, sju och en halv minut om dagen i Rovaniemi och nio i Utsjoki, tills du en kväll i slutet av augusti inte längre ser stigen till vedboden."
-    },
-    "copyKey": "post",
-    "canonicalLocale": "en"
+    }
   }
-]
+};

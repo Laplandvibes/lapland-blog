@@ -23,6 +23,9 @@ const fr: SectionCopy = {
     accountMenuAria: 'Menu du compte',
   },
   home: {
+    metaTitle: 'Lapland.blog · Créez et partagez votre blog de voyage',
+    metaDescription:
+      'Transformez votre voyage en Laponie finlandaise en blog de voyage : tenez un journal en chemin et partagez-le sur les réseaux en un geste.',
     heroEyebrow: 'Carnet de voyage · Carte · Partage',
     heroLine1: 'Vous partez en Laponie ?',
     heroLine2: 'Lancez un blog de votre voyage.',
@@ -163,8 +166,8 @@ const fr: SectionCopy = {
     pathsSrLabel: 'Parcours',
   },
   about: {
-    pageTitle: 'À propos',
-    pageDescription:
+    metaTitle: 'À propos',
+    metaDescription:
       'Lapland.blog est une plateforme gratuite de carnet de voyage pour les visiteurs de la Laponie finlandaise. Épinglez des lieux, écrivez des entrées, partagez.',
     eyebrow: 'À propos de la plateforme',
     h1: 'Un carnet de voyage qui mérite d’être conservé.',
@@ -224,8 +227,8 @@ const fr: SectionCopy = {
     stayCta: 'Parcourir',
   },
   destinations: {
-    pageTitle: 'Destinations',
-    pageDescription:
+    metaTitle: 'Destinations de Laponie',
+    metaDescription:
       'Les huit principales destinations de Laponie finlandaise : Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lisez les entrées de chacune.',
     eyebrow: 'Où aller',
     h1Pre: 'Huit lieux.',
@@ -280,9 +283,9 @@ const fr: SectionCopy = {
     placeImageAlt: '{place}, Laponie finlandaise',
   },
   topReads: {
-    pageTitle: 'À lire en priorité',
-    pageDescription:
-      'Par où commencer sur Lapland.blog. Listes de la rédaction : première visite, aurores, cuisine et saisonnières.',
+    metaTitle: 'À lire en priorité',
+    metaDescription:
+      "Par où commencer sur Lapland.blog. Listes de la rédaction : première visite, aurores, cuisine et entrées saisonnières, choisies par l'éditeur.",
     eyebrow: 'Choix de la rédaction',
     h1: 'À lire en priorité.',
     lead: 'Par où commencer. Choix de la rédaction, pas des clics. Au fur et à mesure que de nouvelles entrées paraissent, ces listes s’étoffent.',
@@ -319,8 +322,8 @@ const fr: SectionCopy = {
   archive: {
     placesLabel: 'Lieu',
     allPlaces: 'Tous les lieux',
-    pageTitle: 'Toutes les entrées',
-    pageDescription:
+    metaTitle: 'Toutes les entrées',
+    metaDescription:
       'Tous les récits de Lapland.blog. Aurores, chalets, cuisine, saisons, gens, équipement et lectures longues depuis la Laponie finlandaise.',
     eyebrow: 'Archives',
     h1: 'Toutes les entrées.',

@@ -15,8 +15,8 @@ export default function About() {
   const c = COPY[lang].about;
 
   useSeo({
-    title: c.pageTitle,
-    description: c.pageDescription,
+    title: c.metaTitle,
+    description: c.metaDescription,
     image: 'https://lapland.blog/og/page-about.jpg',
     canonical: canonicalUrl('/about'),
   });

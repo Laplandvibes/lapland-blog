@@ -38,8 +38,8 @@ export default function TopReads() {
   const { posts } = usePosts();
 
   useSeo({
-    title: c.pageTitle,
-    description: c.pageDescription,
+    title: c.metaTitle,
+    description: c.metaDescription,
     canonical: canonicalUrl('/top-reads'),
   });
 

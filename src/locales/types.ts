@@ -64,6 +64,10 @@ export type SectionCopy = {
     decline: string;
   };
   home: {
+    /** <title> and meta description. The prerender reads these same keys (routes.json copyKey "home"), so the
+     *  static HTML and the browser show one text: change it only here. */
+    metaTitle: string;
+    metaDescription: string;
     heroEyebrow: string;
     heroLine1: string;
     heroLine2: string;
@@ -152,8 +156,9 @@ export type SectionCopy = {
     pathsSrLabel: string;
   };
   about: {
-    pageTitle: string;
-    pageDescription: string;
+    /** <title> and meta description: the prerender reads these keys through routes.json copyKey, the page through useSeo. */
+    metaTitle: string;
+    metaDescription: string;
     eyebrow: string;
     h1: string;
     lead: string;
@@ -204,8 +209,8 @@ export type SectionCopy = {
     stayCta: string;
   };
   destinations: {
-    pageTitle: string;
-    pageDescription: string;
+    metaTitle: string;
+    metaDescription: string;
     eyebrow: string;
     h1Pre: string;
     h1Italic: string;
@@ -229,8 +234,8 @@ export type SectionCopy = {
     >;
   };
   topReads: {
-    pageTitle: string;
-    pageDescription: string;
+    metaTitle: string;
+    metaDescription: string;
     eyebrow: string;
     h1: string;
     lead: string;
@@ -262,8 +267,8 @@ export type SectionCopy = {
   archive: {
     placesLabel: string;
     allPlaces: string;
-    pageTitle: string;
-    pageDescription: string;
+    metaTitle: string;
+    metaDescription: string;
     eyebrow: string;
     h1: string;
     lead: string;

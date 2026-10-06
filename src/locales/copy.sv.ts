@@ -74,6 +74,9 @@ const sv: SectionCopy = {
     decline: 'Neka',
   },
   home: {
+    metaTitle: 'Lapland.blog · Starta och dela din reseblogg om Lappland',
+    metaDescription:
+      'Gör din resa i finska Lappland till en reseblogg: för dagbok under resan och dela den på sociala medier med ett tryck. Gratis och klart på några minuter.',
     heroEyebrow: 'Resedagbok · Karta · Dela',
     heroLine1: 'Ska du till Lappland?',
     heroLine2: 'Starta en blogg om din resa.',
@@ -214,9 +217,9 @@ const sv: SectionCopy = {
     pathsSrLabel: 'Vägar in',
   },
   about: {
-    pageTitle: 'Om',
-    pageDescription:
-      'Lapland.blog är en gratis resedagboksplattform för besökare i finska Lappland. Nåla fast platser, skriv inlägg, dela med vänner. Din resa, väl berättad.',
+    metaTitle: 'Om oss',
+    metaDescription:
+      'Lapland.blog är en gratis resedagboksplattform för dig som besöker finska Lappland. Nåla fast platser, skriv inlägg, dela med vänner. Din resa, väl berättad.',
     eyebrow: 'Om plattformen',
     h1: 'En resedagbok värd att spara.',
     lead:
@@ -275,9 +278,9 @@ const sv: SectionCopy = {
     stayCta: 'Bläddra',
   },
   destinations: {
-    pageTitle: 'Resmål',
-    pageDescription:
-      'Finska Lapplands åtta främsta resmål: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Läs fältdagboksinläggen från varje, eller bli först med att skriva ett.',
+    metaTitle: 'Resmål',
+    metaDescription:
+      'Finska Lapplands åtta främsta resmål: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi.',
     eyebrow: 'Vart du ska åka',
     h1Pre: 'Åtta platser.',
     h1Italic: 'Ett Lappland.',
@@ -331,9 +334,9 @@ const sv: SectionCopy = {
     placeImageAlt: '{place}, finska Lappland',
   },
   topReads: {
-    pageTitle: 'Mest lästa',
-    pageDescription:
-      'Var du börjar på Lapland.blog. Utvalda listor: bästa inläggen för förstagångsbesökare, bästa norrskenstexterna, bästa matinläggen, de säsongsbetonade. Valda av redaktören.',
+    metaTitle: 'Mest lästa',
+    metaDescription:
+      'Var du börjar på Lapland.blog. Redaktionens listor: bästa inläggen för förstagångsbesökare, bästa norrskensinläggen, bästa matinläggen, de säsongsbetonade.',
     eyebrow: 'Redaktörens val',
     h1: 'Mest lästa.',
     lead: 'Var du börjar. Utvalt av redaktören, inte av klick. När fler fältdagboksinlägg publiceras växer de här listorna.',
@@ -370,8 +373,8 @@ const sv: SectionCopy = {
   archive: {
     placesLabel: 'Plats',
     allPlaces: 'Alla platser',
-    pageTitle: 'Alla berättelser',
-    pageDescription:
+    metaTitle: 'Alla berättelser',
+    metaDescription:
       'Varje berättelse på Lapland.blog. Norrsken, stugor, mat, årstider, människor, utrustning och längre läsning från finska Lappland.',
     eyebrow: 'Arkiv',
     h1: 'Varje berättelse.',

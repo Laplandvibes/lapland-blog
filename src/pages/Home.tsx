@@ -13,7 +13,7 @@ import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, publisherSchema, faqPageSchema } from '../lib/jsonld';
 import { usePosts } from '../hooks/usePosts';
 import { getImage, isSummerSeason } from '../lib/images';
-import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
+import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { postTextLang } from '../lib/postLang';
 import type { CategorySlug } from '../data/categories';
@@ -21,57 +21,6 @@ import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AppPromoHero } from '../components/AppPromo';
 import { AD_SLOTS } from '../data/adSlots';
 import { Fraasit, ilmanValeja, lauseet, manropeEm } from '../lib/otsikkoRivit';
-
-const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
-  'en': {
-    seoTitle: 'Lapland.blog · Start & Share Your Lapland Travel Blog',
-    seoDescription: 'Turn your Finnish Lapland trip into a travel blog. Keep a diary as you go and share it to social media in one tap. Free and ready in minutes.',
-  },
-  'fi': {
-    seoTitle: 'Lapland.blog · Aloita ja jaa Lapin-matkablogisi',
-    seoDescription: 'Tee Suomen Lapin matkastasi matkablogi. Pidä päiväkirjaa matkan aikana ja jaa se someen yhdellä napautuksella. Ilmainen ja valmis parissa minuutissa.',
-  },
-  'de': {
-    seoTitle: 'Lapland.blog · Starten Sie Ihren Lappland-Reiseblog',
-    seoDescription: 'Machen Sie aus Ihrer Finnisch-Lappland-Reise einen Reiseblog. Unterwegs Tagebuch führen, mit einem Fingertipp teilen. Kostenlos, in Minuten fertig.',
-  },
-  'ja': {
-    seoTitle: 'Lapland.blog · ラップランド旅行ブログを作って共有',
-    seoDescription: 'フィンランド・ラップランドの旅を旅行ブログに。旅しながら日記をつけ、ワンタップでSNSにシェア。無料で、数分で始められます。',
-  },
-  'es': {
-    seoTitle: 'Lapland.blog · Cree y comparta su blog de viaje',
-    seoDescription: 'Convierta su viaje a la Laponia finlandesa en un blog de viaje: lleve un diario sobre la marcha y compártalo en redes con un solo toque. Gratis y listo en minutos.',
-  },
-  'pt-BR': {
-    seoTitle: 'Lapland.blog · Crie e compartilhe seu blog de viagem',
-    seoDescription: 'Transforme sua viagem à Lapônia finlandesa em um blog de viagem: faça um diário durante o trajeto e compartilhe nas redes com um toque. Grátis e pronto em minutos.',
-  },
-  'zh-CN': {
-    seoTitle: 'Lapland.blog · 创建并分享你的拉普兰旅行博客',
-    seoDescription: '把你的芬兰拉普兰之旅变成旅行博客：边走边写日记，一键分享到社交媒体。免费，几分钟即可开始。',
-  },
-  'ko': {
-    seoTitle: 'Lapland.blog · 라플란드 여행 블로그 만들기와 공유하기',
-    seoDescription: '핀란드 라플란드 여행을 나만의 여행 블로그로 만들어 보세요. 여행하면서 일기를 쓰고, 한 번의 탭으로 소셜 미디어에 공유하세요. 무료이며 몇 분이면 시작할 수 있습니다.',
-  },
-  'fr': {
-    seoTitle: 'Lapland.blog · Créez et partagez votre blog de voyage',
-    seoDescription: 'Transformez votre voyage en Laponie finlandaise en blog de voyage : tenez un journal en chemin et partagez-le sur les réseaux en un geste. Gratuit, prêt en quelques minutes.',
-  },
-  'it': {
-    seoTitle: 'Lapland.blog · Crei e condivida il Suo blog di viaggio',
-    seoDescription: 'Trasformi il Suo viaggio in Lapponia finlandese in un blog di viaggio: tenga un diario strada facendo e lo condivida sui social con un tocco. Gratis e pronto in pochi minuti.',
-  },
-  'nl': {
-    seoTitle: 'Lapland.blog · Start en deel uw Lapland-reisblog',
-    seoDescription: 'Maak van uw reis door Fins Lapland een reisblog: houd onderweg een dagboek bij en deel het met één tik op social media. Gratis en in enkele minuten klaar.',
-  },
-  'sv': {
-    seoTitle: 'Lapland.blog · Starta och dela din reseblogg om Lappland',
-    seoDescription: 'Gör din resa i finska Lappland till en reseblogg: för dagbok under resan och dela den på sociala medier med ett tryck. Gratis och klart på några minuter.',
-  },
-};
 
 // Alt texts come from COPY[lang].images at render time (hero: by season, like the file).
 const heroImage = getImage('hero-aurora', '100vw');
@@ -143,10 +92,10 @@ export default function Home() {
   const h1Em = Math.max(manropeEm(c.heroLine1), manropeEm(c.heroLine2));
   const cjkVali = ilmanValeja(lang);
 
-  const m = META[lang];
   useSeo({
-    title: m.seoTitle,
-    description: m.seoDescription,
+    // copy.<kieli>.ts home.metaTitle / metaDescription: sama kenttä, jonka esirenderöinti lukee (routes.json copyKey "home").
+    title: c.metaTitle,
+    description: c.metaDescription,
     image: 'https://lapland.blog/og/page-home.jpg',
     canonical: canonicalUrl('/'),
     jsonLd: faqPageSchema(c.faq),

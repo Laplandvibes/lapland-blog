@@ -74,6 +74,9 @@ const ja: SectionCopy = {
     decline: '拒否する',
   },
   home: {
+    metaTitle: 'Lapland.blog · ラップランド旅行ブログを作って共有',
+    metaDescription:
+      'フィンランド・ラップランドの旅を旅行ブログに。旅しながら日記をつけ、ワンタップでSNSにシェア。無料で、数分で始められます。',
     heroEyebrow: '旅行記 · マップ · シェア',
     heroLine1: 'ラップランドへ行きますか？',
     heroLine2: '旅のブログを始めましょう。',
@@ -214,8 +217,8 @@ const ja: SectionCopy = {
     pathsSrLabel: '入口',
   },
   about: {
-    pageTitle: '当サイトについて',
-    pageDescription:
+    metaTitle: '当サイトについて',
+    metaDescription:
       'Lapland.blogは、フィンランド・ラップランドを訪れる人のための無料の旅行記プラットフォームです。場所にピンを立て、記事を書き、友人と共有。よく語られたあなたの旅。',
     eyebrow: 'プラットフォームについて',
     h1: '残しておきたい旅行記。',
@@ -275,8 +278,8 @@ const ja: SectionCopy = {
     stayCta: '見る',
   },
   destinations: {
-    pageTitle: '目的地',
-    pageDescription:
+    metaTitle: 'ラップランドの目的地',
+    metaDescription:
       'フィンランド・ラップランドの主要8つの目的地：ロヴァニエミ、サーリセルカ、レヴィ、ケミ、イナリ、ムオニオ、ユッラス、ケミヤルヴィ。各地のフィールドジャーナル記事を読むか、最初の記事を書いてください。',
     eyebrow: 'どこへ行くか',
     h1Pre: '八つの場所、',
@@ -331,8 +334,8 @@ const ja: SectionCopy = {
     placeImageAlt: '{place}（フィンランド・ラップランド）',
   },
   topReads: {
-    pageTitle: 'おすすめ記事',
-    pageDescription:
+    metaTitle: 'おすすめ記事',
+    metaDescription:
       'Lapland.blogでの読み始めに。編集者の厳選リスト：初めての方向けのベスト記事、オーロラ記事、食事記事、季節記事。クリック数ではなく編集者の選定。',
     eyebrow: '編集部の厳選',
     h1: 'おすすめ記事。',
@@ -370,8 +373,8 @@ const ja: SectionCopy = {
   archive: {
     placesLabel: '場所',
     allPlaces: 'すべての場所',
-    pageTitle: 'すべての記事',
-    pageDescription:
+    metaTitle: 'すべての記事',
+    metaDescription:
       'Lapland.blog のすべての記事。オーロラ、コテージ、食事、季節、人、装備、フィンランド・ラップランドからの長文記事。',
     eyebrow: 'アーカイブ',
     h1: 'すべての記事。',
@@ -449,7 +452,7 @@ const ja: SectionCopy = {
           'ブーツ、手袋、レイヤリング、バッテリー、カメラ選び。−25°Cで本当に使えるものと、捨てたもの。',
         metaTitle: 'フィンランド・ラップランドで使える装備',
         metaDescription:
-          'ブーツ、手袋、レイヤリング、バッテリー、カメラ選び。−25°Cで本当に使えるものと、私が捨てたもの。',
+          'フィンランド・ラップランド向けのブーツ、手袋、レイヤリング、バッテリー、カメラ選び。−25°Cで本当に使えるものと、私が捨てたもの。',
       },
       stories: {
         name: '読みもの',
