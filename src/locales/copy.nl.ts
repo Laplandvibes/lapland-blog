@@ -125,7 +125,7 @@ const nl: SectionCopy = {
     path2Kicker: '02 · Lezen',
     path2Title: 'Ik wil lezen wat anderen schreven.',
     path2Body:
-      'Met de hand gekozen verhalen uit Finland: wat je meeneemt naar een hut, waar je zalmsoep krijgt en wat die kost, hoe je in Kemi noorderlicht kijkt. Echte prijzen, echte tijden, geen brochuretoon.',
+      'Met de hand gekozen verhalen uit Finland: wat u meeneemt naar een hut, waar u zalmsoep krijgt en wat die kost, hoe u in Kemi naar het noorderlicht kijkt. Echte prijzen, echte tijden, geen brochuretoon.',
     path2Cta: 'Topartikelen',
     path3Kicker: '03 · Schrijven',
     path3Title: 'Ik ben er. Ik wil een blog van mijn reis.',
@@ -206,7 +206,7 @@ const nl: SectionCopy = {
     backToAll: 'Alle bestemmingen',
     networkEyebrow: 'Elders in het netwerk',
     networkH2: 'Meer over deze bestemming',
-    networkLead: 'Dezelfde plek, uitgebreider: waar je slaapt, waar je eet en wat je doet, elk op een eigen site.',
+    networkLead: 'Dezelfde plek, uitgebreider: waar u slaapt, waar u eet en wat u doet, elk op een eigen site.',
     siteLabels: {
       vibes: 'Bestemmingsgids',
       stays: 'Overnachten',
@@ -220,8 +220,8 @@ const nl: SectionCopy = {
     allEntriesLink: 'Alle dagboeken',
     loading: 'Laden…',
     emptyH3: 'Nog geen dagboeken van hier',
-    emptyLead: 'Niemand heeft nog over deze plek geschreven. Ga je erheen, dan kun jij de eerste zijn.',
-    emptyCta: 'Start je eigen blog',
+    emptyLead: 'Niemand heeft nog over deze plek geschreven. Gaat u erheen, dan kunt u de eerste zijn.',
+    emptyCta: 'Start uw eigen blog',
     stayH3: 'Zoek een overnachting',
     stayNote: 'Partnerlink',
     stayCta: 'Bekijken',
