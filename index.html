@@ -215,7 +215,41 @@
     <meta name="apple-mobile-web-app-title" content="Lapland Blog" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="VRMKD7N"></script>
+    <!-- GetYourGuide Integration Analyzer (partner ID VRMKD7N). Piirtaa GYG-widgetit ja kohdistaa
+         varaukset sivustolle, mutta asettaa GetYourGuiden evasteet (visitor_id, session_id), joten se
+         ladataan vasta kun lukija on hyvaksynyt evasteet. Ilman suostumusta widgetit nayttavat oman
+         varapaneelinsa ja aktiviteettilinkit toimivat Workerin kautta. -->
+    <script>
+      (function () {
+        var KEY = 'laplandblog_cookie_consent';
+        var loaded = false;
+        window.lvLoadGyg = function () {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://widget.getyourguide.com/dist/pa.umd.production.min.js';
+          s.setAttribute('data-gyg-partner-id', 'VRMKD7N');
+          document.head.appendChild(s);
+        };
+        function choice() {
+          try { return localStorage.getItem(KEY); } catch (e) { return null; }
+        }
+        var first = choice();
+        if (first === 'accepted') { window.lvLoadGyg(); return; }
+        if (first) return;
+        /* Evastebanneri ei kerro valinnasta tapahtumalla, joten valintaa odotetaan
+           kevyella kyselylla. Kysely loppuu heti kun lukija on valinnut. */
+        var t = setInterval(function () {
+          var v = choice();
+          if (!v) return;
+          clearInterval(t);
+          if (v === 'accepted') window.lvLoadGyg();
+          try { window.dispatchEvent(new Event('lv-consent-change')); } catch (e) { /* vanha selain */ }
+        }, 500);
+      })();
+    </script>
+
     <!-- Umami Cloud — cookieless analytics, no consent gate needed (writes nothing to the browser) -->
     <script async src="https://cloud.umami.is/script.js" data-website-id="88bbdad8-b9aa-49f7-b5ba-efa2dcae240e" data-domains="lapland.blog,www.lapland.blog" data-exclude-hash="true"></script>
       <!-- Self-hosted fonts. Preload is required: without it the
