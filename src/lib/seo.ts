@@ -125,19 +125,14 @@ export function useSeo(opts: SeoOptions) {
     const ogImage = LANDED?.og && LANDED.path === window.location.pathname ? LANDED.og : image;
     setMeta('property', 'og:image', ogImage);
     setMeta('property', 'og:type', type);
-    setMeta('property', 'og:site_name', 'Lapland.blog');
+    // og:site_name EI täällä (8.10.2026): esirenderöijä kirjoittaa sen buildin --siteName-lipusta ("LaplandBlog"),
+    // ja tämä vaihtoi sen jokaisella sivulla muotoon "Lapland.blog" (gate:og-js "korvattu" 134/134). Nimi päätetään
+    // yhdessä paikassa: package.jsonin build-skriptin --siteName.
     setMeta('property', 'og:locale', OG_LOCALE[lang]);
     if (currentUrl) setMeta('property', 'og:url', currentUrl);
 
-    // og:locale:alternate × 10 others
-    document.head.querySelectorAll('meta[property="og:locale:alternate"][data-seo-alt]').forEach((el) => el.remove());
-    SUPPORTED.filter((l) => l !== lang).forEach((l) => {
-      const m = document.createElement('meta');
-      m.setAttribute('property', 'og:locale:alternate');
-      m.setAttribute('content', OG_LOCALE[l]);
-      m.setAttribute('data-seo-alt', 'true');
-      document.head.appendChild(m);
-    });
+    // og:locale:alternate EI täällä (8.10.2026): esirenderöity HTML ei kirjoita sitä, ja Facebook lukee vain
+    // staattisen HTML:n, joten tämän hookin lisäämällä tagilla ei ollut lukijaa (gate:og-js "vain-js" joka sivulla).
 
     setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', title);
