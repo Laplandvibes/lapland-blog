@@ -169,6 +169,37 @@ export function katkokohdat(teksti: string): number[] {
   return [...tulos].sort((p, q) => p - q);
 }
 
+/**
+ * Pitkät katakanasanat (vähintään 7 merkkiä, ei paikannimeä): アクティビティ, アイスフィッシング. keep-allin alla riviä
+ * pidemmän sanan ainoa katko on hätäkatko viimeiseen mahtuvaan merkkiin, joka ei tunne kinsokua: 18 px:n korttiotsikko
+ * 124 px:n laatikossa antoi 夏の / アクティビテ / ィ (laplandactivities /ja/ 360 px, 8.10.2026; ennen 夏のアク / ティビティ).
+ * otsikko.ts käärii sanan elementtiin, jossa selaimen oma rivitys ja strict-kinsoku pätevät (CJK_CSS [data-cjk-pitka]).
+ * Vain katakanasana: sekapalassa (お考えですか？, 知りたいですか？) sisäiset katkot antoivat balancen jakaa palan, vaikka
+ * se olisi mahtunut riville (laplandwork /ja/ 360–412 px: 採用をお考 / えですか？). Paikannimi ei katkea (サンタクロース).
+ * → null jos palassa ei ole pitkää katakanasanaa, muuten palat järjestyksessä.
+ */
+export function katakanaPalat(osa: string): { teksti: string; pitka: boolean }[] | null {
+  const cps = [...osa];
+  const out: { teksti: string; pitka: boolean }[] = [];
+  let i = 0, alku = 0, loytyi = false;
+  while (i < cps.length) {
+    if (!KATA.test(cps[i])) { i++; continue; }
+    let j = i;
+    while (j < cps.length && KATA.test(cps[j])) j++;
+    const sana = cps.slice(i, j).join('');
+    if (j - i > RAJA && !PAIKAT.some((p) => sana.includes(p))) {
+      if (i > alku) out.push({ teksti: cps.slice(alku, i).join(''), pitka: false });
+      out.push({ teksti: sana, pitka: true });
+      alku = j;
+      loytyi = true;
+    }
+    i = j;
+  }
+  if (!loytyi) return null;
+  if (alku < cps.length) out.push({ teksti: cps.slice(alku).join(''), pitka: false });
+  return out;
+}
+
 /** Teksti fraaseiksi katkokohtien kohdalta (testeille ja mittareille). */
 export function fraasit(teksti: string): string[] {
   const cps = [...teksti];

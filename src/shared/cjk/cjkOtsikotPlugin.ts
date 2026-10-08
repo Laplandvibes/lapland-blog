@@ -26,6 +26,10 @@ import type { Plugin } from 'vite';
  * että ilman. break-word = hätäkatko riviä pidemmälle fraasille 360 px:stä ylöspäin; anywhere vasta alle 360 px:n,
  * koska se toisi pilkun rivin alkuun (ラップランド / 、確認) mutta ilman sitä riviä pidempi fraasi
  * (ラップランドへ) levittäisi otsikon kapean ruudun yli.
+ *
+ * [data-cjk-pitka] = vähintään 7 merkin katakanasana (アクティビティ, fraasit.ts katakanaPalat): sen sisällä selaimen
+ * oma rivitys ja strict-kinsoku. Muuten riviä pidempi pala katkeaisi hätäkatkona, joka ei tunne kinsokua
+ * (夏の / アクティビテ / ィ, laplandactivities 8.10.2026).
  */
 export const CJK_CSS = `
 :is(h1, h2, h3, h4, h5, h6, :is(h1, h2, h3, h4, h5, h6) *):has(> wbr) {
@@ -39,6 +43,10 @@ export const CJK_CSS = `
 }
 :is(h1, h2, h3, h4, h5, h6):has(> wbr) *:not(:has(> wbr)) {
   word-break: normal;
+}
+:is(h1, h2, h3, h4, h5, h6) [data-cjk-pitka] {
+  word-break: normal;
+  line-break: strict;
 }
 `;
 

@@ -7,7 +7,7 @@
  */
 import { cloneElement, isValidElement, type ReactNode } from 'react';
 import { Fragment, jsx as reactJsx, jsxs as reactJsxs } from 'react/jsx-runtime';
-import { CJK, katkokohdat } from './fraasit';
+import { CJK, katakanaPalat, katkokohdat } from './fraasit';
 
 const OTSIKKO = /^h[1-6]$/;
 const valimuisti = new Map<string, string[] | null>();
@@ -36,7 +36,10 @@ export function fraasiLapset(teksti: string, key?: string): ReactNode {
   const lapset: ReactNode[] = [];
   p.forEach((osa, n) => {
     if (n > 0) lapset.push(reactJsx('wbr', {}, `w${n}`));
-    lapset.push(osa);
+    // Pitkä katakanasana omaan elementtiinsä: sen sisällä selaimen oma rivitys (CJK_CSS [data-cjk-pitka]).
+    const k = katakanaPalat(osa);
+    if (!k) lapset.push(osa);
+    else k.forEach((x, m) => lapset.push(x.pitka ? reactJsx('span', { 'data-cjk-pitka': '', children: x.teksti }, `p${n}-${m}`) : x.teksti));
   });
   return reactJsxs(Fragment, { children: lapset }, key);
 }
