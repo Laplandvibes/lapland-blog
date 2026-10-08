@@ -27,6 +27,13 @@ const WM_STYLE = { '--lv-wm-k': 5.19, '--lv-wm-max-md': '30px' } as CSSPropertie
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // LV-VALIKKO-VAAKA (8.10.2026): Escape sulkee mobiilivalikon.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
   const [accountOpen, setAccountOpen] = useState(false);
   const accountRef = useRef<HTMLDivElement>(null);
   const { pathname } = useLocation();
@@ -325,14 +332,18 @@ export default function Nav() {
           </div>
       </div>
 
+      {/* LV-VALIKKO-VAAKA (8.10.2026): laatikko oli kiinteän navin sisällä ilman korkeusrajaa, joten vaakapuhelimessa
+          alimmat linkit jäivät ruudun ulkopuolelle. Nyt enintään näkyvän ruudun korkuinen ja vierittyvä,
+          ≥ 640 px linkit palstoina; z-[45] verkostovalikon vihjeen (z 40) yli. */}
       {open && (
-        <div className={`xl:hidden ${mobileDrawerCls}`}>
+        <div className={`xl:hidden ${mobileDrawerCls} max-h-[calc(100vh_-_4rem)] supports-[height:100dvh]:max-h-[calc(100dvh_-_4rem)] overflow-y-auto overscroll-contain relative z-[45]`}>
           <nav
             className="flex flex-col px-6 py-5 gap-4"
             aria-label={c.primaryAria}
           >
             {/* Rivit ≥ 44 px (iOS HIG): mitattu 14.9.2026 20 px korkeiksi 12 kielellä,
                 koska rivi oli pelkkä tekstirivi ilman pystytäytettä. */}
+            <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-x-4 sm:gap-y-0">
             {links.map((link) => (
               <Link
                 key={link.to}
@@ -346,7 +357,7 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
-
+            </div>
 
             {!user ? (
               /* Sama kutsu kuin työpöydän navissa ("Aloita oma blogi"), ei eri sanaa
