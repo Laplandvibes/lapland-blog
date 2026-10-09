@@ -58,7 +58,7 @@ export default function Destinations() {
       <header className="relative pt-16">
         <div className="relative min-h-[58vh] md:min-h-[64vh] flex items-center overflow-hidden">
           <picture>
-            <source srcSet="/images/hero-aurora-winter-1200.webp" type="image/webp" />
+            <source srcSet="/images/hero-aurora-winter-1200.webp 1200w, /images/hero-aurora-winter-1920.webp 1920w, /images/hero-aurora-winter-2560.webp 2560w" sizes="100vw" type="image/webp" />
             <img
               src="/images/hero-aurora-winter-1200.webp"
               alt={COPY[lang].images.auroraPinesAlt}
@@ -66,7 +66,7 @@ export default function Destinations() {
               fetchPriority="high"
               decoding="async"
               width={1200}
-              height={509}
+              height={800}
             />
           </picture>
           <div
