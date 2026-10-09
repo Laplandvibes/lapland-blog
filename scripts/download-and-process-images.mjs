@@ -1,5 +1,9 @@
 // scripts/download-and-process-images.mjs
 //
+// RETIRED 9.10.2026. The AI images this script processed were replaced by real photographs (src/data/photoCredits.ts holds the
+// receipts); running it would overwrite them. AI originals: _reissu-2026-07/_ai-originals-backup/lapland-blog-new/.
+throw new Error('download-and-process-images.mjs is retired: the site images are real photographs (src/data/photoCredits.ts).');
+//
 // Downloads the 17 generated trip-blog images from Google Drive via the
 // Google Workspace CLI, then resizes & converts each to WebP at multiple
 // widths so the site can ship them as proper responsive assets.

@@ -602,13 +602,15 @@ const sv: SectionCopy = {
   },
   images: {
     heroSummerAlt: 'Röda trästugor och en brygga vid en skogsklädd sjöstrand i gyllene kvällsljus',
-    auroraRiverAlt: 'Norrsken över en slingrande älv i en snöig skog, med fotspår i snön i förgrunden',
+    auroraPinesAlt: 'Gröna norrsken över höga tallar, med snö på marken',
     headlampAuroraAlt: 'En ensam vandrare med pannlampa på öppen snö under en bred norrskensbåge, med fjäll vid horisonten',
     duskLakeAlt: 'En sjö med öppet vatten i blå timmens skymning, med snötäckta tallar längs stranden',
     sallaEveningAlt: 'Kvällshimmel från en fjälltopp i Salla: solen lyser genom en glipa i molnen över fjällen',
-    benchAlt: 'En snötäckt bänk nedanför ett upplyst lägenhetsfönster en iskall natt',
-    cabinSmokeAlt: 'En snötäckt timmerstuga vid öppet vatten, med rök ur skorstenen och en låg sol mellan granarna',
-    mugHandsAlt: 'Väderbitna händer som håller en rykande emaljmugg vid en snöig älv',
+    frostAlt: 'Granar och tallar tunga av rimfrost under en violett vinterhimmel',
+    hutAlt: 'En timmerstuga med snötäckt tak bland rimfrostade björkar i lågt morgonljus',
+    mugAlt: 'En handskbeklädd hand håller en emaljmugg full med snö, med snötäckta granar bakom',
+    photoCredit: 'Bilder',
+    licensePD: 'Allmän egendom',
   },
 }
 

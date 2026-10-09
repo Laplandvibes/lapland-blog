@@ -35,9 +35,9 @@
   },
   {
     "slot": "trip-solo-trek",
-    "src": "hf_20260407_105650_0214adc2-1aa6-4afe-9ca4-37b8f83a36c6.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "flickr 52096835539 (John Dickinson, PDM 1.0)",
+    "width": 6000,
+    "height": 4000,
     "sizes": [
       1920,
       1200,
@@ -71,9 +71,9 @@
   },
   {
     "slot": "trip-night-forest",
-    "src": "hf_20260407_105835_5d70e24a-ce55-4552-ac0c-f1f85e11631b.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "commons Pahtaniemi by Juutuanvuono ... - 2.jpg (Ximonic, CC BY-SA 4.0)",
+    "width": 3000,
+    "height": 2000,
     "sizes": [
       1920,
       1200,
@@ -83,9 +83,9 @@
   },
   {
     "slot": "trip-cabin-life",
-    "src": "hf_20260407_105858_cdf878b5-e62b-4be8-88c9-3bd44d445ee8.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "pexels 18601299 (Martin Vemödalen)",
+    "width": 5286,
+    "height": 3671,
     "sizes": [
       1920,
       1200,
@@ -95,9 +95,9 @@
   },
   {
     "slot": "trip-food",
-    "src": "hf_20260407_105923_d1c50bdd-f2fa-4a0f-9f19-d7ba9038fb99.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "commons Salmon soup - Kuusamo, Finland.jpg (Ninara, CC BY 2.0)",
+    "width": 5972,
+    "height": 3872,
     "sizes": [
       1920,
       1200,
@@ -107,11 +107,10 @@
   },
   {
     "slot": "pillar-cold",
-    "src": "hf_20260407_105934_eda0b749-17cc-4421-b37e-a1b80c000d52.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "pexels 4155243 (Ana Eva)",
+    "width": 4032,
+    "height": 3024,
     "sizes": [
-      1920,
       1200,
       800,
       480
@@ -119,11 +118,10 @@
   },
   {
     "slot": "pillar-shelter",
-    "src": "hf_20260407_110013_854c84b2-b663-41e5-ac51-762d733425a6.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "commons Winter Morning (26071971196).jpg (Markus Trienke, CC BY-SA 2.0)",
+    "width": 5438,
+    "height": 3625,
     "sizes": [
-      1920,
       1200,
       800,
       480
@@ -155,9 +153,9 @@
   },
   {
     "slot": "category-cabins",
-    "src": "hf_20260407_110234_07b0fc7b-95d9-46b7-8ccd-db6c223ff59d.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "commons Santa's Cabin on Levi ... - 4.jpg (Ximonic, CC BY-SA 4.0)",
+    "width": 5000,
+    "height": 3333,
     "sizes": [
       1920,
       1200,
@@ -179,9 +177,9 @@
   },
   {
     "slot": "category-seasons",
-    "src": "hf_20260407_110313_89330a4d-befe-4c49-91af-d5eed357b699.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "pexels 259653 (Pixabay)",
+    "width": 4627,
+    "height": 3068,
     "sizes": [
       1920,
       1200,
@@ -191,11 +189,10 @@
   },
   {
     "slot": "pillar-people",
-    "src": "hf_20260407_110341_1b518ee0-2a79-44d7-a753-643cc6005a3c.jpeg",
-    "width": 1536,
-    "height": 1024,
+    "src": "pexels 6163874 (Marko Klaric)",
+    "width": 4272,
+    "height": 2856,
     "sizes": [
-      1920,
       1200,
       800,
       480

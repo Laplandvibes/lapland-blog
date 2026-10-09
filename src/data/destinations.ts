@@ -69,7 +69,7 @@ export const DESTINATIONS: Destination[] = [
     localName: { ja: 'ムオニオ' },
     region: 'West Lapland, northern lights belt',
     blurb: 'Pallas-Yllästunturi national park edge. Among the highest aurora-visibility readings in Europe.',
-    hero: '/images/pillar-cold-1200.webp',
+    hero: '/images/dest-muonio-1200.webp',
   },
   {
     slug: 'yllas',
@@ -77,7 +77,7 @@ export const DESTINATIONS: Destination[] = [
     localName: { ja: 'ユッラス' },
     region: 'West Lapland, fell country',
     blurb: 'Quieter sister to Levi. Wider trails, slower pace, the fell that owns its own seasons.',
-    hero: '/images/pillar-shelter-1200.webp',
+    hero: '/images/dest-yllas-1200.webp',
   },
   {
     slug: 'kemijarvi',

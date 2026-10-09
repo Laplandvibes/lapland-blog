@@ -4,6 +4,7 @@ import { Search } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
+import PhotoCredits from '../components/PhotoCredits';
 import Reveal from '../components/Reveal';
 import PostCard from '../components/PostCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
@@ -241,6 +242,8 @@ export default function Archive() {
           )}
         </div>
       </section>
+
+      <PhotoCredits srcs={filtered.map((p) => p.heroImage)} />
 
       <Newsletter />
       <Footer />

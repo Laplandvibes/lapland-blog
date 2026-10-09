@@ -427,13 +427,16 @@ export type SectionCopy = {
   /** Descriptions of the site photos (hero, cards), checked against the images. */
   images: {
     heroSummerAlt: string;
-    auroraRiverAlt: string;
+    auroraPinesAlt: string;
     headlampAuroraAlt: string;
     duskLakeAlt: string;
     sallaEveningAlt: string;
-    benchAlt: string;
-    cabinSmokeAlt: string;
-    mugHandsAlt: string;
+    frostAlt: string;
+    hutAlt: string;
+    mugAlt: string;
+    /** Prefix of the page credit line ("Photos"): components/PhotoCredits.tsx. */
+    photoCredit: string;
+    licensePD: string;
   };
   /** /by/:handle reader profile page. {name}, {bio}, {date}, {n} are filled with fillCopy. */
   authorPage: {

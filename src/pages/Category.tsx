@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
+import PhotoCredits from '../components/PhotoCredits';
 import Reveal from '../components/Reveal';
 import PostCard from '../components/PostCard';
 import { categoryBySlug, categories } from '../data/categories';
@@ -149,6 +150,8 @@ export default function Category() {
           </div>
         </div>
       </section>
+
+      <PhotoCredits srcs={postsInCat.map((p) => p.heroImage)} />
 
       <Newsletter />
       <Footer />

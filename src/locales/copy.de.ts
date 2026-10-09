@@ -604,13 +604,15 @@ const de: SectionCopy = {
   },
   images: {
     heroSummerAlt: 'Rote Holzhütten und ein Steg an einem bewaldeten Seeufer im goldenen Abendlicht',
-    auroraRiverAlt: 'Polarlichter über einem gewundenen Fluss in einem verschneiten Wald, im Vordergrund Fußspuren im Schnee',
+    auroraPinesAlt: 'Grüne Polarlichter über hohen Kiefern, am Boden liegt Schnee',
     headlampAuroraAlt: 'Eine einsame Gestalt mit Stirnlampe auf offener Schneefläche unter einem weiten Polarlichtbogen, am Horizont Fjells',
     duskLakeAlt: 'Ein See mit offenem Wasser in der blauen Stunde, am Ufer verschneite Kiefern',
     sallaEveningAlt: 'Abendhimmel von einem Fjellgipfel in Salla: Die Sonne scheint durch eine Wolkenlücke über den Fjells',
-    benchAlt: 'Eine verschneite Bank unter einem erleuchteten Wohnungsfenster in einer frostigen Nacht',
-    cabinSmokeAlt: 'Eine verschneite Blockhütte am offenen Wasser, Rauch steigt aus dem Schornstein, eine tiefe Sonne scheint durch die Fichten',
-    mugHandsAlt: 'Wettergegerbte Hände halten einen dampfenden Emaillebecher an einem verschneiten Fluss',
+    frostAlt: 'Fichten und Kiefern voller Raureif unter einem violetten Winterhimmel',
+    hutAlt: 'Eine Blockhütte mit Schneedach zwischen bereiften Birken in der tiefen Morgensonne',
+    mugAlt: 'Eine behandschuhte Hand hält einen mit Schnee gefüllten Emaillebecher, dahinter verschneite Fichten',
+    photoCredit: 'Fotos',
+    licensePD: 'Gemeinfrei',
   },
 };
 

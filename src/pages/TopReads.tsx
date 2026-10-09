@@ -15,6 +15,7 @@ import type { ComponentType } from 'react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
+import PhotoCredits from '../components/PhotoCredits';
 import Reveal from '../components/Reveal';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import type { Post } from '../data/posts';
@@ -232,6 +233,8 @@ export default function TopReads() {
           </Reveal>
         </div>
       </section>
+
+      <PhotoCredits srcs={[editorsTop?.heroImage, ...sections.flatMap((s) => s.posts.map((p) => p.heroImage))]} />
 
       <Newsletter />
       <Footer />

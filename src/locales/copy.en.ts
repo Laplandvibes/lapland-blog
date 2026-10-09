@@ -602,13 +602,15 @@ const en: SectionCopy = {
   },
   images: {
     heroSummerAlt: 'Red wooden cabins and a jetty on a wooded lakeshore in golden evening light',
-    auroraRiverAlt: 'Northern lights over a winding river in a snowy forest, with footprints in the snow in the foreground',
+    auroraPinesAlt: 'Green northern lights above tall pines, snow on the ground below',
     headlampAuroraAlt: 'A lone walker with a headlamp on open snow under a wide aurora arc, with fells on the horizon',
     duskLakeAlt: 'A lake with open water at blue-hour dusk, with snow-covered pines along the shore',
     sallaEveningAlt: 'Evening sky from a fell top in Salla: the sun shines through a gap in the clouds above the fells',
-    benchAlt: 'A snow-covered bench below a lit apartment window on a freezing night',
-    cabinSmokeAlt: 'A snow-covered log cabin by open water, with smoke rising from the chimney and a low sun through the spruces',
-    mugHandsAlt: 'Weathered hands holding a steaming enamel mug by a snowy river',
+    frostAlt: 'Spruces and pines heavy with hoarfrost under a violet winter sky',
+    hutAlt: 'A snow-roofed log hut among frosted birches in the low morning sun',
+    mugAlt: 'A gloved hand holds an enamel mug filled with snow, snowy spruces behind',
+    photoCredit: 'Photos',
+    licensePD: 'Public domain',
   },
 };
 

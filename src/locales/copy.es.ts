@@ -602,13 +602,15 @@ const es: SectionCopy = {
   },
   images: {
     heroSummerAlt: 'Cabañas de madera rojas y un muelle en la orilla boscosa de un lago, con la luz dorada del atardecer',
-    auroraRiverAlt: 'Aurora boreal sobre un río sinuoso en un bosque nevado, con huellas en la nieve en primer plano',
+    auroraPinesAlt: 'Auroras boreales verdes sobre pinos altos, con nieve en el suelo',
     headlampAuroraAlt: 'Una figura solitaria con linterna frontal sobre la nieve abierta, bajo un amplio arco de aurora boreal, con colinas en el horizonte',
     duskLakeAlt: 'Un lago de aguas aún sin congelar en la hora azul, con pinos nevados en la orilla',
     sallaEveningAlt: 'Cielo del atardecer desde la cima de una colina en Salla: el sol asoma entre las nubes sobre las colinas',
-    benchAlt: 'Una banca cubierta de nieve bajo la ventana iluminada de un departamento, en una noche helada',
-    cabinSmokeAlt: 'Una cabaña de troncos nevada junto al agua sin congelar, con humo saliendo de la chimenea y un sol bajo entre los abetos',
-    mugHandsAlt: 'Manos curtidas sostienen una taza esmaltada humeante junto a un río nevado',
+    frostAlt: 'Abetos y pinos cubiertos de escarcha bajo un cielo invernal violeta',
+    hutAlt: 'Una cabaña de troncos con el tejado nevado entre abedules escarchados, bajo el sol bajo de la mañana',
+    mugAlt: 'Una mano enguantada sostiene una taza esmaltada llena de nieve, con abetos nevados detrás',
+    photoCredit: 'Fotos',
+    licensePD: 'Dominio público',
   },
 };
 

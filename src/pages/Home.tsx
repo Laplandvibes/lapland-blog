@@ -19,6 +19,7 @@ import { postTextLang } from '../lib/postLang';
 import type { CategorySlug } from '../data/categories';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AppPromoHero } from '../components/AppPromo';
+import PhotoCredits from '../components/PhotoCredits';
 import { AD_SLOTS } from '../data/adSlots';
 import { Fraasit, ilmanValeja, lauseet, manropeEm } from '../lib/otsikkoRivit';
 
@@ -33,7 +34,7 @@ interface PillarMeta {
   accent: AccentColor;
   image: ReturnType<typeof getImage>;
   /** Image description in COPY[lang].images. */
-  altKey: 'benchAlt' | 'cabinSmokeAlt' | 'mugHandsAlt';
+  altKey: 'frostAlt' | 'hutAlt' | 'mugAlt';
   /** Category slugs — labels resolve from COPY[lang].category.themes so the
       link chips localize like everything else. */
   links: { slug: CategorySlug; to: string }[];
@@ -43,7 +44,7 @@ const PILLAR_META: PillarMeta[] = [
   {
     accent: 'green',
     image: getImage('pillar-cold', '(max-width: 768px) 100vw, 33vw'),
-    altKey: 'benchAlt',
+    altKey: 'frostAlt',
     links: [
       { slug: 'aurora', to: '/category/aurora' },
       { slug: 'seasons', to: '/category/seasons' },
@@ -52,7 +53,7 @@ const PILLAR_META: PillarMeta[] = [
   {
     accent: 'pink',
     image: getImage('pillar-shelter', '(max-width: 768px) 100vw, 33vw'),
-    altKey: 'cabinSmokeAlt',
+    altKey: 'hutAlt',
     links: [
       { slug: 'cabins', to: '/category/cabins' },
       { slug: 'food', to: '/category/food' },
@@ -61,7 +62,7 @@ const PILLAR_META: PillarMeta[] = [
   {
     accent: 'blue',
     image: getImage('pillar-people', '(max-width: 768px) 100vw, 33vw'),
-    altKey: 'mugHandsAlt',
+    altKey: 'mugAlt',
     links: [
       { slug: 'people', to: '/category/people' },
       { slug: 'stories', to: '/category/stories' },
@@ -120,7 +121,7 @@ export default function Home() {
           src={heroImage.src}
           srcSet={heroImage.srcSet}
           sizes={heroImage.sizes}
-          alt={isSummerSeason() ? COPY[lang].images.heroSummerAlt : COPY[lang].images.auroraRiverAlt}
+          alt={isSummerSeason() ? COPY[lang].images.heroSummerAlt : COPY[lang].images.auroraPinesAlt}
           className="absolute inset-0 w-full h-full object-cover animate-kenburns"
           fetchPriority="high"
           decoding="async"
@@ -675,6 +676,9 @@ export default function Home() {
           </dl>
         </div>
       </section>
+
+      {/* Photo credits: hero, the three pillars and the stories shown above (cards are links, so the credit is listed here). */}
+      <PhotoCredits srcs={[heroImage.src, ...PILLAR_META.map((m) => m.image.src), ...allPosts.slice(0, 9).map((p) => p.heroImage)]} />
 
       <Newsletter />
       <Footer />

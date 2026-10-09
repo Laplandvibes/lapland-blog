@@ -113,12 +113,12 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'trip-cabin-life': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Warm-lit log cabin at night with footprints in fresh snow',
+    alt: 'A small carved wooden hut under heavy snow, low sun glowing through snow-laden spruces',
   },
   'trip-food': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Bowl of Finnish salmon soup with dill, rye bread and a curl of butter',
+    alt: 'A bowl of creamy salmon soup with two slices of buttered rye bread and a glass of red juice',
   },
   'trip-forest-walk': {
     sizes: [1200, 800, 480],
@@ -128,7 +128,7 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'trip-night-forest': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Snow-draped spruce forest at night under a starry sky',
+    alt: 'Inari, Finnish Lapland: a white wooden marker on a snow-covered hill under a blue sky',
   },
   'trip-silence': {
     sizes: [1200, 800, 480],
@@ -138,23 +138,23 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'trip-solo-trek': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Solo hiker disappearing into a quiet forest trail at sunset',
+    alt: 'The Candle Bridge (Jätkänkynttilä) in Rovaniemi at dusk, a low moon over the frozen Kemijoki',
   },
 
   'pillar-cold': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'A snow-covered bench below a lit apartment window on a freezing night',
+    alt: 'Spruces and pines heavy with hoarfrost under a violet winter sky',
   },
   'pillar-shelter': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'A snow-covered log cabin by open water, with smoke rising from the chimney and a low sun through the spruces',
+    alt: 'A snow-roofed log hut among frosted birches in the low morning sun',
   },
   'pillar-people': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Weathered hands holding a steaming enamel mug by a snowy river',
+    alt: 'A gloved hand holds an enamel mug filled with snow, snowy spruces behind',
   },
 
   'category-aurora': {
@@ -165,7 +165,7 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'category-cabins': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Cabin interior with wood stove, folded wool blankets and a steaming mug',
+    alt: 'A weathered timber cabin on a rocky fell in autumn colours, Levi',
   },
   'category-food': {
     sizes: [1200, 800, 480],
@@ -175,7 +175,7 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'category-seasons': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'Solitary birch tree split half summer / half winter',
+    alt: 'A lone snow-dusted pine on open snowy ground under a violet and orange dusk sky',
   },
 
   'aside-vesa': {

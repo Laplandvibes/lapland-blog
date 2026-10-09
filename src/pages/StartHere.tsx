@@ -5,6 +5,7 @@ import { ArrowRight, BookOpenText, MapPinned, PenLine, BedDouble, Plane, Compass
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
+import PhotoCredits from '../components/PhotoCredits';
 import Reveal from '../components/Reveal';
 import PostCard from '../components/PostCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
@@ -315,6 +316,8 @@ export default function StartHere() {
           </div>
         </section>
       )}
+
+      <PhotoCredits srcs={['/images/plan-stay-1200.webp', '/images/plan-transport-1200.webp', '/images/plan-do-1200.webp', '/images/plan-eat-1200.webp', ...posts.map((p) => p.heroImage)]} />
 
       <Newsletter />
       <Footer />

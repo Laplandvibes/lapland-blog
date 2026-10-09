@@ -603,13 +603,15 @@ const fi: SectionCopy = {
   },
   images: {
     heroSummerAlt: 'Punaisia puumökkejä ja laituri metsäisellä järvenrannalla kultaisessa iltavalossa',
-    auroraRiverAlt: 'Revontulet mutkittelevan joen yllä lumisessa metsässä, etualalla jalanjälkiä hangessa',
+    auroraPinesAlt: 'Vihreät revontulet korkeiden mäntyjen yllä, maassa lunta',
     headlampAuroraAlt: 'Yksinäinen kulkija otsalampun kanssa lumisella aukealla leveän revontulikaaren alla, taivaanrannassa tuntureita',
     duskLakeAlt: 'Sula järvi sinisen hetken hämärässä, rannalla lumisia mäntyjä',
     sallaEveningAlt: 'Iltataivas tunturin laelta Sallassa: aurinko paistaa pilvien raosta tunturien yllä',
-    benchAlt: 'Luminen penkki valaistun kerrostaloikkunan alla pakkasyönä',
-    cabinSmokeAlt: 'Luminen hirsimökki sulan veden rannalla, piipusta nousee savua ja matala aurinko paistaa kuusten välistä',
-    mugHandsAlt: 'Ahavoituneet kädet pitelevät höyryävää emalimukia lumisen joen rannalla',
+    frostAlt: 'Kuuran peittämiä kuusia ja mäntyjä violetin talvitaivaan alla',
+    hutAlt: 'Lumikattoinen hirsikoppi huurteisten koivujen keskellä matalassa aamuauringossa',
+    mugAlt: 'Käsine kädessä emalimuki täynnä lunta, taustalla lumisia kuusia',
+    photoCredit: 'Kuvat',
+    licensePD: 'Tekijänoikeusvapaa',
   },
 };
 

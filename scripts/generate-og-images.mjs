@@ -44,7 +44,9 @@ const CARDS = [
   { slug: 'page-home', src: 'hero-aurora-1920.webp', kicker: 'FREE TRAVEL-BLOG PLATFORM', focus: 'attention' },
   { slug: 'page-destinations', src: 'hero-dusk-lake-1920.webp', kicker: 'EIGHT PLACES · ONE LAPLAND', focus: 'attention' },
   { slug: 'page-about', src: 'aside-vesa-1200.webp', kicker: 'ABOUT LAPLAND.BLOG', focus: 'attention' },
-  { slug: 'page-stories', src: 'trip-night-forest-1200.webp', kicker: 'EVERY FIELD-JOURNAL ENTRY', focus: 'attention' },
+  // 9.10.2026: trip-night-forest is now a CC BY-SA photograph (Inari), which may not go into a card (lv_permanent_rules 34.2):
+  // the card uses the Pexels aurora hero instead.
+  { slug: 'page-stories', src: 'hero-aurora-winter-1200.webp', kicker: 'EVERY FIELD-JOURNAL ENTRY', focus: 'attention' },
 ];
 
 // Bottom-anchored scrim + brand lockup. Pink "#", white "LAPLAND", pink ".BLOG"

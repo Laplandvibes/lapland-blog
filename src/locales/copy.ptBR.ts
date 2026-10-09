@@ -602,13 +602,15 @@ const ptBR: SectionCopy = {
   },
   images: {
     heroSummerAlt: 'Cabanas de madeira vermelhas e um píer na margem arborizada de um lago, na luz dourada do fim de tarde',
-    auroraRiverAlt: 'Aurora boreal sobre um rio sinuoso em uma floresta nevada, com pegadas na neve em primeiro plano',
+    auroraPinesAlt: 'Auroras boreais verdes sobre pinheiros altos, com neve no chão',
     headlampAuroraAlt: 'Uma figura solitária com lanterna de cabeça sobre a neve aberta, sob um amplo arco de aurora boreal, com montes no horizonte',
     duskLakeAlt: 'Um lago ainda sem gelo na hora azul, com pinheiros cobertos de neve na margem',
     sallaEveningAlt: 'Céu de fim de tarde do alto de um monte em Salla: o sol aparece por uma fresta nas nuvens sobre os montes',
-    benchAlt: 'Um banco coberto de neve sob a janela iluminada de um apartamento, em uma noite gelada',
-    cabinSmokeAlt: 'Uma cabana de toras coberta de neve à beira da água sem gelo, com fumaça saindo da chaminé e o sol baixo entre os abetos',
-    mugHandsAlt: 'Mãos calejadas segurando uma caneca esmaltada fumegante à beira de um rio coberto de neve',
+    frostAlt: 'Abetos e pinheiros cobertos de geada sob um céu de inverno violeta',
+    hutAlt: 'Uma cabana de toras com telhado de neve entre bétulas geladas, sob o sol baixo da manhã',
+    mugAlt: 'Uma mão enluvada segura uma caneca esmaltada cheia de neve, com abetos nevados ao fundo',
+    photoCredit: 'Fotos',
+    licensePD: 'Domínio público',
   },
 };
 

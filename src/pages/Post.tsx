@@ -10,6 +10,8 @@ import ReadingProgress from '../components/ReadingProgress';
 import TableOfContents from '../components/TableOfContents';
 import AuthorBio from '../components/AuthorBio';
 import PostCard from '../components/PostCard';
+import PhotoCredits from '../components/PhotoCredits';
+import { wideSrcSet } from '../data/photoCredits';
 import Reveal from '../components/Reveal';
 import ShareBar from '../components/ShareBar';
 import BannerAd from '../components/BannerAd';
@@ -227,6 +229,8 @@ export default function Post() {
         <div className="relative h-[64vh] min-h-[440px] max-h-[720px] overflow-hidden bg-night-light">
           <img
             src={post.heroImage}
+            srcSet={wideSrcSet(post.heroImage)}
+            sizes="100vw"
             alt={post.heroAlt}
             lang={textLang}
             className="absolute inset-0 w-full h-full object-cover object-[50%_42%]"
@@ -448,6 +452,9 @@ export default function Post() {
           </div>
         </section>
       )}
+
+      {/* Photo credit of the hero (the sheet overlaps the hero, so the line sits under the article) and of the cards above. */}
+      <PhotoCredits srcs={[post.heroImage, ...related.map((p) => p.heroImage)]} />
 
       <Newsletter />
       <Footer />

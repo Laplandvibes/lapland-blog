@@ -18,6 +18,7 @@ import type { Post } from '../data/posts';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { fillCopy } from '../lib/copyTemplate';
+import PhotoCredits from '../components/PhotoCredits';
 
 
 function countMatching(posts: Post[], slug: string): number {
@@ -60,7 +61,7 @@ export default function Destinations() {
             <source srcSet="/images/hero-aurora-winter-1200.webp" type="image/webp" />
             <img
               src="/images/hero-aurora-winter-1200.webp"
-              alt={COPY[lang].images.auroraRiverAlt}
+              alt={COPY[lang].images.auroraPinesAlt}
               className="absolute inset-0 w-full h-full object-cover object-[50%_45%]"
               fetchPriority="high"
               decoding="async"
@@ -138,6 +139,7 @@ export default function Destinations() {
       </section>
 
       <div className="bg-night text-snow">
+        <PhotoCredits srcs={['/images/hero-aurora-winter-1200.webp', ...DESTINATIONS.map((d) => d.hero)]} />
         <Newsletter />
         <Footer />
       </div>

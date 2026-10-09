@@ -31,6 +31,8 @@ import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { fillCopy } from '../lib/copyTemplate';
+import PhotoCredits from '../components/PhotoCredits';
+import { wideSrcSet } from '../data/photoCredits';
 
 export default function Destination() {
   const lang = useLang();
@@ -80,6 +82,8 @@ export default function Destination() {
         <div className="relative h-[42vh] min-h-[280px] md:h-[52vh] overflow-hidden">
           <img
             src={d.hero}
+            srcSet={wideSrcSet(d.hero)}
+            sizes="100vw"
             alt={fillCopy(COPY[lang].destinations.placeImageAlt, { place: placeName(d, lang) })}
             className="w-full h-full object-cover"
             fetchPriority="high"
@@ -258,6 +262,7 @@ export default function Destination() {
       </section>
 
       <div className="bg-night text-snow">
+        {d && <PhotoCredits srcs={[d.hero, ...omat.map((p) => p.heroImage)]} />}
         <Newsletter />
         <Footer />
       </div>
