@@ -165,7 +165,7 @@ const REGISTRY: Record<ImageSlot, ImageMeta> = {
   'category-cabins': {
     sizes: [1200, 800, 480],
     ratio: '3:2',
-    alt: 'A weathered timber cabin on a rocky fell in autumn colours, Levi',
+    alt: 'A weathered log cabin in deep snow among pines, sunlight on the roof',
   },
   'category-food': {
     sizes: [1200, 800, 480],

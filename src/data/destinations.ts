@@ -45,7 +45,7 @@ export const DESTINATIONS: Destination[] = [
     localName: { ja: 'レヴィ' },
     region: 'West Lapland, fell country',
     blurb: "Finland's biggest ski resort. Direct flights from Helsinki in winter. Family-friendly basecamp.",
-    hero: '/images/category-cabins-1200.webp',
+    hero: '/images/dest-levi-1200.webp',
   },
   {
     slug: 'kemi',
