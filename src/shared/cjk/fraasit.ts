@@ -128,7 +128,10 @@ export function katkokohdat(teksti: string): number[] {
         // Katakanasanan jälkeinen hiraganasana (ハスキー|そり, スキー|したい) on oma sanansa, ei taivutusta: pehmeä.
         // Ilman sitä ハスキーそり・ oli 7 merkin yksikkö, joka katkesi hätäkatkona ・:n eteen (hubi 768 px, 8.10.2026).
         const katakananJalkeen = KATA.test(a) && nyt.length >= 2 && [...nytTeksti].every((c) => HIRA.test(c)) && !JA_PARTIKKELI_PITKA.test(nytTeksti);
-        l = apuverbi || katakananJalkeen || JA_PARTIKKELI.test(edTeksti) ? 'pehmea' : 'kova';
+        // Kaksi partikkelia peräkkäin on yksi yhdyspartikkeli (へ|の, に|は, で|も): ei katkoa niiden väliin. ICU antaa
+        // ラップランドへの muodossa ラップランド|へ|の, ja ilman tätä otsikko katkesi "ラップランドへ / の行き方" (hubi 16.10.2026).
+        const partikkeliJono = JA_PARTIKKELI.test(nytTeksti); // vain yksimerkkinen: PITKA-listassa on myös でき/です (が|できます saa katketa)
+        l = apuverbi || katakananJalkeen || (JA_PARTIKKELI.test(edTeksti) && !partikkeliJono) ? 'pehmea' : 'kova';
       } else if (HAN.test(a) && HAN.test(b)) l = ed.length >= 2 && nyt.length >= 2 ? 'pehmea' : 'kova'; // kanjiyhdyssana
       else if (KATA.test(a) && KATA.test(b) && (ed.length <= 2 || nyt.length <= 2)) {
         // ICU pilkkoo tuntemattoman vierassanan ≤ 2 merkin paloiksi (ハス|キー), joiden väliin ei katketa. Pidennysmerkkiin
