@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import { usePosts } from '../hooks/usePosts';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { AppPromoAurora } from '../components/AppPromo';
 
 export default function Category() {
   const lang = useLang();
@@ -119,6 +120,17 @@ export default function Category() {
           )}
         </div>
       </section>
+
+      {/* Revontulikategorian lukijalle appin revontuliyksikkö: nappi avaa appin revontulinäkymän (tämän yön
+          todennäköisyys tunneittain). Vain kategoriasivulle, ei juttuihin: "Why I stopped chasing the aurora
+          with an app" kertoo juuri sovelluksen jättämisestä, eikä mainos kuulu sen alle (19.10.2026). */}
+      {category.slug === 'aurora' && (
+        <section className="px-4 sm:px-6 lg:px-8 pb-16">
+          <div className="max-w-5xl mx-auto">
+            <AppPromoAurora placement="category_aurora" />
+          </div>
+        </section>
+      )}
 
       {/* Other categories */}
       <section className="px-4 sm:px-6 lg:px-8 pb-24">
