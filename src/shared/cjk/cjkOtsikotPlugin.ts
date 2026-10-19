@@ -27,14 +27,38 @@ import type { Plugin } from 'vite';
  * koska se toisi pilkun rivin alkuun (ラップランド / 、確認) mutta ilman sitä riviä pidempi fraasi
  * (ラップランドへ) levittäisi otsikon kapean ruudun yli.
  *
- * [data-cjk-pitka] = vähintään 7 merkin katakanasana (アクティビティ, fraasit.ts katakanaPalat): sen sisällä selaimen
- * oma rivitys ja strict-kinsoku. Muuten riviä pidempi pala katkeaisi hätäkatkona, joka ei tunne kinsokua
- * (夏の / アクティビテ / ィ, laplandactivities 8.10.2026).
+ * [data-cjk-pitka] = fraasi, jossa on vähintään 7 merkin katakanasana (アクティビティ, fraasit.ts katakanaPalat): sen
+ * sisällä selaimen oma rivitys ja strict-kinsoku. Muuten riviä pidempi pala katkeaisi hätäkatkona, joka ei tunne
+ * kinsokua (夏の / アクティビテ / ィ, laplandactivities 8.10.2026). inline-block (19.10.2026): pelkällä inline-
+ * elementillä balance katkaisi sanan silloinkin, kun fraasiraja olisi riittänyt (信頼の予約プ / ラットフォーム,
+ * イナリ湖のス / ノーモービル; laplandstays /ja/ 0 → 19 löydöstä, activities 30 ja work 8 livenä). inline-block on
+ * atominen: se katkeaa sisältä vain, jos fraasi yksin ei mahdu riville. Ei gradienttitekstin sisällä (bg-clip-text-luokka
+ * tai style="…background-clip: text", laplandnaturen herossa):
+ * WebKit ei piirrä inline-blockin tekstiä vanhemman background-clip: text -taustalla (mitattu 0 px, Chromium piirtää).
+ * text-decoration: inherit, koska alleviivaus ei periydy atomiseen elementtiin.
+ * Flex- tai grid-otsikon (<h3 class="flex items-center gap-2"><Icon />{teksti}</h3>) suora lapsi-elementti on oma
+ * flex-itemnsä: span irrotti fraasin muusta tekstistä, joka rivittyi erikseen gapin päässä (laplandvisit /ja/
+ * what-to-pack/ 360 px: スノー / モービル・ + ハスキーサファリ vierellä; koski myös 8.10. inline-versiota).
+ * display: contents palauttaa tekstin samaan anonyymiin itemiin (<wbr> ei pilko sitä, mitattu Chromium + WebKit).
+ *
+ * Japanin otsikko alle 640 px:n leveydellä enintään 36 px (vain Tailwindin pohjakoko text-5xl … text-9xl, ilman
+ * leveysetuliitettä; sm: ja isommat ennallaan). Japanin merkki on täysleveä: 48 px:n otsikkoon mahtuu 360 px:n
+ * puhelimessa 6,7 merkkiä, ja tavallinen 7–8 merkin fraasi (ラップランドを, 夢見ていますか？, フィンランドの)
+ * katkesi hätäkatkona ilman kinsokua: ラップランド / を, お手伝いしま / す。, フリーライド / ・ / フィンランド
+ * (laplandvisit, laplandskiresorts, laplandstays 19.10.2026). 36 px:llä riville mahtuu 8,9 merkkiä. Latinan
+ * Bebas on kondensoitu (≈ 0,4 em), joten muihin kieliin ei kosketa; kiinan fraasit ovat 2–4 merkkiä eivätkä
+ * tarvinneet tätä (mitattu /cn/).
+ *
+ * min-width: 0: keep-all kasvattaa elementin vähimmäisleveyden pisimmän fraasin mittaiseksi, ja flex- tai grid-itemin
+ * oletus min-width: auto venytti otsikon vanhempansa yli (laplandgifts /ja/ 768 px: <h3> ikonin vieressä flex-rivissä,
+ * ラップランド製の 246 px 139 px:n kortissa, 75 px yli). Ilman keep-alliä otsikko kutistui; min-width: 0 palauttaa sen,
+ * ja riviä pidempi fraasi katkeaa break-wordilla kortin sisällä. Tavalliseen lohko-otsikkoon tällä ei ole vaikutusta.
  */
 export const CJK_CSS = `
 :is(h1, h2, h3, h4, h5, h6, :is(h1, h2, h3, h4, h5, h6) *):has(> wbr) {
   word-break: keep-all;
   overflow-wrap: break-word;
+  min-width: 0;
 }
 @media (max-width: 359.98px) {
   :is(h1, h2, h3, h4, h5, h6, :is(h1, h2, h3, h4, h5, h6) *):has(> wbr) {
@@ -47,6 +71,18 @@ export const CJK_CSS = `
 :is(h1, h2, h3, h4, h5, h6) [data-cjk-pitka] {
   word-break: normal;
   line-break: strict;
+}
+:is(h1, h2, h3, h4, h5, h6) [data-cjk-pitka]:not([class*="bg-clip-text"] *, [style*="background-clip"] *) {
+  display: inline-block;
+  text-decoration: inherit;
+}
+:is(h1, h2, h3, h4, h5, h6):is([class*="flex"], [class*="grid"]) > [data-cjk-pitka] {
+  display: contents;
+}
+@media (max-width: 639.98px) {
+  :is(h1, h2, h3, h4, h5, h6):lang(ja):is([class~="text-5xl"], [class~="text-6xl"], [class~="text-7xl"], [class~="text-8xl"], [class~="text-9xl"]) {
+    font-size: 2.25rem;
+  }
 }
 `;
 

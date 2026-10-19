@@ -36,12 +36,33 @@ export function fraasiLapset(teksti: string, key?: string): ReactNode {
   const lapset: ReactNode[] = [];
   p.forEach((osa, n) => {
     if (n > 0) lapset.push(reactJsx('wbr', {}, `w${n}`));
-    // Pitkä katakanasana omaan elementtiinsä: sen sisällä selaimen oma rivitys (CJK_CSS [data-cjk-pitka]).
-    const k = katakanaPalat(osa);
-    if (!k) lapset.push(osa);
-    else k.forEach((x, m) => lapset.push(x.pitka ? reactJsx('span', { 'data-cjk-pitka': '', children: x.teksti }, `p${n}-${m}`) : x.teksti));
+    lapset.push(...pitkaFraasi(osa, n));
   });
   return reactJsxs(Fragment, { children: lapset }, key);
+}
+
+// ei rivin loppuun: avaavat sulkeet ja lainausmerkit (sama joukko kuin fraasit.ts EI_LOPPUUN)
+const AVAAVA = /[(（[［{｛「『【〔〈《“‘]/u;
+
+/**
+ * Fraasi, jossa on pitkä katakanasana: sanan alusta fraasin loppuun omaan elementtiinsä (CJK_CSS [data-cjk-pitka]).
+ * Elementti on inline-block, joten balance ei voi katkaista sitä, ja sen sisällä selaimen oma rivitys + strict-kinsoku
+ * pätee vain kun se yksin on riviä pidempi. Fraasin LOPPUUN asti: inline-blockin reunat ovat katkokohtia, ja fraasin
+ * loppu on jo <wbr>-kohta (pelkän sanan perästä tuli スモークサウナ / ・キャビン). Sanan ALUSTA: edeltävä yhdyssanan
+ * osa jää ulos ja sen perään tulee katkokohta (地域別 / スノーモービル; koko fraasi inline-blockina katkesi sisältä
+ * 地域別スノーモー / ビル, laplandsnowmobile /ja/destinations/ 19.10.2026). Yksimerkkinen etuliite (新, ご) ja avaava
+ * sulje jäävät sanan kanssa samaan elementtiin.
+ */
+function pitkaFraasi(osa: string, n: number): ReactNode[] {
+  const k = katakanaPalat(osa);
+  if (!k) return [osa];
+  const cps = [...osa];
+  let alku = 0;
+  for (const x of k) { if (x.pitka) break; alku += [...x.teksti].length; }
+  while (alku > 0 && AVAAVA.test(cps[alku - 1])) alku--;
+  if (alku < 2) alku = 0;
+  const span = reactJsx('span', { 'data-cjk-pitka': '', children: cps.slice(alku).join('') }, `p${n}`);
+  return alku ? [cps.slice(0, alku).join(''), span] : [span];
 }
 
 // Otsikon sisäiset tekstielementit (esim. <h1>{otsikko}<span className="block">{alaotsikko}</span></h1>) käsitellään
@@ -56,19 +77,42 @@ function kasitteleElementti(x: unknown, syvyys: number): unknown {
   if (x.type !== Fragment && (typeof x.type !== 'string' || !TEKSTIELEMENTTI.test(x.type))) return x;
   const lapset = (x.props as { children?: unknown }).children;
   if (lapset == null) return x;
-  const uudet = kasitteleLapset(lapset, syvyys - 1);
+  let uudet = kasitteleLapset(lapset, syvyys - 1);
+  // Yksifraasinen CJK-teksti tekstielementissä (<em>ラップランド</em>) jäi ilman omaa <wbr>-lasta, jolloin CJK_CSS antoi
+  // sille word-break: normal ja balance katkaisi paikannimen (ラップラン / ド行きの, laplandflights /ja/ 19.10.2026).
+  // Loppuun <wbr>: elementti saa keep-allin, ja katkokohta osuu sen loppuun eli fraasirajalle.
+  if (uudet === lapset && x.type !== Fragment && cjkTeksti(lapset)) uudet = [lapset, reactJsx('wbr', {}, 'e')];
   if (uudet === lapset) return x;
   return cloneElement(x, undefined, ...((Array.isArray(uudet) ? uudet : [uudet]) as ReactNode[]));
+}
+
+// CJK-tekstin ja tekstielementin raja on fraasiraja (<h1>{'フィンランドの'}<span>{'アルペンリゾート30か所'}</span></h1>):
+// sinne <wbr>. Ilman sitä yksifraasinen teksti jäi ilman katkokohtia, otsikolla ei ollut omaa <wbr>-lasta eikä siis
+// keep-allia, ja balance katkaisi tekstin minne sattui (フィンランド / のアルペン, laplandskiresorts /ja/resorts/
+// 19.10.2026). Vain tekstielementti, fragmentti tai <br>: ikonin (komponentti, svg) viereen ei, koska flex-otsikon
+// yksifraasinen teksti olisi silloin keep-all ja katkeaisi kapeassa kortissa hätäkatkona.
+const rajaElementti = (x: unknown) =>
+  isValidElement(x) && (x.type === Fragment || (typeof x.type === 'string' && (x.type === 'br' || TEKSTIELEMENTTI.test(x.type))));
+const cjkTeksti = (x: unknown) => typeof x === 'string' && CJK.test(x);
+const tyhja = (x: unknown) => x == null || x === false || x === true || (typeof x === 'string' && x.trim() === '');
+
+function naapuri(c: unknown[], i: number, suunta: 1 | -1): unknown {
+  for (let j = i + suunta; j >= 0 && j < c.length; j += suunta) if (!tyhja(c[j])) return c[j];
+  return null;
 }
 
 function kasitteleLapset(c: unknown, syvyys: number): unknown {
   if (typeof c === 'string') return fraasiLapset(c);
   if (Array.isArray(c)) {
     let muuttui = false;
-    const uusi = c.map((x, i) => {
+    const uusi: unknown[] = [];
+    c.forEach((x, i) => {
+      const raja = cjkTeksti(x);
+      if (raja && rajaElementti(naapuri(c, i, -1))) { uusi.push(reactJsx('wbr', {}, `r${i}`)); muuttui = true; }
       const y = typeof x === 'string' ? fraasiLapset(x, `cjk${i}`) : kasitteleElementti(x, syvyys);
       if (y !== x) muuttui = true;
-      return y;
+      uusi.push(y);
+      if (raja && rajaElementti(naapuri(c, i, 1))) { uusi.push(reactJsx('wbr', {}, `s${i}`)); muuttui = true; }
     });
     return muuttui ? uusi : c;
   }
