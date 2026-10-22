@@ -17,6 +17,16 @@
     "copyKey": "topReads"
   },
   {
+    "path": "/fan-league",
+    "ogImage": "/og/page-fan-league.jpg",
+    "ogCard": {
+      "hero": "/images/fan-league/nuorgam-northernmost-2400.webp",
+      "line": "Who loves Lapland most?"
+    },
+    "appendSiteName": false,
+    "copyKey": "fanLeague"
+  },
+  {
     "path": "/destinations",
     "ogImage": "/og/page-destinations.jpg",
     "appendSiteName": false,

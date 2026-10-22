@@ -1,0 +1,83 @@
+{
+  "page-fan-league": {
+    "route": "/fan-league",
+    "line": "Who loves Lapland most?",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/fan-league/nuorgam-northernmost-2400.webp",
+        "bytes": 129545,
+        "sha256": "ac246ea6c2a8f49a0363259181d28c88eef106d5f663253d074d1e223223f9ac",
+        "heroSha": "3a02ea4d8ff0d492",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 14069,
+        "inkBox": [
+          414,
+          493,
+          783,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 103.5,
+        "centerSq": 99.5,
+        "photoRegion": 128.1,
+        "photoRegionRef": 128.1,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 358,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/fan-league/nuorgam-northernmost-2400.webp",
+        "bytes": 129545,
+        "sha256": "ac246ea6c2a8f49a0363259181d28c88eef106d5f663253d074d1e223223f9ac",
+        "heroSha": "3a02ea4d8ff0d492",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 14069,
+        "inkBox": [
+          414,
+          493,
+          783,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 103.5,
+        "centerSq": 99.5,
+        "photoRegion": 128.1,
+        "photoRegionRef": 128.1,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 358,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  }
+}

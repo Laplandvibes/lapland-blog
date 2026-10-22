@@ -1181,3 +1181,12 @@ h1 > span, h2 > span, h3 > span, h4 > span, button > span, summary > span {
   .lv-navvasen .lv-wm-paikka { display: contents; }
 }
 /* LV-NAV-SANAMERKKI:loppu */
+
+/* FAN LEAGUE (/fan-league): map labels. The SVG scales with the column, so at phone width a
+   17-unit label would render ~5 px tall. Below 640 px the map shows rank numbers only (52 units ≈
+   15 px); the names are in the table right under it. */
+.fl-map .fl-lab-short { display: none; }
+@media (max-width: 639.98px) {
+  .fl-map .fl-lab-full { display: none; }
+  .fl-map .fl-lab-short { display: inline; }
+}

@@ -9,6 +9,7 @@ import { POPUP_COPY } from './newsletterPopupSite';
 // sivustokohtaista tekstiä. Lupauskielto pätee yhä.
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang } from '../i18n/useLang'
+import { useLocation } from 'react-router-dom';
 
 // 🔴 Values + why they carry fallbacks: ../lib/supabaseConfig. Env-only reads
 // here made the shared popup post to "undefined/functions/v1/..." on sibling
@@ -17,6 +18,10 @@ import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabaseConfig';
 
 export default function NewsletterPopup() {
   const langRaw = useLang();
+  const { pathname } = useLocation();
+  // /fan-league has its own sign-up (the fan club) a scroll away; a second form on top of it
+  // would ask the same reader twice for the same list.
+  if (/\/fan-league\/?$/.test(pathname)) return null;
   // NOTE: do NOT pass `headline`/`description` here. The shared popup ships
   // fully-localized #LaplandVibes copy (LOCALE_HEADLINES/LOCALE_DICTS) for all
   // 11 languages; passing an override would force it to English on /fi /cn etc.

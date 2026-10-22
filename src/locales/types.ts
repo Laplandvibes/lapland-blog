@@ -438,6 +438,88 @@ export type SectionCopy = {
     photoCredit: string;
     licensePD: string;
   };
+  /**
+   * /fan-league — monthly table of the countries that read most about Lapland (Vesa 2026-10-22).
+   * Country names and dates come from Intl in the reader's language, so every sentence with a
+   * {country} placeholder must read correctly with a bare nominative name (no article, no case
+   * ending): French "Allemagne", Finnish "Saksa", Korean without a 와/과 particle after it.
+   */
+  fanLeague: {
+    metaTitle: string;
+    metaDescription: string;
+    breadcrumb: string;
+    kicker: string;
+    h1: string;
+    /** {sites} = number of tracked network sites. */
+    lead: string;
+    photoCaption: string;
+    /** {date} = "13 October 2026" in the reader's language. */
+    photoCredit: string;
+    photoAlt: string;
+    mapH2: string;
+    mapLead: string;
+    mapAria: string;
+    tableH2: string;
+    tableH2Final: string;
+    /** {range} = covered days, {date} = last update. */
+    periodLine: string;
+    liveNote: string;
+    finalNote: string;
+    thPos: string;
+    thCountry: string;
+    thIndex: string;
+    thMove: string;
+    moveUpAria: string;
+    moveDownAria: string;
+    moveSameAria: string;
+    footnote: string;
+    notesH2: string;
+    /** {leader}, {second}, {pts} = the gap as pointOne/pointMany. */
+    noteLead: string;
+    /** {a}, {b}, {pos} = the place they fight for, {pts} = the gap as pointOne/pointMany. */
+    noteDuel: string;
+    noteDuelTie: string;
+    /** {n} index points; picked with Intl.PluralRules ('one' → pointOne). */
+    pointOne: string;
+    pointMany: string;
+    /** {name}, {from}, {to} = positions. */
+    noteClimber: string;
+    noteCall: string;
+    clubH2: string;
+    clubLead: string;
+    cardTitle: string;
+    /** {month} = "October 2026" in the reader's language. */
+    cardSince: string;
+    cardPreview: string;
+    cardAria: string;
+    countryLabel: string;
+    countryPlaceholder: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    consent: string;
+    privacy: string;
+    submit: string;
+    submitting: string;
+    errEmail: string;
+    errConsent: string;
+    errCountry: string;
+    errGeneric: string;
+    successH: string;
+    successBody: string;
+    alreadyBody: string;
+    saveCard: string;
+    shareCard: string;
+    /** Text that goes with a shared card; {country} = the member's country. */
+    shareText: string;
+    writeH2: string;
+    writeLead: string;
+    kAurora: string;
+    kCabin: string;
+    kSauna: string;
+    readStory: string;
+    writeCtaLead: string;
+    writeCta: string;
+  };
   /** /by/:handle reader profile page. {name}, {bio}, {date}, {n} are filled with fillCopy. */
   authorPage: {
     seoTitleFallback: string;

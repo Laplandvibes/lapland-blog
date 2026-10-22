@@ -24,6 +24,7 @@ export default function PageBreadcrumb({ editorial = false }: { editorial?: bool
     '/destinations': c.destinations,
     '/stories': c.tripDiaries,
     '/about': c.about,
+    '/fan-league': COPY[lang].fanLeague.breadcrumb,
   };
   const className = editorial
     ? 'bg-[var(--color-cream)] text-[var(--color-ink)] border-b border-[var(--color-paper-border)]'

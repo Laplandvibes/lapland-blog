@@ -30,6 +30,7 @@ const Category = lazy(() => import('./pages/Category'));
 const About = lazy(() => import('./pages/About'));
 const StartHere = lazy(() => import('./pages/StartHere'));
 const TopReads = lazy(() => import('./pages/TopReads'));
+const FanLeague = lazy(() => import('./pages/FanLeague'));
 const Destinations = lazy(() => import('./pages/Destinations'));
 const Destination = lazy(() => import('./pages/Destination'));
 const AuthorProfile = lazy(() => import('./pages/AuthorProfile'));
@@ -117,6 +118,19 @@ export default function App() {
           <Route path="/top-reads" element={<TopReads />} />
           <Route path="/fi/top-reads" element={<TopReads />} />
           <Route path="/de/top-reads" element={<TopReads />} />
+
+          <Route path="/fan-league" element={<FanLeague />} />
+          <Route path="/fi/fan-league" element={<FanLeague />} />
+          <Route path="/de/fan-league" element={<FanLeague />} />
+          <Route path="/ja/fan-league" element={<FanLeague />} />
+          <Route path="/es/fan-league" element={<FanLeague />} />
+          <Route path="/br/fan-league" element={<FanLeague />} />
+          <Route path="/cn/fan-league" element={<FanLeague />} />
+          <Route path="/kr/fan-league" element={<FanLeague />} />
+          <Route path="/fr/fan-league" element={<FanLeague />} />
+          <Route path="/it/fan-league" element={<FanLeague />} />
+          <Route path="/nl/fan-league" element={<FanLeague />} />
+          <Route path="/sv/fan-league" element={<FanLeague />} />
 
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/destinations/:slug" element={<Destination />} />

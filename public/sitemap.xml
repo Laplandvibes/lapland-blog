@@ -686,6 +686,234 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/top-reads/"/>
   </url>
   <url>
+    <loc>https://lapland.blog/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/fi/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/de/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/ja/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/es/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/br/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/cn/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/kr/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/fr/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/it/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/nl/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
+    <loc>https://lapland.blog/sv/fan-league/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lapland.blog/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lapland.blog/fi/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lapland.blog/de/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lapland.blog/ja/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://lapland.blog/es/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lapland.blog/br/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://lapland.blog/cn/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lapland.blog/kr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lapland.blog/fr/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lapland.blog/it/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://lapland.blog/nl/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://lapland.blog/sv/fan-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lapland.blog/fan-league/"/>
+  </url>
+  <url>
     <loc>https://lapland.blog/destinations/</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
