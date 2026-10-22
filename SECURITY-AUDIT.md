@@ -28,7 +28,7 @@ Result:
 | Table | RLS | Policies | Verdict |
 |---|---|---|---|
 | `blog_categories` | on | public read · admin INSERT/UPDATE/DELETE | ✅ Read-only for visitors |
-| `blog_leads` | on | INSERT open (`true`) · **NO public SELECT** | ✅ Newsletter list private |
+| `blog_leads` | on | INSERT open (`true`) · **NO public SELECT** | ✅ Private · not written since 23.10.2026 (0 rows) |
 | `blog_posts` | on | public reads only `status='published'` OR admin · authors INSERT/UPDATE/DELETE rows where `author_id=auth.uid()` · authors can read own drafts · admin overrides all | ✅ Author can only touch their own; published-only public; drafts are private |
 | `blog_profiles` | on | public read all · users INSERT/UPDATE/DELETE only their own row | ✅ Per-author public profiles work; can't impersonate |
 
@@ -106,13 +106,13 @@ A link "Account & settings" was added to the `/me` dashboard so authors can find
 
 ## 6. PII handling
 
-- **Email address** — stored on `auth.users` (Supabase-managed, encrypted at rest) and copied to `blog_leads` for newsletter signups. Not displayed anywhere on the public site.
+- **Email address** — stored on `auth.users` (Supabase-managed, encrypted at rest). Not displayed anywhere on the public site. Newsletter sign-ups from the sign-in form go only through the optional, unticked opt-in box to the shared `send-welcome-email` function (double opt-in, consent text stored in `leads`). `blog_leads` is no longer written (23.10.2026): the sign-in upsert had never saved a row (RLS has no UPDATE policy) and it was not consented.
 - **Display name + handle** — voluntarily set by user; public on `/by/<handle>` and `/post/<slug>`.
 - **IP address** — handled by Cloudflare for DDoS / bot mitigation; not stored long-term in our DB. Supabase logs request IPs for 7 days.
 - **Browser fingerprint / device data** — NOT collected by Lapland.blog. GA4 with consent-mode-v2 default-denied; only set after user accepts cookie banner.
 - **OAuth metadata** (Google avatar URL, full_name) — synced into `blog_profiles` only on first sign-in, then static.
 
-**Newsletter list is private:** `blog_leads` has `INSERT` open and `SELECT` `false` — nobody outside the service-role can read who signed up.
+**Newsletter list is private:** `blog_leads` (unused since 23.10.2026, 0 rows) has `INSERT` open and `SELECT` `false`; the live newsletter list is `leads` behind the edge function.
 
 ---
 
