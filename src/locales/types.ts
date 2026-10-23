@@ -361,6 +361,10 @@ export type SectionCopy = {
     noDates: string;
     /** Optional newsletter opt-in on the sign-in form; also stored as the consent text. Includes the 18+ confirmation. */
     newsletterOptIn: string;
+    /** Line under the sign-in form: legalPre + <Link>legalLink</Link> + legalPost (word order stays in each language). */
+    legalPre: string;
+    legalLink: string;
+    legalPost: string;
     enterEmail: string;
     sending: string;
     submitCta: string;

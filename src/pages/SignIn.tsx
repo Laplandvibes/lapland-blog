@@ -532,15 +532,22 @@ export default function SignIn() {
                   </>
                 )}
 
-                <p className="text-center text-[10px] text-slate-300 tracking-wider uppercase">
-                  By continuing you agree to the{' '}
-                  <Link
-                    to={lp('/privacy')}
-                    className="text-slate-400 hover:text-pink underline-offset-2 hover:underline"
-                  >
-                    Privacy
-                  </Link>{' '}
-                  policy. We never email you junk.
+                {/* 23.10.2026: was hardcoded English on all 12 languages, with a promise ("We never email you junk")
+                    and "you agree to the Privacy policy" (a privacy policy informs, it is not agreed to). The optional
+                    newsletter box above is the only consent on this form. */}
+                {/* ja/zh have no spaces, so the browser broke inside a word on a phone (をご / 覧ください): the two halves
+                    are atomic there and the line breaks only between them. Korean breaks at its word spaces. */}
+                <p className={`text-center text-[11px] leading-relaxed text-slate-300 text-balance${lang === 'ko' ? ' break-keep' : ''}`}>
+                  <span className={lang === 'ja' || lang === 'zh-CN' ? 'inline-block' : undefined}>{c.legalPre}</span>
+                  <span className={lang === 'ja' || lang === 'zh-CN' ? 'inline-block' : undefined}>
+                    <Link
+                      to={lp('/privacy')}
+                      className="lv-tap text-slate-200 underline underline-offset-2 hover:text-pink"
+                    >
+                      {c.legalLink}
+                    </Link>
+                    {c.legalPost}
+                  </span>
                 </p>
               </form>
             )}
