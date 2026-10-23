@@ -7,7 +7,7 @@
 // flipping ENABLE_OAUTH = true once Vesa configures the Google + Facebook
 // providers in Supabase Project Settings → Authentication → Providers.
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Navigate, Link, useLocation } from 'react-router-dom';
 import {
   Mail,
@@ -23,7 +23,8 @@ import {
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { useAuth } from '../hooks/useAuth';
-import { supabase } from '../lib/supabase';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabaseConfig';
+import { trackNewsletterSignup } from '../lib/analytics';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { getImage } from '../lib/images';
 import { useLang, useLocalePath, stripLocale } from '../i18n/useLang';
@@ -31,6 +32,19 @@ import { COPY } from '../locales/copy';
 
 // Ambient backdrop — the dusk-lake hero. Fixed position, very low opacity.
 const backdrop = getImage('hero-dusk-lake', '100vw');
+
+const NL_SOURCE = 'laplandblog-signin';
+
+/**
+ * [LV-FUNNEL] Local helper (no shared import); must never break the form. The sign-in itself is an
+ * auth form and gets no funnel (_jobs/06-mittaus), only the newsletter box inside it: nl_* with
+ * surface 'signin'.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
 
 // FEATURE FLAGS: each provider flips independently once it's wired up in
 // Supabase Auth → Providers. Google is live. Facebook is still pending
@@ -83,19 +97,46 @@ export default function SignIn() {
 
   const MONTHS = c.months;
 
-  /** Fire-and-forget lead save — never blocks auth flow. */
-  function saveLead(emailAddr: string) {
+  // 🔴 23.10.2026: this used to upsert every sign-in email + travel month into `blog_leads`. The upsert
+  // (INSERT … ON CONFLICT DO UPDATE) needs an UPDATE policy the table never had, so RLS rejected every
+  // single write since April and nothing checked the result: 0 rows. It was also never consented: the
+  // form asks for no marketing permission and the privacy policy says only newsletter emails are kept.
+  // Vesa 23.10.: an optional, unticked box instead. Only a reader who ticks it is signed up, through the
+  // same double opt-in endpoint as every other newsletter form, with the travel month in `channel`.
+  const [optIn, setOptIn] = useState(false);
+  const funnel = { surface: 'signin', lang };
+  useEffect(() => { track('nl_view', funnel); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const optInStarted = useRef(false);
+
+  /** Newsletter sign-up for a reader who ticked the box. Never blocks or fails the sign-in. */
+  function subscribeIfOptedIn(emailAddr: string) {
     const trimmed = emailAddr.trim().toLowerCase();
-    if (!trimmed) return;
-    void supabase.from('blog_leads').upsert(
-      {
-        email: trimmed,
-        travel_month: noDates ? null : travelMonth,
-        travel_year: noDates ? null : travelYear,
-        source_site: 'lapland.blog',
-      },
-      { onConflict: 'email' }
-    );
+    if (!optIn || !trimmed) return;
+    const mm = travelMonth ? String(travelMonth).padStart(2, '0') : null;
+    const channel = noDates
+      ? 'signin:nodates'
+      : travelYear && mm ? `signin:${travelYear}-${mm}` : travelYear ? `signin:${travelYear}` : 'signin';
+    track('nl_submit', funnel);
+    // keepalive: the Google button leaves the page right after this call.
+    fetch(`${SUPABASE_URL}/functions/v1/send-welcome-email`, {
+      method: 'POST',
+      keepalive: true,
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+      body: JSON.stringify({
+        email: trimmed, source: NL_SOURCE, site: 'laplandblog', language: lang, channel,
+        consent: true, ageConfirmed: true, consentText: c.newsletterOptIn,
+      }),
+    })
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data.error || String(res.status));
+        track('nl_success', { ...funnel, ...(data.alreadySubscribed ? { already: true } : {}) });
+        if (!data.alreadySubscribed) trackNewsletterSignup(NL_SOURCE);
+      })
+      .catch((err) => {
+        console.error('Sign-in newsletter opt-in failed:', err);
+        track('nl_error', funnel);
+      });
   }
 
   useSeo({
@@ -119,8 +160,8 @@ export default function SignIn() {
       return;
     }
 
-    // Save lead data FIRST (fire-and-forget — even if auth fails we keep the data)
-    saveLead(trimmed);
+    // Before the magic link, so a failed sign-in does not drop a sign-up the reader asked for.
+    subscribeIfOptedIn(trimmed);
 
     setSending(true);
     const { error: err } = await sendMagicLink(trimmed, {
@@ -137,8 +178,8 @@ export default function SignIn() {
 
   async function handleOAuth(provider: 'google' | 'facebook') {
     setError(null);
-    // Save lead data if email is filled in
-    if (email.trim()) saveLead(email);
+    // Only when the reader typed an email and ticked the box; Google gives us no email here.
+    if (email.trim()) subscribeIfOptedIn(email);
     setOauthBusy(provider);
     const fn = provider === 'google' ? signInWithGoogle : signInWithFacebook;
     const { error: err } = await fn({
@@ -374,6 +415,25 @@ export default function SignIn() {
                     </span>
                   </label>
                 </div>
+
+                {/* Optional newsletter box: unticked by default, nothing is saved without it. */}
+                <label className="flex items-start gap-2.5 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={optIn}
+                    onChange={(e) => {
+                      setOptIn(e.target.checked);
+                      if (e.target.checked && !optInStarted.current) {
+                        optInStarted.current = true;
+                        track('nl_start', funnel);
+                      }
+                    }}
+                    className="mt-0.5 w-4 h-4 shrink-0 rounded border-purple/40 bg-night/80 text-pink focus:ring-pink/50 accent-pink"
+                  />
+                  <span className="text-xs leading-relaxed text-slate-300 group-hover:text-snow transition-colors">
+                    {c.newsletterOptIn}
+                  </span>
+                </label>
 
                 {error && (
                   <p className="text-xs text-red-400 bg-red-500/10 border border-red-500/30 rounded-lg px-3 py-2">

@@ -520,6 +520,7 @@ const fi: SectionCopy = {
     monthLabel: 'Kuukausi…',
     yearLabel: 'Vuosi…',
     noDates: 'Unelmoin vielä, ei päivämääriä',
+    newsletterOptIn: "Kyllä, LaplandVibes saa lähettää minulle uutiskirjettä (matkailuvinkkejä, sesonkitietoa ja tarjouksia) tähän sähköpostiosoitteeseen ja tallentaa valitsemani matkakuukauden tilauksen yhteyteen. Olen täyttänyt 18 vuotta.",
     enterEmail: 'Anna sähköposti aloittaaksesi.',
     sending: 'Lähetetään taikalinkkiä…',
     submitCta: 'Varaa matkasivuni',

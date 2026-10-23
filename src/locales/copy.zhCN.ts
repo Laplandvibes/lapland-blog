@@ -519,6 +519,7 @@ const zhCN: SectionCopy = {
     monthLabel: '月份…',
     yearLabel: '年份…',
     noDates: '我还在憧憬，暂时没有日期',
+    newsletterOptIn: "我同意 LaplandVibes 向我填写的邮箱发送订阅邮件，内容包括拉普兰旅行建议、季节资讯和优惠信息，并同意将我选择的出行月份与订阅一同保存。本人确认已年满18周岁。",
     enterEmail: '输入您的邮箱即可开始。',
     sending: '正在发送魔法链接…',
     submitCta: '预定我的行程页面',

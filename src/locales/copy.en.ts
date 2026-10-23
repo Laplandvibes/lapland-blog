@@ -519,6 +519,7 @@ const en: SectionCopy = {
     monthLabel: 'Month…',
     yearLabel: 'Year…',
     noDates: "I'm still dreaming, no dates yet",
+    newsletterOptIn: 'Yes, send me the LaplandVibes newsletter (travel tips, seasonal updates and offers) at this email address, and keep the travel month I picked with my subscription. I confirm I am 18 or over.',
     enterEmail: 'Enter your email to get started.',
     sending: 'Sending magic link…',
     submitCta: 'Reserve my trip page',

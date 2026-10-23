@@ -468,6 +468,7 @@ const ko: SectionCopy = {
     monthLabel: '월…',
     yearLabel: '연도…',
     noDates: '아직 꿈만 꾸는 중, 날짜 미정',
+    newsletterOptIn: "입력한 이메일 주소로 LaplandVibes가 보내는 여행 팁·시즌 정보·프로모션 소식 뉴스레터 수신과, 선택한 여행 월을 구독 정보와 함께 저장하는 데 동의하며, 만 18세 이상임을 확인합니다.",
     enterEmail: '시작하시려면 이메일을 입력해 주세요.',
     sending: '매직 링크를 보내는 중…',
     submitCta: '나의 여행 페이지 예약',

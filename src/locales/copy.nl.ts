@@ -468,6 +468,7 @@ const nl: SectionCopy = {
     monthLabel: 'Maand…',
     yearLabel: 'Jaar…',
     noDates: 'Ik droom nog, nog geen datum',
+    newsletterOptIn: "Ja, LaplandVibes mag de nieuwsbrief met reistips, seizoensinfo en aanbiedingen naar dit e-mailadres sturen en de gekozen reismaand bij mijn inschrijving bewaren. Ik ben 18 jaar of ouder.",
     enterEmail: 'Vul uw e-mailadres in om te beginnen.',
     sending: 'Magische link versturen…',
     submitCta: 'Reserveer mijn reispagina',

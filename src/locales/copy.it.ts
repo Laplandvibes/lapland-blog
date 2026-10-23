@@ -468,6 +468,7 @@ const it: SectionCopy = {
     monthLabel: 'Mese…',
     yearLabel: 'Anno…',
     noDates: 'Sto ancora sognando, niente date',
+    newsletterOptIn: "Sì, desidero ricevere la newsletter di LaplandVibes (consigli di viaggio, novità stagionali e offerte) all’indirizzo indicato e acconsento a salvare con l’iscrizione il mese di viaggio scelto. Ho almeno 18 anni.",
     enterEmail: 'Inserisca la Sua e-mail per iniziare.',
     sending: 'Invio del link magico…',
     submitCta: 'Prenotare la mia pagina viaggio',

@@ -519,6 +519,7 @@ const ja: SectionCopy = {
     monthLabel: '月…',
     yearLabel: '年…',
     noDates: 'まだ計画中です。日付は未定',
+    newsletterOptIn: "入力したメールアドレス宛に、LaplandVibesがニュースレター（旅のヒント、シーズン情報、キャンペーン情報）を送ること、および選んだ旅行月を登録情報とともに保存することに同意します。私は18歳以上です。",
     enterEmail: '始めるにはメールアドレスを入力してください。',
     sending: 'マジックリンクを送信中…',
     submitCta: '旅行ページを予約する',

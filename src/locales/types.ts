@@ -359,6 +359,8 @@ export type SectionCopy = {
     monthLabel: string;
     yearLabel: string;
     noDates: string;
+    /** Optional newsletter opt-in on the sign-in form; also stored as the consent text. Includes the 18+ confirmation. */
+    newsletterOptIn: string;
     enterEmail: string;
     sending: string;
     submitCta: string;
