@@ -1190,3 +1190,13 @@ h1 > span, h2 > span, h3 > span, h4 > span, button > span, summary > span {
   .fl-map .fl-lab-full { display: none; }
   .fl-map .fl-lab-short { display: inline; }
 }
+
+/* KOREAN TEXT (Vesa 23.10.2026, /kr/fan-league: heading "사랑하 / 는", lead "사이 / 트"). Korean separates words
+   with spaces, and the browser's default still breaks between any two syllables, so headings and paragraphs split
+   words in half. keep-all breaks only at spaces, the same rule the app promo already uses ("korea katkeaa vain
+   sanojen välistä"); break-word is the emergency break for a word longer than the line. The network CJK plugin
+   (src/shared/cjk) covers only Chinese and Japanese headings, which have no spaces. */
+:lang(ko) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
