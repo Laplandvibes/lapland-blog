@@ -14,6 +14,7 @@ import PhotoCredits from '../components/PhotoCredits';
 import { wideSrcSet } from '../data/photoCredits';
 import Reveal from '../components/Reveal';
 import ShareBar from '../components/ShareBar';
+import { ShareButton } from '../shared/ShareBar/ShareBar';
 import BannerAd from '../components/BannerAd';
 import HighlightShare from '../components/HighlightShare';
 import type { PostBlock } from '../data/posts';
@@ -329,6 +330,15 @@ export default function Post() {
                   {post.readTimeMinutes} {c.minRead}
                 </span>
               </div>
+              {/* Jaa-nappi tekijärivin alle omalle rivilleen (Vesa 24.10.2026). Jutun lopun jakorivi on
+                  blogin oma ShareBar (hashtagit mukana). Kaamos-teema on ainoa tumma arkki. */}
+              <ShareButton
+                lang={lang}
+                title={post.title}
+                excerpt={post.excerpt}
+                tone={post.theme === 'kaamos' ? 'dark' : 'light'}
+                className="mt-5"
+              />
 
           {/* Kuka tämän kirjoitti — toimitus vai lukija?
               🔴 Vesa 16.9.2026: laatikko lupasi "lähteet lopussa" (mitattu:
