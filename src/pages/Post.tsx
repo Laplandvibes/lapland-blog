@@ -29,6 +29,7 @@ import {
 import { trackPostRead } from '../lib/analytics';
 import { generateHashtags, formatHashtags } from '../lib/hashtags';
 import { detectCrossSiteLinks } from '../lib/crossSiteLinks';
+import { ilmanValeja, kahdenRivinEm } from '../lib/otsikkoRivit';
 import { usePost, useRelated } from '../hooks/usePost';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -213,6 +214,11 @@ export default function Post() {
   // The post's own text keeps its own language: a German page shows the English
   // original, the page chrome around it stays German.
   const textLang = postTextLang(post, lang);
+  // Pääotsikko tietokoneella enintään kaksi riviä (gate:otsikkorivit, Vesa 23.10.2026): 60 px:llä kahdeksan otsikkoa
+  // oli 760 px:n arkissa kolmella rivillä, koska paras kahden rivin jako vie 800–919 px. Koko = pienempi kahdesta,
+  // suunniteltu tai 100cqi / jaon em-leveys. manropeEm on kalibroitu painolle 700; painolla 800 ja -0,015 em:n
+  // välistyksellä se arvioi 0,954–0,990 mitatusta (8 otsikkoa 23.10.), joten × 1,08 pitää arvion aina yläkanttiin.
+  const h1Em = ilmanValeja(textLang ?? lang) ? null : kahdenRivinEm(post.title);
 
   return (
     <div className="min-h-screen bg-night text-snow">
@@ -278,13 +284,16 @@ export default function Post() {
                 </Link>
               )}
 
-              <h1
-                lang={textLang}
-                className="text-[var(--color-ink)] leading-[1.06] tracking-[-0.015em] text-[clamp(2.1rem,5.5vw,3.75rem)]"
-                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
-              >
-                {post.title}
-              </h1>
+              {/* @container: 100cqi = arkin sisältöleveys. */}
+              <div className="@container">
+                <h1
+                  lang={textLang}
+                  className={`text-[var(--color-ink)] leading-[1.06] tracking-[-0.015em] text-[clamp(2.1rem,5.5vw,3.75rem)]${h1Em ? ' lg:[--h1-max:clamp(2.1rem,5.5vw,3.75rem)] lg:[font-size:min(var(--h1-max),calc(100cqi/var(--h1-em)))]' : ''}`}
+                  style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800, ...(h1Em ? { ['--h1-em' as string]: (h1Em * 1.08).toFixed(2) } : {}) }}
+                >
+                  {post.title}
+                </h1>
+              </div>
 
               <p lang={textLang} className="mt-6 text-[var(--color-ink-soft)] text-lg md:text-[1.3rem] leading-relaxed">
                 {post.excerpt}

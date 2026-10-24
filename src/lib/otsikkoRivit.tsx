@@ -28,6 +28,19 @@ export function manropeEm(s: string): number {
   return w;
 }
 
+/** Paras kahden rivin jako sanaväleistä: pidemmän rivin leveys em-yksiköinä (manropeEm). null, kun sanaväliä ei ole
+ *  (ja/zh tai yksi sana), koska silloin jako ei tule sanoista. Artikkelin otsikko (Vesa 23.10.2026: "tekstit ei
+ *  rivity oikein ja kauniisti"): koko = pienempi kahdesta, suunniteltu tai koko jolla tämä jako mahtuu palstaan. */
+export function kahdenRivinEm(text: string): number | null {
+  const sanat = text.trim().split(/\s+/);
+  if (sanat.length < 2) return null;
+  let paras = Infinity;
+  for (let i = 1; i < sanat.length; i++) {
+    paras = Math.min(paras, Math.max(manropeEm(sanat.slice(0, i).join(' ')), manropeEm(sanat.slice(i).join(' '))));
+  }
+  return paras;
+}
+
 /** ja ja zh kirjoitetaan ilman välilyöntejä: ilman katkokohtia selain katkaisee rivin mistä tahansa merkistä
  *  ("始めま / しょう。", "博 / 客。"). */
 export const ilmanValeja = (lang: string) => lang === 'ja' || lang === 'zh-CN';
