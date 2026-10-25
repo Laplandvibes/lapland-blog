@@ -39,7 +39,7 @@ export default function CookiePolicy() {
           this wrapper the page has NO main landmark at all -- measured from the
           rendered DOM 2026-08-13 across 10 network sites. Do not remove. */}
       <main>
-        <CookieContent siteId="laplandblog" siteName="Lapland Blog" lang={lang} />
+        <CookieContent siteId="laplandblog" siteName="Lapland Blog" lang={lang} youtubeEmbeds />
       </main>
       <Footer />
     </>

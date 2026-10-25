@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
           this wrapper the page has NO main landmark at all -- measured from the
           rendered DOM 2026-08-13 across 10 network sites. Do not remove. */}
       <main>
-        <PrivacyContent siteName="Lapland Blog" lang={lang} />
+        <PrivacyContent siteName="Lapland Blog" lang={lang} youtubeEmbeds />
       </main>
       <Footer />
     </>
