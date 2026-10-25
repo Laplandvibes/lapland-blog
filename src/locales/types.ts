@@ -526,6 +526,61 @@ export type SectionCopy = {
     writeCtaLead: string;
     writeCta: string;
   };
+  /**
+   * /finnish-bands — "Did you know these are Finnish?" (Vesa 2026-10-25). 15 acts, one official
+   * YouTube video each, loaded only on click. Band names and song titles are never translated
+   * (src/data/finnishBands.ts); numbers and dates are formatted with Intl in the reader's language.
+   */
+  finnishBands: {
+    metaTitle: string;
+    metaDescription: string;
+    breadcrumb: string;
+    kicker: string;
+    h1: string;
+    lead: string;
+    /** Hero photo: caption (place + what it shows) and alt. */
+    photoCaption: string;
+    photoAlt: string;
+    /** Credit after the hero caption ("Photo: LaplandVibes"). */
+    photoBy: string;
+    /** {place}: credit under each own photo ("Photo: LaplandVibes, {place}"). Kept under 80 width units (gate:kuvateksti). */
+    photoCredit: string;
+    howH2: string;
+    how: string;
+    /** {song} = song title. Visible label and accessible name of the play button. */
+    play: string;
+    /** Small visible word above the song title on the play button ("Play"). */
+    playShort: string;
+    playNote: string;
+    /** {n} compact number, {date} full date. */
+    views: string;
+    listeners: string;
+    /** {channel}: who uploaded the video. */
+    channelBand: string;
+    channelLabel: string;
+    sources: string;
+    fromLapland: string;
+    listH2: string;
+    fanH2: string;
+    fanLead: string;
+    fanCta: string;
+    /** Short line on /fan-league that leads here. */
+    fromFanLeague: string;
+    fromFanLeagueCta: string;
+    bands: Record<
+      string,
+      {
+        /** Hometown and years, e.g. "Kitee · since 1996". */
+        origin: string;
+        blurb: string;
+        /** Where the own photo was taken (credit line). */
+        place: string;
+        alt: string;
+        /** Only for acts from Lapland: link text to the network's guide to the town. */
+        laplandLink?: string;
+      }
+    >;
+  };
   /** /by/:handle reader profile page. {name}, {bio}, {date}, {n} are filled with fillCopy. */
   authorPage: {
     seoTitleFallback: string;

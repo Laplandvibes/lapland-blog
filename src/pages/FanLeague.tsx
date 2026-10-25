@@ -579,6 +579,13 @@ export default function FanLeague() {
                 {c.writeCta}<ArrowRight size={18} />
               </Link>
             </p>
+            {/* /finnish-bands links back here; both pages are there to bring readers to the blog. */}
+            <p className="mt-4 text-lg text-slate-200">
+              {COPY[lang].finnishBands.fromFanLeague}{' '}
+              <Link to={to('/finnish-bands')} data-umami-event="fanleague_bands_cta" className="lv-tap text-pink-300 font-bold hover:text-pink-200 inline-flex items-center gap-1">
+                {COPY[lang].finnishBands.fromFanLeagueCta}<ArrowRight size={18} />
+              </Link>
+            </p>
           </section>
         </div>
       </main>

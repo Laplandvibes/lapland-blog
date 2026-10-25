@@ -31,6 +31,7 @@ const About = lazy(() => import('./pages/About'));
 const StartHere = lazy(() => import('./pages/StartHere'));
 const TopReads = lazy(() => import('./pages/TopReads'));
 const FanLeague = lazy(() => import('./pages/FanLeague'));
+const FinnishBands = lazy(() => import('./pages/FinnishBands'));
 const Destinations = lazy(() => import('./pages/Destinations'));
 const Destination = lazy(() => import('./pages/Destination'));
 const AuthorProfile = lazy(() => import('./pages/AuthorProfile'));
@@ -131,6 +132,18 @@ export default function App() {
           <Route path="/it/fan-league" element={<FanLeague />} />
           <Route path="/nl/fan-league" element={<FanLeague />} />
           <Route path="/sv/fan-league" element={<FanLeague />} />
+          <Route path="/finnish-bands" element={<FinnishBands />} />
+          <Route path="/fi/finnish-bands" element={<FinnishBands />} />
+          <Route path="/de/finnish-bands" element={<FinnishBands />} />
+          <Route path="/ja/finnish-bands" element={<FinnishBands />} />
+          <Route path="/es/finnish-bands" element={<FinnishBands />} />
+          <Route path="/br/finnish-bands" element={<FinnishBands />} />
+          <Route path="/cn/finnish-bands" element={<FinnishBands />} />
+          <Route path="/kr/finnish-bands" element={<FinnishBands />} />
+          <Route path="/fr/finnish-bands" element={<FinnishBands />} />
+          <Route path="/it/finnish-bands" element={<FinnishBands />} />
+          <Route path="/nl/finnish-bands" element={<FinnishBands />} />
+          <Route path="/sv/finnish-bands" element={<FinnishBands />} />
 
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/destinations/:slug" element={<Destination />} />

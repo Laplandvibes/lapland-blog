@@ -27,6 +27,16 @@
     "copyKey": "fanLeague"
   },
   {
+    "path": "/finnish-bands",
+    "ogImage": "/og/page-finnish-bands.jpg",
+    "ogCard": {
+      "hero": "/images/finnish-bands/hero-kevo-road-frost-2400.webp",
+      "line": "Did you know these are Finnish?"
+    },
+    "appendSiteName": false,
+    "copyKey": "finnishBands"
+  },
+  {
     "path": "/destinations",
     "ogImage": "/og/page-destinations.jpg",
     "appendSiteName": false,

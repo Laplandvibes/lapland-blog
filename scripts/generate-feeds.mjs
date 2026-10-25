@@ -108,6 +108,7 @@ function buildSitemap(posts) {
     { loc: '/start-here', changefreq: 'monthly', priority: '0.95', lastmod: today },
     { loc: '/top-reads', changefreq: 'weekly', priority: '0.95', lastmod: today },
     { loc: '/fan-league', changefreq: 'weekly', priority: '0.8', lastmod: today },
+    { loc: '/finnish-bands', changefreq: 'monthly', priority: '0.8', lastmod: today },
     { loc: '/destinations', changefreq: 'monthly', priority: '0.9', lastmod: today },
     { loc: '/stories', changefreq: 'weekly', priority: '0.9', lastmod: today },
     { loc: '/about', changefreq: 'monthly', priority: '0.7', lastmod: today },

@@ -79,5 +79,86 @@
         "samaKuinKesa": true
       }
     }
+  },
+  "page-finnish-bands": {
+    "route": "/finnish-bands",
+    "line": "Did you know these are Finnish?",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/finnish-bands/hero-kevo-road-frost-2400.webp",
+        "bytes": 142740,
+        "sha256": "b481c6ada2a071eee6dc4a44f656650a0324cc195f32d39a52ed59d24650e53d",
+        "heroSha": "dc5b9f9e19c9e3a0",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 14832,
+        "inkBox": [
+          378,
+          493,
+          822,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 107.2,
+        "centerSq": 118.1,
+        "photoRegion": 132.8,
+        "photoRegionRef": 132.8,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 447,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/finnish-bands/hero-kevo-road-frost-2400.webp",
+        "bytes": 142740,
+        "sha256": "b481c6ada2a071eee6dc4a44f656650a0324cc195f32d39a52ed59d24650e53d",
+        "heroSha": "dc5b9f9e19c9e3a0",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 14832,
+        "inkBox": [
+          378,
+          493,
+          822,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 107.2,
+        "centerSq": 118.1,
+        "photoRegion": 132.8,
+        "photoRegionRef": 132.8,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 447,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
   }
 }

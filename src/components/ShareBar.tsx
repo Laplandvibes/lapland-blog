@@ -11,6 +11,8 @@ interface ShareBarProps {
   excerpt?: string;
   /** Space-separated hashtag string like "#LaplandVibes #NorthernLights" */
   hashtags?: string;
+  /** Page path to share when it is not a post (e.g. '/finnish-bands'); defaults to /post/{slug}. */
+  path?: string;
 }
 
 // Lucide-react no longer ships brand icons, so we inline minimal SVGs.
@@ -118,9 +120,9 @@ const TARGETS: ShareTarget[] = [
   },
 ];
 
-export default function ShareBar({ slug, title, excerpt = '', hashtags = '' }: ShareBarProps) {
+export default function ShareBar({ slug, title, excerpt = '', hashtags = '', path }: ShareBarProps) {
   const [copied, setCopied] = useState(false);
-  const url = canonicalUrl(`/post/${slug}`);
+  const url = canonicalUrl(path ?? `/post/${slug}`);
   const c = COPY[useLang()].chrome;
 
   const handleShare = (network: ShareNetwork) => {

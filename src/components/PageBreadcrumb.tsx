@@ -25,6 +25,7 @@ export default function PageBreadcrumb({ editorial = false }: { editorial?: bool
     '/stories': c.tripDiaries,
     '/about': c.about,
     '/fan-league': COPY[lang].fanLeague.breadcrumb,
+    '/finnish-bands': COPY[lang].finnishBands.breadcrumb,
   };
   const className = editorial
     ? 'bg-[var(--color-cream)] text-[var(--color-ink)] border-b border-[var(--color-paper-border)]'
