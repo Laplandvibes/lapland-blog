@@ -32,7 +32,9 @@ import { CAPITALS, JOIN_COUNTRIES, LAPLAND, type FanLeagueRow } from '../data/fa
 
 const SOURCE = 'laplandblog-fanclub';
 const TOP = 10;
-const HERO = '/images/fan-league/nuorgam-northernmost';
+// Vesa 29.10.2026 vaihtoi heron (Nuorgamin kyltti -> tie 970 Tenon varressa, oma kuva 20261013_124639).
+// Pystykuvasta 16:9-rajaus, lähde 2252 px leveä: suurin koko 2252w, ei venytetä 2400:aan.
+const HERO = '/images/fan-league/utsjoki-road-970';
 const CARD_PHOTO = '/images/fan-league/nuorgam-sign-card.webp';
 const PHOTO_DAY = Date.UTC(2026, 9, 13, 12);
 
@@ -54,7 +56,15 @@ function countryName(lang: Lang, code: string): string {
 const utc = (ymd: string) => { const [y, m, d] = ymd.split('-').map(Number); return new Date(Date.UTC(y, m - 1, d, 12)); };
 function dayRange(lang: Lang, from: string, to: string): string {
   const f = new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'long', timeZone: 'UTC' });
-  try { return f.formatRange(utc(from), utc(to)); } catch { return `${f.format(utc(from))} – ${f.format(utc(to))}`; }
+  // A table never spans two months. Chromium's ICU writes this range as "10/01～10/31" (ja), "10/1 – 10/31" (zh)
+  // and "01–31 ottobre" (it), measured on the final-table render 29.10.2026; the page's other dates are "10月1日".
+  if ((lang === 'ja' || lang === 'zh-CN') && from.slice(0, 7) === to.slice(0, 7)) {
+    return `${f.format(utc(from))}${lang === 'ja' ? '～' : '至'}${Number(to.slice(8))}日`;
+  }
+  try {
+    const r = f.formatRange(utc(from), utc(to));
+    return lang === 'it' ? r.replace(/(^|[^\d])0(\d)/g, '$1$2') : r;
+  } catch { return `${f.format(utc(from))} – ${f.format(utc(to))}`; }
 }
 const fullDate = (lang: Lang, d: Date) => new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
 const monthYear = (lang: Lang, d: Date) => new Intl.DateTimeFormat(lang, { month: 'long', year: 'numeric', timeZone: 'Europe/Helsinki' }).format(d);
@@ -404,10 +414,10 @@ export default function FanLeague() {
         <figure className="max-w-6xl mx-auto mt-10">
           <img
             src={`${HERO}-1600.webp`}
-            srcSet={`${HERO}-960.webp 960w, ${HERO}-1600.webp 1600w, ${HERO}-2400.webp 2400w`}
+            srcSet={`${HERO}-960.webp 960w, ${HERO}-1600.webp 1600w, ${HERO}-2252.webp 2252w`}
             sizes="(min-width: 1152px) 1152px, 100vw"
             width={1600}
-            height={901}
+            height={900}
             alt={c.photoAlt}
             fetchPriority="high"
             className="w-full h-auto rounded-xl bg-night-light"
