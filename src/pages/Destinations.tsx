@@ -75,7 +75,7 @@ export default function Destinations() {
           />
           <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="inline-flex items-center gap-2 text-pink tracking-[0.32em] text-[11px] font-bold uppercase mb-5">
+              <p className="inline-flex items-center gap-2 text-white tracking-[0.32em] text-[11px] font-bold uppercase mb-5">
                 <MapPin size={13} /> {c.eyebrow}
               </p>
               <h1

@@ -56,7 +56,7 @@ export default function About() {
           />
           <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-pink tracking-[0.32em] text-[11px] font-bold uppercase mb-5">{c.eyebrow}</p>
+              <p className="text-white tracking-[0.32em] text-[11px] font-bold uppercase mb-5">{c.eyebrow}</p>
               <h1
                 className="text-snow leading-[1.05] tracking-[-0.015em] text-[clamp(2.25rem,5.5vw,3.75rem)] mb-5 hero-text-shadow"
                 style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}

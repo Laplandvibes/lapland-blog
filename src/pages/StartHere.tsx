@@ -88,7 +88,7 @@ export default function StartHere() {
           <Reveal>
             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-night/70 border border-pink/40">
               <span className="w-1.5 h-1.5 rounded-full bg-pink animate-pulse" />
-              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
+              <p className="text-white tracking-[0.35em] text-[10px] font-bold uppercase">
                 {c.eyebrow}
               </p>
             </div>

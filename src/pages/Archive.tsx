@@ -104,7 +104,7 @@ export default function Archive() {
         <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] rounded-full bg-pink/10 blur-[140px] pointer-events-none animate-hero-pulse" />
         <div className="relative max-w-5xl mx-auto w-full py-16 md:py-20">
           <Reveal>
-            <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
+            <p className="text-white tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
               {c.eyebrow}
             </p>
             <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-5 hero-text-shadow">

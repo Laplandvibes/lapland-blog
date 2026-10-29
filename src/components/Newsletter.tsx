@@ -1,3 +1,13 @@
+function newsletterEmailLabel(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  return ({fi:'Sähköpostiosoite',en:'Email address',de:'E-Mail-Adresse',es:'Correo electrónico',fr:'Adresse e-mail',it:'Indirizzo email',nl:'E-mailadres',sv:'E-postadress',ja:'メールアドレス',ko:'이메일 주소',pt:'Endereço de e-mail',zh:'电子邮箱'} as Record<string,string>)[lang] || 'Email address';
+}
+
+function newsletterLanguageNotice(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  const notes: Record<string, string> = {"fi":"Uutiskirjeet ovat suomeksi.","en":"Newsletters are in English.","de":"Die Newsletter werden auf Englisch versendet.","ja":"ニュースレターは英語でお届けします。","ko":"뉴스레터는 영어로 발송됩니다.","fr":"Les newsletters sont envoyées en anglais.","it":"Le newsletter sono inviate in inglese.","nl":"De nieuwsbrieven zijn in het Engels.","sv":"Nyhetsbreven skickas på engelska.","es":"Los boletines se envían en inglés.","pt":"As newsletters são enviadas em inglês.","zh":"订阅邮件以英语发送。"};
+  return notes[lang] || notes.en;
+}
 import { Send, CheckCircle, AlertCircle, Loader2, Sparkles } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { trackNewsletterSignup } from '../lib/analytics';
@@ -237,8 +247,7 @@ export default function Newsletter() {
         ) : (
           <>
             <><FounderByline tone="pink" />
-            <form
-              onSubmit={handleSubmit}
+            <form style={{ background: '#0F172A', color: '#F9FAFB', padding: 16, borderRadius: 16 }} onSubmit={handleSubmit}
               className="flex flex-col gap-3 max-w-lg mx-auto"
               noValidate
             >
@@ -251,7 +260,7 @@ export default function Newsletter() {
                 {COPY[lang].signIn.emailLabel}
               </label>
               <div className="flex flex-col sm:flex-row gap-3">
-                <input
+                <label style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}><span>{newsletterEmailLabel()}</span><span style={{fontSize:13,lineHeight:1.5}}>{newsletterLanguageNotice()}</span><input style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
                   id="newsletter-email"
                   type="email"
                   value={email}
@@ -261,9 +270,9 @@ export default function Newsletter() {
                   required
                   autoComplete="email"
                   disabled={status === 'loading'}
-                  className="flex-1 px-5 py-4 rounded-full bg-night-light/60 backdrop-blur-sm text-snow placeholder:text-slate-400 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
-                />
-                <button
+                  className="flex-1 px-5 py-4 rounded-full bg-night-light/60 backdrop-blur-sm text-snow placeholder:text-slate-600 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
+                /></label>
+                <button style={{ backgroundColor: '#BE185D', color: '#FFFFFF', alignSelf: 'end', minHeight: 48 }}
                   type="submit"
                   disabled={status === 'loading'}
                   className="px-7 py-4 rounded-full bg-pink-cta text-white font-semibold hover:bg-[#BE185D] transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(236,72,153,0.35)]"
@@ -282,7 +291,7 @@ export default function Newsletter() {
                 </button>
               </div>
 
-              <label
+              <label style={{color:"#F9FAFB"}}
                 htmlFor="newsletter-consent"
                 className="flex items-start gap-2.5 text-left text-slate-400 text-xs leading-relaxed px-1 cursor-pointer"
               >
@@ -295,10 +304,9 @@ export default function Newsletter() {
                   disabled={status === 'loading'}
                   className="mt-0.5 shrink-0 w-4 h-4 rounded accent-pink border border-purple/30 bg-night-light/60 focus:outline-none focus:ring-2 focus:ring-pink/50 disabled:opacity-50 cursor-pointer"
                 />
-                <span>
+                <span style={{color:"#F9FAFB"}}>
                   {cc.consent}{' '}
-                  <a
-                    href={to('/privacy/')}
+                  <a style={{color:"#BAE6FD",textDecoration:"underline"}}                     href={to('/privacy/')}
                     target="_blank"
                     rel="noopener"
                     className="text-slate-300 hover:text-pink underline"
@@ -319,7 +327,7 @@ export default function Newsletter() {
               </div>
             )}
 
-            <p className="text-slate-500 text-xs mt-6">
+            <p className="text-slate-300 text-sm mt-6">
               {c.agreeText}{' '}
               <a href={to('/privacy/')} className="text-slate-300 hover:text-pink underline">
                 {c.privacyLink}
