@@ -715,7 +715,7 @@ const it: SectionCopy = {
       },
       blindchannel: {
         origin: "Oulu, dal 2013",
-        blurb: "I Blind Channel di Oulu definiscono il proprio stile violent pop. Dark Side è arrivata sesta all’Eurovision 2021 con 301 punti ed è salita al primo posto in Finlandia. La band si è presa una pausa nell’ottobre 2024, ha annunciato il ritorno ad agosto 2026 e ha un nuovo album, Painstream, in uscita il 30 ottobre 2026. Proponiamo una registrazione dal vivo dal canale della band.",
+        blurb: "I Blind Channel di Oulu definiscono il proprio stile violent pop. Dark Side è arrivata sesta all’Eurovision 2021 con 301 punti ed è salita al primo posto in Finlandia. La band si è presa una pausa nell’ottobre 2024, ha annunciato il ritorno ad agosto 2026 e il 30 ottobre 2026 ha pubblicato l’album Painstream. Proponiamo una registrazione dal vivo dal canale della band.",
         place: "Saariselkä",
         alt: "Tetti scuri di baite a Saariselkä nell’ultima luce di una sera d’ottobre",
       },

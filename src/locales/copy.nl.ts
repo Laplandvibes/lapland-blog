@@ -715,7 +715,7 @@ const nl: SectionCopy = {
       },
       blindchannel: {
         origin: "Oulu, sinds 2013",
-        blurb: "Blind Channel uit Oulu noemt zijn stijl violent pop. Dark Side werd zesde op het Songfestival van 2021 met 301 punten en kwam in Finland op nummer één. De band nam in oktober 2024 een pauze en kondigde in augustus 2026 zijn terugkeer aan. Het nieuwe album, Painstream, verschijnt op 30 oktober 2026. We laten een liveopname van het eigen kanaal van de band horen.",
+        blurb: "Blind Channel uit Oulu noemt zijn stijl violent pop. Dark Side werd zesde op het Songfestival van 2021 met 301 punten en kwam in Finland op nummer één. De band nam in oktober 2024 een pauze en kondigde in augustus 2026 zijn terugkeer aan. Het album Painstream verscheen op 30 oktober 2026. We laten een liveopname van het eigen kanaal van de band horen.",
         place: "Saariselkä",
         alt: "Donkere daken van huisjes in Saariselkä in het laatste licht van een oktoberavond",
       },

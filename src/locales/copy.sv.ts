@@ -766,7 +766,7 @@ const sv: SectionCopy = {
       },
       blindchannel: {
         origin: "Uleåborg, sedan 2013",
-        blurb: "Blind Channel från Uleåborg kallar sin stil violent pop. Dark Side kom sexa i Eurovision 2021 med 301 poäng och gick upp som etta i Finland. Bandet tog paus i oktober 2024, meddelade sin comeback i augusti 2026 och släpper ett nytt album, Painstream, den 30 oktober 2026. Vi spelar en liveinspelning från bandets egen kanal.",
+        blurb: "Blind Channel från Uleåborg kallar sin stil violent pop. Dark Side kom sexa i Eurovision 2021 med 301 poäng och gick upp som etta i Finland. Bandet tog paus i oktober 2024, meddelade sin comeback i augusti 2026 och släppte albumet Painstream den 30 oktober 2026. Vi spelar en liveinspelning från bandets egen kanal.",
         place: "Saariselkä",
         alt: "Mörka stugtak i Saariselkä i det sista ljuset en oktoberkväll",
       },

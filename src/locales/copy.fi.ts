@@ -767,7 +767,7 @@ const fi: SectionCopy = {
       },
       blindchannel: {
         origin: "Oulu, vuodesta 2013",
-        blurb: "Oululainen Blind Channel kutsuu tyyliään violent popiksi. Dark Side sijoittui Euroviisuissa 2021 kuudenneksi 301 pisteellä ja nousi Suomen listaykköseksi. Yhtye jäi tauolle lokakuussa 2024 ja kertoi paluustaan elokuussa 2026. Uusi albumi Painstream ilmestyy 30. lokakuuta 2026. Soitamme livetallenteen yhtyeen omalta kanavalta.",
+        blurb: "Oululainen Blind Channel kutsuu tyyliään violent popiksi. Dark Side sijoittui Euroviisuissa 2021 kuudenneksi 301 pisteellä ja nousi Suomen listaykköseksi. Yhtye jäi tauolle lokakuussa 2024 ja kertoi paluustaan elokuussa 2026. Albumi Painstream julkaistiin 30. lokakuuta 2026. Soitamme livetallenteen yhtyeen omalta kanavalta.",
         place: "Saariselkä",
         alt: "Mökkien tummia kattoja Saariselällä lokakuun illan viimeisessä valossa",
       },

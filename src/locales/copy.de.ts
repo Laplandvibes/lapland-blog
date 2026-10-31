@@ -768,7 +768,7 @@ const de: SectionCopy = {
       },
       blindchannel: {
         origin: "Oulu, seit 2013",
-        blurb: "Blind Channel aus Oulu nennt ihren Stil Violent Pop. Dark Side wurde beim Eurovision Song Contest 2021 mit 301 Punkten Sechster und erreichte Platz eins in Finnland. Im Oktober 2024 legte die Band eine Pause ein, im August 2026 kündigte sie ihre Rückkehr an, und am 30. Oktober 2026 soll das neue Album Painstream erscheinen. Wir spielen eine Liveaufnahme vom eigenen Kanal der Band.",
+        blurb: "Blind Channel aus Oulu nennt ihren Stil Violent Pop. Dark Side wurde beim Eurovision Song Contest 2021 mit 301 Punkten Sechster und erreichte Platz eins in Finnland. Im Oktober 2024 legte die Band eine Pause ein, im August 2026 kündigte sie ihre Rückkehr an. Am 30. Oktober 2026 erschien das Album Painstream. Wir spielen eine Liveaufnahme vom eigenen Kanal der Band.",
         place: "Saariselkä",
         alt: "Dunkle Hüttendächer in Saariselkä im letzten Licht eines Oktoberabends",
       },
