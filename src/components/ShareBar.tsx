@@ -107,16 +107,15 @@ const TARGETS: ShareTarget[] = [
   {
     network: 'whatsapp',
     Icon: WhatsAppIcon,
-    href: (url, title, _excerpt, hashtags) =>
-      `https://api.whatsapp.com/send?text=${encodeURIComponent(`${title}\n${hashtags}\n${url}`)}`,
+    // Pelkkä osoite (Vesa 1.11.2026): WhatsApp piirtää kortin og-tiedoista, joten otsikko toistui viestissä.
+    href: (url) => `https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`,
   },
   {
     network: 'email',
     Icon: ({ size = 17 }: IconProps) => <Mail size={size} aria-hidden="true" />,
-    href: (url, title, excerpt, hashtags) =>
-      `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(
-        `${excerpt ? excerpt + '\n\n' : ''}${url}\n\n${hashtags}`
-      )}`,
+    // Aihe = otsikko, runko = osoite, kuten verkoston jakonapissa (shared/ShareBar).
+    href: (url, title) =>
+      `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`,
   },
 ];
 
