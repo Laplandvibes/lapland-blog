@@ -166,7 +166,7 @@ export default function Nav() {
                 }
               }}
             >
-              <span className="lv-wm font-logo tracking-wide text-2xl md:text-3xl uppercase leading-none flex items-baseline" data-lv-sanamerkki="" style={WM_STYLE}>
+              <span translate="no" className="notranslate lv-wm font-logo tracking-wide text-2xl md:text-3xl uppercase leading-none flex items-baseline" data-lv-sanamerkki="" style={WM_STYLE}>
                 <span className={`${logoAccentColor} transition-colors`}>#</span>
                 <span className={`${logoWordColor} transition-colors`}>LAPLAND</span>
                 <span className={`${logoAccentColor} transition-colors`}>.BLOG</span>

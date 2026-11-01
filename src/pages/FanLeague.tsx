@@ -510,7 +510,7 @@ export default function FanLeague() {
                     <p className="font-display font-extrabold text-[clamp(1.4rem,5vw,1.75rem)] leading-tight mt-1 truncate">{cardCountry}</p>
                     <p className="text-slate-400 text-[13px] mt-0.5">{since}</p>
                   </div>
-                  <span className="absolute right-4 bottom-3 font-logo text-xl tracking-wide leading-none" aria-hidden="true">
+                  <span translate="no" className="notranslate absolute right-4 bottom-3 font-logo text-xl tracking-wide leading-none" aria-hidden="true">
                     <span className="text-pink">#</span>LAPLAND<span className="text-pink">.BLOG</span>
                   </span>
                 </div>
