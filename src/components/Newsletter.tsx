@@ -1,13 +1,3 @@
-function newsletterEmailLabel(): string {
-  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
-  return ({fi:'Sähköpostiosoite',en:'Email address',de:'E-Mail-Adresse',es:'Correo electrónico',fr:'Adresse e-mail',it:'Indirizzo email',nl:'E-mailadres',sv:'E-postadress',ja:'メールアドレス',ko:'이메일 주소',pt:'Endereço de e-mail',zh:'电子邮箱'} as Record<string,string>)[lang] || 'Email address';
-}
-
-function newsletterLanguageNotice(): string {
-  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
-  const notes: Record<string, string> = {"fi":"Uutiskirjeet ovat suomeksi.","en":"Newsletters are in English.","de":"Die Newsletter werden auf Englisch versendet.","ja":"ニュースレターは英語でお届けします。","ko":"뉴스레터는 영어로 발송됩니다.","fr":"Les newsletters sont envoyées en anglais.","it":"Le newsletter sono inviate in inglese.","nl":"De nieuwsbrieven zijn in het Engels.","sv":"Nyhetsbreven skickas på engelska.","es":"Los boletines se envían en inglés.","pt":"As newsletters são enviadas em inglês.","zh":"订阅邮件以英语发送。"};
-  return notes[lang] || notes.en;
-}
 import { Send, CheckCircle, AlertCircle, Loader2, Sparkles } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { trackNewsletterSignup } from '../lib/analytics';
@@ -30,6 +20,20 @@ function track(event: string, data?: Record<string, unknown>) {
 // (.env is gitignored, CI never has it) and this fetch would post to
 // "undefined/functions/v1/...". Values + fallbacks: ../lib/supabaseConfig.
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabaseConfig';
+
+// Uutiskirjeen kieliohje sivun kielestä (ei <html lang>:sta, joka on esirenderöinnissä aina 'en').
+// Kirjeitä lähtee vain suomeksi ja englanniksi, joten fi/en-sivulla ohje toistaisi itsestäänselvää
+// eikä näy. Vesa 1.11.2026: "kuinka monta kertaa lukee sähköpostiosoite" (sama kuin skiresorts 92e9878).
+const NL_LANG_NOTICE: Record<string, string> = {
+  de: 'Die Newsletter werden auf Englisch versendet.', ja: 'ニュースレターは英語でお届けします。',
+  es: 'Los boletines se envían en inglés.', pt: 'As newsletters são enviadas em inglês.', zh: '订阅邮件以英语发送。',
+  ko: '뉴스레터는 영어로 발송됩니다.', fr: 'Les newsletters sont envoyées en anglais.', it: 'Le newsletter sono inviate in inglese.',
+  nl: 'De nieuwsbrieven zijn in het Engels.', sv: 'Nyhetsbreven skickas på engelska.',
+};
+const nlLang = (l?: string): string => {
+  const x = (l || 'en').toLowerCase();
+  return x === 'br' ? 'pt' : x === 'cn' ? 'zh' : x === 'kr' ? 'ko' : x === 'jp' ? 'ja' : x.split('-')[0];
+};
 
 const SOURCE = 'laplandblog-website';
 
@@ -260,18 +264,18 @@ export default function Newsletter() {
                 {COPY[lang].signIn.emailLabel}
               </label>
               <div className="flex flex-col sm:flex-row gap-3">
-                <label style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}><span>{newsletterEmailLabel()}</span><span style={{fontSize:13,lineHeight:1.5}}>{newsletterLanguageNotice()}</span><input style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
+                <div style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}>{NL_LANG_NOTICE[nlLang(lang)] && <span id="newsletter-email-lang" style={{fontSize:13,lineHeight:1.5}}>{NL_LANG_NOTICE[nlLang(lang)]}</span>}<input
+                  aria-describedby={NL_LANG_NOTICE[nlLang(lang)] ? 'newsletter-email-lang' : undefined} style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
                   id="newsletter-email"
                   type="email"
                   value={email}
                   onFocus={trackStart}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder={c.placeholder}
                   required
                   autoComplete="email"
                   disabled={status === 'loading'}
                   className="flex-1 px-5 py-4 rounded-full bg-night-light/60 backdrop-blur-sm text-snow placeholder:text-slate-600 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
-                /></label>
+                /></div>
                 <button style={{ backgroundColor: '#BE185D', color: '#FFFFFF', alignSelf: 'end', minHeight: 48 }}
                   type="submit"
                   disabled={status === 'loading'}
@@ -327,12 +331,9 @@ export default function Newsletter() {
               </div>
             )}
 
+            {/* 1.11.2026: "Tilaamalla hyväksyt tietosuojakäytäntömme" toisti suostumusrivin tietosuojalinkin. */}
             <p className="text-slate-300 text-sm mt-6">
-              {c.agreeText}{' '}
-              <a href={to('/privacy/')} className="text-slate-300 hover:text-pink underline">
-                {c.privacyLink}
-              </a>
-              . {c.unsubscribeNote}
+              {c.unsubscribeNote}
             </p>
           </>
         )}
