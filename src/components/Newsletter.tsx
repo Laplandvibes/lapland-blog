@@ -1,4 +1,4 @@
-import { Send, CheckCircle, AlertCircle, Loader2, Sparkles } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, Loader2, Sparkles, Mail } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
@@ -29,6 +29,12 @@ const NL_LANG_NOTICE: Record<string, string> = {
   es: 'Los boletines se envían en inglés.', pt: 'As newsletters são enviadas em inglês.', zh: '订阅邮件以英语发送。',
   ko: '뉴스레터는 영어로 발송됩니다.', fr: 'Les newsletters sont envoyées en anglais.', it: 'Le newsletter sono inviate in inglese.',
   nl: 'De nieuwsbrieven zijn in het Engels.', sv: 'Nyhetsbreven skickas på engelska.',
+};
+// Esimerkkiosoite kentän taustalle (4.11.2026): näyttää muodon, ei toista otsikkoa.
+const NL_EMAIL_EXAMPLE: Record<string, string> = {
+  en: 'name@example.com', fi: 'nimi@esimerkki.fi', de: 'name@beispiel.de', ja: 'name@example.com',
+  es: 'nombre@ejemplo.es', pt: 'nome@exemplo.com.br', zh: 'name@example.com', ko: 'name@example.com',
+  fr: 'nom@exemple.fr', it: 'nome@esempio.it', nl: 'naam@voorbeeld.nl', sv: 'namn@exempel.se',
 };
 const nlLang = (l?: string): string => {
   const x = (l || 'en').toLowerCase();
@@ -251,35 +257,47 @@ export default function Newsletter() {
         ) : (
           <>
             <><FounderByline tone="pink" />
-            <form style={{ background: '#0F172A', color: '#F9FAFB', padding: 16, borderRadius: 16 }} onSubmit={handleSubmit}
-              className="flex flex-col gap-3 max-w-lg mx-auto"
+            {/* 4.11.2026 (Vesa: kenttä "leijuu" eikä "anna esimerkkiä taustalle"): Codexin 28.10. tumma laatikko pois, otsikko kentän yllä, kenttä ja nappi samalla rivillä, esimerkkiosoite kentässä. */}
+            {/* Blogin osio on jo tumma (night), joten Tilaa-nappi pysyy pinkkinä (pink-cta #DB2777, 4,63:1):
+                tumma nappi tummalla taustalla katoaisi. */}
+            <form onSubmit={handleSubmit}
+              className="max-w-lg mx-auto text-left"
               noValidate
             >
               {/* Näkyvä label (lomakeportti 14.9.2026): placeholder katoaa ensimmäisestä
                   kirjaimesta eikä ole label. Teksti on sama 12 kielellä kuin kirjautumissivulla. */}
               <label
                 htmlFor="newsletter-email"
-                className="block text-left text-[11px] uppercase tracking-[0.25em] text-slate-300 font-semibold"
+                className="block text-white font-semibold text-sm mb-2"
               >
                 {COPY[lang].signIn.emailLabel}
               </label>
+              {NL_LANG_NOTICE[nlLang(lang)] && (
+                <p id="newsletter-email-lang" className="text-white text-[13px] leading-relaxed -mt-1 mb-2">
+                  {NL_LANG_NOTICE[nlLang(lang)]}
+                </p>
+              )}
               <div className="flex flex-col sm:flex-row gap-3">
-                <div style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}>{NL_LANG_NOTICE[nlLang(lang)] && <span id="newsletter-email-lang" style={{fontSize:13,lineHeight:1.5}}>{NL_LANG_NOTICE[nlLang(lang)]}</span>}<input
-                  aria-describedby={NL_LANG_NOTICE[nlLang(lang)] ? 'newsletter-email-lang' : undefined} style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
-                  id="newsletter-email"
-                  type="email"
-                  value={email}
-                  onFocus={trackStart}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  autoComplete="email"
-                  disabled={status === 'loading'}
-                  className="flex-1 px-5 py-4 rounded-full bg-night-light/60 backdrop-blur-sm text-snow placeholder:text-slate-600 border border-purple/30 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 disabled:opacity-50 transition-colors"
-                /></div>
-                <button style={{ backgroundColor: '#BE185D', color: '#FFFFFF', alignSelf: 'end', minHeight: 48 }}
+                <div className="relative flex-1 min-w-0">
+                  <Mail aria-hidden className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" />
+                  <input
+                    aria-describedby={NL_LANG_NOTICE[nlLang(lang)] ? 'newsletter-email-lang' : undefined}
+                    id="newsletter-email"
+                    type="email"
+                    value={email}
+                    placeholder={NL_EMAIL_EXAMPLE[nlLang(lang)] ?? NL_EMAIL_EXAMPLE.en}
+                    onFocus={trackStart}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    autoComplete="email"
+                    disabled={status === 'loading'}
+                    className="w-full h-14 bg-white text-slate-900 border border-white rounded-full pl-11 pr-4 text-base placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-white/40 transition-shadow disabled:opacity-60"
+                  />
+                </div>
+                <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="px-7 py-4 rounded-full bg-pink-cta text-white font-semibold hover:bg-[#BE185D] transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(236,72,153,0.35)]"
+                  className="h-14 shrink-0 bg-pink-cta hover:bg-[#BE185D] text-white font-bold px-7 rounded-full shadow-lg transition-colors text-base whitespace-nowrap inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {status === 'loading' ? (
                     <>
@@ -295,9 +313,9 @@ export default function Newsletter() {
                 </button>
               </div>
 
-              <label style={{color:"#F9FAFB"}}
+              <label
                 htmlFor="newsletter-consent"
-                className="flex items-start gap-2.5 text-left text-slate-400 text-xs leading-relaxed px-1 cursor-pointer"
+                className="mt-4 flex items-start gap-2.5 text-left text-white text-xs leading-relaxed px-1 cursor-pointer"
               >
                 <input
                   id="newsletter-consent"
@@ -308,12 +326,13 @@ export default function Newsletter() {
                   disabled={status === 'loading'}
                   className="mt-0.5 shrink-0 w-4 h-4 rounded accent-pink border border-purple/30 bg-night-light/60 focus:outline-none focus:ring-2 focus:ring-pink/50 disabled:opacity-50 cursor-pointer"
                 />
-                <span style={{color:"#F9FAFB"}}>
+                <span>
                   {cc.consent}{' '}
-                  <a style={{color:"#BAE6FD",textDecoration:"underline"}}                     href={to('/privacy/')}
+                  <a
+                    href={to('/privacy/')}
                     target="_blank"
                     rel="noopener"
-                    className="text-slate-300 hover:text-pink underline"
+                    className="font-semibold text-white underline underline-offset-2"
                   >
                     {cc.privacy}
                   </a>
