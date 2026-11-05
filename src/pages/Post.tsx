@@ -37,6 +37,11 @@ import { formatPostDate } from '../lib/dates';
 import { postTextLang } from '../lib/postLang';
 import { cardUrl } from '../lib/uploadImage';
 
+/** List items may carry inline markdown (**bold**, links); render it without a wrapping <p>. */
+function InlineMd({ text }: { text: string }) {
+  return <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ p: ({ children }) => <>{children}</> }}>{text}</ReactMarkdown>;
+}
+
 /**
  * Render a single content block. H2s receive anchor ids derived from index
  * so the TableOfContents can link to them.
@@ -61,7 +66,7 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
             {block.items.map((item, i) => (
               <li key={i}>
                 <span aria-hidden="true" className="check-box" />
-                <span><ReactMarkdown remarkPlugins={[remarkGfm]} components={{ p: ({ children }) => <>{children}</> }}>{item}</ReactMarkdown></span>
+                <span><InlineMd text={item} /></span>
               </li>
             ))}
           </ul>
@@ -71,7 +76,7 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
         return (
           <ol>
             {block.items.map((item, i) => (
-              <li key={i}>{item}</li>
+              <li key={i}><InlineMd text={item} /></li>
             ))}
           </ol>
         );
@@ -79,7 +84,7 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
       return (
         <ul>
           {block.items.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li key={i}><InlineMd text={item} /></li>
           ))}
         </ul>
       );

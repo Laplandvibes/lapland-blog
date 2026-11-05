@@ -47,6 +47,8 @@ function parseContent(raw: unknown): PostBlock[] {
       blocks.push({
         type: 'list',
         ordered: Boolean(b.ordered),
+        // 🔴 Sallittujen kenttien lista: ilman tätä riviä tarkistuslista piirtyi tavallisena luettelona (mitattu livestä).
+        check: Boolean(b.check),
         items: b.items.filter((x): x is string => typeof x === 'string'),
       });
     } else if (type === 'markdown' && typeof b.text === 'string') {
