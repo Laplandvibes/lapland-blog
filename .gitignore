@@ -35,3 +35,4 @@ dist-ssr
 # eli antaa kartan hyokkaajalle vaikka salaisuuksia ei olisikaan. Pida ne poissa.
 ACCOUNT-AUDIT-*.md
 _buildlog*.txt
+.wrangler
