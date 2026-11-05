@@ -808,6 +808,10 @@ textarea:focus-visible {
   margin: 0 0 1.4em;
   padding-left: 1.4em;
 }
+/* Tailwind's preflight removes list markers; without them a list reads as an oddly indented paragraph. */
+.prose-editorial ul { list-style: disc; }
+.prose-editorial ol { list-style: decimal; }
+.prose-editorial li::marker { color: var(--color-accent); }
 .prose-editorial li { margin-bottom: 0.5em; }
 
 /* Pull-quote — Manrope medium, upright (sans italics read weak at display
