@@ -76,13 +76,11 @@ export default function SignIn() {
   // the magic link. Otherwise the default landing zone is the user's own
   // trip blog dashboard (/me) — that's where every signup intends to go.
   //
-  // The auth/dashboard area (/me/*) is locale-AGNOSTIC: those routes are only
-  // registered without a locale prefix, so the post-login redirect must never
-  // carry one. A visitor signing in from /fi/signin would otherwise be sent to
-  // /fi/me — a path with no matching route → the 404 page. stripLocale() peels
-  // any /fi, /de, … prefix back off so we always land on the real /me.
+  // The /me area is registered under every locale prefix (App.tsx
+  // ME_ROUTE_PREFIXES), and since 2026-11-05 it is translated, so the reader
+  // goes back in the language they signed in with: /fi/signin -> /fi/me.
   const rawFrom = (location.state as LocationState | null)?.from ?? '/me';
-  const from = stripLocale(rawFrom);
+  const from = lp(stripLocale(rawFrom));
 
   const [email, setEmail] = useState('');
   const [sending, setSending] = useState(false);

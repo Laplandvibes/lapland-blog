@@ -1,419 +1,321 @@
-// /me — the author's own command centre. Lists drafts + published entries
-// scoped to the signed-in user, shows a friendly empty state for new signups,
-// and links to the editor. Unlike the admin Dashboard this reuses the public
-// Nav so it feels like part of the reader's site (because it is).
+// /me — the writer's own blog: their photos as a grid, the big "add a photo"
+// button, their public trip page address and name. Localised (was English on
+// every language until 2026-11-05).
 
-import { Link } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
-import {
-  Plus,
-  Pencil,
-  Trash2,
-  Eye,
-  EyeOff,
-  AlertTriangle,
-  Compass,
-  ExternalLink,
-  Check,
-  X,
-} from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Plus, Pencil, Trash2, ExternalLink, Camera, Settings, LogOut, Loader2, Thermometer, MapPin } from 'lucide-react';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
-import Reveal from '../../components/Reveal';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth, ensureProfile } from '../../hooks/useAuth';
 import { useMyPosts } from '../../hooks/useMyPosts';
-import { deletePost, type AdminPostListItem } from '../../hooks/useAdminPosts';
+import { deletePost } from '../../hooks/useAdminPosts';
 import { supabase } from '../../lib/supabase';
-import { useSeo, canonicalUrl } from '../../lib/seo';
-
-function formatDate(iso: string | null): string {
-  if (!iso) return '—';
-  return new Date(iso).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  });
-}
+import { cardUrl } from '../../lib/uploadImage';
+import { useSeo } from '../../lib/seo';
+import { useLang, useLocalePath } from '../../i18n/useLang';
+import { ME_COPY } from '../../locales/me';
 
 interface ProfileSummary {
   handle: string;
   display_name: string;
-  avatar_url: string | null;
 }
 
 export default function MyDashboard() {
-  const { user } = useAuth();
+  const lang = useLang();
+  const to = useLocalePath();
+  const navigate = useNavigate();
+  const t = ME_COPY[lang].dashboard;
+  const { user, signOut } = useAuth();
   const { posts, loading, error, refresh } = useMyPosts(user?.id);
-  const [deletingId, setDeletingId] = useState<string | null>(null);
-  const [deleteError, setDeleteError] = useState<string | null>(null);
   const [profile, setProfile] = useState<ProfileSummary | null>(null);
+  const [editing, setEditing] = useState<null | 'name' | 'handle'>(null);
+  const [draft, setDraft] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [fieldError, setFieldError] = useState<string | null>(null);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
 
-  // Handle editing
-  const [editingHandle, setEditingHandle] = useState(false);
-  const [handleDraft, setHandleDraft] = useState('');
-  const [handleSaving, setHandleSaving] = useState(false);
-  const [handleError, setHandleError] = useState<string | null>(null);
-  const handleInputRef = useRef<HTMLInputElement>(null);
+  useSeo({ title: t.metaTitle, description: t.emptyBody });
 
-  useSeo({
-    title: 'Your trip blog',
-    description: 'Your drafts, published stories and entries at a glance.',
-    canonical: canonicalUrl('/me'),
-  });
-
-  // Pull the public profile so we can show the /yourname link.
   useEffect(() => {
-    if (!user) {
-      setProfile(null);
-      return;
-    }
+    if (!user) return;
     let cancelled = false;
-    void supabase
-      .from('blog_profiles')
-      .select('handle, display_name, avatar_url')
-      .eq('id', user.id)
-      .maybeSingle()
-      .then(({ data }) => {
-        if (!cancelled) setProfile((data as ProfileSummary | null) ?? null);
-      });
+    void (async () => {
+      await ensureProfile(user);
+      const { data } = await supabase.from('blog_profiles').select('handle, display_name').eq('id', user.id).maybeSingle();
+      if (!cancelled) setProfile((data as ProfileSummary | null) ?? null);
+    })();
     return () => {
       cancelled = true;
     };
   }, [user]);
 
-  const published = posts.filter((p) => p.status === 'published').length;
-  const drafts = posts.filter((p) => p.status === 'draft').length;
+  function startEdit(kind: 'name' | 'handle') {
+    setDraft(kind === 'name' ? profile?.display_name ?? '' : profile?.handle ?? '');
+    setFieldError(null);
+    setEditing(kind);
+  }
 
-  async function handleDelete(post: AdminPostListItem) {
-    const ok = window.confirm(
-      `Delete "${post.title}"? This cannot be undone.`
-    );
-    if (!ok) return;
-    setDeletingId(post.id);
+  async function saveField() {
+    if (!user || !editing) return;
+    setFieldError(null);
+    if (editing === 'name') {
+      const name = draft.trim().slice(0, 60);
+      if (name.length < 2) return;
+      setSaving(true);
+      const { error: err } = await supabase.from('blog_profiles').update({ display_name: name }).eq('id', user.id);
+      setSaving(false);
+      if (err) return setFieldError(t.deleteFailed);
+      setProfile((p) => (p ? { ...p, display_name: name } : p));
+      // Posts carry a copy of the name; keep them in step.
+      await supabase
+        .from('blog_posts')
+        .update({ author_snapshot: { handle: profile?.handle ?? '', display_name: name, avatar_url: null } })
+        .eq('author_id', user.id);
+      setEditing(null);
+      return;
+    }
+    const clean = draft.toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 30);
+    if (clean.length < 2) return setFieldError(t.handleRule);
+    if (clean === profile?.handle) return setEditing(null);
+    setSaving(true);
+    const { data: taken } = await supabase.from('blog_profiles').select('id').eq('handle', clean).neq('id', user.id).maybeSingle();
+    if (taken) {
+      setSaving(false);
+      return setFieldError(t.handleTaken);
+    }
+    const { error: err } = await supabase.from('blog_profiles').update({ handle: clean }).eq('id', user.id);
+    setSaving(false);
+    if (err) return setFieldError(t.handleTaken);
+    await supabase
+      .from('blog_posts')
+      .update({ author_snapshot: { handle: clean, display_name: profile?.display_name ?? clean, avatar_url: null } })
+      .eq('author_id', user.id);
+    setProfile((p) => (p ? { ...p, handle: clean } : p));
+    setEditing(null);
+  }
+
+  async function remove(id: string) {
+    if (!window.confirm(t.confirmDelete)) return;
     setDeleteError(null);
-    const { error: err } = await deletePost(post.id);
-    setDeletingId(null);
-    if (err) {
-      setDeleteError(err);
-    } else {
-      void refresh();
-    }
+    const { error: err } = await deletePost(id);
+    if (err) setDeleteError(t.deleteFailed);
+    else void refresh();
   }
 
-  function startEditingHandle() {
-    setHandleDraft(profile?.handle ?? '');
-    setHandleError(null);
-    setEditingHandle(true);
-    setTimeout(() => handleInputRef.current?.focus(), 50);
-  }
-
-  async function saveHandle() {
-    if (!user) return;
-    const clean = handleDraft
-      .toLowerCase()
-      .replace(/[^a-z0-9_-]/g, '')
-      .slice(0, 30);
-    if (!clean || clean.length < 2) {
-      setHandleError('At least 2 characters (a–z, 0–9, - or _).');
-      return;
-    }
-    if (clean === profile?.handle) {
-      setEditingHandle(false);
-      return;
-    }
-    setHandleSaving(true);
-    setHandleError(null);
-
-    // Check uniqueness first
-    const { data: existing } = await supabase
-      .from('blog_profiles')
-      .select('id')
-      .eq('handle', clean)
-      .neq('id', user.id)
-      .maybeSingle();
-    if (existing) {
-      setHandleSaving(false);
-      setHandleError(`"${clean}" is already taken. Try another.`);
-      return;
-    }
-
-    const { error: err } = await supabase
-      .from('blog_profiles')
-      .update({ handle: clean })
-      .eq('id', user.id);
-
-    setHandleSaving(false);
-    if (err) {
-      setHandleError(err.message);
-    } else {
-      setProfile((prev) => (prev ? { ...prev, handle: clean } : prev));
-      setEditingHandle(false);
-    }
-  }
-
-  const firstName =
-    (profile?.display_name ?? user?.email ?? 'traveller').split(/[\s@]/)[0];
+  const pageUrl = profile ? to(`/by/${profile.handle}`) : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-night-light/50 via-night to-night text-snow flex flex-col">
+    <div className="min-h-screen bg-night text-snow flex flex-col">
       <Nav />
-
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
-        {/* ─── Hero ─────────────────────────────────────────────────── */}
-        <Reveal as="header" className="flex flex-wrap items-end justify-between gap-6 mb-10">
-          <div>
-            <p className="text-pink tracking-[0.35em] text-[11px] font-bold uppercase mb-3">
-              Your trip blog
-            </p>
-            <h1 className="font-display text-5xl md:text-6xl text-snow font-light tracking-tight mb-4">
-              Hei, <span className="italic text-pink">{firstName}</span>.
-            </h1>
-            <p className="text-slate-200 text-base md:text-lg">
-              {published} published · {drafts} draft
-              {drafts === 1 ? '' : 's'}
-            </p>
-
-            {/* Editable handle / blog URL */}
-            {profile?.handle && !editingHandle && (
-              <div className="mt-2">
-                <div className="flex items-center gap-2">
-                  <a
-                    href={`/by/${profile.handle}`}
-                    className="lv-tap inline-flex items-center gap-1 text-aurora-blue hover:text-pink text-sm transition-colors"
-                  >
-                    lapland.blog/by/{profile.handle}
-                    <ExternalLink size={11} />
-                  </a>
-                  <button
-                    type="button"
-                    onClick={startEditingHandle}
-                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] text-slate-400 hover:text-pink border border-purple/25 hover:border-pink/40 transition-colors"
-                    aria-label="Change your blog URL"
-                  >
-                    <Pencil size={10} />
-                    Change
-                  </button>
-                </div>
-                <p className="text-[11px] text-slate-300 mt-1">
-                  This is your public blog address. Share it with friends.
-                </p>
-              </div>
-            )}
-            {editingHandle && (
-              <div className="mt-2 space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <span className="text-slate-400 text-sm">lapland.blog/by/</span>
-                  <input
-                    ref={handleInputRef}
-                    type="text"
-                    value={handleDraft}
-                    onChange={(e) =>
-                      setHandleDraft(
-                        e.target.value
-                          .toLowerCase()
-                          .replace(/[^a-z0-9_-]/g, '')
-                          .slice(0, 30)
-                      )
-                    }
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') void saveHandle();
-                      if (e.key === 'Escape') setEditingHandle(false);
-                    }}
-                    className="px-2 py-1 bg-night/60 border border-purple/30 rounded-lg text-snow font-mono text-sm focus:outline-none focus:ring-2 focus:ring-pink/40 w-40"
+      <main className="flex-1 pt-24 pb-20 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+            <div className="text-center lg:text-left">
+              <h1 className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight">{t.h1}</h1>
+              {profile && (
+                <div className="mt-4 grid gap-2 text-left max-w-xl mx-auto lg:mx-0">
+                  <EditableRow
+                    label={t.nameLabel}
+                    value={profile.display_name}
+                    editing={editing === 'name'}
+                    draft={draft}
+                    setDraft={setDraft}
+                    placeholder={t.namePlaceholder}
+                    onEdit={() => startEdit('name')}
+                    onSave={() => void saveField()}
+                    onCancel={() => setEditing(null)}
+                    editLabel={t.editName}
+                    saveLabel={t.save}
+                    cancelLabel={t.cancel}
+                    saving={saving}
                   />
-                  <button
-                    type="button"
-                    onClick={() => void saveHandle()}
-                    disabled={handleSaving}
-                    className="p-1.5 rounded-lg bg-aurora-green/15 text-aurora-green hover:bg-aurora-green/25 transition-colors disabled:opacity-50"
-                    aria-label="Save handle"
-                  >
-                    <Check size={14} />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setEditingHandle(false)}
-                    className="p-1.5 rounded-lg text-slate-400 hover:text-red-400 hover:bg-red-500/10 transition-colors"
-                    aria-label="Cancel"
-                  >
-                    <X size={14} />
-                  </button>
+                  <EditableRow
+                    label={t.yourPage}
+                    value={`lapland.blog/by/${profile.handle}`}
+                    href={pageUrl ?? undefined}
+                    editing={editing === 'handle'}
+                    draft={draft}
+                    setDraft={setDraft}
+                    prefix="lapland.blog/by/"
+                    onEdit={() => startEdit('handle')}
+                    onSave={() => void saveField()}
+                    onCancel={() => setEditing(null)}
+                    editLabel={t.editAddress}
+                    saveLabel={t.save}
+                    cancelLabel={t.cancel}
+                    saving={saving}
+                  />
+                  {fieldError && <p role="alert" className="text-sm text-red-200">{fieldError}</p>}
                 </div>
-                {handleError && (
-                  <p className="text-[11px] text-red-400">{handleError}</p>
-                )}
-                <p className="text-[11px] text-slate-300">
-                  Lowercase letters, numbers, dash or underscore. 2–30 characters.
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3">
-            {/* Hide the top create button while the empty-state card is showing
-                (0 posts) so the "Write your first post" CTA is the single,
-                unambiguous call to action. Once the author has at least one
-                post — or while we're still loading — keep it as the create
-                action. */}
-            {(loading || posts.length > 0) && (
+              )}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center sm:justify-center lg:justify-end">
               <Link
-                to="/me/new"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all"
+                to={to('/me/new')}
+                className="h-14 px-7 rounded-full bg-pink-cta text-white font-bold inline-flex items-center justify-center gap-2"
+                data-umami-event="photo_cta"
+                data-umami-event-surface="dashboard"
               >
-                <Plus size={16} />
-                Write new post
+                <Camera size={18} /> {t.addPhoto}
               </Link>
-            )}
-            <Link
-              to="/me/settings"
-              className="inline-flex items-center gap-2 px-5 py-3 bg-night-light/40 border border-purple/30 text-slate-200 hover:text-pink hover:border-pink/55 text-xs font-semibold uppercase tracking-[0.2em] rounded-full transition-colors"
-            >
-              Account &amp; settings
-            </Link>
-          </div>
-        </Reveal>
-
-        {/* ─── Status banners ───────────────────────────────────────── */}
-        {error && (
-          <div className="mb-6 rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300 flex items-start gap-2">
-            <AlertTriangle size={16} className="mt-0.5 flex-shrink-0" />
-            <span>Could not load posts: {error}</span>
-          </div>
-        )}
-        {deleteError && (
-          <div className="mb-6 rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300 flex items-start gap-2">
-            <AlertTriangle size={16} className="mt-0.5 flex-shrink-0" />
-            <span>Could not delete: {deleteError}</span>
-          </div>
-        )}
-
-        {/* ─── List ─────────────────────────────────────────────────── */}
-        <Reveal delay={1}>
-        {loading ? (
-          <div className="text-center py-20 text-slate-400">
-            <div className="inline-block w-6 h-6 border-2 border-pink border-t-transparent rounded-full animate-spin" />
-            <p className="mt-4 text-sm">Loading your entries…</p>
-          </div>
-        ) : posts.length === 0 ? (
-          <div className="relative text-center py-20 px-6 rounded-3xl border border-pink/30 bg-gradient-to-b from-pink/15 via-night-light/60 to-night-light/40 shadow-[0_30px_90px_-50px_rgba(236,72,153,0.7)] overflow-hidden">
-            {/* Soft pink glow blooming from the top so the card feels warm,
-                not like an empty void. */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-pink/25 blur-3xl"
-            />
-            <div className="relative">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-pink/20 border border-pink/40 mb-7 shadow-[0_0_40px_-6px_rgba(236,72,153,0.8)]">
-                <Compass size={34} className="text-pink" />
+              <div className="flex gap-2 justify-center">
+                <Link to={to('/me/settings')} className="h-12 px-4 rounded-full border border-slate-600 inline-flex items-center gap-2 text-sm font-semibold hover:border-snow">
+                  <Settings size={16} /> {t.settings}
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => void signOut().then(() => navigate(to('/')))}
+                  className="h-12 px-4 rounded-full border border-slate-600 inline-flex items-center gap-2 text-sm font-semibold hover:border-snow"
+                >
+                  <LogOut size={16} /> {t.signOut}
+                </button>
               </div>
-              <h2 className="text-snow text-3xl md:text-4xl font-display font-light tracking-tight mb-4">
-                Your blog is a <span className="italic text-pink">blank map</span>.
-              </h2>
-              <p className="text-slate-200 text-base md:text-lg leading-relaxed mb-10 max-w-lg mx-auto">
-                Let&apos;s put the first pin on it. Write about a place you&apos;ve
-                been, a plan for the trip, or the colour of the sky on the drive
-                north. Whatever you want to remember.
-              </p>
-              <Link
-                to="/me/new"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#DB2777] text-white font-semibold rounded-full text-base hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all shadow-[0_12px_36px_-8px_rgba(236,72,153,0.65)]"
-              >
-                <Plus size={18} /> Write your first post
-              </Link>
-              <p className="text-slate-400 text-xs mt-5">
-                Takes a few minutes. You can save it as a draft and finish later.
-              </p>
             </div>
           </div>
-        ) : (
-          <div className="rounded-2xl border border-purple/25 bg-night-light/30 overflow-hidden">
-            <table className="w-full text-sm">
-              <thead className="bg-night-light/60 text-slate-400 text-[10px] uppercase tracking-[0.2em]">
-                <tr>
-                  <th className="text-left font-semibold px-5 py-3">Post</th>
-                  <th className="text-left font-semibold px-5 py-3 hidden sm:table-cell">
-                    Status
-                  </th>
-                  <th className="text-left font-semibold px-5 py-3 hidden lg:table-cell">
-                    Updated
-                  </th>
-                  <th className="text-right font-semibold px-5 py-3">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-purple/15">
-                {posts.map((p) => (
-                  <tr
-                    key={p.id}
-                    className="hover:bg-night-light/40 transition-colors"
-                  >
-                    <td className="px-5 py-4">
-                      <Link
-                        to={`/me/${p.id}`}
-                        className="text-snow hover:text-pink font-semibold"
-                      >
-                        {p.title || <em className="text-slate-500">Untitled</em>}
-                      </Link>
-                      <p className="text-slate-400 text-xs mt-1 truncate max-w-[320px]">
-                        /{p.slug}
-                      </p>
-                    </td>
-                    <td className="px-5 py-4 hidden sm:table-cell">
-                      {p.status === 'published' ? (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-[10px] uppercase tracking-wider bg-aurora-green/15 text-aurora-green border border-aurora-green/30">
-                          <Eye size={11} /> Published
-                        </span>
-                      ) : (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-[10px] uppercase tracking-wider bg-slate-500/15 text-slate-300 border border-slate-500/30">
-                          <EyeOff size={11} /> Draft
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-5 py-4 hidden lg:table-cell text-slate-400 text-xs">
-                      {formatDate(p.updated_at)}
-                    </td>
-                    <td className="px-5 py-4">
-                      <div className="flex items-center justify-end gap-2">
-                        {p.status === 'published' && (
-                          <Link
-                            to={`/post/${p.slug}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-2 rounded-lg text-slate-400 hover:text-aurora-blue hover:bg-night/50 transition-colors"
-                            aria-label="View live"
-                          >
-                            <Eye size={14} />
-                          </Link>
-                        )}
-                        <Link
-                          to={`/me/${p.id}`}
-                          className="p-2 rounded-lg text-slate-400 hover:text-pink hover:bg-night/50 transition-colors"
-                          aria-label="Edit"
-                        >
-                          <Pencil size={14} />
-                        </Link>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            void handleDelete(p);
-                          }}
-                          disabled={deletingId === p.id}
-                          className="p-2 rounded-lg text-slate-400 hover:text-red-400 hover:bg-red-500/10 transition-colors disabled:opacity-50"
-                          aria-label="Delete"
-                        >
-                          <Trash2 size={14} />
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-        </Reveal>
-      </main>
 
+          {deleteError && <p role="alert" className="mb-4 text-sm text-red-200">{deleteError}</p>}
+
+          {loading ? (
+            <p className="py-16 text-center text-slate-300 inline-flex w-full items-center justify-center gap-2">
+              <Loader2 size={18} className="animate-spin" /> {t.loading}
+            </p>
+          ) : error ? (
+            <p role="alert" className="py-10 text-center text-red-200">{t.loadError}</p>
+          ) : posts.length === 0 ? (
+            <Link
+              to={to('/me/new')}
+              className="block rounded-3xl border-2 border-dashed border-pink/50 bg-night-light/50 px-6 py-14 text-center hover:border-pink transition-colors"
+              data-umami-event="photo_cta"
+              data-umami-event-surface="dashboard_empty"
+            >
+              <span className="mx-auto mb-5 w-16 h-16 rounded-full bg-pink-cta/20 flex items-center justify-center">
+                <Camera size={30} className="text-pink-300" />
+              </span>
+              <span className="block font-display font-bold text-2xl sm:text-3xl mb-3">{t.emptyTitle}</span>
+              <span className="block text-slate-300 max-w-md mx-auto text-left sm:text-center">{t.emptyBody}</span>
+              <span className="mt-6 inline-flex items-center gap-2 h-12 px-6 rounded-full bg-pink-cta text-white font-semibold">
+                <Plus size={18} /> {t.addPhoto}
+              </span>
+            </Link>
+          ) : (
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {posts.map((p) => (
+                <li key={p.id} className="rounded-2xl overflow-hidden border border-slate-700 bg-night-light/60 flex flex-col">
+                  <div className="relative aspect-[4/3] bg-night-light">
+                    {p.hero_image && <img src={cardUrl(p.hero_image)} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />}
+                    <span
+                      className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold ${
+                        p.moderation_hidden ? 'bg-red-600 text-white' : p.status === 'published' ? 'bg-night/85 text-snow' : 'bg-amber-300 text-night'
+                      }`}
+                    >
+                      {p.moderation_hidden ? t.hidden : p.status === 'published' ? t.published : t.draft}
+                    </span>
+                  </div>
+                  <div className="p-4 flex-1 flex flex-col gap-2">
+                    <p className="font-display font-bold text-lg leading-snug">{p.title || t.untitled}</p>
+                    {(p.location || p.weather_note) && (
+                      <p className="text-sm text-slate-300 flex flex-wrap gap-x-4 gap-y-1">
+                        {p.location && (
+                          <span className="inline-flex items-center gap-1">
+                            <MapPin size={13} className="text-pink-300" /> {p.location}
+                          </span>
+                        )}
+                        {p.weather_note && (
+                          <span className="inline-flex items-center gap-1">
+                            <Thermometer size={13} className="text-pink-300" /> {p.weather_note}
+                          </span>
+                        )}
+                      </p>
+                    )}
+                    <div className="mt-auto pt-2 flex flex-wrap gap-2">
+                      <Link to={to(`/me/${p.id}`)} className="h-10 px-4 rounded-full border border-slate-600 inline-flex items-center gap-1.5 text-sm font-semibold hover:border-snow">
+                        <Pencil size={14} /> {t.edit}
+                      </Link>
+                      {p.status === 'published' && !p.moderation_hidden && (
+                        <Link to={to(`/post/${p.slug}`)} className="h-10 px-4 rounded-full border border-slate-600 inline-flex items-center gap-1.5 text-sm font-semibold hover:border-snow">
+                          <ExternalLink size={14} /> {t.view}
+                        </Link>
+                      )}
+                      <button
+                        type="button"
+                        onClick={() => void remove(p.id)}
+                        className="h-10 px-4 rounded-full border border-slate-600 inline-flex items-center gap-1.5 text-sm font-semibold hover:border-red-300 hover:text-red-200"
+                      >
+                        <Trash2 size={14} /> {t.delete}
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </main>
       <Footer />
+    </div>
+  );
+}
+
+function EditableRow(props: {
+  label: string;
+  value: string;
+  href?: string;
+  editing: boolean;
+  draft: string;
+  setDraft: (v: string) => void;
+  placeholder?: string;
+  prefix?: string;
+  onEdit: () => void;
+  onSave: () => void;
+  onCancel: () => void;
+  editLabel: string;
+  saveLabel: string;
+  cancelLabel: string;
+  saving: boolean;
+}) {
+  if (props.editing) {
+    return (
+      <form
+        className="grid gap-2"
+        onSubmit={(e) => {
+          e.preventDefault();
+          props.onSave();
+        }}
+      >
+        <span className="text-sm text-slate-400">{props.label}</span>
+        <div className="flex flex-wrap items-center gap-2">
+          {props.prefix && <span className="text-sm text-slate-300">{props.prefix}</span>}
+          <input
+            autoFocus
+            value={props.draft}
+            onChange={(e) => props.setDraft(e.target.value)}
+            placeholder={props.placeholder}
+            className="h-11 flex-1 min-w-[10rem] rounded-xl bg-white px-3 text-base text-slate-900"
+          />
+          <button type="submit" disabled={props.saving} className="h-11 px-4 rounded-full bg-pink-cta text-white text-sm font-bold disabled:opacity-60">
+            {props.saveLabel}
+          </button>
+          <button type="button" onClick={props.onCancel} className="h-11 px-4 rounded-full border border-slate-600 text-sm font-semibold">
+            {props.cancelLabel}
+          </button>
+        </div>
+      </form>
+    );
+  }
+  return (
+    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+      <span className="text-sm text-slate-400">{props.label}</span>
+      {props.href ? (
+        <Link to={props.href} className="font-semibold text-snow hover:text-pink-300 break-all">
+          {props.value}
+        </Link>
+      ) : (
+        <span className="font-semibold text-snow">{props.value}</span>
+      )}
+      <button type="button" onClick={props.onEdit} className="lv-tap text-sm font-semibold text-pink-300 hover:text-snow">
+        {props.editLabel}
+      </button>
     </div>
   );
 }

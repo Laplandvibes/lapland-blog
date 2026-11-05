@@ -34,49 +34,31 @@ interface UseAuthResult {
 }
 
 /**
- * Mirror an authenticated user into the public `blog_profiles` table.
- * Idempotent: uses upsert so it's safe to call on every auth event.
- * Pulls handle / display_name / avatar from OAuth metadata when available.
+ * Make sure the signed-in writer has a public `blog_profiles` row, without
+ * ever overwriting it. Server-side (ensure_blog_profile, 2026-11-05) so that a
+ * taken handle gets a free variant instead of failing, and a changed address
+ * is not reset on the next page load (the old client upsert did both).
+ * The default public name never comes from the email address.
+ * Returns the handle, or null if the call failed.
  */
-async function syncProfile(user: User) {
+export async function ensureProfile(user: User): Promise<string | null> {
   const meta = (user.user_metadata ?? {}) as Record<string, unknown>;
-  const emailPrefix = (user.email ?? '').split('@')[0] ?? 'reader';
-  const handle =
+  const display =
+    (meta.full_name as string | undefined) ?? (meta.name as string | undefined) ?? null;
+  const handleSeed =
     (meta.preferred_username as string | undefined) ??
     (meta.user_name as string | undefined) ??
-    emailPrefix.replace(/[^a-z0-9_-]/gi, '').toLowerCase() ??
-    'reader';
+    (display ? display.normalize('NFKD').replace(/\p{M}+/gu, '').replace(/\s+/g, '-') : null);
+  const { data, error } = await supabase.rpc('ensure_blog_profile', {
+    p_handle: handleSeed,
+    p_display: display,
+  });
+  if (error) return null;
+  return (data as string | null) ?? null;
+}
 
-  const displayName =
-    (meta.full_name as string | undefined) ??
-    (meta.name as string | undefined) ??
-    emailPrefix;
-
-  const avatarUrl =
-    (meta.avatar_url as string | undefined) ??
-    (meta.picture as string | undefined) ??
-    null;
-
-  const role = isAdminEmail(user.email) ? 'admin' : 'author';
-
-  // upsert — RLS allows the user to insert/update their own row
-  const { error } = await supabase
-    .from('blog_profiles')
-    .upsert(
-      {
-        id: user.id,
-        handle,
-        display_name: displayName,
-        avatar_url: avatarUrl,
-        role,
-      },
-      { onConflict: 'id' }
-    );
-
-  if (error && import.meta.env.DEV) {
-    // eslint-disable-next-line no-console
-    console.warn('[useAuth] profile sync failed:', error.message);
-  }
+async function syncProfile(user: User) {
+  await ensureProfile(user);
 }
 
 export function useAuth(): UseAuthResult {

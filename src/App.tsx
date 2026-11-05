@@ -55,7 +55,7 @@ const Editor = lazy(() => import('./pages/admin/Editor'));
 // never download either.
 const AuthGuard = lazy(() => import('./components/me/AuthGuard'));
 const MyDashboard = lazy(() => import('./pages/me/MyDashboard'));
-const MyEditor = lazy(() => import('./pages/me/MyEditor'));
+const PhotoComposer = lazy(() => import('./pages/me/PhotoComposer'));
 const MySettings = lazy(() => import('./pages/me/MySettings'));
 
 // Lightweight skeleton shown while a chunk is in-flight. Same dark palette as
@@ -368,7 +368,7 @@ export default function App() {
                 path="new"
                 element={
                   <AuthGuard>
-                    <MyEditor />
+                    <PhotoComposer />
                   </AuthGuard>
                 }
               />
@@ -384,7 +384,7 @@ export default function App() {
                 path=":id"
                 element={
                   <AuthGuard>
-                    <MyEditor />
+                    <PhotoComposer />
                   </AuthGuard>
                 }
               />

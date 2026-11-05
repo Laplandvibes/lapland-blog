@@ -55,30 +55,92 @@ function stripLocale(pathname) {
 }
 
 /**
- * Onko slug julkaistu? Sama ehto kuin src/hooks/usePost.ts:ssa
- * (status = published), jotta palvelin ja selain ovat samaa mielta siita mika
- * sivu on olemassa.
+ * Julkaistu juttu slugilla, tai `null` jos sitä ei ole, tai `'virhe'` jos
+ * kysely epäonnistui. Sama ehto kuin src/hooks/usePost.ts:ssa (status =
+ * published, ei piilotettu), jotta palvelin ja selain ovat samaa mieltä siitä
+ * mikä sivu on olemassa.
  *
- * 🔴 Jos kysely epaonnistuu, vastaus on `true`. Kantakatko ei saa muuttaa
- * oikeita artikkeleita 404:ksi: vaara 200 on talla puolella halvempi virhe
- * kuin vaara 404, koska 404 poistaa sivun indeksista.
+ * 🔴 Virhe ei ole "ei olemassa": kantakatko ei saa muuttaa oikeita
+ * artikkeleita 404:ksi. Väärä 200 on halvempi virhe kuin väärä 404.
  */
-async function isPublishedPost(slug) {
+async function fetchPublishedPost(slug) {
   const url =
     SUPABASE_URL +
-    '/rest/v1/blog_posts?select=slug&status=eq.published&limit=1&slug=eq.' +
+    '/rest/v1/blog_posts?select=slug,title,excerpt,hero_image,hero_alt,author_id,lang,content' +
+    '&status=eq.published&moderation_hidden=eq.false&order=translation_of.nullsfirst&limit=1&slug=eq.' +
     encodeURIComponent(slug);
   try {
     const r = await fetch(url, {
       headers: { apikey: SUPABASE_ANON_KEY, Authorization: 'Bearer ' + SUPABASE_ANON_KEY },
       cf: { cacheTtl: 60, cacheEverything: true },
     });
-    if (!r.ok) return true;
+    if (!r.ok) return 'virhe';
     const rows = await r.json();
-    return Array.isArray(rows) && rows.length > 0;
+    return Array.isArray(rows) && rows.length > 0 ? rows[0] : null;
   } catch {
-    return true;
+    return 'virhe';
   }
+}
+
+/** Kirjoittajan kuva: jakokorttiin 1200 px:n versio (kuvan lisäys tallentaa molemmat, 5.11.2026). */
+function cardImage(src) {
+  if (typeof src !== 'string' || !src) return null;
+  if (src.startsWith('/')) return 'https://lapland.blog' + src;
+  if (src.includes('/storage/v1/object/public/trip-images/') && /\.jpg$/.test(src)) {
+    return src.replace(/\.jpg$/, '-1200.jpg');
+  }
+  return src;
+}
+
+function bodyLength(content) {
+  if (!Array.isArray(content)) return 0;
+  let n = 0;
+  for (const b of content) if (b && typeof b.text === 'string') n += b.text.length;
+  return n;
+}
+
+/**
+ * Lukijan jakama linkki näyttää kirjoittajan oman kuvan ja otsikon (5.11.2026).
+ * Kuori on etusivun HTML, joten sen kuvaus, jakokuva, canonical ja hreflangit
+ * kertoisivat etusivusta: ne korvataan tai poistetaan. Lyhyt kirjoittajan
+ * julkaisu (alle 300 merkkiä tekstiä) saa noindexin: yhden kuvan ja rivin
+ * sivu ei ole hakutulos, mutta linkin jako toimii silti.
+ */
+function withPostMeta(res, post, url) {
+  const title = (post.title || 'Lapland.blog').slice(0, 110);
+  const description = (post.excerpt || '').slice(0, 200);
+  const image = cardImage(post.hero_image);
+  const noindex = post.author_id && bodyLength(post.content) < 300;
+  const set = (attr, value) => ({
+    element(e) {
+      if (value) e.setAttribute(attr, value);
+    },
+  });
+  const drop = { element(e) { e.remove(); } };
+  return new HTMLRewriter()
+    .on('title', { element(e) { e.setInnerContent(title + ' | Lapland.blog'); } })
+    .on('meta[name="description"]', set('content', description))
+    .on('meta[property="og:title"]', set('content', title))
+    .on('meta[name="twitter:title"]', set('content', title))
+    .on('meta[property="og:description"]', set('content', description))
+    .on('meta[name="twitter:description"]', set('content', description))
+    .on('meta[property="og:image"]', set('content', image))
+    .on('meta[name="twitter:image"]', set('content', image))
+    .on('meta[property="og:image:alt"]', set('content', post.hero_alt || title))
+    .on('meta[name="twitter:image:alt"]', set('content', post.hero_alt || title))
+    .on('meta[property="og:image:width"]', drop)
+    .on('meta[property="og:image:height"]', drop)
+    .on('meta[property="og:url"]', set('content', url))
+    .on('meta[property="og:type"]', set('content', 'article'))
+    .on('link[rel="canonical"]', set('href', url))
+    .on('link[rel="alternate"][hreflang]', drop)
+    .on('script[type="application/ld+json"]', drop)
+    .on('head', {
+      element(e) {
+        if (noindex) e.append('<meta name="robots" content="noindex, follow">', { html: true });
+      },
+    })
+    .transform(res);
 }
 
 /**
@@ -123,8 +185,19 @@ export async function onRequest(context) {
 
     // 2. Buildin jalkeen julkaistu artikkeli.
     const post = path.match(/^\/post\/([^/]+)\/?$/);
-    if (post && (await isPublishedPost(decodeURIComponent(post[1])))) {
-      return await shell(context, assetResponse);
+    if (post) {
+      const row = await fetchPublishedPost(decodeURIComponent(post[1]));
+      if (row === 'virhe') return await shell(context, assetResponse);
+      if (row) {
+        const page = await shell(context, null);
+        if (!page) return assetResponse;
+        const u = new URL(context.request.url);
+        try {
+          return withPostMeta(page, row, u.origin + u.pathname);
+        } catch {
+          return page;
+        }
+      }
     }
   } catch {
     // Ks. shell(): tama middleware ei saa koskaan tuottaa 500:aa.

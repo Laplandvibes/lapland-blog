@@ -85,3 +85,33 @@ export async function uploadTripImage(
   }
   return { url: data.publicUrl, path, error: null };
 }
+
+/**
+ * Upload a prepared phone photo in two sizes under one name:
+ * `<uid>/<ts>-<id>.jpg` (2048 px) and `<uid>/<ts>-<id>-1200.jpg` (cards,
+ * link previews, story card). The middleware and cards derive the small one
+ * from the big one's URL by this naming, so keep both in sync.
+ */
+export async function uploadPhoto(
+  full: Blob,
+  card: Blob,
+  userId: string,
+): Promise<UploadResult> {
+  if (!userId) return { url: null, path: null, error: 'Not signed in. Cannot upload.' };
+  const base = `${userId}/${Date.now()}-${randomId()}`;
+  const opts = { cacheControl: '31536000', contentType: 'image/jpeg', upsert: false };
+  const a = await supabase.storage.from(BUCKET).upload(`${base}.jpg`, full, opts);
+  if (a.error) return { url: null, path: null, error: a.error.message };
+  const b = await supabase.storage.from(BUCKET).upload(`${base}-1200.jpg`, card, opts);
+  if (b.error) return { url: null, path: null, error: b.error.message };
+  const { data } = supabase.storage.from(BUCKET).getPublicUrl(`${base}.jpg`);
+  if (!data?.publicUrl) return { url: null, path: null, error: 'Upload succeeded but no public URL.' };
+  return { url: data.publicUrl, path: `${base}.jpg`, error: null };
+}
+
+/** The 1200 px sibling of a photo uploaded with uploadPhoto(); other URLs unchanged. */
+export function cardUrl(src: string): string {
+  return src.includes('/storage/v1/object/public/trip-images/') && /\.jpg$/.test(src)
+    ? src.replace(/\.jpg$/, '-1200.jpg')
+    : src;
+}

@@ -8,8 +8,15 @@ import { useCallback, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import type { AdminPostListItem } from './useAdminPosts';
 
+export interface MyPostListItem extends AdminPostListItem {
+  hero_image: string | null;
+  location: string | null;
+  weather_note: string | null;
+  moderation_hidden: boolean;
+}
+
 interface UseMyPostsResult {
-  posts: AdminPostListItem[];
+  posts: MyPostListItem[];
   loading: boolean;
   error: string | null;
   refresh: () => Promise<void>;
@@ -20,7 +27,7 @@ interface UseMyPostsResult {
  * edit first. Returns an empty list if `userId` is falsy.
  */
 export function useMyPosts(userId: string | undefined): UseMyPostsResult {
-  const [posts, setPosts] = useState<AdminPostListItem[]>([]);
+  const [posts, setPosts] = useState<MyPostListItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -35,7 +42,7 @@ export function useMyPosts(userId: string | undefined): UseMyPostsResult {
     const { data, error: err } = await supabase
       .from('blog_posts')
       .select(
-        'id, slug, title, category_slug, status, published_at, updated_at, featured, read_time_minutes'
+        'id, slug, title, category_slug, status, published_at, updated_at, featured, read_time_minutes, hero_image, location, weather_note, moderation_hidden'
       )
       .eq('author_id', userId)
       .order('updated_at', { ascending: false });
@@ -44,7 +51,7 @@ export function useMyPosts(userId: string | undefined): UseMyPostsResult {
       setError(err.message);
       setPosts([]);
     } else {
-      setPosts((data as AdminPostListItem[]) ?? []);
+      setPosts((data as MyPostListItem[]) ?? []);
     }
     setLoading(false);
   }, [userId]);

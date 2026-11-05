@@ -13,6 +13,8 @@ import type { CategorySlug } from '../data/categories';
 interface UsePostsOptions {
   category?: CategorySlug;
   limit?: number;
+  /** Only editorial articles (author_id null), not readers' photo posts. */
+  editorialOnly?: boolean;
 }
 
 interface UsePostsResult {
@@ -22,7 +24,7 @@ interface UsePostsResult {
 }
 
 export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
-  const { category, limit } = options;
+  const { category, limit, editorialOnly } = options;
   const lang = useLang();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
@@ -42,6 +44,8 @@ export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
         .order('published_at', { ascending: false });
 
       if (category) query = query.eq('category_slug', category);
+      // Toimituksen jutut ilman lukijoiden kuvajulkaisuja (author_id on vain lukijoilla).
+      if (editorialOnly) query = query.is('author_id', null);
       // NOTE: no server-side limit. Every article exists once per language, so
       // the rows have to be collapsed to one per article first — limiting here
       // would cut the list before the duplicates are removed.
@@ -65,7 +69,7 @@ export function usePosts(options: UsePostsOptions = {}): UsePostsResult {
     return () => {
       cancelled = true;
     };
-  }, [category, limit, lang]);
+  }, [category, limit, lang, editorialOnly]);
 
   return { posts, loading, error };
 }
