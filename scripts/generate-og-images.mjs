@@ -27,19 +27,13 @@ const H = 630;
 // Each card: source hero + an overlaid kicker line. The brand wordmark is drawn
 // for every card. `slug` is the output filename (post slug or page name).
 const CARDS = [
-  // ── Posts (source = post hero) ──────────────────────────────────────────
-  { slug: 'the-night-the-sky-broke-open-over-kemi', src: 'trip-aurora-chase-1200.webp', kicker: 'AURORA · KEMI', focus: 'attention' },
-  { slug: 'why-i-stopped-chasing-the-aurora-with-an-app', src: 'category-aurora-1200.webp', kicker: 'AURORA · FIELD NOTES', focus: 'attention' },
-  { slug: 'five-nights-in-a-forest-cabin', src: 'trip-cabin-life-1200.webp', kicker: 'CABINS · KEMIJÄRVI', focus: 'attention' },
-  { slug: 'a-bowl-of-salmon-soup-that-cost-more-than-the-flight', src: 'trip-food-1200.webp', kicker: 'FOOD · ROVANIEMI', focus: 'centre' },
-  { slug: 'living-between-two-suns', src: 'category-seasons-1200.webp', kicker: 'SEASONS · KAAMOS', focus: 'attention' },
-  // ── Summer 2026 batch (Field Journal pens) ─────────────────────────────
-  { slug: 'the-sun-did-not-set-it-just-circled-the-house', src: 'summer-midnight-sun-1200.webp', kicker: 'SEASONS · NIGHTLESS NIGHT', focus: 'attention' },
-  { slug: 'twelve-kilometres-at-one-in-the-morning', src: 'summer-fell-boardwalk-1200.webp', kicker: 'TRAILS · KIILOPÄÄ', focus: 'attention' },
-  { slug: 'strawberry-hour-at-the-rovaniemi-market', src: 'summer-market-strawberries-1200.webp', kicker: 'FOOD · ROVANIEMI', focus: 'centre' },
-  { slug: 'the-sauna-thermometer-said-eighty-two', src: 'summer-lake-sauna-1200.webp', kicker: 'CABINS · KEMIJÄRVI', focus: 'attention' },
-  { slug: 'what-july-in-lapland-actually-asks-you-to-pack', src: 'summer-gear-porch-1200.webp', kicker: 'GEAR · JULY', focus: 'centre' },
-
+  // ── Posts (source = post hero). Rewritten 2026-11-05; CC BY-SA heroes get no card (§34.2), they use the site card.
+  { slug: 'five-nights-in-a-forest-cabin', src: 'jutut/five-nights-in-a-forest-cabin/hirsimokki-talvi-1200.webp', kicker: 'CABINS', focus: 'attention' },
+  { slug: 'living-between-two-suns', src: 'category-seasons-1200.webp', kicker: 'SEASONS', focus: 'attention' },
+  { slug: 'seven-and-a-half-minutes-a-day', src: 'jutut/seven-and-a-half-minutes-a-day/utsjoki-teno-lokakuu-1200.webp', kicker: 'SEASONS', focus: 'attention' },
+  { slug: 'strawberry-hour-at-the-rovaniemi-market', src: 'jutut/strawberry-hour-at-the-rovaniemi-market/rovaniemen-kauppatori-1200.webp', kicker: 'FOOD', focus: 'attention' },
+  { slug: 'what-july-in-lapland-actually-asks-you-to-pack', src: 'jutut/what-july-in-lapland-actually-asks-you-to-pack/korpikoski-heinakuu-1200.webp', kicker: 'GEAR', focus: 'attention' },
+  { slug: 'wilderness-hut-firewood-ends-2026', src: 'news-boardwalk-1200.webp', kicker: 'GEAR', focus: 'attention' },
   // ── Key pages (source = page hero) ──────────────────────────────────────
   { slug: 'page-home', src: 'hero-aurora-1920.webp', kicker: 'FREE TRAVEL-BLOG PLATFORM', focus: 'attention' },
   { slug: 'page-destinations', src: 'hero-dusk-lake-1920.webp', kicker: 'EIGHT PLACES · ONE LAPLAND', focus: 'attention' },
