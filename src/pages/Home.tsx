@@ -202,7 +202,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-slate-400 text-left lg:text-right">{p.wallCredit}</p>
+            <p className="mt-3 text-base leading-relaxed text-snow/75 text-left">{p.wallCredit}</p>
           </div>
         </div>
       </section>

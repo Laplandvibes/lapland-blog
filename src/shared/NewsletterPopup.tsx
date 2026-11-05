@@ -720,9 +720,6 @@ const FOUNDER_STYLES = `
   .lv-nl-body--form.lv-nl-body--form { display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 16px; text-align: left; }
   .lv-nl-body--form .lv-nl-media, .lv-nl-body--form .lv-nl-main { display: contents; }
   .lv-nl-body--form > *, .lv-nl-body--form .lv-nl-main > * { grid-column: 1 / -1; }
-  /* 5.11.2026 (Vesa: "miksi Moro! Vesa tässä rivittyy kahdelle riville?"): the headline sat in the
-     narrow column beside the avatar, 200-280 px, and wrapped in 7/12 languages at 360 px. Now the
-     avatar and wordmark share row 1 and the headline gets the full card width in row 2. */
   .lv-nl-body--form .lv-founder-avatar { grid-column: 1; grid-row: 1; align-self: center; width: 64px !important; height: 64px !important; margin: 0; box-shadow: 0 0 0 2px var(--lv-nl-accent, #EC4899) !important; }
   .lv-nl-body--form .lv-nl-wm.lv-nl-wm { grid-column: 2; grid-row: 1; align-self: center; font-size: 1.125rem; margin: 0; padding-right: 36px; text-align: left; }
   .lv-nl-body--form .lv-nl-title.lv-nl-title { grid-column: 1 / -1; grid-row: 2; align-self: start; font-size: 1.875rem; line-height: 1.1; margin: 16px 0 0; padding-right: 0; text-align: left; }
