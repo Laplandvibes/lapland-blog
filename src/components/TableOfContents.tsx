@@ -27,7 +27,7 @@ export default function TableOfContents({ blocks, textLang }: Props) {
 
   return (
     <nav aria-label={c.inThisStory}>
-      <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-4 font-semibold">
+      <p className="text-base font-bold text-[var(--color-ink)] mb-3" style={{ fontFamily: "var(--font-editorial)" }}>
         {c.inThisStory}
       </p>
       <ul lang={textLang} className="space-y-2.5 border-l border-[var(--color-paper-border)]">
@@ -37,7 +37,7 @@ export default function TableOfContents({ blocks, textLang }: Props) {
             <li key={id}>
               <a
                 href={`#${id}`}
-                className="block pl-4 -ml-px border-l-2 border-transparent text-sm text-[var(--color-ink-soft)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors leading-snug"
+                className="block pl-4 -ml-px border-l-2 border-transparent text-[15px] text-[var(--color-ink-soft)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors leading-snug"
               >
                 {block.text}
               </a>
