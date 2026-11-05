@@ -117,24 +117,24 @@ const fr: SectionCopy = {
     faqHeading: 'Questions fréquentes sur lapland.blog',
     faq: [
       {
-        q: 'Comment démarrer un blog de voyage sur lapland.blog ?',
-        a: "Connectez-vous avec votre compte Google, donnez un nom à votre blog et écrivez votre première entrée. Chaque entrée peut contenir du texte, des photos, la date et un repère sur la carte pour l’endroit où vous étiez. Votre blog se trouve à l'adresse lapland.blog/by/votre-nom et est prêt à être partagé dès sa publication : rien à installer et aucune configuration en dehors de la connexion.",
+        q: "Comment démarrer un blog de voyage sur lapland.blog ?",
+        a: "Appuyez sur «\u00A0Ajouter une photo\u00A0» et connectez-vous avec votre adresse e-mail ou avec Google. Choisissez une photo dans votre téléphone, puis le lieu et, si vous le souhaitez, écrivez une ligne sur ce qui s’est passé. La date est lue sur la photo et la température vient de l’Institut météorologique finlandais. Vos publications se rassemblent sur votre page de voyage, à l’adresse lapland.blog/by/votre-nom. Il n’y a rien à installer.",
       },
       {
-        q: 'lapland.blog est-il gratuit ?',
-        a: "Oui. Créer un blog, écrire des entrées, ajouter des photos, repérer des lieux sur la carte et partager votre blog, tout est gratuit. Aucune carte bancaire n'est requise pour s'inscrire et votre blog ne comporte pas de publicité.",
+        q: "lapland.blog est-il gratuit ?",
+        a: "Oui. Ajouter des photos, publier et partager est gratuit, et l’inscription ne demande aucune carte de paiement. Nous n’affichons pas de publicité sur vos propres publications.",
       },
       {
-        q: 'Puis-je partager mon blog de Laponie sur Instagram et Facebook ?',
-        a: "Oui. Chaque blog possède un lien public que vous pouvez publier où vous voulez, et chaque entrée peut être exportée sous forme d'image au format story Instagram, pour partager une seule journée d'un geste. Vos proches peuvent ouvrir votre blog sans compte personnel.",
+        q: "Puis-je partager mon blog de Laponie sur Instagram et Facebook ?",
+        a: "Oui. Quand vous publiez une photo, vous obtenez une carte pour vos stories, avec la température, le lieu et la date inscrits dessus. Sur un téléphone, vous pouvez la partager directement dans votre story Instagram ou Facebook\u00A0; sur un ordinateur, vous pouvez la télécharger. Chaque publication a aussi son propre lien, que vos proches peuvent ouvrir sans compte.",
       },
       {
-        q: 'Dois-je être en Laponie pour écrire un blog ici ?',
-        a: "Non. Nous avons conçu lapland.blog pour les voyageurs en route vers la Laponie finlandaise, donc la carte et les suggestions sont pensées pour les voyages dans le Nord, mais chacun peut tenir un blog ici, que vous prépariez un voyage, le racontiez en chemin ou terminiez le récit une fois rentré. Vous pouvez commencer avant le départ et ajouter des entrées jour après jour.",
+        q: "Dois-je être en Laponie pour écrire un blog ici ?",
+        a: "Non. Vous pouvez ajouter vos photos pendant le voyage ou une fois rentré. La date est lue sur la photo, et la température est recherchée pour ce jour et ce lieu quand le lieu se trouve en Finlande.",
       },
       {
-        q: 'Sur quoi écrire dans mon carnet de voyage en Laponie ?',
-        a: "Sur tout ce que vous ne voulez pas oublier. Où vous avez dormi, à quoi ressemblaient les aurores, la température du matin le plus froid, le repas qui vous a surpris, la balade en traîneau à chiens, le silence de la forêt. Des entrées courtes avec une photo et un repère de lieu fonctionnent bien : quelques lignes par jour finissent par former un blog qu'on a envie de relire.",
+        q: "Sur quoi écrire dans mon carnet de voyage en Laponie ?",
+        a: "Sur tout ce que vous ne voulez pas oublier\u00A0: où vous avez dormi, à quoi ressemblaient les aurores, le relevé du matin le plus froid, le plat qui vous a surpris. Une photo et une ligne suffisent. Si vous le souhaitez, vous pouvez écrire un récit plus long sous la photo.",
       },
     ],
   },

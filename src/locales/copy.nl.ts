@@ -117,24 +117,24 @@ const nl: SectionCopy = {
     faqHeading: 'Veelgestelde vragen over lapland.blog',
     faq: [
       {
-        q: 'Hoe begin ik een reisblog op lapland.blog?',
-        a: "Log in met uw Google-account, geef uw blog een naam en schrijf uw eerste bericht. Elk bericht kan tekst, foto's, de datum en een kaartspeld voor uw locatie bevatten. Uw blog staat op lapland.blog/by/uw-naam en is klaar om te delen zodra u publiceert. Er valt niets te installeren en behalve inloggen is er niets in te stellen.",
+        q: "Hoe begin ik een reisblog op lapland.blog?",
+        a: "Tik op “Foto toevoegen” en log in met e-mail of Google. Kies een foto van uw telefoon en de plek en schrijf, als u wilt, een regel over wat er gebeurde. De datum wordt uit de foto gelezen en de temperatuur komt van het Fins Meteorologisch Instituut. Uw berichten verzamelen zich op uw reispagina op lapland.blog/by/uw-naam. U hoeft niets te installeren.",
       },
       {
-        q: 'Is lapland.blog gratis?',
-        a: "Ja. Een blog starten, berichten schrijven, foto’s toevoegen, plekken op de kaart prikken en uw blog delen is allemaal gratis. Er is geen creditcard nodig om u aan te melden en op uw blog staan geen advertenties.",
+        q: "Is lapland.blog gratis?",
+        a: "Ja. Foto’s toevoegen, publiceren en delen is gratis, en om u aan te melden hebt u geen betaalkaart nodig. Op uw eigen berichten plaatsen wij geen advertenties.",
       },
       {
-        q: 'Kan ik mijn Lapland-blog delen op Instagram en Facebook?',
-        a: "Ja. Elke blog heeft een openbare link die u overal kunt plaatsen, en elk bericht kunt u exporteren als afbeelding in Instagram-storyformaat, zodat u een hele dag met één tik deelt. Vrienden en familie kunnen uw blog openen zonder eigen account.",
+        q: "Kan ik mijn Lapland-blog delen op Instagram en Facebook?",
+        a: "Ja. Als u een foto publiceert, krijgt u een storykaart met de temperatuur, de plek en de datum erop. Op een telefoon deelt u haar rechtstreeks in uw Instagram- of Facebookstory, op een computer kunt u haar downloaden. Elk bericht heeft bovendien een eigen link die vrienden zonder account kunnen openen.",
       },
       {
-        q: 'Moet ik in Lapland zijn om hier een blog te schrijven?',
-        a: "Nee. We hebben lapland.blog gemaakt voor reizigers naar Fins Lapland, dus de kaart en de schrijftips zijn afgestemd op reizen naar het noorden, maar iedereen kan hier een blog bijhouden, of u nu een reis plant, onderweg schrijft of het na thuiskomst aanvult. U kunt beginnen voordat u vertrekt en dag voor dag berichten toevoegen.",
+        q: "Moet ik in Lapland zijn om hier een blog te schrijven?",
+        a: "Nee. U kunt foto’s toevoegen tijdens de reis of pas thuis. De datum wordt uit de foto gelezen en de temperatuur wordt opgezocht voor die dag en die plek, als de plek in Finland ligt.",
       },
       {
-        q: 'Waarover schrijf ik in mijn Lapland-reisdagboek?',
-        a: "Over alles wat u niet wilt vergeten. Waar u sliep, hoe het noorderlicht eruitzag, de temperatuur op de koudste ochtend, de maaltijd die u verraste, de huskytocht, de stilte van het bos. Korte berichten met een foto en een speld op de kaart werken goed. Een paar regels per dag groeien uit tot een blog die u opnieuw wilt lezen.",
+        q: "Waarover schrijf ik in mijn Lapland-reisdagboek?",
+        a: "Over alles wat u niet wilt vergeten: waar u sliep, hoe het noorderlicht eruitzag, de temperatuur op de koudste ochtend, het eten dat u verraste. Eén foto en één regel is genoeg. Wilt u, dan kunt u onder de foto een langer verhaal schrijven.",
       },
     ],
   },

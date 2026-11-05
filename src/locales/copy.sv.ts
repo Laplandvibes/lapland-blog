@@ -168,24 +168,24 @@ const sv: SectionCopy = {
     faqHeading: 'Vanliga frågor om Lapland.blog',
     faq: [
       {
-        q: 'Hur startar jag en reseblogg på lapland.blog?',
-        a: 'Logga in med ditt Google-konto, ge din blogg ett namn och skriv ditt första inlägg. Varje inlägg kan innehålla text, foton, datum och en kartnål som visar var du var. Din blogg finns på lapland.blog/by/ditt-namn och är redo att delas i samma stund du publicerar. Det finns inget att installera och inget att ställa in utöver att logga in.',
+        q: "Hur startar jag en reseblogg på lapland.blog?",
+        a: "Tryck på Lägg till ett foto och logga in med e-post eller Google. Välj ett foto från mobilen och en plats, och skriv gärna en rad om vad som hände. Datumet läses av från fotot och temperaturen hämtas från Meteorologiska institutet. Dina inlägg samlas på din resesida på lapland.blog/by/ditt-namn. Det finns inget att installera.",
       },
       {
-        q: 'Är lapland.blog gratis att använda?',
-        a: 'Ja. Att starta en blogg, skriva inlägg, lägga till foton, nåla fast platser på kartan och dela din blogg är helt gratis. Det krävs inget kort för att registrera sig och det finns inga annonser på din blogg.',
+        q: "Är lapland.blog gratis att använda?",
+        a: "Ja. Att lägga till foton, publicera och dela är gratis, och du behöver inget betalkort för att registrera dig. Vi lägger inte in annonser i dina egna inlägg.",
       },
       {
-        q: 'Kan jag dela min Lapplandsblogg på Instagram och Facebook?',
-        a: 'Ja. Varje blogg har en offentlig länk du kan lägga upp var som helst, och varje inlägg kan exporteras som en bild i Instagram-story-format så att du kan dela en enda dag med ett tryck. Vänner och familj kan öppna din blogg utan eget konto.',
+        q: "Kan jag dela min Lapplandsblogg på Instagram och Facebook?",
+        a: "Ja. När du publicerar ett foto får du ett storykort med temperatur, plats och datum tryckt på. I mobilen kan du dela det direkt till din Instagram- eller Facebook-story, på datorn kan du ladda ner det. Varje inlägg har också en egen länk som vänner kan öppna utan eget konto.",
       },
       {
-        q: 'Måste jag vara i Lappland för att skriva en blogg här?',
-        a: 'Nej. Vi byggde lapland.blog för resenärer på väg till finska Lappland, så kartan och skrivtipsen är anpassade för resor norrut, men vem som helst kan ha en blogg här, oavsett om du planerar en resa, skriver medan du är på den eller fyller i den efter att du kommit hem. Du kan börja innan du flyger och lägga till inlägg dag för dag.',
+        q: "Måste jag vara i Lappland för att skriva en blogg här?",
+        a: "Nej. Du kan lägga till foton under resan eller först när du kommit hem. Datumet läses av från fotot, och temperaturen slås upp för den dagen och platsen när platsen ligger i Finland.",
       },
       {
-        q: 'Vad ska jag skriva om i min Lapplandsdagbok?',
-        a: 'Allt du inte vill glömma. Var du bodde, hur norrskenet såg ut, temperaturen den kallaste morgonen, måltiden som överraskade dig, hundspannsturen, skogens tystnad. Korta inlägg med ett foto och en kartnål fungerar bra. Några rader om dagen blir till slut en blogg värd att läsa om.',
+        q: "Vad ska jag skriva om i min Lapplandsdagbok?",
+        a: "Allt du inte vill glömma: var du bodde, hur norrskenet såg ut, temperaturen den kallaste morgonen, maten som överraskade. Ett foto och en rad räcker. Vill du kan du skriva en längre berättelse under fotot.",
       },
     ],
   },

@@ -168,24 +168,24 @@ const es: SectionCopy = {
     faqHeading: 'Preguntas frecuentes sobre lapland.blog',
     faq: [
       {
-        q: '¿Cómo empiezo un blog de viaje en lapland.blog?',
-        a: 'Inicie sesión con su cuenta de Google, dele un nombre a su blog y escriba su primera entrada. Cada entrada puede incluir texto, fotos, la fecha y un pin en el mapa del lugar donde estuvo. Su blog vive en lapland.blog/by/su-nombre y está listo para compartir en cuanto lo publica: no hay nada que instalar ni más configuración que iniciar sesión.',
+        q: "¿Cómo empiezo un blog de viaje en lapland.blog?",
+        a: "Pulse «Agregar una foto» e inicie sesión con su correo electrónico o con Google. Elija una foto de su teléfono y el lugar y, si quiere, escriba una línea sobre lo que pasó. La fecha se toma de la foto y la temperatura, del Instituto Meteorológico Finlandés. Sus publicaciones se reúnen en su página de viaje, en lapland.blog/by/su-nombre. No hay nada que instalar.",
       },
       {
-        q: '¿Es gratis usar lapland.blog?',
-        a: 'Sí. Crear un blog, escribir entradas, añadir fotos, marcar lugares en el mapa y compartir su blog es todo gratuito. No hace falta tarjeta para registrarse y su blog no lleva anuncios.',
+        q: "¿Es gratis usar lapland.blog?",
+        a: "Sí. Agregar fotos, publicar y compartir es gratis, y para registrarse no necesita tarjeta de pago. No ponemos anuncios en sus propias publicaciones.",
       },
       {
-        q: '¿Puedo compartir mi blog de Laponia en Instagram y Facebook?',
-        a: 'Sí. Cada blog tiene un enlace público que puede publicar donde quiera, y cada entrada se puede exportar como imagen del tamaño de una historia de Instagram para compartir un solo día con un solo toque. Sus amigos y su familia pueden abrir su blog sin tener cuenta propia.',
+        q: "¿Puedo compartir mi blog de Laponia en Instagram y Facebook?",
+        a: "Sí. Al publicar una foto recibe una tarjeta de historia con la temperatura, el lugar y la fecha impresos. Desde el teléfono puede compartirla directamente en su historia de Instagram o Facebook; desde la computadora puede descargarla. Además, cada publicación tiene su propio enlace, que sus amigos pueden abrir sin cuenta.",
       },
       {
-        q: '¿Tengo que estar en Laponia para escribir un blog aquí?',
-        a: 'No. Creamos lapland.blog para quienes viajan a la Laponia finlandesa, así que el mapa y las sugerencias están pensados para viajes al norte, pero cualquiera puede llevar un blog aquí, ya esté planeando un viaje, escribiendo durante él o completándolo al volver a casa. Puede empezar antes de volar y añadir entradas día a día.',
+        q: "¿Tengo que estar en Laponia para escribir un blog aquí?",
+        a: "No. Puede agregar las fotos durante el viaje o cuando ya esté en casa. La fecha se toma de la foto y la temperatura se busca para ese día y ese lugar, siempre que el lugar esté en Finlandia.",
       },
       {
-        q: '¿Sobre qué escribo en mi diario de viaje por Laponia?',
-        a: 'Sobre lo que no quiera olvidar. Dónde se alojó, cómo se veía la aurora, la temperatura de la mañana más fría, la comida que le sorprendió, el paseo en trineo de huskies, el silencio del bosque. Las entradas cortas con una foto y un pin de lugar funcionan bien: unas pocas líneas al día acaban formando un blog que querrá releer.',
+        q: "¿Sobre qué escribo en mi diario de viaje por Laponia?",
+        a: "Sobre lo que no quiera olvidar: dónde se alojó, cómo se veía la aurora, la temperatura de la mañana más fría, la comida que le sorprendió. Con una foto y una línea basta. Si quiere, puede escribir una historia más larga debajo de la foto.",
       },
     ],
   },
