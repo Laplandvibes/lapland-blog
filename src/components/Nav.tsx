@@ -305,7 +305,9 @@ export default function Nav() {
 
           {!user && (
             <Link
-              to={to('/signin')}
+              to={to('/me/new')}
+              data-umami-event="photo_cta"
+              data-umami-event-surface="nav"
               className={
                 isEditorial
                   ? 'ml-2 px-4 py-2 rounded-full text-sm font-semibold bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-dark)] transition-colors'
@@ -363,7 +365,9 @@ export default function Nav() {
               /* Sama kutsu kuin työpöydän navissa ("Aloita oma blogi"), ei eri sanaa
                  samalle osoitteelle: mitattu 14.9.2026 puhelimessa "Kirjaudu" 12 kielellä. */
               <Link
-                to={to('/signin')}
+                to={to('/me/new')}
+                data-umami-event="photo_cta"
+                data-umami-event-surface="nav_mobile"
                 className={`inline-flex items-center justify-center min-h-11 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors ${
                   isEditorial
                     ? 'bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-dark)]'

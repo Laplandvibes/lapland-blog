@@ -68,6 +68,33 @@ export type SectionCopy = {
      *  static HTML and the browser show one text: change it only here. */
     metaTitle: string;
     metaDescription: string;
+    /** Photo-first home (2026-11-05). Place names are shown on the photo wall stamps. */
+    photo: {
+      kicker: string;
+      line1: string;
+      line2: string;
+      lead: string;
+      cta: string;
+      cta2: string;
+      fine: string;
+      wallCredit: string;
+      placeUtsjoki: string;
+      placeKevo: string;
+      placeKemijarvi: string;
+      altKoivut: string;
+      altTeno: string;
+      altKevo: string;
+      altRuska: string;
+      altKamiina: string;
+      shareH2: string;
+      shareLead: string;
+      step1: string;
+      step2: string;
+      step3: string;
+      tripsH2: string;
+      tripsAll: string;
+      readersH2: string;
+    };
     heroEyebrow: string;
     heroLine1: string;
     heroLine2: string;

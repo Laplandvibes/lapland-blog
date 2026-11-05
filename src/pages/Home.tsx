@@ -1,685 +1,383 @@
-// Home — narrative editorial landing page.
-// Top-to-bottom: cinematic hero, three real stories, three-step "how it works",
-// three editorial pillars, latest stories grid, personal aside, FAQ, newsletter.
+// Home, photo first (Vesa 2026-11-05: "eikä tämä edelleenkään sivuna aiheuta
+// sellaista instagram buumia … ajatusta että haluan ottaa kuvan ja lisätä
+// tänne, liian seesteinen?").
+//
+// Top to bottom: hero with a wall of real trip photos (own, October 2026,
+// temperatures measured by the Finnish Meteorological Institute at the
+// moment of each photo), the story card the writer gets, editors' stories,
+// readers' latest photos once there are enough of them to show, then the
+// network blocks (partner slots, app, FAQ, newsletter, footer).
+//
+// Not here on purpose: invented "users", sample feeds, a counter of writers.
+// The readers' grid appears only when real readers have posted.
 
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Snowflake, PenLine, MapPin, BookOpen, Share2 } from 'lucide-react';
+import { ArrowRight, Camera, MapPin, Thermometer } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import Reveal from '../components/Reveal';
 import Newsletter from '../components/Newsletter';
-import PostCard from '../components/PostCard';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, publisherSchema, faqPageSchema } from '../lib/jsonld';
 import { usePosts } from '../hooks/usePosts';
-import { getImage, isSummerSeason } from '../lib/images';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { postTextLang } from '../lib/postLang';
-import type { CategorySlug } from '../data/categories';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AppPromoHero } from '../components/AppPromo';
 import PhotoCredits from '../components/PhotoCredits';
 import { AD_SLOTS } from '../data/adSlots';
-import { Fraasit, ilmanValeja, lauseet, manropeEm } from '../lib/otsikkoRivit';
+import { manropeEm } from '../lib/otsikkoRivit';
+import { supabase } from '../lib/supabase';
+import { cardUrl } from '../lib/uploadImage';
+import { formatTemp } from '../lib/fmiWeather';
 
-// Alt texts come from COPY[lang].images at render time (hero: by season, like the file).
-const heroImage = getImage('hero-aurora', '100vw');
+type Copy = (typeof COPY)['en']['home']['photo'];
 
-const asideImage = getImage('aside-vesa', '(max-width: 768px) 100vw, 260px');
-
-type AccentColor = 'pink' | 'green' | 'blue';
-
-interface PillarMeta {
-  accent: AccentColor;
-  image: ReturnType<typeof getImage>;
-  /** Image description in COPY[lang].images. */
-  altKey: 'frostAlt' | 'hutAlt' | 'mugAlt';
-  /** Category slugs — labels resolve from COPY[lang].category.themes so the
-      link chips localize like everything else. */
-  links: { slug: CategorySlug; to: string }[];
-}
-
-const PILLAR_META: PillarMeta[] = [
-  {
-    accent: 'green',
-    image: getImage('pillar-cold', '(max-width: 768px) 100vw, 33vw'),
-    altKey: 'frostAlt',
-    links: [
-      { slug: 'aurora', to: '/category/aurora' },
-      { slug: 'seasons', to: '/category/seasons' },
-    ],
-  },
-  {
-    accent: 'pink',
-    image: getImage('pillar-shelter', '(max-width: 768px) 100vw, 33vw'),
-    altKey: 'hutAlt',
-    links: [
-      { slug: 'cabins', to: '/category/cabins' },
-      { slug: 'food', to: '/category/food' },
-    ],
-  },
-  {
-    accent: 'blue',
-    image: getImage('pillar-people', '(max-width: 768px) 100vw, 33vw'),
-    altKey: 'mugAlt',
-    links: [
-      { slug: 'people', to: '/category/people' },
-      { slug: 'stories', to: '/category/stories' },
-    ],
-  },
+/**
+ * The photo wall. Own photos from the October 2026 road trip, reserved for
+ * lapland.blog with _kuvavaihto-20261004/claim.mjs on 2026-11-05. Temperature
+ * = FMI open data t2m from the nearest station at the photo's EXIF time
+ * (src/lib/fmiWeather.ts), read 2026-11-05; null = not shown (the stove
+ * photo is indoors, an outdoor reading next to a fire would mislead).
+ */
+const WALL: {
+  file: string;
+  place: keyof Pick<Copy, 'placeUtsjoki' | 'placeKevo' | 'placeKemijarvi'>;
+  alt: keyof Pick<Copy, 'altKoivut' | 'altTeno' | 'altKevo' | 'altRuska' | 'altKamiina'>;
+  date: string;
+  temp: number | null;
+  ratio: string;
+}[] = [
+  { file: 'utsjoki-koivut', place: 'placeUtsjoki', alt: 'altKoivut', date: '2026-10-13', temp: -3, ratio: 'aspect-[9/14]' },
+  { file: 'kemijarvi-ruska', place: 'placeKemijarvi', alt: 'altRuska', date: '2026-10-09', temp: 0, ratio: 'aspect-[4/5]' },
+  { file: 'kevo-koski', place: 'placeKevo', alt: 'altKevo', date: '2026-10-13', temp: -4, ratio: 'aspect-square' },
+  { file: 'kemijarvi-kamiina', place: 'placeKemijarvi', alt: 'altKamiina', date: '2026-10-10', temp: null, ratio: 'aspect-[9/14]' },
+  { file: 'utsjoki-teno', place: 'placeUtsjoki', alt: 'altTeno', date: '2026-10-13', temp: -2, ratio: 'aspect-[9/14]' },
 ];
+const COLUMNS = [[0, 1], [2, 3], [4]];
 
 // Per-question links into the pages that back each FAQ answer (Vesa
 // 2026-07-07: FAQ answers must point to our own supporting content).
-// Labels come from the existing nav translations — no new keys.
 const FAQ_LINKS: { route: string; label: 'startHere' | 'topReads' | 'destinations' | 'tripDiaries' | 'about' }[][] = [
-  [{ route: '/start-here', label: 'startHere' }],                                        // 1 how to start
-  [{ route: '/about', label: 'about' }],                                                 // 2 is it free
-  [{ route: '/start-here', label: 'startHere' }, { route: '/about', label: 'about' }],   // 3 sharing to IG/FB
-  [{ route: '/about', label: 'about' }, { route: '/destinations', label: 'destinations' }], // 4 must I be in Lapland
-  [{ route: '/top-reads', label: 'topReads' }, { route: '/stories', label: 'tripDiaries' }], // 5 what to write
+  [{ route: '/start-here', label: 'startHere' }],
+  [{ route: '/about', label: 'about' }],
+  [{ route: '/start-here', label: 'startHere' }, { route: '/about', label: 'about' }],
+  [{ route: '/about', label: 'about' }, { route: '/destinations', label: 'destinations' }],
+  [{ route: '/top-reads', label: 'topReads' }, { route: '/stories', label: 'tripDiaries' }],
 ];
+const STORY = WALL[0];
+
+interface ReaderPost {
+  slug: string;
+  title: string;
+  hero_image: string;
+  hero_alt: string;
+  location: string | null;
+  weather_note: string | null;
+  lang: string;
+}
+
+/** Readers' latest published photo posts; shown only when there are at least 6. */
+function useReaderPosts(): ReaderPost[] {
+  const [rows, setRows] = useState<ReaderPost[]>([]);
+  useEffect(() => {
+    let cancelled = false;
+    void supabase
+      .from('blog_posts')
+      .select('slug, title, hero_image, hero_alt, location, weather_note, lang')
+      .eq('status', 'published')
+      .eq('moderation_hidden', false)
+      .not('author_id', 'is', null)
+      .order('published_at', { ascending: false })
+      .limit(12)
+      .then(({ data }) => {
+        if (!cancelled && Array.isArray(data)) setRows(data as ReaderPost[]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  return rows.length >= 6 ? rows : [];
+}
+
+function Stamp({ place, date, temp }: { place: string; date: string; temp: number | null }) {
+  return (
+    <span className="absolute left-2.5 bottom-2.5 max-w-[calc(100%-1.25rem)] inline-flex flex-wrap items-baseline gap-x-2 rounded-xl bg-night/80 px-2.5 py-1.5 text-[13px] font-semibold text-white">
+      {temp !== null && <b className="font-display font-extrabold text-[15px] whitespace-nowrap">{formatTemp(temp)}</b>}
+      <span>{place}</span>
+      <span className="font-medium text-slate-300 whitespace-nowrap">{date}</span>
+    </span>
+  );
+}
 
 export default function Home() {
   const lang = useLang();
   const to = useLocalePath();
   const c = COPY[lang].home;
-  const { posts: allPosts, loading } = usePosts({ limit: 12 });
-  // Kolme nostoa heti heron alle, loput uusimpiin — sama juttu ei esiinny kahdesti.
-  const leadPosts = allPosts.slice(0, 3);
-  const recent = allPosts.slice(3, 9);
-  // Heron otsikko = kaksi lausetta, kaksi riviä. Koko sovitetaan pidempään (ks. lib/otsikkoRivit).
-  const h1Em = Math.max(manropeEm(c.heroLine1), manropeEm(c.heroLine2));
-  const cjkVali = ilmanValeja(lang);
+  const p = c.photo;
+  const { posts, loading } = usePosts({ limit: 6, editorialOnly: true });
+  const readers = useReaderPosts();
+  const themes = COPY[lang].category.themes;
+  const locale = lang === 'pt-BR' ? 'pt-BR' : lang === 'zh-CN' ? 'zh-CN' : lang;
+  const shortDate = useMemo(() => new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', timeZone: 'UTC' }), [locale]);
+  const longDate = useMemo(() => new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }), [locale]);
+  const day = (iso: string, f: Intl.DateTimeFormat) => f.format(new Date(`${iso}T12:00:00Z`));
+  // Desktop: both lines fit their column; Manrope 800 runs ~8 % wider than the 700 calibration.
+  const h1Em = Math.max(manropeEm(p.line1), manropeEm(p.line2)) * 1.08;
+  const cjk = lang === 'ja' || lang === 'zh-CN';
 
   useSeo({
-    // copy.<kieli>.ts home.metaTitle / metaDescription: sama kenttä, jonka esirenderöinti lukee (routes.json copyKey "home").
     title: c.metaTitle,
     description: c.metaDescription,
     image: 'https://lapland.blog/og/page-home.jpg',
     canonical: canonicalUrl('/'),
     jsonLd: faqPageSchema(c.faq),
   });
-
   useJsonLd('website', websiteSchema());
   useJsonLd('publisher', publisherSchema());
 
-  const pillarBodies = [
-    { kicker: c.pillar1Kicker, title: c.pillar1Title, body: c.pillar1Body, ...PILLAR_META[0] },
-    { kicker: c.pillar2Kicker, title: c.pillar2Title, body: c.pillar2Body, ...PILLAR_META[1] },
-    { kicker: c.pillar3Kicker, title: c.pillar3Title, body: c.pillar3Body, ...PILLAR_META[2] },
-  ];
+  const tile = (i: number, eager: boolean) => {
+    const w = WALL[i];
+    return (
+      <figure key={w.file} className={`relative overflow-hidden rounded-2xl bg-night-light ${w.ratio} shrink-0 w-[54vw] max-w-[240px] snap-start lg:w-auto lg:max-w-none`}>
+        <img
+          src={`/images/kuvaseina/${w.file}-480.webp`}
+          srcSet={`/images/kuvaseina/${w.file}-480.webp 480w, /images/kuvaseina/${w.file}-960.webp 960w`}
+          sizes="(min-width: 1024px) 200px, 54vw"
+          alt={p[w.alt]}
+          width={480}
+          height={600}
+          loading={eager ? 'eager' : 'lazy'}
+          fetchPriority={eager ? 'high' : 'auto'}
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <Stamp place={p[w.place]} date={day(w.date, shortDate)} temp={w.temp} />
+      </figure>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-night text-snow">
       <Nav />
 
       {/* HERO */}
-      <section className="relative min-h-[100svh] sm:min-h-[94vh] flex items-center justify-center overflow-hidden pt-16">
-        <img
-          src={heroImage.src}
-          srcSet={heroImage.srcSet}
-          sizes={heroImage.sizes}
-          alt={isSummerSeason() ? COPY[lang].images.heroSummerAlt : COPY[lang].images.auroraPinesAlt}
-          className="absolute inset-0 w-full h-full object-cover animate-kenburns"
-          fetchPriority="high"
-          decoding="async"
-          width={2560}
-          height={1097}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/72 via-night/40 to-night/95" />
-        <div className="absolute inset-0 hero-scrim-radial pointer-events-none" />
-        <div className="absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pink/60 to-transparent" />
-
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[640px] h-[640px] rounded-full bg-pink/15 blur-[140px] animate-hero-pulse" />
-        </div>
-        <div className="absolute top-1/3 left-1/4 pointer-events-none hidden md:block">
-          <div className="w-[320px] h-[320px] rounded-full bg-aurora-blue/10 blur-[120px] animate-soft-float" />
-        </div>
-        <div className="absolute bottom-1/4 right-1/4 pointer-events-none hidden md:block">
-          <div
-            className="w-[280px] h-[280px] rounded-full bg-aurora-green/10 blur-[110px] animate-soft-float"
-            style={{ animationDelay: '3s' }}
-          />
-        </div>
-
-        {/* @container: otsikon koko lasketaan palstan leveydestä (100cqi), siksi w-full (kutistuva flex-lapsi ei kelpaa
-            kyselysäiliöksi). lg+ palsta 1152 px ja 2xl 1280 px: 992 px:ssä saksan toinen lause (14,2 em) jäi 70 px:iin. */}
-        <div className="@container relative z-10 text-center px-4 w-full max-w-5xl lg:max-w-6xl 2xl:max-w-7xl">
-          <Reveal>
-            <div className="flex flex-wrap items-center justify-center gap-1.5 mb-6">
-              {c.heroEyebrow.split('·').map((part, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/40 text-pink tracking-[0.4em] text-[11px] uppercase font-bold whitespace-nowrap"
-                >
-                  {i === 0 && <Snowflake size={12} className="text-pink" />}
-                  {part.trim()}
-                </span>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={1}>
-            {/* Puhelin pitää suunnitellun koon (ja/zh: katko vain fraasien välissä, ei "始めま / しょう。");
-                sm+ = pienempi kahdesta, suunniteltu --h1-max tai koko jolla pidempi lause mahtuu riville. */}
+      <section className="pt-20 lg:pt-28 pb-12 lg:pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="@container order-2 lg:order-1 w-full">
+            <p className="text-center lg:text-left text-pink-300 font-semibold mb-4">{p.kicker}</p>
             <h1
-              className={`font-display text-[clamp(2.25rem,6.5vw,5.25rem)] sm:[--h1-max:clamp(2.25rem,6.5vw,5.25rem)] xl:[--h1-max:clamp(84px,1.3125vw_+_67.2px,100.8px)] sm:[font-size:min(var(--h1-max),calc(100cqi/var(--h1-em)))] leading-[1.03] tracking-tight mb-6 text-snow font-light hero-text-shadow${cjkVali ? ' [word-break:keep-all] [overflow-wrap:anywhere]' : ''}`}
+              className={`font-display font-extrabold tracking-tight leading-[1.05] text-center lg:text-left text-[clamp(2.25rem,8vw,3.25rem)] lg:[font-size:min(3.6rem,calc(100cqi/var(--h1-em)))] mb-5${cjk ? ' [word-break:keep-all]' : ''}`}
               style={{ ['--h1-em' as string]: h1Em.toFixed(2) }}
             >
-              <Fraasit text={c.heroLine1} lang={lang} />
-              <br />
-              <span className="text-pink italic font-light"><Fraasit text={c.heroLine2} lang={lang} /></span>
+              <span className="block lg:whitespace-nowrap">{p.line1}</span>
+              <span className="block lg:whitespace-nowrap text-pink">{p.line2}</span>
             </h1>
-          </Reveal>
-
-          <Reveal delay={2}>
-            <p className="max-w-2xl xl:max-w-4xl mx-auto text-slate-100 text-base sm:text-lg md:text-xl leading-relaxed hero-text-shadow-sm xl:text-2xl">
-              {c.heroLead}
-            </p>
-          </Reveal>
-
-          <Reveal delay={3}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+            <p className="text-slate-200 text-lg leading-relaxed mb-7 max-w-xl mx-auto lg:mx-0">{p.lead}</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <Link
-                to={to('/signin')}
-                // 🔴 bg-pink-cta, ei bg-pink. Sivuston oma teemaohje (index.css) sanoo jo
-                // etta taytetyt napit kayttavat --color-pink-cta:ta (#DB2777, 4,63:1
-                // valkoisella) eivatka accenttia — tama nappi oli jaanyt vanhaan.
-                // Korttiteksti-portti mittasi 3,53:1, 100 % pikseleista rajan alle.
-                className="group cursor-pointer px-8 py-3.5 bg-pink-cta text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
+                to={to('/me/new')}
+                className="h-14 px-7 rounded-full bg-pink-cta text-white font-bold inline-flex items-center justify-center gap-2 hover:bg-[#BE185D] transition-colors"
+                data-umami-event="photo_cta"
+                data-umami-event-surface="home_hero"
               >
-                {c.heroPrimaryCta}
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <Camera size={19} /> {p.cta}
               </Link>
               <a
-                href="#how-it-works"
-                // 🔴 #F9A8D4: --color-aurora-blue on tassa teemassa sama #EC4899 kuin
-                // pinkki, ja 16 px:n tekstina revontulikuvan paalla se mitattiin
-                // 3,97:1 pahimmillaan (28 % pikseleista rajan 4,5:1 alle). Reunus ja
-                // hover jaavat ennalleen, vain muste vaalenee.
-                className="cursor-pointer px-8 py-3.5 border border-aurora-blue/60 text-[#F9A8D4] hover:bg-aurora-blue/10 hover:border-aurora-blue rounded-full transition-colors duration-200 tracking-wide font-semibold focus:outline-none focus:ring-2 focus:ring-aurora-blue/40 focus:ring-offset-2 focus:ring-offset-night"
+                href="#tarinakuva"
+                className="h-14 px-7 rounded-full border border-slate-500 font-semibold inline-flex items-center justify-center hover:border-snow transition-colors"
               >
-                {c.heroSecondaryCta}
+                {p.cta2}
               </a>
             </div>
-          </Reveal>
+            <p className="mt-4 text-sm text-slate-400 text-center lg:text-left">{p.fine}</p>
+          </div>
 
-          <Reveal delay={4}>
-            <p className="mt-12 text-[10px] tracking-[0.3em] uppercase text-slate-300">
-              {c.heroFootnote}
-            </p>
-          </Reveal>
+          <div className="order-1 lg:order-2 min-w-0">
+            <div className="flex gap-2.5 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-1 lg:mx-0 lg:px-0 lg:overflow-visible lg:grid lg:grid-cols-3 lg:gap-3.5 lg:items-start [scrollbar-width:none]">
+              {COLUMNS.map((col, ci) => (
+                <div key={ci} className={`contents lg:flex lg:flex-col lg:gap-3.5 ${ci === 1 ? 'lg:pt-12' : ci === 2 ? 'lg:self-center' : ''}`}>
+                  {col.map((i) => tile(i, i === 0))}
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-xs text-slate-400 text-left lg:text-right">{p.wallCredit}</p>
+          </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-night pointer-events-none" />
       </section>
 
-      {/* PÄÄKUMPPANI-banneri HETI heron alle (LV Media; tyhjä → house-ad).
-          Tumma pinta — istuu sivun bg-night-taustaan. */}
+      {/* Paid main partner slot: sold as "right under the hero". */}
       <MainPartnerBanner config={AD_SLOTS} locale={lang} />
 
-      {/* READ THESE FIRST — kolme oikeaa juttua heti heron alle (Vesa 2026-09-15:
-          "eikö tässä pitäisi heti tulla muutama esimerkki? sellaista vauhdin hurmaa").
-          Korvasi kesäbannerin, jonka teksti oli kovakoodattu "Keskiyön aurinko 6.6. → 7.7."
-          ja joka siis mainosti mennyttä kautta joka syksy ja talvi. */}
-      <section
-        className="lv-band relative py-16 md:py-24 px-4 sm:px-6 lg:px-8"
-        aria-labelledby="readfirst-heading"
-      >
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-5 mb-10">
-              <div className="max-w-2xl">
-                <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
-                  {c.readFirstEyebrow}
-                </p>
-                <h2
-                  id="readfirst-heading"
-                  className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight leading-[1.05]"
-                >
-                  {c.readFirstH2}
-                </h2>
-              </div>
+      {/* STORY CARD */}
+      <section id="tarinakuva" className="scroll-mt-24 border-t border-slate-800 py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-16 items-center">
+          <div className="mx-auto w-[250px] sm:w-[280px] aspect-[9/18] rounded-[40px] border-[10px] border-night-light overflow-hidden relative shadow-[0_30px_60px_rgba(0,0,0,0.45)]">
+            <img
+              src={`/images/kuvaseina/${STORY.file}-960.webp`}
+              alt={p[STORY.alt]}
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <span className="absolute top-4 left-4 rounded-full bg-night/80 px-3 py-1 font-logo text-xl leading-none tracking-wide" translate="no">
+              <span className="text-pink">#</span>LAPLAND<span className="text-pink">.BLOG</span>
+            </span>
+            <div className="absolute inset-x-0 bottom-0 px-5 pb-6 pt-24 bg-gradient-to-t from-night/95 via-night/60 to-transparent">
+              <p className="font-display font-extrabold text-6xl leading-none tracking-tight">{formatTemp(STORY.temp ?? 0)}</p>
+              <p className="font-display font-bold text-xl mt-2">{p[STORY.place]}</p>
+              <p className="text-sm text-slate-300 mt-1">{day(STORY.date, longDate)}</p>
+              <p className="text-sm font-semibold text-pink-300 mt-3" translate="no">lapland.blog</p>
+            </div>
+          </div>
+          <div>
+            <h2 className={`font-display font-extrabold text-3xl sm:text-4xl tracking-tight leading-tight mb-4 text-center lg:text-left${cjk ? ' [word-break:keep-all]' : ''}`}>
+              {p.shareH2}
+            </h2>
+            <p className="text-slate-200 text-lg leading-relaxed mb-7 max-w-2xl mx-auto lg:mx-0">{p.shareLead}</p>
+            <ol className="grid gap-3.5 mb-8 max-w-xl mx-auto lg:mx-0">
+              {[p.step1, p.step2, p.step3].map((s, i) => (
+                <li key={i} className="grid grid-cols-[2rem_1fr] gap-3 items-start text-slate-100 leading-relaxed">
+                  <span className="w-8 h-8 rounded-full border border-slate-600 bg-night-light flex items-center justify-center font-display font-extrabold text-sm text-pink-300">
+                    {i + 1}
+                  </span>
+                  <span className="pt-0.5">{s}</span>
+                </li>
+              ))}
+            </ol>
+            <div className="flex justify-center lg:justify-start">
               <Link
-                to={to('/stories')}
-                className="lv-tap inline-flex items-center gap-2 text-sm font-semibold text-pink-300 hover:text-snow transition-colors"
+                to={to('/me/new')}
+                className="h-14 px-7 rounded-full bg-pink-cta text-white font-bold inline-flex items-center justify-center gap-2 hover:bg-[#BE185D] transition-colors"
+                data-umami-event="photo_cta"
+                data-umami-event-surface="home_story"
               >
-                {c.readFirstCta}
-                <ArrowRight size={14} />
+                <Camera size={19} /> {p.cta}
               </Link>
             </div>
-          </Reveal>
+          </div>
+        </div>
+      </section>
 
+      {/* READERS' PHOTOS: only when real readers have posted enough to fill a grid. */}
+      {readers.length > 0 && (
+        <section className="border-t border-slate-800 py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-8 text-center lg:text-left">{p.readersH2}</h2>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              {readers.slice(0, 8).map((r) => (
+                <li key={r.slug}>
+                  <Link to={to(`/post/${r.slug}`)} className="group block relative aspect-[4/5] overflow-hidden rounded-2xl bg-night-light">
+                    <img src={cardUrl(r.hero_image)} alt={r.hero_alt} lang={r.lang} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+                    {(r.location || r.weather_note) && (
+                      <span className="absolute left-2.5 bottom-2.5 max-w-[calc(100%-1.25rem)] inline-flex flex-wrap items-center gap-x-2 rounded-xl bg-night/80 px-2.5 py-1.5 text-[13px] font-semibold text-white">
+                        {r.weather_note && (
+                          <span className="inline-flex items-center gap-1 whitespace-nowrap">
+                            <Thermometer size={12} /> {r.weather_note}
+                          </span>
+                        )}
+                        {r.location && (
+                          <span className="inline-flex items-center gap-1">
+                            <MapPin size={12} /> {r.location}
+                          </span>
+                        )}
+                      </span>
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* EDITORS' STORIES */}
+      <section className="border-t border-slate-800 py-16 lg:py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="trips-heading">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-8 text-center lg:text-left">
+            <h2 id="trips-heading" className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">{p.tripsH2}</h2>
+            <Link to={to('/stories')} className="lv-tap inline-flex items-center justify-center gap-1.5 font-semibold text-pink-300 hover:text-snow">
+              {p.tripsAll} <ArrowRight size={16} />
+            </Link>
+          </div>
           {loading ? (
-            <div className="grid gap-5 md:grid-cols-3">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {[0, 1, 2].map((i) => (
-                <div key={i} className="aspect-[4/5] sm:aspect-[3/4] rounded-2xl bg-night-light/60 animate-pulse" />
+                <div key={i} className="aspect-[4/3] rounded-2xl bg-night-light/60 animate-pulse" />
               ))}
             </div>
           ) : (
-            <div className="grid gap-5 md:grid-cols-3">
-              {leadPosts.map((post, i) => (
-                <Reveal key={post.slug} delay={((i % 3) + 1) as 1 | 2 | 3}>
+            <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {posts.map((post) => (
+                <li key={post.slug}>
                   <Link
                     to={to(`/post/${post.slug}`)}
-                    className="group block overflow-hidden rounded-2xl border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+                    className="group h-full flex flex-col overflow-hidden rounded-2xl border border-slate-700/80 bg-night-light/60 hover:border-pink/50 transition-colors"
                   >
-                    {/* Kuvasuhde = lahdekuvan suhde (16:10). Pystykortti (4/5)
-                        rajasi vaakakuvasta puolet pois ja jatti puhelimelle vain
-                        0,76-0,90x tarvittavista pikseleista => pehmea kuva.
-                        Mitattu livesta 2026-09-15. */}
-                    <div className="relative aspect-[16/10] shrink-0 overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={post.heroImage}
                         alt={post.heroAlt}
                         lang={postTextLang(post, lang)}
-                        loading={i === 0 ? 'eager' : 'lazy'}
+                        loading="lazy"
                         decoding="async"
-                        fetchPriority={i === 0 ? 'high' : 'auto'}
                         width={1200}
-                        height={750}
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        height={900}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/10 to-transparent" />
                     </div>
-                    <div className="p-5 sm:p-6">
-                      <p lang={postTextLang(post, lang)} className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
-                        {post.kicker}
-                      </p>
-                      <h3 lang={postTextLang(post, lang)} className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
+                    <div className="p-5 flex-1 flex flex-col gap-2">
+                      <p className="text-sm font-semibold text-pink-300">{themes[post.category]?.name}</p>
+                      <h3 lang={postTextLang(post, lang)} className="font-display font-bold text-xl leading-snug">
                         {post.title}
                       </h3>
-                      <p lang={postTextLang(post, lang)} className="text-slate-300 text-sm leading-relaxed line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                      <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-snow/90">
-                        {c.readFirstRead}
-                        <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-                      </span>
                     </div>
                   </Link>
-                </Reveal>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section
-        id="how-it-works"
-        className="lv-band relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-24"
-        aria-labelledby="how-heading"
-      >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] rounded-full bg-purple/10 blur-[160px] pointer-events-none" />
-
-        <div className="relative max-w-6xl mx-auto">
-          <Reveal>
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/50">
-                <span className="w-1.5 h-1.5 rounded-full bg-pink animate-pulse" />
-                <p className="text-pink-200 tracking-[0.35em] text-[10px] font-bold uppercase">
-                  {c.howEyebrow}
-                </p>
-              </div>
-              <h2
-                id="how-heading"
-                className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight mb-5"
-              >
-                {c.howH2Pre}{' '}
-                <span className="text-pink italic">{c.howH2Italic}</span>
-              </h2>
-              <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-                {c.howLead}
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {[
-              { Icon: MapPin, accent: 'green', kicker: c.howStep1Kicker, title: c.howStep1Title, body: c.howStep1Body },
-              { Icon: BookOpen, accent: 'pink', kicker: c.howStep2Kicker, title: c.howStep2Title, body: c.howStep2Body },
-              { Icon: Share2, accent: 'blue', kicker: c.howStep3Kicker, title: c.howStep3Title, body: c.howStep3Body },
-            ].map((step, i) => {
-              // Icon keeps the vivid brand accent (large enough to pass at 3:1).
-              const accentIcon =
-                step.accent === 'green'
-                  ? 'text-pink-400'
-                  : step.accent === 'pink'
-                    ? 'text-pink'
-                    : 'text-pink-300';
-              // The small uppercase kicker label needs a much lighter tint —
-              // brand pink at 10px on the dark card fails WCAG AA. pink-200/300
-              // lift these to ~9:1 so they actually read as a label.
-              const accentKicker =
-                step.accent === 'green'
-                  ? 'text-pink-200'
-                  : step.accent === 'pink'
-                    ? 'text-pink-200'
-                    : 'text-pink-300';
-              const accentBg =
-                step.accent === 'green'
-                  ? 'bg-pink/15 border-pink/45'
-                  : step.accent === 'pink'
-                    ? 'bg-pink/15 border-pink/45'
-                    : 'bg-aurora-blue/15 border-aurora-blue/45';
-              const hoverBorder =
-                step.accent === 'green'
-                  ? 'hover:border-pink/60'
-                  : step.accent === 'pink'
-                    ? 'hover:border-pink/60'
-                    : 'hover:border-aurora-blue/60';
-              const Icon = step.Icon;
-              return (
-                <Reveal key={step.kicker} delay={(i + 1) as 1 | 2 | 3}>
-                  <article
-                    className={`h-full rounded-2xl p-8 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 ${hoverBorder}`}
-                  >
-                    <div
-                      className={`w-12 h-12 rounded-full border flex items-center justify-center mb-6 ${accentBg}`}
-                    >
-                      <Icon className={accentIcon} size={20} />
-                    </div>
-                    <p className={`${accentKicker} text-[10px] tracking-[0.35em] uppercase font-bold mb-3`}>
-                      {step.kicker}
-                    </p>
-                    <h3
-                      className="font-display text-2xl text-snow font-medium leading-snug mb-4"
-                      style={{ fontFamily: 'var(--font-editorial)' }}
-                    >
-                      {step.title}
-                    </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">{step.body}</p>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-
-          <Reveal delay={4}>
-            <div className="mt-14 text-center">
-              <Link
-                to={to('/signin')}
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#DB2777] text-white font-semibold rounded-full tracking-wide hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:ring-offset-2 focus:ring-offset-night"
-              >
-                {c.howCta}
-                <ArrowRight size={18} />
-              </Link>
-              <p className="mt-4 text-[10px] tracking-[0.3em] uppercase text-slate-400">
-                {c.howFootnote}
-              </p>
-            </div>
-          </Reveal>
         </div>
       </section>
 
       <HomeAdSlots config={AD_SLOTS} locale={lang} />
 
-      {/* The app announcement — same fixed block as every other site in the
-          network, below the paid partner slots (they are sold on being first). */}
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <AppPromoHero />
         </div>
       </section>
 
-      <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
-
-      {/* FEATURED */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="pillars-heading">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-4 text-center">
-              {c.pillarsEyebrow}
-            </p>
-            <h2
-              id="pillars-heading"
-              className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight mb-5 text-center"
-            >
-              {c.pillarsH2Pre}{' '}
-              <span className="text-pink italic">{c.pillarsH2Italic}</span>
-            </h2>
-            <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto text-center mb-16 leading-relaxed">
-              {c.pillarsLead}
-            </p>
-          </Reveal>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {pillarBodies.map((pillar, i) => {
-              // Small uppercase kicker + link labels: the remapped "green"
-              // (#DB2777) only hits ~3.5:1 on the dark card and fails WCAG AA,
-              // so lift that branch to a lighter pink tint. Brand pink
-              // (#EC4899) clears AA, so the pink branch stays as-is.
-              const accentColor =
-                pillar.accent === 'pink'
-                  ? 'text-pink'
-                  : pillar.accent === 'green'
-                    ? 'text-pink-300'
-                    : 'text-aurora-blue';
-              const borderHover =
-                pillar.accent === 'pink'
-                  ? 'hover:border-pink/55'
-                  : pillar.accent === 'green'
-                    ? 'hover:border-aurora-green/55'
-                    : 'hover:border-aurora-blue/55';
-              return (
-                <Reveal key={pillar.kicker} delay={(i + 1) as 1 | 2 | 3}>
-                  <article
-                    className={`group h-full rounded-2xl border border-purple/25 bg-night-light/50 backdrop-blur-sm overflow-hidden transition-colors ${borderHover}`}
-                  >
-                    <div className="relative aspect-[3/2] overflow-hidden">
-                      <img
-                        src={pillar.image.src}
-                        srcSet={pillar.image.srcSet}
-                        sizes={pillar.image.sizes}
-                        alt={COPY[lang].images[pillar.altKey]}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        loading="lazy"
-                        decoding="async"
-                        width={1200}
-                        height={800}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-night-light/90 via-night-light/20 to-transparent" />
-                    </div>
-                    <div className="p-8">
-                      <p className={`text-[10px] tracking-[0.35em] uppercase font-bold mb-4 ${accentColor}`}>
-                        {pillar.kicker}
-                      </p>
-                      <h3
-                        className="font-display text-2xl text-snow font-medium leading-snug mb-5"
-                        style={{ fontFamily: 'var(--font-editorial)' }}
-                      >
-                        {pillar.title}
-                      </h3>
-                      <p className="text-slate-300 text-sm leading-relaxed mb-7">{pillar.body}</p>
-                      <div className="flex flex-wrap gap-3">
-                        {pillar.links.map((link) => (
-                          <Link
-                            key={link.to}
-                            to={to(link.to)}
-                            className={`lv-tap group/link inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] font-semibold ${accentColor} hover:opacity-80 transition-opacity`}
-                          >
-                            {COPY[lang].category.themes[link.slug].name}
-                            <ArrowRight
-                              size={12}
-                              className="group-hover/link:translate-x-0.5 transition-transform"
-                            />
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
-
-      {/* LATEST STORIES */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
-              <div>
-                <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
-                  {c.latestEyebrow}
-                </p>
-                <h2 className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight">
-                  {c.latestH2}
-                </h2>
-              </div>
-              <Link
-                to={to('/stories')}
-                className="lv-tap group inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-xs tracking-wider uppercase font-semibold transition-colors"
-              >
-                {c.latestEvery}{' '}
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </Reveal>
-
-          {loading && recent.length === 0 ? (
-            <div className="text-center py-16 text-slate-400 text-sm">
-              <div className="inline-block w-6 h-6 border-2 border-pink border-t-transparent rounded-full animate-spin" />
-              <p className="mt-4">{c.latestLoading}</p>
-            </div>
-          ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {recent.map((post, i) => (
-                <Reveal key={post.slug} delay={((i % 3) + 1) as 1 | 2 | 3}>
-                  <PostCard post={post} />
-                </Reveal>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
-
-      {/* PERSONAL ASIDE */}
-      <section
-        className="relative py-24 px-4 sm:px-6 lg:px-8"
-        aria-labelledby="aside-heading"
-      >
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-[260px_1fr] gap-10 md:gap-14 items-center">
-            <Reveal>
-              <div className="relative aspect-[3/2] md:aspect-[4/5] rounded-2xl overflow-hidden border border-purple/25 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]">
-                <img
-                  src={asideImage.src}
-                  srcSet={asideImage.srcSet}
-                  sizes={asideImage.sizes}
-                  alt={COPY[lang].images.headlampAuroraAlt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                  width={1200}
-                  height={800}
-                />
-                <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                  <p className="text-white text-[10px] tracking-[0.25em] uppercase font-semibold">
-                    {c.asidePill}
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={1}>
-              <div className="@container">
-                <div className="inline-flex items-center gap-2 mb-5">
-                  <PenLine size={16} className="text-pink" />
-                  <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
-                    {c.asideEyebrow}
-                  </p>
-                </div>
-                {/* ja/zh: kaksi lausetta ilman välilyöntejä katkesi 708 px:n palstassa kesken sanan kolmelle riville
-                    ("パンフレットで / はありません。あなたの旅も、そ / うであるべき…"). lg+: kumpikin lause omalle
-                    rivilleen ja koko pisimmän lauseen mukaan (36 → ~33 px). Muut kielet rivittyvät sanoista kahdelle. */}
-                <h2
-                  id="aside-heading"
-                  className={`font-display font-light text-3xl md:text-4xl leading-[1.12] tracking-tight mb-6 text-snow${cjkVali ? ' lg:[font-size:min(2.25rem,calc(100cqi/var(--h2-em)))] [word-break:keep-all] [overflow-wrap:anywhere]' : ''}`}
-                  style={cjkVali ? { ['--h2-em' as string]: Math.max(...lauseet(c.asideH2).map(manropeEm)).toFixed(2) } : undefined}
-                >
-                  {cjkVali
-                    ? lauseet(c.asideH2).map((l) => <span key={l} className="lg:inline-block"><Fraasit text={l} lang={lang} /></span>)
-                    : c.asideH2}
-                </h2>
-                <div className="space-y-5 text-slate-300 text-base md:text-lg leading-relaxed">
-                  <p>{c.asideP1}</p>
-                  <p>{c.asideP2}</p>
-                </div>
-                <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
-                  <Link
-                    to={to('/signin')}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#8F3525] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C1543B]/40"
-                  >
-                    {c.asideCta1}
-                    <ArrowRight size={14} />
-                  </Link>
-                  <Link
-                    to={to('/about')}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-pink/40 text-pink-300 font-semibold uppercase tracking-[0.2em] text-xs whitespace-nowrap hover:bg-[#C1543B]/10 transition-colors"
-                  >
-                    {c.asideCta2}
-                  </Link>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider mx-4 sm:mx-6 lg:mx-8" />
-
       {/* FAQ */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="faq-heading">
+      <section className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="faq-heading">
         <div className="max-w-5xl mx-auto">
-          <Reveal>
-            <h2
-              id="faq-heading"
-              className="font-display text-4xl md:text-5xl text-snow font-light tracking-tight mb-12 text-center"
-            >
-              {c.faqHeading}
-            </h2>
-          </Reveal>
-          <dl className="grid gap-5 lg:grid-cols-2 lg:items-start">
-            {c.faq.map((item, faqIndex) => (
-              <Reveal key={item.q}>
-                <div className="h-full rounded-2xl p-6 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45">
-                  <dt className="font-display text-xl text-snow font-medium leading-snug mb-3">{item.q}</dt>
-                  <dd className="text-slate-300 text-sm md:text-base leading-relaxed">
-                    {item.a}
-                    {(FAQ_LINKS[faqIndex] ?? []).length > 0 && (
-                      <span className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
-                        {FAQ_LINKS[faqIndex].map(({ route, label }) => (
-                          <Link
-                            key={route}
-                            to={to(route)}
-                            className="lv-tap inline-flex items-center gap-1.5 text-sm font-medium text-purple-300 hover:text-snow transition-colors"
-                          >
-                            {COPY[lang].nav[label]} <ArrowRight className="w-3.5 h-3.5 shrink-0" />
-                          </Link>
-                        ))}
-                      </span>
-                    )}
-                  </dd>
-                </div>
-              </Reveal>
+          <h2 id="faq-heading" className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-10 text-center">
+            {c.faqHeading}
+          </h2>
+          <dl className="grid gap-4 lg:grid-cols-2 lg:items-start">
+            {c.faq.map((item, i) => (
+              <div key={item.q} className="h-full rounded-2xl p-6 border border-slate-700/80 bg-night-light/60">
+                <dt className="font-display font-bold text-lg text-snow leading-snug mb-2">{item.q}</dt>
+                <dd className="text-slate-300 leading-relaxed">
+                  {item.a}
+                  {(FAQ_LINKS[i] ?? []).length > 0 && (
+                    <span className="flex flex-wrap gap-x-5 gap-y-2 mt-3">
+                      {FAQ_LINKS[i].map(({ route, label }) => (
+                        <Link key={route} to={to(route)} className="lv-tap inline-flex items-center gap-1.5 text-sm font-semibold text-pink-300 hover:text-snow">
+                          {COPY[lang].nav[label]} <ArrowRight size={14} />
+                        </Link>
+                      ))}
+                    </span>
+                  )}
+                </dd>
+              </div>
             ))}
           </dl>
         </div>
       </section>
 
-      {/* Photo credits: hero, the three pillars and the stories shown above (cards are links, so the credit is listed here). */}
-      <PhotoCredits srcs={[heroImage.src, ...PILLAR_META.map((m) => m.image.src), ...allPosts.slice(0, 9).map((p) => p.heroImage)]} />
-
+      <PhotoCredits srcs={posts.map((x) => x.heroImage)} />
       <Newsletter />
       <Footer />
     </div>
