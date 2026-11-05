@@ -169,23 +169,23 @@ const en: SectionCopy = {
     faq: [
       {
         q: 'How do I start a travel blog on lapland.blog?',
-        a: 'Sign in with your Google account, give your blog a name, and write your first entry. Each entry can hold text, photos, the date, and a map pin for where you were. Your blog lives at lapland.blog/by/your-name and is ready to share the moment you publish. There is nothing to install and no setup beyond signing in.',
+        a: 'Tap Add a photo and sign in with email or Google. Pick a photo from your phone, choose the place and, if you like, write a line about what happened. The date comes from the photo and the temperature from the Finnish Meteorological Institute. Your posts collect on your trip page at lapland.blog/by/your-name. There is nothing to install.',
       },
       {
-        q: 'Is lapland.blog free to use?',
-        a: 'Yes. Starting a blog, writing entries, adding photos, pinning places on the map, and sharing your blog are all free. There is no card required to sign up and no ads on your blog.',
+        q: 'Is lapland.blog free?',
+        a: 'Yes. Adding photos, publishing and sharing are free, and signing up needs no payment card. We do not put ads on your own posts.',
       },
       {
         q: 'Can I share my Lapland blog on Instagram and Facebook?',
-        a: 'Yes. Every blog has a public link you can post anywhere, and each entry can be exported as an Instagram-story-sized image so you can share a single day in one tap. Friends and family can open your blog without an account of their own.',
+        a: 'Yes. When you publish a photo you get a story card with the temperature, place and date printed on it. On a phone you can share it straight to your Instagram or Facebook story; on a computer you can download it. Every post also has its own link that friends can open without an account.',
       },
       {
-        q: 'Do I have to be in Lapland to write a blog here?',
-        a: 'No. We built lapland.blog for travellers heading to Finnish Lapland, so the map and prompts are tuned for trips up north, but anyone can keep a blog here, whether you are planning a trip, writing during one, or filling it in after you get home. You can start before you fly and add entries day by day.',
+        q: 'Do I need to be in Lapland to blog here?',
+        a: 'No. You can add photos during the trip or once you are home. The date is read from the photo, and the temperature is looked up for that day and place when the place is in Finland.',
       },
       {
-        q: 'What should I write about in my Lapland travel diary?',
-        a: 'Whatever you do not want to forget. Where you stayed, what the aurora looked like, the temperature on the coldest morning, the meal that surprised you, the husky ride, the silence of the forest. Short entries with a photo and a place pin work well. A few lines a day adds up to a blog worth re-reading.',
+        q: 'What should I write about in a Lapland travel diary?',
+        a: 'Whatever you do not want to forget: where you slept, what the aurora looked like, the reading on the coldest morning, the food that surprised you. One photo and one line is enough. You can write a longer story under the photo if you want to.',
       },
     ],
   },

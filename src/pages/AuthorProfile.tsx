@@ -8,12 +8,11 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, MapPin, Thermometer } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
-import PostCard from '../components/PostCard';
 import { supabase } from '../lib/supabase';
 import type { BlogPostRow } from '../lib/supabase';
 import { rowToPost } from '../lib/postAdapter';
@@ -24,6 +23,7 @@ import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, breadcrumbSchema } from '../lib/jsonld';
 import { useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { cardUrl } from '../lib/uploadImage';
 import { fillCopy } from '../lib/copyTemplate';
 import { formatPostDate } from '../lib/dates';
 
@@ -191,24 +191,56 @@ export default function AuthorProfile() {
           </h2>
 
           {posts.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {posts.map((p, i) => (
-                <Reveal key={p.slug} delay={Math.min(i + 1, 6) as 1 | 2 | 3 | 4 | 5 | 6}>
-                  <PostCard post={p} variant="dark" />
-                </Reveal>
+            /* The trip page as a photo wall (2026-11-05): a reader's posts are photos first, so the page
+               friends open from a shared link shows the photos, each with its place and temperature. */
+            <ul className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+              {posts.map((p) => (
+                <li key={p.slug}>
+                  <Link to={lp(`/post/${p.slug}`)} className="group block">
+                    <span className="relative block aspect-[4/5] overflow-hidden rounded-2xl bg-night-light">
+                      <img
+                        src={cardUrl(p.heroImage)}
+                        alt={p.heroAlt}
+                        lang={p.lang}
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                      {(p.location || p.weatherNote) && (
+                        <span className="absolute left-2.5 bottom-2.5 max-w-[calc(100%-1.25rem)] inline-flex flex-wrap items-center gap-x-2 rounded-xl bg-night/80 px-2.5 py-1.5 text-[13px] font-semibold text-white">
+                          {p.weatherNote && (
+                            <span className="inline-flex items-center gap-1 whitespace-nowrap">
+                              <Thermometer size={12} /> {p.weatherNote}
+                            </span>
+                          )}
+                          {p.location && (
+                            <span className="inline-flex items-center gap-1" lang={p.lang}>
+                              <MapPin size={12} /> {p.location}
+                            </span>
+                          )}
+                        </span>
+                      )}
+                    </span>
+                    <span lang={p.lang} className="block mt-2.5 font-display font-bold text-base sm:text-lg leading-snug text-snow group-hover:text-pink-300">
+                      {p.title}
+                    </span>
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           ) : (
             <div className="rounded-2xl border border-purple/20 bg-night-light/30 p-10 text-center max-w-2xl mx-auto">
               <p className="text-slate-300 text-base leading-relaxed mb-6">
                 {fillCopy(c.emptyBody, { name: profile?.display_name ?? c.emptyNameFallback })}
               </p>
               <Link
-                to={lp('/signin')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] transition-colors"
+                to={lp('/me/new')}
+                className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-[#DB2777] text-white font-bold hover:bg-[#BE185D] transition-colors"
+                data-umami-event="photo_cta"
+                data-umami-event-surface="author_empty"
               >
-                {COPY[lang].home.asideCta1}
-                <ArrowRight size={14} />
+                {COPY[lang].nav.startYourBlog}
+                <ArrowRight size={16} />
               </Link>
             </div>
           )}

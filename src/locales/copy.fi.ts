@@ -169,23 +169,23 @@ const fi: SectionCopy = {
     faq: [
       {
         q: 'Miten aloitan matkablogin lapland.blogissa?',
-        a: 'Kirjaudu sisään Google-tilillä, anna blogillesi nimi ja kirjoita ensimmäinen merkintä. Jokaiseen merkintään voi liittää tekstiä, kuvia, päivämäärän ja karttapinnin paikasta, jossa olit. Blogisi löytyy osoitteesta lapland.blog/by/oma-nimi ja on valmis jaettavaksi heti julkaisun jälkeen. Mitään ei tarvitse asentaa, eikä muuta käyttöönottoa ole kuin sisäänkirjautuminen.',
+        a: 'Paina Lisää kuva -nappia ja kirjaudu sähköpostilla tai Google-tilillä. Valitse kuva puhelimesta, valitse paikka ja kirjoita halutessasi rivi siitä, mitä tapahtui. Päivä luetaan kuvasta ja lämpötila haetaan Ilmatieteen laitokselta. Julkaisusi kertyvät matkasivullesi osoitteeseen lapland.blog/by/oma-nimi. Mitään ei tarvitse asentaa.',
       },
       {
         q: 'Onko lapland.blog ilmainen?',
-        a: 'Kyllä. Blogin aloittaminen, merkintöjen kirjoittaminen, kuvien lisääminen, paikkojen merkitseminen kartalle ja blogin jakaminen ovat kaikki ilmaisia. Rekisteröitymiseen ei tarvita maksukorttia, eikä blogissasi ole mainoksia.',
+        a: 'Kyllä. Kuvien lisääminen, julkaiseminen ja jakaminen on maksutonta, eikä rekisteröitymiseen tarvita maksukorttia. Omille julkaisuillesi emme lisää mainoksia.',
       },
       {
         q: 'Voinko jakaa Lapin-blogini Instagramissa ja Facebookissa?',
-        a: 'Kyllä. Jokaisella blogilla on julkinen linkki, jonka voit jakaa missä tahansa, ja jokaisen merkinnän voi viedä Instagram-tarinan kokoisena kuvana, joten yhden päivän jakaminen onnistuu yhdellä napautuksella. Ystävät ja perhe voivat avata blogisi ilman omaa tiliä.',
+        a: 'Kyllä. Kun julkaiset kuvan, saat tarinakuvan, jossa lämpötila, paikka ja päivä ovat kuvan päällä. Puhelimella sen voi jakaa suoraan Instagramin tai Facebookin tarinaan, tietokoneella sen voi ladata. Jokaisella julkaisulla on myös oma linkki, jonka kaverit voivat avata ilman omaa tiliä.',
       },
       {
         q: 'Pitääkö minun olla Lapissa kirjoittaakseni blogia täällä?',
-        a: 'Ei. Teimme lapland.blogin Suomen Lappiin matkaaville, joten kartta ja kirjoitusvinkit on viritetty pohjoisen matkoihin, mutta kuka tahansa voi pitää täällä blogia, oletpa suunnittelemassa matkaa, kirjoittamassa sen aikana tai täydentämässä sitä kotiin palattuasi. Voit aloittaa ennen lähtöä ja lisätä merkintöjä päivä kerrallaan.',
+        a: 'Ei. Voit lisätä kuvat matkan aikana tai vasta kotona. Päivä luetaan kuvasta, ja lämpötila haetaan sen päivän ja paikan mukaan, kun paikka on Suomessa.',
       },
       {
         q: 'Mistä kannattaa kirjoittaa Lapin-matkapäiväkirjassa?',
-        a: 'Siitä, mitä et halua unohtaa. Missä yövyit, miltä revontulet näyttivät, kylmimmän aamun lämpötila, ruoka, joka yllätti, huskyajelu, metsän hiljaisuus. Lyhyet merkinnät, joissa on kuva ja paikkapinni, toimivat hyvin. Muutama rivi päivässä kasvaa blogiksi, jonka haluaa lukea uudelleen.',
+        a: 'Siitä, mitä et halua unohtaa: missä yövyit, miltä revontulet näyttivät, kylmimmän aamun lukema, ruoka joka yllätti. Yksi kuva ja yksi rivi riittää. Pidemmän tarinan voit kirjoittaa kuvan alle, jos haluat.',
       },
     ],
   },

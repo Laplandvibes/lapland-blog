@@ -378,7 +378,8 @@ export default function Post() {
           {/* Side column on the night ground: dark inks via theme-night. */}
           <aside className="theme-night hidden lg:flex lg:flex-col lg:gap-8 lg:sticky lg:top-24 lg:self-start">
             <TableOfContents blocks={post.content} textLang={textLang} />
-            <BannerAd partner="hotels" sid="post_sidebar_hotels" destination={post.location || 'Rovaniemi'} />
+            {/* A reader's own post carries no ads: the home FAQ promises it. */}
+            {!post.byReader && <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Rovaniemi" />}
           </aside>
         </div>
       </main>
