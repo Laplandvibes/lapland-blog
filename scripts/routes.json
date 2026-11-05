@@ -202,8 +202,8 @@
     "fallbackTitle": "Northern lights in Kemi: where to watch, light pollution and sea ice",
     "fallbackDescription": "Kemi's open sea lies to the south and west, while the aurora usually appears in the north. Where to watch, and why the sea ice can wait for daylight.",
     "fallbackTitleByLang": {
-      "fi": "Revontulet Kemissä: missä katsoa ja mitä Kp-luku tarkoittaa",
-      "sv": "Norrsken i Kemi: var du tittar och vad Kp-talet betyder",
+      "fi": "Revontulet Kemissä: mistä katsoa, valosaaste ja merijää",
+      "sv": "Norrsken i Kemi: var du tittar, ljusföroreningar och havsis",
       "de": "Nordlichter in Kemi: Orte, Lichtverschmutzung, Meereis (auf Englisch)",
       "es": "Auroras boreales en Kemi: dónde verlas, luz y hielo marino (en inglés)",
       "fr": "Aurores boréales à Kemi : où les voir, lumière, glace (en anglais)",
@@ -215,8 +215,8 @@
       "zh-CN": "凯米看极光：观测地点、光污染与海冰（英文）"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Kemi ligger söder om polcirkeln, så norrskenet kräver en starkare natt där än i Enare. Så läser du prognosen, väljer plats och klarar kylan.",
-      "fi": "Kemi on napapiirin eteläpuolella, joten revontulet vaativat siellä vahvemman yön kuin Inarissa. Näin luet ennustetta, valitset paikan ja kestät pakkasen.",
+      "sv": "I Kemi ligger det öppna havet i söder och väster, medan norrskenet oftast syns i norr. Var du tittar, och varför havsisen får vänta till dagsljus.",
+      "fi": "Kemissä avomeri on etelässä ja lännessä, revontulet tavallisesti pohjoisessa. Mistä katsoa ja miksi merijäälle mennään vasta valoisaan aikaan.",
       "de": "Kemis offenes Meer liegt im Süden und Westen, Nordlichter erscheinen meist im Norden. Wo man sie sieht und warum das Meereis auf den Tag warten kann.",
       "es": "El mar abierto de Kemi queda al sur y al oeste, la aurora suele salir al norte. Dónde verla y por qué el hielo marino puede esperar a la luz del día.",
       "fr": "La mer libre de Kemi est au sud et à l’ouest, l’aurore apparaît surtout au nord. Où l’observer, et pourquoi la glace de mer peut attendre le jour.",
@@ -236,8 +236,8 @@
     "fallbackTitle": "How to read an aurora forecast: Kp, solar wind, Bz and clouds",
     "fallbackDescription": "An aurora forecast has four parts: Kp days ahead, solar wind an hour ahead, magnetometers now, and the clouds. Where to find each and how to read it.",
     "fallbackTitleByLang": {
-      "fi": "Revontulisovellus ei näe pilviä: näin luet ennustetta oikein",
-      "sv": "Norrskensappen ser inga moln: så läser du prognosen rätt",
+      "fi": "Näin luet revontuliennustetta: Kp, aurinkotuuli, Bz ja pilvet",
+      "sv": "Så läser du en norrskensprognos: Kp, solvind, Bz och moln",
       "de": "Nordlicht-Vorhersage lesen: Kp, Sonnenwind, Bz, Wolken (auf Englisch)",
       "es": "Cómo leer el pronóstico de auroras: Kp, viento solar, Bz (en inglés)",
       "fr": "Lire une prévision d’aurores : Kp, vent solaire, Bz (en anglais)",
@@ -249,8 +249,8 @@
       "zh-CN": "怎样读极光预报：Kp、太阳风、Bz与云量（英文）"
     },
     "fallbackDescriptionByLang": {
-      "sv": "En norrskensapp larmar om Kp-talet, men moln och stadens ljus avgör om du ser något. Använd prognosen en gång om dagen och gå sedan ut.",
-      "fi": "Revontulisovellus hälyttää Kp-luvusta, mutta pilvet ja kaupungin valot ratkaisevat, näetkö mitään. Näin käytät ennustetta kerran päivässä ja menet sitten ulos.",
+      "sv": "En norrskensprognos har fyra delar: Kp dagar i förväg, solvinden en timme i förväg, magnetometrarna nu och molnen. Var du hittar dem och hur du läser dem.",
+      "fi": "Revontuliennusteessa on neljä osaa: Kp päiviä etukäteen, aurinkotuuli tuntia etukäteen, magnetometrit nyt ja pilvet. Mistä ne löytyvät ja miten niitä luetaan.",
       "de": "Vier Teile hat die Vorhersage: Kp Tage vorher, Sonnenwind eine Stunde vorher, Magnetometer jetzt und die Wolken. Wo man sie findet und wie man sie liest.",
       "es": "Un pronóstico de auroras tiene cuatro partes: Kp con días, viento solar con una hora, magnetómetros ahora y nubes. Dónde hallarlas y cómo leerlas.",
       "fr": "Une prévision d’aurores a quatre volets : Kp à plusieurs jours, vent solaire à une heure, magnétomètres en direct, nuages. Où les trouver et les lire.",
@@ -271,8 +271,8 @@
     "fallbackTitle": "Winter cabin in Lapland: heating, water, power and what to pack",
     "fallbackDescription": "A Lapland winter cabin can have every comfort or a wood stove and a well. What to check before booking, how to heat safely and what to pack.",
     "fallbackTitleByLang": {
-      "fi": "Mökkiviikko talvella: mitä pakata Lapin metsämökkiin",
-      "sv": "Vinterstugvecka: vad du packar för en skogsstuga i Lappland",
+      "fi": "Talvimökki Lapissa: lämmitys, vesi, sähkö ja pakkauslista",
+      "sv": "Vinterstuga i Lappland: värme, vatten, el och packlista",
       "de": "Winterhütte in Lappland: Heizung, Wasser, Strom, Gepäck (auf Englisch)",
       "es": "Cabaña de invierno en Laponia: calor, agua, luz y maleta (en inglés)",
       "fr": "Chalet d’hiver en Laponie : chauffage, eau, électricité (en anglais)",
@@ -284,8 +284,8 @@
       "zh-CN": "拉普兰冬季小屋：取暖、用水、用电与行李（英文）"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Vedspis, brunn och ingen täckning: en vecka i en vinterstuga nära Kemijärvi fungerar när väskan innehåller rätt saker. Vad du behöver och vad du glömmer.",
-      "fi": "Puuhella, kaivo ja ei kenttää: viikko talvimökissä Kemijärven takana onnistuu, kun kassissa on oikeat asiat. Lista siitä, mitä tarvitset ja mitä unohdat.",
+      "sv": "Vinterstugor i Lappland kan ha alla bekvämligheter eller bara vedspis och brunn. Så läser du beskrivningen, eldar säkert och packar rätt.",
+      "fi": "Lapin talvimökissä voi olla kaikki mukavuudet tai puulämmitys ja kaivo. Mitä tarkistaa ennen varausta, miten lämmittää turvallisesti ja mitä pakata.",
       "de": "Eine Winterhütte in Lappland hat allen Komfort oder nur Holzofen und Brunnen. Was vor dem Buchen zu prüfen ist, wie man sicher heizt, was man einpackt.",
       "es": "Una cabaña de invierno en Laponia puede tenerlo todo o solo estufa de leña y pozo. Qué revisar antes de reservar, cómo calentar sin riesgo y qué llevar.",
       "fr": "Un chalet d’hiver en Laponie offre tout le confort ou juste un poêle et un puits. Que vérifier avant de réserver, comment chauffer, que prendre.",
@@ -318,8 +318,8 @@
       "zh-CN": "罗瓦涅米的三文鱼汤：哪里喝、多少钱（英文）"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Tre restauranger i Rovaniemi serverar laxsoppa för 12–19 euro, och flera kända ställen har den inte alls. Priserna lästa på menyerna den 14 september 2026.",
-      "fi": "Kolme Rovaniemen ravintolaa tarjoaa lohikeittoa 12–19 eurolla, ja moni tunnettu paikka ei tarjoa sitä lainkaan. Hinnat luettu ruokalistoilta 14.9.2026.",
+      "sv": "Fyra restauranger i Rovaniemi har laxsoppa på sina egna menyer, för 14–24,20 euro. Priserna lästa den 5 november 2026.",
+      "fi": "Neljän rovaniemeläisen ravintolan listalla on lohikeitto, ja annos maksaa 14–24,20 euroa. Hinnat on luettu 5.11.2026.",
       "de": "Vier Restaurants in Rovaniemi führen Lachssuppe auf der eigenen Karte, für 14 bis 24,20 Euro. Preise vom 5. November 2026.",
       "es": "Cuatro restaurantes de Rovaniemi ofrecen sopa de salmón en su propia carta, de 14 a 24,20 euros. Precios consultados el 5 de noviembre de 2026.",
       "fr": "Quatre restaurants de Rovaniemi proposent la soupe de saumon à leur propre carte, de 14 à 24,20 euros. Prix relevés le 5 novembre 2026.",
@@ -340,8 +340,8 @@
     "fallbackTitle": "Polar night in Rovaniemi: how dark it really gets and what helps",
     "fallbackDescription": "In Rovaniemi the sun rises every day, even in December, if only for about two hours. How dark the polar night gets, and what helps you through it.",
     "fallbackTitleByLang": {
-      "fi": "Kaamos Rovaniemellä: mitä pimeä oikeasti on ja mikä auttaa",
-      "sv": "Polarnatt i Rovaniemi: vad mörkret är och vad som hjälper",
+      "fi": "Kaamos Rovaniemellä: kuinka pimeää on ja mikä auttaa",
+      "sv": "Polarnatt i Rovaniemi: hur mörkt det blir och vad som hjälper",
       "de": "Polarnacht in Rovaniemi: wie dunkel und was hilft (auf Englisch)",
       "es": "Noche polar en Rovaniemi: cuánta oscuridad y qué ayuda (en inglés)",
       "fr": "Nuit polaire à Rovaniemi : obscurité et remèdes (en anglais)",
@@ -353,8 +353,8 @@
       "zh-CN": "罗瓦涅米的极夜：到底有多黑，怎么熬过去（英文）"
     },
     "fallbackDescriptionByLang": {
-      "sv": "I Rovaniemi är polarnatten inte totalt mörker utan veckor av blå skymning. Vad den gör med kroppen, och fyra vanor som bär dig från november till februari.",
-      "fi": "Rovaniemellä kaamos ei ole täyttä pimeää vaan viikkoja sinistä hämärää. Mitä se tekee keholle, ja neljä keinoa, jotka kantavat marraskuusta helmikuuhun.",
+      "sv": "I Rovaniemi går solen upp varje dag, även i december, om än bara i ett par timmar. Hur mörk polarnatten blir och vad som hjälper dig igenom den.",
+      "fi": "Rovaniemellä aurinko nousee joka päivä, joulukuussakin parin tunnin ajaksi. Kuinka pimeää kaamosaika on ja mikä auttaa sen yli.",
       "de": "In Rovaniemi geht die Sonne jeden Tag auf, auch im Dezember, wenn auch nur etwa zwei Stunden. Wie dunkel die Polarnacht wird und was hilft.",
       "es": "En Rovaniemi el sol sale todos los días, incluso en diciembre, aunque solo unas dos horas. Cuánta oscuridad trae la noche polar y qué ayuda.",
       "fr": "À Rovaniemi, le soleil se lève chaque jour, même en décembre, ne serait-ce que deux heures environ. Quelle obscurité en nuit polaire, et ce qui aide.",
@@ -374,7 +374,7 @@
     "fallbackTitle": "Sodankylä's midnight sun: when it shines and how to sleep",
     "fallbackDescription": "In Sodankylä the sun stays above the horizon from the end of May to mid-July. When the midnight sun shines, how low the sun gets and how to sleep.",
     "fallbackTitleByLang": {
-      "fi": "Yötön yö Sodankylässä: kun aurinko ei laske ja miten nukut",
+      "fi": "Yötön yö Sodankylässä: milloin aurinko ei laske ja miten saat unta",
       "sv": "Midnattssol i Sodankylä: när den lyser och hur du sover",
       "de": "Mitternachtssonne in Sodankylä: Zeit und Schlaftipps (auf Englisch)",
       "es": "Sol de medianoche en Sodankylä: cuándo y cómo dormir (en inglés)",
@@ -387,8 +387,8 @@
       "zh-CN": "索丹屈莱的午夜太阳：时间与睡眠妙招（英文）"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Sodankylässä aurinko pysyy horisontin yllä toukokuun lopusta heinäkuun puoliväliin. Näin valo käyttäytyy, mihin aikaan se on kaunein ja miten saat nukuttua.",
-      "sv": "I Sodankylä stannar solen ovanför horisonten från slutet av maj till mitten av juli. Så beter sig ljuset, när det är som vackrast och hur du faktiskt får sova.",
+      "fi": "Sodankylässä aurinko pysyy horisontin yllä toukokuun lopusta heinäkuun puoliväliin. Milloin yötön yö on, kuinka matalalla aurinko käy ja miten saat unta.",
+      "sv": "I Sodankylä stannar solen över horisonten från slutet av maj till mitten av juli. När midnattssolen lyser, hur lågt solen går och hur du sover.",
       "de": "In Sodankylä bleibt die Sonne von Ende Mai bis Mitte Juli über dem Horizont. Wann die Mitternachtssonne scheint, wie tief sie steht und wie man schläft.",
       "es": "En Sodankylä el sol permanece sobre el horizonte desde finales de mayo hasta mediados de julio. Cuándo brilla, qué tan baja llega y cómo dormir.",
       "fr": "À Sodankylä, le soleil reste au-dessus de l’horizon de fin mai à mi-juillet. Quand brille le soleil de minuit, à quelle hauteur, et comment dormir.",
@@ -408,8 +408,8 @@
     "fallbackTitle": "Night hiking at Kiilopää in July: trails, light and safety",
     "fallbackDescription": "In July the night stays light at Kiilopää. Marked trails of 1 to 14 km start at the Kiilopää gate. How to plan a safe night hike there.",
     "fallbackTitleByLang": {
-      "fi": "Yövaellus Kiilopäällä: heinäkuussa lähdetään keskiyöllä",
-      "sv": "Nattvandring på Kiilopää: i juli startar du vid midnatt",
+      "fi": "Yövaellus Kiilopäällä heinäkuussa: reitit, valo ja turvallisuus",
+      "sv": "Nattvandring på Kiilopää i juli: leder, ljus och säkerhet",
       "de": "Nachtwanderung am Kiilopää im Juli: Wege, Sicherheit (auf Englisch)",
       "es": "Caminata nocturna en Kiilopää en julio: rutas, seguridad (en inglés)",
       "fr": "Randonnée de nuit à Kiilopää en juillet : sentiers (en anglais)",
@@ -421,8 +421,8 @@
       "zh-CN": "7月基洛帕夜间徒步：步道、光线与安全（英文）"
     },
     "fallbackDescriptionByLang": {
-      "sv": "I juli är det klokast att vandra på Kiilopääs fjäll om natten: lågt gyllene ljus, sval luft, och myggen stannar nere i björkskogen. Så gör du en nattvandring.",
-      "fi": "Heinäkuussa Kiilopään tunturissa on viisainta vaeltaa yöllä: valo on matalaa ja kultaista, ilma viileää ja hyttyset jäävät koivikkoon. Näin yövaellus tehdään.",
+      "sv": "I juli förblir natten ljus på Kiilopää. Märkta leder på 1–14 km börjar vid Kiilopääs startport. Så planerar du en säker nattvandring.",
+      "fi": "Heinäkuussa yö pysyy Kiilopäällä valoisana. Lähtöportilta alkaa 1–14 kilometrin merkittyjä reittejä. Näin suunnittelet turvallisen yövaelluksen.",
       "de": "Im Juli bleibt die Nacht am Kiilopää hell. Markierte Wege von 1 bis 14 km beginnen am Ausgangspunkt Kiilopää. So plant man eine sichere Nachtwanderung.",
       "es": "En julio la noche sigue clara en Kiilopää. Senderos marcados de 1 a 14 km parten del inicio de Kiilopää. Cómo planear una caminata nocturna segura.",
       "fr": "En juillet, la nuit reste claire à Kiilopää. Des sentiers balisés de 1 à 14 km partent du départ de Kiilopää. Comment préparer une randonnée de nuit sûre.",
@@ -443,8 +443,8 @@
     "fallbackTitle": "Rovaniemi market square in summer: where it is and what is in season",
     "fallbackDescription": "The Rovaniemi market square is at Lapinkävijäntie 7 in the city centre. What is in season in July, and where to check the summer events.",
     "fallbackTitleByLang": {
-      "fi": "Rovaniemen tori kesällä: mansikat, uudet perunat ja muikut",
-      "sv": "Rovaniemi torg på sommaren: jordgubbar, potatis, siklöja",
+      "fi": "Rovaniemen kauppatori kesällä: missä se on ja mitä on sesongissa",
+      "sv": "Rovaniemi salutorg på sommaren: var det ligger och vad som är i säsong",
       "de": "Marktplatz Rovaniemi im Sommer: Lage und Saisonware (auf Englisch)",
       "es": "Mercado de Rovaniemi en verano: ubicación y temporada (en inglés)",
       "fr": "Marché de Rovaniemi en été : adresse et saison (en anglais)",
@@ -456,8 +456,8 @@
       "zh-CN": "罗瓦涅米夏季集市广场：位置与当季食材（英文）"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Suomalaiset mansikat tulevat Rovaniemen torille heinäkuun alussa. Näin tori toimii: milloin mennä, mitä ostaa ja miten uudet perunat ja muikut syödään.",
-      "sv": "De finska jordgubbarna når Rovaniemi torg i början av juli. Så fungerar torget: när du ska gå, vad du ska köpa och hur färskpotatis och stekt siklöja äts.",
+      "fi": "Rovaniemen kauppatori on keskustassa Lapinkävijäntiellä. Mitä heinäkuussa on sesongissa ja mistä tarkistat kesän tapahtumat ennen lähtöä.",
+      "sv": "Rovaniemi salutorg ligger vid Lapinkävijäntie 7. Så fungerar torget, vad som är i säsong i juli och var du hittar sommarens evenemang.",
       "de": "Der Marktplatz von Rovaniemi liegt in der Lapinkävijäntie 7 im Stadtzentrum. Was im Juli Saison hat und wo man die Sommerveranstaltungen prüft.",
       "es": "La plaza del mercado de Rovaniemi está en Lapinkävijäntie 7, en el centro. Qué hay de temporada en julio y dónde consultar los eventos de verano.",
       "fr": "La place du marché de Rovaniemi se trouve au 7 Lapinkävijäntie, en centre-ville. Ce qui est de saison en juillet et où voir les événements d’été.",
@@ -477,8 +477,8 @@
     "fallbackTitle": "Wood-fired sauna at a Lapland cabin: how to heat it, step by step",
     "fallbackDescription": "How to light and tend a wood-burning sauna stove, when to close the damper and how to cool off in the lake safely, based on Finnish safety advice.",
     "fallbackTitleByLang": {
-      "fi": "Lapin rantasauna: näin puukiuas lämmitetään oikein",
-      "sv": "Strandbastu i Lappland: så eldar du bastun rätt",
+      "fi": "Mökin puusauna Lapissa: näin lämmität puukiukaan",
+      "sv": "Vedeldad bastu i stugan: så eldar du bastuugnen steg för steg",
       "de": "Holzsauna in Lappland: Ofen Schritt für Schritt heizen (auf Englisch)",
       "es": "Sauna de leña en Laponia: cómo calentarla paso a paso (en inglés)",
       "fr": "Sauna au bois en Laponie : la chauffer pas à pas (en anglais)",
@@ -490,8 +490,8 @@
       "zh-CN": "拉普兰柴火桑拿：一步步烧热的方法（英文）"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Puukiuas lämpiää kahdessa tunnissa, ja siinä ajassa ehtii klapit, vastan ja laiturin. Näin mökkivieras lämmittää Lapin rantasaunan ensimmäistä kertaa.",
-      "sv": "En vedeldad bastu tar två timmar att värma, och det är precis den tid som går åt till veden, kvasten och bryggan. Så eldar en stuggäst en lappländsk sjöbastu.",
+      "fi": "Näin puukiuas sytytetään ja lämmitetään, milloin pellin saa sulkea ja miten järveen mennään turvallisesti. Ohjeet pelastustoimelta ja kiuasvalmistajalta.",
+      "sv": "Så tänder och eldar du en vedeldad bastuugn, när spjället får stängas och hur du badar säkert, enligt räddningsväsendets och tillverkarens råd.",
       "de": "So zündet und pflegt man einen Holzsaunaofen, wann die Ofenklappe schließt und wie man sicher im See abkühlt, nach finnischen Sicherheitshinweisen.",
       "es": "Cómo encender y mantener una estufa de sauna de leña, cuándo cerrar el regulador y cómo enfriarse con seguridad en el lago, según consejos finlandeses.",
       "fr": "Allumer et entretenir un poêle de sauna à bois, quand fermer le registre et comment se rafraîchir sans risque dans le lac, selon les conseils finlandais.",
@@ -512,8 +512,8 @@
     "fallbackTitle": "Packing for Lapland in July: a checklist and the reasons behind it",
     "fallbackDescription": "July in Lapland brings warm afternoons, cool nights and rain on about half the days. A checklist built on weather statistics and park advice.",
     "fallbackTitleByLang": {
-      "fi": "Heinäkuun pakkauslista Lappiin: mitä oikeasti tarvitset",
-      "sv": "Packlista för Lappland i juli: det du faktiskt behöver",
+      "fi": "Heinäkuun pakkauslista Lappiin: mitä otat mukaan ja miksi",
+      "sv": "Packlista för Lappland i juli: vad du tar med och varför",
       "de": "Lappland im Juli: Packliste und die Gründe dahinter (auf Englisch)",
       "es": "Laponia en julio: qué llevar en la maleta y por qué (en inglés)",
       "fr": "Laponie en juillet : liste de bagages et raisons (en anglais)",
@@ -525,8 +525,8 @@
       "zh-CN": "7月拉普兰行李清单：附上理由（英文）"
     },
     "fallbackDescriptionByLang": {
-      "sv": "Samma julidag kan bjuda på värmebölja på eftermiddagen och blåst och kyla på fjället om natten. Så packar du tio dagar i en väska utan onödig vikt.",
-      "fi": "Sama heinäkuun päivä voi olla iltapäivällä hellettä ja yöllä tunturissa tuulinen ja kylmä. Näin pakkaat kymmeneksi päiväksi yhteen kassiin ilman turhaa painoa.",
+      "sv": "Juli i Lappland bjuder på varma eftermiddagar, svala nätter och regn ungefär varannan dag. En packlista byggd på väderstatistik och Forststyrelsens råd.",
+      "fi": "Lapin heinäkuussa on lämpimiä iltapäiviä, viileitä öitä ja sadetta noin joka toinen päivä. Lista perustuu säätilastoihin ja Metsähallituksen ohjeisiin.",
       "de": "Der Juli in Lappland bringt warme Nachmittage, kühle Nächte und an etwa jedem zweiten Tag Regen. Eine Packliste nach Wetterstatistik und Parkempfehlungen.",
       "es": "Julio en Laponia trae tardes cálidas, noches frescas y lluvia en la mitad de los días. Una lista basada en estadísticas del tiempo y consejos de parques.",
       "fr": "En Laponie, juillet apporte des après-midi chauds, des nuits fraîches et de la pluie un jour sur deux. Une liste fondée sur la météo et les parcs.",
@@ -546,8 +546,8 @@
     "fallbackTitle": "154 Finnish rest areas lose maintenance or firewood: the Lapland list",
     "fallbackDescription": "Metsähallitus ended maintenance or firewood at 154 rest areas across Finland in 2026. The Lapland sites, and what is planned for 2027.",
     "fallbackTitleByLang": {
-      "fi": "154 taukopaikkaa jää ilman polttopuita ensi talvena",
-      "sv": "154 rastplatser blir utan ved nästa vinter",
+      "fi": "154 taukopaikkaa jäi ilman huoltoa tai polttopuita: Lapin kohteet",
+      "sv": "154 rastplatser i Finland utan underhåll eller ved: listan för Lappland",
       "de": "154 Rastplätze ohne Wartung oder Holz: Lappland (auf Englisch)",
       "es": "154 áreas de descanso sin leña: la lista de Laponia (en inglés)",
       "fr": "154 aires de repos sans bois en Finlande : Laponie (en anglais)",
@@ -559,8 +559,8 @@
       "zh-CN": "芬兰154处休息点停止维护或供柴：拉普兰名单（英文）"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Metsähallitus lopettaa polttopuu- ja käymälähuollon 154 taukopaikalla. Mitä se merkitsee retkeilijälle ja mitkä Lapin kohteet ovat listalla.",
-      "sv": "Forststyrelsen slutar med ved- och toalettservice på 154 rastplatser. Vad det betyder för vandraren och vilka platser i Lappland som finns på listan.",
+      "fi": "Metsähallitus lopetti vuonna 2026 huollon tai polttopuuhuollon 154 taukopaikalla eri puolilla Suomea. Lapin kohteet ja mitä on tulossa vuonna 2027.",
+      "sv": "Forststyrelsen drog 2026 in underhållet eller vedservicen vid 154 rastplatser i landet. Här är platserna i Lappland och planerna för 2027.",
       "de": "Metsähallitus hat 2026 an 154 Rastplätzen in ganz Finnland Wartung oder Brennholz eingestellt. Die Orte in Lappland und was für 2027 geplant ist.",
       "es": "Metsähallitus puso fin en 2026 al mantenimiento o a la leña en 154 áreas de descanso de toda Finlandia. Los sitios de Laponia y lo previsto para 2027.",
       "fr": "En 2026, Metsähallitus a arrêté l’entretien ou le bois dans 154 aires de repos de Finlande. Les sites de Laponie et ce qui est prévu pour 2027.",
@@ -581,8 +581,8 @@
     "fallbackTitle": "Seven and a half minutes a day: how fast autumn daylight fades in Lapland",
     "fallbackDescription": "In late August Rovaniemi loses about 7.5 minutes of daylight a day and Utsjoki nearly 9. The numbers, the reason and how to plan around them.",
     "fallbackTitleByLang": {
-      "fi": "Seitsemän ja puoli minuuttia päivässä",
-      "sv": "Sju och en halv minut om dagen",
+      "fi": "Seitsemän ja puoli minuuttia päivässä: näin nopeasti päivä lyhenee Lapin syksyllä",
+      "sv": "Sju och en halv minut om dagen: så snabbt krymper dagsljuset i Lapplands höst",
       "de": "Siebeneinhalb Minuten am Tag: Lappland verliert Licht (auf Englisch)",
       "es": "Siete minutos y medio al día: Laponia pierde la luz (en inglés)",
       "fr": "Sept minutes et demie par jour : la Laponie perd le jour (en anglais)",
@@ -594,8 +594,8 @@
       "zh-CN": "每天七分半钟：拉普兰秋季日照缩短的速度（英文）"
     },
     "fallbackDescriptionByLang": {
-      "fi": "Kesän valon loppua ei kukaan ilmoita. Se vain vähenee, Rovaniemellä seitsemän ja puoli minuuttia päivässä ja Utsjoella yhdeksän, kunnes eräänä elokuun lopun iltana et enää näe polkua puuvajalle.",
-      "sv": "Ingen meddelar när sommarljuset tar slut. Det bara försvinner, sju och en halv minut om dagen i Rovaniemi och nio i Utsjoki, tills du en kväll i slutet av augusti inte längre ser stigen till vedboden.",
+      "fi": "Elokuun lopussa päivä lyhenee Rovaniemellä noin 7,5 minuuttia ja Utsjoella lähes 9 minuuttia vuorokaudessa. Luvut, syy ja vinkit syksyn suunnitteluun.",
+      "sv": "I slutet av augusti blir dagen i Rovaniemi cirka 7,5 minuter kortare per dygn och i Utsjoki nästan 9. Siffrorna, orsaken och hur du planerar efter dem.",
       "de": "Ende August verliert Rovaniemi etwa 7,5 Minuten Tageslicht pro Tag, Utsjoki fast 9. Die Zahlen, der Grund und wie man danach plant.",
       "es": "A finales de agosto Rovaniemi pierde unos 7,5 minutos de luz diurna al día y Utsjoki casi 9. Las cifras, el motivo y cómo planificar el viaje.",
       "fr": "Fin août, Rovaniemi perd environ 7,5 minutes de lumière du jour par jour et Utsjoki près de 9. Les chiffres, la cause et comment s’organiser.",
