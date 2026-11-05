@@ -492,6 +492,7 @@ const es: SectionCopy = {
     },
   },
   post: {
+    tempSource: 'Temperatura: Instituto Meteorológico Finlandés',
     allStories: 'Todas las historias',
     by: 'Por',
     minRead: 'min de lectura',

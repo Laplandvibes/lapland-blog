@@ -494,6 +494,7 @@ const de: SectionCopy = {
     },
   },
   post: {
+    tempSource: 'Temperatur: Finnisches Meteorologisches Institut',
     allStories: 'Alle Geschichten',
     by: 'Von',
     minRead: 'Min. Lesezeit',

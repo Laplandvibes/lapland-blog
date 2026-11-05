@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useEffect, useMemo } from 'react';
-import { ArrowLeft, Clock, Calendar, PenLine } from 'lucide-react';
+import { Clock, Calendar, MapPin, Thermometer } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Nav from '../components/Nav';
@@ -12,7 +12,6 @@ import AuthorBio from '../components/AuthorBio';
 import PostCard from '../components/PostCard';
 import PhotoCredits from '../components/PhotoCredits';
 import { wideSrcSet } from '../data/photoCredits';
-import Reveal from '../components/Reveal';
 import ShareBar from '../components/ShareBar';
 import { ShareButton } from '../shared/ShareBar/ShareBar';
 import BannerAd from '../components/BannerAd';
@@ -55,6 +54,18 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
     case 'divider':
       return <hr />;
     case 'list':
+      if (block.check) {
+        return (
+          <ul className="check-list">
+            {block.items.map((item, i) => (
+              <li key={i}>
+                <span aria-hidden="true" className="check-box" />
+                <span><ReactMarkdown remarkPlugins={[remarkGfm]} components={{ p: ({ children }) => <>{children}</> }}>{item}</ReactMarkdown></span>
+              </li>
+            ))}
+          </ul>
+        );
+      }
       if (block.ordered) {
         return (
           <ol>
@@ -221,258 +232,174 @@ export default function Post() {
   // välistyksellä se arvioi 0,954–0,990 mitatusta (8 otsikkoa 23.10.), joten × 1,08 pitää arvion aina yläkanttiin.
   const h1Em = ilmanValeja(textLang ?? lang) ? null : kahdenRivinEm(post.title);
 
+  // Byline: a reader's own post shows their name and links to their trip page;
+  // editorial posts keep the editorial pen.
+  const bylineName = post.byReader ? post.readerName ?? voice.name : voice.name;
+  const bylineTo = post.byReader && post.readerHandle ? to(`/by/${post.readerHandle}`) : to('/about');
+  const initials = post.byReader
+    ? (bylineName || '?').trim().split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase()
+    : voice.initials;
+
   return (
     <div className="min-h-screen bg-night text-snow">
       <Nav />
       <ReadingProgress />
 
       {/* ================================================================
-          HERO — full-bleed image, centred title plate, refined crop.
-          A modern long-read masthead: the image breathes full width, the
-          title sits on a cream plate that overlaps it, with a soft top scrim
-          so the eyebrow + back-link stay legible on any photo.
+          HERO (Vesa 2026-11-05: "layout aivan kamala"). The photo is shown
+          whole: on a computer the title sits on its lower edge over a
+          gradient under the text only; on phones and tablets the photo is
+          clean and the title comes below it (network rule 2026-10-03).
           ================================================================ */}
-      <header className="relative pt-16">
-        <div className="relative h-[64vh] min-h-[440px] max-h-[720px] overflow-hidden bg-night-light">
+      <header className="relative pt-16 lg:h-[min(76vh,720px)] lg:min-h-[480px]">
+        <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:absolute lg:inset-0 lg:top-16 overflow-hidden bg-night-light">
           <img
             src={post.heroImage}
             srcSet={wideSrcSet(post.heroImage)}
             sizes="100vw"
             alt={post.heroAlt}
             lang={textLang}
-            className="absolute inset-0 w-full h-full object-cover object-[50%_42%]"
+            className="absolute inset-0 w-full h-full object-cover object-[50%_45%]"
             fetchPriority="high"
             decoding="async"
           />
-          {/* Top scrim for the floating back-link; bottom fade into the plate. */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/35" />
-
-          <div className="absolute top-0 inset-x-0 px-4 sm:px-6 lg:px-8 pt-5">
-            <div className="max-w-[72rem] mx-auto">
+        </div>
+        <div className="relative px-4 sm:px-6 lg:px-8 pt-7 lg:pt-40 lg:pb-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:bg-gradient-to-t lg:from-night/92 lg:via-night/60 lg:to-transparent">
+          <div className="max-w-[72rem] mx-auto text-center lg:text-left">
+            {catName && cat && (
               <Link
-                to={to('/stories')}
-                className="lv-tap inline-flex items-center gap-1.5 text-white/90 hover:text-white text-xs uppercase tracking-[0.25em] font-semibold transition-colors hero-text-shadow-sm"
+                to={to(`/category/${cat.slug}`)}
+                className="lv-tap inline-flex text-pink-300 font-semibold hover:text-snow transition-colors mb-3"
               >
-                <ArrowLeft size={14} /> {c.allStories}
+                {catName}
               </Link>
+            )}
+            <div className="@container">
+              <h1
+                lang={textLang}
+                className={`text-snow leading-[1.06] tracking-[-0.015em] text-[clamp(2rem,6vw,3.6rem)] lg:max-w-[52rem] text-balance lg:[text-shadow:0_2px_18px_rgba(15,23,42,0.55)]${h1Em ? ' lg:[--h1-max:3.6rem] lg:[font-size:min(var(--h1-max),calc(min(100cqi,52rem)/var(--h1-em)))]' : ''}`}
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800, ...(h1Em ? { ['--h1-em' as string]: (h1Em * 1.08).toFixed(2) } : {}) }}
+              >
+                {post.title}
+              </h1>
             </div>
           </div>
         </div>
-
       </header>
 
+      {/* Byline, place, temperature and the share button, on the night ground. */}
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[72rem] mx-auto py-6 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-3 text-[15px] text-slate-300">
+          <Link to={bylineTo} className="inline-flex items-center gap-2.5 hover:text-snow transition-colors">
+            <span className="w-10 h-10 rounded-full bg-pink-cta text-white flex items-center justify-center text-xs font-bold" aria-hidden="true">
+              {initials}
+            </span>
+            <span className="font-semibold text-snow">{bylineName}</span>
+          </Link>
+          <span className="inline-flex items-center gap-1.5">
+            <Calendar size={15} />
+            <time dateTime={post.visitDate ?? post.publishedAt}>{formatPostDate(post.visitDate ?? post.publishedAt, lang)}</time>
+          </span>
+          {post.location && (
+            <span className="inline-flex items-center gap-1.5" lang={textLang}>
+              <MapPin size={15} /> {post.location}
+            </span>
+          )}
+          {post.weatherNote && (
+            <span className="inline-flex items-center gap-1.5" title={c.tempSource}>
+              <Thermometer size={15} /> {post.weatherNote}
+            </span>
+          )}
+          {!post.byReader && (
+            <span className="inline-flex items-center gap-1.5">
+              <Clock size={15} />
+              {post.readTimeMinutes} {c.minRead}
+            </span>
+          )}
+          <ShareButton lang={lang} title={post.title} excerpt={post.excerpt} tone="dark" className="lg:ml-auto" />
+        </div>
+      </div>
+
       {/* ================================================================
-          LUKUARKKI — otsikko ja runko yhdellä lumen värisellä arkilla, joka
-          kelluu yön päällä ja limittyy heroon. Sivupalsta (sisällys + mainos)
-          jää arkin ULKOPUOLELLE tummana, kuten hubin blogissa.
+          READING SHEET + side column. One left edge for every text element
+          inside the sheet (index.css .prose-editorial); figures may run to
+          the sheet's edges. The side column (contents, ad) sits on the
+          night ground beside it from 1024 px up.
           ================================================================ */}
-      <main className="relative px-4 sm:px-6 lg:px-8 pb-24 -mt-28 md:-mt-36">
-        <div className="max-w-[72rem] mx-auto xl:grid xl:grid-cols-[minmax(0,1fr)_256px] xl:gap-10 xl:items-start">
-          {/* data-theme = kirjoittajan valinta (4 valmista, kontrastit mitattu).
-              Puuttuva tai tuntematon arvo putoaa yöhön normalizeThemessa. */}
+      <main className="px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="max-w-[72rem] mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-10 lg:items-start">
           <article
             data-theme={post.theme ?? 'yo'}
-            className="theme-editorial lv-paper rounded-[1.5rem] px-5 py-9 sm:px-8 md:px-12 md:py-14"
+            className="theme-editorial lv-paper rounded-[1.5rem] px-5 py-8 sm:px-10 sm:py-11 lg:px-14 lg:py-12"
           >
-
-              {cat && (
-                <Link
-                  to={to(`/category/${cat.slug}`)}
-                  className="lv-tap inline-flex items-center gap-2 text-[var(--color-accent)] text-[11px] uppercase tracking-[0.32em] font-bold mb-5 hover:text-[var(--color-accent-dark)] transition-colors"
-                >
-                  <span className="w-6 h-px bg-[var(--color-accent)]/50" />
-                  {catName} · <span lang={textLang}>{post.kicker}</span>
-                </Link>
-              )}
-
-              {/* @container: 100cqi = arkin sisältöleveys. */}
-              <div className="@container">
-                <h1
-                  lang={textLang}
-                  className={`text-[var(--color-ink)] leading-[1.06] tracking-[-0.015em] text-[clamp(2.1rem,5.5vw,3.75rem)]${h1Em ? ' lg:[--h1-max:clamp(2.1rem,5.5vw,3.75rem)] lg:[font-size:min(var(--h1-max),calc(100cqi/var(--h1-em)))]' : ''}`}
-                  style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800, ...(h1Em ? { ['--h1-em' as string]: (h1Em * 1.08).toFixed(2) } : {}) }}
-                >
-                  {post.title}
-                </h1>
-              </div>
-
-              <p lang={textLang} className="mt-6 text-[var(--color-ink-soft)] text-lg md:text-[1.3rem] leading-relaxed">
+            {post.excerpt && (
+              <p lang={textLang} className="text-[var(--color-ink-soft)] text-lg md:text-[1.3rem] leading-relaxed max-w-[38rem] mb-2">
                 {post.excerpt}
               </p>
+            )}
 
-              <div className="mt-8 pt-6 border-t border-[var(--color-paper-border)] flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-[var(--color-ink-mute)]">
-                <span className="inline-flex items-center gap-2.5">
-                  <span
-                    className="w-9 h-9 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-[11px] font-bold"
-                    aria-hidden="true"
-                  >
-                    {voice.initials}
-                  </span>
-                  <span>
-                    {c.by}{' '}
-                    <Link
-                      to={to('/about')}
-                      className="text-[var(--color-ink)] font-semibold hover:text-[var(--color-accent)] transition-colors"
-                    >
-                      {voice.name}
-                    </Link>
-                    {voice.id !== vesa.id && (
-                      <span className="text-[var(--color-ink-mute)]"> · The Field Journal</span>
-                    )}
-                  </span>
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Calendar size={14} />
-                  <time dateTime={post.publishedAt}>{formatPostDate(post.publishedAt, lang)}</time>
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Clock size={14} />
-                  {post.readTimeMinutes} {c.minRead}
-                </span>
-              </div>
-              {/* Jaa-nappi tekijärivin alle omalle rivilleen (Vesa 24.10.2026). Jutun lopun jakorivi on
-                  blogin oma ShareBar (hashtagit mukana). Kaamos-teema on ainoa tumma arkki. */}
-              <ShareButton
-                lang={lang}
-                title={post.title}
-                excerpt={post.excerpt}
-                tone={post.theme === 'kaamos' ? 'dark' : 'light'}
-                className="mt-5"
-              />
-
-          {/* Kuka tämän kirjoitti — toimitus vai lukija?
-              🔴 Vesa 16.9.2026: laatikko lupasi "lähteet lopussa" (mitattu:
-              lähdeosio 0/11 jutussa) ja myi oman blogin aloittamista keskellä
-              artikkelia. Lisäksi sillä ei ollut ehtoa, joten lukijan omassa
-              matkablogissa olisi lukenut "LaplandVibesin toimitus". Laatikko
-              kertoo nyt vain sen mitä se voi pitää: kumman juttu tämä on. */}
-          <div className="max-w-[65ch] mx-auto mb-10 flex items-start gap-3 rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-5 py-4">
-            <PenLine size={16} className="text-[var(--color-accent)] shrink-0 mt-0.5" />
-            <p className="text-[var(--color-ink-soft)] text-[0.9rem] leading-relaxed">
-              <span className="font-semibold text-[var(--color-ink)]">
-                {post.byReader ? c.readerLabel : c.editorialLabel}.
-              </span>{' '}
-              {post.byReader ? c.readerNote : c.editorialNote}
-            </p>
-          </div>
-
-            <div id="post-body" lang={textLang} className="prose-editorial mt-10">
+            <div id="post-body" lang={textLang} className="prose-editorial mt-8">
               {post.content.map((block, i) => (
                 <Block key={i} block={block} index={i} sourcesLabel={c.sourcesLabel} />
               ))}
             </div>
+            {post.weatherNote && <p className="mt-8 text-sm text-[var(--color-ink-mute)]">{c.tempSource}</p>}
 
-          <HighlightShare
-            containerSelector="#post-body"
-            url={canonicalUrl(`/post/${post.slug}`)}
-            slug={post.slug}
-          />
+            <HighlightShare containerSelector="#post-body" url={canonicalUrl(`/post/${post.slug}`)} slug={post.slug} />
 
-          {/* Auto-generated hashtags — always visible */}
-          {hashtags.length > 0 && (
-            <div className="max-w-[65ch] mx-auto mt-14 pt-8 border-t border-[var(--color-paper-border)]">
-              <div className="flex flex-wrap gap-2">
-                {hashtags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1.5 rounded-full text-xs font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/8 border border-[var(--color-accent)]/20 transition-colors hover:bg-[var(--color-accent)]/15"
-                  >
-                    #{tag}
-                  </span>
-                ))}
+            {/* Network cards, chosen from the post's category + tags, labels from COPY */}
+            {crossSiteLinks.length > 0 && (
+              <div className="mt-12 rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] p-6">
+                <p className="font-semibold text-[var(--color-ink)] mb-4">{c.exploreMore}</p>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {crossSiteLinks.map((link) => (
+                    <a
+                      key={link.key}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col gap-1.5 rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream)] p-4 hover:border-[var(--color-accent)] hover:shadow-sm transition-all"
+                    >
+                      <span className="text-sm font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors">
+                        {c.networkCards[link.key].label}
+                      </span>
+                      <span className="text-sm text-[var(--color-ink-mute)] leading-snug">{c.networkCards[link.key].blurb}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Network cards — chosen from the post's category + tags, labels from COPY */}
-          {crossSiteLinks.length > 0 && (
-            <div className="max-w-[65ch] mx-auto mt-10 rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] p-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold mb-4">
-                {c.exploreMore}
-              </p>
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {crossSiteLinks.map((link) => (
-                  <a
-                    key={link.key}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex flex-col gap-1.5 rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream)] p-4 hover:border-[var(--color-accent)] hover:shadow-sm transition-all"
-                  >
-                    <span className="text-sm font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors">
-                      {c.networkCards[link.key].label}
-                    </span>
-                    <span className="text-xs text-[var(--color-ink-mute)] leading-snug">
-                      {c.networkCards[link.key].blurb}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
+            <ShareBar slug={post.slug} title={post.title} excerpt={post.excerpt} hashtags={hashtagString} />
 
-          <ShareBar slug={post.slug} title={post.title} excerpt={post.excerpt} hashtags={hashtagString} />
-
-          {/* Tags row */}
-          {post.tags.length > 0 && (
-            <div className="max-w-[65ch] mx-auto mt-14 pt-8 border-t border-[var(--color-paper-border)]">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-3 font-semibold">
-                {c.tagged}
-              </p>
-              <div lang={textLang} className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 rounded-full text-xs text-[var(--color-ink-soft)] bg-[var(--color-cream-deep)] border border-[var(--color-paper-border)]"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <AuthorBio variant="editorial" author={post.author} />
+            {!post.byReader && <AuthorBio variant="editorial" author={post.author} />}
           </article>
 
-          {/* Sivupalsta on arkin ULKOPUOLELLA yon paalla, joten se tarvitsee
-              tummat musteet: theme-night kaantaa editorial-tokenit. */}
-          <aside className="theme-night hidden xl:flex xl:flex-col xl:gap-8 xl:sticky xl:top-24 xl:self-start">
+          {/* Side column on the night ground: dark inks via theme-night. */}
+          <aside className="theme-night hidden lg:flex lg:flex-col lg:gap-8 lg:sticky lg:top-24 lg:self-start">
             <TableOfContents blocks={post.content} textLang={textLang} />
-            <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Rovaniemi" />
+            <BannerAd partner="hotels" sid="post_sidebar_hotels" destination={post.location || 'Rovaniemi'} />
           </aside>
         </div>
       </main>
 
-      {/* ================================================================
-          READ NEXT — tummat kortit yön päällä, arkki päättyy tähän
-          ================================================================ */}
+      {/* READ NEXT */}
       {related.length > 0 && (
-        <section className="px-4 sm:px-6 lg:px-8 pb-24 py-20">
-          <div className="max-w-[68rem] mx-auto">
-            <Reveal>
-              <p className="text-pink text-[10px] uppercase tracking-[0.35em] font-bold mb-3">
-                {c.readNextEyebrow}
-              </p>
-              <h2
-                className="text-snow text-3xl md:text-4xl font-normal mb-10"
-                style={{ fontFamily: 'var(--font-editorial)' }}
-              >
-                {c.readNextH2}
-              </h2>
-            </Reveal>
+        <section className="px-4 sm:px-6 lg:px-8 pb-20">
+          <div className="max-w-[72rem] mx-auto">
+            <h2 className="text-snow text-3xl md:text-4xl font-extrabold tracking-tight mb-8 text-center lg:text-left" style={{ fontFamily: 'var(--font-editorial)' }}>
+              {c.readNextH2}
+            </h2>
             <div className="grid gap-6 md:grid-cols-2">
-              {related.map((p, i) => (
-                <Reveal key={p.slug} delay={(i + 1) as 1 | 2}>
-                  <PostCard post={p} />
-                </Reveal>
+              {related.map((p) => (
+                <PostCard key={p.slug} post={p} />
               ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* Photo credit of the hero (the sheet overlaps the hero, so the line sits under the article) and of the cards above. */}
+      {/* Photo credit of the hero and of the cards above. */}
       <PhotoCredits srcs={[post.heroImage, ...related.map((p) => p.heroImage)]} />
 
       <Newsletter />

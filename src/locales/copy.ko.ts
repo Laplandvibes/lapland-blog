@@ -441,6 +441,7 @@ const ko: SectionCopy = {
     },
   },
   post: {
+    tempSource: '기온: 핀란드 기상연구소',
     allStories: '모든 글',
     by: '작성자',
     minRead: '분 소요',

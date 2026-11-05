@@ -441,6 +441,7 @@ const fr: SectionCopy = {
     },
   },
   post: {
+    tempSource: 'Température\u00A0: Institut météorologique finlandais',
     allStories: 'Tous les récits',
     by: 'Par',
     minRead: 'min de lecture',

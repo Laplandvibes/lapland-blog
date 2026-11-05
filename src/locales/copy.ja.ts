@@ -492,6 +492,7 @@ const ja: SectionCopy = {
     },
   },
   post: {
+    tempSource: '気温：フィンランド気象研究所',
     allStories: 'すべての記事',
     by: '執筆：',
     minRead: '分で読了',

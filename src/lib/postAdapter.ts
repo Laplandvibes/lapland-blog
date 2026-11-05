@@ -100,6 +100,11 @@ export function rowToPost(row: BlogPostRow): Post {
     // Kirjautuneen kayttajan juttu saa author_id:n; toimituksen siemenjutuilla
     // se on null. Tama on ainoa kentta joka sailyttaa eron.
     byReader: Boolean(row.author_id),
+    readerName: row.author_id ? row.author_snapshot?.display_name || row.author_snapshot?.handle || undefined : undefined,
+    readerHandle: row.author_id ? row.author_snapshot?.handle || undefined : undefined,
+    location: row.location ?? null,
+    visitDate: row.visit_date ?? null,
+    weatherNote: row.weather_note ?? null,
     lang: row.lang ?? undefined,
     featured: row.featured,
     theme: normalizeTheme(row.theme),

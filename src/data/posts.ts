@@ -10,7 +10,8 @@ export type PostBlock =
   | { type: 'heading'; level: 2 | 3; text: string }
   | { type: 'pullquote'; text: string }
   | { type: 'divider' }
-  | { type: 'list'; ordered?: boolean; items: string[] }
+  /** `check`: a packing or to-do list drawn as tick boxes (2026-11-05). */
+  | { type: 'list'; ordered?: boolean; check?: boolean; items: string[] }
   | { type: 'markdown'; text: string }
   /**
    * Jutun lopun lähde- ja menetelmärivi omana lohkonaan.
@@ -49,6 +50,13 @@ export interface Post {
    * nämä kaksi, joten ero luetaan kannasta erikseen (author_id).
    */
   byReader?: boolean;
+  /** Reader posts: the writer's public name and trip page handle (author_snapshot). */
+  readerName?: string;
+  readerHandle?: string;
+  /** Reader posts: place, date and temperature from the photo composer. */
+  location?: string | null;
+  visitDate?: string | null;
+  weatherNote?: string | null;
   /**
    * Language of the row this post was built from (`blog_posts.lang`). A list
    * shows the reader's language where a translation exists and the English

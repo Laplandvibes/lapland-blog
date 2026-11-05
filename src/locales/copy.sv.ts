@@ -492,6 +492,7 @@ const sv: SectionCopy = {
     },
   },
   post: {
+    tempSource: 'Temperatur: Meteorologiska institutet',
     allStories: 'Alla berättelser',
     by: 'Av',
     minRead: 'min läsning',

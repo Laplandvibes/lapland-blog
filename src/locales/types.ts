@@ -330,6 +330,8 @@ export type SectionCopy = {
     >;
   };
   post: {
+    /** Reader posts: source of the temperature (FMI open data). */
+    tempSource: string;
     allStories: string;
     by: string;
     minRead: string;

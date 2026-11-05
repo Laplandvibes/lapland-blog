@@ -492,6 +492,7 @@ const en: SectionCopy = {
     },
   },
   post: {
+    tempSource: 'Temperature: Finnish Meteorological Institute',
     allStories: 'All stories',
     by: 'By',
     minRead: 'min read',

@@ -493,6 +493,7 @@ const fi: SectionCopy = {
     },
   },
   post: {
+    tempSource: 'Lämpötila: Ilmatieteen laitos',
     allStories: 'Kaikki jutut',
     by: 'Kirjoittanut',
     minRead: 'min luku',

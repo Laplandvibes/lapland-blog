@@ -441,6 +441,7 @@ const nl: SectionCopy = {
     },
   },
   post: {
+    tempSource: 'Temperatuur: Fins Meteorologisch Instituut',
     allStories: 'Alle verhalen',
     by: 'Door',
     minRead: 'min leestijd',

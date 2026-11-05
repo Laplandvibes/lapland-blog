@@ -745,11 +745,12 @@ textarea:focus-visible {
   font-size: 1.1875rem;      /* 19px */
   line-height: 1.75;
   color: var(--color-ink);
-  max-width: 52rem;
-  margin-inline: auto;
+  max-width: none;
 }
 
-/* Reading measure for running text. */
+/* Reading measure for running text, all on ONE left edge (Vesa 2026-11-05:
+   "layout aivan kamala"). Paragraphs used to be centred in a wider column
+   while headings sat on its left edge, so the sheet had three left edges. */
 .prose-editorial p,
 .prose-editorial ul,
 .prose-editorial ol,
@@ -757,28 +758,11 @@ textarea:focus-visible {
 .prose-editorial h3,
 .prose-editorial .footnotes {
   max-width: 38rem;          /* ~65ch at this size */
-  margin-inline: auto;
+  margin-inline: 0;
 }
 
 .prose-editorial p {
   margin: 0 0 1.4em;
-  max-width: 38rem;
-  margin-inline: auto;
-}
-
-/* Drop cap — kept, but now a bold Manrope letter. A heavy sans initial reads
-   as a deliberate design move; a thin one would just look broken. */
-.prose-editorial > p:first-of-type::first-letter {
-  font-family: var(--font-editorial);
-  font-weight: 800;
-  float: left;
-  /* Scales down on phones — a full 5rem initial swallowed half the first
-     line at 375px (Vesa mobile QA 2026-07-11). */
-  font-size: clamp(3.25rem, 13vw, 5rem);
-  line-height: 0.82;
-  padding: 0.4rem 0.6rem 0 0;
-  color: var(--color-accent);
-  letter-spacing: -0.02em;
 }
 
 .prose-editorial h2 {
@@ -837,7 +821,7 @@ textarea:focus-visible {
   color: var(--color-ink);
   border-left: 3px solid var(--color-accent);
   padding: 0.15em 0 0.15em 1.35em;
-  margin: 2.4em auto;
+  margin: 2.4em 0;
   max-width: 40rem;
 }
 
@@ -845,14 +829,14 @@ textarea:focus-visible {
   border: none;
   height: 1px;
   background: var(--color-paper-border);
-  margin: 3em auto;
+  margin: 3em 0;
   width: 6rem;
 }
 
-/* Inline figure — a touch wider than the text measure. */
+/* Inline figure: the full width of the sheet's text area. */
 .prose-editorial figure {
-  margin: 2.8em auto;
-  max-width: 44rem;
+  margin: 2.8em 0;
+  max-width: none;
 }
 .prose-editorial figure img {
   width: 100%;
@@ -865,12 +849,11 @@ textarea:focus-visible {
 .prose-editorial figcaption {
   font-size: 1rem;
   color: var(--color-ink-mute);
-  text-align: center;
+  text-align: left;
   margin-top: 0.85em;
-  font-style: italic;
   line-height: 1.5;
   max-width: 52ch;
-  margin-inline: auto;
+  margin-inline: 0;
 }
 
 /* Wide figure — fills the full media column (52rem), wider than the 38rem text
@@ -889,6 +872,35 @@ textarea:focus-visible {
 }
 @media (max-width: 640px) {
   .prose-editorial figure.figure-full img { border-radius: 0.75rem; }
+}
+
+/* Packing / to-do list as tick boxes (list block with `check`). */
+.prose-editorial ul.check-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.4em 0 1.6em;
+}
+.prose-editorial ul.check-list li {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-paper-border);
+  border-radius: 0.9rem;
+  background: var(--color-cream);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.prose-editorial ul.check-list .check-box {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.2rem;
+  border: 2px solid var(--color-ink-mute);
+  border-radius: 0.35rem;
 }
 
 /* Footnote markers */

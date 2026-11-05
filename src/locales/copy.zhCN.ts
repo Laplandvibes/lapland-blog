@@ -492,6 +492,7 @@ const zhCN: SectionCopy = {
     },
   },
   post: {
+    tempSource: '气温：芬兰气象研究所',
     allStories: '全部文章',
     by: '作者',
     minRead: '分钟阅读',
