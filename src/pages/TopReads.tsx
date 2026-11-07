@@ -105,7 +105,7 @@ export default function TopReads() {
         <div className="absolute -top-10 right-1/4 w-[460px] h-[460px] rounded-full bg-pink/15 blur-[150px] pointer-events-none animate-hero-pulse" />
         <div className="absolute top-1/2 left-0 w-[360px] h-[360px] rounded-full bg-purple/12 blur-[150px] pointer-events-none animate-soft-float" />
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-5xl mx-auto text-center lg:text-left">
           <Reveal>
             <div className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full bg-night/70 border border-pink/45 backdrop-blur-sm">
               <Sparkles size={13} className="text-pink-300" />
@@ -120,7 +120,7 @@ export default function TopReads() {
             </h1>
           </Reveal>
           <Reveal delay={2}>
-            <p className="text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl">
+            <p className="text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto w-fit text-left lg:mx-0 lg:w-auto">
               {c.lead}
             </p>
           </Reveal>
@@ -129,7 +129,7 @@ export default function TopReads() {
               issue" feel and immediate orientation instead of an endless scroll. */}
           {sections.length > 0 && (
             <Reveal delay={3}>
-              <nav aria-label={c.contentsAria} className="mt-9 flex flex-wrap items-center gap-2.5">
+              <nav aria-label={c.contentsAria} className="mt-9 flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
                 <span className="inline-flex items-center gap-2 text-slate-400 text-[11px] uppercase tracking-[0.25em] font-semibold mr-1">
                   <span className="w-6 h-px bg-pink/50" />
                   <span className="text-pink-200 tabular-nums">{totalReads}</span>
@@ -160,7 +160,7 @@ export default function TopReads() {
         <section className="px-4 sm:px-6 lg:px-8 pt-14 pb-20" aria-labelledby="editors-pick">
           <div className="max-w-6xl mx-auto">
             <Reveal>
-              <div className="flex items-center gap-3 mb-7">
+              <div className="flex flex-col items-center text-center gap-3 mb-7 lg:flex-row lg:text-left">
                 <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-pink to-pink-600 text-white shadow-[0_8px_30px_-8px_rgba(236,72,153,0.6)]">
                   <Crown size={18} />
                 </span>
@@ -173,7 +173,7 @@ export default function TopReads() {
                   </h2>
                 </div>
               </div>
-              <p className="text-slate-300 text-base leading-relaxed mb-9 max-w-2xl">
+              <p className="text-slate-300 text-base leading-relaxed mb-9 max-w-2xl mx-auto w-fit lg:mx-0 lg:w-auto">
                 {c.onlyLead}
               </p>
             </Reveal>
@@ -334,7 +334,7 @@ function ListSection({ id, eyebrow, title, subtitle, posts, Icon, to, minRead, s
     >
       <div className="max-w-5xl mx-auto">
         <Reveal>
-          <div className="flex items-start gap-4 mb-9">
+          <div className="flex flex-col items-center text-center gap-4 mb-9 lg:flex-row lg:items-start lg:text-left">
             <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-night-light/70 border border-pink/30 shrink-0">
               <Icon size={19} className="text-pink-300" />
             </span>
@@ -347,7 +347,7 @@ function ListSection({ id, eyebrow, title, subtitle, posts, Icon, to, minRead, s
               </h2>
             </div>
           </div>
-          <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-9 max-w-2xl md:pl-[3.75rem]">
+          <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-9 max-w-2xl lg:pl-[3.75rem] max-lg:mx-auto max-lg:w-fit">
             {subtitle}
           </p>
         </Reveal>

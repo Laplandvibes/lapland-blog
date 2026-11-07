@@ -50,7 +50,7 @@ export const IMAGE_VERSIONS: Record<string, string> = {
   '/images/app-promo/sos-pt-BR.webp': '558c2c3b',
   '/images/app-promo/sos-sv.webp': '0429a98d',
   '/images/app-promo/sos-zh-CN.webp': 'd15dcc3f',
-  '/images/app-qr.svg': 'fd83cc0e',
+  '/images/app-qr.svg': 'af20f59d',
   '/images/app-screenshot.webp': '04d59cfb',
   '/images/aside-vesa-1200.avif': '95adc29c',
   '/images/aside-vesa-1200.webp': '6ca7a624',

@@ -125,17 +125,17 @@ export default function Destination() {
         <section className="px-4 sm:px-6 lg:px-8 py-12 md:py-16" aria-labelledby="dest-network">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <p className="text-[var(--color-accent)] tracking-[0.32em] text-[10px] font-bold uppercase mb-3">
+              <p className="text-[var(--color-accent)] tracking-[0.32em] text-[10px] font-bold uppercase mb-3 text-center lg:text-left">
                 {c.networkEyebrow}
               </p>
               <h2
                 id="dest-network"
-                className="text-[var(--color-ink)] text-3xl md:text-4xl mb-3"
+                className="text-[var(--color-ink)] text-3xl md:text-4xl mb-3 text-center lg:text-left"
                 style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
               >
                 {c.networkH2}
               </h2>
-              <p className="text-[var(--color-ink-soft)] text-base leading-relaxed mb-8 max-w-2xl">
+              <p className="text-[var(--color-ink-soft)] text-base leading-relaxed mb-8 max-w-2xl mx-auto w-fit lg:mx-0 lg:w-auto">
                 {c.networkLead}
               </p>
             </Reveal>
@@ -177,7 +177,7 @@ export default function Destination() {
           <Reveal>
             <h2
               id="dest-entries"
-              className="text-[var(--color-ink)] text-3xl md:text-4xl mb-8"
+              className="text-[var(--color-ink)] text-3xl md:text-4xl mb-8 text-center lg:text-left"
               style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
             >
               {c.entriesH2}

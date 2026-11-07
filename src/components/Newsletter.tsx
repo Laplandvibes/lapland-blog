@@ -230,7 +230,7 @@ export default function Newsletter() {
         >
           {c.h2}
         </h2>
-        <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
           {c.lead}
         </p>
 

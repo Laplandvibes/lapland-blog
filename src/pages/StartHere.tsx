@@ -99,7 +99,7 @@ export default function StartHere() {
             </h1>
           </Reveal>
           <Reveal delay={2}>
-            <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto hero-text-shadow-sm">
+            <p className="text-slate-100 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto max-lg:w-fit max-lg:text-left hero-text-shadow-sm">
               {c.lead}
             </p>
           </Reveal>
