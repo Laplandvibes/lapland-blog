@@ -69,18 +69,18 @@ export default function Category() {
           <Reveal>
             <Link
               to={to('/stories')}
-              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-8 transition-colors"
+              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-8 transition-colors max-lg:flex max-lg:w-fit max-lg:mx-auto"
             >
               <ArrowLeft size={14} /> {c.allStoriesBack}
             </Link>
 
-            <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
+            <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-4 text-center lg:text-left">
               {c.categoryPrefix} · {postsInCat.length} {postsInCat.length === 1 ? c.storySingular : c.storyPlural}
             </p>
-            <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-6 hero-text-shadow">
+            <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-6 hero-text-shadow text-center lg:text-left">
               {theme?.name ?? category.name}
             </h1>
-            <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl">
+            <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl max-lg:mx-auto max-lg:w-fit">
               {theme?.description ?? category.description}
             </p>
           </Reveal>

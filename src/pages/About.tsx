@@ -148,7 +148,7 @@ export default function About() {
 
         {/* 6. Lopetus + CTA */}
         <section className="max-w-3xl mx-auto mt-14 text-center">
-          <p className="text-slate-400 text-base italic leading-relaxed mb-8">{c.closing}</p>
+          <p className="text-slate-400 text-base italic leading-relaxed mb-8 mx-auto w-fit max-w-full max-lg:text-left">{c.closing}</p>
           <Link
             to={to('/signin')}
             className="inline-block px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-wider text-xs hover:bg-pink transition-colors"

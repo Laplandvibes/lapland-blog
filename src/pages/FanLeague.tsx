@@ -384,8 +384,8 @@ export default function FanLeague() {
     { slug: 'the-sauna-thermometer-said-eighty-two', kicker: c.kSauna },
   ].filter((s) => POST_META[s.slug]);
 
-  const h2 = 'font-display font-extrabold text-snow text-[clamp(1.75rem,3.6vw,2.4rem)] leading-tight tracking-tight';
-  const lead = 'text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl text-pretty';
+  const h2 = 'font-display font-extrabold text-snow text-[clamp(1.75rem,3.6vw,2.4rem)] leading-tight tracking-tight text-center lg:text-left';
+  const lead = 'text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl text-pretty max-lg:mx-auto max-lg:w-fit';
 
   return (
     <div className="min-h-screen bg-night text-snow">
@@ -394,16 +394,16 @@ export default function FanLeague() {
       {/* HERO: masthead above an own photograph (the sign carries its own lettering) */}
       <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <p className="text-pink-300 font-bold text-sm tracking-[0.18em] uppercase">
+          <p className="text-pink-300 font-bold text-sm tracking-[0.18em] uppercase text-center lg:text-left">
             {c.kicker} <span className="text-slate-400 font-semibold normal-case tracking-normal ml-2">{monthOnly(lang, data.month)}</span>
           </p>
           {/* Full column width + balance (Vesa 23.10.: "miksi otsikko on kahdella rivillä kun se mahtuu yhdellekin"):
               one line is 960–1 139 px in 8 of 12 languages and the column is 1 152 px; the old max-w-4xl (896 px)
               forced a second line. nl/ja/ko need two lines, and balance splits them evenly. */}
-          <h1 className="font-display font-extrabold text-[clamp(2.6rem,7vw,4.9rem)] leading-[1.02] tracking-tight mt-4 mb-5 text-balance">
+          <h1 className="font-display font-extrabold text-[clamp(2.6rem,7vw,4.9rem)] leading-[1.02] tracking-tight mt-4 mb-5 text-balance text-center lg:text-left">
             {c.h1}
           </h1>
-          <p className="text-slate-200 text-lg md:text-xl leading-relaxed max-w-3xl text-pretty">
+          <p className="text-slate-200 text-lg md:text-xl leading-relaxed max-w-3xl text-pretty max-lg:mx-auto max-lg:w-fit">
             {/* Non-breaking hyphen: "LaplandVibes-/sivustolla" broke at the hyphen (fi/de/sv/nl compounds). */}
             {fillCopy(c.lead, { sites: String(data.sites) })
               .replace(/LaplandVibes-/g, `LaplandVibes${String.fromCharCode(0x2011)}`)

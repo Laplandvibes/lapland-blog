@@ -104,13 +104,13 @@ export default function Archive() {
         <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] rounded-full bg-pink/10 blur-[140px] pointer-events-none animate-hero-pulse" />
         <div className="relative max-w-5xl mx-auto w-full py-16 md:py-20">
           <Reveal>
-            <p className="text-white tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
+            <p className="text-white tracking-[0.35em] text-[10px] font-bold uppercase mb-4 text-center lg:text-left">
               {c.eyebrow}
             </p>
-            <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-5 hero-text-shadow">
+            <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-5 hero-text-shadow text-center lg:text-left">
               {c.h1}
             </h1>
-            <p className="text-slate-200 text-lg md:text-xl max-w-2xl leading-relaxed hero-text-shadow-sm">
+            <p className="text-slate-200 text-lg md:text-xl max-w-2xl leading-relaxed hero-text-shadow-sm max-lg:mx-auto max-lg:w-fit">
               {c.lead}
             </p>
           </Reveal>
@@ -122,9 +122,9 @@ export default function Archive() {
       {/* Filters + search */}
       <section className="px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-5 md:items-center md:justify-between">
+          <div className="flex flex-col lg:flex-row gap-5 lg:items-center lg:justify-between">
             <div
-              className="flex flex-wrap gap-2"
+              className="flex flex-wrap justify-center lg:justify-start gap-2"
               role="group"
               aria-label={c.filterAria}
             >
@@ -178,10 +178,10 @@ export default function Archive() {
               edellyttää että lukija arvaa sen itse. */}
           {paikat.length > 0 && (
             <div className="mt-5 pt-5 border-t border-purple/15">
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-3">
+              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-3 text-center lg:text-left">
                 {c.placesLabel}
               </p>
-              <div className="flex flex-wrap gap-2" role="group" aria-label={c.placesLabel}>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2" role="group" aria-label={c.placesLabel}>
                 <button
                   type="button"
                   onClick={() => setPlace(null)}
