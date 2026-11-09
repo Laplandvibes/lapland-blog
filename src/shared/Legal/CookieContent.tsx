@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { localePath } from './localePath';
+import { Erotinrivi } from '../Erotin';
 
 /**
  * Shared LaplandVibes ecosystem Cookie Policy body.
@@ -931,7 +932,7 @@ export default function CookieContent({
                   <span className="text-snow/80 font-medium text-sm">{t.essentialNote}</span>
                 </div>
                 <p className="text-sm">{t.essentialBody}</p>
-                <p className="text-xs text-snow/70 mt-2 font-mono">{consentKey} · {t.essentialDur}</p>
+                <Erotinrivi className="text-xs text-snow/70 mt-2 font-mono" osat={[consentKey, t.essentialDur]} />
               </div>
 
               {/* Analytics */}
@@ -941,7 +942,7 @@ export default function CookieContent({
                   <span className="text-snow/80 font-medium text-sm">{t.analyticsNote}</span>
                 </div>
                 <p className="text-sm">{t.analyticsBody}</p>
-                <p className="text-xs text-snow/70 mt-2 font-mono">_ga, _ga_* · {t.analyticsDur}</p>
+                <Erotinrivi className="text-xs text-snow/70 mt-2 font-mono" osat={['_ga, _ga_*', t.analyticsDur]} />
               </div>
 
               {/* Istuntotallennus — vain sivustoilla joilla Clarity on asennettuna */}
@@ -952,8 +953,8 @@ export default function CookieContent({
                     <span className="text-snow/80 font-medium text-sm">{t.analyticsNote}</span>
                   </div>
                   <p className="text-sm">{rec.recordingBody}</p>
-                  <p className="text-xs text-snow/70 mt-2 font-mono">_clck · {rec.recordingDur}</p>
-                  <p className="text-xs text-snow/70 mt-1 font-mono">_clsk · {rec.recordingSessionDur}</p>
+                  <Erotinrivi className="text-xs text-snow/70 mt-2 font-mono" osat={['_clck', rec.recordingDur]} />
+                  <Erotinrivi className="text-xs text-snow/70 mt-1 font-mono" osat={['_clsk', rec.recordingSessionDur]} />
                 </div>
               )}
 
@@ -964,7 +965,7 @@ export default function CookieContent({
                   <span className="text-snow/80 font-medium text-sm">{t.cjNote}</span>
                 </div>
                 <p className="text-sm">{t.cjBody(siteName)}</p>
-                <p className="text-xs text-snow/70 mt-2 font-mono">at_gd, dci, btagClickId, Union, … · {t.cjDur}</p>
+                <Erotinrivi className="text-xs text-snow/70 mt-2 font-mono" osat={['at_gd, dci, btagClickId, Union, …', t.cjDur]} />
               </div>
 
               {/* Affiliate, GetYourGuide */}
@@ -974,7 +975,7 @@ export default function CookieContent({
                   <span className="text-snow/80 font-medium text-sm">{t.gygNote}</span>
                 </div>
                 <p className="text-sm">{t.gygBody(siteName)}</p>
-                <p className="text-xs text-snow/70 mt-2 font-mono">visitor_id, session_id, __cf_bm, partner_id, gyg_visitor_id · {t.gygDur}</p>
+                <Erotinrivi className="text-xs text-snow/70 mt-2 font-mono" osat={['visitor_id, session_id, __cf_bm, partner_id, gyg_visitor_id', t.gygDur]} />
               </div>
 
               {/* Lentohaku (Travelpayouts), vain laplandflights.fi */}
@@ -985,7 +986,7 @@ export default function CookieContent({
                     <span className="text-snow/80 font-medium text-sm">{t.analyticsNote}</span>
                   </div>
                   <p className="text-sm">{fl.body}</p>
-                  <p className="text-xs text-snow/70 mt-2 font-mono">tpwl_locale, tpwl_currency, _sp_id.*, _sp_ses.*, nuid · {fl.dur}</p>
+                  <Erotinrivi className="text-xs text-snow/70 mt-2 font-mono" osat={['tpwl_locale, tpwl_currency, _sp_id.*, _sp_ses.*, nuid', fl.dur]} />
                 </div>
               )}
 
@@ -997,7 +998,7 @@ export default function CookieContent({
                     <span className="text-snow/80 font-medium text-sm">{yt.note}</span>
                   </div>
                   <p className="text-sm">{yt.body(siteName, <a href={`https://policies.google.com/privacy?hl=${lang}`} target="_blank" rel="noopener" className="text-vibe-pink">{yt.googlePrivacy}</a>)}</p>
-                  <p className="text-xs text-snow/70 mt-2 font-mono">youtube-nocookie.com · {yt.dur}</p>
+                  <Erotinrivi className="text-xs text-snow/70 mt-2 font-mono" osat={['youtube-nocookie.com', yt.dur]} />
                 </div>
               )}
 

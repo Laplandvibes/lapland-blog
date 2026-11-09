@@ -1,6 +1,8 @@
 import { PHOTO_CREDITS, creditSlot } from '../data/photoCredits';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { Fragment } from 'react';
+import { Erotinrivi } from '../shared/Erotin';
 
 /**
  * One credit line per page for every real photograph shown on it (hero, cards, tiles).
@@ -17,12 +19,13 @@ export default function PhotoCredits({ srcs, className = '' }: { srcs: (string |
   const link = 'underline decoration-slate-500/60 underline-offset-2 hover:text-snow';
   return (
     <div className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm leading-relaxed text-slate-400 ${className}`} data-photo-credits>
-      <span>{COPY[lang].images.photoCredit}: </span>
-      {slots.map((k, i) => {
+      {/* Kuvat " · "-erottimella yhtenä kappaleena: piste jäi rivin loppuun tai alkuun joka leveydellä (Vesa 9.11.2026).
+          Erotinrivi piirtää pisteen vain kahden samalla rivillä olevan kuvan väliin; pitkä kuvateksti rivittyy omana kohtanaan. */}
+      <Erotinrivi as="div" osat={slots.map((k, i) => {
         const c = PHOTO_CREDITS[k];
         return (
-          <span key={k}>
-            {i > 0 && ' · '}
+          <Fragment key={k}>
+            {i === 0 && <>{COPY[lang].images.photoCredit}: </>}
             {c.fileUrl ? <a href={c.fileUrl} target="_blank" rel="noopener" lang="en" translate="no" className={`lv-tap ${link}`}>{c.title}</a> : <span lang="en" translate="no">{c.title}</span>}
             {': '}
             <span translate="no">{c.author}</span>
@@ -34,9 +37,9 @@ export default function PhotoCredits({ srcs, className = '' }: { srcs: (string |
                   : (c.licenseUrl ? <a href={c.licenseUrl} target="_blank" rel="license noopener" lang="en" translate="no" className={`lv-tap whitespace-nowrap ${link}`}>{c.license}</a> : <span lang="en" translate="no">{c.license}</span>)}
               </>
             )}
-          </span>
+          </Fragment>
         );
-      })}
+      })} />
     </div>
   );
 }

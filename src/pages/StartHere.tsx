@@ -15,6 +15,7 @@ import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { postTextLang } from '../lib/postLang';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 // <title> and description per locale. The prerender reads these same `const <locale>` blocks
 // (scripts/routes.json "pageFile": seoTitle / seoDescription), so the static HTML and the browser
@@ -343,9 +344,7 @@ function PathCard({ kicker, title, body, cta, to, Icon, isAnchor }: PathCardProp
     <>
       <div className="flex items-center gap-3 mb-5">
         <Icon size={20} className="text-pink" />
-        <p className="tracking-[0.3em] text-[10px] font-bold uppercase text-pink">
-          {kicker}
-        </p>
+        <Erotinrivi className="tracking-[0.3em] text-[10px] font-bold uppercase text-pink" osat={erotinOsat(kicker)} />
       </div>
       <h3 className="font-display text-2xl text-snow mb-3 leading-tight">{title}</h3>
       <p className="text-slate-300 text-sm leading-relaxed mb-6">{body}</p>
