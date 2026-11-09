@@ -123,7 +123,7 @@ export default function Destinations() {
               >
                 {c.plantH2}
               </h2>
-              <p className="text-[var(--color-ink-soft)] text-base leading-relaxed mb-8 max-w-xl mx-auto">
+              <p className="text-[var(--color-ink-soft)] text-base leading-relaxed mb-8 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
                 {c.plantLead}
               </p>
               <Link

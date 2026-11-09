@@ -169,7 +169,7 @@ export default function StartHere() {
               >
                 {c.planH2}
               </h2>
-              <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto max-lg:w-fit max-lg:text-left">
                 {c.planLead}
               </p>
             </div>
@@ -242,13 +242,13 @@ export default function StartHere() {
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
+              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3 text-center lg:text-left">
                 {c.onlyEyebrow}
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-2">
+              <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-2 text-center lg:text-left">
                 {c.onlyH2}
               </h2>
-              <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-2xl">
+              <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-2xl max-lg:mx-auto max-lg:w-fit">
                 {c.onlyLead}
               </p>
               <Link
@@ -290,14 +290,15 @@ export default function StartHere() {
         <section className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="max-w-6xl mx-auto">
             <Reveal>
-              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
+              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3 text-center lg:text-left">
                 {c.thenEyebrow}
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-10">
+              <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-10 text-center lg:text-left">
                 {c.thenH2}
               </h2>
             </Reveal>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Pariton määrä kahdessa sarakkeessa (640–1023 px): viimeinen kortti keskelle muiden levyisenä (gate:tabletti orpo 9.11.2026). */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_0.75rem)]">
               {more.map((p, i) => (
                 <Reveal key={p.slug} delay={Math.min(i + 1, 6) as 1 | 2 | 3 | 4 | 5 | 6}>
                   <PostCard post={p} variant="dark" />

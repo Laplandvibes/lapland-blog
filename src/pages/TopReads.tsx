@@ -218,7 +218,7 @@ export default function TopReads() {
                 <h2 className="font-display text-3xl md:text-4xl tracking-tight text-snow mb-4">
                   {c.ctaH2}
                 </h2>
-                <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-xl mx-auto">
+                <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
                   {c.ctaLead}
                 </p>
                 <Link
