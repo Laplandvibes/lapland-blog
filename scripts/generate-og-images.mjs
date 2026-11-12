@@ -8,10 +8,17 @@
 // Inputs are the existing on-disk hero WebPs (no new AI generation needed).
 // Run: node scripts/generate-og-images.mjs   (also wired into prebuild)
 //
-// Output: public/og/<slug>.jpg  +  public/og/<page>.jpg
+// Output: public/og/<slug>.jpg (+ <slug>-summer.jpg and <slug>-winter.jpg, the same bytes)
+//
+// 🔴 WHY THE SEASONAL TWINS (measured live 12.11.2026). Cloudflare Pages runs a Function BEFORE the static
+// file. functions/og/[card].js (installed with the first ogCard route) catches every /og/<slug>.jpg request,
+// looks for <slug>-winter.jpg / <slug>-summer.jpg and falls back to the site card. These cards were on disk
+// and every share of a post or page still showed the site card (X-LV-OG-Season: fallback). The twins are what
+// the Function serves; the plain file stays because the prerenderer hashes it for ?v= and gate:jakokuvat
+// measures it. gate:jakokuvat fails if a twin is missing or differs.
 
 import sharp from 'sharp';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, copyFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -118,6 +125,7 @@ for (const card of CARDS) {
       .composite([{ input: overlaySvg(card.kicker), top: 0, left: 0 }])
       .jpeg({ quality: 82, mozjpeg: true })
       .toFile(out);
+    for (const season of ['summer', 'winter']) copyFileSync(out, resolve(OUT_DIR, `${card.slug}-${season}.jpg`));
     made++;
     console.log(`  og: ${card.slug}.jpg  ← ${card.src}  ink y ${m.minY}–${m.maxY}, contrast p10 ${m.contrastP10}`);
   } catch (err) {
