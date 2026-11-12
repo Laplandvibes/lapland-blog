@@ -5,19 +5,21 @@
     "kaudet": {
       "summer": {
         "hero": "/images/fan-league/utsjoki-road-970-2252.webp",
-        "bytes": 144599,
-        "sha256": "9952ac5c82099b90e5c748f0e056986d6c7fd37e74ad1663a527da732edff40e",
+        "bytes": 141854,
+        "sha256": "94a424edd58ff130025595a110caf0d6b770921fafbe65cb1d288328a31662e4",
         "heroSha": "f6251e53715f42cd",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 14069,
         "inkBox": [
           414,
-          493,
+          26,
           783,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -42,19 +44,21 @@
       },
       "winter": {
         "hero": "/images/fan-league/utsjoki-road-970-2252.webp",
-        "bytes": 144599,
-        "sha256": "9952ac5c82099b90e5c748f0e056986d6c7fd37e74ad1663a527da732edff40e",
+        "bytes": 141854,
+        "sha256": "94a424edd58ff130025595a110caf0d6b770921fafbe65cb1d288328a31662e4",
         "heroSha": "f6251e53715f42cd",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 14069,
         "inkBox": [
           414,
-          493,
+          26,
           783,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -86,19 +90,21 @@
     "kaudet": {
       "summer": {
         "hero": "/images/finnish-bands/hero-kevo-road-frost-2400.webp",
-        "bytes": 142740,
-        "sha256": "b481c6ada2a071eee6dc4a44f656650a0324cc195f32d39a52ed59d24650e53d",
+        "bytes": 140364,
+        "sha256": "9bc3c3ab3d8032e4bddd5c210da26daef58572937b0ab179ff7516e2c345e4ad",
         "heroSha": "dc5b9f9e19c9e3a0",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 14832,
         "inkBox": [
           378,
-          493,
+          26,
           822,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -123,19 +129,21 @@
       },
       "winter": {
         "hero": "/images/finnish-bands/hero-kevo-road-frost-2400.webp",
-        "bytes": 142740,
-        "sha256": "b481c6ada2a071eee6dc4a44f656650a0324cc195f32d39a52ed59d24650e53d",
+        "bytes": 140364,
+        "sha256": "9bc3c3ab3d8032e4bddd5c210da26daef58572937b0ab179ff7516e2c345e4ad",
         "heroSha": "dc5b9f9e19c9e3a0",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 14832,
         "inkBox": [
           378,
-          493,
+          26,
           822,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,

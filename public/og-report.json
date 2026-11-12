@@ -1,9 +1,9 @@
 {
-  "version": "fefdb402",
+  "version": "1e85f132",
   "domain": "lapland.blog",
   "brand": ".BLOG",
   "tagline": "Start a blog of your Lapland trip",
-  "generated": "2026-10-09T17:25:01.641Z",
+  "generated": "2026-11-12T10:28:53.467Z",
   "staticFallbackSeason": "winter",
   "seasons": {
     "summer": {
@@ -11,18 +11,20 @@
       "heroUrl": "https://lapland.blog/images/hero-aurora-2560.webp?v=ff6e1396",
       "heroAlt": "Red wooden cabins and a jetty on a wooded lakeshore in golden evening light",
       "heroSha": "ff6e13967009b504",
-      "bytes": 188241,
-      "sha256": "434ccb90c0ec27a9975408486e3624605bf2266d26eb365ee5781bac9b0a61b5",
+      "bytes": 185007,
+      "sha256": "5be55a8c65f8b4cf6c47f02baeeb11472cb83bcd67e9fe0064b5c1e4dfdc5d00",
       "bandH": 168,
       "photoPct": 73.3,
       "ink": 14924,
       "inkBox": [
         380,
-        493,
+        26,
         820,
-        603
+        136
       ],
       "safe": true,
+      "palkki": "yla",
+      "xVapaa": true,
       "accentP10": 5.06,
       "accentMed": 5.06,
       "whiteP10": 17.08,
@@ -50,18 +52,20 @@
       "heroUrl": "https://lapland.blog/images/hero-aurora-winter-2560.webp?v=4b6c29e4",
       "heroAlt": "Green northern lights above tall pines, snow on the ground below",
       "heroSha": "4b6c29e495385d6f",
-      "bytes": 170255,
-      "sha256": "04ff0d9c423b3149e0867f52d2fb761184e5f432d592a6f47f3aa3aef8608852",
+      "bytes": 166707,
+      "sha256": "59e1eb7c38dfd7a27f06c8215a9a32e1d808ff8dece7d88d7e535aabc61f0a84",
       "bandH": 168,
       "photoPct": 73.3,
       "ink": 14924,
       "inkBox": [
         380,
-        493,
+        26,
         820,
-        603
+        136
       ],
       "safe": true,
+      "palkki": "yla",
+      "xVapaa": true,
       "accentP10": 5.06,
       "accentMed": 5.06,
       "whiteP10": 17.08,

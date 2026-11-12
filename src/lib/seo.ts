@@ -21,7 +21,7 @@ const SITE = 'https://lapland.blog';
 // Site share card, the same URL the prerenderer writes. ?v= is the content hash of
 // public/og-summer.jpg + og-winter.jpg; lv-ops scripts/og/install.mjs rewrites it
 // here whenever the card changes.
-const DEFAULT_IMAGE = 'https://lapland.blog/og.jpg?v=fefdb402';
+const DEFAULT_IMAGE = 'https://lapland.blog/og.jpg?v=1e85f132';
 
 // Share image the prerenderer wrote for the URL the visitor landed on. Read once at
 // module load, before any effect runs: on that URL it is kept, so crawlers that run
