@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import type { Post } from '../data/posts';
 import { vesa } from '../data/author';
+import { useLang } from '../i18n/useLang';
+import { localizeJsonLd, isBreadcrumbList } from './jsonLdUrls';
 
 const SITE = 'https://lapland.blog';
 const LOGO = `${SITE}/favicon.svg`;
@@ -13,11 +15,15 @@ type JsonLd = Record<string, unknown>;
  * Inject a JSON-LD <script> block into the <head>.
  * Replaces any existing block with the same `id` so pages don't accumulate stale schema.
  */
-export function useJsonLd(id: string, data: JsonLd | JsonLd[] | null) {
+export function useJsonLd(id: string, input: JsonLd | JsonLd[] | null) {
+  const lang = useLang();
   useEffect(() => {
     const scriptId = `jsonld-${id}`;
     let el = document.getElementById(scriptId) as HTMLScriptElement | null;
 
+    // Sisäiset osoitteet sivun kielelle + kauttaviiva, sivun oma murupolku pois (src/lib/jsonLdUrls.ts).
+    const kept = Array.isArray(input) ? input.filter((x) => !isBreadcrumbList(x)) : isBreadcrumbList(input) ? null : input;
+    const data = kept && (!Array.isArray(kept) || kept.length) ? localizeJsonLd(kept, lang) : null;
     if (!data) {
       el?.remove();
       return;
@@ -35,7 +41,7 @@ export function useJsonLd(id: string, data: JsonLd | JsonLd[] | null) {
     return () => {
       // Leave it in place on unmount — page transitions will overwrite.
     };
-  }, [id, data]);
+  }, [id, input, lang]);
 }
 
 // ─── Schema builders ──────────────────────────────────────────────────────────

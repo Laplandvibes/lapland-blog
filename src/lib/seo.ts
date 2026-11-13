@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useLang, type Lang } from '../i18n/useLang';
 import { CANONICAL_LOCALE } from './canonicalLocale.gen';
+import { localizeJsonLd, isBreadcrumbList } from './jsonLdUrls';
 
 interface SeoOptions {
   title: string;
@@ -194,9 +195,10 @@ export function useSeo(opts: SeoOptions) {
     // JSON-LD (with inLanguage injection)
     document.querySelectorAll('script[data-seo-jsonld]').forEach((el) => el.remove());
     if (jsonLd) {
-      const data = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+      // Sisäiset osoitteet sivun kielelle + kauttaviiva, sivun oma murupolku pois (src/lib/jsonLdUrls.ts).
+      const data = (Array.isArray(jsonLd) ? jsonLd : [jsonLd]).filter((x) => !isBreadcrumbList(x));
       data.forEach((obj) => {
-        const cloned = injectInLanguage(JSON.parse(JSON.stringify(obj)), BCP47[lang]);
+        const cloned = localizeJsonLd(injectInLanguage(JSON.parse(JSON.stringify(obj)), BCP47[lang]), lang);
         const s = document.createElement('script');
         s.type = 'application/ld+json';
         s.setAttribute('data-seo-jsonld', 'true');
