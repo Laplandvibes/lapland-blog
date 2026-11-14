@@ -245,7 +245,9 @@ export function readFooterNetwork(cwd) {
 
 /**
  * <h1> ilman brändihäntää. Erillinen ja vietynä, jotta portti
- * (scripts/assert-h1-crawlable.mjs) mittaa täsmälleen samaa sääntöä kuin
+ * (lapland.blogin scripts/assert-h1-crawlable.mjs, joka tuo tämän funktion)
+ * ja lv-opsin testi (scripts/prerender_h1_brandihanta.test.mjs, portti
+ * prerender-h1) mittaavat täsmälleen samaa sääntöä kuin
  * rakentaja — kopioitu sääntö ajautuisi erilleen ensimmäisellä korjauksella.
  *
  * 🔴🔴 Mitattu 13.9.2026 livenä: ryömittävän lohkon <h1> oli KOKO title-tagi
@@ -303,8 +305,17 @@ export function stripBrandTail(title, siteName) {
   // 13.9.), mutta kolmen kielen "ensiaskeleet"-häntä säilyy niin kuin se
   // säilyy englannissa: "Start Here · Your First Steps on Lapland.blog" ei
   // ala brändillä eikä ole koskaan leikkautunut.
+  //
+  // 🔴 `media` on listassa mitatusta syystä (14.11.2026, kun sääntö tuotiin
+  // lapland.blogin kopiosta kanoniseen): hubin /fi/media/thanks/ on
+  // "Maksu vastaanotettu | LaplandVibes Media", ja vanha `startsWith` riisui
+  // sen. Ilman tätä sanaa häntä olisi palannut sille sivulle. Vertailu
+  // 28 sivuston 13 820 valmiista sivusta: se oli ainoa ero. Uusi
+  // alabrändi otsikon hännässä ("| LaplandVibes Shop") ⇒ lisää sana tähän JA
+  // testiin; tuntematon jatke jää tarkoituksella H1:een, koska väärin leikattu
+  // sisältösana on pahempi kuin kerran toistuva brändi.
   const rest = tail.slice(brand.length);
-  return rest === '' || /^(blog|com|fi|online|net|org)$/.test(rest) ? m[1].trim() : h1Text;
+  return rest === '' || /^(blog|media|com|fi|online|net|org)$/.test(rest) ? m[1].trim() : h1Text;
 }
 
 /**
@@ -358,7 +369,7 @@ export function buildCrawlableBody(
     ? paragraphs.filter((t) => typeof t === 'string' && t.trim())
     : [];
 
-  // ── H1 ilman brändihäntää (sääntö: stripBrandTail yllä, portti: assert-h1-crawlable.mjs)
+  // ── H1 ilman brändihäntää (sääntö: stripBrandTail yllä, portti: prerender-h1)
   const h1Text = stripBrandTail(title, siteName);
 
   const wrap = 'max-width:52rem;margin:0 auto;padding:12vh 1.5rem 4rem;color:inherit';
