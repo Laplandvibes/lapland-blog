@@ -54,13 +54,19 @@ export default function AuthorProfile() {
 
     async function run() {
       setLoading(true);
-      const { data: pData } = await supabase
+      const { data: pData, error: pErr } = await supabase
         .from('blog_profiles')
         .select('id, handle, display_name, bio, avatar_url, role, created_at')
         .eq('handle', lower)
         .maybeSingle();
 
       if (cancelled) return;
+
+      // Kantavirhe ei ole "profiilia ei ole": /404 asettaa noindexin (sama vika kuin Post.tsx 14.11.2026).
+      if (pErr) {
+        setLoading(false);
+        return;
+      }
 
       if (!pData) {
         setNotFound(true);

@@ -127,7 +127,9 @@ export default function Post() {
   const to = useLocalePath();
   const c = COPY[lang].post;
   const { slug } = useParams<{ slug: string }>();
-  const { post, loading, notFound } = usePost(slug);
+  // Esirenderöity juttu (slug POST_META:ssa) on julkaistu buildin hetkellä: sille ei koskaan näytetä 404:ää.
+  const urlSlug = slug && Object.hasOwn(POST_META, slug) ? slug : undefined;
+  const { post, loading, error } = usePost(slug, { expected: urlSlug !== undefined });
   const { related } = useRelated(post?.slug, post?.category, 2);
 
   // Generate hashtags for the post (brand + category + location-detected)
@@ -169,7 +171,6 @@ export default function Post() {
   // osoitteesta, joten arvot ovat oikein jo ennen kuin kanta vastaa (latauksen ajan canonical osoitti
   // ennen etusivulle). Reitittömällä (uudella) jutulla ei ole esirenderöityä sivua, joten sille kannan
   // otsikko ja ingressi, kun juttu on latautunut.
-  const urlSlug = slug && Object.hasOwn(POST_META, slug) ? slug : undefined;
   const seoSlug = post?.slug ?? urlSlug;
   const seoMeta = seoSlug && Object.hasOwn(POST_META, seoSlug) ? POST_META[seoSlug] : undefined;
   useSeo({
@@ -219,7 +220,39 @@ export default function Post() {
     );
   }
 
-  if (notFound || !post) {
+  if (!post) {
+    // 🔴 /404 vain kun kanta vastasi eikä juttua ole JA se ei ole esirenderöity. Virhe tai tyhjä vastaus
+    // tunnetulle jutulle näyttää jutun otsikon ja kuvauksen ilman noindexiä: 14.11.2026 yksi epäonnistunut
+    // haku Googlen käydessä teki julkaistusta jutusta "Noindex-tagin poissulkema" (usePost.ts).
+    if (error || urlSlug) {
+      const title = seoMeta ? seoMeta.title[lang] ?? seoMeta.title.en : undefined;
+      const description = seoMeta ? seoMeta.description[lang] ?? seoMeta.description.en : undefined;
+      return (
+        <div className="min-h-screen bg-night text-snow">
+          <Nav />
+          <main className="pt-40 pb-40 px-4 max-w-4xl mx-auto text-center">
+            {title && (
+              <h1
+                className="text-snow leading-[1.1] text-[clamp(1.8rem,5vw,2.8rem)] text-balance"
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
+              >
+                {title}
+              </h1>
+            )}
+            {description && (
+              <p className="mt-5 mx-auto max-w-2xl text-slate-300 text-lg text-balance">{description}</p>
+            )}
+            <Link
+              to={to('/stories')}
+              className="lv-tap inline-block mt-8 text-[var(--color-accent)] font-semibold underline underline-offset-4"
+            >
+              {c.allStories}
+            </Link>
+          </main>
+          <Footer />
+        </div>
+      );
+    }
     return <Navigate to="/404" replace />;
   }
 
