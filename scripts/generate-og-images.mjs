@@ -130,7 +130,9 @@ for (const card of CARDS) {
     if (m.maxY >= X_LABEL_Y) { failed.push(`${card.slug}: ink reaches y=${m.maxY}, the X title label starts above ${X_LABEL_Y}`); continue; }
     await sharp(base)
       .composite([{ input: overlaySvg(card.kicker), top: 0, left: 0 }])
-      .jpeg({ quality: 82, mozjpeg: true })
+      // 4:4:4 = värit täydellä tarkkuudella. Oletus 4:2:0 puolitti värin reunat, ja pinkki sanamerkki tummalla
+      // pohjalla näytti pehmeältä (Vesa 15.11.2026: "näyttää suttuiselta, ei terävältä"). Sama kuin verkoston kortit (card.mjs).
+      .jpeg({ quality: 82, mozjpeg: true, chromaSubsampling: '4:4:4' })
       .toFile(out);
     for (const season of ['summer', 'winter']) copyFileSync(out, resolve(OUT_DIR, `${card.slug}-${season}.jpg`));
     made++;
