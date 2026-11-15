@@ -18,7 +18,7 @@
 // measures it. gate:jakokuvat fails if a twin is missing or differs.
 
 import sharp from 'sharp';
-import { mkdirSync, copyFileSync } from 'node:fs';
+import { mkdirSync, copyFileSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -30,6 +30,13 @@ mkdirSync(OUT_DIR, { recursive: true });
 
 const W = 1200;
 const H = 630;
+
+// 🔴 Sanamerkki = VIRALLINEN tekstilogon muoto (Vesa 14.11.2026 hyväksyi #LAPLANDVIBES-tekstilogon, 15.11.: "korjaa
+// jakokuvat"). Kortissa ennen: Arial 800 -teksti, jonka muoto riippui CI-koneen fontista. Nyt valmis piirros
+// scripts/og-sanamerkki.json (lv-opsin tee_sanamerkit.mjs, sama menetelmä kuin virallinen logo): fonttiyksiköissä,
+// skaalataan kirjainkorkeuteen 44 px (Arialin versaali 58 px:ssä oli ~42 px), peruslinja ennallaan y = 158.
+const SM = JSON.parse(readFileSync(resolve(__dirname, 'og-sanamerkki.json'), 'utf8'));
+const SM_K = 44 / SM.kirjainkorkeus;
 
 // Each card: source hero + an overlaid kicker line. The brand wordmark is drawn
 // for every card. `slug` is the output filename (post slug or page name).
@@ -79,9 +86,9 @@ function overlaySvg(kicker, { text = true } = {}) {
         letter-spacing="6" fill="#F9A8D4">${safeKicker}</text>
   <rect x="64" y="${LOCKUP.rule}" width="64" height="4" rx="2" fill="#EC4899"/>
   <!-- brand wordmark -->
-  <text x="62" y="${LOCKUP.wordmark}" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" letter-spacing="1">
-    <tspan fill="#EC4899">#</tspan><tspan fill="#F9FAFB">LAPLAND</tspan><tspan fill="#EC4899">.BLOG</tspan>
-  </text>
+  <g transform="translate(64 ${(LOCKUP.wordmark - SM.pohjaviiva * SM_K).toFixed(2)}) scale(${SM_K.toFixed(6)})">
+    <path fill-rule="evenodd" fill="#EC4899" d="${SM.d.h}"/><path fill-rule="evenodd" fill="#FFFFFF" d="${SM.d.p}"/><path fill-rule="evenodd" fill="#EC4899" d="${SM.d.b}"/>
+  </g>
   <text x="64" y="${LOCKUP.tagline}" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500" fill="#CBD5E1">
     Start &amp; share your Finnish Lapland trip blog — free</text>` : ''}
 </svg>`);
