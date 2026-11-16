@@ -151,16 +151,16 @@ type Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' |
  * 🔴 Jokainen kortti on SAMAN rakenteinen (Vesa 16.11.2026 illalla: "miten on niin paljon tyhjää valkoista
  * grideissä?"). Ensimmäinen versio listasi paikan jutut otsikkoina kortissa: Rovaniemellä kolme, Levillä
  * nolla, ja koska rivin kortit ovat yhtä korkeita, Levin korttiin jäi 256–324 px valkoista (mitattu
- * `tyhja-tila.cjs`). Jutut ovat paikan sivulla, kortissa vain niiden määrä. Rivin korkeusero (kuvauksen
- * rivimäärä) menee KUVALLE (`flex-1`), ei valkoiseksi raoksi tekstin ja nappien väliin.
+ * `tyhja-tila.cjs`). Jutut ovat paikan sivulla, kortissa vain niiden määrä. Kuvat ovat saman korkuisia ja napit
+ * kortin pohjassa: rivin korkeusero on enää kuvauksen rivimäärä (yksi tai kaksi riviä), ei satoja pikseleitä.
  */
 function DestinationCard({ d, own, c, to, lang }: { d: Destination; own: Post[]; c: DestCopy; to: (p: string) => string; lang: Lang }) {
   const name = placeName(d, lang);
   const meta = c.places[d.slug as keyof DestCopy['places']];
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#0F172A]/10 bg-white shadow-[0_14px_34px_-24px_rgba(15,23,42,0.35)] transition-shadow duration-300 hover:shadow-[0_24px_48px_-26px_rgba(15,23,42,0.4)]">
-      <Link to={to(`/destinations/${d.slug}`)} className="relative block flex-1 overflow-hidden" tabIndex={-1} aria-hidden="true">
-        {/* Kuvan vähimmäiskorkeus (3:2); kuva itse täyttää sen, mitä kortin korkeudesta jää tekstin yli. */}
+      <Link to={to(`/destinations/${d.slug}`)} className="relative block overflow-hidden" tabIndex={-1} aria-hidden="true">
+        {/* Kuva on jokaisessa kortissa saman korkuinen (3:2), jotta rivin kuvat ja otsikot ovat samassa linjassa. */}
         <span className="block aspect-[3/2]" />
         <img
           src={d.hero}
@@ -175,7 +175,7 @@ function DestinationCard({ d, own, c, to, lang }: { d: Destination; own: Post[];
           </span>
         )}
       </Link>
-      <div className="p-5">
+      <div className="flex flex-1 flex-col p-5">
         <p className="text-[#BE185D] text-sm font-semibold mb-1">{meta?.region ?? d.region}</p>
         <h3 className="text-2xl text-[#0F172A] mb-2 leading-tight" style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}>
           <Link to={to(`/destinations/${d.slug}`)} className="hover:text-[#BE185D] transition-colors">
@@ -183,7 +183,7 @@ function DestinationCard({ d, own, c, to, lang }: { d: Destination; own: Post[];
           </Link>
         </h3>
         <p className="text-[#334155] text-base leading-relaxed mb-5">{meta?.blurb ?? d.blurb}</p>
-        <div className="grid gap-2.5">
+        <div className="mt-auto grid gap-2.5">
           <Link
             to={to(`/destinations/${d.slug}`)}
             className="inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-full bg-[#DB2777] px-4 text-[15px] font-semibold text-white hover:bg-[#BE185D] transition-colors"
