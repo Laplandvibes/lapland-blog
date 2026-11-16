@@ -36,12 +36,12 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
       className={
         isEditorial
           ? 'group relative rounded-xl overflow-hidden bg-[var(--color-cream)] border border-[var(--color-paper-border)] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300'
-          : 'group relative card-base overflow-hidden'
+          : 'group relative card-base overflow-hidden h-full flex flex-col'
       }
     >
       <Link
         to={lp(`/post/${post.slug}`)}
-        className="block focus:outline-none"
+        className="flex flex-1 flex-col focus:outline-none"
         aria-label={fillCopy(c.readPostAria, { title: post.title })}
       >
         <div className="relative aspect-[16/10] overflow-hidden">
@@ -77,7 +77,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
           )}
         </div>
 
-        <div className="p-6">
+        <div className="p-6 flex flex-1 flex-col">
           <p
             lang={textLang}
             className={
@@ -115,8 +115,8 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
           <div
             className={
               isEditorial
-                ? 'flex items-center justify-between pt-4 border-t border-[var(--color-paper-border)] text-sm text-[var(--color-ink-mute)]'
-                : 'flex items-center justify-between pt-4 border-t border-slate-800 text-sm text-slate-400'
+                ? 'mt-auto flex items-center justify-between pt-4 border-t border-[var(--color-paper-border)] text-sm text-[var(--color-ink-mute)]'
+                : 'mt-auto flex items-center justify-between pt-4 border-t border-slate-800 text-sm text-slate-400'
             }
           >
             <div className="flex items-center gap-3">
