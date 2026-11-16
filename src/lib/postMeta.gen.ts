@@ -116,18 +116,18 @@ export const POST_META: Record<string, PostMeta> = {
       "zh-CN": "罗瓦涅米的三文鱼汤：哪里喝、多少钱（英文）"
     },
     "description": {
-      "en": "Four Rovaniemi restaurants list salmon soup on their own menus, from 14 to 24.20 euros. Prices read on 5 November 2026.",
-      "sv": "Fyra restauranger i Rovaniemi har laxsoppa på sina egna menyer, för 14–24,20 euro. Priserna lästa den 5 november 2026.",
-      "fi": "Neljän rovaniemeläisen ravintolan listalla on lohikeitto, ja annos maksaa 14–24,20 euroa. Hinnat on luettu 5.11.2026.",
-      "de": "Vier Restaurants in Rovaniemi führen Lachssuppe auf der eigenen Karte, für 14 bis 24,20 Euro. Preise vom 5. November 2026.",
-      "es": "Cuatro restaurantes de Rovaniemi ofrecen sopa de salmón en su propia carta, de 14 a 24,20 euros. Precios consultados el 5 de noviembre de 2026.",
-      "fr": "Quatre restaurants de Rovaniemi proposent la soupe de saumon à leur propre carte, de 14 à 24,20 euros. Prix relevés le 5 novembre 2026.",
-      "it": "Quattro ristoranti di Rovaniemi hanno la zuppa di salmone nel proprio menu, da 14 a 24,20 euro. Prezzi letti il 5 novembre 2026.",
-      "nl": "Vier restaurants in Rovaniemi hebben zalmsoep op hun eigen menukaart, van 14 tot 24,20 euro. Prijzen gelezen op 5 november 2026.",
-      "ja": "ロヴァニエミの4軒のレストランが自店のメニューにサーモンスープを載せ、価格は14〜24.20ユーロ。2026年11月5日時点の価格です。",
-      "ko": "로바니에미 레스토랑 네 곳이 자체 메뉴에 연어 수프를 올렸고 가격은 14~24.20유로입니다. 2026년 11월 5일 기준입니다.",
-      "pt-BR": "Quatro restaurantes de Rovaniemi têm sopa de salmão no próprio cardápio, de 14 a 24,20 euros. Preços consultados em 5 de novembro de 2026.",
-      "zh-CN": "罗瓦涅米有四家餐厅在自家菜单上列出三文鱼汤，价格14至24.20欧元。价格查询于2026年11月5日。"
+      "en": "Four Rovaniemi restaurants list salmon soup on their own menus, from 14 to 24.20 euros. Prices read on 16 November 2026.",
+      "sv": "Fyra restauranger i Rovaniemi har laxsoppa på sina egna menyer, för 14–24,20 euro. Priserna lästa den 16 november 2026.",
+      "fi": "Neljän rovaniemeläisen ravintolan listalla on lohikeitto, ja annos maksaa 14–24,20 euroa. Hinnat on luettu 16.11.2026.",
+      "de": "Vier Restaurants in Rovaniemi führen Lachssuppe auf der eigenen Karte, für 14 bis 24,20 Euro. Preise vom 16. November 2026.",
+      "es": "Cuatro restaurantes de Rovaniemi ofrecen sopa de salmón en su propia carta, de 14 a 24,20 euros. Precios consultados el 16 de noviembre de 2026.",
+      "fr": "Quatre restaurants de Rovaniemi proposent la soupe de saumon à leur propre carte, de 14 à 24,20 euros. Prix relevés le 16 novembre 2026.",
+      "it": "Quattro ristoranti di Rovaniemi hanno la zuppa di salmone nel proprio menu, da 14 a 24,20 euro. Prezzi letti il 16 novembre 2026.",
+      "nl": "Vier restaurants in Rovaniemi hebben zalmsoep op hun eigen menukaart, van 14 tot 24,20 euro. Prijzen gelezen op 16 november 2026.",
+      "ja": "ロヴァニエミの4軒のレストランが自店のメニューにサーモンスープを載せ、価格は14〜24.20ユーロ。2026年11月16日時点の価格です。",
+      "ko": "로바니에미 레스토랑 네 곳이 자체 메뉴에 연어 수프를 올렸고 가격은 14~24.20유로입니다. 2026년 11월 16일 기준입니다.",
+      "pt-BR": "Quatro restaurantes de Rovaniemi têm sopa de salmão no próprio cardápio, de 14 a 24,20 euros. Preços consultados em 16 de novembro de 2026.",
+      "zh-CN": "罗瓦涅米有四家餐厅在自家菜单上列出三文鱼汤，价格14至24.20欧元。价格查询于2026年11月16日。"
     }
   },
   "living-between-two-suns": {
@@ -356,18 +356,18 @@ export const POST_META: Record<string, PostMeta> = {
       "zh-CN": "每天七分半钟：拉普兰秋季日照缩短的速度（英文）"
     },
     "description": {
-      "en": "In late August Rovaniemi loses about 7.5 minutes of daylight a day and Utsjoki nearly 9. The numbers, the reason and how to plan around them.",
-      "fi": "Elokuun lopussa päivä lyhenee Rovaniemellä noin 7,5 minuuttia ja Utsjoella lähes 9 minuuttia vuorokaudessa. Luvut, syy ja vinkit syksyn suunnitteluun.",
-      "sv": "I slutet av augusti blir dagen i Rovaniemi cirka 7,5 minuter kortare per dygn och i Utsjoki nästan 9. Siffrorna, orsaken och hur du planerar efter dem.",
-      "de": "Ende August verliert Rovaniemi etwa 7,5 Minuten Tageslicht pro Tag, Utsjoki fast 9. Die Zahlen, der Grund und wie man danach plant.",
-      "es": "A finales de agosto Rovaniemi pierde unos 7,5 minutos de luz diurna al día y Utsjoki casi 9. Las cifras, el motivo y cómo planificar el viaje.",
-      "fr": "Fin août, Rovaniemi perd environ 7,5 minutes de lumière du jour par jour et Utsjoki près de 9. Les chiffres, la cause et comment s’organiser.",
-      "it": "A fine agosto Rovaniemi perde circa 7,5 minuti di luce al giorno e Utsjoki quasi 9. I numeri, il motivo e come organizzarsi di conseguenza.",
-      "nl": "Eind augustus verliest Rovaniemi zo’n 7,5 minuut daglicht per dag en Utsjoki bijna 9. De cijfers, de reden en hoe u uw reis erop afstemt.",
-      "ja": "8月下旬、ロヴァニエミでは日照が1日あたり約7.5分、ウツヨキでは9分近く短くなります。その数字と理由、計画の立て方を解説します。",
-      "ko": "8월 말 로바니에미는 하루 약 7.5분, 우츠요키는 거의 9분씩 낮이 짧아집니다. 수치와 이유, 일정을 짜는 방법을 알려 드립니다.",
-      "pt-BR": "No fim de agosto, Rovaniemi perde cerca de 7,5 minutos de luz do dia por dia e Utsjoki quase 9. Os números, o motivo e como planejar a viagem.",
-      "zh-CN": "8月下旬，罗瓦涅米每天少约7.5分钟日照，乌茨约基接近9分钟。这些数字、背后的原因，以及该如何安排行程。"
+      "en": "In late August Rovaniemi loses about 7.5 minutes of daylight a day and Utsjoki about 9. The numbers, the reason and how to plan around them.",
+      "fi": "Elokuun lopussa päivä lyhenee Rovaniemellä noin 7,5 minuuttia ja Utsjoella noin 9 minuuttia vuorokaudessa. Luvut, syy ja vinkit syksyn suunnitteluun.",
+      "sv": "I slutet av augusti blir dagen i Rovaniemi cirka 7,5 minuter kortare per dygn och i Utsjoki cirka 9. Siffrorna, orsaken och hur du planerar efter dem.",
+      "de": "Ende August verliert Rovaniemi etwa 7,5 Minuten Tageslicht pro Tag, Utsjoki rund 9. Die Zahlen, der Grund und wie man danach plant.",
+      "es": "A finales de agosto Rovaniemi pierde unos 7,5 minutos de luz diurna al día y Utsjoki unos 9. Las cifras, el motivo y cómo planificar el viaje.",
+      "fr": "Fin août, Rovaniemi perd environ 7,5 minutes de lumière du jour par jour et Utsjoki environ 9. Les chiffres, la cause et comment s’organiser.",
+      "it": "A fine agosto Rovaniemi perde circa 7,5 minuti di luce al giorno e Utsjoki circa 9. I numeri, il motivo e come organizzarsi di conseguenza.",
+      "nl": "Eind augustus verliest Rovaniemi zo’n 7,5 minuut daglicht per dag en Utsjoki ongeveer 9. De cijfers, de reden en hoe u uw reis erop afstemt.",
+      "ja": "8月下旬、ロヴァニエミでは日照が1日あたり約7.5分、ウツヨキでは約9分短くなります。その数字と理由、計画の立て方を解説します。",
+      "ko": "8월 말 로바니에미는 하루 약 7.5분, 우츠요키는 약 9분씩 낮이 짧아집니다. 수치와 이유, 일정을 짜는 방법을 알려 드립니다.",
+      "pt-BR": "No fim de agosto, Rovaniemi perde cerca de 7,5 minutos de luz do dia por dia e Utsjoki cerca de 9. Os números, o motivo e como planejar a viagem.",
+      "zh-CN": "8月下旬，罗瓦涅米每天少约7.5分钟日照，乌茨约基约9分钟。这些数字、背后的原因，以及该如何安排行程。"
     }
   }
 };

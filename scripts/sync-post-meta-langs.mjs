@@ -40,6 +40,13 @@ for (const row of data ?? []) {
   bySlug.get(row.slug)[row.lang] = row;
 }
 
+// 🔴 Hakukuvaus EI ole jutun johdanto (16.11.2026). Tämä skripti kopioi ennen fi/sv-kuvauksen kannan excerpt-kentästä
+// jokaisessa buildissa. Kun jutut kirjoitettiin uudelleen ja johdanto sai olla 200 merkkiä, 24 hakukuvausta vaihtui
+// huomaamatta ja viisi katkesi kesken lauseen 160 merkin rajaan (esirenderöijä katkaisee). Kuvaus luetaan nyt
+// tiedostosta scripts/post-descriptions.json (70–160 merkkiä, natiiviluettu); johdanto on vain varalla uudelle jutulle,
+// ja silloinkin vain jos se mahtuu 160 merkkiin: muuten build varoittaa ja kieli putoaa englannin kuvaukseen.
+const PINNED = JSON.parse(readFileSync(new URL('./post-descriptions.json', import.meta.url), 'utf-8'));
+
 const routes = JSON.parse(readFileSync(ROUTES, 'utf-8'));
 let touched = 0;
 const langsSeen = new Set();
@@ -58,7 +65,10 @@ for (const route of routes) {
   for (const [lang, row] of Object.entries(translations)) {
     if (!row.title) continue;
     titles[lang] = row.title;
-    if (row.excerpt) descriptions[lang] = row.excerpt;
+    const pinned = PINNED[slug]?.[lang];
+    if (pinned) descriptions[lang] = pinned;
+    else if (row.excerpt && row.excerpt.length <= 160) descriptions[lang] = row.excerpt;
+    else if (row.excerpt) console.warn(`[post-meta] ⚠️  ${slug} ${lang}: ei kiinnitettyä hakukuvausta ja johdanto on ${row.excerpt.length} merkkiä (> 160). Lisää kuvaus tiedostoon scripts/post-descriptions.json.`);
     langsSeen.add(lang);
   }
   if (!Object.keys(titles).length) continue;
