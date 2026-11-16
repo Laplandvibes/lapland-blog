@@ -92,6 +92,13 @@ export const DESTINATIONS: Destination[] = [
 /** Name to show on the page in `lang`; search and URL parameters keep `name`. */
 export const placeName = (d: Destination, lang: Lang): string => d.localName?.[lang] ?? d.name;
 
+/** Paikan jutut: tagi = paikan slug tai sen lähiseutu (Kiilopää kuuluu Saariselkään). */
+const DEST_ALIASES: Record<string, string[]> = { saariselka: ['kiilopaa'] };
+export function postMatchesDestination(tags: string[], slug: string): boolean {
+  const want = [slug, ...(DEST_ALIASES[slug] ?? [])];
+  return tags.some((t) => want.includes(t.toLowerCase()));
+}
+
 export const destinationBySlug = (slug: string): Destination | undefined =>
   DESTINATIONS.find((d) => d.slug === slug);
 

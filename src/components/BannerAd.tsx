@@ -39,6 +39,8 @@ interface BannerAdProps {
   /** Optional supporting line override. */
   copy?: string;
   variant?: Variant;
+  /** `tint`: kortti valkoisen lukuarkin SISÄLLÄ (puhelin). Sävytetty pohja, ettei ole valkoista valkoisella. */
+  surface?: 'white' | 'tint';
 }
 
 interface PartnerCopy {
@@ -271,6 +273,11 @@ function anchorFinland(destination: string): string {
     : `${destination.replace(/[\s,]+$/, '')}, Finland`;
 }
 
+/** Korttikuva: maisemaa aiheesta (Pexels 18601299, kuitti src/data/photoCredits.ts "trip-cabin-life"). */
+const PARTNER_IMAGE: Partial<Record<Partner, string>> = {
+  hotels: '/images/trip-cabin-life-800.webp',
+};
+
 function buildHref(partner: Partner, sid: string, destination?: string, lang: Lang = 'en') {
   const params = new URLSearchParams({ sid });
   if (partner === 'hotels' && destination) params.set('ss', anchorFinland(destination));
@@ -292,6 +299,7 @@ export default function BannerAd({
   headline,
   copy,
   variant = 'editorial',
+  surface = 'white',
 }: BannerAdProps) {
   const lang = useLang();
   const defaults = PARTNER_COPY[partner][lang] ?? PARTNER_COPY[partner].en;
@@ -300,35 +308,35 @@ export default function BannerAd({
   const href = buildHref(partner, sid, destination, lang);
 
   if (variant === 'editorial') {
+    // Vaalea kortti kuvalla (Vesa 16.11.2026: "löydä mökkisi tai iglusi voisi olla vaaleampi pohja tai
+    // erottuvampi"). Valkoinen pinta vaalealla sivulla erottuu varjolla ja pinkillä yläreunalla, kuva kertoo
+    // aiheen ennen tekstiä, ja nappi on oikea nappi eikä pieni tekstilinkki. Kuva on maisemaa, ei kumppanin kohde.
+    const image = PARTNER_IMAGE[partner];
     return (
       <aside
-        className="rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] p-5 not-prose"
+        className={`not-prose overflow-hidden rounded-2xl border border-[#0F172A]/10 ${surface === 'tint' ? 'bg-[#F4F7FB]' : 'bg-white shadow-[0_18px_40px_-26px_rgba(15,23,42,0.45)]'}`}
         aria-label={marker.aria}
       >
-        <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] font-semibold mb-3">
-          {marker.label}
-        </p>
-        <div className="flex items-start gap-3 mb-3">
-          <Icon size={20} className="text-[var(--color-accent)] shrink-0 mt-0.5" />
-          <h4
-            className="text-[var(--color-ink)] text-base font-medium leading-snug"
-            style={{ fontFamily: 'var(--font-editorial)' }}
-          >
+        {image && (
+          <img src={image} alt="" aria-hidden="true" loading="lazy" decoding="async" width={800} height={500} className="block w-full aspect-[16/10] object-cover" />
+        )}
+        <div className="border-t-4 border-[#DB2777] p-5">
+          <p className={`${surface === 'tint' ? 'text-base' : 'text-sm'} text-[#475569] font-semibold mb-2`}>{marker.label}</p>
+          <h4 className="flex items-start gap-2.5 text-lg font-bold text-[#0F172A] leading-snug mb-2" style={{ fontFamily: 'var(--font-editorial)' }}>
+            <Icon size={20} className="text-[#DB2777] shrink-0 mt-1" />
             {headline ?? defaults.headline}
           </h4>
+          <p className="text-base text-[#334155] leading-relaxed mb-4">{copy ?? defaults.copy}</p>
+          <a
+            href={href}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            className="flex w-full items-center justify-center gap-2 h-11 rounded-full bg-[#DB2777] px-5 text-base font-semibold text-white hover:bg-[#BE185D] transition-colors"
+          >
+            {defaults.cta}
+            <ArrowUpRight size={16} />
+          </a>
         </div>
-        <p className="text-sm text-[var(--color-ink-soft)] leading-relaxed mb-4">
-          {copy ?? defaults.copy}
-        </p>
-        <a
-          href={href}
-          target="_blank"
-          rel="sponsored nofollow noopener"
-          className="lv-tap inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] transition-colors"
-        >
-          {defaults.cta}
-          <ArrowUpRight size={14} />
-        </a>
       </aside>
     );
   }
@@ -339,7 +347,7 @@ export default function BannerAd({
       className="rounded-xl border border-purple/25 bg-night-light/60 p-5"
       aria-label={marker.aria}
     >
-      <p className="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-semibold mb-3">
+      <p className="text-sm text-slate-400 font-semibold mb-3">
         {marker.label}
       </p>
       <div className="flex items-start gap-3 mb-3">

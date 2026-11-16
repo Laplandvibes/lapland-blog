@@ -47,8 +47,8 @@ export default function AuthorBio({ variant = 'editorial', author }: Props) {
           <p
             className={
               isEditorial
-                ? 'text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-1'
-                : 'text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-1'
+                ? 'text-sm text-[var(--color-ink-mute)] mb-1'
+                : 'text-sm text-slate-400 mb-1'
             }
           >
             {c.fieldJournalEntry}
@@ -76,8 +76,8 @@ export default function AuthorBio({ variant = 'editorial', author }: Props) {
             to={lp('/about')}
             className={
               isEditorial
-                ? 'inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-sm font-semibold uppercase tracking-wider transition-colors'
-                : 'inline-flex items-center gap-1.5 text-pink hover:text-pink-dark text-sm font-semibold uppercase tracking-wider transition-colors'
+                ? 'inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-sm font-semibold transition-colors'
+                : 'inline-flex items-center gap-1.5 text-pink hover:text-pink-dark text-sm font-semibold transition-colors'
             }
           >
             {c.aboutBlogLink}

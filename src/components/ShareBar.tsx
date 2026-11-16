@@ -157,7 +157,7 @@ export default function ShareBar({ slug, title, excerpt = '', hashtags = '', pat
       className="max-w-[65ch] mx-auto mt-14 pt-8 border-t border-[var(--color-paper-border)]"
       aria-label={c.shareThisStory}
     >
-      <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-4 font-semibold">
+      <p className="text-sm text-[var(--color-ink-mute)] mb-4 font-semibold">
         {c.shareThisStory}
       </p>
       <div className="flex flex-wrap gap-2">
@@ -181,7 +181,7 @@ export default function ShareBar({ slug, title, excerpt = '', hashtags = '', pat
         <button
           type="button"
           onClick={handleCopy}
-          className="group inline-flex items-center gap-2 px-4 h-11 rounded-full border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] text-[var(--color-ink-soft)] hover:bg-[var(--color-accent)] hover:text-white hover:border-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-cream)] transition-colors cursor-pointer text-xs font-semibold uppercase tracking-[0.15em]"
+          className="group inline-flex items-center gap-2 px-4 h-11 rounded-full border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] text-[var(--color-ink-soft)] hover:bg-[var(--color-accent)] hover:text-white hover:border-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-cream)] transition-colors cursor-pointer text-sm font-semibold"
         >
           {copied ? (
             <>

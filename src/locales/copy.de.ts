@@ -5,7 +5,7 @@ const de: SectionCopy = {
     startHere: 'Hier starten',
     topReads: 'Beliebt',
     destinations: 'Reiseziele',
-    tripDiaries: 'Reisetagebücher',
+    tripDiaries: 'Alle Geschichten',
     about: 'Über uns',
     startYourBlog: 'Foto hinzufügen',
     signIn: 'Anmelden',
@@ -305,6 +305,8 @@ const de: SectionCopy = {
     stayCta: 'Ansehen',
   },
   destinations: {
+    openPlace: 'Geschichten und Tipps',
+    stayButton: 'Unterkünfte ansehen',
     metaTitle: 'Reiseziele',
     metaDescription:
       'Die acht wichtigsten Ziele im finnischen Lappland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lesen Sie die Einträge.',
@@ -312,7 +314,7 @@ const de: SectionCopy = {
     h1Pre: 'Acht Orte.',
     h1Italic: 'Ein Lappland.',
     lead:
-      'Wählen Sie ein Ziel und lesen Sie die Einträge von dort. Wo noch nichts steht, ist der nächste Eintrag frei: Sie können der oder die Erste sein.',
+      'Wählen Sie einen Ort. Zu jedem Ort sehen Sie die Geschichten, die dort entstanden sind, und auf der Ortsseite finden Sie Unterkünfte, Restaurants und Aktivitäten.',
     beTheFirst: 'Erste/r sein',
     entrySingular: 'Eintrag',
     entryPlural: 'Einträge',
@@ -399,6 +401,7 @@ const de: SectionCopy = {
     contentsAria: 'Auf dieser Seite',
   },
   archive: {
+    allTopics: 'Alle Themen',
     placesLabel: 'Ort',
     allPlaces: 'Alle Orte',
     metaTitle: 'Alle Geschichten',
@@ -514,6 +517,9 @@ const de: SectionCopy = {
     },
     editorialLabel: 'LaplandVibes-Redaktion',
     sourcesLabel: 'Quellen und Methode',
+    checkHint: 'Haken Sie jeden Punkt ab, sobald er erledigt ist. Ihre Häkchen bleiben auf diesem Gerät gespeichert.',
+    checkProgress: '{done} von {total} erledigt',
+    checkReset: 'Häkchen entfernen',
     editorialNote: 'Von unserer Redaktion geschrieben, kein Reisetagebuch aus der Leserschaft.',
     readerLabel: 'Reisetagebuch aus der Leserschaft',
     readerNote: 'Geschrieben von einer Leserin oder einem Leser über die eigene Reise.',
@@ -560,6 +566,7 @@ const de: SectionCopy = {
       'Juli’,’August’,’September’,’Oktober’,’November’,’Dezember',
     ],
     googleAria: 'Mit Google anmelden',
+    orContinue: 'oder',
     facebookAria: 'Mit Facebook anmelden',
     openingLabel: 'Wird geöffnet…',
   },

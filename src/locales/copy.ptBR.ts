@@ -5,7 +5,7 @@ const ptBR: SectionCopy = {
     startHere: 'Comece por aqui',
     topReads: 'Mais lidos',
     destinations: 'Destinos',
-    tripDiaries: 'Diários de viagem',
+    tripDiaries: 'Todas as histórias',
     about: 'Sobre',
     startYourBlog: 'Adicionar foto',
     signIn: 'Entrar',
@@ -304,6 +304,8 @@ const ptBR: SectionCopy = {
     stayCta: 'Ver',
   },
   destinations: {
+    openPlace: 'Histórias e dicas',
+    stayButton: 'Ver hospedagens',
     metaTitle: 'Destinos na Lapônia',
     metaDescription:
       'Os oito principais destinos da Lapônia finlandesa: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Leia as entradas de cada um.',
@@ -311,7 +313,7 @@ const ptBR: SectionCopy = {
     h1Pre: 'Oito lugares.',
     h1Italic: 'Uma Lapônia.',
     lead:
-      'Escolha um destino e leia as entradas escritas de lá. Os vazios são os próximos a escrever, você pode ser o primeiro.',
+      'Escolha um lugar. Cada cartão mostra as histórias escritas lá, e a página do lugar leva a hospedagens, restaurantes e atividades.',
     beTheFirst: 'Seja o primeiro',
     entrySingular: 'entrada',
     entryPlural: 'entradas',
@@ -397,6 +399,7 @@ const ptBR: SectionCopy = {
     contentsAria: 'Nesta página',
   },
   archive: {
+    allTopics: 'Todos os temas',
     placesLabel: 'Lugar',
     allPlaces: 'Todos os lugares',
     metaTitle: 'Todas as histórias',
@@ -512,6 +515,9 @@ const ptBR: SectionCopy = {
     },
     editorialLabel: 'Redação do LaplandVibes',
     sourcesLabel: 'Fontes e método',
+    checkHint: 'Marque cada item conforme for concluindo. As marcações ficam salvas neste aparelho.',
+    checkProgress: 'Concluídos: {done} de {total}',
+    checkReset: 'Limpar marcações',
     editorialNote: 'Escrito pela nossa redação; não é o diário de viagem de um leitor.',
     readerLabel: 'Diário de viagem de um leitor',
     readerNote: 'Escrito por um leitor do LaplandVibes sobre a própria viagem.',
@@ -558,6 +564,7 @@ const ptBR: SectionCopy = {
       'julho’,’agosto’,’setembro’,’outubro’,’novembro’,’dezembro',
     ],
     googleAria: 'Entrar com o Google',
+    orContinue: 'ou',
     facebookAria: 'Entrar com o Facebook',
     openingLabel: 'Abrindo…',
   },

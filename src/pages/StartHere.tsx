@@ -66,7 +66,7 @@ export default function StartHere() {
       {/* Hero: korkeus oli sisällön varassa (pt-32 pb-20) ja jäi matalaksi
           (Vesa 2026-09-15: "hero osio on hyvä, liian matala tosin"). Sama
           minimikorkeus kuin arkistosivulla, jotta kuva ehtii kantaa. */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[62vh] md:min-h-[70vh] flex items-center">
+      <section className="lv-night relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[62vh] md:min-h-[70vh] flex items-center">
         {/* Oma valokuva: Sallan tunturin laelta elokuussa 2026, EXIF klo 21:59.
             Kolme sivua kaytti aiemmin samaa hero-dusk-lake-kuvaa (Vesa 15.9.:
             "eikö kohteet sivun kuva ole lähes sama kuin aloita tästä"). */}
@@ -89,7 +89,7 @@ export default function StartHere() {
           <Reveal>
             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-night/70 border border-pink/40">
               <span className="w-1.5 h-1.5 rounded-full bg-pink animate-pulse" />
-              <p className="text-white tracking-[0.35em] text-[10px] font-bold uppercase">
+              <p className="text-white text-sm font-bold">
                 {c.eyebrow}
               </p>
             </div>
@@ -160,7 +160,7 @@ export default function StartHere() {
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full bg-night/70 border border-pink/40">
                 <span className="w-1.5 h-1.5 rounded-full bg-pink animate-pulse" />
-                <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
+                <p className="text-pink text-sm font-bold">
                   {c.planEyebrow}
                 </p>
               </div>
@@ -230,7 +230,7 @@ export default function StartHere() {
               href="https://laplandvibes.com"
               target="_blank"
               rel="noopener"
-              className="lv-tap inline-flex items-center gap-2 text-pink hover:text-snow text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+              className="lv-tap inline-flex items-center gap-2 text-pink hover:text-snow text-sm font-semibold transition-colors"
             >
               {c.planAllSites}
               <ArrowRight size={14} />
@@ -243,7 +243,7 @@ export default function StartHere() {
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3 text-center lg:text-left">
+              <p className="text-pink text-sm font-bold mb-3 text-center lg:text-left">
                 {c.onlyEyebrow}
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-2 text-center lg:text-left">
@@ -254,7 +254,7 @@ export default function StartHere() {
               </p>
               <Link
                 to={to(`/post/${intro.slug}`)}
-                className="group grid overflow-hidden rounded-2xl md:grid-cols-[1.05fr_1fr] border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+                className="group grid overflow-hidden rounded-2xl md:grid-cols-[1.05fr_1fr] border border-slate-900/10 bg-white shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)] transition-shadow duration-200 hover:shadow-[0_24px_48px_-26px_rgba(15,23,42,0.34)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
               >
                 <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[240px] overflow-hidden">
                   <img
@@ -269,14 +269,14 @@ export default function StartHere() {
                   />
                 </div>
                 <div className="flex flex-col justify-center p-6 md:p-8">
-                  <p lang={postTextLang(intro, lang)} className="text-pink-300 text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
+                  <p lang={postTextLang(intro, lang)} className="text-pink-300 text-sm font-bold mb-3">
                     {intro.kicker}
                   </p>
                   <h3 lang={postTextLang(intro, lang)} className="font-display text-2xl text-snow font-medium leading-[1.15] mb-3">
                     {intro.title}
                   </h3>
                   <p lang={postTextLang(intro, lang)} className="text-slate-300 text-sm leading-relaxed line-clamp-3">{intro.excerpt}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-snow/90">
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-snow/90">
                     {COPY[lang].home.readFirstRead}
                     <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -291,7 +291,7 @@ export default function StartHere() {
         <section className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="max-w-6xl mx-auto">
             <Reveal>
-              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-3 text-center lg:text-left">
+              <p className="text-pink text-sm font-bold mb-3 text-center lg:text-left">
                 {c.thenEyebrow}
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight text-snow mb-10 text-center lg:text-left">
@@ -309,7 +309,7 @@ export default function StartHere() {
             <div className="mt-12 text-center">
               <Link
                 to={to('/stories')}
-                className="lv-tap inline-flex items-center gap-2 text-pink hover:text-snow text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+                className="lv-tap inline-flex items-center gap-2 text-pink hover:text-snow text-sm font-semibold transition-colors"
               >
                 {c.everyEntry}
                 <ArrowRight size={14} />
@@ -343,18 +343,18 @@ function PathCard({ kicker, title, body, cta, to, Icon, isAnchor }: PathCardProp
   const inner = (
     <>
       <div className="flex items-center gap-3 mb-5">
-        <Icon size={20} className="text-pink" />
-        <Erotinrivi className="tracking-[0.3em] text-[10px] font-bold uppercase text-pink" osat={erotinOsat(kicker)} />
+        <span className="w-12 h-12 shrink-0 rounded-2xl bg-pink-cta/10 text-pink-cta flex items-center justify-center"><Icon size={22} /></span>
+        <Erotinrivi className=" text-sm font-bold text-pink" osat={erotinOsat(kicker)} />
       </div>
-      <h3 className="font-display text-2xl text-snow mb-3 leading-tight">{title}</h3>
-      <p className="text-slate-300 text-sm leading-relaxed mb-6">{body}</p>
-      <span className="inline-flex items-center gap-1.5 text-pink group-hover:text-snow text-xs uppercase tracking-[0.2em] font-semibold transition-colors">
+      <h3 className="font-display text-2xl font-extrabold text-snow mb-3 leading-tight">{title}</h3>
+      <p className="text-slate-300 text-base leading-relaxed mb-6">{body}</p>
+      <span className="mt-auto self-start inline-flex items-center gap-2 h-11 px-5 rounded-full bg-pink-cta text-white text-base font-semibold transition-colors group-hover:bg-pink-dark">
         {cta}
         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
       </span>
     </>
   );
-  const cls = `group block h-full rounded-2xl border border-purple/25 bg-night-light/40 p-7 transition-all duration-300 hover:bg-night-light/60 hover:-translate-y-1 hover:border-pink/55`;
+  const cls = `group flex flex-col h-full rounded-2xl border border-slate-900/10 bg-white p-7 shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)] transition-all duration-300 hover:-translate-y-1 hover:border-pink/50`;
   if (isAnchor) {
     return (
       <a href={to} className={cls}>
@@ -389,7 +389,7 @@ function PlanCard({ kicker, title, body, href, cta, Icon, img, gradient = 'from-
       href={href}
       target="_blank"
       rel="noopener"
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)] transition-shadow duration-200 hover:shadow-[0_30px_64px_-28px_rgba(2,6,23,0.95)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-900/10 bg-white shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)] transition-shadow duration-200 hover:shadow-[0_24px_48px_-26px_rgba(15,23,42,0.34)] hover:border-pink/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink"
     >
       {/* Kuva omalla alueellaan. Aiemmin kuva oli kortin taustana ja teksti sen
           paalla, jolloin teksti peitti aiheen ja tarvitsi neljä drop-shadowia
@@ -405,17 +405,17 @@ function PlanCard({ kicker, title, body, href, cta, Icon, img, gradient = 'from-
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-night/10 to-transparent" />
+
       </div>
 
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-2 flex items-center gap-2">
           <Icon size={16} className="text-pink" />
-          <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase">{kicker}</p>
+          <p className="text-pink text-sm font-bold">{kicker}</p>
         </div>
         <h3 className="font-display text-xl text-snow mb-2 leading-tight">{title}</h3>
         <p className="text-slate-300 text-sm leading-relaxed mb-4">{body}</p>
-        <span className="mt-auto inline-flex items-center gap-1.5 text-pink group-hover:text-snow text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors">
+        <span className="mt-auto inline-flex items-center gap-1.5 text-pink group-hover:text-snow text-sm font-semibold transition-colors">
           {cta}
           <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
         </span>

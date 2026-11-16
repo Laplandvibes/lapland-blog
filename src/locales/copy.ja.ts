@@ -5,7 +5,7 @@ const ja: SectionCopy = {
     startHere: 'はじめに',
     topReads: 'おすすめ記事',
     destinations: '目的地',
-    tripDiaries: '旅行記',
+    tripDiaries: 'すべての記事',
     about: '当サイトについて',
     startYourBlog: '写真を追加',
     signIn: 'サインイン',
@@ -304,6 +304,8 @@ const ja: SectionCopy = {
     stayCta: '見る',
   },
   destinations: {
+    openPlace: '記事と旅のヒント',
+    stayButton: '宿泊先を見る',
     metaTitle: 'ラップランドの目的地',
     metaDescription:
       'フィンランド・ラップランドの主要8つの目的地：ロヴァニエミ、サーリセルカ、レヴィ、ケミ、イナリ、ムオニオ、ユッラス、ケミヤルヴィ。各地のフィールドジャーナル記事を読むか、最初の記事を書いてください。',
@@ -311,7 +313,7 @@ const ja: SectionCopy = {
     h1Pre: '八つの場所、',
     h1Italic: '一つのラップランド。',
     lead:
-      '目的地を選び、そこからの記事を読みましょう。空のものは次に書かれるべき場所です。あなたが最初の書き手になれます。',
+      '行き先を選んでください。カードにはその土地で書かれた記事が並び、行き先のページから宿泊先、レストラン、アクティビティを探せます。',
     beTheFirst: '最初の一人になる',
     entrySingular: '記事',
     entryPlural: '記事',
@@ -397,6 +399,7 @@ const ja: SectionCopy = {
     contentsAria: 'このページの内容',
   },
   archive: {
+    allTopics: 'すべてのテーマ',
     placesLabel: '場所',
     allPlaces: 'すべての場所',
     metaTitle: 'すべての記事',
@@ -512,6 +515,9 @@ const ja: SectionCopy = {
     },
     editorialLabel: 'LaplandVibes編集部',
     sourcesLabel: '出典と調べ方',
+    checkHint: '終わった項目にチェックを入れてください。チェックはこの端末に保存されます。',
+    checkProgress: '{total}項目中{done}項目完了',
+    checkReset: 'チェックをすべて外す',
     editorialNote: '編集部が書いた記事です。読者の旅日記ではありません。',
     readerLabel: '読者の旅日記',
     readerNote: 'LaplandVibesの読者が自分の旅について書いた記事です。',
@@ -558,6 +564,7 @@ const ja: SectionCopy = {
       '7月’,’8月’,’9月’,’10月’,’11月’,’12月',
     ],
     googleAria: 'Googleでサインイン',
+    orContinue: 'または',
     facebookAria: 'Facebookでサインイン',
     openingLabel: '開いています…',
   },

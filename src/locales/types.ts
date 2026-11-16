@@ -236,6 +236,8 @@ export type SectionCopy = {
     stayCta: string;
   };
   destinations: {
+    openPlace: string;
+    stayButton: string;
     metaTitle: string;
     metaDescription: string;
     eyebrow: string;
@@ -292,6 +294,7 @@ export type SectionCopy = {
     contentsAria: string;
   };
   archive: {
+    allTopics: string;
     placesLabel: string;
     allPlaces: string;
     metaTitle: string;
@@ -357,6 +360,10 @@ export type SectionCopy = {
     networkCards: Record<CrossSiteKey, { label: string; blurb: string }>;
     editorialLabel: string;
     sourcesLabel: string;
+    /** Rastilista (16.11.2026): ohje, edistyminen {done}/{total}, tyhjennys. */
+    checkHint: string;
+    checkProgress: string;
+    checkReset: string;
     editorialNote: string;
     readerLabel: string;
     readerNote: string;
@@ -400,6 +407,7 @@ export type SectionCopy = {
     months: string[];
     /** Accessible names of the OAuth buttons; the visible text is the provider name. */
     googleAria: string;
+    orContinue: string;
     facebookAria: string;
     /** Button text while the OAuth window is opening. */
     openingLabel: string;

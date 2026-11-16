@@ -51,6 +51,8 @@ const fi: MeCopy = {
     myBlog: 'Oma blogi',
   },
   dashboard: {
+    newPostH2: 'Uusi julkaisu',
+    myPostsH2: 'Julkaisusi',
     metaTitle: 'Oma matkablogi',
     h1: 'Oma matkablogi',
     yourPage: 'Matkasivusi',

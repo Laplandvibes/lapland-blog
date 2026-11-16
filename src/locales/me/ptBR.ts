@@ -51,6 +51,8 @@ const ptBR: MeCopy = {
     myBlog: 'Meu blog',
   },
   dashboard: {
+    newPostH2: 'Nova publicação',
+    myPostsH2: 'Suas publicações',
     metaTitle: 'Meu blog de viagem',
     h1: 'Meu blog de viagem',
     yourPage: 'Sua página de viagem',

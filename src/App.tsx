@@ -106,6 +106,8 @@ export default function App() {
       <LocaleAutoRedirect />
       <LocaleSync />
       <CopyGate>
+      {/* Vaalea blogi 16.11.2026: reitit vaalealla pohjalla, ks. index.css VAALEA BLOGI. */}
+      <div className="lv-light contents">
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -421,6 +423,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+      </div>
       </CopyGate>
       <LocalisedCookieBanner />
       <NewsletterPopup />

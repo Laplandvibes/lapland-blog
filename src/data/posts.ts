@@ -26,7 +26,12 @@ export type PostBlock =
   // src/lib/images.ts). `full` renders edge-to-edge (full-bleed) between
   // sections; otherwise it sits within the text measure. `caption` is shown
   // below in the editorial caption style.
-  | { type: 'image'; src: string; alt: string; caption?: string; full?: boolean };
+  | { type: 'image'; src: string; alt: string; caption?: string; credit?: string; full?: boolean }
+  /**
+   * Tietokortti (16.11.2026, verkoston jutturakenne 11.11.): rivit muotoa "Nimi: tieto". Jutun alussa
+   * lyhyesti tärkeimmät luvut, päivät ja paikat; myös keskellä juttua nimi: tieto -luettelon tilalla.
+   */
+  | { type: 'facts'; title?: string; items: string[] };
 
 export interface Post {
   slug: string;

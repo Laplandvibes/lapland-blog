@@ -34,7 +34,7 @@ export default function Terms() {
   return (
     <>
       <Nav />
-      <TermsContent siteName="Lapland Blog" siteUrl="https://lapland.blog" lang={lang} />
+      <div className="lv-legal"><TermsContent siteName="Lapland Blog" siteUrl="https://lapland.blog" lang={lang} /></div>
       <Footer />
     </>
   );

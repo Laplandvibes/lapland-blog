@@ -51,6 +51,8 @@ const zhCN: MeCopy = {
     myBlog: '我的博客',
   },
   dashboard: {
+    newPostH2: '新帖子',
+    myPostsH2: '你的帖子',
     metaTitle: '我的旅行博客',
     h1: '我的旅行博客',
     yourPage: '你的旅行主页',

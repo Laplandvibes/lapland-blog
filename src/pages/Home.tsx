@@ -194,7 +194,7 @@ export default function Home() {
             <p className="mt-4 text-sm text-slate-400 text-center lg:text-left">{p.fine}</p>
           </div>
 
-          <div className="order-1 lg:order-2 min-w-0">
+          <div className="lv-night order-1 lg:order-2 min-w-0">
             <div className="flex gap-2.5 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-1 lg:mx-0 lg:px-0 lg:overflow-visible lg:grid lg:grid-cols-3 lg:gap-3.5 lg:items-start [scrollbar-width:none]">
               {COLUMNS.map((col, ci) => (
                 <div key={ci} className={`contents lg:flex lg:flex-col lg:gap-3.5 ${ci === 1 ? 'lg:pt-12' : ci === 2 ? 'lg:self-center' : ''}`}>
@@ -202,18 +202,19 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-base leading-relaxed text-snow/75 text-left">{p.wallCredit}</p>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 text-left">{p.wallCredit}</p>
           </div>
         </div>
       </section>
 
-      {/* Paid main partner slot: sold as "right under the hero". */}
-      <MainPartnerBanner config={AD_SLOTS} locale={lang} />
+      {/* Paid main partner slot: sold as "right under the hero". Vesa 16.11.2026: the empty
+          "Haluatko mainoksesi tähän?" sign "ei sovi tänne ollenkaan" ⇒ rendered only once sold. */}
+      {(AD_SLOTS.mainPartner ?? AD_SLOTS.sponsors?.[0]) && <MainPartnerBanner config={AD_SLOTS} locale={lang} />}
 
       {/* STORY CARD */}
       <section id="tarinakuva" className="scroll-mt-24 border-t border-slate-800 py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-16 items-center">
-          <div className="mx-auto w-[250px] sm:w-[280px] aspect-[9/18] rounded-[40px] border-[10px] border-night-light overflow-hidden relative shadow-[0_30px_60px_rgba(0,0,0,0.45)]">
+          <div className="lv-night mx-auto w-[250px] sm:w-[280px] aspect-[9/18] rounded-[40px] border-[10px] border-night-light overflow-hidden relative shadow-[0_30px_60px_rgba(0,0,0,0.45)]">
             <img
               src={`/images/kuvaseina/${STORY.file}-960.webp`}
               alt={p[STORY.alt]}
@@ -236,13 +237,13 @@ export default function Home() {
               {p.shareH2}
             </h2>
             <p className="text-slate-200 text-lg leading-relaxed mb-7 max-w-2xl mx-auto lg:mx-0">{p.shareLead}</p>
-            <ol className="grid gap-3.5 mb-8 max-w-xl mx-auto lg:mx-0">
+            <ol className="grid gap-3 mb-8 max-w-xl mx-auto lg:mx-0">
               {[p.step1, p.step2, p.step3].map((s, i) => (
-                <li key={i} className="grid grid-cols-[2rem_1fr] gap-3 items-start text-slate-100 leading-relaxed">
-                  <span className="w-8 h-8 rounded-full border border-slate-600 bg-night-light flex items-center justify-center font-display font-extrabold text-sm text-pink-300">
+                <li key={i} className="grid grid-cols-[2.75rem_1fr] gap-4 items-center rounded-2xl border border-slate-900/10 bg-white px-4 py-4 shadow-[0_10px_26px_-20px_rgba(15,23,42,0.35)] text-lg font-semibold text-snow leading-snug">
+                  <span className="w-11 h-11 rounded-full bg-pink-cta text-white flex items-center justify-center font-display font-extrabold text-xl">
                     {i + 1}
                   </span>
-                  <span className="pt-0.5">{s}</span>
+                  <span>{s}</span>
                 </li>
               ))}
             </ol>

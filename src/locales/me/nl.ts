@@ -51,6 +51,8 @@ const nl: MeCopy = {
     myBlog: 'Mijn blog',
   },
   dashboard: {
+    newPostH2: 'Nieuw bericht',
+    myPostsH2: 'Uw berichten',
     metaTitle: 'Mijn reisblog',
     h1: 'Mijn reisblog',
     yourPage: 'Uw reispagina',

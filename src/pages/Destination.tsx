@@ -22,7 +22,7 @@ import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
 import PostCard from '../components/PostCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
-import { destinationBySlug, placeName, stayUrl } from '../data/destinations';
+import { destinationBySlug, placeName, stayUrl, postMatchesDestination } from '../data/destinations';
 import { destinationDescription } from '../data/destinationMeta.mjs';
 import { networkLinksFor } from '../data/destinationLinks';
 import { usePosts } from '../hooks/usePosts';
@@ -48,7 +48,7 @@ export default function Destination() {
   const kuvaus = paikka?.blurb ?? d?.blurb ?? '';
 
   // Kohteen merkinnät: tagi täsmää slugiin. Sama sääntö kuin listasivun laskuri.
-  const omat = d ? posts.filter((p) => p.tags.some((t) => t.toLowerCase() === d.slug)) : [];
+  const omat = d ? posts.filter((p) => postMatchesDestination(p.tags, d.slug)) : [];
   const verkosto = d ? networkLinksFor(d.slug) : [];
 
   useSeo({
@@ -96,13 +96,13 @@ export default function Destination() {
           <div className="max-w-4xl mx-auto bg-[var(--color-cream)] border border-[var(--color-paper-border)] rounded-[1.5rem] px-5 py-8 sm:px-8 md:px-12 md:py-12">
             <Link
               to={to('/destinations')}
-              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.25em] font-bold mb-5"
+              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-sm font-bold mb-5"
             >
               <ArrowLeft size={12} />
               {c.backToAll}
             </Link>
 
-            <p className="text-[var(--color-ink-mute)] tracking-[0.28em] text-[10px] font-bold uppercase mb-3 flex items-center gap-1.5">
+            <p className="text-[var(--color-ink-mute)] text-sm font-bold mb-3 flex items-center gap-1.5">
               <MapPin size={11} className="text-[var(--color-accent)]" />
               {alue}
             </p>
@@ -125,7 +125,7 @@ export default function Destination() {
         <section className="px-4 sm:px-6 lg:px-8 py-12 md:py-16" aria-labelledby="dest-network">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <p className="text-[var(--color-accent)] tracking-[0.32em] text-[10px] font-bold uppercase mb-3 text-center lg:text-left">
+              <p className="text-[var(--color-accent)] text-sm font-bold mb-3 text-center lg:text-left">
                 {c.networkEyebrow}
               </p>
               <h2
@@ -198,7 +198,7 @@ export default function Destination() {
               <Reveal>
                 <Link
                   to={to(`/stories?place=${d.slug}`)}
-                  className="lv-tap inline-flex items-center gap-1.5 mt-8 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.25em] font-bold min-h-[44px]"
+                  className="lv-tap inline-flex items-center gap-1.5 mt-8 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-sm font-bold min-h-[44px]"
                 >
                   {c.allEntriesLink}
                   <ArrowRight size={12} />
@@ -220,7 +220,7 @@ export default function Destination() {
                 </p>
                 <Link
                   to={to('/signin')}
-                  className="lv-tap inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[var(--color-accent)] text-white font-semibold uppercase tracking-[0.2em] text-[11px] min-h-[44px]"
+                  className="lv-tap inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[var(--color-accent)] text-white font-semibold text-sm min-h-[44px]"
                 >
                   {c.emptyCta}
                   <ArrowRight size={14} />
@@ -252,7 +252,7 @@ export default function Destination() {
                   </span>
                 </span>
               </span>
-              <span className="inline-flex items-center gap-1.5 text-[var(--color-accent)] text-xs uppercase tracking-[0.25em] font-bold">
+              <span className="inline-flex items-center gap-1.5 text-[var(--color-accent)] text-sm font-bold">
                 {c.stayCta}
                 <ArrowRight size={12} />
               </span>

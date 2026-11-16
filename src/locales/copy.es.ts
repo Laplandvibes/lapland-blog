@@ -5,7 +5,7 @@ const es: SectionCopy = {
     startHere: 'Empezar aquí',
     topReads: 'Lo más leído',
     destinations: 'Destinos',
-    tripDiaries: 'Diarios de viaje',
+    tripDiaries: 'Todas las historias',
     about: 'Sobre',
     startYourBlog: 'Agregar una foto',
     signIn: 'Iniciar sesión',
@@ -304,6 +304,8 @@ const es: SectionCopy = {
     stayCta: 'Ver',
   },
   destinations: {
+    openPlace: 'Historias y consejos',
+    stayButton: 'Ver alojamientos',
     metaTitle: 'Destinos en Laponia',
     metaDescription:
       'Los ocho destinos principales de la Laponia finlandesa: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lea las entradas de cada uno.',
@@ -311,7 +313,7 @@ const es: SectionCopy = {
     h1Pre: 'Ocho lugares.',
     h1Italic: 'Una Laponia.',
     lead:
-      'Elija un destino y lea las entradas escritas desde allí. Los vacíos son los siguientes por escribir, puede ser el primero.',
+      'Elija un lugar. Cada tarjeta muestra las historias escritas allí, y la página del lugar lleva a alojamientos, restaurantes y actividades.',
     beTheFirst: 'Sea el primero',
     entrySingular: 'entrada',
     entryPlural: 'entradas',
@@ -397,6 +399,7 @@ const es: SectionCopy = {
     contentsAria: 'En esta página',
   },
   archive: {
+    allTopics: 'Todos los temas',
     placesLabel: 'Lugar',
     allPlaces: 'Todos los lugares',
     metaTitle: 'Todas las historias',
@@ -512,6 +515,9 @@ const es: SectionCopy = {
     },
     editorialLabel: 'Redacción de LaplandVibes',
     sourcesLabel: 'Fuentes y método',
+    checkHint: 'Marque cada punto a medida que lo complete. Las casillas marcadas se guardan en este dispositivo.',
+    checkProgress: 'Completados: {done} de {total}',
+    checkReset: 'Desmarcar todo',
     editorialNote: 'Escrito por nuestra redacción; no es el diario de viaje de un lector.',
     readerLabel: 'Diario de viaje de un lector',
     readerNote: 'Escrito por un lector de LaplandVibes sobre su propio viaje.',
@@ -558,6 +564,7 @@ const es: SectionCopy = {
       'julio','agosto','septiembre','octubre','noviembre','diciembre',
     ],
     googleAria: 'Iniciar sesión con Google',
+    orContinue: 'o',
     facebookAria: 'Iniciar sesión con Facebook',
     openingLabel: 'Abriendo…',
   },

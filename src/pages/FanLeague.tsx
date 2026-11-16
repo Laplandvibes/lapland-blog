@@ -394,7 +394,7 @@ export default function FanLeague() {
       {/* HERO: masthead above an own photograph (the sign carries its own lettering) */}
       <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <p className="text-pink-300 font-bold text-sm tracking-[0.18em] uppercase text-center lg:text-left">
+          <p className="text-pink-300 font-bold text-sm text-center lg:text-left">
             {c.kicker} <span className="text-slate-400 font-semibold normal-case tracking-normal ml-2">{monthOnly(lang, data.month)}</span>
           </p>
           {/* Full column width + balance (Vesa 23.10.: "miksi otsikko on kahdella rivillä kun se mahtuu yhdellekin"):
@@ -451,7 +451,7 @@ export default function FanLeague() {
               </p>
               <table className="w-full mt-6 border-collapse tabular-nums">
                 <thead>
-                  <tr className="border-b-2 border-snow text-left text-xs font-semibold tracking-[0.12em] uppercase text-slate-400">
+                  <tr className="border-b-2 border-snow text-left text-sm font-semibold text-slate-400">
                     <th scope="col" className="pb-2.5 w-12">{c.thPos}</th>
                     <th scope="col" className="pb-2.5">{c.thCountry}</th>
                     <th scope="col" className="pb-2.5 text-right w-20">{c.thIndex}</th>
@@ -575,7 +575,7 @@ export default function FanLeague() {
                 return (
                   <li key={s.slug} className="border-b border-night-light">
                     <Link to={to(`/post/${s.slug}`)} className="lv-tap group grid gap-1 sm:grid-cols-[150px_1fr_auto] sm:gap-6 py-4 sm:items-baseline">
-                      <span className="text-xs font-semibold tracking-[0.14em] uppercase text-slate-400">{s.kicker}</span>
+                      <span className="text-sm font-semibold text-slate-400">{s.kicker}</span>
                       <span className="font-display font-bold text-xl text-snow group-hover:text-pink-200">{m.title[lang] ?? m.title.en}</span>
                       <span className="text-pink-300 font-semibold inline-flex items-center gap-1">{c.readStory}<ArrowRight size={16} /></span>
                     </Link>

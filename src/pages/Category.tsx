@@ -69,12 +69,12 @@ export default function Category() {
           <Reveal>
             <Link
               to={to('/stories')}
-              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-8 transition-colors max-lg:flex max-lg:w-fit max-lg:mx-auto"
+              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-sm font-semibold mb-8 transition-colors max-lg:flex max-lg:w-fit max-lg:mx-auto"
             >
               <ArrowLeft size={14} /> {c.allStoriesBack}
             </Link>
 
-            <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-4 text-center lg:text-left">
+            <p className="text-pink-300 text-sm font-bold mb-4 text-center lg:text-left">
               {c.categoryPrefix} · {postsInCat.length} {postsInCat.length === 1 ? c.storySingular : c.storyPlural}
             </p>
             <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-6 hero-text-shadow text-center lg:text-left">
@@ -101,7 +101,7 @@ export default function Category() {
               <p className="text-sm mb-6">{c.emptyBody}</p>
               <Link
                 to={to('/stories')}
-                className="lv-tap inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold uppercase tracking-wider transition-colors"
+                className="lv-tap inline-flex items-center gap-1.5 text-pink hover:text-aurora-blue text-sm font-semibold transition-colors"
               >
                 {c.emptyLink}
               </Link>
@@ -136,7 +136,7 @@ export default function Category() {
       <section className="px-4 sm:px-6 lg:px-8 pb-24">
         <div className="max-w-5xl mx-auto">
           <div className="section-divider mb-16" />
-          <p className="text-aurora-blue tracking-[0.35em] text-[10px] font-bold uppercase mb-4 text-center">
+          <p className="text-aurora-blue text-sm font-bold mb-4 text-center">
             {c.keepExploringEyebrow}
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-snow font-light tracking-tight text-center mb-10">

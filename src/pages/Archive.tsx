@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Search } from 'lucide-react';
+import { Search, MapPin, ChevronDown, SlidersHorizontal } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
@@ -88,7 +88,7 @@ export default function Archive() {
       <Nav />
 
       {/* Hero — moody full-bleed twilight backdrop */}
-      <section className="relative px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[56vh] md:min-h-[62vh] flex items-center pt-16">
+      <section className="lv-night relative px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[56vh] md:min-h-[62vh] flex items-center pt-16">
         <picture><source srcSet="/images/hero-dusk-lake-1920.avif" type="image/avif" /><source srcSet="/images/hero-dusk-lake-1920.webp" type="image/webp" /><img
           src="/images/hero-dusk-lake-1920.webp"
           alt={COPY[lang].images.duskLakeAlt}
@@ -104,7 +104,7 @@ export default function Archive() {
         <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] rounded-full bg-pink/10 blur-[140px] pointer-events-none animate-hero-pulse" />
         <div className="relative max-w-5xl mx-auto w-full py-16 md:py-20">
           <Reveal>
-            <p className="text-white tracking-[0.35em] text-[10px] font-bold uppercase mb-4 text-center lg:text-left">
+            <p className="text-white text-sm font-bold mb-4 text-center lg:text-left">
               {c.eyebrow}
             </p>
             <h1 className="font-display text-5xl md:text-7xl text-snow font-light tracking-tight mb-5 hero-text-shadow text-center lg:text-left">
@@ -119,99 +119,83 @@ export default function Archive() {
 
       <PageBreadcrumb />
 
-      {/* Filters + search */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-5 lg:items-center lg:justify-between">
-            <div
-              className="flex flex-wrap justify-center lg:justify-start gap-2"
-              role="group"
-              aria-label={c.filterAria}
-            >
+      {/* Suodattimet (Vesa 16.11.2026: "navigointi täällä aivan paska"). Yksi valkoinen työkalurivi: aiheet
+          yhdellä vieritettävällä rivillä, paikka valikkona ja haku sen vieressä, tulosten määrä näkyvissä. */}
+      <section className="px-4 sm:px-6 lg:px-8 pt-2 pb-10">
+        <div className="max-w-6xl mx-auto rounded-2xl border border-[#0F172A]/10 bg-white p-4 sm:p-5 shadow-[0_14px_34px_-26px_rgba(15,23,42,0.35)]">
+          <div
+            className="hidden sm:flex sm:flex-wrap sm:justify-center lg:justify-start gap-2"
+            role="group"
+            aria-label={c.filterAria}
+          >
+            <button type="button" onClick={() => setFilter('all')} aria-pressed={filter === 'all'} className={`shrink-0 min-h-[44px] px-4 rounded-full text-[15px] font-semibold transition-colors ${filter === 'all' ? 'bg-[#DB2777] text-white shadow-sm' : 'bg-white text-[#0F172A] border border-[#0F172A]/12 hover:border-[#DB2777]/60'}`}>
+              {c.all}
+            </button>
+            {categories.map((cat) => (
               <button
                 type="button"
-                onClick={() => setFilter('all')}
-                className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
-                  filter === 'all'
-                    ? 'bg-[#DB2777] text-white'
-                    : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
-                }`}
+                key={cat.slug}
+                onClick={() => setFilter(cat.slug)}
+                aria-pressed={filter === cat.slug}
+                className={`shrink-0 min-h-[44px] px-4 rounded-full text-[15px] font-semibold transition-colors ${filter === cat.slug ? 'bg-[#DB2777] text-white shadow-sm' : 'bg-white text-[#0F172A] border border-[#0F172A]/12 hover:border-[#DB2777]/60'}`}
               >
-                {c.all}
+                {themes[cat.slug].name}
               </button>
-              {categories.map((cat) => (
-                <button
-                  type="button"
-                  key={cat.slug}
-                  onClick={() => setFilter(cat.slug)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
-                    filter === cat.slug
-                      ? 'bg-[#DB2777] text-white'
-                      : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
-                  }`}
+            ))}
+          </div>
+          <div className="sm:mt-4 sm:pt-4 sm:border-t border-[#0F172A]/8 grid gap-3 sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] sm:items-center">
+            {/* Puhelimella aihe on valikko (Vesa 5.9.2026: suodattimet puhelimessa napin taakse); napit näkyvät 640 px:stä. */}
+            <label className="relative block sm:hidden">
+              <span className="sr-only">{c.filterAria}</span>
+              <SlidersHorizontal size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#DB2777] pointer-events-none" />
+              <select
+                value={filter}
+                onChange={(e) => setFilter(e.target.value as typeof filter)}
+                className="w-full h-12 appearance-none rounded-full border border-[#0F172A]/12 bg-white pl-11 pr-10 text-base font-semibold text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#DB2777]/40"
+              >
+                <option value="all">{c.allTopics}</option>
+                {categories.map((cat) => (
+                  <option key={cat.slug} value={cat.slug}>
+                    {themes[cat.slug].name}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown size={17} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#475569] pointer-events-none" />
+            </label>
+            {paikat.length > 0 && (
+              <label className="relative block">
+                <span className="sr-only">{c.placesLabel}</span>
+                <MapPin size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#DB2777] pointer-events-none" />
+                <select
+                  value={place ?? ''}
+                  onChange={(e) => setPlace(e.target.value || null)}
+                  className="w-full h-12 appearance-none rounded-full border border-[#0F172A]/12 bg-white pl-11 pr-10 text-base font-semibold text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#DB2777]/40"
                 >
-                  {themes[cat.slug].name}
-                </button>
-              ))}
-            </div>
-
-            <div className="relative md:w-72">
+                  <option value="">{c.allPlaces}</option>
+                  {paikat.map((d) => (
+                    <option key={d.slug} value={d.slug}>
+                      {placeName(d, lang)}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown size={17} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#475569] pointer-events-none" />
+              </label>
+            )}
+            <div className="relative">
               <label htmlFor="archive-search" className="sr-only">
                 {c.searchSr}
               </label>
-              <Search
-                size={16}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none"
-              />
+              <Search size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#475569] pointer-events-none" />
               <input
                 id="archive-search"
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={c.searchPlaceholder}
-                className="w-full pl-11 pr-4 py-3 rounded-full bg-night-light/60 text-snow placeholder:text-slate-500 border border-purple/25 focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/60 text-sm"
+                className="w-full h-12 pl-11 pr-4 rounded-full bg-[#F4F7FB] text-[#0F172A] placeholder:text-[#64748B] border border-[#0F172A]/10 focus:outline-none focus:ring-2 focus:ring-[#DB2777]/40 text-base"
               />
             </div>
           </div>
-          {/* Paikkakunnat — Vesa 16.9.2026: hakukenttä ei ole navigaatiota.
-              Näkyvä nappi kertoo että paikan mukaan VOI selata; hakukenttä
-              edellyttää että lukija arvaa sen itse. */}
-          {paikat.length > 0 && (
-            <div className="mt-5 pt-5 border-t border-purple/15">
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-3 text-center lg:text-left">
-                {c.placesLabel}
-              </p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2" role="group" aria-label={c.placesLabel}>
-                <button
-                  type="button"
-                  onClick={() => setPlace(null)}
-                  aria-pressed={place === null}
-                  className={`lv-tap min-h-[44px] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
-                    place === null
-                      ? 'bg-[#DB2777] text-white'
-                      : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
-                  }`}
-                >
-                  {c.allPlaces}
-                </button>
-                {paikat.map((d) => (
-                  <button
-                    type="button"
-                    key={d.slug}
-                    onClick={() => setPlace(d.slug)}
-                    aria-pressed={place === d.slug}
-                    className={`lv-tap min-h-[44px] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-colors ${
-                      place === d.slug
-                        ? 'bg-[#DB2777] text-white'
-                        : 'bg-night-light/60 text-slate-300 border border-purple/25 hover:border-pink/60'
-                    }`}
-                  >
-                    {placeName(d, lang)}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </section>
 

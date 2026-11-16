@@ -4,25 +4,25 @@
 // "be first to write here" — converts visitors into UGC writers.
 
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, PenLine, BedDouble } from 'lucide-react';
+import { ArrowRight, MapPin, BedDouble } from 'lucide-react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import { usePosts } from '../hooks/usePosts';
-import { DESTINATIONS, placeName, stayUrl, type Destination } from '../data/destinations';
+import { DESTINATIONS, placeName, stayUrl, postMatchesDestination, type Destination } from '../data/destinations';
 import { useSeo, canonicalUrl } from '../lib/seo';
 import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import type { Post } from '../data/posts';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-import { fillCopy } from '../lib/copyTemplate';
+import { postTextLang } from '../lib/postLang';
 import PhotoCredits from '../components/PhotoCredits';
 
 
-function countMatching(posts: Post[], slug: string): number {
-  return posts.filter((p) => p.tags.some((t) => t.toLowerCase() === slug)).length;
+function postsFor(posts: Post[], slug: string): Post[] {
+  return posts.filter((p) => postMatchesDestination(p.tags, slug));
 }
 
 export default function Destinations() {
@@ -55,7 +55,7 @@ export default function Destinations() {
           erilliseen kerman variseen laatikkoon kuvan alareunan yli (Vesa 2026-09-15:
           "miksi tuo h1 tällä sivulla on laatikossa?"); muilla sivuilla otsikko on
           kuvan paalla, joten sivut nayttivat eri sivustoilta. */}
-      <header className="relative pt-16">
+      <header className="lv-night relative pt-16">
         <div className="relative min-h-[58vh] md:min-h-[64vh] flex items-center overflow-hidden">
           <picture>
             <source srcSet="/images/hero-aurora-winter-1200.webp 1200w, /images/hero-aurora-winter-1920.webp 1920w, /images/hero-aurora-winter-2560.webp 2560w" sizes="100vw" type="image/webp" />
@@ -75,7 +75,7 @@ export default function Destinations() {
           />
           <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="inline-flex items-center gap-2 text-white tracking-[0.32em] text-[11px] font-bold uppercase mb-5">
+              <p className="inline-flex items-center gap-2 text-white text-sm font-bold mb-5">
                 <MapPin size={13} /> {c.eyebrow}
               </p>
               <h1
@@ -99,10 +99,10 @@ export default function Destinations() {
         <h2 id="dest-grid" className="sr-only">{COPY[lang].destination.backToAll}</h2>
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {DESTINATIONS.map((d, i) => {
-            const count = countMatching(posts, d.slug);
+            const own = postsFor(posts, d.slug);
             return (
               <Reveal key={d.slug} delay={(Math.min(i, 5) + 1) as 1 | 2 | 3 | 4 | 5 | 6}>
-                <DestinationCard d={d} count={count} c={c} to={to} lang={lang} />
+                <DestinationCard d={d} own={own} c={c} to={to} lang={lang} />
               </Reveal>
             );
           })}
@@ -114,7 +114,7 @@ export default function Destinations() {
         <div className="max-w-3xl mx-auto">
           <Reveal>
             <div className="rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-6 py-12 md:px-12 text-center">
-              <p className="text-[var(--color-accent)] tracking-[0.32em] text-[10px] font-bold uppercase mb-4">
+              <p className="text-[var(--color-accent)] text-sm font-bold mb-4">
                 {c.dontSeeEyebrow}
               </p>
               <h2
@@ -128,7 +128,7 @@ export default function Destinations() {
               </p>
               <Link
                 to={to('/signin')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-pink transition-colors"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold text-sm hover:bg-pink transition-colors"
               >
                 {c.plantCta}
                 <ArrowRight size={14} />
@@ -148,89 +148,70 @@ export default function Destinations() {
 }
 
 type DestCopy = typeof COPY['en']['destinations'];
-function DestinationCard({
-  d,
-  count,
-  c,
-  to,
-  lang,
-}: {
-  d: Destination;
-  count: number;
-  c: DestCopy;
-  to: (p: string) => string;
-  lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
-}) {
-  const hasEntries = count > 0;
+type Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
+/**
+ * Kohdekortti (Vesa 16.11.2026: "mikä tämän funktio on? en itsekkään tajua, miten asiakas voisi tajuta?").
+ * Funktio sanottuna kortissa itsessään: paikan kuva ja kuvaus, paikan oikeat jutut otsikkoina ja kaksi
+ * nappia: paikan sivu (jutut + verkoston oppaat) ja majoitukset. Ei "ole ensimmäinen kirjoittaja" -kehotteita.
+ */
+function DestinationCard({ d, own, c, to, lang }: { d: Destination; own: Post[]; c: DestCopy; to: (p: string) => string; lang: Lang }) {
+  const name = placeName(d, lang);
+  const meta = c.places[d.slug as keyof DestCopy['places']];
   return (
-    <article className="group relative flex flex-col rounded-2xl overflow-hidden bg-[var(--color-cream)] border border-[var(--color-paper-border)] hover:-translate-y-1 hover:shadow-[0_28px_60px_-30px_rgba(26,24,21,0.35)] transition-all duration-300">
-      <div className="aspect-[3/2] overflow-hidden relative">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#0F172A]/10 bg-white shadow-[0_14px_34px_-24px_rgba(15,23,42,0.35)] transition-shadow duration-300 hover:shadow-[0_24px_48px_-26px_rgba(15,23,42,0.4)]">
+      <Link to={to(`/destinations/${d.slug}`)} className="block aspect-[3/2] overflow-hidden relative" tabIndex={-1} aria-hidden="true">
         <img
           src={d.hero}
-          alt={fillCopy(c.placeImageAlt, { place: placeName(d, lang) })}
+          alt=""
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
-        {!hasEntries ? (
-          <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-cream)]/95 border border-[var(--color-accent)]/30 backdrop-blur-sm">
-            <PenLine size={10} className="text-[var(--color-accent)]" />
-            <span className="text-[var(--color-accent)] text-[9px] font-bold uppercase tracking-[0.25em]">
-              {c.beTheFirst}
-            </span>
-          </div>
-        ) : (
-          <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-cream)]/95 border border-[var(--color-accent)]/30 backdrop-blur-sm">
-            <span className="text-[var(--color-accent)] text-[9px] font-bold uppercase tracking-[0.25em]">
-              {count} {count === 1 ? c.entrySingular : c.entryPlural}
-            </span>
-          </div>
+        {own.length > 0 && (
+          <span className="absolute top-3 left-3 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-[#BE185D] shadow-sm">
+            {own.length} {own.length === 1 ? c.entrySingular : c.entryPlural}
+          </span>
         )}
-      </div>
+      </Link>
       <div className="p-5 flex flex-col flex-1">
-        <p className="text-[var(--color-ink-mute)] tracking-[0.28em] text-[10px] font-bold uppercase mb-2">
-          {c.places[d.slug as keyof DestCopy['places']]?.region ?? d.region}
-        </p>
-        <h3
-          className="text-2xl text-[var(--color-ink)] mb-2 leading-tight"
-          style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
-        >
-          {placeName(d, lang)}
+        <p className="text-[#BE185D] text-sm font-semibold mb-1">{meta?.region ?? d.region}</p>
+        <h3 className="text-2xl text-[#0F172A] mb-2 leading-tight" style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}>
+          <Link to={to(`/destinations/${d.slug}`)} className="hover:text-[#BE185D] transition-colors">
+            {name}
+          </Link>
         </h3>
-        <p className="text-[var(--color-ink-soft)] text-sm leading-relaxed mb-5">
-          {c.places[d.slug as keyof DestCopy['places']]?.blurb ?? d.blurb}
-        </p>
-
-        <div className="space-y-3 mt-auto pt-4 border-t border-[var(--color-paper-border)]">
-          {hasEntries ? (
-            <Link
-              to={to(`/destinations/${d.slug}`)}
-              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
-            >
-              {c.readEntries}
-              <ArrowRight size={12} />
-            </Link>
-          ) : (
-            <Link
-              to={to(`/destinations/${d.slug}`)}
-              className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] text-xs uppercase tracking-[0.2em] font-bold transition-colors"
-            >
-              {c.beFirstWrite}
-              <ArrowRight size={12} />
-            </Link>
-          )}
-
-          {/* Sales CTA — every destination card gets a lodging hook */}
+        <p className="text-[#334155] text-base leading-relaxed mb-4">{meta?.blurb ?? d.blurb}</p>
+        {own.length > 0 && (
+          <ul className="mb-5 grid gap-2">
+            {own.slice(0, 3).map((p) => (
+              <li key={p.slug}>
+                <Link
+                  to={to(`/post/${p.slug}`)}
+                  lang={postTextLang(p, lang)}
+                  className="flex items-start gap-2 rounded-xl bg-[#F4F7FB] px-3 py-2.5 text-[15px] font-semibold leading-snug text-[#0F172A] hover:bg-[#FDF2F8] hover:text-[#BE185D] transition-colors"
+                >
+                  <ArrowRight size={15} className="mt-1 shrink-0 text-[#DB2777]" />
+                  <span>{p.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+        <div className="mt-auto grid gap-2.5">
+          <Link
+            to={to(`/destinations/${d.slug}`)}
+            className="inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-full bg-[#DB2777] px-4 text-[15px] font-semibold text-white hover:bg-[#BE185D] transition-colors"
+          >
+            {c.openPlace}
+          </Link>
           <a
             href={stayUrl(d, `destinations_${d.slug}`, lang)}
             target="_blank"
             rel="sponsored nofollow noopener"
-            className="lv-tap inline-flex items-center gap-1.5 text-[var(--color-ink-mute)] hover:text-[var(--color-accent)] text-[11px] uppercase tracking-[0.2em] font-semibold transition-colors"
+            className="inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-full border border-[#0F172A]/15 px-4 text-[15px] font-semibold text-[#0F172A] hover:border-[#DB2777] hover:text-[#BE185D] transition-colors"
           >
-            <BedDouble size={11} />
-            {c.findStayPrefix} {placeName(d, lang)}
-            <ArrowRight size={11} />
+            <BedDouble size={16} />
+            {c.stayButton}
           </a>
         </div>
       </div>

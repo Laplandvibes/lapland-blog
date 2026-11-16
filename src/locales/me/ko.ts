@@ -51,6 +51,8 @@ const ko: MeCopy = {
     myBlog: '내 블로그',
   },
   dashboard: {
+    newPostH2: '새 글',
+    myPostsH2: '내 글',
     metaTitle: '내 여행 블로그',
     h1: '내 여행 블로그',
     yourPage: '내 여행 페이지',

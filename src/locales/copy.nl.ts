@@ -7,7 +7,7 @@ const nl: SectionCopy = {
     startHere: 'Begin hier',
     topReads: 'Topartikelen',
     destinations: 'Bestemmingen',
-    tripDiaries: 'Reisverslagen',
+    tripDiaries: 'Alle verhalen',
     about: 'Over ons',
     startYourBlog: 'Foto toevoegen',
     signIn: 'Inloggen',
@@ -253,6 +253,8 @@ const nl: SectionCopy = {
     stayCta: 'Bekijken',
   },
   destinations: {
+    openPlace: 'Verhalen en tips',
+    stayButton: 'Bekijk verblijven',
     metaTitle: 'Bestemmingen',
     metaDescription:
       'De acht belangrijkste bestemmingen in Fins Lapland: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lees de veldnotities van elk.',
@@ -260,7 +262,7 @@ const nl: SectionCopy = {
     h1Pre: 'Acht plaatsen.',
     h1Italic: 'Eén Lapland.',
     lead:
-      'Kies een bestemming en lees de notities van daar. Lege plekken zijn de volgende om over te schrijven, dus u kunt de eerste zijn.',
+      'Kies een plek. Per plek ziet u de verhalen die er geschreven zijn, en op de bijbehorende pagina vindt u verblijven, restaurants en activiteiten.',
     beTheFirst: 'Wees de eerste',
     entrySingular: 'notitie',
     entryPlural: 'notities',
@@ -346,6 +348,7 @@ const nl: SectionCopy = {
     contentsAria: 'Op deze pagina',
   },
   archive: {
+    allTopics: 'Alle onderwerpen',
     placesLabel: 'Plaats',
     allPlaces: 'Alle plaatsen',
     metaTitle: 'Alle verhalen',
@@ -461,6 +464,9 @@ const nl: SectionCopy = {
     },
     editorialLabel: 'Redactie van LaplandVibes',
     sourcesLabel: 'Bronnen en methode',
+    checkHint: 'Vink elk punt af zodra het klaar is. Uw vinkjes blijven op dit apparaat bewaard.',
+    checkProgress: '{done} van {total} klaar',
+    checkReset: 'Vinkjes wissen',
     editorialNote: 'Geschreven door onze redactie, geen reisdagboek van een lezer.',
     readerLabel: 'Reisdagboek van een lezer',
     readerNote: 'Geschreven door een lezer van LaplandVibes over de eigen reis.',
@@ -507,6 +513,7 @@ const nl: SectionCopy = {
       'juli','augustus','september','oktober','november','december',
     ],
     googleAria: 'Inloggen met Google',
+    orContinue: 'of',
     facebookAria: 'Inloggen met Facebook',
     openingLabel: 'Openen…',
   },

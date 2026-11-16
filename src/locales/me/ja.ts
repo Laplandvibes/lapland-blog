@@ -51,6 +51,8 @@ const ja: MeCopy = {
     myBlog: 'マイブログ',
   },
   dashboard: {
+    newPostH2: '新しい投稿',
+    myPostsH2: 'あなたの投稿',
     metaTitle: 'マイ旅ブログ',
     h1: 'マイ旅ブログ',
     yourPage: 'あなたの旅のページ',

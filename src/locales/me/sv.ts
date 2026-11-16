@@ -51,6 +51,8 @@ const sv: MeCopy = {
     myBlog: 'Min blogg',
   },
   dashboard: {
+    newPostH2: 'Nytt inlägg',
+    myPostsH2: 'Dina inlägg',
     metaTitle: 'Min resblogg',
     h1: 'Min resblogg',
     yourPage: 'Din resesida',

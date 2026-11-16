@@ -57,6 +57,8 @@ export interface MeCopy {
     myBlog: string;
   };
   dashboard: {
+    newPostH2: string;
+    myPostsH2: string;
     metaTitle: string;
     h1: string;
     yourPage: string;

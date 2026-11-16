@@ -103,14 +103,14 @@ export default function HighlightShare({ containerSelector, url, slug }: Highlig
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackShare('twitter', slug)}
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors font-semibold uppercase tracking-wider"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors font-semibold"
       >
         <Quote size={12} /> {c.shareQuoteLabel}
       </a>
       <button
         type="button"
         onClick={handleCopy}
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors font-semibold uppercase tracking-wider"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors font-semibold"
         aria-label={c.copyQuoteAria}
       >
         {copied ? (

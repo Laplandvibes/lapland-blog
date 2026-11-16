@@ -4,7 +4,7 @@
 
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Plus, Pencil, Trash2, ExternalLink, Camera, Settings, LogOut, Loader2, Thermometer, MapPin } from 'lucide-react';
+import { Pencil, Trash2, ExternalLink, Settings, LogOut, Loader2, Thermometer, MapPin } from 'lucide-react';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 import { useAuth, ensureProfile } from '../../hooks/useAuth';
@@ -15,6 +15,7 @@ import { cardUrl } from '../../lib/uploadImage';
 import { useSeo } from '../../lib/seo';
 import { useLang, useLocalePath } from '../../i18n/useLang';
 import { ME_COPY } from '../../locales/me';
+import PhotoComposer from './PhotoComposer';
 
 interface ProfileSummary {
   handle: string;
@@ -146,27 +147,19 @@ export default function MyDashboard() {
                     cancelLabel={t.cancel}
                     saving={saving}
                   />
-                  {fieldError && <p role="alert" className="text-sm text-red-200">{fieldError}</p>}
+                  {fieldError && <p role="alert" className="text-sm text-red-700">{fieldError}</p>}
                 </div>
               )}
             </div>
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center sm:justify-center lg:justify-end">
-              <Link
-                to={to('/me/new')}
-                className="h-14 px-7 rounded-full bg-pink-cta text-white font-bold inline-flex items-center justify-center gap-2"
-                data-umami-event="photo_cta"
-                data-umami-event-surface="dashboard"
-              >
-                <Camera size={18} /> {t.addPhoto}
-              </Link>
               <div className="flex gap-2 justify-center">
-                <Link to={to('/me/settings')} className="h-12 px-4 rounded-full border border-slate-600 inline-flex items-center gap-2 text-sm font-semibold hover:border-snow">
+                <Link to={to('/me/settings')} className="h-12 px-4 rounded-full border border-[#0F172A]/15 bg-white inline-flex items-center gap-2 text-sm font-semibold hover:border-[#DB2777]">
                   <Settings size={16} /> {t.settings}
                 </Link>
                 <button
                   type="button"
                   onClick={() => void signOut().then(() => navigate(to('/')))}
-                  className="h-12 px-4 rounded-full border border-slate-600 inline-flex items-center gap-2 text-sm font-semibold hover:border-snow"
+                  className="h-12 px-4 rounded-full border border-[#0F172A]/15 bg-white inline-flex items-center gap-2 text-sm font-semibold hover:border-[#DB2777]"
                 >
                   <LogOut size={16} /> {t.signOut}
                 </button>
@@ -174,31 +167,29 @@ export default function MyDashboard() {
             </div>
           </div>
 
-          {deleteError && <p role="alert" className="mb-4 text-sm text-red-200">{deleteError}</p>}
+          {deleteError && <p role="alert" className="mb-4 text-sm text-red-700">{deleteError}</p>}
+
+          {/* Editori suoraan sivulla (Vesa 16.11.2026: "eikö tässä pitäisi näkyä jo se editori?"). */}
+          <section
+            id="uusi-julkaisu"
+            aria-labelledby="uusi-julkaisu-h"
+            className="scroll-mt-24 rounded-3xl border border-[#0F172A]/10 bg-white p-5 sm:p-8 shadow-[0_18px_44px_-30px_rgba(15,23,42,0.45)]"
+          >
+            <h2 id="uusi-julkaisu-h" className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight mb-5 text-center lg:text-left">
+              {t.newPostH2}
+            </h2>
+            <PhotoComposer embedded onSaved={() => void refresh()} />
+          </section>
 
           {loading ? (
             <p className="py-16 text-center text-slate-300 inline-flex w-full items-center justify-center gap-2">
               <Loader2 size={18} className="animate-spin" /> {t.loading}
             </p>
           ) : error ? (
-            <p role="alert" className="py-10 text-center text-red-200">{t.loadError}</p>
-          ) : posts.length === 0 ? (
-            <Link
-              to={to('/me/new')}
-              className="block rounded-3xl border-2 border-dashed border-pink/50 bg-night-light/50 px-6 py-14 text-center hover:border-pink transition-colors"
-              data-umami-event="photo_cta"
-              data-umami-event-surface="dashboard_empty"
-            >
-              <span className="mx-auto mb-5 w-16 h-16 rounded-full bg-pink-cta/20 flex items-center justify-center">
-                <Camera size={30} className="text-pink-300" />
-              </span>
-              <span className="block font-display font-bold text-2xl sm:text-3xl mb-3">{t.emptyTitle}</span>
-              <span className="block text-slate-300 max-w-md mx-auto text-left sm:text-center">{t.emptyBody}</span>
-              <span className="mt-6 inline-flex items-center gap-2 h-12 px-6 rounded-full bg-pink-cta text-white font-semibold">
-                <Plus size={18} /> {t.addPhoto}
-              </span>
-            </Link>
-          ) : (
+            <p role="alert" className="py-10 text-center text-red-700">{t.loadError}</p>
+          ) : posts.length === 0 ? null : (
+            <section className="mt-12" aria-labelledby="omat-h">
+            <h2 id="omat-h" className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight mb-5 text-center lg:text-left">{t.myPostsH2}</h2>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {posts.map((p) => (
                 <li key={p.id} className="rounded-2xl overflow-hidden border border-slate-700 bg-night-light/60 flex flex-col">
@@ -206,7 +197,7 @@ export default function MyDashboard() {
                     {p.hero_image && <img src={cardUrl(p.hero_image)} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />}
                     <span
                       className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold ${
-                        p.moderation_hidden ? 'bg-red-600 text-white' : p.status === 'published' ? 'bg-night/85 text-snow' : 'bg-amber-300 text-night'
+                        p.moderation_hidden ? 'bg-red-600 text-white' : p.status === 'published' ? 'bg-night/85 text-snow' : 'bg-amber-300 text-[#0F172A]'
                       }`}
                     >
                       {p.moderation_hidden ? t.hidden : p.status === 'published' ? t.published : t.draft}
@@ -249,6 +240,7 @@ export default function MyDashboard() {
                 </li>
               ))}
             </ul>
+            </section>
           )}
         </div>
       </main>

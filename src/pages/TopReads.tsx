@@ -109,7 +109,7 @@ export default function TopReads() {
           <Reveal>
             <div className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full bg-night/70 border border-pink/45 backdrop-blur-sm">
               <Sparkles size={13} className="text-pink-300" />
-              <p className="text-pink-200 tracking-[0.32em] text-[10px] font-bold uppercase whitespace-nowrap">
+              <p className="text-pink-200 text-sm font-bold whitespace-nowrap">
                 {c.eyebrow}
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function TopReads() {
           {sections.length > 0 && (
             <Reveal delay={3}>
               <nav aria-label={c.contentsAria} className="mt-9 flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-                <span className="inline-flex items-center gap-2 text-slate-400 text-[11px] uppercase tracking-[0.25em] font-semibold mr-1">
+                <span className="inline-flex items-center gap-2 text-slate-400 text-sm font-semibold mr-1">
                   <span className="w-6 h-px bg-pink/50" />
                   <span className="text-pink-200 tabular-nums">{totalReads}</span>
                   {c.eyebrow}
@@ -165,7 +165,7 @@ export default function TopReads() {
                   <Crown size={18} />
                 </span>
                 <div>
-                  <p className="text-pink-200 tracking-[0.32em] text-[10px] font-bold uppercase">
+                  <p className="text-pink-200 text-sm font-bold">
                     {c.onlyEyebrow}
                   </p>
                   <h2 id="editors-pick" className="font-display text-3xl md:text-4xl tracking-tight text-snow leading-tight">
@@ -212,7 +212,7 @@ export default function TopReads() {
             <div className="relative overflow-hidden rounded-3xl border border-pink/30 bg-gradient-to-br from-night-light/80 via-night-light/40 to-night/60 p-10 md:p-14 text-center">
               <div className="absolute -top-16 -right-10 w-72 h-72 rounded-full bg-pink/15 blur-[120px] pointer-events-none" />
               <div className="relative">
-                <p className="text-pink-200 tracking-[0.32em] text-[10px] font-bold uppercase mb-4">
+                <p className="text-pink-200 text-sm font-bold mb-4">
                   {c.ctaEyebrow}
                 </p>
                 <h2 className="font-display text-3xl md:text-4xl tracking-tight text-snow mb-4">
@@ -223,7 +223,7 @@ export default function TopReads() {
                 </p>
                 <Link
                   to={to('/signin')}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#DB2777] text-white font-semibold text-sm hover:bg-[#BE185D] hover:-translate-y-0.5 transition-all duration-300"
                 >
                   {c.ctaButton}
                   <ArrowRight size={14} />
@@ -271,8 +271,8 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
             height={1000}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-night via-night/30 to-transparent md:bg-gradient-to-r md:from-transparent md:to-night-light/60" />
-          <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-night/85 backdrop-blur-sm text-pink-200 text-[10px] font-bold uppercase tracking-[0.25em] border border-pink/45">
+          {/* Kuva puhtaana: teksti on kuvan vieressä, ei päällä (vaalea blogi 16.11.2026). */}
+          <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-night/85 backdrop-blur-sm text-pink-200 text-sm font-bold border border-pink/45">
             <Crown size={11} /> 01
           </span>
         </div>
@@ -281,7 +281,7 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
           {/* Accent rail */}
           <span className="hidden md:block absolute left-0 top-8 bottom-8 w-1 rounded-full bg-gradient-to-b from-pink to-pink-600" />
           {cat && (
-            <span className="inline-flex self-start items-center px-2.5 py-1 mb-4 rounded-full text-[10px] font-bold uppercase tracking-[0.22em] bg-pink/15 text-pink-200 border border-pink/35">
+            <span className="inline-flex self-start items-center px-2.5 py-1 mb-4 rounded-full text-sm font-bold bg-pink/15 text-pink-200 border border-pink/35">
               {catName}
             </span>
           )}
@@ -300,7 +300,7 @@ function FeaturedReadCard({ post, to, minRead }: { post: Post; to: (p: string) =
               <Clock size={12} /> {post.readTimeMinutes} {minRead}
             </span>
             {/* Same label as the Read link on the front-page cards (home.readFirstRead). */}
-            <span className="ml-auto inline-flex items-center gap-1 text-pink-300 font-semibold uppercase tracking-[0.2em] text-[11px] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <span className="ml-auto inline-flex items-center gap-1 text-pink-300 font-semibold text-sm opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
               {COPY[lang].home.readFirstRead} <ArrowUpRight size={13} />
             </span>
           </div>
@@ -339,7 +339,7 @@ function ListSection({ id, eyebrow, title, subtitle, posts, Icon, to, minRead, s
               <Icon size={19} className="text-pink-300" />
             </span>
             <div>
-              <p className="text-pink-200 tracking-[0.32em] text-[10px] font-bold uppercase mb-1.5">
+              <p className="text-pink-200 text-sm font-bold mb-1.5">
                 {eyebrow}
               </p>
               <h2 id={`${id}-h`} className="font-display text-3xl md:text-4xl tracking-tight text-snow leading-tight">
@@ -395,7 +395,7 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
           height={420}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-night/10 to-night-light/70" />
+        {/* Kuva puhtaana (vaalea blogi 16.11.2026). */}
         <span className="absolute top-2 left-2 inline-flex items-center justify-center min-w-[1.6rem] h-6 px-1.5 rounded-full bg-night/85 backdrop-blur-sm text-pink-200 text-[11px] font-bold tabular-nums border border-pink/40">
           {String(rank).padStart(2, '0')}
         </span>
@@ -405,7 +405,7 @@ function ReadListCard({ post, rank, to, minRead }: { post: Post; rank: number; t
       <div className="flex-1 min-w-0 py-4 pr-4 sm:py-5 sm:pr-6 flex flex-col justify-center">
         <div className="flex items-center gap-2.5 mb-2 flex-wrap">
           {cat && (
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-[0.22em] bg-pink/15 text-pink-200 border border-pink/30">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-bold bg-pink/15 text-pink-200 border border-pink/30">
               {catName}
             </span>
           )}

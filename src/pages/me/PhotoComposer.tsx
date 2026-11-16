@@ -73,7 +73,12 @@ function todayIso(): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
-export default function PhotoComposer() {
+/**
+ * `embedded`: oma blogi -sivulla (/me) editori näkyy suoraan sivulla ilman omaa yläpalkkia ja alatunnistetta
+ * (Vesa 16.11.2026: "jos ihminen alkaa tehdä blogia niin onko että ei ole muuta kuin kuva? eikö tässä pitäisi
+ * näkyä jo se editori?"). Kaikki kentät näkyvät heti; kuva on silti julkaisun ehto (kansikuva, tarinakuva).
+ */
+export default function PhotoComposer({ embedded = false, onSaved }: { embedded?: boolean; onSaved?: () => void } = {}) {
   const lang = useLang();
   const to = useLocalePath();
   const navigate = useNavigate();
@@ -359,13 +364,16 @@ export default function PhotoComposer() {
     }
     track('photo_success', { ...funnel, status, photos: urls.length, temp: Boolean(row.weather_note) });
     setDone({ slug, status, handle, cover: urls[0] });
-    window.scrollTo({ top: 0 });
+    onSaved?.();
+    if (embedded) document.getElementById('uusi-julkaisu')?.scrollIntoView({ block: 'start' });
+    else window.scrollTo({ top: 0 });
   }
 
   // ── Done view ────────────────────────────────────────────────────────────
   if (done) {
     return (
       <DoneView
+        embedded={embedded}
         lang={lang}
         done={done}
         place={place.trim()}
@@ -382,25 +390,17 @@ export default function PhotoComposer() {
           setDate(todayIso());
           setPlace('');
           startTracked.current = false;
-          navigate(to('/me/new'));
+          if (!embedded) navigate(to('/me/new'));
         }}
       />
     );
   }
 
-  const inputId = 'photo-input';
+  const inputId = embedded ? 'photo-input-me' : 'photo-input';
+  const field = 'rounded-xl bg-white border border-[#0F172A]/15 text-base text-[#0F172A] placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#DB2777]/40 focus:border-[#DB2777]/60';
 
-  return (
-    <div className="min-h-screen bg-night text-snow">
-      <Nav />
-      <main className="pt-24 pb-20 px-4 sm:px-6">
-        <div className="max-w-3xl mx-auto">
-          <Link to={to('/me')} className="lv-tap inline-flex items-center gap-1.5 text-sm font-semibold text-pink-300 hover:text-snow">
-            <ArrowLeft size={15} /> {t.back}
-          </Link>
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight mt-4 mb-6 text-center lg:text-left">
-            {isEdit ? t.h1Edit : t.h1New}
-          </h1>
+  const editor = (
+        <div>
 
           <input
             id={inputId}
@@ -417,7 +417,7 @@ export default function PhotoComposer() {
           {photos.length === 0 ? (
             <label
               htmlFor={inputId}
-              className="flex flex-col items-center justify-center text-center gap-4 rounded-3xl border-2 border-dashed border-pink/50 bg-night-light/50 px-6 py-14 sm:py-20 cursor-pointer hover:border-pink transition-colors"
+              className={`flex flex-col items-center justify-center text-center gap-3 rounded-3xl border-2 border-dashed border-[#DB2777]/50 bg-[#FDF2F8] px-6 ${embedded ? 'py-9' : 'py-12 sm:py-16'} cursor-pointer hover:border-[#DB2777] transition-colors`}
             >
               <span className="w-16 h-16 rounded-full bg-pink-cta/20 flex items-center justify-center">
                 <Camera size={30} className="text-pink-300" />
@@ -485,7 +485,7 @@ export default function PhotoComposer() {
             </section>
           )}
 
-          {photos.length > 0 && (
+          {(
             <form
               className="mt-8 grid gap-5"
               onSubmit={(e) => {
@@ -493,7 +493,7 @@ export default function PhotoComposer() {
                 void save('published');
               }}
             >
-              <div className="grid sm:grid-cols-2 gap-4 rounded-2xl border border-slate-700 bg-night-light/50 p-5">
+              <div className="grid sm:grid-cols-2 gap-4 rounded-2xl border border-[#0F172A]/10 bg-[#F4F7FB] p-5">
                 <label className="grid gap-2">
                   <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200">
                     <MapPin size={15} className="text-pink-300" /> {t.placeLabel}
@@ -508,7 +508,7 @@ export default function PhotoComposer() {
                     placeholder={t.placePlaceholder}
                     list="lv-places"
                     autoComplete="off"
-                    className="h-12 rounded-xl bg-white text-ink px-4 text-base text-slate-900 placeholder:text-slate-500"
+                    className={`h-12 px-4 ${field}`}
                   />
                   <datalist id="lv-places">
                     {PLACE_NAMES.map((n) => (
@@ -529,9 +529,10 @@ export default function PhotoComposer() {
                       setDate(e.target.value);
                     }}
                     onFocus={trackStart}
-                    className="h-12 rounded-xl bg-white px-4 text-base text-slate-900"
+                    className={`h-12 px-4 ${field}`}
                   />
                 </label>
+                {tempState !== 'idle' && (
                 <div className="sm:col-span-2 flex flex-wrap items-center gap-x-4 gap-y-2 min-h-[2.75rem]" aria-live="polite">
                   <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200">
                     <Thermometer size={15} className="text-pink-300" /> {t.tempLabel}
@@ -553,6 +554,7 @@ export default function PhotoComposer() {
                   )}
                   {tempState === 'none' && <span className="text-sm text-slate-400">{t.tempNone}</span>}
                 </div>
+                )}
               </div>
 
               <label className="grid gap-2">
@@ -563,7 +565,7 @@ export default function PhotoComposer() {
                   onFocus={trackStart}
                   maxLength={140}
                   placeholder={t.captionPlaceholder}
-                  className="h-14 rounded-xl bg-white px-4 text-lg text-slate-900 placeholder:text-slate-500"
+                  className={`h-14 px-4 text-lg ${field}`}
                 />
               </label>
               <label className="grid gap-2">
@@ -574,12 +576,12 @@ export default function PhotoComposer() {
                   onFocus={trackStart}
                   rows={5}
                   placeholder={t.bodyPlaceholder}
-                  className="rounded-xl bg-white px-4 py-3 text-base leading-relaxed text-slate-900 placeholder:text-slate-500"
+                  className={`px-4 py-3 leading-relaxed ${field}`}
                 />
               </label>
 
               {error && (
-                <p role="alert" className="rounded-xl border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm text-red-100">
+                <p role="alert" className="rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800">
                   {error}
                 </p>
               )}
@@ -605,6 +607,23 @@ export default function PhotoComposer() {
             </form>
           )}
         </div>
+  );
+
+  if (embedded) return editor;
+
+  return (
+    <div className="min-h-screen bg-night text-snow">
+      <Nav />
+      <main className="pt-24 pb-20 px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto">
+          <Link to={to('/me')} className="lv-tap inline-flex items-center gap-1.5 text-sm font-semibold text-pink-300 hover:text-snow">
+            <ArrowLeft size={15} /> {t.back}
+          </Link>
+          <h1 className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight mt-4 mb-6 text-center lg:text-left">
+            {isEdit ? t.h1Edit : t.h1New}
+          </h1>
+          {editor}
+        </div>
       </main>
       <Footer />
     </div>
@@ -614,6 +633,7 @@ export default function PhotoComposer() {
 // ── After saving: story card + share ───────────────────────────────────────
 
 function DoneView({
+  embedded = false,
   lang,
   done,
   place,
@@ -621,6 +641,7 @@ function DoneView({
   temp,
   onNext,
 }: {
+  embedded?: boolean;
   lang: ReturnType<typeof useLang>;
   done: { slug: string; status: 'draft' | 'published'; handle: string | null; cover: string };
   place: string;
@@ -663,10 +684,7 @@ function DoneView({
   const canShareFile =
     !!file && typeof navigator !== 'undefined' && typeof navigator.canShare === 'function' && navigator.canShare({ files: [file] });
 
-  return (
-    <div className="min-h-screen bg-night text-snow">
-      <Nav />
-      <main className="pt-24 pb-20 px-4 sm:px-6">
+  const body = (
         <div className="max-w-4xl mx-auto grid gap-10 lg:grid-cols-[320px_1fr] lg:items-center">
           <div className="mx-auto w-full max-w-[300px]">
             <div className="aspect-[9/16] rounded-[28px] overflow-hidden border-[8px] border-night-light bg-night-light shadow-2xl">
@@ -731,13 +749,20 @@ function DoneView({
               <button type="button" onClick={onNext} className="lv-tap text-pink-300 hover:text-snow">
                 {t.addNext}
               </button>
-              <Link to={to('/me')} className="lv-tap text-pink-300 hover:text-snow">
-                {t.myBlog}
-              </Link>
+              {!embedded && (
+                <Link to={to('/me')} className="lv-tap text-pink-300 hover:text-snow">
+                  {t.myBlog}
+                </Link>
+              )}
             </div>
           </div>
         </div>
-      </main>
+  );
+  if (embedded) return body;
+  return (
+    <div className="min-h-screen bg-night text-snow">
+      <Nav />
+      <main className="pt-24 pb-20 px-4 sm:px-6">{body}</main>
       <Footer />
     </div>
   );

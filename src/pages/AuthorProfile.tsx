@@ -133,7 +133,7 @@ export default function AuthorProfile() {
         <div className="relative max-w-4xl mx-auto">
           <Link
             to={lp('/destinations')}
-            className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold mb-6 transition-colors"
+            className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-sm font-semibold mb-6 transition-colors"
           >
             <ArrowLeft size={14} /> Lapland.blog
           </Link>
@@ -158,7 +158,7 @@ export default function AuthorProfile() {
                   </div>
                 )}
                 <div className="flex-1">
-                  <p className="text-pink tracking-[0.3em] text-[10px] font-bold uppercase mb-2">
+                  <p className="text-pink text-sm font-bold mb-2">
                     @{profile.handle}
                   </p>
                   <h1 className="font-display text-4xl md:text-5xl font-light leading-tight tracking-tight text-snow mb-3">
@@ -257,7 +257,7 @@ export default function AuthorProfile() {
       <section className="px-4 sm:px-6 lg:px-8 pb-24">
         <div className="max-w-3xl mx-auto text-center">
           <Reveal>
-            <p className="text-pink-300 tracking-[0.35em] text-[10px] font-bold uppercase mb-3">
+            <p className="text-pink-300 text-sm font-bold mb-3">
               {c.crossEyebrow}
             </p>
             <h2 className="font-display text-2xl md:text-3xl font-light tracking-tight text-snow mb-3">
@@ -269,14 +269,14 @@ export default function AuthorProfile() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to={lp('/top-reads')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DB2777] text-white font-semibold uppercase tracking-[0.18em] text-xs hover:bg-[#BE185D] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#DB2777] text-white font-semibold text-sm hover:bg-[#BE185D] transition-colors"
               >
                 {COPY[lang].nav.topReads}
                 <ArrowRight size={14} />
               </Link>
               <Link
                 to={lp('/destinations')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-night-light/60 border border-aurora-blue/40 text-pink-300 font-semibold uppercase tracking-[0.18em] text-xs hover:bg-night-light/80 hover:text-pink-200 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-night-light/60 border border-aurora-blue/40 text-pink-300 font-semibold text-sm hover:bg-night-light/80 hover:text-pink-200 transition-colors"
               >
                 {COPY[lang].nav.destinations}
               </Link>

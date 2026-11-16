@@ -5,7 +5,7 @@ const en: SectionCopy = {
     startHere: 'Start here',
     topReads: 'Top reads',
     destinations: 'Destinations',
-    tripDiaries: 'Trip diaries',
+    tripDiaries: 'All stories',
     about: 'About',
     startYourBlog: 'Add a photo',
     signIn: 'Sign in',
@@ -304,6 +304,8 @@ const en: SectionCopy = {
     stayCta: 'Browse',
   },
   destinations: {
+    openPlace: 'Stories and tips',
+    stayButton: 'See places to stay',
     metaTitle: 'Destinations',
     metaDescription:
       'The eight main Finnish Lapland destinations: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi.',
@@ -311,7 +313,7 @@ const en: SectionCopy = {
     h1Pre: 'Eight places.',
     h1Italic: 'One Lapland.',
     lead:
-      'Pick a destination and read the entries from there. Empty ones are the next ones to write, so you can be the first.',
+      'Pick a place. Each card shows the stories written there, and the place page links to stays, restaurants and things to do.',
     beTheFirst: 'Be the first',
     entrySingular: 'entry',
     entryPlural: 'entries',
@@ -397,6 +399,7 @@ const en: SectionCopy = {
     contentsAria: 'On this page',
   },
   archive: {
+    allTopics: 'All topics',
     placesLabel: 'Place',
     allPlaces: 'All places',
     metaTitle: 'All stories',
@@ -512,6 +515,9 @@ const en: SectionCopy = {
     },
     editorialLabel: 'From the LaplandVibes desk',
     sourcesLabel: 'Sources and method',
+    checkHint: 'Tick each item as you go. Your ticks stay on this device.',
+    checkProgress: '{done} of {total} done',
+    checkReset: 'Clear ticks',
     editorialNote: 'Written by our editorial team, not a reader’s travel diary.',
     readerLabel: 'A reader’s travel diary',
     readerNote: 'Written by a LaplandVibes reader about their own trip.',
@@ -558,6 +564,7 @@ const en: SectionCopy = {
       'July','August','September','October','November','December',
     ],
     googleAria: 'Sign in with Google',
+    orContinue: 'or',
     facebookAria: 'Sign in with Facebook',
     openingLabel: 'Opening…',
   },

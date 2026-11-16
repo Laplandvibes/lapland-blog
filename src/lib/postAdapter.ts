@@ -69,7 +69,15 @@ function parseContent(raw: unknown): PostBlock[] {
         src: b.src,
         alt: b.alt,
         caption: typeof b.caption === 'string' ? b.caption : undefined,
+        credit: typeof b.credit === 'string' ? b.credit : undefined,
         full: Boolean(b.full),
+      });
+    } else if (type === 'facts' && Array.isArray(b.items)) {
+      // Tietokortti (16.11.2026). Sama sallittujen lista: ilman tätä haaraa kortti katoaisi hiljaa.
+      blocks.push({
+        type: 'facts',
+        title: typeof b.title === 'string' ? b.title : undefined,
+        items: b.items.filter((x): x is string => typeof x === 'string'),
       });
     }
   }

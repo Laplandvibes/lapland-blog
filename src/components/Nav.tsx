@@ -96,8 +96,8 @@ export default function Nav() {
       }`
     : `${
         scrolled
-          ? 'bg-night/85 border-b border-purple/25 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.6)]'
-          : 'bg-night/40 border-b border-transparent'
+          ? 'bg-night/95 border-b border-white/10 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.45)]'
+          : 'bg-night border-b border-white/10'
       }`;
 
   const logoWordColor = isEditorial ? 'text-[var(--color-ink)]' : 'text-snow';
@@ -147,7 +147,7 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 backdrop-blur-xl transition-colors duration-300 ${wrapCls}`}
+      className={`lv-night fixed top-0 inset-x-0 z-50 backdrop-blur-xl transition-colors duration-300 ${wrapCls}`}
     >
       <div className="lv-navrivi max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
         <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">

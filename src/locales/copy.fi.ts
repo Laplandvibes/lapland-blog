@@ -5,7 +5,7 @@ const fi: SectionCopy = {
     startHere: 'Aloita tästä',
     topReads: 'Suosituimmat',
     destinations: 'Kohteet',
-    tripDiaries: 'Matkapäiväkirjat',
+    tripDiaries: 'Kaikki jutut',
     about: 'Tietoa',
     startYourBlog: 'Lisää kuva',
     signIn: 'Kirjaudu',
@@ -304,6 +304,8 @@ const fi: SectionCopy = {
     stayCta: 'Selaa',
   },
   destinations: {
+    openPlace: 'Jutut ja vinkit',
+    stayButton: 'Katso majoitukset',
     metaTitle: 'Kohteet',
     metaDescription:
       'Suomen Lapin kahdeksan pääkohdetta: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lue merkinnät kustakin tai kirjoita ensimmäinen.',
@@ -311,7 +313,7 @@ const fi: SectionCopy = {
     h1Pre: 'Kahdeksan paikkaa.',
     h1Italic: 'Yksi Lappi.',
     lead:
-      'Valitse kohde ja lue sieltä kirjoitetut merkinnät. Tyhjät odottavat vielä kirjoittajaansa, joten voit olla ensimmäinen.',
+      'Valitse paikka. Kortissa näet sieltä kirjoitetut jutut, ja paikan sivulta löydät majoitukset, ravintolat ja tekemisen.',
     beTheFirst: 'Ole ensimmäinen',
     entrySingular: 'merkintä',
     entryPlural: 'merkintää',
@@ -398,6 +400,7 @@ const fi: SectionCopy = {
     contentsAria: 'Tällä sivulla',
   },
   archive: {
+    allTopics: 'Kaikki aiheet',
     placesLabel: 'Paikka',
     allPlaces: 'Kaikki paikat',
     metaTitle: 'Kaikki jutut',
@@ -513,6 +516,9 @@ const fi: SectionCopy = {
     },
     editorialLabel: 'LaplandVibesin toimitus',
     sourcesLabel: 'Lähteet ja menetelmä',
+    checkHint: 'Rastita kohta, kun se on tehty. Rastit säilyvät tällä laitteella.',
+    checkProgress: '{done}/{total} tehty',
+    checkReset: 'Tyhjennä rastit',
     editorialNote: 'Toimituksemme kirjoittama, ei lukijan matkapäiväkirja.',
     readerLabel: 'Lukijan matkapäiväkirja',
     readerNote: 'Kirjoittanut LaplandVibesin lukija omalta matkaltaan.',
@@ -559,6 +565,7 @@ const fi: SectionCopy = {
       'heinäkuu','elokuu','syyskuu','lokakuu','marraskuu','joulukuu',
     ],
     googleAria: 'Kirjaudu Google-tilillä',
+    orContinue: 'tai',
     facebookAria: 'Kirjaudu Facebook-tilillä',
     openingLabel: 'Avataan…',
   },

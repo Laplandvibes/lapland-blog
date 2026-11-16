@@ -88,7 +88,7 @@ export default function Unsubscribe() {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-night-light/70 backdrop-blur-sm border border-pink/40">
               <div className="w-1.5 h-1.5 rounded-full bg-pink animate-pulse" />
-              <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
+              <p className="text-pink text-sm font-bold">
                 {c.eyebrow}
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function Unsubscribe() {
               </p>
               <Link
                 to={to('/')}
-                className="inline-block mt-6 text-pink hover:text-aurora-blue text-sm font-semibold uppercase tracking-wider transition-colors"
+                className="inline-block mt-6 text-pink hover:text-aurora-blue text-sm font-semibold transition-colors"
               >
                 {c.backHome}
               </Link>
@@ -122,7 +122,7 @@ export default function Unsubscribe() {
                 {/* Näkyvä label (lomakeportti 14.9.2026); sama 12-kielinen teksti kuin kirjautumissivulla. */}
                 <label
                   htmlFor="unsub-email"
-                  className="block text-[11px] uppercase tracking-[0.25em] text-slate-300 font-semibold"
+                  className="block text-sm text-slate-300 font-semibold"
                 >
                   {COPY[lang].signIn.emailLabel}
                 </label>

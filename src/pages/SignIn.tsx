@@ -26,12 +26,9 @@ import { useAuth } from '../hooks/useAuth';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabaseConfig';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useSeo, canonicalUrl } from '../lib/seo';
-import { getImage } from '../lib/images';
 import { useLang, useLocalePath, stripLocale } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
-// Ambient backdrop — the dusk-lake hero. Fixed position, very low opacity.
-const backdrop = getImage('hero-dusk-lake', '100vw');
 
 const NL_SOURCE = 'laplandblog-signin';
 
@@ -191,21 +188,7 @@ export default function SignIn() {
 
   return (
     <div className="min-h-screen bg-night text-snow flex flex-col relative">
-      {/* Ambient backdrop image — muted so it doesn't fight the form. */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <img
-          src={backdrop.src}
-          srcSet={backdrop.srcSet}
-          sizes={backdrop.sizes}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.18]"
-          loading="lazy"
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-night via-night/85 to-night" />
-      </div>
-
+      {/* Vaalea blogi 16.11.2026: himmeä taustakuva poistettu. Se peitti alatunnisteen (absoluuttinen kerros) ja harmaannutti vaalean sivun. */}
       <Nav />
 
       <main className="relative flex-1 px-4 pt-32 pb-20">
@@ -214,11 +197,11 @@ export default function SignIn() {
           <div className="order-2 lg:order-1">
             <Link
               to={from}
-              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors mb-6"
+              className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-sm font-semibold transition-colors mb-6"
             >
               <ArrowLeft size={14} /> {c.back}
             </Link>
-            <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase mb-4">
+            <p className="text-pink text-sm font-bold mb-4">
               {c.eyebrow}
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-snow font-light tracking-tight leading-[1.05] mb-6">
@@ -272,7 +255,7 @@ export default function SignIn() {
               </li>
             </ul>
 
-            <p className="text-[10px] tracking-[0.3em] uppercase text-slate-300">
+            <p className="text-sm text-slate-300">
               {c.footnote}
             </p>
           </div>
@@ -303,7 +286,7 @@ export default function SignIn() {
                     setSent(false);
                     setEmail('');
                   }}
-                  className="mt-6 text-xs text-slate-400 hover:text-pink transition-colors uppercase tracking-wider cursor-pointer"
+                  className="mt-6 text-sm text-slate-400 hover:text-pink transition-colors cursor-pointer"
                 >
                   {c.useDifferent}
                 </button>
@@ -314,7 +297,7 @@ export default function SignIn() {
                 className="rounded-2xl border border-purple/30 bg-night-light/50 backdrop-blur-sm p-8 sm:p-10 space-y-6 shadow-[0_30px_80px_-40px_rgba(236,72,153,0.4)]"
               >
                 <div>
-                  <div className="inline-flex items-center gap-2 text-pink text-[10px] tracking-[0.3em] uppercase font-bold mb-2">
+                  <div className="inline-flex items-center gap-2 text-pink text-sm font-bold mb-2">
                     <Sparkles size={12} />
                     {c.reserveEyebrow}
                   </div>
@@ -333,7 +316,7 @@ export default function SignIn() {
                 <div>
                   <label
                     htmlFor="reader-email"
-                    className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2"
+                    className="block text-sm text-slate-300 font-semibold mb-2"
                   >
                     {c.emailLabel}
                   </label>
@@ -359,7 +342,7 @@ export default function SignIn() {
                 <div>
                   <span
                     id="signin-travel-label"
-                    className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-3"
+                    className="flex items-center gap-2 text-sm text-slate-300 font-semibold mb-3"
                   >
                     <CalendarDays size={13} className="text-aurora-blue" />
                     {c.travelLabel}
@@ -369,7 +352,7 @@ export default function SignIn() {
                       ensimmäinen vaihtoehto katoaa heti kun valinta on tehty. */}
                   <div className={`grid grid-cols-2 gap-3 ${noDates ? 'opacity-40 pointer-events-none' : ''}`}>
                     <div>
-                      <label htmlFor="signin-travel-month" className="block text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-1.5">
+                      <label htmlFor="signin-travel-month" className="block text-sm text-slate-400 mb-1.5">
                         {c.monthLabel}
                       </label>
                       <select
@@ -385,7 +368,7 @@ export default function SignIn() {
                       </select>
                     </div>
                     <div>
-                      <label htmlFor="signin-travel-year" className="block text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-1.5">
+                      <label htmlFor="signin-travel-year" className="block text-sm text-slate-400 mb-1.5">
                         {c.yearLabel}
                       </label>
                       <select
@@ -457,11 +440,11 @@ export default function SignIn() {
                 {ENABLE_OAUTH && (
                   <>
                     <div className="flex items-center gap-3 pt-1">
-                      <div className="flex-1 h-px bg-purple/25" />
-                      <span className="text-[10px] uppercase tracking-[0.25em] text-slate-300">
-                        Or continue with
+                      <div className="flex-1 h-px bg-[#0F172A]/10" />
+                      <span className="text-sm text-slate-300">
+                        {c.orContinue}
                       </span>
-                      <div className="flex-1 h-px bg-purple/25" />
+                      <div className="flex-1 h-px bg-[#0F172A]/10" />
                     </div>
 
                     <div
@@ -476,7 +459,7 @@ export default function SignIn() {
                         type="button"
                         onClick={() => handleOAuth('google')}
                         disabled={oauthBusy !== null}
-                        className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white text-night font-semibold text-sm hover:bg-slate-100 disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white text-[#0F172A] border border-[#0F172A]/15 font-semibold text-sm hover:border-[#DB2777] disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer"
                         aria-label={c.googleAria}
                       >
                         <svg

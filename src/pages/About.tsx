@@ -36,7 +36,7 @@ export default function About() {
 
       {/* HERO — otsikko kuvan päälle, ei erillistä laatikkoa (sama malli kuin
           Aloita tästä ja Kohteet). */}
-      <header className="relative pt-16">
+      <header className="lv-night relative pt-16">
         <div className="relative min-h-[58vh] md:min-h-[64vh] flex items-center overflow-hidden">
           <picture>
             <source srcSet="/images/aside-vesa-1200.avif" type="image/avif" />
@@ -56,7 +56,7 @@ export default function About() {
           />
           <div className="relative w-full px-4 sm:px-6 lg:px-8 py-16">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-white tracking-[0.32em] text-[11px] font-bold uppercase mb-5">{c.eyebrow}</p>
+              <p className="text-white text-sm font-bold mb-5">{c.eyebrow}</p>
               <h1
                 className="text-snow leading-[1.05] tracking-[-0.015em] text-[clamp(2.25rem,5.5vw,3.75rem)] mb-5 hero-text-shadow"
                 style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
@@ -90,7 +90,7 @@ export default function About() {
               { Icon: PenLine, body: c.howStepWrite },
               { Icon: Share2, body: c.howStepShare },
             ].map((step, i) => (
-              <div key={i} className="rounded-2xl p-6 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
+              <div key={i} className="rounded-2xl p-6 border border-slate-900/10 bg-white shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)]">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="w-10 h-10 rounded-full bg-pink/15 border border-pink/40 flex items-center justify-center">
                     <step.Icon size={18} className="text-pink" />
@@ -106,7 +106,7 @@ export default function About() {
 
         {/* 3. Mikä on ilmaista / mitä et löydä */}
         <section className="max-w-5xl mx-auto mt-14 grid gap-5 md:grid-cols-2">
-          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
+          <div className="rounded-2xl p-7 border border-slate-900/10 bg-white shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)]">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-8 h-8 rounded-full bg-pink/15 flex items-center justify-center">
                 <Check size={16} className="text-pink" />
@@ -115,7 +115,7 @@ export default function About() {
             </div>
             <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.freeBody}</p>
           </div>
-          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
+          <div className="rounded-2xl p-7 border border-slate-900/10 bg-white shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)]">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-8 h-8 rounded-full bg-slate-600/40 flex items-center justify-center">
                 <X size={16} className="text-slate-300" />
@@ -129,18 +129,18 @@ export default function About() {
         {/* 4. Mistä sivun jutut tulevat */}
         <section className="max-w-3xl mx-auto mt-14">
           <div className="rounded-2xl border-l-2 border-pink pl-6 py-2">
-            <p className="text-pink text-[10px] uppercase tracking-[0.32em] font-bold mb-3">{c.seedHeading}</p>
+            <p className="text-pink text-sm font-bold mb-3">{c.seedHeading}</p>
             <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.seedBody}</p>
           </div>
         </section>
 
         {/* 5. Verkosto ja yhteystiedot rinnakkain */}
         <section className="max-w-5xl mx-auto mt-14 grid gap-5 md:grid-cols-2">
-          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
+          <div className="rounded-2xl p-7 border border-slate-900/10 bg-white shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)]">
             <h3 className="font-display text-xl text-snow mb-3">{c.networkHeading}</h3>
             <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.networkBody}</p>
           </div>
-          <div className="rounded-2xl p-7 border border-slate-400/15 bg-gradient-to-b from-slate-800/90 to-[#111A2E]/90 shadow-[0_18px_40px_-24px_rgba(2,6,23,0.85)]">
+          <div className="rounded-2xl p-7 border border-slate-900/10 bg-white shadow-[0_14px_34px_-22px_rgba(15,23,42,0.28)]">
             <h3 className="font-display text-xl text-snow mb-3">{c.contactHeading}</h3>
             <p className="text-slate-300 text-[0.95rem] leading-relaxed">{c.contactBody}</p>
           </div>
@@ -151,7 +151,7 @@ export default function About() {
           <p className="text-slate-400 text-base italic leading-relaxed mb-8 mx-auto w-fit max-w-full max-lg:text-left">{c.closing}</p>
           <Link
             to={to('/signin')}
-            className="inline-block px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold uppercase tracking-wider text-xs hover:bg-pink transition-colors"
+            className="inline-block px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold text-sm hover:bg-pink transition-colors"
           >
             {c.ctaPrimary}
           </Link>

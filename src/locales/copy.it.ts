@@ -7,7 +7,7 @@ const it: SectionCopy = {
     startHere: 'Inizi da qui',
     topReads: 'Letture top',
     destinations: 'Destinazioni',
-    tripDiaries: 'Diari di viaggio',
+    tripDiaries: 'Tutti i racconti',
     about: 'Chi siamo',
     startYourBlog: 'Aggiungi una foto',
     signIn: 'Accedi',
@@ -253,6 +253,8 @@ const it: SectionCopy = {
     stayCta: 'Sfoglia',
   },
   destinations: {
+    openPlace: 'Racconti e consigli',
+    stayButton: 'Vedi gli alloggi',
     metaTitle: 'Destinazioni',
     metaDescription:
       'Le otto principali destinazioni della Lapponia finlandese: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Legga le voci di ciascuna.',
@@ -260,7 +262,7 @@ const it: SectionCopy = {
     h1Pre: 'Otto luoghi.',
     h1Italic: 'Una Lapponia.',
     lead:
-      'Scelga una destinazione e legga le voci che ne provengono. Quelle vuote sono le prossime da scrivere: può essere Lei il primo.',
+      'Scelga un luogo. Ogni scheda mostra i racconti scritti lì, e la pagina del luogo porta ad alloggi, ristoranti e cose da fare.',
     beTheFirst: 'Sia il primo',
     entrySingular: 'voce',
     entryPlural: 'voci',
@@ -346,6 +348,7 @@ const it: SectionCopy = {
     contentsAria: 'In questa pagina',
   },
   archive: {
+    allTopics: 'Tutti i temi',
     placesLabel: 'Luogo',
     allPlaces: 'Tutti i luoghi',
     metaTitle: 'Tutte le voci',
@@ -461,6 +464,9 @@ const it: SectionCopy = {
     },
     editorialLabel: 'Redazione di LaplandVibes',
     sourcesLabel: 'Fonti e metodo',
+    checkHint: 'Spunti ogni voce man mano che procede. Le spunte restano salvate su questo dispositivo.',
+    checkProgress: 'Completate: {done} su {total}',
+    checkReset: 'Deseleziona tutto',
     editorialNote: 'Scritto dalla nostra redazione, non è il diario di viaggio di un lettore.',
     readerLabel: 'Diario di viaggio di un lettore',
     readerNote: 'Scritto da un lettore di LaplandVibes sul proprio viaggio.',
@@ -507,6 +513,7 @@ const it: SectionCopy = {
       'luglio’,’agosto’,’settembre’,’ottobre’,’novembre’,’dicembre',
     ],
     googleAria: 'Accedi con Google',
+    orContinue: 'oppure',
     facebookAria: 'Accedi con Facebook',
     openingLabel: 'Apertura…',
   },

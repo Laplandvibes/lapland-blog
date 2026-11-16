@@ -5,7 +5,7 @@ const zhCN: SectionCopy = {
     startHere: '从这里开始',
     topReads: '热门阅读',
     destinations: '目的地',
-    tripDiaries: '旅行日记',
+    tripDiaries: '全部文章',
     about: '关于',
     startYourBlog: '添加照片',
     signIn: '登录',
@@ -304,6 +304,8 @@ const zhCN: SectionCopy = {
     stayCta: '查看',
   },
   destinations: {
+    openPlace: '文章与旅行建议',
+    stayButton: '查看住宿',
     metaTitle: '拉普兰目的地',
     metaDescription:
       '芬兰拉普兰的八大目的地：罗瓦涅米、萨利色尔卡、莱维、凯米、伊纳里、穆奥尼奥、于拉斯、凯米耶尔维。阅读每个地方的田野日志文章，或成为第一个动笔的人。',
@@ -311,7 +313,7 @@ const zhCN: SectionCopy = {
     h1Pre: '八个地方。',
     h1Italic: '一个拉普兰。',
     lead:
-      '选一个目的地，读读从那里写下的文章。空着的，正是接下来要写的，您可以成为第一个。',
+      '选择一个地方。卡片上列出在那里写下的文章，进入地点页面还能找到住宿、餐厅和活动。',
     beTheFirst: '成为第一个',
     entrySingular: '篇',
     entryPlural: '篇',
@@ -397,6 +399,7 @@ const zhCN: SectionCopy = {
     contentsAria: '本页内容',
   },
   archive: {
+    allTopics: '全部主题',
     placesLabel: '地点',
     allPlaces: '全部地点',
     metaTitle: '全部文章',
@@ -512,6 +515,9 @@ const zhCN: SectionCopy = {
     },
     editorialLabel: 'LaplandVibes 编辑部',
     sourcesLabel: '来源与方法',
+    checkHint: '完成一项就勾选一项。勾选记录会保存在这台设备上。',
+    checkProgress: '已完成 {done}/{total}',
+    checkReset: '清除所有勾选',
     editorialNote: '由我们的编辑部撜写，不是读者的旅行日记。',
     readerLabel: '读者的旅行日记',
     readerNote: '由 LaplandVibes 读者记录自己的旅行。',
@@ -558,6 +564,7 @@ const zhCN: SectionCopy = {
       '七月','八月','九月','十月','十一月','十二月',
     ],
     googleAria: '使用 Google 登录',
+    orContinue: '或',
     facebookAria: '使用 Facebook 登录',
     openingLabel: '正在打开…',
   },

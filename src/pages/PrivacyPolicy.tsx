@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
           plain <div> (only its sibling TermsContent opens a <main>), so without
           this wrapper the page has NO main landmark at all -- measured from the
           rendered DOM 2026-08-13 across 10 network sites. Do not remove. */}
-      <main>
+      <main className="lv-legal">
         <PrivacyContent siteName="Lapland Blog" lang={lang} youtubeEmbeds />
       </main>
       <Footer />

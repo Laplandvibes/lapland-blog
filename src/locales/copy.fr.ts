@@ -7,7 +7,7 @@ const fr: SectionCopy = {
     startHere: 'Commencer ici',
     topReads: 'À lire en priorité',
     destinations: 'Destinations',
-    tripDiaries: 'Carnets de voyage',
+    tripDiaries: 'Tous les récits',
     about: 'À propos',
     startYourBlog: 'Ajouter une photo',
     signIn: 'Connexion',
@@ -253,6 +253,8 @@ const fr: SectionCopy = {
     stayCta: 'Parcourir',
   },
   destinations: {
+    openPlace: 'Récits et conseils',
+    stayButton: 'Voir les hébergements',
     metaTitle: 'Destinations de Laponie',
     metaDescription:
       'Les huit principales destinations de Laponie finlandaise : Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi. Lisez les entrées de chacune.',
@@ -260,7 +262,7 @@ const fr: SectionCopy = {
     h1Pre: 'Huit lieux.',
     h1Italic: 'Une Laponie.',
     lead:
-      'Choisissez une destination et lisez les entrées qui en viennent. Les listes vides sont les prochaines à écrire, vous pouvez en être le premier.',
+      'Choisissez un lieu. Chaque fiche présente les récits écrits sur place, et la page du lieu mène aux hébergements, aux restaurants et aux activités.',
     beTheFirst: 'Soyez le premier',
     entrySingular: 'entrée',
     entryPlural: 'entrées',
@@ -346,6 +348,7 @@ const fr: SectionCopy = {
     contentsAria: 'Sur cette page',
   },
   archive: {
+    allTopics: 'Tous les thèmes',
     placesLabel: 'Lieu',
     allPlaces: 'Tous les lieux',
     metaTitle: 'Toutes les entrées',
@@ -461,6 +464,9 @@ const fr: SectionCopy = {
     },
     editorialLabel: 'La rédaction de LaplandVibes',
     sourcesLabel: 'Sources et méthode',
+    checkHint: 'Cochez chaque point au fur et à mesure. Les cases cochées restent enregistrées sur cet appareil.',
+    checkProgress: 'Cochés : {done} sur {total}',
+    checkReset: 'Tout décocher',
     editorialNote: 'Écrit par notre rédaction : ce n’est pas le carnet de voyage d’un lecteur.',
     readerLabel: 'Carnet de voyage d’un lecteur',
     readerNote: 'Écrit par une lectrice ou un lecteur de LaplandVibes sur son propre voyage.',
@@ -507,6 +513,7 @@ const fr: SectionCopy = {
       'juillet','août','septembre','octobre','novembre','décembre',
     ],
     googleAria: 'Se connecter avec Google',
+    orContinue: 'ou',
     facebookAria: 'Se connecter avec Facebook',
     openingLabel: 'Ouverture…',
   },

@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Clock, Calendar, MapPin, Thermometer } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -46,8 +46,120 @@ function InlineMd({ text }: { text: string }) {
  * Render a single content block. H2s receive anchor ids derived from index
  * so the TableOfContents can link to them.
  */
-function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number; sourcesLabel: string }) {
+/** "Nimi: tieto" → ["Nimi", "tieto"]. Kaksoispisteen perässä välilyönti (kello 10:00 ei katkea), CJK:n ： ilman. */
+function splitFact(s: string): [string, string] | null {
+  const m = /^(.{1,60}?)\s*(?::\s|：)\s*(.+)$/su.exec(s);
+  return m ? [m[1], m[2]] : null;
+}
+
+/**
+ * Tietokortti (16.11.2026). Vesa: "täällä nämä blogi tekstit puuttuu alun hyvä rakenne tehtiin muihin blogeihin".
+ * Sama malli kuin verkoston uutispohjan facts-kortti (11.11.2026): nimi värillä omalla rivillään, tieto sen alla.
+ */
+function Facts({ title, items }: { title?: string; items: string[] }) {
+  if (items.length === 0) return null;
+  return (
+    <aside className="post-facts not-prose">
+      {title && <p className="post-facts-title">{title}</p>}
+      <dl className="post-facts-rows">
+        {items.map((it, i) => {
+          const kv = splitFact(it);
+          return (
+            <div key={i} className="post-fact">
+              {kv && <dt>{kv[0]}</dt>}
+              <dd>
+                <InlineMd text={kv ? kv[1] : it} />
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+    </aside>
+  );
+}
+
+/**
+ * Rastilista, joka oikeasti rastitetaan (Vesa 16.11.2026: "nämä ruksilaatikot ei oikein toimi kun eivät ole
+ * interaktiivisia, mutta mikä näiden funktiot on"). Funktio: lukija käy pakkaus- tai tehtävälistan läpi
+ * puhelimella ennen lähtöä. Rastit tallentuvat tälle laitteelle (localStorage, juttu + lista), eivät minnekään muualle.
+ */
+function CheckList({ items, storageKey, copy }: { items: string[]; storageKey: string; copy: { hint: string; progress: string; reset: string } }) {
+  const [done, setDone] = useState<boolean[]>(() => items.map(() => false));
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(storageKey);
+      const saved = raw ? (JSON.parse(raw) as unknown) : null;
+      if (Array.isArray(saved)) setDone(items.map((_, i) => saved[i] === true));
+    } catch {
+      /* yksityinen tila tms. */
+    }
+  }, [storageKey, items]);
+  const toggle = (i: number) =>
+    setDone((prev) => {
+      const next = prev.map((v, j) => (j === i ? !v : v));
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(next));
+      } catch {
+        /* ohita */
+      }
+      return next;
+    });
+  const count = done.filter(Boolean).length;
+  return (
+    <div className="check-wrap not-prose">
+      <p className="check-hint">{copy.hint}</p>
+      <ul className="check-list">
+        {items.map((item, i) => (
+          <li key={i} className={done[i] ? 'is-done' : undefined}>
+            <label>
+              <input type="checkbox" checked={done[i]} onChange={() => toggle(i)} className="check-input" />
+              <span aria-hidden="true" className="check-box" />
+              <span className="check-text">
+                <InlineMd text={item} />
+              </span>
+            </label>
+          </li>
+        ))}
+      </ul>
+      <div className="check-foot" aria-live="polite">
+        <span>{copy.progress.replace('{done}', String(count)).replace('{total}', String(items.length))}</span>
+        {count > 0 && (
+          <button
+            type="button"
+            className="lv-tap check-reset"
+            onClick={() => {
+              setDone(items.map(() => false));
+              try {
+                localStorage.removeItem(storageKey);
+              } catch {
+                /* ohita */
+              }
+            }}
+          >
+            {copy.reset}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Block({
+  block,
+  index,
+  sourcesLabel,
+  slug,
+  checkCopy,
+}: {
+  block: PostBlock;
+  index: number;
+  sourcesLabel: string;
+  slug: string;
+  checkCopy: { hint: string; progress: string; reset: string };
+}) {
   switch (block.type) {
+    case 'facts':
+      return <Facts title={block.title} items={block.items} />;
     case 'paragraph':
       return <p>{block.text}</p>;
     case 'heading': {
@@ -61,16 +173,7 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
       return <hr />;
     case 'list':
       if (block.check) {
-        return (
-          <ul className="check-list">
-            {block.items.map((item, i) => (
-              <li key={i}>
-                <span aria-hidden="true" className="check-box" />
-                <span><InlineMd text={item} /></span>
-              </li>
-            ))}
-          </ul>
-        );
+        return <CheckList items={block.items} storageKey={`lvb-check:${slug}:${index}`} copy={checkCopy} />;
       }
       if (block.ordered) {
         return (
@@ -92,7 +195,12 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
       return (
         <figure className={block.full ? 'figure-full' : undefined}>
           <img src={block.src} alt={block.alt} loading="lazy" decoding="async" />
-          {block.caption && <figcaption>{block.caption}</figcaption>}
+          {(block.caption || block.credit) && (
+            <figcaption>
+              {block.caption && <span className="fig-caption">{block.caption}</span>}
+              {block.credit && <span className="fig-credit">{block.credit}</span>}
+            </figcaption>
+          )}
         </figure>
       );
     case 'sources':
@@ -101,7 +209,7 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
       // viimeinen kappale — se ei vain näyttänyt lähteeltä.
       return (
         <aside className="post-sources markdown-block mt-12 rounded-xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-5 py-4 md:px-6 md:py-5">
-          <p className="text-[var(--color-ink-mute)] tracking-[0.28em] text-[10px] font-bold uppercase mb-2">
+          <p className="text-[var(--color-ink-mute)] text-sm font-bold mb-2">
             {sourcesLabel}
           </p>
           {/* Lähderivi on virkkeitä ⇒ leipätekstiä, 16 px eikä 14 (§33, Vesa 20.9.2026): lähde ei saa
@@ -121,6 +229,13 @@ function Block({ block, index, sourcesLabel }: { block: PostBlock; index: number
       return null;
   }
 }
+
+/** Sivupalstan majoitushaku jutun paikkaan (mainos sivun aiheesta käsin). Muut: Rovaniemi. */
+const STAY_PLACE: Record<string, string> = {
+  'twelve-kilometres-at-one-in-the-morning': 'Saariselkä',
+  'the-sun-did-not-set-it-just-circled-the-house': 'Sodankylä',
+  'the-night-the-sky-broke-open-over-kemi': 'Kemi',
+};
 
 export default function Post() {
   const lang = useLang();
@@ -269,6 +384,13 @@ export default function Post() {
   // suunniteltu tai 100cqi / jaon em-leveys. manropeEm on kalibroitu painolle 700; painolla 800 ja -0,015 em:n
   // välistyksellä se arvioi 0,954–0,990 mitatusta (8 otsikkoa 23.10.), joten × 1,08 pitää arvion aina yläkanttiin.
   const h1Em = ilmanValeja(textLang ?? lang) ? null : kahdenRivinEm(post.title);
+  // Puhelimen ja tabletin majoitusmainos tulee ennen ensimmäistä väliotsikkoa (= johdanto-osan perään).
+  // Jutussa ilman väliotsikoita (lukijan kuvajulkaisu) koko runko on yhtä osaa eikä mainosta tule.
+  const firstHeading = post.content.findIndex((b) => b.type === 'heading');
+  // Enintään kolmannen lohkon jälkeen (kortti + kaksi kappaletta): pitkän kortin jutuissa ensimmäinen väliotsikko
+  // oli puhelimella 2,9 näytöllisen päässä, tavoite on enintään 2,5 (mitattu 390 px, 16.11.2026).
+  const adIndex = firstHeading > 0 ? Math.min(firstHeading, 3) : post.content.length;
+  const checkCopy = { hint: c.checkHint, progress: c.checkProgress, reset: c.checkReset };
 
   // Byline: a reader's own post shows their name and links to their trip page;
   // editorial posts keep the editorial pen.
@@ -302,7 +424,7 @@ export default function Post() {
             decoding="async"
           />
         </div>
-        <div className="relative px-4 sm:px-6 lg:px-8 pt-7 lg:pt-40 lg:pb-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:bg-gradient-to-t lg:from-night/92 lg:via-night/60 lg:to-transparent">
+        <div className="lg:lv-night relative px-4 sm:px-6 lg:px-8 pt-7 lg:pt-40 lg:pb-10 lg:absolute lg:inset-x-0 lg:bottom-0 lg:bg-gradient-to-t lg:from-night/92 lg:via-night/60 lg:to-transparent">
           <div className="max-w-[72rem] mx-auto text-center lg:text-left">
             {catName && cat && (
               <Link
@@ -354,7 +476,7 @@ export default function Post() {
               {post.readTimeMinutes} {c.minRead}
             </span>
           )}
-          <ShareButton lang={lang} title={post.title} excerpt={post.excerpt} tone="dark" className="lg:ml-auto" />
+          <ShareButton lang={lang} title={post.title} excerpt={post.excerpt} tone="light" className="lg:ml-auto" />
         </div>
       </div>
 
@@ -371,15 +493,34 @@ export default function Post() {
             className="theme-editorial lv-paper rounded-[1.5rem] px-5 py-8 sm:px-10 sm:py-11 lg:px-14 lg:py-12"
           >
             {post.excerpt && (
-              <p lang={textLang} className="text-[var(--color-ink-soft)] text-lg md:text-[1.3rem] leading-relaxed max-w-[38rem] mb-2">
+              <p lang={textLang} className="post-lead text-[var(--color-ink)] text-[1.2rem] md:text-[1.35rem] font-medium leading-relaxed max-w-[40rem] mb-2">
                 {post.excerpt}
               </p>
             )}
 
-            <div id="post-body" lang={textLang} className="prose-editorial mt-8">
-              {post.content.map((block, i) => (
-                <Block key={i} block={block} index={i} sourcesLabel={c.sourcesLabel} />
-              ))}
+            {/* Runko kahdessa osassa: johdanto-osa (kortti + alkukappaleet), sitten puhelimella ja tabletilla
+                majoitusmainos ja loput. Tietokoneella sama mainos on sivupalstassa, puhelimella sivupalstaa ei ole,
+                joten ilman tätä mainos ei näkynyt siellä lainkaan (sääntö 20.10.2026: oma mainos johdannon perään,
+                puhelimella 1–2,5 näytöllistä). Mainos on .prose-editorialin ULKOPUOLELLA: sen linkkityyli värjäisi
+                napin tekstin pinkiksi pinkille. Lukijan omassa julkaisussa ei mainosta (etusivun UKK lupaa). */}
+            <div id="post-body" lang={textLang} className="mt-7">
+              <div className="prose-editorial">
+                {post.content.slice(0, adIndex).map((block, i) => (
+                  <Block key={i} block={block} index={i} sourcesLabel={c.sourcesLabel} slug={post.slug} checkCopy={checkCopy} />
+                ))}
+              </div>
+              {adIndex < post.content.length && !post.byReader && (
+                <div className="lg:hidden my-9" lang={lang}>
+                  <BannerAd partner="hotels" sid="post_inline_hotels" destination={STAY_PLACE[post.slug] ?? 'Rovaniemi'} surface="tint" />
+                </div>
+              )}
+              {adIndex < post.content.length && (
+                <div className="prose-editorial">
+                  {post.content.slice(adIndex).map((block, i) => (
+                    <Block key={adIndex + i} block={block} index={adIndex + i} sourcesLabel={c.sourcesLabel} slug={post.slug} checkCopy={checkCopy} />
+                  ))}
+                </div>
+              )}
             </div>
             {post.weatherNote && <p className="mt-8 text-sm text-[var(--color-ink-mute)]">{c.tempSource}</p>}
 
@@ -413,11 +554,11 @@ export default function Post() {
             {!post.byReader && <AuthorBio variant="editorial" author={post.author} />}
           </article>
 
-          {/* Side column on the night ground: dark inks via theme-night. */}
-          <aside className="theme-night hidden lg:flex lg:flex-col lg:gap-8 lg:sticky lg:top-24 lg:self-start">
+          {/* Side column on the light ground (vaalea blogi 16.11.2026). */}
+          <aside className="hidden lg:flex lg:flex-col lg:gap-8 lg:sticky lg:top-24 lg:self-start">
             <TableOfContents blocks={post.content} textLang={textLang} />
             {/* A reader's own post carries no ads: the home FAQ promises it. */}
-            {!post.byReader && <BannerAd partner="hotels" sid="post_sidebar_hotels" destination="Rovaniemi" />}
+            {!post.byReader && <BannerAd partner="hotels" sid="post_sidebar_hotels" destination={STAY_PLACE[post.slug] ?? 'Rovaniemi'} />}
           </aside>
         </div>
       </main>

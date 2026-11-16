@@ -206,7 +206,7 @@ export default function Newsletter() {
     <section
       id="newsletter"
       ref={sectionRef}
-      className="relative py-24 px-4 overflow-hidden border-y border-pink/15"
+      className="lv-night bg-night relative py-24 px-4 overflow-hidden border-y border-pink/15"
       aria-labelledby="newsletter-heading"
     >
       {/* Dark base + ambient glows */}
@@ -217,7 +217,7 @@ export default function Newsletter() {
       <div className="relative max-w-2xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-night/70 backdrop-blur-sm border border-pink/40">
           <Sparkles size={12} className="text-pink" />
-          <p className="text-pink tracking-[0.35em] text-[10px] font-bold uppercase">
+          <p className="text-pink text-sm font-bold">
             {c.eyebrow}
           </p>
         </div>

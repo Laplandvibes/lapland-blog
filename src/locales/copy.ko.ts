@@ -7,7 +7,7 @@ const ko: SectionCopy = {
     startHere: '시작하기',
     topReads: '인기 글',
     destinations: '여행지',
-    tripDiaries: '여행기',
+    tripDiaries: '모든 글',
     about: '소개',
     startYourBlog: '사진 추가',
     signIn: '로그인',
@@ -253,6 +253,8 @@ const ko: SectionCopy = {
     stayCta: '보기',
   },
   destinations: {
+    openPlace: '이야기와 여행 팁',
+    stayButton: '숙소 보기',
     metaTitle: '여행지',
     metaDescription:
       '라플란드의 주요 여덟 곳: 로바니에미, 사리셀카, 레비, 케미, 이나리, 무오니오, 윌래스, 케미야르비. 각 지역의 현장 일기를 읽거나, 최초의 글을 작성하세요.',
@@ -260,7 +262,7 @@ const ko: SectionCopy = {
     h1Pre: '여덟 곳.',
     h1Italic: '하나의 라플란드.',
     lead:
-      '여행지를 고르시고 그곳의 글을 읽으세요. 비어 있는 곳은 다음에 쓰일 곳입니다. 첫 번째 작성자가 되실 수 있습니다.',
+      '여행지를 고르세요. 카드에는 그곳에서 쓴 글이 보이고, 여행지 페이지에서 숙소, 식당, 즐길 거리를 찾을 수 있습니다.',
     beTheFirst: '첫 번째 작성자가 되기',
     entrySingular: '글',
     entryPlural: '글',
@@ -346,6 +348,7 @@ const ko: SectionCopy = {
     contentsAria: '이 페이지의 내용',
   },
   archive: {
+    allTopics: '모든 주제',
     placesLabel: '장소',
     allPlaces: '모든 장소',
     metaTitle: '모든 글',
@@ -461,6 +464,9 @@ const ko: SectionCopy = {
     },
     editorialLabel: 'LaplandVibes 편집부',
     sourcesLabel: '출처와 방법',
+    checkHint: '끝낸 항목에 체크하세요. 체크 표시는 이 기기에 저장됩니다.',
+    checkProgress: '{total}개 중 {done}개 완료',
+    checkReset: '체크 모두 해제',
     editorialNote: '편집팀이 쓴 글이며, 독자의 여행 일기가 아닙니다.',
     readerLabel: '독자의 여행 일기',
     readerNote: 'LaplandVibes 독자가 자신의 여행에 대해 쓴 글입니다.',
@@ -507,6 +513,7 @@ const ko: SectionCopy = {
       '7월’,’8월’,’9월’,’10월’,’11월’,’12월',
     ],
     googleAria: 'Google로 로그인',
+    orContinue: '또는',
     facebookAria: 'Facebook으로 로그인',
     openingLabel: '여는 중…',
   },

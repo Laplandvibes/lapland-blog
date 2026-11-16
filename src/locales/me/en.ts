@@ -51,6 +51,8 @@ const en: MeCopy = {
     myBlog: 'My blog',
   },
   dashboard: {
+    newPostH2: 'New post',
+    myPostsH2: 'Your posts',
     metaTitle: 'My trip blog',
     h1: 'My trip blog',
     yourPage: 'Your trip page',

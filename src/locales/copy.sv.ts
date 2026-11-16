@@ -5,7 +5,7 @@ const sv: SectionCopy = {
     startHere: 'Börja här',
     topReads: 'Mest lästa',
     destinations: 'Resmål',
-    tripDiaries: 'Resedagböcker',
+    tripDiaries: 'Alla berättelser',
     about: 'Om',
     startYourBlog: 'Lägg till ett foto',
     signIn: 'Logga in',
@@ -304,6 +304,8 @@ const sv: SectionCopy = {
     stayCta: 'Bläddra',
   },
   destinations: {
+    openPlace: 'Berättelser och tips',
+    stayButton: 'Se boenden',
     metaTitle: 'Resmål',
     metaDescription:
       'Finska Lapplands åtta främsta resmål: Rovaniemi, Saariselkä, Levi, Kemi, Inari, Muonio, Ylläs, Kemijärvi.',
@@ -311,7 +313,7 @@ const sv: SectionCopy = {
     h1Pre: 'Åtta platser.',
     h1Italic: 'Ett Lappland.',
     lead:
-      'Välj ett resmål och läs inläggen därifrån. De tomma är de nästa att skriva, så du kan bli först.',
+      'Välj en plats. Varje kort visar berättelserna därifrån, och platsens sida leder vidare till boende, restauranger och aktiviteter.',
     beTheFirst: 'Bli först',
     entrySingular: 'inlägg',
     entryPlural: 'inlägg',
@@ -397,6 +399,7 @@ const sv: SectionCopy = {
     contentsAria: 'På den här sidan',
   },
   archive: {
+    allTopics: 'Alla ämnen',
     placesLabel: 'Plats',
     allPlaces: 'Alla platser',
     metaTitle: 'Alla berättelser',
@@ -512,6 +515,9 @@ const sv: SectionCopy = {
     },
     editorialLabel: 'LaplandVibes redaktion',
     sourcesLabel: 'Källor och metod',
+    checkHint: 'Bocka av punkterna allt eftersom. Markeringarna sparas på den här enheten.',
+    checkProgress: '{done} av {total} klara',
+    checkReset: 'Rensa markeringarna',
     editorialNote: 'Skriven av vår redaktion, inte en läsares resedagbok.',
     readerLabel: 'En läsares resedagbok',
     readerNote: 'Skriven av en läsare om den egna resan.',
@@ -558,6 +564,7 @@ const sv: SectionCopy = {
       'juli','augusti','september','oktober','november','december',
     ],
     googleAria: 'Logga in med Google',
+    orContinue: 'eller',
     facebookAria: 'Logga in med Facebook',
     openingLabel: 'Öppnar…',
   },

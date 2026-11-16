@@ -77,7 +77,7 @@ function Player({ band, lang }: { band: Band; lang: Lang }) {
           />
           {/* Darkening only under the text strip (feedback_image_overlay_only_under_text). */}
           <span className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/75 to-transparent" aria-hidden="true" />
-          <span className="absolute left-4 right-4 bottom-4 flex items-center gap-3">
+          <span className="lv-night absolute left-4 right-4 bottom-4 flex items-center gap-3">
             <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-pink-cta text-white shadow-lg transition-transform duration-200 ease-out group-hover:scale-105">
               <Play size={26} className="translate-x-[2px]" fill="currentColor" aria-hidden="true" />
             </span>
@@ -133,7 +133,7 @@ export default function FinnishBands() {
 
       <section className="pt-32 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center lg:text-left">
-          <p className="text-pink-300 font-bold text-sm tracking-[0.18em] uppercase">{c.kicker}</p>
+          <p className="text-pink-300 font-bold text-sm">{c.kicker}</p>
           <h1 className="font-display font-extrabold text-[clamp(2.4rem,6.5vw,4.6rem)] leading-[1.04] tracking-tight mt-4 mb-5 text-balance">
             {c.h1}
           </h1>
@@ -141,7 +141,7 @@ export default function FinnishBands() {
           <p className="text-left text-slate-200 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto lg:mx-0 text-pretty">{c.lead}</p>
           {/* Share at the top and at the end (feedback_artikkelissa_jakonappi): canonical ShareButton here, the blog's ShareBar at the end, as on posts. */}
           <div className="flex justify-center lg:justify-start">
-            <ShareButton lang={lang} title={c.h1} excerpt={c.lead} tone="dark" className="mt-6" />
+            <ShareButton lang={lang} title={c.h1} excerpt={c.lead} tone="light" className="mt-6" />
           </div>
         </div>
         <figure className="max-w-6xl mx-auto mt-10">

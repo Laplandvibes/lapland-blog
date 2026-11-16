@@ -1220,3 +1220,255 @@ h1 > span, h2 > span, h3 > span, h4 > span, button > span, summary > span {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   VAALEA BLOGI (Vesa 16.11.2026): "tämä sivuston tumma tausta ei ole hyvä. se tekee tunkkaisen tästä
+   sivusta", "ai kamala kun tulee tänne kuin pimeätä tällä on. en itsekään jäisi lukemaan tänne mitään",
+   "tämä sivun pitää olla fresh". Koko sivusto vaalealle lumipohjalle; tummiksi jäävät vain yläpalkki,
+   kuvan päällä olevat herot, uutiskirjekaista ja alatunniste (sama jako kuin laplandtransportin arkissa).
+
+   Toteutus: App.tsx kääri reitit `.lv-light`-elementtiin (display: contents). Se kääntää sivuston omat
+   värimerkit (night, snow, slaten tekstisävyt, vaaleat pinkit) vaalean pohjan arvoihin, joten sivut
+   piirtyvät vaaleina ilman että jokaista 600 luokkaa kirjoitetaan uudelleen. `.lv-night` palauttaa
+   alkuperäiset tummat arvot esineelle, jonka kuuluu pysyä tummana (yläpalkki, hero kuvan päällä,
+   tummat paneelit). Evästepalkki, uutiskirjeikkuna ja appinosto ovat käärön ulkopuolella eivätkä muutu.
+   🔴 `text-snow` tarkoittaa käärön sisällä TUMMAA mustetta. Uusi tumma esine ⇒ anna sille `lv-night`.
+   ════════════════════════════════════════════════════════════════════════════ */
+body { background-color: #F4F7FB; }
+
+.lv-light {
+  --color-night: #F4F7FB;          /* sivun pohja: viileä lumi */
+  --color-night-light: #FFFFFF;    /* kortit */
+  --color-night-lighter: #E2E8F0;  /* täytteet, erottimet */
+  --color-snow: #0F172A;           /* muste */
+  --color-pink: #BE185D;           /* korostus tekstinä vaalealla: 6,0:1 */
+  --color-pink-300: #BE185D;
+  --color-pink-200: #9D174D;
+  --color-purple: #94A3B8;         /* tumman teeman violetit hiusviivat ⇒ neutraali reunus */
+  --color-purple-light: #64748B;
+  --color-slate-100: #0F172A;
+  --color-slate-200: #1E293B;
+  --color-slate-300: #334155;      /* toissijainen teksti 9,9:1 */
+  --color-slate-400: #475569;      /* pieni harmaa teksti 7,0:1 */
+  --color-slate-500: #56657A;      /* kuvaajarivit, paikanpitäjät: 5,6:1 (oletus 4,43:1 jäi alle AA:n) */
+  --color-aurora-blue: #BE185D;    /* pinkki pikkuteksti vaalealla */
+  --color-aurora-green: #9D174D;
+  --color-slate-600: #CBD5E1;      /* reunukset */
+  --color-slate-700: #D5DDE8;
+  --color-slate-800: #E2E8F0;
+  --shadow-card: 0 14px 34px -22px rgba(15, 23, 42, 0.28);
+  --shadow-card-lift: 0 24px 48px -26px rgba(15, 23, 42, 0.34);
+  --shadow-plate: 0 30px 70px -40px rgba(15, 23, 42, 0.30);
+  color: #1E293B;
+}
+/* Tumman teeman editorial-musteet (Destinations ym. käyttivät theme-nightia) ⇒ vaalealla pohjalla vaaleat. */
+.lv-light .theme-night {
+  --color-cream: #FFFFFF;
+  --color-cream-deep: #EEF2F7;
+  --color-paper-border: rgba(15, 23, 42, 0.10);
+  --color-ink: #0F172A;
+  --color-ink-soft: #334155;
+  --color-ink-mute: #475569;
+  --color-accent: #BE185D;
+  --color-accent-dark: #9D174D;
+}
+/* Lukuarkki vaalealla pohjalla: valkoinen paperi, jotta arkki erottuu sivun pohjasta. */
+.lv-light .lv-paper:not([data-theme='kaamos']):not([data-theme='ruska']) {
+  background-color: #FFFFFF;
+  --color-cream: #FFFFFF;
+  --color-cream-deep: #F1F5F9;
+  border-color: rgba(15, 23, 42, 0.07);
+}
+
+/* Tummana pysyvä esine (yläpalkki, hero kuvan päällä, tumma paneeli): alkuperäiset arvot takaisin. */
+.lv-night,
+.lv-light .lv-night {
+  --color-night: #0F172A;
+  --color-night-light: #1E293B;
+  --color-night-lighter: #334155;
+  --color-snow: #F8FAFC;
+  --color-pink: #EC4899;
+  --color-pink-300: oklch(82.3% 0.12 346.018);
+  --color-pink-200: oklch(89.9% 0.061 343.231);
+  --color-purple: #7C3AED;
+  --color-purple-light: #A78BFA;
+  --color-slate-100: oklch(96.8% 0.007 247.896);
+  --color-slate-200: oklch(92.9% 0.013 255.508);
+  --color-slate-300: oklch(86.9% 0.022 252.894);
+  --color-slate-400: oklch(70.4% 0.04 256.788);
+  --color-slate-500: oklch(55.4% 0.046 257.417);
+  --color-aurora-blue: #EC4899;
+  --color-aurora-green: #DB2777;
+  --color-slate-600: oklch(44.6% 0.043 257.281);
+  --color-slate-700: oklch(37.2% 0.044 257.287);
+  --color-slate-800: oklch(27.9% 0.041 260.031);
+  --shadow-card: 0 18px 40px -24px rgba(2, 6, 23, 0.85);
+  --shadow-card-lift: 0 30px 64px -28px rgba(2, 6, 23, 0.95);
+  --shadow-plate: 0 44px 90px -44px rgba(2, 6, 23, 0.95);
+  /* editorial-musteet (theme-editorial-sivujen herot) tummalle pohjalle */
+  --color-cream: #0F172A;
+  --color-cream-deep: #1E293B;
+  --color-paper-border: rgba(148, 163, 184, 0.22);
+  --color-ink: #F8FAFC;
+  --color-ink-soft: #CBD5E1;
+  --color-ink-mute: #94A3B8;
+  --color-accent: #F472B6;
+  --color-accent-dark: #F9A8D4;
+  color: #E2E8F0;
+}
+/* Vain tietokoneella tumma: herot, joissa otsikko on kuvan päällä vasta 1024 px:stä (puhelimella kuvan alla). */
+@media (min-width: 1024px) {
+  .lv-light .lg\:lv-night {
+    --color-night: #0F172A;
+    --color-snow: #F8FAFC;
+    --color-pink: #EC4899;
+    --color-pink-300: oklch(82.3% 0.12 346.018);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+  }
+}
+
+/* Vaalea blogi: korttipohja valkoiseksi, läpikuultavat yökortit kiinteiksi valkoisiksi. */
+.lv-light .card-base {
+  border-color: rgba(15, 23, 42, 0.08);
+  background-color: #FFFFFF;
+  box-shadow: 0 14px 34px -24px rgba(15, 23, 42, 0.28);
+}
+.lv-light .card-base:hover {
+  border-color: rgba(219, 39, 119, 0.45);
+  box-shadow: 0 24px 48px -26px rgba(15, 23, 42, 0.34);
+}
+.lv-light :is([class^="bg-night-light/"], [class*=" bg-night-light/"]) {
+  background-color: #FFFFFF;
+}
+.lv-light .lv-night :is([class^="bg-night-light/"], [class*=" bg-night-light/"]) {
+  background-color: color-mix(in oklab, #1E293B 60%, transparent);
+}
+
+/* ── JUTUN RAKENNE 16.11.2026: tietokortti, rastilista, kuvateksti + krediitti ─────────────────────────── */
+/* Tietokortti: verkoston uutispohjan facts-kortin malli (11.11.2026). Jäänsininen pohja, pinkki reunaviiva,
+   nimi pienellä värillä, tieto isommalla musteella. Kaksi saraketta 640 px:stä ylös. */
+.post-facts {
+  margin: 0 0 2.2rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+  border-radius: 1.1rem;
+  background: #EEF4FB;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-left: 4px solid #DB2777;
+}
+.prose-editorial .post-facts { margin-top: 2.4em; }
+.prose-editorial > .post-facts:first-child { margin-top: 0; }
+.post-facts-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: #0F172A;
+  margin: 0 0 0.85rem;
+}
+.post-facts-rows { display: grid; gap: 0.5rem; margin: 0; }
+@media (min-width: 640px) { .post-facts-rows { grid-template-columns: 1fr 1fr; } }
+/* Rivi = valkoinen laatta: nimi pinkillä, tieto sen alla (sama kuin uutispohjan .nw-fact). */
+.post-fact {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  min-width: 0;
+}
+.post-fact dt {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #BE185D;
+  margin: 0 0 0.2rem;
+  line-height: 1.3;
+}
+.post-fact dd {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: #0F172A;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.post-fact dd a { color: #BE185D; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Rastilista: oikea valintaruutu, iso osuma-alue, rasti pinkillä. */
+.prose-editorial .check-wrap { margin: 0.6em 0 2em; }
+.check-hint { font-size: 1rem; line-height: 1.5; color: #475569; margin: 0 0 0.7rem; }
+.prose-editorial ul.check-list li { padding: 0; display: block; background: #FFFFFF; border-color: rgba(15, 23, 42, 0.12); }
+.check-list label {
+  display: grid;
+  grid-template-columns: 1.6rem 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  min-height: 44px;
+}
+.check-input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.prose-editorial ul.check-list .check-box {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
+  border: 2px solid #94A3B8;
+  border-radius: 0.4rem;
+  background: #FFFFFF;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+.check-input:focus-visible + .check-box { outline: 2px solid #DB2777; outline-offset: 2px; }
+.check-list li.is-done .check-box { background: #DB2777; border-color: #DB2777; }
+.check-list li.is-done .check-box::after {
+  content: '';
+  position: absolute;
+  left: 0.42rem;
+  top: 0.15rem;
+  width: 0.45rem;
+  height: 0.8rem;
+  border: solid #FFFFFF;
+  border-width: 0 0.18rem 0.18rem 0;
+  transform: rotate(45deg);
+}
+.check-list li.is-done { background: #FDF2F8; border-color: rgba(219, 39, 119, 0.35); }
+.check-list li.is-done .check-text { color: #475569; }
+.check-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; margin-top: 0.7rem; font-size: 1rem; font-weight: 600; color: #475569; }
+.check-reset { color: #BE185D; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Kuvateksti ja krediitti: kuvateksti koko kuvan levyisenä (oli 52ch ⇒ "Laskelma ja kaavio: LaplandVibes"
+   katkesi omalle rivilleen, Vesa 16.11.2026), krediitti pienenä oikeaan laitaan samalle riville kun mahtuu. */
+.prose-editorial figcaption {
+  max-width: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.2rem 1.25rem;
+}
+.prose-editorial figcaption .fig-credit { font-size: 1rem; color: #475569; margin-left: auto; }
+
+
+/* Vaalea blogi: kohdesivun ja Tietoa-sivun kerma-editorial samaan lumisävyyn kuin muu sivusto. */
+.lv-light .theme-editorial:not(.lv-paper) {
+  --color-cream: #F4F7FB;
+  --color-cream-deep: #FFFFFF;
+  --color-paper-border: rgba(15, 23, 42, 0.10);
+  --color-ink: #0F172A;
+  --color-ink-soft: #334155;
+  --color-ink-mute: #475569;
+  --color-accent: #BE185D;
+  --color-accent-dark: #9D174D;
+}
+
+/* Lakisivut: jaettu Legal-sisältö maalaa oman bg-deep-night-pohjansa. Vaalealla sivustolla sekin vaaleaksi,
+   tekstit ovat text-snow-mustetta (käännetty tummaksi .lv-lightissa). */
+.lv-light .lv-legal {
+  --color-deep-night: #F4F7FB;
+  --color-vibe-pink: #BE185D;
+  /* evästeluokkien pastellimerkit (tehty tummalle pohjalle) luettaviksi vaalealla */
+  --color-blue-300: #1D4ED8;
+  --color-emerald-300: #047857;
+  --color-amber-300: #92400E;
+  --color-violet-300: #6D28D9;
+}

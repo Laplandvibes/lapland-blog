@@ -507,7 +507,7 @@ export default function MyEditor() {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <Link
             to="/me"
-            className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+            className="lv-tap inline-flex items-center gap-1.5 text-slate-400 hover:text-pink text-sm font-semibold transition-colors"
           >
             <ArrowLeft size={14} /> Your blog
           </Link>
@@ -516,7 +516,7 @@ export default function MyEditor() {
             <button
               type="button"
               onClick={() => setPreviewOpen((o) => !o)}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-purple/30 text-slate-300 hover:text-snow hover:border-pink/60 text-xs font-semibold tracking-wider uppercase transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-purple/30 text-slate-300 hover:text-snow hover:border-pink/60 text-sm font-semibold transition-colors"
             >
               {previewOpen ? <EyeOff size={14} /> : <Eye size={14} />}
               {previewOpen ? 'Hide preview' : 'Preview'}
@@ -527,7 +527,7 @@ export default function MyEditor() {
                 void handleSave('draft');
               }}
               disabled={saving}
-              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full border border-slate-500/40 text-slate-200 hover:text-snow hover:border-snow/60 text-xs font-semibold tracking-wider uppercase transition-colors disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full border border-slate-500/40 text-slate-200 hover:text-snow hover:border-snow/60 text-sm font-semibold transition-colors disabled:opacity-50"
             >
               <FileText size={14} />
               Save draft
@@ -538,7 +538,7 @@ export default function MyEditor() {
                 void handleSave('published');
               }}
               disabled={saving}
-              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#DB2777] text-white hover:bg-[#BE185D] text-xs font-semibold tracking-wider uppercase transition-colors disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#DB2777] text-white hover:bg-[#BE185D] text-sm font-semibold transition-colors disabled:opacity-50"
             >
               <Globe size={14} />
               {status === 'published' ? 'Update live' : 'Publish'}
@@ -566,7 +566,7 @@ export default function MyEditor() {
           {/* ── Body editor ──────────────────────────────────────────── */}
           <div className="space-y-6">
             <div>
-              <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+              <label className="block text-sm text-slate-300 font-semibold mb-2">
                 Title
               </label>
               <input
@@ -579,7 +579,7 @@ export default function MyEditor() {
             </div>
 
             <div>
-              <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+              <label className="block text-sm text-slate-300 font-semibold mb-2">
                 Short description
               </label>
               <textarea
@@ -593,14 +593,14 @@ export default function MyEditor() {
 
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold">
+                <label className="block text-sm text-slate-300 font-semibold">
                   Your story
                 </label>
                 <button
                   type="button"
                   onClick={() => bodyImageRef.current?.click()}
                   disabled={bodyUploading}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-purple/30 text-slate-300 hover:text-snow hover:border-pink/60 text-[11px] font-semibold tracking-wider uppercase transition-colors disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-purple/30 text-slate-300 hover:text-snow hover:border-pink/60 text-sm font-semibold transition-colors disabled:opacity-50"
                 >
                   <ImagePlus size={14} />
                   Add photo
@@ -672,7 +672,7 @@ export default function MyEditor() {
 
             {previewOpen && (
               <div className="rounded-2xl border border-purple/25 bg-night-light/30 p-6">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-aurora-blue font-semibold mb-4">
+                <p className="text-sm text-aurora-blue font-semibold mb-4">
                   Preview
                 </p>
                 <div className="prose prose-invert max-w-none prose-headings:font-display prose-headings:font-light prose-a:text-pink">
@@ -690,7 +690,7 @@ export default function MyEditor() {
             {isNew && (
               <Reveal delay={2}>
               <div className="hidden lg:block rounded-2xl border border-pink/25 bg-pink/5 p-5">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-pink font-bold mb-3">
+                <p className="text-sm text-pink font-bold mb-3">
                   How to write your post
                 </p>
                 <ol className="space-y-2.5 text-[13px] text-slate-200 leading-snug">
@@ -721,16 +721,16 @@ export default function MyEditor() {
 
             <div className="rounded-2xl border border-purple/25 bg-night-light/30 p-5 space-y-5">
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="block text-sm text-slate-300 font-semibold mb-2">
                   Status
                 </label>
                 <div className="flex items-center gap-2">
                   {status === 'published' ? (
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[10px] uppercase tracking-wider bg-aurora-green/15 text-aurora-green border border-aurora-green/30">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-aurora-green/15 text-aurora-green border border-aurora-green/30">
                       <Eye size={11} /> Published
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[10px] uppercase tracking-wider bg-slate-500/15 text-slate-300 border border-slate-500/30">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-slate-500/15 text-slate-300 border border-slate-500/30">
                       <EyeOff size={11} /> Draft
                     </span>
                   )}
@@ -738,7 +738,7 @@ export default function MyEditor() {
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="block text-sm text-slate-300 font-semibold mb-2">
                   Topic
                 </label>
                 <select
@@ -759,7 +759,7 @@ export default function MyEditor() {
                   (ks. src/index.css "KIRJOITTAJAN TEEMAT"), ja vapaa valinta
                   tuottaisi lukukelvottomia yhdistelmiä. */}
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="block text-sm text-slate-300 font-semibold mb-2">
                   Look
                 </label>
                 <div className="grid grid-cols-2 gap-2">
@@ -803,7 +803,7 @@ export default function MyEditor() {
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="block text-sm text-slate-300 font-semibold mb-2">
                   Post URL
                 </label>
                 <input
@@ -824,12 +824,12 @@ export default function MyEditor() {
 
             {/* ── Your trip metadata ───────────────────────────── */}
             <div className="rounded-2xl border border-aurora-blue/25 bg-aurora-blue/5 p-5 space-y-4">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-aurora-blue font-bold">
+              <p className="text-sm text-aurora-blue font-bold">
                 Your trip
               </p>
 
               <div>
-                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="flex items-center gap-1.5 text-sm text-slate-300 font-semibold mb-2">
                   <MapPin size={11} className="text-aurora-blue" />
                   Where in Lapland?
                 </label>
@@ -858,7 +858,7 @@ export default function MyEditor() {
               </div>
 
               <div>
-                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="flex items-center gap-1.5 text-sm text-slate-300 font-semibold mb-2">
                   <CalendarDays size={11} className="text-aurora-blue" />
                   When did you visit?
                 </label>
@@ -871,7 +871,7 @@ export default function MyEditor() {
               </div>
 
               <div>
-                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="flex items-center gap-1.5 text-sm text-slate-300 font-semibold mb-2">
                   <Home size={11} className="text-aurora-blue" />
                   Where did you stay?
                 </label>
@@ -893,7 +893,7 @@ export default function MyEditor() {
               </div>
 
               <div>
-                <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="flex items-center gap-1.5 text-sm text-slate-300 font-semibold mb-2">
                   <Cloud size={11} className="text-aurora-blue" />
                   Weather
                 </label>
@@ -909,13 +909,13 @@ export default function MyEditor() {
 
             <div className="rounded-2xl border border-purple/25 bg-night-light/30 p-5 space-y-4">
               <div className="flex items-center justify-between">
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold">
+                <label className="block text-sm text-slate-300 font-semibold">
                   Cover photo
                 </label>
                 <button
                   type="button"
                   onClick={() => setHeroUrlMode((m) => !m)}
-                  className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wider text-slate-300 hover:text-pink font-semibold transition-colors"
+                  className="inline-flex items-center gap-1 text-sm text-slate-300 hover:text-pink font-semibold transition-colors"
                 >
                   <Link2 size={11} />
                   {heroUrlMode ? 'Upload' : 'Paste URL'}
@@ -955,7 +955,7 @@ export default function MyEditor() {
               )}
 
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-slate-300 font-semibold mb-2">
+                <label className="block text-sm text-slate-300 font-semibold mb-2">
                   Photo caption
                 </label>
                 <input

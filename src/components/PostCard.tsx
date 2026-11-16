@@ -60,7 +60,7 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
             className={
               isEditorial
                 ? 'absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent'
-                : 'absolute inset-0 bg-gradient-to-t from-night via-night/30 to-transparent'
+                : 'hidden'
             }
           />
 
@@ -68,8 +68,8 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
             <span
               className={
                 isEditorial
-                  ? 'absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-[var(--color-cream)] text-[var(--color-accent)] border border-[var(--color-accent)]/30'
-                  : 'absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-night/85 backdrop-blur-sm text-pink-300 border border-pink/40'
+                  ? 'absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-[var(--color-cream)] text-[var(--color-accent)] border border-[var(--color-accent)]/30'
+                  : 'absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold bg-white/95 text-pink-dark shadow-sm'
               }
             >
               {catName}
@@ -82,8 +82,8 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
             lang={textLang}
             className={
               isEditorial
-                ? 'text-[10px] uppercase tracking-[0.3em] text-[var(--color-ink-mute)] mb-3'
-                : 'text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-3'
+                ? 'text-sm font-semibold text-[var(--color-ink-mute)] mb-2 empty:hidden'
+                : 'text-sm font-semibold text-slate-400 mb-2 empty:hidden'
             }
           >
             {post.kicker}
@@ -105,8 +105,8 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
             lang={textLang}
             className={
               isEditorial
-                ? 'text-[var(--color-ink-soft)] text-sm leading-relaxed mb-4 line-clamp-3'
-                : 'text-slate-300 text-sm leading-relaxed mb-4 line-clamp-3'
+                ? 'text-[var(--color-ink-soft)] text-base leading-relaxed mb-4'
+                : 'text-slate-300 text-base leading-relaxed mb-4'
             }
           >
             {post.excerpt}
@@ -115,15 +115,14 @@ export default function PostCard({ post, variant = 'dark', priority = false }: P
           <div
             className={
               isEditorial
-                ? 'flex items-center justify-between pt-4 border-t border-[var(--color-paper-border)] text-xs text-[var(--color-ink-mute)]'
-                : 'flex items-center justify-between pt-4 border-t border-purple/15 text-xs text-slate-400'
+                ? 'flex items-center justify-between pt-4 border-t border-[var(--color-paper-border)] text-sm text-[var(--color-ink-mute)]'
+                : 'flex items-center justify-between pt-4 border-t border-slate-800 text-sm text-slate-400'
             }
           >
             <div className="flex items-center gap-3">
               <time dateTime={post.publishedAt}>
                 {formatPostDate(post.publishedAt, lang, { day: 'numeric', month: 'short', year: 'numeric' })}
               </time>
-              <span aria-hidden="true">·</span>
               <span className="inline-flex items-center gap-1">
                 <Clock size={12} />
                 {post.readTimeMinutes} {c.minRead}
