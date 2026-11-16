@@ -352,13 +352,17 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="faq-heading">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <h2 id="faq-heading" className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-10 text-center">
             {c.faqHeading}
           </h2>
-          <dl className="grid gap-4 lg:grid-cols-2 lg:items-start">
+          {/* YKSI palsta (Vesa 16.11.2026: "miten on niin paljon tyhjää valkoista grideissä?"). Viisi eripituista
+              vastausta ei mene kahdelle palstalle tasan: ruudukossa viides jäi yksin ja sen viereen tyhjä ruutu,
+              CSS-palstoilla (columns-2) lyhyemmän palstan alle jäi 283 px (mitattu 1280 px:llä). Yhdessä palstassa
+              ei ole ruutua, joka voisi jäädä tyhjäksi, ja rivin pituus pysyy luettavana. */}
+          <dl className="grid gap-4">
             {c.faq.map((item, i) => (
-              <div key={item.q} className="h-full rounded-2xl p-6 border border-slate-700/80 bg-night-light/60">
+              <div key={item.q} className="rounded-2xl p-6 border border-slate-700/80 bg-night-light/60">
                 <dt className="font-display font-bold text-lg text-snow leading-snug mb-2">{item.q}</dt>
                 <dd className="text-slate-300 leading-relaxed">
                   {item.a}

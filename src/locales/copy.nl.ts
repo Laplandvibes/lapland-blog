@@ -262,7 +262,7 @@ const nl: SectionCopy = {
     h1Pre: 'Acht plaatsen.',
     h1Italic: 'Eén Lapland.',
     lead:
-      'Kies een plek. Per plek ziet u de verhalen die er geschreven zijn, en op de bijbehorende pagina vindt u verblijven, restaurants en activiteiten.',
+      'Kies een plek. Op de bijbehorende pagina vindt u de verhalen die er geschreven zijn, plus verblijven, restaurants en activiteiten.',
     beTheFirst: 'Wees de eerste',
     entrySingular: 'notitie',
     entryPlural: 'notities',

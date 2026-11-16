@@ -313,7 +313,7 @@ const ptBR: SectionCopy = {
     h1Pre: 'Oito lugares.',
     h1Italic: 'Uma Lapônia.',
     lead:
-      'Escolha um lugar. Cada cartão mostra as histórias escritas lá, e a página do lugar leva a hospedagens, restaurantes e atividades.',
+      'Escolha um lugar. Na página dele você encontra as histórias escritas lá, além de hospedagens, restaurantes e atividades.',
     beTheFirst: 'Seja o primeiro',
     entrySingular: 'entrada',
     entryPlural: 'entradas',

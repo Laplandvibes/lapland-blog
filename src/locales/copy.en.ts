@@ -313,7 +313,7 @@ const en: SectionCopy = {
     h1Pre: 'Eight places.',
     h1Italic: 'One Lapland.',
     lead:
-      'Pick a place. Each card shows the stories written there, and the place page links to stays, restaurants and things to do.',
+      'Pick a place. Its page has the stories written there, plus stays, restaurants and things to do.',
     beTheFirst: 'Be the first',
     entrySingular: 'entry',
     entryPlural: 'entries',

@@ -314,7 +314,7 @@ const de: SectionCopy = {
     h1Pre: 'Acht Orte.',
     h1Italic: 'Ein Lappland.',
     lead:
-      'Wählen Sie einen Ort. Zu jedem Ort sehen Sie die Geschichten, die dort entstanden sind, und auf der Ortsseite finden Sie Unterkünfte, Restaurants und Aktivitäten.',
+      'Wählen Sie einen Ort. Auf der Ortsseite finden Sie die Geschichten, die dort entstanden sind, sowie Unterkünfte, Restaurants und Aktivitäten.',
     beTheFirst: 'Erste/r sein',
     entrySingular: 'Eintrag',
     entryPlural: 'Einträge',

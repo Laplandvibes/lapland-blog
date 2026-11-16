@@ -17,7 +17,6 @@ import { useJsonLd, websiteSchema, breadcrumbSchema } from '../lib/jsonld';
 import type { Post } from '../data/posts';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-import { postTextLang } from '../lib/postLang';
 import PhotoCredits from '../components/PhotoCredits';
 
 
@@ -106,32 +105,27 @@ export default function Destinations() {
               </Reveal>
             );
           })}
-        </div>
-      </section>
-
-      {/* CTA — warm cream panel */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-3xl mx-auto">
-          <Reveal>
-            <div className="rounded-2xl border border-[var(--color-paper-border)] bg-[var(--color-cream-deep)] px-6 py-12 md:px-12 text-center">
-              <p className="text-[var(--color-accent)] text-sm font-bold mb-4">
-                {c.dontSeeEyebrow}
-              </p>
-              <h2
-                className="text-[var(--color-ink)] text-3xl md:text-4xl mb-4"
-                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 700 }}
+          {/* Yhdeksäs ruutu = "Puuttuuko sinun paikkasi?". Kahdeksan korttia jätti kolmen palstan ruudukon
+              viimeiselle riville tyhjän paikan (Vesa 16.11.2026: "miten on niin paljon tyhjää valkoista
+              grideissä?"); kehote täyttää sen. Kahdella palstalla se on koko rivin levyinen. */}
+          <Reveal delay={6} className="sm:col-span-2 lg:col-span-1">
+            <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-[#0F172A]/10 bg-[#EEF4FB] px-6 py-10 text-center">
+              <p className="text-[#BE185D] text-sm font-bold mb-3">{c.dontSeeEyebrow}</p>
+              <h3
+                className="text-[#0F172A] text-2xl md:text-3xl mb-3 leading-tight"
+                style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}
               >
                 {c.plantH2}
-              </h2>
-              <p className="text-[var(--color-ink-soft)] text-base leading-relaxed mb-8 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
+              </h3>
+              <p className="text-[#334155] text-base leading-relaxed mb-6 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
                 {c.plantLead}
               </p>
               <Link
                 to={to('/signin')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-pink-cta text-white font-semibold text-sm hover:bg-pink transition-colors"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#DB2777] px-6 text-[15px] font-semibold text-white hover:bg-[#BE185D] transition-colors"
               >
                 {c.plantCta}
-                <ArrowRight size={14} />
+                <ArrowRight size={15} />
               </Link>
             </div>
           </Reveal>
@@ -151,19 +145,27 @@ type DestCopy = typeof COPY['en']['destinations'];
 type Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
 /**
  * Kohdekortti (Vesa 16.11.2026: "mikä tämän funktio on? en itsekkään tajua, miten asiakas voisi tajuta?").
- * Funktio sanottuna kortissa itsessään: paikan kuva ja kuvaus, paikan oikeat jutut otsikkoina ja kaksi
- * nappia: paikan sivu (jutut + verkoston oppaat) ja majoitukset. Ei "ole ensimmäinen kirjoittaja" -kehotteita.
+ * Funktio sanottuna kortissa itsessään: paikan kuva ja kuvaus ja kaksi nappia: paikan sivu (jutut +
+ * verkoston oppaat) ja majoitukset. Ei "ole ensimmäinen kirjoittaja" -kehotteita.
+ *
+ * 🔴 Jokainen kortti on SAMAN rakenteinen (Vesa 16.11.2026 illalla: "miten on niin paljon tyhjää valkoista
+ * grideissä?"). Ensimmäinen versio listasi paikan jutut otsikkoina kortissa: Rovaniemellä kolme, Levillä
+ * nolla, ja koska rivin kortit ovat yhtä korkeita, Levin korttiin jäi 256–324 px valkoista (mitattu
+ * `tyhja-tila.cjs`). Jutut ovat paikan sivulla, kortissa vain niiden määrä. Rivin korkeusero (kuvauksen
+ * rivimäärä) menee KUVALLE (`flex-1`), ei valkoiseksi raoksi tekstin ja nappien väliin.
  */
 function DestinationCard({ d, own, c, to, lang }: { d: Destination; own: Post[]; c: DestCopy; to: (p: string) => string; lang: Lang }) {
   const name = placeName(d, lang);
   const meta = c.places[d.slug as keyof DestCopy['places']];
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#0F172A]/10 bg-white shadow-[0_14px_34px_-24px_rgba(15,23,42,0.35)] transition-shadow duration-300 hover:shadow-[0_24px_48px_-26px_rgba(15,23,42,0.4)]">
-      <Link to={to(`/destinations/${d.slug}`)} className="block aspect-[3/2] overflow-hidden relative" tabIndex={-1} aria-hidden="true">
+      <Link to={to(`/destinations/${d.slug}`)} className="relative block flex-1 overflow-hidden" tabIndex={-1} aria-hidden="true">
+        {/* Kuvan vähimmäiskorkeus (3:2); kuva itse täyttää sen, mitä kortin korkeudesta jää tekstin yli. */}
+        <span className="block aspect-[3/2]" />
         <img
           src={d.hero}
           alt=""
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
           decoding="async"
         />
@@ -173,31 +175,15 @@ function DestinationCard({ d, own, c, to, lang }: { d: Destination; own: Post[];
           </span>
         )}
       </Link>
-      <div className="p-5 flex flex-col flex-1">
+      <div className="p-5">
         <p className="text-[#BE185D] text-sm font-semibold mb-1">{meta?.region ?? d.region}</p>
         <h3 className="text-2xl text-[#0F172A] mb-2 leading-tight" style={{ fontFamily: 'var(--font-editorial)', fontWeight: 800 }}>
           <Link to={to(`/destinations/${d.slug}`)} className="hover:text-[#BE185D] transition-colors">
             {name}
           </Link>
         </h3>
-        <p className="text-[#334155] text-base leading-relaxed mb-4">{meta?.blurb ?? d.blurb}</p>
-        {own.length > 0 && (
-          <ul className="mb-5 grid gap-2">
-            {own.slice(0, 3).map((p) => (
-              <li key={p.slug}>
-                <Link
-                  to={to(`/post/${p.slug}`)}
-                  lang={postTextLang(p, lang)}
-                  className="flex items-start gap-2 rounded-xl bg-[#F4F7FB] px-3 py-2.5 text-[15px] font-semibold leading-snug text-[#0F172A] hover:bg-[#FDF2F8] hover:text-[#BE185D] transition-colors"
-                >
-                  <ArrowRight size={15} className="mt-1 shrink-0 text-[#DB2777]" />
-                  <span>{p.title}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-        <div className="mt-auto grid gap-2.5">
+        <p className="text-[#334155] text-base leading-relaxed mb-5">{meta?.blurb ?? d.blurb}</p>
+        <div className="grid gap-2.5">
           <Link
             to={to(`/destinations/${d.slug}`)}
             className="inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-full bg-[#DB2777] px-4 text-[15px] font-semibold text-white hover:bg-[#BE185D] transition-colors"

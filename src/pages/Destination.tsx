@@ -20,7 +20,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
 import Reveal from '../components/Reveal';
-import PostCard from '../components/PostCard';
+import PostGrid from '../components/PostGrid';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import { destinationBySlug, placeName, stayUrl, postMatchesDestination } from '../data/destinations';
 import { destinationDescription } from '../data/destinationMeta.mjs';
@@ -140,9 +140,10 @@ export default function Destination() {
               </p>
             </Reveal>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {/* Rivi täyttyy aina: viimeisen rivin linkit levenevät, tyhjää ruutua ei jää (16.11.2026). */}
+            <div className="flex flex-wrap gap-3 md:gap-4">
               {verkosto.map(({ site, url }, i) => (
-                <Reveal key={site.key} delay={(Math.min(i, 5) + 1) as 1 | 2 | 3 | 4 | 5 | 6}>
+                <Reveal key={site.key} delay={(Math.min(i, 5) + 1) as 1 | 2 | 3 | 4 | 5 | 6} className="flex-1 basis-full sm:basis-[40%] lg:basis-[30%]">
                   <a
                     href={url}
                     target="_blank"
@@ -188,13 +189,7 @@ export default function Destination() {
             <p className="text-[var(--color-ink-mute)] text-sm">{c.loading}</p>
           ) : omat.length > 0 ? (
             <>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-                {omat.map((p, i) => (
-                  <Reveal key={p.slug} delay={(Math.min(i, 5) + 1) as 1 | 2 | 3 | 4 | 5 | 6}>
-                    <PostCard post={p} />
-                  </Reveal>
-                ))}
-              </div>
+              <PostGrid posts={omat} />
               <Reveal>
                 <Link
                   to={to(`/stories?place=${d.slug}`)}

@@ -313,7 +313,7 @@ const zhCN: SectionCopy = {
     h1Pre: '八个地方。',
     h1Italic: '一个拉普兰。',
     lead:
-      '选择一个地方。卡片上列出在那里写下的文章，进入地点页面还能找到住宿、餐厅和活动。',
+      '选择一个地方。地点页面汇集了在那里写下的文章，还有住宿、餐厅和活动。',
     beTheFirst: '成为第一个',
     entrySingular: '篇',
     entryPlural: '篇',

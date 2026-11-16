@@ -262,7 +262,7 @@ const fr: SectionCopy = {
     h1Pre: 'Huit lieux.',
     h1Italic: 'Une Laponie.',
     lead:
-      'Choisissez un lieu. Chaque fiche présente les récits écrits sur place, et la page du lieu mène aux hébergements, aux restaurants et aux activités.',
+      'Choisissez un lieu. Sa page réunit les récits écrits sur place, ainsi que les hébergements, les restaurants et les activités.',
     beTheFirst: 'Soyez le premier',
     entrySingular: 'entrée',
     entryPlural: 'entrées',

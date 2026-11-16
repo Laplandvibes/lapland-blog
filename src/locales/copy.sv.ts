@@ -313,7 +313,7 @@ const sv: SectionCopy = {
     h1Pre: 'Åtta platser.',
     h1Italic: 'Ett Lappland.',
     lead:
-      'Välj en plats. Varje kort visar berättelserna därifrån, och platsens sida leder vidare till boende, restauranger och aktiviteter.',
+      'Välj en plats. På platsens sida finns berättelserna därifrån samt boende, restauranger och aktiviteter.',
     beTheFirst: 'Bli först',
     entrySingular: 'inlägg',
     entryPlural: 'inlägg',

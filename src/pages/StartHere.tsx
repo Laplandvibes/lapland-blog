@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
 import PhotoCredits from '../components/PhotoCredits';
 import Reveal from '../components/Reveal';
-import PostCard from '../components/PostCard';
+import PostGrid from '../components/PostGrid';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import { usePosts } from '../hooks/usePosts';
 import { useSeo, canonicalUrl } from '../lib/seo';
@@ -298,14 +298,7 @@ export default function StartHere() {
                 {c.thenH2}
               </h2>
             </Reveal>
-            {/* Pariton määrä kahdessa sarakkeessa (640–1023 px): viimeinen kortti keskelle muiden levyisenä (gate:tabletti orpo 9.11.2026). */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_0.75rem)]">
-              {more.map((p, i) => (
-                <Reveal key={p.slug} delay={Math.min(i + 1, 6) as 1 | 2 | 3 | 4 | 5 | 6}>
-                  <PostCard post={p} variant="dark" />
-                </Reveal>
-              ))}
-            </div>
+            <PostGrid posts={more} />
             <div className="mt-12 text-center">
               <Link
                 to={to('/stories')}

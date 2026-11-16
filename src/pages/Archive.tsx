@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import Newsletter from '../components/Newsletter';
 import PhotoCredits from '../components/PhotoCredits';
 import Reveal from '../components/Reveal';
-import PostCard from '../components/PostCard';
+import PostGrid from '../components/PostGrid';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import { categories } from '../data/categories';
 import { useSeo, canonicalUrl } from '../lib/seo';
@@ -213,16 +213,7 @@ export default function Archive() {
               <p className="text-sm">{c.emptyBody}</p>
             </div>
           ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((post, i) => (
-                <Reveal
-                  key={post.slug}
-                  delay={((i % 3) + 1) as 1 | 2 | 3}
-                >
-                  <PostCard post={post} />
-                </Reveal>
-              ))}
-            </div>
+            <PostGrid posts={filtered} />
           )}
         </div>
       </section>

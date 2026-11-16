@@ -313,7 +313,7 @@ const fi: SectionCopy = {
     h1Pre: 'Kahdeksan paikkaa.',
     h1Italic: 'Yksi Lappi.',
     lead:
-      'Valitse paikka. Kortissa näet sieltä kirjoitetut jutut, ja paikan sivulta löydät majoitukset, ravintolat ja tekemisen.',
+      'Valitse paikka. Sen sivulta löydät sieltä kirjoitetut jutut sekä majoitukset, ravintolat ja tekemisen.',
     beTheFirst: 'Ole ensimmäinen',
     entrySingular: 'merkintä',
     entryPlural: 'merkintää',

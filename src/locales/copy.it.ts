@@ -262,7 +262,7 @@ const it: SectionCopy = {
     h1Pre: 'Otto luoghi.',
     h1Italic: 'Una Lapponia.',
     lead:
-      'Scelga un luogo. Ogni scheda mostra i racconti scritti lì, e la pagina del luogo porta ad alloggi, ristoranti e cose da fare.',
+      'Scelga un luogo. Nella sua pagina trova i racconti scritti lì, oltre ad alloggi, ristoranti e cose da fare.',
     beTheFirst: 'Sia il primo',
     entrySingular: 'voce',
     entryPlural: 'voci',
