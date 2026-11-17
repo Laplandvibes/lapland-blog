@@ -105,7 +105,15 @@ for (const [file, js] of src) {
     }
     const value = resolveConst(file, ident[1]);
     if (value === HOST_URL) continue;
-    if (value !== null) {
+    // 🔴 17.11.2026 (vite 8.3 / rolldown 1.2): resolveConst ei tunne nakyvyysalueita. Kun rolldown
+    // yhdistaa viten preload-apurin index-chunkkiin, chunkin ylatasolla on `ne=`modulepreload``
+    // ja jaetun popupin funktiossa SAMANNIMINEN parametri `ne` (propsina saatu osoite). Regex
+    // loysi ylatason vakion ja portti kaatui, vaikka uutiskirje oli kytketty. Arvo, joka ei
+    // nayta osoitteelta, on siis nimitormays eika vaara host: se kasitellaan ratkeamattomana
+    // (propsiohjattu polku alla, jonka arvon kohta 2 varmistaa kutsupaikalta). Tyhja,
+    // "undefined"/"null" ja mika tahansa muu URL kaatavat portin kuten ennenkin.
+    const looksLikeHost = value !== null && (value === '' || value === 'undefined' || value === 'null' || /^https?:\/\//i.test(value) || /supabase/i.test(value));
+    if (looksLikeHost) {
       problems.push(`${file}: ${fn} kutsutaan tunnisteella \${${ident[1]}} joka ratkeaa arvoon "${value}" eika ${HOST_URL}`);
       continue;
     }
