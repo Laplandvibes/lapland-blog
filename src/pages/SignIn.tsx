@@ -161,6 +161,7 @@ export default function SignIn() {
     setSending(true);
     const { error: err } = await sendMagicLink(trimmed, {
       redirectTo: `${window.location.origin}${from}`,
+      lang,
     });
     setSending(false);
 

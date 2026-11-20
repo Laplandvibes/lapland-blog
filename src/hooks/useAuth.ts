@@ -6,9 +6,39 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import type { Session, User } from '@supabase/supabase-js';
 import { supabase, isAdminEmail } from '../lib/supabase';
+import { langFromPath, type Lang } from '../i18n/useLang';
 
 interface MagicLinkOptions {
   redirectTo?: string;
+  /** Kirjautumisviestin kieli; oletus = sivun kieli polusta. */
+  lang?: Lang;
+}
+
+/**
+ * Kirjautumisviestien kieli (20.11.2026). Supabase Authin viestit lähettää hubin
+ * Edge-funktio `auth-send-email`, joka lukee kielen paluuosoitteen `lang`-parametrista
+ * ja toissijaisesti käyttäjän metatiedosta `user_metadata.lang`. Avain on sama kuin
+ * appissa (laplandvibes-app-new/src/lib/authLang.ts).
+ */
+const AUTH_LANG_KEY = 'lang';
+
+function withAuthLang(url: string, lang: Lang): string {
+  const u = new URL(url);
+  u.searchParams.set(AUTH_LANG_KEY, lang);
+  return u.toString();
+}
+
+/** Yksi kirjoitus per käyttäjä ja kieli koko sivun elinkaaren aikana (useAuth on monessa komponentissa). */
+let langSyncedFor: string | null = null;
+
+async function syncAuthLang(user: User) {
+  const lang = langFromPath(window.location.pathname);
+  const key = `${user.id}:${lang}`;
+  if (langSyncedFor === key || user.user_metadata?.[AUTH_LANG_KEY] === lang) return;
+  langSyncedFor = key;
+  // updateUser({ data }) ei lähetä sähköpostia.
+  const { error } = await supabase.auth.updateUser({ data: { [AUTH_LANG_KEY]: lang } });
+  if (error) langSyncedFor = null;
 }
 
 interface OAuthOptions {
@@ -59,6 +89,7 @@ export async function ensureProfile(user: User): Promise<string | null> {
 
 async function syncProfile(user: User) {
   await ensureProfile(user);
+  await syncAuthLang(user).catch(() => {});
 }
 
 export function useAuth(): UseAuthResult {
@@ -99,11 +130,16 @@ export function useAuth(): UseAuthResult {
 
   const sendMagicLink = useCallback(
     async (email: string, options?: MagicLinkOptions) => {
+      const lang = options?.lang ?? langFromPath(window.location.pathname);
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo:
+          emailRedirectTo: withAuthLang(
             options?.redirectTo ?? `${window.location.origin}/admin`,
+            lang,
+          ),
+          // Vain uudelle tilille; vanhan tilin kieli päivittyy syncAuthLangilla.
+          data: { [AUTH_LANG_KEY]: lang },
         },
       });
       return { error: error?.message ?? null };

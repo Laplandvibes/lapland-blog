@@ -19,6 +19,11 @@ export const LANG_PREFIX: Record<Lang, string> = {
 
 export function useLang(): Lang {
   const { pathname } = useLocation();
+  return langFromPath(pathname);
+}
+
+/** Sama päättely ilman reititintä (kirjautumisviestin kieli, hooks/useAuth.ts). */
+export function langFromPath(pathname: string): Lang {
   if (pathname === '/fi' || pathname.startsWith('/fi/')) return 'fi';
   if (pathname === '/de' || pathname.startsWith('/de/')) return 'de';
   if (pathname === '/ja' || pathname.startsWith('/ja/')) return 'ja';
