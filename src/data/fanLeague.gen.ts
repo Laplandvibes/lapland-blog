@@ -4,8 +4,8 @@ import type { FanLeagueData } from './fanLeague';
 export const FAN_LEAGUE: FanLeagueData = /*JSON*/{
  "month": "2026-11",
  "from": "2026-11-01",
- "to": "2026-11-16",
- "updated": "2026-11-16",
+ "to": "2026-11-23",
+ "updated": "2026-11-23",
  "final": false,
  "sites": 29,
  "rows": [
@@ -16,56 +16,58 @@ export const FAN_LEAGUE: FanLeagueData = /*JSON*/{
   },
   {
    "c": "IT",
-   "i": 32,
-   "p": 3
-  },
-  {
-   "c": "DE",
-   "i": 29,
+   "i": 20,
    "p": 2
   },
   {
+   "c": "DE",
+   "i": 18,
+   "p": 3
+  },
+  {
    "c": "FR",
-   "i": 24,
-   "p": 6
-  },
-  {
-   "c": "NL",
-   "i": 22,
-   "p": 5
-  },
-  {
-   "c": "US",
-   "i": 21,
+   "i": 16,
    "p": 4
   },
   {
+   "c": "NL",
+   "i": 13,
+   "p": 5
+  },
+  {
    "c": "ES",
-   "i": 19,
+   "i": 13,
    "p": 7
   },
   {
+   "c": "US",
+   "i": 12,
+   "p": 6
+  },
+  {
    "c": "GB",
-   "i": 14,
+   "i": 10,
    "p": 8
   },
   {
    "c": "JP",
-   "i": 10,
-   "p": 10
-  },
-  {
-   "c": "SE",
-   "i": 9,
+   "i": 6,
    "p": 9
   },
   {
-   "c": "CN",
-   "i": 8
+   "c": "SE",
+   "i": 6,
+   "p": 10
   },
   {
    "c": "CH",
-   "i": 6
+   "i": 5,
+   "p": 12
+  },
+  {
+   "c": "CN",
+   "i": 4,
+   "p": 11
   }
  ]
 }/*END*/;
